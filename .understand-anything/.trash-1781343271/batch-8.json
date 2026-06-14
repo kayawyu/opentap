@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "config:Package.UnitTests/ExamplePackage.xml",
+      "type": "config",
+      "name": "ExamplePackage.xml",
+      "filePath": "Package.UnitTests/ExamplePackage.xml",
+      "summary": "OpenTAP 包清单测试数据文件，定义 XSeries 信号分析仪插件包的元数据、版本依赖以及所包含的 DLL 和插件类型。",
+      "tags": ["test-data", "package-manifest", "plugin-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/GitVersionDependency-package.xml",
+      "type": "config",
+      "name": "GitVersionDependency-package.xml",
+      "filePath": "Package.UnitTests/GitVersionDependency-package.xml",
+      "summary": "OpenTAP 包清单测试数据文件，使用 $(GitVersion) 变量定义动态版本号，用于验证基于 Git 版本控制的包依赖解析功能。",
+      "tags": ["test-data", "package-manifest", "versioning"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "type": "config",
+      "name": "Tap.Package.UnitTests.csproj",
+      "filePath": "Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "summary": "Package 模块单元测试的 MSBuild 项目文件，引用 OpenTAP Engine、BasicSteps 和 SDK 等核心项目，使用 NUnit 测试框架，内置多组包清单、依赖解析和签名验证的测试数据文件。",
+      "tags": ["test-project", "msbuild", "unit-test", "package-management"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "target": "config:Package.UnitTests/ExamplePackage.xml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "target": "config:Package.UnitTests/GitVersionDependency-package.xml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "target": "config:BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "target": "config:Engine/Tap.Engine.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "target": "config:Engine.UnitTests/Tap.Engine.UnitTests.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "target": "config:Package/Tap.Package.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "target": "config:sdk/OpenTap.Sdk.MSBuild/OpenTap.Sdk.MSBuild.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

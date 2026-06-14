@@ -1,0 +1,15 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": ".github/workflows/ci.yml", "language": "yaml", "sizeLines": 1157, "fileCategory": "infra"},
+    {"path": ".github/workflows/issue-in-project.yml", "language": "yaml", "sizeLines": 19, "fileCategory": "infra"},
+    {"path": ".github/workflows/pages.yml", "language": "yaml", "sizeLines": 119, "fileCategory": "infra"},
+    {"path": ".github/workflows/pr-comment.yml", "language": "yaml", "sizeLines": 29, "fileCategory": "infra"}
+  ],
+  "batchImportData": {
+    ".github/workflows/ci.yml": [],
+    ".github/workflows/issue-in-project.yml": [],
+    ".github/workflows/pages.yml": [],
+    ".github/workflows/pr-comment.yml": []
+  }
+}

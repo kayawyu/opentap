@@ -1,0 +1,635 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs",
+      "type": "file",
+      "name": "ResultsForXyArray.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs",
+      "summary": "演示 XY 数组结果发布的示例 TestStep，生成正弦波数据并通过 Results.PublishTable 带/不带限值发布结果。",
+      "tags": ["example", "test-step", "publish-results", "xy-array", "limits"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "type": "file",
+      "name": "ResultsWithCustomClass.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "summary": "演示使用自定义 MeasurementData 类发布结果的示例，通过 Results.Publish 将自定义对象序列化存储。",
+      "tags": ["example", "test-step", "publish-results", "custom-class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs",
+      "type": "file",
+      "name": "SetOfNameValuePairs.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs",
+      "summary": "演示多名称-值对结果发布的示例，构建列名列表和值列表并通过 Results.Publish 存储结构化数据。",
+      "tags": ["example", "test-step", "publish-results", "name-value-pair"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SingleNameValuePair.cs",
+      "type": "file",
+      "name": "SingleNameValuePair.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SingleNameValuePair.cs",
+      "summary": "演示单个名称-值对结果发布的示例，通过 TableName、ColumnName 和 RowValue 发布单条结果数据。",
+      "tags": ["example", "test-step", "publish-results", "name-value-pair"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/AbortsTheTestPlan.cs",
+      "type": "file",
+      "name": "AbortsTheTestPlan.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/AbortsTheTestPlan.cs",
+      "summary": "演示中止测试计划执行的示例 TestStep，通过 PlanRun.MainThread.Abort 立即终止整个测试运行。",
+      "tags": ["example", "test-step", "abort", "plan-execution"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs",
+      "type": "file",
+      "name": "DeferTaskStep.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs",
+      "summary": "演示延迟任务执行的示例 TestStep，使用 Results.Defer 在 Run 方法返回后异步发布结果，并展示 PrePlanRun/PostPlanRun 延迟。",
+      "tags": ["example", "test-step", "defer", "async-result", "lifecycle"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs",
+      "type": "file",
+      "name": "LogMessages.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs",
+      "summary": "演示日志功能的综合示例 TestStep，覆盖 Info/Debug/Warning/Error 四级日志、TraceBar 可视化限值条、Stopwatch 计时及异常堆栈打印。",
+      "tags": ["example", "test-step", "logging", "trace-bar", "stopwatch"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs",
+      "type": "file",
+      "name": "OfferBreakExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs",
+      "summary": "演示 OfferBreak 暂停功能的示例 TestStep，在循环中调用 OfferBreak 允许 GUI 中断执行并支持 RunChildSteps。",
+      "tags": ["example", "test-step", "offer-break", "pause", "gui-interaction"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs",
+      "type": "file",
+      "name": "SettingsRetrieval.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs",
+      "summary": "演示组件设置访问的示例 TestStep，展示如何获取 EngineSettings、DutSettings、InstrumentSettings、ExampleSettings 及 CustomBenchSettings。",
+      "tags": ["example", "test-step", "settings", "component-settings", "configuration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs",
+      "type": "file",
+      "name": "SetVerdict.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs",
+      "summary": "演示 TestStep 判定设置的示例，展示 Verdict 的六级严重程度及 UpgradeVerdict 方法如何使用 limit checking 更新判定。",
+      "tags": ["example", "test-step", "verdict", "upgrade-verdict", "limit-checking"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs",
+      "type": "file",
+      "name": "EnabledCheckBoxes.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs",
+      "summary": "演示 Enabled<T> 复选框模板的示例 TestStep，展示如何使用 IsEnabled 属性控制 double、double[] 和 Instrument 的编辑状态。",
+      "tags": ["example", "test-step", "enabled-template", "checkbox", "property-editing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ListOfObjects.cs",
+      "type": "file",
+      "name": "ListOfObjects.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ListOfObjects.cs",
+      "summary": "演示对象列表编辑器（List of Objects）的示例 TestStep，通过嵌套 Screw 类展示自定义对象列表的复制粘贴行/列编辑能力。",
+      "tags": ["example", "test-step", "list-of-objects", "property-editor", "nested-class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs:ResultsForXyArray",
+      "type": "class",
+      "name": "ResultsForXyArray",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs",
+      "lineRange": [22, 72],
+      "summary": "生成正弦波 XY 数据并通过 Results.PublishTable 发布结果的 TestStep，支持启用限值后附加上下限并调用多参数发布。",
+      "tags": ["test-step", "example", "publish-results", "xy-array"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs:ResultsWithCustomClass",
+      "type": "class",
+      "name": "ResultsWithCustomClass",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "lineRange": [19, 62],
+      "summary": "使用自定义 MeasurementData 通过 Results.Publish 发布结果的 TestStep，展示 Display 特性在结果发布中的名称覆盖能力。",
+      "tags": ["test-step", "example", "publish-results", "custom-class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs:MeasurementData",
+      "type": "class",
+      "name": "MeasurementData",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "lineRange": [28, 50],
+      "summary": "嵌套在 ResultsWithCustomClass 内的自定义数据类，包含 UnitNumber、MeasurementTime、Voltage、Current 等测试参数及限值属性。",
+      "tags": ["data-class", "nested-class", "measurement", "result-publishing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs:SetOfNameValuePairs",
+      "type": "class",
+      "name": "SetOfNameValuePairs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs",
+      "lineRange": [24, 70],
+      "summary": "演示多名称-值对结果发布的 TestStep，构建列名列表和 IConvertible 值列表后通过 Results.Publish 存储结构化结果。",
+      "tags": ["test-step", "example", "publish-results", "name-value-pair"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SingleNameValuePair.cs:SingleNameValuePair",
+      "type": "class",
+      "name": "SingleNameValuePair",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SingleNameValuePair.cs",
+      "lineRange": [21, 41],
+      "summary": "演示单个名称-值对结果发布的 TestStep，使用 TableName、ColumnName、RowValue 属性并通过 Results.Publish 存储单条记录。",
+      "tags": ["test-step", "example", "publish-results", "name-value-pair"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/AbortsTheTestPlan.cs:AbortsTheTestPlan",
+      "type": "class",
+      "name": "AbortsTheTestPlan",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/AbortsTheTestPlan.cs",
+      "lineRange": [19, 28],
+      "summary": "最简单的 TestStep 示例之一，在 Run 中调用 PlanRun.MainThread.Abort 立即终止整个测试计划的执行。",
+      "tags": ["test-step", "example", "abort", "plan-execution"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs:DeferTaskStep",
+      "type": "class",
+      "name": "DeferTaskStep",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs",
+      "lineRange": [19, 71],
+      "summary": "展示 Results.Defer 延迟结果发布的 TestStep，在 Run 中注册异步任务、在 PrePlanRun/PostPlanRun 中加入可控延迟。",
+      "tags": ["test-step", "example", "defer", "async", "lifecycle"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs:LogMessages",
+      "type": "class",
+      "name": "LogMessages",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs",
+      "lineRange": [20, 83],
+      "summary": "最全面的日志示例 TestStep，涵盖自定义 TraceSource、四级日志、Stopwatch 计时分析、TraceBar 可视化限值条及异常堆栈打印。",
+      "tags": ["test-step", "example", "logging", "trace-bar", "stopwatch"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs:WithEvents",
+      "type": "class",
+      "name": "WithEvents",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs",
+      "lineRange": [19, 49],
+      "summary": "使用 AllowAnyChild 和 OfferBreak 功能的 TestStep，在循环中暂停执行并最终调用 RunChildSteps 执行所有子步骤。",
+      "tags": ["test-step", "example", "offer-break", "allow-any-child"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs:SettingsRetrieval",
+      "type": "class",
+      "name": "SettingsRetrieval",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs",
+      "lineRange": [20, 65],
+      "summary": "演示各类组件设置访问的 TestStep，依次读取 ComponentSettings、EngineSettings、ResultSettings、DutSettings、InstrumentSettings 及自定义 ExampleSettings 和 CustomBenchSettings。",
+      "tags": ["test-step", "example", "settings-retrieval", "component-settings"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs:SetVerdict",
+      "type": "class",
+      "name": "SetVerdict",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs",
+      "lineRange": [18, 60],
+      "summary": "演示 UpgradeVerdict 判定升级机制的 TestStep，包含 NotSet/Pass/Inconclusive/Fail/Aborted/Error 六级判定及基于上下限的自动判定逻辑。",
+      "tags": ["test-step", "example", "verdict", "upgrade-verdict"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs:EnabledCheckBoxes",
+      "type": "class",
+      "name": "EnabledCheckBoxes",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs",
+      "lineRange": [32, 65],
+      "summary": "演示 Enabled<T> 模板复选框的 TestStep，通过 IsEnabled 属性控制 double、double[] 和 Instrument 类型属性的编辑器可用状态。",
+      "tags": ["test-step", "example", "enabled-template", "checkbox"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ListOfObjects.cs:ListOfObjects",
+      "type": "class",
+      "name": "ListOfObjects",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ListOfObjects.cs",
+      "lineRange": [21, 49],
+      "summary": "展示 List of Objects 对象列表编辑器用法的 TestStep，嵌套 Screw 类作为列表元素并支持行列复制粘贴编辑。",
+      "tags": ["test-step", "example", "list-of-objects", "property-editor"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs",
+      "lineRange": [38, 71],
+      "summary": "生成正弦波 XY 数据并选择性生成限值，然后通过 Results.PublishTable 发布带/不带限值的多列结果数据。",
+      "tags": ["test-step", "run", "publish-results", "xy-data", "limits"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "lineRange": [52, 61],
+      "summary": "创建 MeasurementData 对象并通过 Results.Publish 将其序列化发布为测试结果。",
+      "tags": ["test-step", "run", "publish-results", "custom-class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs",
+      "lineRange": [49, 64],
+      "summary": "构建列名列表（List<string>）和值列表（List<IConvertible>），通过 Results.Publish 发布多列结构化测试结果数据。",
+      "tags": ["test-step", "run", "publish-results", "name-value-pair"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs",
+      "lineRange": [59, 69],
+      "summary": "模拟耗时操作后通过 Results.Defer 注册异步延迟任务，在 Run 返回后执行额外休眠并发布结果。",
+      "tags": ["test-step", "run", "defer", "async"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs",
+      "lineRange": [29, 82],
+      "summary": "综合日志演示方法：依次展示四级日志输出、Stopwatch 计时分析、TraceBar 可视化限值条判定、UpgradeVerdict 判定升级及异常捕获与堆栈打印。",
+      "tags": ["test-step", "run", "logging", "trace-bar", "stopwatch", "exception"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs",
+      "lineRange": [35, 48],
+      "summary": "在循环中模拟工作并通过 OfferBreak 向 GUI 提供暂停/中断机会，循环结束后执行 RunChildSteps 运行所有子步骤。",
+      "tags": ["test-step", "run", "offer-break", "pause"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs",
+      "lineRange": [24, 64],
+      "summary": "依次读取并打印 ComponentSettings、EngineSettings、ResultSettings、DutSettings、InstrumentSettings、ExampleSettings 及 CustomBenchSettings 的当前值。",
+      "tags": ["test-step", "run", "settings-retrieval", "configuration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs",
+      "lineRange": [43, 59],
+      "summary": "演示 UpgradeVerdict 判定升级：先应用用户设置的 MyVerdict，再通过基于上下限的 limit checking 自动升级为 Pass 或 Fail。",
+      "tags": ["test-step", "run", "verdict", "upgrade-verdict", "limit-checking"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs:EnabledCheckBoxes",
+      "type": "function",
+      "name": "EnabledCheckBoxes",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs",
+      "lineRange": [45, 55],
+      "summary": "构造函数：初始化三个 Enabled<T> 属性对象——CheckedDouble（启用并赋默认值 3.0）、CheckedDoubleArray 和 CheckedInstrument。",
+      "tags": ["constructor", "enabled-template", "initialization"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs:ResultsForXyArray",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs:ResultsForXyArray",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs:ResultsWithCustomClass",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs:ResultsWithCustomClass",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs:MeasurementData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs:SetOfNameValuePairs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs:SetOfNameValuePairs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SingleNameValuePair.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SingleNameValuePair.cs:SingleNameValuePair",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SingleNameValuePair.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SingleNameValuePair.cs:SingleNameValuePair",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/AbortsTheTestPlan.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/AbortsTheTestPlan.cs:AbortsTheTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/AbortsTheTestPlan.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/AbortsTheTestPlan.cs:AbortsTheTestPlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs:DeferTaskStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs:DeferTaskStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs:LogMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs:LogMessages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs:WithEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs:WithEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs:SettingsRetrieval",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs:SettingsRetrieval",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs:SetVerdict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs:SetVerdict",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs:EnabledCheckBoxes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs:EnabledCheckBoxes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs:EnabledCheckBoxes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs:EnabledCheckBoxes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ListOfObjects.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ListOfObjects.cs:ListOfObjects",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ListOfObjects.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ListOfObjects.cs:ListOfObjects",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

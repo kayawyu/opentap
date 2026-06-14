@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "document:CONTRIBUTING.md",
+      "type": "document",
+      "name": "CONTRIBUTING.md",
+      "filePath": "CONTRIBUTING.md",
+      "summary": "OpenTAP 项目贡献指南，包含贡献者许可协议 (CLA) 签署流程、代码贡献步骤以及 Pull Request 提交规范，旨在帮助社区成员以最高效的方式参与项目开发。",
+      "tags": ["documentation", "contributing", "guidelines", "development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:LICENSE.txt",
+      "type": "document",
+      "name": "LICENSE.txt",
+      "filePath": "LICENSE.txt",
+      "summary": "Mozilla Public License 2.0 (MPL-2.0) 完整许可证文本，由 Keysight Technologies 持有版权 (2012-2025)，规定 OpenTAP 源代码的使用、修改、分发及专利授权的法律条款。",
+      "tags": ["license", "legal", "mpl-2.0", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "OpenTAP 项目入口文档，覆盖项目简介、二进制获取方式、插件安装、Windows/Linux 平台构建指南、NUnit 测试流程、贡献指引及问题报告渠道，是开发者与用户的首要参考页面。",
+      "tags": ["documentation", "entry-point", "overview", "getting-started"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:SECURITY.md",
+      "type": "document",
+      "name": "SECURITY.md",
+      "filePath": "SECURITY.md",
+      "summary": "OpenTAP 安全策略文档，声明仅最新次要版本接收安全补丁，并规定安全漏洞应通过 email (security@opentap.io) 进行协调披露，禁止在公开 GitHub Issue 中报告。",
+      "tags": ["documentation", "security", "vulnerability", "policy"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "package.xml",
+      "summary": "OpenTAP 包清单配置文件，定义包元信息（名称、版本、描述、组织）、平台条件变量（Windows/Linux/MacOS 及 x64 架构）、各 DLL 文件的包含与签名规则、调试版本与发布版本的文件差异、原生依赖（LibGit2Sharp）及平台特定的安装后操作步骤。",
+      "tags": ["configuration", "packaging", "build-system", "deployment"],
+      "complexity": "moderate",
+      "languageNotes": "使用 OpenTAP 自定义 XML 模式 (http://opentap.io/schemas/package)，支持条件变量 $(Platform)、$(Architecture)、$(Sign)、$(Debug) 实现多平台及多构建类型的差异化打包。"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:README.md",
+      "target": "document:CONTRIBUTING.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:LICENSE.txt",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.xml",
+      "target": "document:LICENSE.txt",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

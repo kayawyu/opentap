@@ -1,0 +1,5237 @@
+{
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": ".claude/settings.local.json",
+      "language": "json",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".gitattributes",
+      "language": "unknown",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "language": "markdown",
+      "sizeLines": 38,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "language": "yaml",
+      "sizeLines": 1157,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/issue-in-project.yml",
+      "language": "yaml",
+      "sizeLines": 19,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "language": "yaml",
+      "sizeLines": 119,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/pr-comment.yml",
+      "language": "yaml",
+      "sizeLines": 29,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".gitlab/issue_templates/bug.md",
+      "language": "markdown",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".gitversion",
+      "language": "unknown",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/config.json",
+      "language": "json",
+      "sizeLines": 1,
+      "fileCategory": "config"
+    },
+    {
+      "path": "BasicSteps/BasicStepsAnnotator.cs",
+      "language": "csharp",
+      "sizeLines": 725,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/DelayStep.cs",
+      "language": "csharp",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/DialogStep.cs",
+      "language": "csharp",
+      "sizeLines": 265,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/ExpandedMemberData.cs",
+      "language": "csharp",
+      "sizeLines": 241,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/IfStep.cs",
+      "language": "csharp",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/ISweepValueExport.cs",
+      "language": "csharp",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/ISweepValueImport.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/LockStep.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/LoggingStep.cs",
+      "language": "csharp",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/LoopTestStep.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/NotifyChangedList.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/NumberInput.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/ParallelStep.cs",
+      "language": "csharp",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/ProcessStep.cs",
+      "language": "csharp",
+      "sizeLines": 395,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/RepeatStep.cs",
+      "language": "csharp",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/ScpiStep.cs",
+      "language": "csharp",
+      "sizeLines": 239,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SequenceStep.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SweepLoop.cs",
+      "language": "csharp",
+      "sizeLines": 574,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SweepLoopRange.cs",
+      "language": "csharp",
+      "sizeLines": 409,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SweepParam.cs",
+      "language": "csharp",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SweepParameterRangeStep.cs",
+      "language": "csharp",
+      "sizeLines": 227,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SweepParameterStep.cs",
+      "language": "csharp",
+      "sizeLines": 325,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SweepParameterStepBase.cs",
+      "language": "csharp",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SweepRow.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SweepRowCollection.cs",
+      "language": "csharp",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SweepRowMemberData.cs",
+      "language": "csharp",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/SweepRowTypeData.cs",
+      "language": "csharp",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "language": "csproj",
+      "sizeLines": 41,
+      "fileCategory": "config"
+    },
+    {
+      "path": "BasicSteps/TestPlanReference.cs",
+      "language": "csharp",
+      "sizeLines": 654,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/TimeGuardStep.cs",
+      "language": "csharp",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BasicSteps/VirtualCollection.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Cli/app.config",
+      "language": "config",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Cli/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Cli/Tap.Cli.csproj",
+      "language": "csproj",
+      "sizeLines": 20,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Cli/TapEntry.cs",
+      "language": "csharp",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "language": "markdown",
+      "sizeLines": 29,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Directory.Build.props",
+      "language": "props",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/.vitepress/config.mts",
+      "language": "mts",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/.vitepress/theme/custom.css",
+      "language": "css",
+      "sizeLines": 3,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "doc/.vitepress/theme/index.js",
+      "language": "javascript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/.vitepress/theme/NotFound.vue",
+      "language": "vue",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/API Documentation/Doxyfile",
+      "language": "unknown",
+      "sizeLines": 2491,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/API Documentation/doxyfile_footer.html",
+      "language": "html",
+      "sizeLines": 5,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "doc/API Documentation/Doxyfile_HHC",
+      "language": "unknown",
+      "sizeLines": 2491,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/API Documentation/doxyfile.css",
+      "language": "css",
+      "sizeLines": 87,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "doc/API Documentation/doxyfile.md",
+      "language": "markdown",
+      "sizeLines": 8,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/API Documentation/DoxygenLayout.xml",
+      "language": "xml",
+      "sizeLines": 194,
+      "fileCategory": "config"
+    },
+    {
+      "path": "doc/API Documentation/namespaces.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/Developer Guide/Annotations/Readme.md",
+      "language": "markdown",
+      "sizeLines": 53,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Appendix/Readme.md",
+      "language": "markdown",
+      "sizeLines": 267,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Attributes/Readme.md",
+      "language": "markdown",
+      "sizeLines": 293,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Component Setting/Readme.md",
+      "language": "markdown",
+      "sizeLines": 84,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Continuous Integration/Readme.md",
+      "language": "markdown",
+      "sizeLines": 116,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Development Essentials/Readme.md",
+      "language": "markdown",
+      "sizeLines": 126,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Frontpage.html",
+      "language": "html",
+      "sizeLines": 129,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "doc/Developer Guide/Getting Started in Visual Studio/Readme.md",
+      "language": "markdown",
+      "sizeLines": 221,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Introduction/Notices.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Introduction/Readme.md",
+      "language": "markdown",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Known Issues/Readme.md",
+      "language": "markdown",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Migrating to .NET 9/Readme.md",
+      "language": "markdown",
+      "sizeLines": 394,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Package Publishing/Readme.md",
+      "language": "markdown",
+      "sizeLines": 68,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Plugin Packaging and Versioning/Readme.md",
+      "language": "markdown",
+      "sizeLines": 770,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Readme.md",
+      "language": "markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Resources/Readme.md",
+      "language": "markdown",
+      "sizeLines": 145,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Result Listener/Readme.md",
+      "language": "markdown",
+      "sizeLines": 67,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Test Step/Readme.md",
+      "language": "markdown",
+      "sizeLines": 859,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/Translating/Readme.md",
+      "language": "markdown",
+      "sizeLines": 309,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Developer Guide/What is OpenTAP/Readme.md",
+      "language": "markdown",
+      "sizeLines": 122,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/FAQ/Readme.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/package.json",
+      "language": "json",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "doc/public/CNAME",
+      "language": "unknown",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/Readme.md",
+      "language": "markdown",
+      "sizeLines": 126,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/9.29/Readme.md",
+      "language": "markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/9.30/Readme.md",
+      "language": "markdown",
+      "sizeLines": 30,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/9.31/Readme.md",
+      "language": "markdown",
+      "sizeLines": 18,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/9.32/Readme.md",
+      "language": "markdown",
+      "sizeLines": 36,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/9.33/Readme.md",
+      "language": "markdown",
+      "sizeLines": 21,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.10.md",
+      "language": "markdown",
+      "sizeLines": 63,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.11.md",
+      "language": "markdown",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.12.md",
+      "language": "markdown",
+      "sizeLines": 46,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.13.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.14.md",
+      "language": "markdown",
+      "sizeLines": 45,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.15.md",
+      "language": "markdown",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.16.md",
+      "language": "markdown",
+      "sizeLines": 45,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.17.md",
+      "language": "markdown",
+      "sizeLines": 146,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.18.md",
+      "language": "markdown",
+      "sizeLines": 74,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.19.md",
+      "language": "markdown",
+      "sizeLines": 68,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.20.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.21.md",
+      "language": "markdown",
+      "sizeLines": 30,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.22.md",
+      "language": "markdown",
+      "sizeLines": 75,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.23.md",
+      "language": "markdown",
+      "sizeLines": 18,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.24.md",
+      "language": "markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.25.md",
+      "language": "markdown",
+      "sizeLines": 48,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.26.md",
+      "language": "markdown",
+      "sizeLines": 27,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.27.md",
+      "language": "markdown",
+      "sizeLines": 45,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.28.md",
+      "language": "markdown",
+      "sizeLines": 41,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.3.md",
+      "language": "markdown",
+      "sizeLines": 46,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.4.md",
+      "language": "markdown",
+      "sizeLines": 21,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.5.md",
+      "language": "markdown",
+      "sizeLines": 45,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.6.md",
+      "language": "markdown",
+      "sizeLines": 34,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.7.md",
+      "language": "markdown",
+      "sizeLines": 55,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.8.md",
+      "language": "markdown",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/Release Notes/ReleaseNote_OpenTAP9.9.md",
+      "language": "markdown",
+      "sizeLines": 55,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/User Guide/CLI Usage/Readme.md",
+      "language": "markdown",
+      "sizeLines": 363,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/User Guide/Editors/Readme.md",
+      "language": "markdown",
+      "sizeLines": 38,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/User Guide/Introduction/break_conditions.drawio",
+      "language": "drawio",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/User Guide/Introduction/Flow.drawio",
+      "language": "drawio",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/User Guide/Introduction/OpenTAP_plugins.drawio",
+      "language": "drawio",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/User Guide/Introduction/Readme.md",
+      "language": "markdown",
+      "sizeLines": 187,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "doc/User Guide/Introduction/TestPlan.drawio",
+      "language": "drawio",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc/User Guide/Readme.md",
+      "language": "markdown",
+      "sizeLines": 5,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docker/Linux/Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 66,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "docker/Windows/Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 10,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "Engine.UnitTests/AllowChildTest.cs",
+      "language": "csharp",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/AnnotationTest.cs",
+      "language": "csharp",
+      "sizeLines": 2744,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ArtifactStep.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ArtifactsTest.cs",
+      "language": "csharp",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ArtifactZipper.cs",
+      "language": "csharp",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/AssemblyDataTest.cs",
+      "language": "csharp",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/AuthenticationTests.cs",
+      "language": "csharp",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/BasicStepsTest.cs",
+      "language": "csharp",
+      "sizeLines": 397,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/BeforeAttributeTest.cs",
+      "language": "csharp",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/BreakConditionTest.cs",
+      "language": "csharp",
+      "sizeLines": 378,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ChildItemVisibilityTest.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/CliCommandTest.cs",
+      "language": "csharp",
+      "sizeLines": 103,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/CodeGen.cs",
+      "language": "csharp",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "language": "csharp",
+      "sizeLines": 294,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ConnectionTest.cs",
+      "language": "csharp",
+      "sizeLines": 299,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "language": "csharp",
+      "sizeLines": 142,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/DisplayNameTest.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/DuplicateTestStep.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/DutInstrumentInheritanceTest.cs",
+      "language": "csharp",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/DynamicStepTest.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ElementFactoryTest.cs",
+      "language": "csharp",
+      "sizeLines": 285,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "language": "csharp",
+      "sizeLines": 437,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "language": "csharp",
+      "sizeLines": 518,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/FilePathTest.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/FlagsAttributeTests.cs",
+      "language": "csharp",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/FormatterTests.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/HttpArtifactStep.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/HybridStreamTest.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ILockManagerTests.cs",
+      "language": "csharp",
+      "sizeLines": 430,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "language": "csharp",
+      "sizeLines": 663,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/InputTest.cs",
+      "language": "csharp",
+      "sizeLines": 327,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/IResultSinkTests.cs",
+      "language": "csharp",
+      "sizeLines": 140,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/LazyResourceManagerTest.cs",
+      "language": "csharp",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/LegacyPlatformSettings.xml",
+      "language": "xml",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Engine.UnitTests/LegacyResultSettings.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Engine.UnitTests/ListSerialization.cs",
+      "language": "csharp",
+      "sizeLines": 519,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/LoggingProfilingTest.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/LoggingTest.cs",
+      "language": "csharp",
+      "sizeLines": 268,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/LogResultListenerTest.cs",
+      "language": "csharp",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "language": "csharp",
+      "sizeLines": 2023,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/MenuAnnotationTest.cs",
+      "language": "csharp",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/MixinTests.cs",
+      "language": "csharp",
+      "sizeLines": 1052,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/MultiTestPlanRun.cs",
+      "language": "csharp",
+      "sizeLines": 212,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ParameterTests.cs",
+      "language": "csharp",
+      "sizeLines": 231,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/PerformanceTests.cs",
+      "language": "csharp",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/PictureAnnotationTest.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/PlanRunMonitorTests.cs",
+      "language": "csharp",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/PluginManagerTest.cs",
+      "language": "csharp",
+      "sizeLines": 508,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/PluginSearcherTests.cs",
+      "language": "csharp",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "language": "csharp",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/PortTest.cs",
+      "language": "csharp",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ProcessStepTest.cs",
+      "language": "csharp",
+      "sizeLines": 140,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ProfileAction.cs",
+      "language": "csharp",
+      "sizeLines": 417,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ProgressBarTest.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "language": "csharp",
+      "sizeLines": 399,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ReflectionTest.cs",
+      "language": "csharp",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "language": "csharp",
+      "sizeLines": 425,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ResourceReference.cs",
+      "language": "csharp",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/Resources.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ResourceTest.cs",
+      "language": "csharp",
+      "sizeLines": 390,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ResultListenerApiTest.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "language": "csharp",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ResultListenerValidator.cs",
+      "language": "csharp",
+      "sizeLines": 152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ResultProxyTests.cs",
+      "language": "csharp",
+      "sizeLines": 438,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/Results2.cs",
+      "language": "csharp",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ResultTest.cs",
+      "language": "csharp",
+      "sizeLines": 583,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/RunCliActionTest.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ScopeParametersTest.cs",
+      "language": "csharp",
+      "sizeLines": 1091,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ScpiAttributeTest.cs",
+      "language": "csharp",
+      "sizeLines": 144,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ScpiInstrumentTest.cs",
+      "language": "csharp",
+      "sizeLines": 155,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/SecureStringSerializerTest.cs",
+      "language": "csharp",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/SemanticVersionTests.cs",
+      "language": "csharp",
+      "sizeLines": 191,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/SerializeEnumTest.cs",
+      "language": "csharp",
+      "sizeLines": 316,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/SerializerTests.cs",
+      "language": "csharp",
+      "sizeLines": 613,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/SessionLogTest.cs",
+      "language": "csharp",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/StringConvertProviderTest.cs",
+      "language": "csharp",
+      "sizeLines": 337,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/SubPlanTest.cs",
+      "language": "csharp",
+      "sizeLines": 481,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/SweepStepTest.cs",
+      "language": "csharp",
+      "sizeLines": 829,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/Tap.Engine.UnitTests.csproj",
+      "language": "csproj",
+      "sizeLines": 41,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Engine.UnitTests/TapProcessContainer.cs",
+      "language": "csharp",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TapTestInit.cs",
+      "language": "csharp",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TapThreadTest.cs",
+      "language": "csharp",
+      "sizeLines": 223,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TeeStreamTest.cs",
+      "language": "csharp",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestCliActions/TestInputs.cs",
+      "language": "csharp",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestCliActions/TestSigterm.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestCliActions/TestSudoCli.cs",
+      "language": "csharp",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "language": "csharp",
+      "sizeLines": 322,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "language": "csharp",
+      "sizeLines": 426,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanDependencyTest.cs",
+      "language": "csharp",
+      "sizeLines": 340,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanEmptyStringProp.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanReferencePerformance.cs",
+      "language": "csharp",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanReferenceTest.cs",
+      "language": "csharp",
+      "sizeLines": 152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanRunnerTests.cs",
+      "language": "csharp",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanTest.cs",
+      "language": "csharp",
+      "sizeLines": 2891,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanTestFixture1.cs",
+      "language": "csharp",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanTestFixture2.cs",
+      "language": "csharp",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanTestFixture3.cs",
+      "language": "csharp",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestPlanTimespan.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestSelfReferentialTypeData.cs",
+      "language": "csharp",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestStepIdTests.cs",
+      "language": "csharp",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestStepListTest.cs",
+      "language": "csharp",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestStepNameFormattingTests.cs",
+      "language": "csharp",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestStepRunTests.cs",
+      "language": "csharp",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestStepTest.cs",
+      "language": "csharp",
+      "sizeLines": 836,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestStepTests.cs",
+      "language": "csharp",
+      "sizeLines": 102,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlan/EngineTest.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlan/EngineTest/DutSettings.xml",
+      "language": "xml",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlan/EngineTest/PlatformSettings.xml",
+      "language": "xml",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlan/EngineTest/ResultSettings.xml",
+      "language": "xml",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlans/FiveDelays.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlans/LegacyRefPlan.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlans/tap70_sweep_loop.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlans/testMultiReferencePlan.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlans/testReferencedPlan.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlans/testReferencedPlan2.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlans/testReferencedPlan3.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlans/whiletest.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/AvailableValuesUpdateTest.cs",
+      "language": "csharp",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/CompareIntStep.cs",
+      "language": "csharp",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/DummySwitchInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/FourPortDut.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "language": "csharp",
+      "sizeLines": 204,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/RunTimeStep.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/SineResultsStep.cs",
+      "language": "csharp",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/ThrowInDefer.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/TimingTestStep.cs",
+      "language": "csharp",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/VerdictStep.cs",
+      "language": "csharp",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "language": "csharp",
+      "sizeLines": 286,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ThreadManagerTest.cs",
+      "language": "csharp",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TraceBarTest.cs",
+      "language": "csharp",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/TypeDataTest.cs",
+      "language": "csharp",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/UnitFormatterTest.cs",
+      "language": "csharp",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/DiagnosticTraceListener.cs",
+      "language": "csharp",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs",
+      "language": "csharp",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "language": "csharp",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs",
+      "language": "csharp",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "language": "csharp",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "language": "csharp",
+      "sizeLines": 248,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/UserCodeTest.cs",
+      "language": "csharp",
+      "sizeLines": 521,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/UserInputTest.cs",
+      "language": "csharp",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/UserInputTestImpl.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/Utilities.cs",
+      "language": "csharp",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/ValidatingObjectTests.cs",
+      "language": "csharp",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/VisaLoaderTest.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "language": "csharp",
+      "sizeLines": 307,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/AnnotationCache.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Annotations/Annotation.cs",
+      "language": "csharp",
+      "sizeLines": 4062,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Annotations/DateTimeAnnotation.cs",
+      "language": "csharp",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Annotations/IIconAnnotation.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Annotations/IInteractiveIconAnnotation.cs",
+      "language": "csharp",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Annotations/ISettingReferenceIconAnnotation.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Annotations/IStringOverlayAnnotation.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "language": "csharp",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/AssemblyData.cs",
+      "language": "csharp",
+      "sizeLines": 237,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/AssemblyFinder.cs",
+      "language": "csharp",
+      "sizeLines": 146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/AssignOutputDialog.cs",
+      "language": "csharp",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Authentication/AuthenticationSettings.cs",
+      "language": "csharp",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Authentication/TokenInfo.cs",
+      "language": "csharp",
+      "sizeLines": 154,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/AvailableValuesAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/BeforeAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/BigFloat.cs",
+      "language": "csharp",
+      "sizeLines": 956,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/BreakCondition.cs",
+      "language": "csharp",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/BreakConditionsAnnotation.cs",
+      "language": "csharp",
+      "sizeLines": 226,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Cache.cs",
+      "language": "csharp",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ChildItemVisibility.cs",
+      "language": "csharp",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Cli/CliActionExecutor.cs",
+      "language": "csharp",
+      "sizeLines": 396,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Cli/CommandLineArgumentAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Cli/ExitCodeException.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Cli/ExitCodes.cs",
+      "language": "csharp",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Cli/ICliAction.cs",
+      "language": "csharp",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Cli/LoginAction.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Cli/RunCliAction.cs",
+      "language": "csharp",
+      "sizeLines": 468,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Cli/TestPlanRunner.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ColumnDisplayNameAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ComponentSettings.cs",
+      "language": "csharp",
+      "sizeLines": 711,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ComponentSettingsContext.cs",
+      "language": "csharp",
+      "sizeLines": 379,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ConsoleTraceListener.cs",
+      "language": "csharp",
+      "sizeLines": 195,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Debugger.cs",
+      "language": "csharp",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/DefaultDisplayAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/DeserializeInPlaceAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/DirectoryPathAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/DisplayAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Dut.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/DutSettings.cs",
+      "language": "csharp",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/DynamicMemberTypeDataProvider.cs",
+      "language": "csharp",
+      "sizeLines": 975,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/EmbedPropertiesAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 364,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/EmptyDictionary.cs",
+      "language": "csharp",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Enabled.cs",
+      "language": "csharp",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/EnabledIfAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 198,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/EngineSettings.cs",
+      "language": "csharp",
+      "sizeLines": 208,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/EventTraceListener.cs",
+      "language": "csharp",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ExceptionCustomStackTrace.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ExternalParameterAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ExternalParameters.cs",
+      "language": "csharp",
+      "sizeLines": 205,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/FactoryAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/FileDependencyAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/FilePathAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/FileTraceListener.cs",
+      "language": "csharp",
+      "sizeLines": 194,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/FodyWeavers.xml",
+      "language": "xml",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Engine/HelpLinkAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/HttpUtils.cs",
+      "language": "csharp",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/HybridStream.cs",
+      "language": "csharp",
+      "sizeLines": 203,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IArtifactListener.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IDeviceDiscovery.cs",
+      "language": "csharp",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IDut.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IDynamicMemberData.cs",
+      "language": "csharp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IDynamicMemberProvider.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IDynamicStep.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IExternalTestPlanParameterExport.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IExternalTestPlanParameterImport.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IFormatName.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ILockable.cs",
+      "language": "csharp",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ILoopStep.cs",
+      "language": "csharp",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IMergedTableResultsListener.cs",
+      "language": "csharp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/INotifyActivity.cs",
+      "language": "csharp",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Input.cs",
+      "language": "csharp",
+      "sizeLines": 255,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/InputOutputRelation.cs",
+      "language": "csharp",
+      "sizeLines": 356,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Instrument.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/InstrumentSettings.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Invokable/IInvokable.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Invokable/Invokable.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Invokable/ISkippableInvokable.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IParameterizedMembersCache.cs",
+      "language": "csharp",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IPictureDataProvider.cs",
+      "language": "csharp",
+      "sizeLines": 155,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IResource.cs",
+      "language": "csharp",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IResultListener.cs",
+      "language": "csharp",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IResultSink.cs",
+      "language": "csharp",
+      "sizeLines": 277,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IResultStore.cs",
+      "language": "csharp",
+      "sizeLines": 644,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IScpiInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 269,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IStartupInfo.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IStringConvertProvider.cs",
+      "language": "csharp",
+      "sizeLines": 966,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ITapPlugin.cs",
+      "language": "csharp",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ITestPlanFormat.cs",
+      "language": "csharp",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ITestPlanRunMonitor.cs",
+      "language": "csharp",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ITestStep.cs",
+      "language": "csharp",
+      "sizeLines": 166,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IValidatingObject.cs",
+      "language": "csharp",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IVisa.cs",
+      "language": "csharp",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IVisaFunctionLoader.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/IVisaProvider.cs",
+      "language": "csharp",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/LibDl.cs",
+      "language": "csharp",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/LoadStatus.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Log.cs",
+      "language": "csharp",
+      "sizeLines": 811,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Logging/diag_impl.cs",
+      "language": "csharp",
+      "sizeLines": 334,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Logging/diag_intf.cs",
+      "language": "csharp",
+      "sizeLines": 378,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Logging/LogFactory.cs",
+      "language": "csharp",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Logging/LogFile.cs",
+      "language": "csharp",
+      "sizeLines": 178,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Logging/LogQueues.cs",
+      "language": "csharp",
+      "sizeLines": 273,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/LogResultListener.cs",
+      "language": "csharp",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/MacroPath.cs",
+      "language": "csharp",
+      "sizeLines": 291,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/MenuAnnotation.cs",
+      "language": "csharp",
+      "sizeLines": 286,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/MixinMemberMenuModel.cs",
+      "language": "csharp",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/MixinMenuModel.cs",
+      "language": "csharp",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/MixinMenuModelFactory.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Mixins/IAssignOutputMixin.cs",
+      "language": "csharp",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Mixins/IMixin.cs",
+      "language": "csharp",
+      "sizeLines": 216,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Mixins/IMixinBuilder.cs",
+      "language": "csharp",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Mixins/MixinBuilderAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Mixins/MixinBuilderUi.cs",
+      "language": "csharp",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Mixins/MixinBuilderUiTypeData.cs",
+      "language": "csharp",
+      "sizeLines": 103,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Mixins/MixinFactory.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Mixins/MixinMemberData.cs",
+      "language": "csharp",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Mixins/MixinTypeDataProvider.cs",
+      "language": "csharp",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ModuleInitializer.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/NonMetaDataAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/NumberParser.cs",
+      "language": "csharp",
+      "sizeLines": 924,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ObjectCloner.cs",
+      "language": "csharp",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/OutputAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ParameterCollection.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ParameterManager.cs",
+      "language": "csharp",
+      "sizeLines": 761,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ParameterMemberAnnotator.cs",
+      "language": "csharp",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ParametersMenuModel.cs",
+      "language": "csharp",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/PictureAnnotation.cs",
+      "language": "csharp",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/PluginManager.cs",
+      "language": "csharp",
+      "sizeLines": 716,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/PluginSearcher.cs",
+      "language": "csharp",
+      "sizeLines": 1179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/PluginTypeSelector.cs",
+      "language": "csharp",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Port/ComponentSettingsLayoutAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Port/Connection.cs",
+      "language": "csharp",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Port/ConnectionSettings.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Port/DirectionalRfConnection.cs",
+      "language": "csharp",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Port/IConstResourceProperty.cs",
+      "language": "csharp",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Port/Port.cs",
+      "language": "csharp",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Port/RfConnection.cs",
+      "language": "csharp",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Port/SwitchPosition.cs",
+      "language": "csharp",
+      "sizeLines": 290,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/PosixSignals.cs",
+      "language": "csharp",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/CSharpTypeInfoProvider.cs",
+      "language": "csharp",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/DotNetTypeData.cs",
+      "language": "csharp",
+      "sizeLines": 197,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/DotNetTypeDataSearcher.cs",
+      "language": "csharp",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/IEmbeddedMemberData.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/IMemberData.cs",
+      "language": "csharp",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/IReflectionData.cs",
+      "language": "csharp",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/IStackedTypeDataProvider.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/ITypeData.cs",
+      "language": "csharp",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/ITypeDataFactories.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/ITypeDataProvider.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/ITypeDataSearcher.cs",
+      "language": "csharp",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/ITypeDataSource.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/ITypeDataSourceProvider.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/NullTypeData.cs",
+      "language": "csharp",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/PluginOrderAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/ReflectionDataExtensions.cs",
+      "language": "csharp",
+      "sizeLines": 238,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Reflection/TypeDataProviderStack.cs",
+      "language": "csharp",
+      "sizeLines": 188,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Resource.cs",
+      "language": "csharp",
+      "sizeLines": 197,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ResourceDependencyAnalyzer.cs",
+      "language": "csharp",
+      "sizeLines": 344,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ResourceTaskManager.cs",
+      "language": "csharp",
+      "sizeLines": 1001,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ResultListener.cs",
+      "language": "csharp",
+      "sizeLines": 874,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ResultObjectTypes.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ResultProxy.cs",
+      "language": "csharp",
+      "sizeLines": 662,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ResultSettings.cs",
+      "language": "csharp",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ResultTableOptimizer.cs",
+      "language": "csharp",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Scpi.cs",
+      "language": "csharp",
+      "sizeLines": 310,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ScpiAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ScpiInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 1432,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ScpiIO.cs",
+      "language": "csharp",
+      "sizeLines": 316,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SemanticVersion.cs",
+      "language": "csharp",
+      "sizeLines": 287,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/CollectionSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 373,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/ConstResourceSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 103,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/DefaultValueSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/DynamicStepSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/EventsSerializerPlugin.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 278,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/InputOutputRelationSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/ITapSerializerPlugin.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/ITapSerializerPluginDependencyMarker.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/KeyValuePairSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/MacroStringSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/MixinSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/ObjectSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 936,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/ResourceSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 239,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/SecureStringSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/TapSerializerPlugin.cs",
+      "language": "csharp",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/TestPlanSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/TestStepListSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SerializerPlugins/TestStepSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Session/TapSession.cs",
+      "language": "csharp",
+      "sizeLines": 248,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SessionLogs.cs",
+      "language": "csharp",
+      "sizeLines": 596,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ShortTimeSpan.cs",
+      "language": "csharp",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SiblingStepAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SupportedModelsAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/SystemStartupInfo.cs",
+      "language": "csharp",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Tap.Engine.csproj",
+      "language": "csproj",
+      "sizeLines": 69,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Engine/Tap.Engine.csproj.vspscc",
+      "language": "vspscc",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Tap.snk",
+      "language": "snk",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TapSerialization.cs",
+      "language": "csharp",
+      "sizeLines": 707,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TeeStream.cs",
+      "language": "csharp",
+      "sizeLines": 178,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TestPlan.cs",
+      "language": "csharp",
+      "sizeLines": 516,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TestPlanExecution.cs",
+      "language": "csharp",
+      "sizeLines": 886,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TestPlanRun.cs",
+      "language": "csharp",
+      "sizeLines": 763,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TestPlanRunSummaryListener.cs",
+      "language": "csharp",
+      "sizeLines": 302,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TestStep.cs",
+      "language": "csharp",
+      "sizeLines": 1463,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TestStepList.cs",
+      "language": "csharp",
+      "sizeLines": 565,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TestStepRun.cs",
+      "language": "csharp",
+      "sizeLines": 596,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ThreadManager.cs",
+      "language": "csharp",
+      "sizeLines": 758,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TimeSpan/FormatVerbosities.cs",
+      "language": "csharp",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TimeSpan/NumberUnitSplitter.cs",
+      "language": "csharp",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TimeSpan/TimeSpanFormatter.cs",
+      "language": "csharp",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TimeSpan/TimeSpanParser.cs",
+      "language": "csharp",
+      "sizeLines": 165,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TimeSpanAverager.cs",
+      "language": "csharp",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TraceBar.cs",
+      "language": "csharp",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Translation/ITranslationProvider.cs",
+      "language": "csharp",
+      "sizeLines": 215,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Translation/TranslationManager.cs",
+      "language": "csharp",
+      "sizeLines": 190,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Translation/Translator.cs",
+      "language": "csharp",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/TypeData.cs",
+      "language": "csharp",
+      "sizeLines": 888,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/UnitAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/UnmergableAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/UnparameterizableAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/UnsweepableAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/UserInput.cs",
+      "language": "csharp",
+      "sizeLines": 570,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Utils/ExecutableFormatDetector.cs",
+      "language": "csharp",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Utils/Utils2.cs",
+      "language": "csharp",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/ValidatingObject.cs",
+      "language": "csharp",
+      "sizeLines": 394,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Verdict.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/Visa.cs",
+      "language": "csharp",
+      "sizeLines": 787,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/VisaDeviceDiscovery.cs",
+      "language": "csharp",
+      "sizeLines": 179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/VisaFunctions.cs",
+      "language": "csharp",
+      "sizeLines": 344,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/VisaLibraryLoader.cs",
+      "language": "csharp",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/WeakHashSet.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/WorkQueue.cs",
+      "language": "csharp",
+      "sizeLines": 283,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/XmlError.cs",
+      "language": "csharp",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Engine/XmlMessage.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Installer/Assets/dotnet_library_license.txt",
+      "language": "txt",
+      "sizeLines": 106,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Installer/Assets/dotnet_mit_license.txt",
+      "language": "txt",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Installer/Assets/Dotnet.Glob.License.txt",
+      "language": "txt",
+      "sizeLines": 22,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Installer/Assets/libgit2sharp.license.md",
+      "language": "markdown",
+      "sizeLines": 21,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Installer/Assets/LogoSide.bmp",
+      "language": "bmp",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Installer/Assets/LogoTop.bmp",
+      "language": "bmp",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Installer/Assets/Mono.Cecil.License.txt",
+      "language": "txt",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Installer/Assets/newtonsoft_mit_license.txt",
+      "language": "txt",
+      "sizeLines": 8,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Installer/Assets/Newtonsoft.Json.dll",
+      "language": "dll",
+      "sizeLines": 14085,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Installer/Assets/opentap.installer.linux.xml",
+      "language": "xml",
+      "sizeLines": 31,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Installer/Assets/opentap.installer.xml",
+      "language": "xml",
+      "sizeLines": 31,
+      "fileCategory": "config"
+    },
+    {
+      "path": "LICENSE.txt",
+      "language": "txt",
+      "sizeLines": 169,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "LinuxInstall/INSTALL.sh",
+      "language": "shell",
+      "sizeLines": 56,
+      "fileCategory": "script"
+    },
+    {
+      "path": "LinuxInstall/package/Debian/control.in",
+      "language": "in",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "LinuxInstall/package/Debian/create-deb",
+      "language": "unknown",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "LinuxInstall/package/Debian/postinst.in",
+      "language": "in",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "LinuxInstall/README",
+      "language": "unknown",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "LinuxInstall/tap.sh",
+      "language": "shell",
+      "sizeLines": 67,
+      "fileCategory": "script"
+    },
+    {
+      "path": "nuget/OpenTAP.nuspec",
+      "language": "nuspec",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "OpenTAP.slnx",
+      "language": "slnx",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/CliTests.cs",
+      "language": "csharp",
+      "sizeLines": 697,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/DuplicateTestStep.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/ExamplePackage.xml",
+      "language": "xml",
+      "sizeLines": 33,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/FilePackageRepoTest.cs",
+      "language": "csharp",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/GitHelperTests.cs",
+      "language": "csharp",
+      "sizeLines": 272,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/GitVersionDependency-package.xml",
+      "language": "xml",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Image/Cache.cs",
+      "language": "csharp",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Image/DependencyGraphTest.cs",
+      "language": "csharp",
+      "sizeLines": 337,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Image/Deploy.cs",
+      "language": "csharp",
+      "sizeLines": 344,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Image/Deserialize.cs",
+      "language": "csharp",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Image/MockRepository.cs",
+      "language": "csharp",
+      "sizeLines": 243,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Image/Resolve.cs",
+      "language": "csharp",
+      "sizeLines": 345,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Image/Workflows.cs",
+      "language": "csharp",
+      "sizeLines": 185,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/IVersionConverterTests.cs",
+      "language": "csharp",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/MSBuildSdkTest.cs",
+      "language": "csharp",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/NamedMutexTest.cs",
+      "language": "csharp",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PackageActionTest.cs",
+      "language": "csharp",
+      "sizeLines": 306,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PackageCreateIncludeDependenciesTest.cs",
+      "language": "csharp",
+      "sizeLines": 266,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PackageDefLoadSaveCompare.cs",
+      "language": "csharp",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PackageDefSerializationTest.cs",
+      "language": "csharp",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PackageDefTest2.cs",
+      "language": "csharp",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PackageDefTests.cs",
+      "language": "csharp",
+      "sizeLines": 996,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PackageFileTest.cs",
+      "language": "csharp",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PackageManagerTests.cs",
+      "language": "csharp",
+      "sizeLines": 614,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Packages/CheckDependencies_AllDepsInstalled/package.xml",
+      "language": "xml",
+      "sizeLines": 15,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/CheckDependencies_MissingDep/package.xml",
+      "language": "xml",
+      "sizeLines": 15,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/DependencyTest.dll",
+      "language": "dll",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Packages/FromXmlFile_NonDllFile/package.xml",
+      "language": "xml",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/Package_NoBinFiles/package.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/Package_sign/package.xml",
+      "language": "xml",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/Package/package.xml",
+      "language": "xml",
+      "sizeLines": 17,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/PackagePluginOrder/package.xml",
+      "language": "xml",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/SetAsmInfoTest.dll",
+      "language": "dll",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Packages/Test.package.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/test1/package.xml",
+      "language": "xml",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/test2/package.xml",
+      "language": "xml",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/test3/package.xml",
+      "language": "xml",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/Packages/XSeries/package.xml",
+      "language": "xml",
+      "sizeLines": 31,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/PackageSlashTests.cs",
+      "language": "csharp",
+      "sizeLines": 203,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PackageTestTest.cs",
+      "language": "csharp",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "language": "csharp",
+      "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PdbFixupTest.cs",
+      "language": "csharp",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/PluginInstallerTests.cs",
+      "language": "csharp",
+      "sizeLines": 180,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Resources.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/SerializerDependencyTest.cs",
+      "language": "csharp",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/SubProcessTest.cs",
+      "language": "csharp",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/SupportedModelsTest.cs",
+      "language": "csharp",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "language": "csproj",
+      "sizeLines": 113,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/MyPlugin1.TapPackage",
+      "language": "tappackage",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/MyPlugin1.xml",
+      "language": "xml",
+      "sizeLines": 16,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/MyPlugin2.1.2.3+Build-something.TapPackage",
+      "language": "tappackage",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/MyPlugin2.1.2.37-alpha.715+164e6f81.TapPackage",
+      "language": "tappackage",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/MyPlugin2.1.3.3+Build-something.TapPackage",
+      "language": "tappackage",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/MyPlugin2.xml",
+      "language": "xml",
+      "sizeLines": 16,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/MyPlugin3.TapPackage",
+      "language": "tappackage",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/MyPlugin3.xml",
+      "language": "xml",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/MyPlugin4.TapPackage",
+      "language": "tappackage",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/MyPlugin5.TapPackage",
+      "language": "tappackage",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/NoDepsPlugin.TapPackage",
+      "language": "tappackage",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/PDF.7.1.12.05d8beef.TapPackages",
+      "language": "tappackages",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "language": "tappackages",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TapPackages/Tap.7.0.0.0.x64.exe",
+      "language": "exe",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "language": "csharp",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/UninstallContextTest.cs",
+      "language": "csharp",
+      "sizeLines": 337,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package.UnitTests/UnitTesting.snk",
+      "language": "snk",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "package.xml",
+      "language": "xml",
+      "sizeLines": 145,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package/App.config",
+      "language": "config",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Assembly.cs",
+      "language": "csharp",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/AutoCorrectPackageNames.cs",
+      "language": "csharp",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/ConsoleUtils.cs",
+      "language": "csharp",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/CreatePackage/FileHashPackageAction.cs",
+      "language": "csharp",
+      "sizeLines": 262,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/CreatePackage/GitVersionAction.cs",
+      "language": "csharp",
+      "sizeLines": 434,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/CreatePackage/GitVersionCalculator.cs",
+      "language": "csharp",
+      "sizeLines": 681,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "language": "csharp",
+      "sizeLines": 169,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/CreatePackage/IVersionConverter.cs",
+      "language": "csharp",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/CreatePackage/Package.cs",
+      "language": "csharp",
+      "sizeLines": 980,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/CreatePackage/ProgramHelper.cs",
+      "language": "csharp",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/DependencyAnalyzer.cs",
+      "language": "csharp",
+      "sizeLines": 205,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/DependencyChecker.cs",
+      "language": "csharp",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/DependencyResolver.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/FileLocks.cs",
+      "language": "csharp",
+      "sizeLines": 273,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/FuzzyMatcher.cs",
+      "language": "csharp",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/ICustomPackageAction.cs",
+      "language": "csharp",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/HttpStringContent.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/ImageHelper.cs",
+      "language": "csharp",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/ImageIdentifier.cs",
+      "language": "csharp",
+      "sizeLines": 359,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/ImageResolution.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/ImageResolveException.cs",
+      "language": "csharp",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/ImageResolver.cs",
+      "language": "csharp",
+      "sizeLines": 477,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/ImageSpecifier.cs",
+      "language": "csharp",
+      "sizeLines": 227,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/PackageDependencyCache.cs",
+      "language": "csharp",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/PackageDependencyGraph.cs",
+      "language": "csharp",
+      "sizeLines": 408,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/PackageDependencyQuery.cs",
+      "language": "csharp",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/Serialization/JSON/ImageJsonSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "language": "csharp",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "language": "csharp",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/Serialization/XML/ImageXmlSerializer.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "language": "csharp",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Installation.cs",
+      "language": "csharp",
+      "sizeLines": 457,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/InstallationLoggerStartupInfo.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Installer.cs",
+      "language": "csharp",
+      "sizeLines": 475,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/IPackageIdentifier.cs",
+      "language": "csharp",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/IPackageRepository.cs",
+      "language": "csharp",
+      "sizeLines": 348,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/libgit2-b7bad55.source",
+      "language": "source",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/NonInteractiveUserInputInterface.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageAction.cs",
+      "language": "csharp",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActionHelpers.cs",
+      "language": "csharp",
+      "sizeLines": 357,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/CacheAction.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/Create.cs",
+      "language": "csharp",
+      "sizeLines": 254,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/Download.cs",
+      "language": "csharp",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/ImageInstall.cs",
+      "language": "csharp",
+      "sizeLines": 188,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/Install.cs",
+      "language": "csharp",
+      "sizeLines": 662,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/IsolatedPackageAction.cs",
+      "language": "csharp",
+      "sizeLines": 144,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/List.cs",
+      "language": "csharp",
+      "sizeLines": 241,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/LockingPackageAction.cs",
+      "language": "csharp",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/PackageExitCodes.cs",
+      "language": "csharp",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/Show.cs",
+      "language": "csharp",
+      "sizeLines": 354,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/Test.cs",
+      "language": "csharp",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageActions/Uninstall.cs",
+      "language": "csharp",
+      "sizeLines": 336,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageCacheHelper.cs",
+      "language": "csharp",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageCompatibilityHelper.cs",
+      "language": "csharp",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageDefinitionSerializerPlugin.cs",
+      "language": "csharp",
+      "sizeLines": 314,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageFile.cs",
+      "language": "csharp",
+      "sizeLines": 1233,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageFileSerializerPlugin.cs",
+      "language": "csharp",
+      "sizeLines": 157,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageIconData.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageIdentifier.cs",
+      "language": "csharp",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageInstallHelpers/PackageInstallStep.cs",
+      "language": "csharp",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageManagerSettings.cs",
+      "language": "csharp",
+      "sizeLines": 181,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageSchema.xsd",
+      "language": "xml",
+      "sizeLines": 160,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package/PackageSource/IPackageSource.cs",
+      "language": "csharp",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageSpecifier.cs",
+      "language": "csharp",
+      "sizeLines": 595,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PackageVersionSerializerPlugin.cs",
+      "language": "csharp",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PluginFileSerializerPlugin.cs",
+      "language": "csharp",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/PluginInstaller.cs",
+      "language": "csharp",
+      "sizeLines": 679,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Repositories/FilePackageRepository.cs",
+      "language": "csharp",
+      "sizeLines": 646,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Repositories/FileRepositoryCache.cs",
+      "language": "csharp",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Repositories/HttpPackageRepository.cs",
+      "language": "csharp",
+      "sizeLines": 639,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Repositories/IPackageDownloadProgress.cs",
+      "language": "csharp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Repositories/IQueryPrereleases.cs",
+      "language": "csharp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/SetAsmInfo/GacResolver.cs",
+      "language": "csharp",
+      "sizeLines": 286,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/SetAsmInfo/SetAsmInfo.cs",
+      "language": "csharp",
+      "sizeLines": 528,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/SharedState.cs",
+      "language": "csharp",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/Tap.Package.csproj",
+      "language": "csproj",
+      "sizeLines": 66,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Package/TestPlanPackageDependencySerializer.cs",
+      "language": "csharp",
+      "sizeLines": 268,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/TestPlanRunPackageParameterMonitor.cs",
+      "language": "csharp",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/UninstallContext.cs",
+      "language": "csharp",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/UpdateCheck.cs",
+      "language": "csharp",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/XmlEvaulation/ElementExpander.cs",
+      "language": "csharp",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/XmlEvaulation/IVariableProvider.cs",
+      "language": "csharp",
+      "sizeLines": 264,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Package/XmlEvaulation/PackageXmlPreprocessor.cs",
+      "language": "csharp",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 94,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/Examples/.HiddenFile.txt",
+      "language": "txt",
+      "sizeLines": 0,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/Examples/.HiddenFolder/Empty.txt",
+      "language": "txt",
+      "sizeLines": 0,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/Examples/.OpenTapIgnore",
+      "language": "unknown",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/Custom.runtimeconfig.json",
+      "language": "json",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/Directory.Build.props",
+      "language": "props",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/ExamplePlugin.csproj",
+      "language": "csproj",
+      "sizeLines": 30,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/GeneratorInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/LowPassFilterDut.cs",
+      "language": "csharp",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "language": "csharp",
+      "sizeLines": 175,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/package.xml",
+      "language": "xml",
+      "sizeLines": 22,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/Properties/launchSettings.json",
+      "language": "json",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/SomeSampleData.txt",
+      "language": "txt",
+      "sizeLines": 2,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/Examples/Examples.sln",
+      "language": "sln",
+      "sizeLines": 97,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/Custom.runtimeconfig.json",
+      "language": "json",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "language": "csharp",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "language": "csharp",
+      "sizeLines": 185,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "language": "csharp",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "language": "csharp",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "language": "csproj",
+      "sizeLines": 31,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/Properties/launchSettings.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "language": "csharp",
+      "sizeLines": 241,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "language": "csharp",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "language": "csharp",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "language": "csharp",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "language": "csharp",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "language": "csharp",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "language": "csharp",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "language": "csharp",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "language": "csharp",
+      "sizeLines": 192,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "language": "csharp",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "language": "csharp",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "language": "csharp",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "language": "csharp",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "language": "csharp",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/InterfaceBasedInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs",
+      "language": "csharp",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "language": "csharp",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs",
+      "language": "csharp",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchStep.cs",
+      "language": "csharp",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleDut.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPortInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPositionSwitchInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs",
+      "language": "csharp",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/package.xml",
+      "language": "xml",
+      "sizeLines": 19,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/PluginDevelopment.csproj",
+      "language": "csproj",
+      "sizeLines": 37,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Properties/launchSettings.json",
+      "language": "json",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "language": "csharp",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "language": "csharp",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "language": "csharp",
+      "sizeLines": 178,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/AvailableValuesAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/BrowsableAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DefaultValueExample.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DisplayAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DynamicNameDisplayAttribute.cs",
+      "language": "csharp",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/EmbedPropertiesAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/EnabledIfAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/FlagsAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/PathAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/UnitAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/XmlIgnoreAttributeExample.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/InputOutput/GenerateOutput.cs",
+      "language": "csharp",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/InputOutput/HandleInput.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs",
+      "language": "csharp",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentAnyChildren.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentWithResources.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsForXyArray.cs",
+      "language": "csharp",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/ResultsWithCustomClass.cs",
+      "language": "csharp",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SetOfNameValuePairs.cs",
+      "language": "csharp",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/PublishResults/SingleNameValuePair.cs",
+      "language": "csharp",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/AbortsTheTestPlan.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/DeferTaskStep.cs",
+      "language": "csharp",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/LogMessages.cs",
+      "language": "csharp",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/OfferBreakExample.cs",
+      "language": "csharp",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SettingsRetrieval.cs",
+      "language": "csharp",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Execution/SetVerdict.cs",
+      "language": "csharp",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/EnabledCheckBoxes.cs",
+      "language": "csharp",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ListOfObjects.cs",
+      "language": "csharp",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "language": "csharp",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs",
+      "language": "csharp",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/BuildTestPlan.Api.csproj",
+      "language": "csproj",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs",
+      "language": "csharp",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs",
+      "language": "csharp",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/RunTestPlan.Api.csproj",
+      "language": "csproj",
+      "sizeLines": 17,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "language": "csharp",
+      "sizeLines": 446,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs",
+      "language": "csharp",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "language": "csharp",
+      "sizeLines": 269,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "language": "csharp",
+      "sizeLines": 318,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/OpenTap.Sdk.MSBuild.csproj",
+      "language": "csproj",
+      "sizeLines": 42,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "language": "csharp",
+      "sizeLines": 223,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/OpenTapLoader.cs",
+      "language": "csharp",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "language": "csharp",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "language": "csharp",
+      "sizeLines": 221,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "language": "csharp",
+      "sizeLines": 386,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "language": "csharp",
+      "sizeLines": 144,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "language": "csharp",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/NewPackageReference.cs",
+      "language": "csharp",
+      "sizeLines": 175,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/OpenTap.Sdk.New.csproj",
+      "language": "csproj",
+      "sizeLines": 17,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/CliActionTemplate.txt",
+      "language": "txt",
+      "sizeLines": 15,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/csprojTemplate.txt",
+      "language": "txt",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/Directory.Build.props.txt",
+      "language": "txt",
+      "sizeLines": 14,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/DutTemplate.txt",
+      "language": "txt",
+      "sizeLines": 43,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/gitlabCiTemplate.txt",
+      "language": "txt",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/GitVersionTemplate.txt",
+      "language": "txt",
+      "sizeLines": 28,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/InstrumentTemplate.txt",
+      "language": "txt",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/launchTemplate.txt",
+      "language": "txt",
+      "sizeLines": 31,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/newProjectSlnTemplate.txt",
+      "language": "txt",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/PackageXmlTemplate.txt",
+      "language": "txt",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/ResultListenerTemplate.txt",
+      "language": "txt",
+      "sizeLines": 34,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/SettingsTemplate.txt",
+      "language": "txt",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/slnTemplate.txt",
+      "language": "txt",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/TapPlanTemplate.txt",
+      "language": "txt",
+      "sizeLines": 5,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/tasksTemplate.txt",
+      "language": "txt",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/TestStepTemplate.txt",
+      "language": "txt",
+      "sizeLines": 35,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/ResXWriter.cs",
+      "language": "csharp",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/TranslateAction.cs",
+      "language": "csharp",
+      "sizeLines": 368,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sdk/sdk.package.xml",
+      "language": "xml",
+      "sizeLines": 70,
+      "fileCategory": "config"
+    },
+    {
+      "path": "SECURITY.md",
+      "language": "markdown",
+      "sizeLines": 17,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Shared/AnsiColorCodeFix.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/ArgumentsParser.cs",
+      "language": "csharp",
+      "sizeLines": 381,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/ExecutorInterop.cs",
+      "language": "csharp",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/FileSystemHelper.cs",
+      "language": "csharp",
+      "sizeLines": 153,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/ICliActionExtensions.cs",
+      "language": "csharp",
+      "sizeLines": 290,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/MurMurHash3.cs",
+      "language": "csharp",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/OperatingSystem.cs",
+      "language": "csharp",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/PathUtils.cs",
+      "language": "csharp",
+      "sizeLines": 151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/PipeReader.cs",
+      "language": "csharp",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/ProcessCliAction.cs",
+      "language": "csharp",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/ReflectionHelper.cs",
+      "language": "csharp",
+      "sizeLines": 1867,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/SubProcessHost.cs",
+      "language": "csharp",
+      "sizeLines": 236,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/SudoHelper.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Shared/tap.runtimeconfig.json",
+      "language": "json",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Shared/tap.runtimeconfig.WindowsDesktop.json",
+      "language": "json",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Shared/ZipUtils.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Tap.Upgrader/Program.cs",
+      "language": "csharp",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Tap.Upgrader/Tap.Upgrader.csproj",
+      "language": "csproj",
+      "sizeLines": 29,
+      "fileCategory": "config"
+    },
+    {
+      "path": "tap/Program.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tap/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tap/Properties/AssemblyInfo.cs.Template",
+      "language": "template",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tap/Properties/launchSettings.json",
+      "language": "json",
+      "sizeLines": 26,
+      "fileCategory": "config"
+    },
+    {
+      "path": "tap/tap.csproj",
+      "language": "csproj",
+      "sizeLines": 82,
+      "fileCategory": "config"
+    },
+    {
+      "path": "templates/src/project/.template.config/ide.host.json",
+      "language": "json",
+      "sizeLines": 33,
+      "fileCategory": "config"
+    },
+    {
+      "path": "templates/src/project/.template.config/template.json",
+      "language": "json",
+      "sizeLines": 168,
+      "fileCategory": "config"
+    },
+    {
+      "path": "templates/src/project/MyCliAction.cs",
+      "language": "csharp",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "templates/src/project/MyComponentSettings.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "templates/src/project/MyDUT.cs",
+      "language": "csharp",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "templates/src/project/MyInstrument.cs",
+      "language": "csharp",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "templates/src/project/MyResultListener.cs",
+      "language": "csharp",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "templates/src/project/MyTestStep.cs",
+      "language": "csharp",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "templates/src/project/package.xml",
+      "language": "xml",
+      "sizeLines": 16,
+      "fileCategory": "config"
+    },
+    {
+      "path": "templates/src/project/ProjectName.csproj",
+      "language": "csproj",
+      "sizeLines": 34,
+      "fileCategory": "config"
+    },
+    {
+      "path": "templates/src/project/Properties/Editor.LaunchSettings.json",
+      "language": "json",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": "templates/src/project/Properties/TUI.LaunchSettings.json",
+      "language": "json",
+      "sizeLines": 16,
+      "fileCategory": "config"
+    },
+    {
+      "path": "templates/Templates.csproj",
+      "language": "csproj",
+      "sizeLines": 36,
+      "fileCategory": "config"
+    },
+    {
+      "path": "tests/ILGitVersionBug.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/NoAssemblyInfo.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 195,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/package-create-error.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 247,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/package-create-newtonsoft.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 156,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/package-create-out-of-installation.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/planWithLoadErrors.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/regression.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/RepeatOutputCompare.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/run-parse-test.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/show-tags.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test-cli-args.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test-cli-environment-variables.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test-cli-load-plan-with-error.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test-install-package.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test-piped-input.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test-sdk-templates.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/verdictPlan.TapPlan",
+      "language": "tapplan",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 864,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "very-large",
+  "stats": {
+    "filesScanned": 864,
+    "byCategory": {
+      "config": 65,
+      "code": 699,
+      "docs": 88,
+      "infra": 6,
+      "markup": 4,
+      "script": 2
+    },
+    "byLanguage": {
+      "json": 15,
+      "unknown": 9,
+      "markdown": 63,
+      "yaml": 4,
+      "csharp": 628,
+      "csproj": 17,
+      "config": 2,
+      "props": 2,
+      "mts": 1,
+      "css": 2,
+      "javascript": 1,
+      "vue": 1,
+      "html": 2,
+      "xml": 32,
+      "drawio": 4,
+      "dockerfile": 2,
+      "tapplan": 26,
+      "vspscc": 1,
+      "snk": 2,
+      "txt": 25,
+      "bmp": 2,
+      "dll": 3,
+      "shell": 2,
+      "in": 2,
+      "nuspec": 1,
+      "slnx": 1,
+      "tappackage": 8,
+      "tappackages": 2,
+      "exe": 1,
+      "source": 1,
+      "sln": 1,
+      "template": 1
+    }
+  }
+}

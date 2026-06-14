@@ -1,0 +1,9 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": "sdk/Examples/ExamplePlugin/ExamplePlugin.csproj", "language": "csproj", "sizeLines": 23, "fileCategory": "config"},
+    {"path": "sdk/Examples/ExamplePlugin/SomeSampleData.txt", "language": "txt", "sizeLines": 0, "fileCategory": "data"},
+    {"path": "sdk/Examples/ExamplePlugin/package.xml", "language": "xml", "sizeLines": 22, "fileCategory": "config"}
+  ],
+  "batchImportData": {}
+}

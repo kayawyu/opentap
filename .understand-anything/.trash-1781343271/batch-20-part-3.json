@@ -1,0 +1,2048 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "type": "file",
+      "name": "InputOutputRelationTest.cs",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "summary": "InputOutputRelation 系统的 NUnit 综合测试套件，验证 Assign/Unassign/UpdateInputs、测试计划中的 IO 关系链、并行环境下的 IO 传播、连接序列化、菜单注解及类型转换行为。",
+      "tags": [
+        "test",
+        "input-output-relation",
+        "data-flow",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "type": "class",
+      "name": "InputOutputRelationTest",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        11,
+        662
+      ],
+      "summary": "InputOutputRelation 功能的主测试类，包含 18 个测试方法，覆盖 IO 关系基本操作、测试计划级链式传播、并行传播、序列化和类型转换。",
+      "tags": [
+        "test",
+        "input-output-relation",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestBasicInputOutputRelation",
+      "type": "function",
+      "name": "TestBasicInputOutputRelation",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        14,
+        45
+      ],
+      "summary": "验证 Assign/UpdateInputs/Unassign 的基本操作：分配后 UpdateInputs 传播值，取消分配后不再传播。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputRelationsInTestPlan",
+      "type": "function",
+      "name": "TestInputOutputRelationsInTestPlan",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        79,
+        109
+      ],
+      "summary": "验证测试计划中三步链式 IO 关系（Output->Input->Output->Input）的正确传播和 Verdict。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputRelationsInTestPlanParallelN",
+      "type": "function",
+      "name": "TestInputOutputRelationsInTestPlanParallelN",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        111,
+        136
+      ],
+      "summary": "参数化测试：验证 ParallelStep 中 N 个步骤的链式 IO 关系在并行执行时正确传播。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputLoop",
+      "type": "function",
+      "name": "TestInputOutputLoop",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        137,
+        157
+      ],
+      "summary": "验证 IO 循环关系被检测和处理，不会导致无限传播。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestSerializingConnectionsBetweenSteps",
+      "type": "function",
+      "name": "TestSerializingConnectionsBetweenSteps",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        159,
+        188
+      ],
+      "summary": "验证 IO 关系连接在序列化/反序列化后仍然有效，且 UpdateInputs 正确传播值。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestMenuAnnotationForInputOutputRelations",
+      "type": "function",
+      "name": "TestMenuAnnotationForInputOutputRelations",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        215,
+        255
+      ],
+      "summary": "验证单步骤选中时通过 MenuAnnotation 可创建 IO 关系，且创建后的连接在菜单中显示为已连接状态。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:InputSweepTest",
+      "type": "function",
+      "name": "InputSweepTest",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        340,
+        349
+      ],
+      "summary": "验证 Input<T> 作为 SweepValues 时的扫描行为。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestAutoRemoveInputOutputRelation",
+      "type": "function",
+      "name": "TestAutoRemoveInputOutputRelation",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        351,
+        381
+      ],
+      "summary": "验证当输出步骤被删除时关联的 InputOutputRelation 自动移除。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestSerializeReadOnlyMemberInputOutput",
+      "type": "function",
+      "name": "TestSerializeReadOnlyMemberInputOutput",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        397,
+        417
+      ],
+      "summary": "验证只读成员的 InputOutputRelation 在序列化/反序列化后仍正确运行。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestMultipleOutputFromTheSameProperty",
+      "type": "function",
+      "name": "TestMultipleOutputFromTheSameProperty",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        419,
+        436
+      ],
+      "summary": "验证同一属性可作为多个输入的 Output 源，UpdateInputs 正确传播到所有连接的 Input。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputNameClash",
+      "type": "function",
+      "name": "TestInputOutputNameClash",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        481,
+        504
+      ],
+      "summary": "参数化测试：验证多个步骤使用相同输出名称时的名称冲突处理。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputTypes",
+      "type": "function",
+      "name": "TestInputOutputTypes",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        506,
+        541
+      ],
+      "summary": "验证不同数据类型（double、string、bool 数组、List）的 Input/Output 关系正确传播值。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestConvertOutputToInput",
+      "type": "function",
+      "name": "TestConvertOutputToInput",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        548,
+        601
+      ],
+      "summary": "参数化测试：验证不同数据类型间的自动转换能力（CanConvert）以及不支持转换时抛异常。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestCanConvertBehavior",
+      "type": "function",
+      "name": "TestCanConvertBehavior",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        604,
+        614
+      ],
+      "summary": "验证各种数据类型组合的 CanConvert 行为返回正确的布尔值。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputAndOutputWithRemovedMixins",
+      "type": "function",
+      "name": "TestInputAndOutputWithRemovedMixins",
+      "filePath": "Engine.UnitTests/InputOutputRelationTest.cs",
+      "lineRange": [
+        616,
+        661
+      ],
+      "summary": "验证移除 Mixin 后，Input/Output 属性的 IO 关系不受影响或正确清理。",
+      "tags": [
+        "test",
+        "input-output-relation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/InputTest.cs",
+      "type": "file",
+      "name": "InputTest.cs",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "summary": "Input<T> 类型的 NUnit 测试套件，覆盖基本 Input 赋值/比较、null/已删除步骤的 Input 处理、序列化、Parallel If Verdict 死锁及 Repeater/Verdict 测试。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow",
+        "verdict"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "type": "class",
+      "name": "InputTest",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        25,
+        251
+      ],
+      "summary": "Input<T> 功能的主测试类，包含 10 个测试方法，覆盖 Input 比较、序列化、Parallel If 死锁和 Repeater/Verdict 测试。",
+      "tags": [
+        "test",
+        "input",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputTest.cs:InputBasicTests",
+      "type": "function",
+      "name": "InputBasicTests",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        28,
+        62
+      ],
+      "summary": "验证 Input<double> 从 DelayStep 读取值、Input 相等性比较及序列化/反序列化后 Step 引用正确恢复。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputTest.cs:NullInputTest",
+      "type": "function",
+      "name": "NullInputTest",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        64,
+        84
+      ],
+      "summary": "验证 null Input 与未配置 Input 的相等性语义：仅当 Step 和 Property 均为 null 时 Input 相等。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputTest.cs:DeletedInputTest",
+      "type": "function",
+      "name": "DeletedInputTest",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        86,
+        118
+      ],
+      "summary": "验证被删除步骤的 Input 在目标步骤移除后 IStringReadOnlyValueAnnotation 返回 'None' 字符串。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputTest.cs:TestSerializeInput",
+      "type": "function",
+      "name": "TestSerializeInput",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        120,
+        131
+      ],
+      "summary": "验证 HandleInputStep（含多种 Input<T> 类型）的序列化/反序列化无错误。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputTest.cs:UnconfiguredInputToStringTest",
+      "type": "function",
+      "name": "UnconfiguredInputToStringTest",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        133,
+        139
+      ],
+      "summary": "验证未配置的 Input<string>.ToString() 返回空字符串且不抛异常。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputTest.cs:ParallelIfVerdict",
+      "type": "function",
+      "name": "ParallelIfVerdict",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        144,
+        175
+      ],
+      "summary": "验证 ParallelStep 中 IfStep 的 InputVerdict 源步骤被禁用时不会导致死锁。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputTest.cs:ParallelIfVerdictDeadlock",
+      "type": "function",
+      "name": "ParallelIfVerdictDeadlock",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        177,
+        197
+      ],
+      "summary": "参数化测试：验证嵌套 ParallelStep 中 IfStep 的 InputVerdict 指向自身父 Parallel 时返回 Verdict.Error。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputTest.cs:MovingStepWithInputTest",
+      "type": "function",
+      "name": "MovingStepWithInputTest",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        199,
+        216
+      ],
+      "summary": "验证测试步骤在计划中被移动后无效的 Input 引用自动被置为 null。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputTest.cs:RepeatVerdictTest",
+      "type": "function",
+      "name": "RepeatVerdictTest",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        218,
+        242
+      ],
+      "summary": "验证 RepeatStep 中 IfStep 通过 InputVerdict 监控内部 DelayStep 的 Verdict 判定。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/InputTest.cs:AssignOutputDialogWithPlan",
+      "type": "function",
+      "name": "AssignOutputDialogWithPlan",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        244,
+        250
+      ],
+      "summary": "验证 AssignOutputDialog.SelectedOutputItem 的 ToString 不抛异常。",
+      "tags": [
+        "test",
+        "input",
+        "data-flow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/InputTest.cs:ReadInputStep",
+      "type": "class",
+      "name": "ReadInputStep",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        15,
+        23
+      ],
+      "summary": "测试用 TestStep，包含一个 Input<double> 属性用于读取其他步骤的输出值。",
+      "tags": [
+        "test-helper",
+        "input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/InputTest.cs:HandleInputStep",
+      "type": "class",
+      "name": "HandleInputStep",
+      "filePath": "Engine.UnitTests/InputTest.cs",
+      "lineRange": [
+        296,
+        326
+      ],
+      "summary": "测试用 TestStep，包含多种 Input<T> 类型（bool[]、double、double[]、string、string[]、List<string>）用于序列化测试。",
+      "tags": [
+        "test-helper",
+        "input",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/IResultSinkTests.cs",
+      "type": "file",
+      "name": "IResultSinkTests.cs",
+      "filePath": "Engine.UnitTests/IResultSinkTests.cs",
+      "summary": "IResultSink 和 ScalarResultSink 的 NUnit 测试套件，验证 EVM 测量步骤与限值检查步骤之间的异步结果传递，覆盖串行、Repeat 和 Parallel 执行模式。",
+      "tags": [
+        "test",
+        "result-sink",
+        "scalar-result-sink",
+        "async"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/IResultSinkTests.cs:IResultSinkTests",
+      "type": "class",
+      "name": "IResultSinkTests",
+      "filePath": "Engine.UnitTests/IResultSinkTests.cs",
+      "lineRange": [
+        71,
+        139
+      ],
+      "summary": "IResultSink 功能的主测试类，包含 3 个测试方法（RunPlanTest/RunPlanWithLoopTest/ResultSinkInParallel），验证异步结果传递。",
+      "tags": [
+        "test",
+        "result-sink",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/IResultSinkTests.cs:RunPlanTest",
+      "type": "function",
+      "name": "RunPlanTest",
+      "filePath": "Engine.UnitTests/IResultSinkTests.cs",
+      "lineRange": [
+        74,
+        94
+      ],
+      "summary": "参数化测试：验证 EvmMeasurementStep 的结果通过 ScalarResultSink 传递到 EvmLimitCheckStep，并产生正确 Verdict。",
+      "tags": [
+        "test",
+        "result-sink"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/IResultSinkTests.cs:RunPlanWithLoopTest",
+      "type": "function",
+      "name": "RunPlanWithLoopTest",
+      "filePath": "Engine.UnitTests/IResultSinkTests.cs",
+      "lineRange": [
+        96,
+        116
+      ],
+      "summary": "参数化测试：验证 RepeatStep 中 ResultSink 在多次迭代中正确传递结果。",
+      "tags": [
+        "test",
+        "result-sink"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/IResultSinkTests.cs:ResultSinkInParallel",
+      "type": "function",
+      "name": "ResultSinkInParallel",
+      "filePath": "Engine.UnitTests/IResultSinkTests.cs",
+      "lineRange": [
+        118,
+        137
+      ],
+      "summary": "参数化测试：验证 ParallelStep 中 ResultSink 的异步结果传递不受并行执行影响。",
+      "tags": [
+        "test",
+        "result-sink"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/IResultSinkTests.cs:EvmLimitCheckStep",
+      "type": "class",
+      "name": "EvmLimitCheckStep",
+      "filePath": "Engine.UnitTests/IResultSinkTests.cs",
+      "lineRange": [
+        17,
+        50
+      ],
+      "summary": "EVM 限值检查 TestStep，通过 ScalarResultSink<double> 从 EvmMeasurementStep 获取测量结果并与 MaxEvm 比较，决定 Pass/Fail。",
+      "tags": [
+        "test-helper",
+        "result-sink",
+        "scalar-result-sink"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/LazyResourceManagerTest.cs",
+      "type": "file",
+      "name": "LazyResourceManagerTest.cs",
+      "filePath": "Engine.UnitTests/LazyResourceManagerTest.cs",
+      "summary": "LazyResourceManager 的互斥资源测试，验证两个互斥 Instrument 在 Repeat 循环中不会同时处于 Open 状态。",
+      "tags": [
+        "test",
+        "lazy-resource-manager",
+        "exclusive-instrument"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/LazyResourceManagerTest.cs:LazyResourceManagerTest",
+      "type": "class",
+      "name": "LazyResourceManagerTest",
+      "filePath": "Engine.UnitTests/LazyResourceManagerTest.cs",
+      "lineRange": [
+        8,
+        73
+      ],
+      "summary": "LazyResourceManager 互斥资源测试类，验证在 Repeat 循环中两个互相指向的 ExclusiveInstrument 不会同时打开。",
+      "tags": [
+        "test",
+        "lazy-resource-manager",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/LazyResourceManagerTest.cs:TestExclusiveInstruments",
+      "type": "function",
+      "name": "TestExclusiveInstruments",
+      "filePath": "Engine.UnitTests/LazyResourceManagerTest.cs",
+      "lineRange": [
+        43,
+        72
+      ],
+      "summary": "验证 LazyResourceManager 的互斥锁机制确保两个互相引用的 ExclusiveInstrument 在 Open 期间对方保持 Closed 状态。",
+      "tags": [
+        "test",
+        "lazy-resource-manager",
+        "exclusive"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/ListSerialization.cs",
+      "type": "file",
+      "name": "ListSerialization.cs",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "summary": "列表序列化/反序列化的 NUnit 综合测试套件，覆盖 List<string>、List<Instrument>、嵌套 List<List<Instrument>>、HashSet、Dictionary、IDeserializedCallback 及各种边界情况。",
+      "tags": [
+        "test",
+        "serialization",
+        "list",
+        "deserialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "type": "class",
+      "name": "ListSerialization",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        12,
+        519
+      ],
+      "summary": "列表序列化测试类，包含 12 个测试方法，覆盖字符串列表、Instrument 列表、嵌套列表、非对称列表反序列化等。",
+      "tags": [
+        "test",
+        "serialization",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ListSerialization.cs:StringTempListSerialization",
+      "type": "function",
+      "name": "StringTempListSerialization",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        66,
+        89
+      ],
+      "summary": "验证 List<StringTemp>（含自定义类元素）的 TestPlan 序列化/反序列化往返正确性。",
+      "tags": [
+        "test",
+        "serialization",
+        "list"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ListSerialization.cs:StringListSerialization",
+      "type": "function",
+      "name": "StringListSerialization",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        91,
+        125
+      ],
+      "summary": "验证含 List<string>、IList<double>、HashSet<int/enum>、Dictionary 的步骤序列化反序列化正确性。",
+      "tags": [
+        "test",
+        "serialization",
+        "list"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ListSerialization.cs:ListInstrumentSerialization",
+      "type": "function",
+      "name": "ListInstrumentSerialization",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        159,
+        191
+      ],
+      "summary": "验证 List<IInstrument> 中混合 ScpiDummyInstrument 和 SomeotherInstrument 的序列化/反序化。",
+      "tags": [
+        "test",
+        "serialization",
+        "list"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ListSerialization.cs:ListListInstrumentSerialization",
+      "type": "function",
+      "name": "ListListInstrumentSerialization",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        211,
+        251
+      ],
+      "summary": "验证嵌套 List<List<IInstrument>> 的序列化/反序列化（三阶深度嵌套）。",
+      "tags": [
+        "test",
+        "serialization",
+        "list"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ListSerialization.cs:ListListListInstrumentSerialization",
+      "type": "function",
+      "name": "ListListListInstrumentSerialization",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        270,
+        316
+      ],
+      "summary": "验证三级嵌套 List<List<List<IInstrument>>> 的序列化/反序列化。",
+      "tags": [
+        "test",
+        "serialization",
+        "list"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ListSerialization.cs:TestIDeserializedCallback",
+      "type": "function",
+      "name": "TestIDeserializedCallback",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        351,
+        390
+      ],
+      "summary": "验证实现 IDeserializedCallback 的 Instrument 在反序列化后正确收到回调。",
+      "tags": [
+        "test",
+        "serialization",
+        "list"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ListSerialization.cs:SerializeDeserializePrivateType",
+      "type": "function",
+      "name": "SerializeDeserializePrivateType",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        397,
+        407
+      ],
+      "summary": "验证 List<私有类型> 的序列化/反序列化。",
+      "tags": [
+        "test",
+        "serialization",
+        "list"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ListSerialization.cs:SerializeDeserializeNullResource",
+      "type": "function",
+      "name": "SerializeDeserializeNullResource",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        409,
+        427
+      ],
+      "summary": "验证包含 null 资源的 List 序列化/反序列化。",
+      "tags": [
+        "test",
+        "serialization",
+        "list"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ListSerialization.cs:SerializeDeserializeProblematicString",
+      "type": "function",
+      "name": "SerializeDeserializeProblematicString",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        434,
+        461
+      ],
+      "summary": "验证含特殊字符和 XML 敏感字符串的序列化。",
+      "tags": [
+        "test",
+        "serialization",
+        "list"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ListSerialization.cs:DeserializeUnbalancedList",
+      "type": "function",
+      "name": "DeserializeUnbalancedList",
+      "filePath": "Engine.UnitTests/ListSerialization.cs",
+      "lineRange": [
+        482,
+        518
+      ],
+      "summary": "验证非对称列表（序列化时的元素类型多于反序列化时的已知类型）的反序列化行为。",
+      "tags": [
+        "test",
+        "serialization",
+        "list"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/LoggingProfilingTest.cs",
+      "type": "file",
+      "name": "LoggingProfilingTest.cs",
+      "filePath": "Engine.UnitTests/LoggingProfilingTest.cs",
+      "summary": "测试辅助类文件，定义 PingActivityTest 和 PingingResource，用于日志/性能分析的 Instrument Activity 跟踪测试。",
+      "tags": [
+        "test-helper",
+        "logging",
+        "profiling",
+        "instrument-activity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/LoggingProfilingTest.cs:PingActivityTest",
+      "type": "class",
+      "name": "PingActivityTest",
+      "filePath": "Engine.UnitTests/LoggingProfilingTest.cs",
+      "lineRange": [
+        9,
+        20
+      ],
+      "summary": "测试用 TestStep，循环调用 SelectedResource.PingActivity() 以产生 Instrument Activity 事件。",
+      "tags": [
+        "test-helper",
+        "profiling",
+        "instrument-activity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/LoggingProfilingTest.cs:PingingResource",
+      "type": "class",
+      "name": "PingingResource",
+      "filePath": "Engine.UnitTests/LoggingProfilingTest.cs",
+      "lineRange": [
+        21,
+        27
+      ],
+      "summary": "测试用 Instrument，提供 PingActivity 方法内部调用 OnActivity() 触发 Activity 事件。",
+      "tags": [
+        "test-helper",
+        "profiling",
+        "instrument",
+        "activity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/LoggingTest.cs",
+      "type": "file",
+      "name": "LoggingTest.cs",
+      "filePath": "Engine.UnitTests/LoggingTest.cs",
+      "summary": "OpenTap.Diagnostic 日志系统的 NUnit 综合测试套件，覆盖同步/异步/缓冲消息、性能、null 消息防护、Exception 日志和 LogEvent Duration。",
+      "tags": [
+        "test",
+        "logging",
+        "diagnostic",
+        "log-event"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/LoggingTest.cs:LoggingTest",
+      "type": "class",
+      "name": "LoggingTest",
+      "filePath": "Engine.UnitTests/LoggingTest.cs",
+      "lineRange": [
+        14,
+        267
+      ],
+      "summary": "日志系统的主测试类，包含 10 个测试方法，验证 LogFactory 上下文、同步/异步消息传递、缓冲和诊断事件。",
+      "tags": [
+        "test",
+        "logging",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/LoggingTest.cs:SimpleAsyncTest",
+      "type": "function",
+      "name": "SimpleAsyncTest",
+      "filePath": "Engine.UnitTests/LoggingTest.cs",
+      "lineRange": [
+        37,
+        57
+      ],
+      "summary": "验证异步日志上下文在 MessageBufferSize=0 时正确投递所有消息到 ILogListener。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/LoggingTest.cs:SimpleSyncTest",
+      "type": "function",
+      "name": "SimpleSyncTest",
+      "filePath": "Engine.UnitTests/LoggingTest.cs",
+      "lineRange": [
+        59,
+        79
+      ],
+      "summary": "验证同步日志上下文在 MessageBufferSize=0 时正确投递所有消息。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/LoggingTest.cs:SimpleBufferTest",
+      "type": "function",
+      "name": "SimpleBufferTest",
+      "filePath": "Engine.UnitTests/LoggingTest.cs",
+      "lineRange": [
+        81,
+        101
+      ],
+      "summary": "验证 MessageBufferSize=1 的缓冲模式在 Flush 后正确投递所有消息。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/LoggingTest.cs:NullMessages",
+      "type": "function",
+      "name": "NullMessages",
+      "filePath": "Engine.UnitTests/LoggingTest.cs",
+      "lineRange": [
+        129,
+        170
+      ],
+      "summary": "验证 Log.CreateSource 的 Debug/Error/Warning/Info 方法在传入 null 字符串时抛出 ArgumentNullException。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/LoggingTest.cs:ExceptionDebugLog",
+      "type": "function",
+      "name": "ExceptionDebugLog",
+      "filePath": "Engine.UnitTests/LoggingTest.cs",
+      "lineRange": [
+        194,
+        198
+      ],
+      "summary": "验证带有自定义 StackTrace 属性的 Exception 子类的 Debug 日志不抛出异常。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/LoggingTest.cs:LogEventDuration",
+      "type": "function",
+      "name": "LogEventDuration",
+      "filePath": "Engine.UnitTests/LoggingTest.cs",
+      "lineRange": [
+        222,
+        243
+      ],
+      "summary": "验证日志事件的 DurationNS 字段正确反映传入 TimeSpan 参数的纳秒值。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/LoggingTest.cs:SimpleTest",
+      "type": "function",
+      "name": "SimpleTest",
+      "filePath": "Engine.UnitTests/LoggingTest.cs",
+      "lineRange": [
+        245,
+        265
+      ],
+      "summary": "参数化测试：验证含特殊字符（'{'、'}'、空字符串）的日志消息在 Session 内的正确输出。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/LogResultListenerTest.cs",
+      "type": "file",
+      "name": "LogResultListenerTest.cs",
+      "filePath": "Engine.UnitTests/LogResultListenerTest.cs",
+      "summary": "LogResultListener 的 NUnit 测试套件，验证宏展开（Date/Station）、基本日志输出到文件、测试计划模拟及 FilterOptions 日志收集。",
+      "tags": [
+        "test",
+        "log-result-listener",
+        "macro",
+        "result-listener"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerTest",
+      "type": "class",
+      "name": "LogResultListenerTest",
+      "filePath": "Engine.UnitTests/LogResultListenerTest.cs",
+      "lineRange": [
+        15,
+        138
+      ],
+      "summary": "LogResultListener 测试类，包含 4 个测试方法，验证文件路径宏展开、日志捕获、TestPlanRun 序列化和 Verbose 日志完整收集。",
+      "tags": [
+        "test",
+        "log-result-listener",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/LogResultListenerTest.cs:MacroExpandTest",
+      "type": "function",
+      "name": "MacroExpandTest",
+      "filePath": "Engine.UnitTests/LogResultListenerTest.cs",
+      "lineRange": [
+        32,
+        53
+      ],
+      "summary": "验证 MacroString 的 <Date> 和 <Station> 宏展开，以及特殊字符处理和未知宏的 TBD 回退。",
+      "tags": [
+        "test",
+        "log-result-listener"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerBasicTest",
+      "type": "function",
+      "name": "LogResultListenerBasicTest",
+      "filePath": "Engine.UnitTests/LogResultListenerTest.cs",
+      "lineRange": [
+        55,
+        75
+      ],
+      "summary": "验证 LogResultListener 在测试计划执行后正确将 Log 输出写入文件，且文件包含步骤的 Debug 消息。",
+      "tags": [
+        "test",
+        "log-result-listener"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/LogResultListenerTest.cs:SimulateTestPlan",
+      "type": "function",
+      "name": "SimulateTestPlan",
+      "filePath": "Engine.UnitTests/LogResultListenerTest.cs",
+      "lineRange": [
+        77,
+        105
+      ],
+      "summary": "验证 LogResultListener 在模拟的 TestPlanRun 中正确将 InputStream 写入文件，且内容完全一致。",
+      "tags": [
+        "test",
+        "log-result-listener"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerBugTest",
+      "type": "function",
+      "name": "LogResultListenerBugTest",
+      "filePath": "Engine.UnitTests/LogResultListenerTest.cs",
+      "lineRange": [
+        108,
+        137
+      ],
+      "summary": "验证 FilterOptions.Verbose 模式下列表中的 LogResultListener 不会导致 Verdict.Error。",
+      "tags": [
+        "test",
+        "log-result-listener"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/LoggingTest.cs:TicksTest",
+      "type": "function",
+      "name": "TicksTest",
+      "filePath": "Engine.UnitTests/LoggingTest.cs",
+      "lineRange": [
+        172,
+        176
+      ],
+      "summary": "验证 TimeSpan.FromSeconds(1).Ticks 等于 10,000,000（1 秒的标准 Tick 数），属于平台正确性测试。",
+      "tags": [
+        "test",
+        "time-span",
+        "ticks"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestBasicInputOutputRelation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestBasicInputOutputRelation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputRelationsInTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputRelationsInTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputRelationsInTestPlanParallelN",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputRelationsInTestPlanParallelN",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestSerializingConnectionsBetweenSteps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestSerializingConnectionsBetweenSteps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestMenuAnnotationForInputOutputRelations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestMenuAnnotationForInputOutputRelations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:InputSweepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:InputSweepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestAutoRemoveInputOutputRelation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestAutoRemoveInputOutputRelation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestSerializeReadOnlyMemberInputOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestSerializeReadOnlyMemberInputOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestMultipleOutputFromTheSameProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestMultipleOutputFromTheSameProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputNameClash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputNameClash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputOutputTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestConvertOutputToInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestConvertOutputToInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestCanConvertBehavior",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestCanConvertBehavior",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputAndOutputWithRemovedMixins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "function:Engine.UnitTests/InputOutputRelationTest.cs:TestInputAndOutputWithRemovedMixins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "target": "class:Engine.UnitTests/InputOutputRelationTest.cs:InputOutputRelationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/AnnotationCollection.cs",
+      "target": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/TapSerializer.cs",
+      "target": "file:Engine.UnitTests/InputOutputRelationTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "target": "function:Engine.UnitTests/InputTest.cs:InputBasicTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "function:Engine.UnitTests/InputTest.cs:InputBasicTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "target": "function:Engine.UnitTests/InputTest.cs:NullInputTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "function:Engine.UnitTests/InputTest.cs:NullInputTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "target": "function:Engine.UnitTests/InputTest.cs:DeletedInputTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "function:Engine.UnitTests/InputTest.cs:DeletedInputTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "target": "function:Engine.UnitTests/InputTest.cs:TestSerializeInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "function:Engine.UnitTests/InputTest.cs:TestSerializeInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "target": "function:Engine.UnitTests/InputTest.cs:UnconfiguredInputToStringTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "function:Engine.UnitTests/InputTest.cs:UnconfiguredInputToStringTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "target": "function:Engine.UnitTests/InputTest.cs:ParallelIfVerdict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "function:Engine.UnitTests/InputTest.cs:ParallelIfVerdict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "target": "function:Engine.UnitTests/InputTest.cs:ParallelIfVerdictDeadlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "function:Engine.UnitTests/InputTest.cs:ParallelIfVerdictDeadlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "target": "function:Engine.UnitTests/InputTest.cs:MovingStepWithInputTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "function:Engine.UnitTests/InputTest.cs:MovingStepWithInputTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "target": "function:Engine.UnitTests/InputTest.cs:RepeatVerdictTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "function:Engine.UnitTests/InputTest.cs:RepeatVerdictTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "target": "function:Engine.UnitTests/InputTest.cs:AssignOutputDialogWithPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "function:Engine.UnitTests/InputTest.cs:AssignOutputDialogWithPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "class:Engine.UnitTests/InputTest.cs:InputTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "class:Engine.UnitTests/InputTest.cs:ReadInputStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/InputTest.cs",
+      "target": "class:Engine.UnitTests/InputTest.cs:HandleInputStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Input.cs",
+      "target": "file:Engine.UnitTests/InputTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/TapSerializer.cs",
+      "target": "file:Engine.UnitTests/InputTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/IResultSinkTests.cs:IResultSinkTests",
+      "target": "function:Engine.UnitTests/IResultSinkTests.cs:RunPlanTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/IResultSinkTests.cs",
+      "target": "function:Engine.UnitTests/IResultSinkTests.cs:RunPlanTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/IResultSinkTests.cs:IResultSinkTests",
+      "target": "function:Engine.UnitTests/IResultSinkTests.cs:RunPlanWithLoopTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/IResultSinkTests.cs",
+      "target": "function:Engine.UnitTests/IResultSinkTests.cs:RunPlanWithLoopTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/IResultSinkTests.cs:IResultSinkTests",
+      "target": "function:Engine.UnitTests/IResultSinkTests.cs:ResultSinkInParallel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/IResultSinkTests.cs",
+      "target": "function:Engine.UnitTests/IResultSinkTests.cs:ResultSinkInParallel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/IResultSinkTests.cs",
+      "target": "class:Engine.UnitTests/IResultSinkTests.cs:IResultSinkTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/IResultSinkTests.cs",
+      "target": "class:Engine.UnitTests/IResultSinkTests.cs:EvmLimitCheckStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScalarResultSink.cs",
+      "target": "file:Engine.UnitTests/IResultSinkTests.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/LazyResourceManagerTest.cs:LazyResourceManagerTest",
+      "target": "function:Engine.UnitTests/LazyResourceManagerTest.cs:TestExclusiveInstruments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LazyResourceManagerTest.cs",
+      "target": "class:Engine.UnitTests/LazyResourceManagerTest.cs:LazyResourceManagerTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LazyResourceManagerTest.cs",
+      "target": "function:Engine.UnitTests/LazyResourceManagerTest.cs:TestExclusiveInstruments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/LazyResourceManager.cs",
+      "target": "file:Engine.UnitTests/LazyResourceManagerTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:StringTempListSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:StringTempListSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:StringListSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:StringListSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:ListInstrumentSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:ListInstrumentSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:ListListInstrumentSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:ListListInstrumentSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:ListListListInstrumentSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:ListListListInstrumentSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:TestIDeserializedCallback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:TestIDeserializedCallback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:SerializeDeserializePrivateType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:SerializeDeserializePrivateType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:SerializeDeserializeNullResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:SerializeDeserializeNullResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:SerializeDeserializeProblematicString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:SerializeDeserializeProblematicString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:DeserializeUnbalancedList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "function:Engine.UnitTests/ListSerialization.cs:DeserializeUnbalancedList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ListSerialization.cs",
+      "target": "class:Engine.UnitTests/ListSerialization.cs:ListSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerializer.cs",
+      "target": "file:Engine.UnitTests/ListSerialization.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "file:Engine.UnitTests/ListSerialization.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingProfilingTest.cs",
+      "target": "class:Engine.UnitTests/LoggingProfilingTest.cs:PingActivityTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingProfilingTest.cs",
+      "target": "class:Engine.UnitTests/LoggingProfilingTest.cs:PingingResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/LoggingTest.cs:LoggingTest",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:SimpleAsyncTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingTest.cs",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:SimpleAsyncTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/LoggingTest.cs:LoggingTest",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:SimpleSyncTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingTest.cs",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:SimpleSyncTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/LoggingTest.cs:LoggingTest",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:SimpleBufferTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingTest.cs",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:SimpleBufferTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/LoggingTest.cs:LoggingTest",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:NullMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingTest.cs",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:NullMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/LoggingTest.cs:LoggingTest",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:ExceptionDebugLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingTest.cs",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:ExceptionDebugLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/LoggingTest.cs:LoggingTest",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:LogEventDuration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingTest.cs",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:LogEventDuration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/LoggingTest.cs:LoggingTest",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:SimpleTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingTest.cs",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:SimpleTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingTest.cs",
+      "target": "class:Engine.UnitTests/LoggingTest.cs:LoggingTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "file:Engine.UnitTests/LoggingTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerTest",
+      "target": "function:Engine.UnitTests/LogResultListenerTest.cs:MacroExpandTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LogResultListenerTest.cs",
+      "target": "function:Engine.UnitTests/LogResultListenerTest.cs:MacroExpandTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerTest",
+      "target": "function:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerBasicTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LogResultListenerTest.cs",
+      "target": "function:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerBasicTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerTest",
+      "target": "function:Engine.UnitTests/LogResultListenerTest.cs:SimulateTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LogResultListenerTest.cs",
+      "target": "function:Engine.UnitTests/LogResultListenerTest.cs:SimulateTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerTest",
+      "target": "function:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerBugTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LogResultListenerTest.cs",
+      "target": "function:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerBugTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LogResultListenerTest.cs",
+      "target": "class:Engine.UnitTests/LogResultListenerTest.cs:LogResultListenerTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/LogResultListener.cs",
+      "target": "file:Engine.UnitTests/LogResultListenerTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/MacroString.cs",
+      "target": "file:Engine.UnitTests/LogResultListenerTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/ResultSettings.cs",
+      "target": "file:Engine.UnitTests/LogResultListenerTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/LoggingTest.cs:LoggingTest",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:TicksTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/LoggingTest.cs",
+      "target": "function:Engine.UnitTests/LoggingTest.cs:TicksTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

@@ -1,0 +1,1567 @@
+{
+  "nodes": [
+    {
+      "id": "document:doc/Release Notes/9.29/Readme.md",
+      "type": "document",
+      "name": "OpenTAP 9.29 发布说明",
+      "filePath": "doc/Release Notes/9.29/Readme.md",
+      "summary": "OpenTAP 9.29.0 版本发布说明，涵盖从 .NET Framework 迁移到 .NET 9 的重大变更、多语言支持功能、增强的 Mixin 功能，以及若干新特性和 Bug 修复。",
+      "tags": [
+        "release-notes",
+        "documentation",
+        "changelog"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/9.30/Readme.md",
+      "type": "document",
+      "name": "OpenTAP 9.30 发布说明",
+      "filePath": "doc/Release Notes/9.30/Readme.md",
+      "summary": "OpenTAP 9.30.0 版本发布说明，主要包含 API 增强（自定义名称格式化接口 IFormatName、DisplayAttribute 中性语言变体）以及测试步骤断开条件导致死锁的 Bug 修复。",
+      "tags": [
+        "release-notes",
+        "documentation",
+        "changelog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "type": "file",
+      "name": "BasicStepsTest.cs",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "summary": "基本步骤（BasicSteps）的单元测试，覆盖 TimeGuardStep、RepeatStep 重试逻辑、SweepLoop 跨运行资源引用以及 Jump 到指定迭代的功能。",
+      "tags": [
+        "test",
+        "unit-test",
+        "basic-steps",
+        "repeat",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/BeforeAttributeTest.cs",
+      "type": "file",
+      "name": "BeforeAttributeTest.cs",
+      "filePath": "Engine.UnitTests/BeforeAttributeTest.cs",
+      "summary": "BeforeAttribute 特性的单元测试，验证多个 IStringConvertProvider 在使用 Before 属性时的执行优先顺序。",
+      "tags": [
+        "test",
+        "unit-test",
+        "attribute",
+        "ordering"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "type": "file",
+      "name": "BreakConditionTest.cs",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "summary": "断点条件（Break Conditions）的全面单元测试，覆盖步骤级和引擎级 BreakCondition 继承、判定覆盖、无限等待与中止、异常抛出与处理。",
+      "tags": [
+        "test",
+        "unit-test",
+        "break-condition",
+        "verdict"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/ChildItemVisibilityTest.cs",
+      "type": "file",
+      "name": "ChildItemVisibilityTest.cs",
+      "filePath": "Engine.UnitTests/ChildItemVisibilityTest.cs",
+      "summary": "ChildItemVisibility 的单元测试，验证子步骤可见性（Collapsed/Visible）的设置、获取以及 XML 序列化/反序列化后的持久性。",
+      "tags": [
+        "test",
+        "unit-test",
+        "visibility",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/CliCommandTest.cs",
+      "type": "file",
+      "name": "CliCommandTest.cs",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "summary": "CLI 命令行系统的单元测试，包含 6 个测试类，覆盖 CliActionTree 命令树查找、无 Display 属性的 CLI Action 帮助输出、以及多种 CLI Action 参数解析场景。",
+      "tags": [
+        "test",
+        "unit-test",
+        "cli",
+        "command-line"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "type": "class",
+      "name": "BasicStepsTest",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        9,
+        396
+      ],
+      "summary": "NUnit 测试夹具类，包含 12 个测试方法，全面验证 TimeGuardStep、RepeatStep、SweepLoop 等基本步骤的行为。",
+      "tags": [
+        "test-fixture",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TimeGuardStepTest",
+      "type": "function",
+      "name": "BasicStepsTest.TimeGuardStepTest",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        11,
+        28
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatUntilPass",
+      "type": "function",
+      "name": "BasicStepsTest.RepeatUntilPass",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        51,
+        83
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatUntilPass2",
+      "type": "function",
+      "name": "BasicStepsTest.RepeatUntilPass2",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        85,
+        105
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatWhileError",
+      "type": "function",
+      "name": "BasicStepsTest.RepeatWhileError",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        109,
+        133
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.ScpiRegexStepValidation",
+      "type": "function",
+      "name": "BasicStepsTest.ScpiRegexStepValidation",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        135,
+        151
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatCheckResultsHasIterations",
+      "type": "function",
+      "name": "BasicStepsTest.RepeatCheckResultsHasIterations",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        161,
+        189
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TestSweepLoopAcrossRunsReferencedResources",
+      "type": "function",
+      "name": "BasicStepsTest.TestSweepLoopAcrossRunsReferencedResources",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        191,
+        210
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TestScpiQueryNullValidation",
+      "type": "function",
+      "name": "BasicStepsTest.TestScpiQueryNullValidation",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        212,
+        225
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToRepeatIteration",
+      "type": "function",
+      "name": "BasicStepsTest.JumpToRepeatIteration",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        277,
+        300
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToRepeatIteration2",
+      "type": "function",
+      "name": "BasicStepsTest.JumpToRepeatIteration2",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        302,
+        328
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToSweepRangeIteration",
+      "type": "function",
+      "name": "BasicStepsTest.JumpToSweepRangeIteration",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        330,
+        361
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToSweepParameterIteration",
+      "type": "function",
+      "name": "BasicStepsTest.JumpToSweepParameterIteration",
+      "filePath": "Engine.UnitTests/BasicStepsTest.cs",
+      "lineRange": [
+        362,
+        395
+      ],
+      "summary": "验证基本步骤功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "basic-steps"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/BeforeAttributeTest.cs:BeforeAttributeTest",
+      "type": "class",
+      "name": "BeforeAttributeTest",
+      "filePath": "Engine.UnitTests/BeforeAttributeTest.cs",
+      "lineRange": [
+        10,
+        64
+      ],
+      "summary": "NUnit 测试夹具类，验证 Before 属性控制的 StringConvertProvider 执行顺序（D 先于 C，B 先于 D，C 先于 A）。",
+      "tags": [
+        "test-fixture",
+        "nunit",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BeforeAttributeTest.cs:BeforeAttributeTest.TestBeforeAttribute",
+      "type": "function",
+      "name": "BeforeAttributeTest.TestBeforeAttribute",
+      "filePath": "Engine.UnitTests/BeforeAttributeTest.cs",
+      "lineRange": [
+        49,
+        62
+      ],
+      "summary": "验证 Before 属性确保的执行优先级顺序。",
+      "tags": [
+        "test",
+        "nunit",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "type": "class",
+      "name": "BreakConditionsTest",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "lineRange": [
+        10,
+        377
+      ],
+      "summary": "NUnit 测试夹具类，包含 9 个测试方法，全面验证断点条件系统的继承规则和判定逻辑。",
+      "tags": [
+        "test-fixture",
+        "nunit",
+        "break-condition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepBreakOnError",
+      "type": "function",
+      "name": "BreakConditionsTest.TestStepBreakOnError",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "lineRange": [
+        53,
+        84
+      ],
+      "summary": "验证断点条件行为的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "break-condition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.EngineInheritedConditions",
+      "type": "function",
+      "name": "BreakConditionsTest.EngineInheritedConditions",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "lineRange": [
+        86,
+        128
+      ],
+      "summary": "验证断点条件行为的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "break-condition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.EngineInheritedConditions2",
+      "type": "function",
+      "name": "BreakConditionsTest.EngineInheritedConditions2",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "lineRange": [
+        130,
+        163
+      ],
+      "summary": "验证断点条件行为的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "break-condition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.StepsCanOverrideVerdicts",
+      "type": "function",
+      "name": "BreakConditionsTest.StepsCanOverrideVerdicts",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "lineRange": [
+        178,
+        189
+      ],
+      "summary": "验证断点条件行为的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "break-condition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepWaitInfiniteAndAbortTest",
+      "type": "function",
+      "name": "BreakConditionsTest.TestStepWaitInfiniteAndAbortTest",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "lineRange": [
+        212,
+        227
+      ],
+      "summary": "验证断点条件行为的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "break-condition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestPlanBreakConditions",
+      "type": "function",
+      "name": "BreakConditionsTest.TestPlanBreakConditions",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "lineRange": [
+        229,
+        275
+      ],
+      "summary": "验证断点条件行为的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "break-condition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestBreakConditionsLocked",
+      "type": "function",
+      "name": "BreakConditionsTest.TestBreakConditionsLocked",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "lineRange": [
+        280,
+        293
+      ],
+      "summary": "验证断点条件行为的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "break-condition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepThrowsException",
+      "type": "function",
+      "name": "BreakConditionsTest.TestStepThrowsException",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "lineRange": [
+        340,
+        357
+      ],
+      "summary": "验证断点条件行为的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "break-condition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepThrowsBreakException",
+      "type": "function",
+      "name": "BreakConditionsTest.TestStepThrowsBreakException",
+      "filePath": "Engine.UnitTests/BreakConditionTest.cs",
+      "lineRange": [
+        359,
+        376
+      ],
+      "summary": "验证断点条件行为的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "break-condition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/ChildItemVisibilityTest.cs:ChildItemVisibilityTest",
+      "type": "class",
+      "name": "ChildItemVisibilityTest",
+      "filePath": "Engine.UnitTests/ChildItemVisibilityTest.cs",
+      "lineRange": [
+        6,
+        31
+      ],
+      "summary": "NUnit 测试夹具类，验证 ChildItemVisibility 在测试计划序列化过程中状态的保持。",
+      "tags": [
+        "test-fixture",
+        "nunit",
+        "visibility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ChildItemVisibilityTest.cs:ChildItemVisibilityTest.TestSerializeChildItemVisibility",
+      "type": "function",
+      "name": "ChildItemVisibilityTest.TestSerializeChildItemVisibility",
+      "filePath": "Engine.UnitTests/ChildItemVisibilityTest.cs",
+      "lineRange": [
+        9,
+        30
+      ],
+      "summary": "验证 ChildItemVisibility 在 XML 序列化/反序列化后状态的正确保持。",
+      "tags": [
+        "test",
+        "nunit",
+        "visibility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/CliCommandTest.cs:CliCommandTest",
+      "type": "class",
+      "name": "CliCommandTest",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        9,
+        34
+      ],
+      "summary": "NUnit 测试夹具类，验证 CliActionTree 命令树查找和无 Display 属性时的帮助输出。",
+      "tags": [
+        "test-fixture",
+        "nunit",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/CliCommandTest.cs:CliCommandTest.CliActionTreeTest",
+      "type": "function",
+      "name": "CliCommandTest.CliActionTreeTest",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        12,
+        22
+      ],
+      "summary": "CLI 命令测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/CliCommandTest.cs:CliCommandTest.TestHelpOnActionWithNoDisplayAttribute",
+      "type": "function",
+      "name": "CliCommandTest.TestHelpOnActionWithNoDisplayAttribute",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        24,
+        33
+      ],
+      "summary": "CLI 命令测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/CliCommandTest.cs:TestAction",
+      "type": "class",
+      "name": "TestAction",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        36,
+        45
+      ],
+      "summary": "ICliAction 实现类，带有 Display 属性和可选命令行参数。",
+      "tags": [
+        "cli-action",
+        "test-helper",
+        "csharp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/CliCommandTest.cs:TestAction.Execute",
+      "type": "function",
+      "name": "TestAction.Execute",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        41,
+        44
+      ],
+      "summary": "ICliAction.Execute 的测试桩实现。",
+      "tags": [
+        "test",
+        "cli-action",
+        "csharp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/CliCommandTest.cs:CliActionWithNoDisplayAttribute",
+      "type": "class",
+      "name": "CliActionWithNoDisplayAttribute",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        47,
+        50
+      ],
+      "summary": "无 Display 属性的 ICliAction 简单实现，用于测试缺失显示属性时的 CLI 帮助输出行为。",
+      "tags": [
+        "cli-action",
+        "test-helper",
+        "csharp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/CliCommandTest.cs:TestAction2",
+      "type": "class",
+      "name": "TestAction2",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        52,
+        64
+      ],
+      "summary": "ICliAction 实现类，带有 Other 和 Quiet 两个属性的测试桩。",
+      "tags": [
+        "cli-action",
+        "test-helper",
+        "csharp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/CliCommandTest.cs:TestAction2.Execute",
+      "type": "function",
+      "name": "TestAction2.Execute",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        59,
+        63
+      ],
+      "summary": "ICliAction.Execute 的测试桩实现。",
+      "tags": [
+        "test",
+        "cli-action",
+        "csharp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/CliCommandTest.cs:TestAction3",
+      "type": "class",
+      "name": "TestAction3",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        66,
+        77
+      ],
+      "summary": "同时实现 ITestStep 和 ICliAction 的类，包含 TestAction3 和 Execute 两个方法。",
+      "tags": [
+        "cli-action",
+        "test-step",
+        "csharp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/CliCommandTest.cs:TestAction3.TestAction3",
+      "type": "function",
+      "name": "TestAction3.TestAction3",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        69,
+        72
+      ],
+      "summary": "TestAction3 类中的测试方法。",
+      "tags": [
+        "test",
+        "cli-action",
+        "csharp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/CliCommandTest.cs:TestAction3.Execute",
+      "type": "function",
+      "name": "TestAction3.Execute",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        73,
+        76
+      ],
+      "summary": "TestAction3 类中的测试方法。",
+      "tags": [
+        "test",
+        "cli-action",
+        "csharp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/CliCommandTest.cs:TestArgCliACtion",
+      "type": "class",
+      "name": "TestArgCliACtion",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        79,
+        101
+      ],
+      "summary": "ICliAction 实现类，拥有 8 个命令行参数属性，用于测试多参数解析。",
+      "tags": [
+        "cli-action",
+        "test-helper",
+        "csharp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/CliCommandTest.cs:TestArgCliACtion.Execute",
+      "type": "function",
+      "name": "TestArgCliACtion.Execute",
+      "filePath": "Engine.UnitTests/CliCommandTest.cs",
+      "lineRange": [
+        95,
+        100
+      ],
+      "summary": "ICliAction.Execute 的测试桩实现。",
+      "tags": [
+        "test",
+        "cli-action",
+        "csharp"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TimeGuardStepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TimeGuardStepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TimeGuardStepTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatUntilPass",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatUntilPass",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatUntilPass",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatUntilPass2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatUntilPass2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatUntilPass2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatWhileError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatWhileError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatWhileError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.ScpiRegexStepValidation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.ScpiRegexStepValidation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.ScpiRegexStepValidation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatCheckResultsHasIterations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatCheckResultsHasIterations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.RepeatCheckResultsHasIterations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TestSweepLoopAcrossRunsReferencedResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TestSweepLoopAcrossRunsReferencedResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TestSweepLoopAcrossRunsReferencedResources",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TestScpiQueryNullValidation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TestScpiQueryNullValidation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.TestScpiQueryNullValidation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToRepeatIteration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToRepeatIteration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToRepeatIteration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToRepeatIteration2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToRepeatIteration2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToRepeatIteration2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToSweepRangeIteration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToSweepRangeIteration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToSweepRangeIteration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToSweepParameterIteration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToSweepParameterIteration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BasicStepsTest.cs",
+      "target": "function:Engine.UnitTests/BasicStepsTest.cs:BasicStepsTest.JumpToSweepParameterIteration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BeforeAttributeTest.cs",
+      "target": "class:Engine.UnitTests/BeforeAttributeTest.cs:BeforeAttributeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BeforeAttributeTest.cs",
+      "target": "class:Engine.UnitTests/BeforeAttributeTest.cs:BeforeAttributeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BeforeAttributeTest.cs",
+      "target": "function:Engine.UnitTests/BeforeAttributeTest.cs:BeforeAttributeTest.TestBeforeAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BeforeAttributeTest.cs:BeforeAttributeTest",
+      "target": "function:Engine.UnitTests/BeforeAttributeTest.cs:BeforeAttributeTest.TestBeforeAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BeforeAttributeTest.cs",
+      "target": "function:Engine.UnitTests/BeforeAttributeTest.cs:BeforeAttributeTest.TestBeforeAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepBreakOnError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepBreakOnError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepBreakOnError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.EngineInheritedConditions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.EngineInheritedConditions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.EngineInheritedConditions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.EngineInheritedConditions2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.EngineInheritedConditions2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.EngineInheritedConditions2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.StepsCanOverrideVerdicts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.StepsCanOverrideVerdicts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.StepsCanOverrideVerdicts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepWaitInfiniteAndAbortTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepWaitInfiniteAndAbortTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepWaitInfiniteAndAbortTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestPlanBreakConditions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestPlanBreakConditions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestPlanBreakConditions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestBreakConditionsLocked",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestBreakConditionsLocked",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestBreakConditionsLocked",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepThrowsException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepThrowsException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepThrowsException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepThrowsBreakException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepThrowsBreakException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/BreakConditionTest.cs",
+      "target": "function:Engine.UnitTests/BreakConditionTest.cs:BreakConditionsTest.TestStepThrowsBreakException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ChildItemVisibilityTest.cs",
+      "target": "class:Engine.UnitTests/ChildItemVisibilityTest.cs:ChildItemVisibilityTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ChildItemVisibilityTest.cs",
+      "target": "class:Engine.UnitTests/ChildItemVisibilityTest.cs:ChildItemVisibilityTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ChildItemVisibilityTest.cs",
+      "target": "function:Engine.UnitTests/ChildItemVisibilityTest.cs:ChildItemVisibilityTest.TestSerializeChildItemVisibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ChildItemVisibilityTest.cs:ChildItemVisibilityTest",
+      "target": "function:Engine.UnitTests/ChildItemVisibilityTest.cs:ChildItemVisibilityTest.TestSerializeChildItemVisibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ChildItemVisibilityTest.cs",
+      "target": "function:Engine.UnitTests/ChildItemVisibilityTest.cs:ChildItemVisibilityTest.TestSerializeChildItemVisibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:CliCommandTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:CliCommandTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:CliCommandTest.CliActionTreeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/CliCommandTest.cs:CliCommandTest",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:CliCommandTest.CliActionTreeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:CliCommandTest.CliActionTreeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:CliCommandTest.TestHelpOnActionWithNoDisplayAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/CliCommandTest.cs:CliCommandTest",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:CliCommandTest.TestHelpOnActionWithNoDisplayAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:CliCommandTest.TestHelpOnActionWithNoDisplayAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:TestAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:TestAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/CliCommandTest.cs:TestAction",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction.Execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:CliActionWithNoDisplayAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:CliActionWithNoDisplayAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:TestAction2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:TestAction2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction2.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/CliCommandTest.cs:TestAction2",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction2.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction2.Execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:TestAction3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:TestAction3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction3.TestAction3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/CliCommandTest.cs:TestAction3",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction3.TestAction3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction3.TestAction3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction3.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/CliCommandTest.cs:TestAction3",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction3.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestAction3.Execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:TestArgCliACtion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "class:Engine.UnitTests/CliCommandTest.cs:TestArgCliACtion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestArgCliACtion.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/CliCommandTest.cs:TestArgCliACtion",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestArgCliACtion.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CliCommandTest.cs",
+      "target": "function:Engine.UnitTests/CliCommandTest.cs:TestArgCliACtion.Execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "document:doc/Release Notes/9.29/Readme.md",
+      "target": "document:doc/Release Notes/9.30/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/9.30/Readme.md",
+      "target": "document:doc/Release Notes/9.31/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

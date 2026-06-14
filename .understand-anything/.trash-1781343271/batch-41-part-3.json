@@ -1,0 +1,957 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "type": "file",
+      "name": "CustomBenchSettings.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "summary": "自定义 Bench 设置示例，演示 IBenchSettings 接口实现和自定义组件设置的注册与显示。",
+      "tags": ["gui", "bench-settings", "component", "configuration", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:CustomBenchSettingsList",
+      "type": "class",
+      "name": "CustomBenchSettingsList",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "lineRange": [28, 34],
+      "summary": "继承 List<CustomBenchSettings> 的设置列表容器。",
+      "tags": ["collections", "settings", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:CustomBenchSettings",
+      "type": "class",
+      "name": "CustomBenchSettings",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "lineRange": [39, 57],
+      "summary": "自定义设置项，包含 MyProperty 和 MyTime 属性，以及带 InitialValue 的构造函数。",
+      "tags": ["settings", "bench", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:ExampleComponentA",
+      "type": "class",
+      "name": "ExampleComponentA",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "lineRange": [61, 71],
+      "summary": "示例组件 A，包含 SomeUniqueProperty 和提供自定义设置列表的 ExampleComponentA 方法。",
+      "tags": ["component", "bench-settings", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:SimilarSettingsB",
+      "type": "class",
+      "name": "SimilarSettingsB",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "lineRange": [74, 83],
+      "summary": "示例组件 B，包含 SomeOtherProperty 和 SimilarSettingsB 方法，演示同名设置类型的区分。",
+      "tags": ["component", "bench-settings", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:CustomBenchSettings",
+      "type": "function",
+      "name": "CustomBenchSettings",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "lineRange": [47, 51],
+      "summary": "带初始值的构造函数。",
+      "tags": ["constructor", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "lineRange": [53, 56],
+      "summary": "返回 MyTime 的字符串表示，用于在下拉菜单中显示。",
+      "tags": ["display", "formatting", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:ExampleComponentA",
+      "type": "function",
+      "name": "ExampleComponentA",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "lineRange": [64, 68],
+      "summary": "返回 CustomBenchSettingsList 类型的自定义 Bench 设置列表。",
+      "tags": ["bench-settings", "component", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:SimilarSettingsB",
+      "type": "function",
+      "name": "SimilarSettingsB",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "lineRange": [77, 81],
+      "summary": "返回 CustomBenchSettingsList 类型的自定义 Bench 设置列表（与 ExampleComponentA 同名类型区分）。",
+      "tags": ["bench-settings", "component", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "type": "file",
+      "name": "ExampleSettings.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "summary": "基本设置示例，演示带有 Display 和 Unit 注解的属性和 InstrumentIDPropertyEnabled 特性控制。",
+      "tags": ["gui", "settings", "annotation", "component-settings", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs:ExampleSettings",
+      "type": "class",
+      "name": "ExampleSettings",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "lineRange": [23, 56],
+      "summary": "示例组件设置类，包含时间、整数、注释和 InstrumentID 属性启用的开关控制。",
+      "tags": ["settings", "component-settings", "annotation", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs:ExampleSettings",
+      "type": "function",
+      "name": "ExampleSettings",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "lineRange": [45, 50],
+      "summary": "设置初始值并注册 InstrumentID 属性的启用/禁用规则。",
+      "tags": ["constructor", "settings", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "lineRange": [52, 55],
+      "summary": "返回 DemoTime 的短时间格式字符串。",
+      "tags": ["display", "formatting", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "type": "file",
+      "name": "IPAnnotation.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "summary": "IP 地址注解示例，演示如何实现 IAnnotator、自定义注解 IAnnotation 和自定义序列化器，为 IP 地址属性提供输入验证、建议值和格式化显示。",
+      "tags": ["gui", "annotation", "validation", "serializer", "ip-address", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IPAnnotation",
+      "type": "class",
+      "name": "IPAnnotation",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "lineRange": [49, 103],
+      "summary": "实现 IAnnotation 接口，提供 IP 地址值持有、格式验证、错误收集和基于本地 IP 的建议值列表。",
+      "tags": ["annotation", "validation", "ip-address", "gui", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IpAdressSerializer",
+      "type": "class",
+      "name": "IpAdressSerializer",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "lineRange": [107, 129],
+      "summary": "IP 地址的自定义序列化器，实现 ITapSerializerPlugin，将 IPAddress 类型序列化为字符串。",
+      "tags": ["serializer", "custom-serializer", "ip-address", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:PingStep",
+      "type": "class",
+      "name": "PingStep",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "lineRange": [132, 170],
+      "summary": "使用 IPAnnotation 的 Ping 测试步骤，发送 Ping 请求并根据结果升级判定，同时提供 ListAnnotators 方法展示已注册注解器。",
+      "tags": ["test-step", "ping", "annotation", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IPAnnotator",
+      "type": "class",
+      "name": "IPAnnotator",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "lineRange": [173, 191],
+      "summary": "IAnnotator 接口实现，当属性类型为 IPAddress 时为其添加 IPAnnotation 注解。",
+      "tags": ["annotator", "annotation", "ip-address", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IPAnnotation",
+      "type": "function",
+      "name": "IPAnnotation",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "lineRange": [53, 56],
+      "summary": "构造函数，从注解集合中获取 Value 字符串。",
+      "tags": ["constructor", "annotation", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "lineRange": [111, 118],
+      "summary": "自定义反序列化：从 XML 节点读取 IP 字符串并使用 IPAddress.TryParse 验证后通过 setter 写入。",
+      "tags": ["deserialization", "ip-address", "validation", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "lineRange": [120, 128],
+      "summary": "自定义序列化：将 IPAddress 对象转换为 XML 字符串节点。",
+      "tags": ["serialization", "custom-serializer", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "lineRange": [137, 158],
+      "summary": "Ping 测试步骤的 Run 方法：发送 Ping 请求，根据结果和往返时间升级判定。",
+      "tags": ["test-step", "ping", "network", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:ListAnnotators",
+      "type": "function",
+      "name": "ListAnnotators",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "lineRange": [160, 168],
+      "summary": "通过 PluginManager 获取所有已注册的 IAnnotator 实例并按 Order 输出。",
+      "tags": ["plugin-discovery", "annotator", "debug", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:Annotate",
+      "type": "function",
+      "name": "Annotate",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "lineRange": [181, 190],
+      "summary": "注解方法：当属性类型为 IPAddress 时添加 IPAnnotation 到注解集合。",
+      "tags": ["annotation", "annotator", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "type": "file",
+      "name": "OpenTapPictureExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "summary": "图片展示示例，演示如何使用 PictureDialogRequest 和 UserInput.Request 向用户展示图片对话框并获取回答。",
+      "tags": ["gui", "picture", "user-input", "dialog", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs:OpenTapPictureExample",
+      "type": "class",
+      "name": "OpenTapPictureExample",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "lineRange": [6, 96],
+      "summary": "测试步骤类，包含图片相关的属性（Question、Picture、PictureSource、PictureDescription），通过 PictureDialogRequest 展示图片并获取用户回答。",
+      "tags": ["test-step", "picture", "user-input", "dialog", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "lineRange": [43, 57],
+      "summary": "创建 PictureDialogRequest 并通过 UserInput.Request 展示图片对话框，根据用户回答升级判定。",
+      "tags": ["test-step", "user-input", "dialog", "picture", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "type": "file",
+      "name": "TestPlanCustomImportExport.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "summary": "测试计划自定义导入导出示例，演示如何通过 ITestPlanImportExport 接口使用 ZIP 压缩包格式导入导出测试计划。",
+      "tags": ["gui", "import-export", "test-plan", "zip", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs:CompressedFormat",
+      "type": "class",
+      "name": "CompressedFormat",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "lineRange": [26, 64],
+      "summary": "实现 ITestPlanImportExport 接口，使用 System.IO.Packaging 创建 ZIP 压缩格式的测试计划导入导出功能。",
+      "tags": ["import-export", "test-plan", "zip", "compression", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs:ExportTestPlan",
+      "type": "function",
+      "name": "ExportTestPlan",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "lineRange": [28, 37],
+      "summary": "将测试计划导出为 ZIP 包：创建 Package，添加 testplan 部件并保存计划流。",
+      "tags": ["export", "test-plan", "zip", "compression", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs:ImportTestPlan",
+      "type": "function",
+      "name": "ImportTestPlan",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "lineRange": [48, 59],
+      "summary": "从 ZIP 包导入测试计划：打开 Package，查找 testplan 部件并加载测试计划流。",
+      "tags": ["import", "test-plan", "zip", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs:PackageOpen",
+      "type": "function",
+      "name": "PackageOpen",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "lineRange": [60, 63],
+      "summary": "打开 ZIP 包的辅助方法，按指定路径和模式打开 Package。",
+      "tags": ["utility", "zip", "compression", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "type": "file",
+      "name": "UserInputExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "summary": "用户输入对话框示例，演示如何使用 UserInput.Request 创建自定义 DUT 重置对话框和序列号输入对话框，支持超时控制。",
+      "tags": ["gui", "user-input", "dialog", "dut", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:ResetDutDialog",
+      "type": "class",
+      "name": "ResetDutDialog",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "lineRange": [26, 52],
+      "summary": "自定义 DUT 重置对话框，包含 Dut、Name、Message、Response 等属性，支持布局分组和折叠。",
+      "tags": ["dialog", "user-input", "dut", "gui", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:EnterSNDialog",
+      "type": "class",
+      "name": "EnterSNDialog",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "lineRange": [55, 61],
+      "summary": "序列号输入对话框，仅包含 SerialNumber 属性。",
+      "tags": ["dialog", "user-input", "serial-number", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:UserInputExample",
+      "type": "class",
+      "name": "UserInputExample",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "lineRange": [65, 115],
+      "summary": "测试步骤类，包含 UseTimeout 和 Timeout 属性，在 Run 方法中展示两个自定义对话框并处理用户输入结果。",
+      "tags": ["test-step", "user-input", "dialog", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:UserInputExample",
+      "type": "function",
+      "name": "UserInputExample",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "lineRange": [77, 82],
+      "summary": "构造函数，添加验证规则：超时启用时 Timeout 必须大于 0。",
+      "tags": ["constructor", "validation", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "lineRange": [84, 114],
+      "summary": "执行用户输入测试：创建 DUT 对象，依次展示 ResetDutDialog 和 EnterSNDialog 获取用户输入并记录结果。",
+      "tags": ["test-step", "user-input", "dialog", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "type": "file",
+      "name": "ConnectionStep.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "summary": "仪器连接测试步骤示例，演示如何通过 Port 获取仪器与 DUT 之间的连接路径，并扁平化中间点。",
+      "tags": ["instrument", "dut", "connection", "port", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs:ConnectionStep",
+      "type": "class",
+      "name": "ConnectionStep",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "lineRange": [34, 88],
+      "summary": "测试步骤类，包含 SimInstrument 和 SimDut 属性，通过 Port.GetConnectionsTo 获取连接路径并输出日志。",
+      "tags": ["test-step", "instrument", "dut", "connection", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "lineRange": [42, 75],
+      "summary": "获取仪器端口与 DUT 之间的连接，遍历连接路径并输出 Via 点和端口信息。",
+      "tags": ["test-step", "connection", "port", "instrument", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs:FlattenViaPoints",
+      "type": "function",
+      "name": "FlattenViaPoints",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "lineRange": [77, 87],
+      "summary": "将 ViaPoint 列表转换为格式化字符串，以 -> 分隔。",
+      "tags": ["utility", "formatting", "connection", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "type": "file",
+      "name": "FourPortDut.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "summary": "四端口 DUT 示例，演示如何创建具有四个 Port 的 DUT 类，并实现 Open、Close、PerformMeasurement 和 SetupDut 方法。",
+      "tags": ["dut", "port", "instrument", "measurement", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:FourPortDut",
+      "type": "class",
+      "name": "FourPortDut",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "lineRange": [21, 71],
+      "summary": "四端口 DUT 类，继承 Dut 基类，包含 A/B/C/D 四个端口以及测量和设置方法。",
+      "tags": ["dut", "port", "inheritance", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:FourPortDut",
+      "type": "function",
+      "name": "FourPortDut",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "lineRange": [37, 44],
+      "summary": "构造函数，创建四个 Port 对象并分配端口名称。",
+      "tags": ["constructor", "port", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:Open",
+      "type": "function",
+      "name": "Open",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "lineRange": [46, 50],
+      "summary": "打开 DUT：调用基类 Open 并输出日志。",
+      "tags": ["dut", "open", "lifecycle", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "lineRange": [52, 56],
+      "summary": "关闭 DUT：输出日志后调用基类 Close。",
+      "tags": ["dut", "close", "lifecycle", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:PerformMeasurement",
+      "type": "function",
+      "name": "PerformMeasurement",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "lineRange": [58, 63],
+      "summary": "执行测量，输出日志显示当前测量中的端口信息。",
+      "tags": ["measurement", "dut", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:SetupDut",
+      "type": "function",
+      "name": "SetupDut",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "lineRange": [65, 70],
+      "summary": "根据频率参数设置 DUT 并输出日志。",
+      "tags": ["dut", "setup", "configuration", "example"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:CustomBenchSettingsList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:CustomBenchSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:ExampleComponentA",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:SimilarSettingsB",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:CustomBenchSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:ExampleComponentA",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:SimilarSettingsB",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:CustomBenchSettingsList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:CustomBenchSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:ExampleComponentA",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs:SimilarSettingsB",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs:ExampleSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs:ExampleSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs:ExampleSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IPAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IpAdressSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:PingStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IPAnnotator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IPAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:Serialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:ListAnnotators",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:Annotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IPAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IpAdressSerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:PingStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:IPAnnotator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs:Annotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs:OpenTapPictureExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs:OpenTapPictureExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs:CompressedFormat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs:ExportTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs:ImportTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs:PackageOpen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs:CompressedFormat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:ResetDutDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:EnterSNDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:UserInputExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:UserInputExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:UserInputExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs:ConnectionStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs:FlattenViaPoints",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs:ConnectionStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:FourPortDut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:FourPortDut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:Open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:PerformMeasurement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:SetupDut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs:FourPortDut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

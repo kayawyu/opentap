@@ -1,0 +1,320 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package/Repositories/FileRepositoryCache.cs",
+      "type": "file",
+      "name": "FileRepositoryCache.cs",
+      "filePath": "Package/Repositories/FileRepositoryCache.cs",
+      "summary": "文件仓库缓存数据模型，记录缓存包数量、哈希值和缓存文件命名规则。",
+      "tags": ["caching", "data-model", "file-repository"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Repositories/HttpPackageRepository.cs",
+      "type": "file",
+      "name": "HttpPackageRepository.cs",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "summary": "基于 HTTP/HTTPS 的远程包仓库实现，支持 REST API 和 GraphQL 查询，提供包下载、版本检查、预发布查询和认证客户端功能。",
+      "tags": ["repository", "http", "rest-api", "graphql", "package-management"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/Repositories/HttpPackageRepository.cs:HttpPackageRepository",
+      "type": "class",
+      "name": "HttpPackageRepository",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [26, 638],
+      "summary": "实现 IPackageRepository、IPackageDownloadProgress 和 IQueryPrereleases 接口，通过 HTTP 请求与远程包服务器交互，支持 XML 和 GraphQL 两种 API 版本。",
+      "tags": ["repository", "http", "ipackagerepository", "graphql"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:GetAuthenticatedClient",
+      "type": "function",
+      "name": "GetAuthenticatedClient",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [76, 101],
+      "summary": "创建经过身份验证的 HttpClient，配置 Authorization 头和超时设置。",
+      "tags": ["authentication", "http-client", "security"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:DoDownloadPackage",
+      "type": "function",
+      "name": "DoDownloadPackage",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [105, 153],
+      "summary": "核心下载逻辑：发起 HTTP GET 请求获取包文件流，支持进度回调和取消令牌。",
+      "tags": ["download", "http", "streaming", "progress"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:downloadPackagesString",
+      "type": "function",
+      "name": "downloadPackagesString",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [155, 193],
+      "summary": "发起 HTTP POST 请求下载包列表数据，支持 JSON 和 XML 内容类型及 Accept 头协商。",
+      "tags": ["http", "post", "api", "repository"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:CheckRepoApiVersion",
+      "type": "function",
+      "name": "CheckRepoApiVersion",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [200, 219],
+      "summary": "检查远程仓库 API 版本，决定使用 GraphQL 还是 XML 接口路径。",
+      "tags": ["api-version", "http", "repository"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:PackagesFromXml",
+      "type": "function",
+      "name": "PackagesFromXml",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [221, 258],
+      "summary": "将 XML 响应反序列化为包定义列表，处理 API 版本兼容性和名称字段规范化。",
+      "tags": ["xml", "deserialization", "package-definition", "api"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:ConvertToPackageDef",
+      "type": "function",
+      "name": "ConvertToPackageDef",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [260, 269],
+      "summary": "将包列表转换为 PackageDef 数组的便捷包装方法。",
+      "tags": ["conversion", "utility", "package-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:CheckCompatibleWith",
+      "type": "function",
+      "name": "CheckCompatibleWith",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [271, 289],
+      "summary": "按兼容条件（操作系统、架构）过滤 HTTP 仓库返回的包列表。",
+      "tags": ["compatibility", "filtering", "repository"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:DownloadPackage",
+      "type": "function",
+      "name": "DownloadPackage",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [307, 343],
+      "summary": "下载入口：确定下载 URL（支持回退逻辑），然后委托 DoDownloadPackage 执行实际下载。",
+      "tags": ["download", "entry-point", "http"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:GetQueryParameters",
+      "type": "function",
+      "name": "GetQueryParameters",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [361, 394],
+      "summary": "构建 GraphQL/API 查询参数字典，支持类型、目录、名称、操作系统、架构等多种过滤条件。",
+      "tags": ["query", "parameters", "graphql", "api"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:GetPackageVersions",
+      "type": "function",
+      "name": "GetPackageVersions",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [417, 432],
+      "summary": "查询指定包名的所有可用版本，从 HTTP 仓库获取并去重排序。",
+      "tags": ["query", "versions", "http"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:GetPackages",
+      "type": "function",
+      "name": "GetPackages",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [441, 470],
+      "summary": "根据 PackageSpecifier 从 HTTP 仓库查询匹配的包，支持按名称哈希优化查询。",
+      "tags": ["query", "package-search", "http"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:CheckForUpdates",
+      "type": "function",
+      "name": "CheckForUpdates",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [493, 534],
+      "summary": "批量检查已安装包是否有可用更新，支持节流控制避免频繁请求。",
+      "tags": ["update-check", "http", "throttling"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Repositories/HttpPackageRepository.cs:QueryPrereleases",
+      "type": "function",
+      "name": "QueryPrereleases",
+      "filePath": "Package/Repositories/HttpPackageRepository.cs",
+      "lineRange": [561, 637],
+      "summary": "IQueryPrereleases 接口实现：使用 GraphQL 查询预发布版本包依赖图，支持按操作系统和架构过滤。",
+      "tags": ["graphql", "pre-release", "dependency-graph", "query"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/Repositories/IPackageDownloadProgress.cs",
+      "type": "file",
+      "name": "IPackageDownloadProgress.cs",
+      "filePath": "Package/Repositories/IPackageDownloadProgress.cs",
+      "summary": "定义包下载进度回调接口，发布 OnProgressUpdate 事件以传递文件名、已下载字节和总字节数。",
+      "tags": ["interface", "progress", "download", "callback"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Repositories/IQueryPrereleases.cs",
+      "type": "file",
+      "name": "IQueryPrereleases.cs",
+      "filePath": "Package/Repositories/IQueryPrereleases.cs",
+      "summary": "内部接口，用于查询预发布版本的包依赖图，主要服务于 Image Resolver 及单元测试。",
+      "tags": ["interface", "pre-release", "dependency-graph", "internal"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/SetAsmInfo/GacResolver.cs",
+      "type": "file",
+      "name": "GacResolver.cs",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "summary": "GAC（全局程序集缓存）解析器，基于 Mono.Cecil 实现，支持在 Mono 和 .NET 环境下查找并加载程序集引用。",
+      "tags": ["gac", "assembly-resolver", "mono-cecil", "reflection"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/SetAsmInfo/GacResolver.cs:GacResolver",
+      "type": "class",
+      "name": "GacResolver",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "lineRange": [16, 286],
+      "summary": "实现 IAssemblyResolver，从 GAC 中查找程序集，支持 Mono GAC 路径和 .NET Framework GAC 文件夹两种解析策略。",
+      "tags": ["gac", "assembly-resolver", "mono-cecil", "ireflection"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/GacResolver.cs:Resolve",
+      "type": "function",
+      "name": "Resolve",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "lineRange": [37, 77],
+      "summary": "核心解析逻辑：根据程序集名称在 GAC 路径和搜索目录中查找匹配的 DLL，处理重试目录和参数化搜索。",
+      "tags": ["assembly-resolver", "gac", "core"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/GacResolver.cs:SearchDirectory",
+      "type": "function",
+      "name": "SearchDirectory",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "lineRange": [79, 102],
+      "summary": "在指定目录集合中递归搜索匹配的程序集 DLL 文件。",
+      "tags": ["search", "directory", "assembly"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/GacResolver.cs:GetCorlib",
+      "type": "function",
+      "name": "GetCorlib",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "lineRange": [110, 171],
+      "summary": "获取 mscorlib 核心库路径，从运行时目录或当前域中定位核心程序集。",
+      "tags": ["corlib", "runtime", "assembly-resolver"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/GacResolver.cs:GetGacPaths",
+      "type": "function",
+      "name": "GetGacPaths",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "lineRange": [173, 186],
+      "summary": "收集所有 GAC 搜索路径（Mono GAC + .NET GAC），合并去重后返回。",
+      "tags": ["gac", "paths", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/GacResolver.cs:GetDefaultMonoGacPaths",
+      "type": "function",
+      "name": "GetDefaultMonoGacPaths",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "lineRange": [188, 211],
+      "summary": "获取默认 Mono GAC 安装路径，支持环境变量覆盖和常见的 Linux/Mac 安装位置。",
+      "tags": ["mono", "gac", "paths", "cross-platform"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/GacResolver.cs:GetAssemblyInGac",
+      "type": "function",
+      "name": "GetAssemblyInGac",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "lineRange": [221, 233],
+      "summary": "根据运行时环境自动选择 Mono GAC 或 .NET GAC 的查找策略。",
+      "tags": ["gac", "dispatch", "cross-platform"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/GacResolver.cs:GetAssemblyInMonoGac",
+      "type": "function",
+      "name": "GetAssemblyInMonoGac",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "lineRange": [235, 246],
+      "summary": "在 Mono GAC 路径中查找指定名称和版本的程序集 DLL。",
+      "tags": ["mono", "gac", "assembly"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/GacResolver.cs:GetAssemblyInNetGac",
+      "type": "function",
+      "name": "GetAssemblyInNetGac",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "lineRange": [248, 265],
+      "summary": "在 .NET Framework GAC 目录中查找指定名称、版本和公钥令牌的程序集。",
+      "tags": ["dotnet", "gac", "assembly"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/GacResolver.cs:GetAssemblyFile",
+      "type": "function",
+      "name": "GetAssemblyFile",
+      "filePath": "Package/SetAsmInfo/GacResolver.cs",
+      "lineRange": [267, 281],
+      "summary": "在 GAC 子目录中定位具体的 DLL 文件，处理多版本共存场景。",
+      "tags": ["gac", "file-lookup", "assembly"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "class:Package/Repositories/HttpPackageRepository.cs:HttpPackageRepository", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:GetAuthenticatedClient", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:DoDownloadPackage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:downloadPackagesString", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:CheckRepoApiVersion", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:PackagesFromXml", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:ConvertToPackageDef", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:CheckCompatibleWith", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:DownloadPackage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:GetQueryParameters", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:GetPackageVersions", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:GetPackages", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:CheckForUpdates", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:QueryPrereleases", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "class:Package/Repositories/HttpPackageRepository.cs:HttpPackageRepository", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:DownloadPackage", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:GetPackages", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/Repositories/HttpPackageRepository.cs", "target": "function:Package/Repositories/HttpPackageRepository.cs:CheckForUpdates", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "class:Package/SetAsmInfo/GacResolver.cs:GacResolver", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "function:Package/SetAsmInfo/GacResolver.cs:Resolve", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "function:Package/SetAsmInfo/GacResolver.cs:SearchDirectory", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "function:Package/SetAsmInfo/GacResolver.cs:GetCorlib", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "function:Package/SetAsmInfo/GacResolver.cs:GetGacPaths", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "function:Package/SetAsmInfo/GacResolver.cs:GetDefaultMonoGacPaths", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "function:Package/SetAsmInfo/GacResolver.cs:GetAssemblyInGac", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "function:Package/SetAsmInfo/GacResolver.cs:GetAssemblyInMonoGac", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "function:Package/SetAsmInfo/GacResolver.cs:GetAssemblyInNetGac", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "function:Package/SetAsmInfo/GacResolver.cs:GetAssemblyFile", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/GacResolver.cs", "target": "function:Package/SetAsmInfo/GacResolver.cs:Resolve", "type": "exports", "direction": "forward", "weight": 0.8}
+  ]
+}

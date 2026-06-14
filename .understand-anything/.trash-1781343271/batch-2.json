@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "service:docker/Windows/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "docker/Windows/Dockerfile",
+      "summary": "基于 .NET 6.0 Windows Server Core 镜像构建 OpenTAP 容器，通过静默安装 OpenTAP.exe 并配置 PATH 和环境目录，同时写入生成的唯一标识符。",
+      "tags": ["containerization", "infrastructure", "deployment", "windows", "dotnet"],
+      "complexity": "simple",
+      "languageNotes": "单阶段 Docker 构建，使用 Windows Server Core 基础镜像，通过静默安装和 setx 配置系统环境变量。"
+    },
+    {
+      "id": "service:docker/Windows/Dockerfile:sdk",
+      "type": "service",
+      "name": "sdk",
+      "filePath": "docker/Windows/Dockerfile",
+      "lineRange": [1, 11],
+      "summary": "基于 mcr.microsoft.com/dotnet/sdk:6.0-windowsservercore-ltsc2019 镜像的构建阶段，提供 .NET 6.0 SDK 运行时环境以安装和运行 OpenTAP。",
+      "tags": ["base-image", "dotnet", "windows-server", "sdk"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

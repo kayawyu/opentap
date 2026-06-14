@@ -1,0 +1,858 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/TestTestPlans/whiletest.TapPlan",
+      "type": "file",
+      "name": "whiletest.TapPlan",
+      "filePath": "Engine.UnitTests/TestTestPlans/whiletest.TapPlan",
+      "summary": "OpenTAP 测试计划文件，用于验证 while 循环步骤的测试场景。",
+      "tags": ["test", "test-plan", "while-loop"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/AvailableValuesUpdateTest.cs",
+      "type": "file",
+      "name": "AvailableValuesUpdateTest.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/AvailableValuesUpdateTest.cs",
+      "summary": "定义 AvailableValuesUpdateTest 测试步骤类，用于验证 DynamicAvailableValues 属性在不同值组合下的更新行为。",
+      "tags": ["test", "test-step", "available-values", "property-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/AvailableValuesUpdateTest.cs:AvailableValuesUpdateTest",
+      "type": "class",
+      "name": "AvailableValuesUpdateTest",
+      "filePath": "Engine.UnitTests/TestTestSteps/AvailableValuesUpdateTest.cs",
+      "lineRange": [13, 38],
+      "summary": "测试步骤类，包含 A、B 等属性以及 IncreaseNumber 递增方法，用于验证 DynamicAvailableValues 属性的动态更新机制。",
+      "tags": ["test", "test-step", "available-values"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/CompareIntStep.cs",
+      "type": "file",
+      "name": "CompareIntStep.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/CompareIntStep.cs",
+      "summary": "定义 CompareIntStep 测试步骤类，比较输入的整数值与期望值，并根据比较结果升级判定（Verdict）。",
+      "tags": ["test", "test-step", "comparison", "verdict"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/CompareIntStep.cs:CompareIntStep",
+      "type": "class",
+      "name": "CompareIntStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/CompareIntStep.cs",
+      "lineRange": [3, 23],
+      "summary": "测试步骤类，包含 InputValue 和 ExpectedValue 两个属性，Run 方法比较两者并通过 UpgradeVerdict 设置判定结果。",
+      "tags": ["test", "test-step", "comparison"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/CompareIntStep.cs:CompareIntStep.Run",
+      "type": "function",
+      "name": "CompareIntStep.Run",
+      "filePath": "Engine.UnitTests/TestTestSteps/CompareIntStep.cs",
+      "lineRange": [10, 22],
+      "summary": "比较 InputValue 与 ExpectedValue，匹配则记录信息并通过 Pass，不匹配则记录信息并通过 Fail。",
+      "tags": ["test", "comparison", "verdict"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/DummySwitchInstrument.cs",
+      "type": "file",
+      "name": "DummySwitchInstrument.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/DummySwitchInstrument.cs",
+      "summary": "定义 DummySwitchIntrument 类，模拟一个具有多个位置（SwitchPosition）的开关仪器，用于测试仪器连接切换场景。",
+      "tags": ["test", "instrument", "switch", "dummy-instrument"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/DummySwitchInstrument.cs:DummySwitchIntrument",
+      "type": "class",
+      "name": "DummySwitchIntrument",
+      "filePath": "Engine.UnitTests/TestTestSteps/DummySwitchInstrument.cs",
+      "lineRange": [10, 40],
+      "summary": "模拟开关仪器类，包含 Position1/2/3 属性和 Positions 列表，构造函数初始化三个开关位置，SetPosition 方法用于遍历激活各位置。",
+      "tags": ["test", "instrument", "switch"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/FourPortDut.cs",
+      "type": "file",
+      "name": "FourPortDut.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/FourPortDut.cs",
+      "summary": "定义 FourPortDut 类，表示具有四个端口（Port A/B/C/D）的被测设备（DUT），用于测试多端口设备场景。",
+      "tags": ["test", "dut", "port", "multi-port"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/FourPortDut.cs:FourPortDut",
+      "type": "class",
+      "name": "FourPortDut",
+      "filePath": "Engine.UnitTests/TestTestSteps/FourPortDut.cs",
+      "lineRange": [10, 30],
+      "summary": "四端口被测设备类，包含 PortA/B/C/D 四个端口属性，构造函数创建四个 Port 对象。",
+      "tags": ["test", "dut", "multi-port"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "type": "file",
+      "name": "PipingProcessStep.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "summary": "定义 PipingProcessStep 和 UserInputTestAction 两个类，用于测试外部进程管道通信和用户输入模拟场景。",
+      "tags": ["test", "test-step", "process", "piping", "user-input"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction",
+      "type": "class",
+      "name": "UserInputTestAction",
+      "filePath": "Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "lineRange": [13, 72],
+      "summary": "用户输入测试 Action 类，Execute 方法拦截 UserInput.Request 调用并返回预设答案，用于模拟 CLI 交互。",
+      "tags": ["test", "user-input", "cli", "action"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:PipingProcessStep",
+      "type": "class",
+      "name": "PipingProcessStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "lineRange": [74, 203],
+      "summary": "管道进程测试步骤类，启动外部进程并通过标准输入/输出管道与其交互，支持多种模式（Mode）和写入速率控制。",
+      "tags": ["test", "test-step", "process", "piping"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction.DescribeBytes",
+      "type": "function",
+      "name": "UserInputTestAction.DescribeBytes",
+      "filePath": "Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "lineRange": [26, 41],
+      "summary": "将字节序列转换为可读的十六进制或 ASCII 字符串描述。",
+      "tags": ["utility", "formatting", "hex"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction.Execute",
+      "type": "function",
+      "name": "UserInputTestAction.Execute",
+      "filePath": "Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "lineRange": [43, 71],
+      "summary": "拦截 UserInput.Request 调用，将请求字节与预设答案比较并返回匹配的响应。",
+      "tags": ["test", "user-input", "intercept"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:PipingProcessStep.Run",
+      "type": "function",
+      "name": "PipingProcessStep.Run",
+      "filePath": "Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "lineRange": [108, 202],
+      "summary": "启动外部进程，通过标准输入管道写入数据，读取标准输出和错误输出，验证退出码和判定结果。",
+      "tags": ["test", "process", "piping", "verdict"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/RunTimeStep.cs",
+      "type": "file",
+      "name": "RunTimeStep.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/RunTimeStep.cs",
+      "summary": "定义 RunTimeStep 测试步骤类，记录运行次数并在测试重启时检测 RestartMarker 变化。",
+      "tags": ["test", "test-step", "restart", "runtime"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/RunTimeStep.cs:RunTimeStep",
+      "type": "class",
+      "name": "RunTimeStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/RunTimeStep.cs",
+      "lineRange": [5, 22],
+      "summary": "运行时测试步骤类，跟踪 RunCount 运行次数并根据 RestartMarker 值的变化重置计数。",
+      "tags": ["test", "test-step", "runtime"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/RunTimeStep.cs:RunTimeStep.Run",
+      "type": "function",
+      "name": "RunTimeStep.Run",
+      "filePath": "Engine.UnitTests/TestTestSteps/RunTimeStep.cs",
+      "lineRange": [12, 21],
+      "summary": "每次执行递增 RunCount，并在测试计划重启（RestartMarker 变化）时重置计数为 1。",
+      "tags": ["test", "runtime", "restart"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/SineResultsStep.cs",
+      "type": "file",
+      "name": "SineResultsStep.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/SineResultsStep.cs",
+      "summary": "定义 SineResultsStep 测试步骤类，生成正弦波结果数据并发布（Publish）到测试运行中。",
+      "tags": ["test", "test-step", "results", "sine-wave"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/SineResultsStep.cs:SineResultsStep",
+      "type": "class",
+      "name": "SineResultsStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/SineResultsStep.cs",
+      "lineRange": [5, 18],
+      "summary": "正弦波结果测试步骤类，根据 Periods 和 Samples 参数生成正弦波数据并通过 Results.Publish 发布。",
+      "tags": ["test", "test-step", "results"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/ThrowInDefer.cs",
+      "type": "file",
+      "name": "ThrowInDefer.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/ThrowInDefer.cs",
+      "summary": "定义 ThrowInDefer 测试步骤类，用于测试延迟执行（Defer）期间抛出异常的处理行为。",
+      "tags": ["test", "test-step", "defer", "exception"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/ThrowInDefer.cs:ThrowInDefer",
+      "type": "class",
+      "name": "ThrowInDefer",
+      "filePath": "Engine.UnitTests/TestTestSteps/ThrowInDefer.cs",
+      "lineRange": [9, 30],
+      "summary": "测试步骤类，在 Run 方法中通过 Results.Defer 安排延迟操作，并在延迟期间抛出异常或等待一段时间后升级判定。",
+      "tags": ["test", "test-step", "defer", "exception"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/ThrowInDefer.cs:ThrowInDefer.Run",
+      "type": "function",
+      "name": "ThrowInDefer.Run",
+      "filePath": "Engine.UnitTests/TestTestSteps/ThrowInDefer.cs",
+      "lineRange": [18, 29],
+      "summary": "在 Results.Defer 中根据 Throw 标记决定是否抛出 InvalidOperationException，并在等待后升级判定。",
+      "tags": ["test", "defer", "exception"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/TimingTestStep.cs",
+      "type": "file",
+      "name": "TimingTestStep.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/TimingTestStep.cs",
+      "summary": "定义 TimingTestStep 测试步骤类，用于验证测试执行各阶段（PrePlanRun/Run/PostPlanRun）的延迟计时功能。",
+      "tags": ["test", "test-step", "timing", "delay"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/TimingTestStep.cs:TimingTestStep",
+      "type": "class",
+      "name": "TimingTestStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/TimingTestStep.cs",
+      "lineRange": [9, 41],
+      "summary": "计时测试步骤类，包含 PreRunDelay/RunDelay/DeferDelay/PostRunDelay 四个延迟属性，在相应生命周期方法中执行 TapThread.Sleep。",
+      "tags": ["test", "test-step", "timing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/VerdictStep.cs",
+      "type": "file",
+      "name": "VerdictStep.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/VerdictStep.cs",
+      "summary": "定义 VerdictStep 测试步骤类，根据 VerdictOutput 属性设置判定结果并可请求中止测试计划。",
+      "tags": ["test", "test-step", "verdict", "abort"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/VerdictStep.cs:VerdictStep",
+      "type": "class",
+      "name": "VerdictStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/VerdictStep.cs",
+      "lineRange": [4, 25],
+      "summary": "判定测试步骤类，构造函数设置 VerdictOutput 初始值，Run 方法调用 UpgradeVerdict 并根据 RequestAbort 决定是否中止。",
+      "tags": ["test", "test-step", "verdict"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "type": "file",
+      "name": "WriteFileStep.cs",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "summary": "定义一组用于集成测试的文件操作步骤类，包括写入文件、创建目录、替换内容、验证版本号、操作系统条件运行和文件查找等功能。",
+      "tags": ["test", "test-step", "file-io", "version", "integration-test"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:WriteFileStep",
+      "type": "class",
+      "name": "WriteFileStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [10, 17],
+      "summary": "文件写入测试步骤，将字符串内容写入指定文件。",
+      "tags": ["test", "test-step", "file-io"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:CreateDirectoryStep",
+      "type": "class",
+      "name": "CreateDirectoryStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [19, 27],
+      "summary": "目录创建测试步骤，在指定路径创建目录。",
+      "tags": ["test", "test-step", "file-io"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReplaceInFileStep",
+      "type": "class",
+      "name": "ReplaceInFileStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [29, 48],
+      "summary": "文件内容替换测试步骤，读取文件内容并替换指定字符串后写回。",
+      "tags": ["test", "test-step", "file-io", "text-replacement"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ExpectStep",
+      "type": "class",
+      "name": "ExpectStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [50, 65],
+      "summary": "期望判定测试步骤，运行子步骤并验证最终判定是否与 ExpectedVerdict 匹配。",
+      "tags": ["test", "test-step", "verdict"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep",
+      "type": "class",
+      "name": "ReadAssemblyVersionStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [73, 219],
+      "summary": "程序集版本读取测试步骤，支持 FileVersion 和 SemanticVersion 两种模式，通过 PEReader 读取 .NET 元数据并验证版本匹配。",
+      "tags": ["test", "test-step", "version", "assembly", "metadata"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:RemoveDirectory",
+      "type": "class",
+      "name": "RemoveDirectory",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [221, 231],
+      "summary": "目录删除测试步骤，递归删除指定路径的目录。",
+      "tags": ["test", "test-step", "file-io"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:RunOnOs",
+      "type": "class",
+      "name": "RunOnOs",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [234, 260],
+      "summary": "按操作系统条件运行测试步骤，提供 AvailableOperatingSystems 和 OperatingSystem 属性以控制执行条件。",
+      "tags": ["test", "test-step", "os-conditional"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:FindFileStep",
+      "type": "class",
+      "name": "FindFileStep",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [262, 285],
+      "summary": "文件查找测试步骤，在指定目录中搜索匹配正则表达式的文件，找到则 Pass 否则 Fail。",
+      "tags": ["test", "test-step", "file-io", "regex"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ExpectStep.Run",
+      "type": "function",
+      "name": "ExpectStep.Run",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [55, 64],
+      "summary": "运行子步骤（RunChildSteps），验证子步骤判定是否与 ExpectedVerdict 一致，不一致则 Fail。",
+      "tags": ["test", "verdict"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.CheckFileVersion",
+      "type": "function",
+      "name": "ReadAssemblyVersionStep.CheckFileVersion",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [82, 103],
+      "summary": "检查文件版本（FileVersion），从 PE 元数据读取版本号并与 MatchVersion 比较，不匹配则 Fail。",
+      "tags": ["test", "version", "file-version"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.CheckSemanticVersion",
+      "type": "function",
+      "name": "ReadAssemblyVersionStep.CheckSemanticVersion",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [105, 143],
+      "summary": "检查语义版本（SemanticVersion），通过 PluginManager 搜索程序集并使用 PEReader 解析版本号进行比较。",
+      "tags": ["test", "version", "semver", "plugin-manager"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.Run",
+      "type": "function",
+      "name": "ReadAssemblyVersionStep.Run",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [145, 161],
+      "summary": "根据 VersionType 分发到 CheckFileVersion 或 CheckSemanticVersion 进行版本检查。",
+      "tags": ["test", "version"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.GetVersion",
+      "type": "function",
+      "name": "ReadAssemblyVersionStep.GetVersion",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [163, 206],
+      "summary": "通过 PluginSearcher 和 PEReader 从 .NET 程序集元数据中提取版本信息，支持 AssemblyFileVersion 属性解析。",
+      "tags": ["test", "version", "metadata", "assembly"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:RunOnOs.Run",
+      "type": "function",
+      "name": "RunOnOs.Run",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [249, 259],
+      "summary": "检查当前操作系统是否在 AvailableOperatingSystems 列表中，匹配时运行子步骤。",
+      "tags": ["test", "os-conditional"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:FindFileStep.Run",
+      "type": "function",
+      "name": "FindFileStep.Run",
+      "filePath": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "lineRange": [269, 284],
+      "summary": "在 SearchDir 中按 Regex 正则模式搜索文件，找到则 Pass 否则 Fail。",
+      "tags": ["test", "file-io", "regex"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ThreadManagerTest.cs",
+      "type": "file",
+      "name": "ThreadManagerTest.cs",
+      "filePath": "Engine.UnitTests/ThreadManagerTest.cs",
+      "summary": "ThreadManager 的单元测试类，验证异步任务启动、工作队列上下文和可等待（Awaitable）任务的正确行为。",
+      "tags": ["test", "unit-test", "threading", "async"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/ThreadManagerTest.cs:ThreadManagerTest",
+      "type": "class",
+      "name": "ThreadManagerTest",
+      "filePath": "Engine.UnitTests/ThreadManagerTest.cs",
+      "lineRange": [7, 86],
+      "summary": "ThreadManager 单元测试类，测试 TapThread.StartAwaitable 异步任务、WorkQueue 工作队列上下文传递以及任务等待机制。",
+      "tags": ["test", "unit-test", "threading"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ThreadManagerTest.cs:ThreadManagerTest.TestWorkQueueContext",
+      "type": "function",
+      "name": "ThreadManagerTest.TestWorkQueueContext",
+      "filePath": "Engine.UnitTests/ThreadManagerTest.cs",
+      "lineRange": [17, 61],
+      "summary": "测试 WorkQueue 的工作队列上下文传递，验证在不同线程上入队工作项并检查线程中止时的行为正确性。",
+      "tags": ["test", "unit-test", "work-queue", "threading"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ThreadManagerTest.cs:ThreadManagerTest.AwaitableTest",
+      "type": "function",
+      "name": "ThreadManagerTest.AwaitableTest",
+      "filePath": "Engine.UnitTests/ThreadManagerTest.cs",
+      "lineRange": [63, 77],
+      "summary": "测试 TapThread.StartAwaitable 创建可等待任务的功能，验证任务等待和完成状态的正确性。",
+      "tags": ["test", "unit-test", "awaitable", "task"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/AvailableValuesUpdateTest.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/AvailableValuesUpdateTest.cs:AvailableValuesUpdateTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/CompareIntStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/CompareIntStep.cs:CompareIntStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/CompareIntStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/CompareIntStep.cs:CompareIntStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/CompareIntStep.cs:CompareIntStep",
+      "target": "function:Engine.UnitTests/TestTestSteps/CompareIntStep.cs:CompareIntStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/DummySwitchInstrument.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/DummySwitchInstrument.cs:DummySwitchIntrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/FourPortDut.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/FourPortDut.cs:FourPortDut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:PipingProcessStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction.DescribeBytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:PipingProcessStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction",
+      "target": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction.DescribeBytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction",
+      "target": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:PipingProcessStep",
+      "target": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:PipingProcessStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/RunTimeStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/RunTimeStep.cs:RunTimeStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/RunTimeStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/RunTimeStep.cs:RunTimeStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/RunTimeStep.cs:RunTimeStep",
+      "target": "function:Engine.UnitTests/TestTestSteps/RunTimeStep.cs:RunTimeStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/SineResultsStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/SineResultsStep.cs:SineResultsStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/ThrowInDefer.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/ThrowInDefer.cs:ThrowInDefer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/ThrowInDefer.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/ThrowInDefer.cs:ThrowInDefer.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/ThrowInDefer.cs:ThrowInDefer",
+      "target": "function:Engine.UnitTests/TestTestSteps/ThrowInDefer.cs:ThrowInDefer.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/TimingTestStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/TimingTestStep.cs:TimingTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/VerdictStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/VerdictStep.cs:VerdictStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:WriteFileStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:CreateDirectoryStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReplaceInFileStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ExpectStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:RemoveDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:RunOnOs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:FindFileStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ExpectStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.CheckFileVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.CheckSemanticVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.GetVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:RunOnOs.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:FindFileStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ExpectStep",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ExpectStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.CheckFileVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.CheckSemanticVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.GetVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:RunOnOs",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:RunOnOs.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:FindFileStep",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:FindFileStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ThreadManagerTest.cs",
+      "target": "class:Engine.UnitTests/ThreadManagerTest.cs:ThreadManagerTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ThreadManagerTest.cs",
+      "target": "function:Engine.UnitTests/ThreadManagerTest.cs:ThreadManagerTest.TestWorkQueueContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ThreadManagerTest.cs",
+      "target": "function:Engine.UnitTests/ThreadManagerTest.cs:ThreadManagerTest.AwaitableTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ThreadManagerTest.cs:ThreadManagerTest",
+      "target": "function:Engine.UnitTests/ThreadManagerTest.cs:ThreadManagerTest.TestWorkQueueContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ThreadManagerTest.cs:ThreadManagerTest",
+      "target": "function:Engine.UnitTests/ThreadManagerTest.cs:ThreadManagerTest.AwaitableTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction.Execute",
+      "target": "function:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs:UserInputTestAction.DescribeBytes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.CheckFileVersion",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.GetVersion",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.Run",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.CheckFileVersion",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.Run",
+      "target": "function:Engine.UnitTests/TestTestSteps/WriteFileStep.cs:ReadAssemblyVersionStep.CheckSemanticVersion",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "target": "file:Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

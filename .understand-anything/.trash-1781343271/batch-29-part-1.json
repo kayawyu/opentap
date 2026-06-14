@@ -1,0 +1,1053 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/LoadStatus.cs",
+      "type": "file",
+      "name": "LoadStatus.cs",
+      "filePath": "Engine/LoadStatus.cs",
+      "summary": "内部枚举，定义 TypeData 和 AssemblyData 的加载状态（未加载、已加载、加载失败）。",
+      "tags": [
+        "enum",
+        "type-definition",
+        "internal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Log.cs",
+      "type": "file",
+      "name": "Log.cs",
+      "filePath": "Engine/Log.cs",
+      "summary": "OpenTAP 日志系统的核心文件，定义 LogEventType 枚举以及 TraceSource、TraceListener、TextWriterTraceListener、Log 等核心类，提供事件记录、日志监听器管理、日志源创建、异常扩展和 StringBuilder 缓存等功能。",
+      "tags": [
+        "logging",
+        "core-engine",
+        "event-tracing",
+        "exception-handling"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Log.cs:TraceSource",
+      "type": "class",
+      "name": "TraceSource",
+      "filePath": "Engine/Log.cs",
+      "lineRange": [
+        43,
+        113
+      ],
+      "summary": "封装 OpenTAP 日志基础设施功能的公开类，管理 ILog 实例，提供 Flush 和多个 TraceEvent 重载方法。",
+      "tags": [
+        "logging",
+        "source",
+        "event-tracing",
+        "public-api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Log.cs:TraceListener",
+      "type": "class",
+      "name": "TraceListener",
+      "filePath": "Engine/Log.cs",
+      "lineRange": [
+        118,
+        170
+      ],
+      "summary": "抽象日志监听器基类，定义处理日志事件（EventsLogged、TraceEvents）、写入和刷新的标准接口。",
+      "tags": [
+        "logging",
+        "listener",
+        "abstract"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Log.cs:TextWriterTraceListener",
+      "type": "class",
+      "name": "TextWriterTraceListener",
+      "filePath": "Engine/Log.cs",
+      "lineRange": [
+        175,
+        255
+      ],
+      "summary": "基于文件或流的日志监听器实现，将日志事件写入 TextWriter，支持 Dispose 模式。",
+      "tags": [
+        "logging",
+        "listener",
+        "file-output",
+        "disposable"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Log.cs:Log",
+      "type": "class",
+      "name": "Log",
+      "filePath": "Engine/Log.cs",
+      "lineRange": [
+        261,
+        761
+      ],
+      "summary": "日志系统核心静态类，管理日志上下文、创建和移除日志源（TraceSource）、添加/移除监听器，提供 Debug、Info、Warning、Error 等各级别日志方法以及异常写入和堆栈跟踪功能。",
+      "tags": [
+        "logging",
+        "core",
+        "static-class",
+        "log-levels",
+        "exception-handling"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用 ThreadStatic 字段管理线程本地日志上下文，通过 Caller Info 特性自动获取调用者信息。"
+    },
+    {
+      "id": "class:Engine/Log.cs:ExceptionExtensions",
+      "type": "class",
+      "name": "ExceptionExtensions",
+      "filePath": "Engine/Log.cs",
+      "lineRange": [
+        766,
+        797
+      ],
+      "summary": "异常扩展静态类，提供 GetInnerMostExceptionMessage（获取最内层异常消息）、Rethrow 和 RethrowInner 方法。",
+      "tags": [
+        "exception",
+        "extension",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/LogResultListener.cs",
+      "type": "file",
+      "name": "LogResultListener.cs",
+      "filePath": "Engine/LogResultListener.cs",
+      "summary": "测试计划结果监听器，拦截日志事件并输出到文本文件，支持按日志级别过滤和文件路径宏替换。",
+      "tags": [
+        "result-listener",
+        "logging",
+        "test-plan",
+        "file-output"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/LogResultListener.cs:LogResultListener",
+      "type": "class",
+      "name": "LogResultListener",
+      "filePath": "Engine/LogResultListener.cs",
+      "lineRange": [
+        16,
+        161
+      ],
+      "summary": "测试计划结果监听器，在测试计划运行完成后将日志写入文件，支持日志级别过滤和文件路径宏替换（如日期、判定结果）。",
+      "tags": [
+        "result-listener",
+        "logging",
+        "file-output",
+        "test-plan"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Logging/LogFactory.cs",
+      "type": "file",
+      "name": "LogFactory.cs",
+      "filePath": "Engine/Logging/LogFactory.cs",
+      "summary": "静态工厂类，用于创建 ILogContext 接口的实现实例（LogContext）。",
+      "tags": [
+        "factory",
+        "logging",
+        "diagnostic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Logging/LogFactory.cs:LogFactory",
+      "type": "class",
+      "name": "LogFactory",
+      "filePath": "Engine/Logging/LogFactory.cs",
+      "lineRange": [
+        10,
+        19
+      ],
+      "summary": "静态工厂类，创建 ILogContext 的实现（返回 LogContext 实例）。",
+      "tags": [
+        "factory",
+        "logging",
+        "diagnostic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Logging/LogFile.cs",
+      "type": "file",
+      "name": "LogFile.cs",
+      "filePath": "Engine/Logging/LogFile.cs",
+      "summary": "日志文件监听器实现，提供 LogFile（文本日志写入）和 BinaryLog（二进制日志写入）两种持久化方式。",
+      "tags": [
+        "logging",
+        "file-output",
+        "listener",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Logging/LogFile.cs:LogFile",
+      "type": "class",
+      "name": "LogFile",
+      "filePath": "Engine/Logging/LogFile.cs",
+      "lineRange": [
+        15,
+        85
+      ],
+      "summary": "文本日志文件监听器，实现 ILogListener 和 IDisposable，将日志事件以文本格式写入输出流。",
+      "tags": [
+        "logging",
+        "listener",
+        "file-output",
+        "text"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Logging/LogFile.cs:BinaryLog",
+      "type": "class",
+      "name": "BinaryLog",
+      "filePath": "Engine/Logging/LogFile.cs",
+      "lineRange": [
+        90,
+        177
+      ],
+      "summary": "二进制日志文件监听器，实现 ILogListener 接口，将日志事件以二进制格式写入文件，支持高性能日志持久化。",
+      "tags": [
+        "logging",
+        "listener",
+        "binary",
+        "file-output"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Logging/LogQueues.cs",
+      "type": "file",
+      "name": "LogQueues.cs",
+      "filePath": "Engine/Logging/LogQueues.cs",
+      "summary": "通用日志消息队列实现，包含 LogBuffer（固定长度无锁缓冲区）和 LogQueue（支持原子入队和批量出队的日志队列）。",
+      "tags": [
+        "logging",
+        "queue",
+        "lock-free",
+        "buffer"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Logging/LogQueues.cs:LogQueue",
+      "type": "class",
+      "name": "LogQueue",
+      "filePath": "Engine/Logging/LogQueues.cs",
+      "lineRange": [
+        13,
+        272
+      ],
+      "summary": "线程安全的日志消息队列，支持无锁 Enqueue 操作和批量 DequeueBunch 操作，用于高效传输日志事件。",
+      "tags": [
+        "logging",
+        "queue",
+        "thread-safe",
+        "lock-free"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/Logging/diag_impl.cs",
+      "type": "file",
+      "name": "diag_impl.cs",
+      "filePath": "Engine/Logging/diag_impl.cs",
+      "summary": "日志诊断层的实现文件，包含 AccurateStamper（精确时间戳提供者）和 LogContext（日志上下文实现类，负责日志的创建、监听器管理、事件注入和刷新）。",
+      "tags": [
+        "logging",
+        "implementation",
+        "diagnostic",
+        "timestamp"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Logging/diag_impl.cs:AccurateStamper",
+      "type": "class",
+      "name": "AccurateStamper",
+      "filePath": "Engine/Logging/diag_impl.cs",
+      "lineRange": [
+        16,
+        40
+      ],
+      "summary": "精确时间戳提供者实现，基于高精度 Stopwatch 提供时间戳，确保长时间运行时的系统时间精度。",
+      "tags": [
+        "logging",
+        "timestamp",
+        "diagnostic",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Logging/diag_impl.cs:LogContext",
+      "type": "class",
+      "name": "LogContext",
+      "filePath": "Engine/Logging/diag_impl.cs",
+      "lineRange": [
+        42,
+        333
+      ],
+      "summary": "ILogContext 的核心实现类，管理日志消息队列、监听器注册、日志创建/删除、事件注入（AddEvent）和消息处理（ProcessLog），支持批量刷新和同步管道。",
+      "tags": [
+        "logging",
+        "context",
+        "implementation",
+        "event-processing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/Logging/diag_intf.cs",
+      "type": "file",
+      "name": "diag_intf.cs",
+      "filePath": "Engine/Logging/diag_intf.cs",
+      "summary": "日志诊断层的接口定义文件，定义 ILog、EventCollection、ILogListener、ILogTimestampProvider、ILogContext、ILogContext2 等核心日志接口。",
+      "tags": [
+        "interface",
+        "logging",
+        "diagnostic",
+        "type-definition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Logging/diag_intf.cs:ILog",
+      "type": "class",
+      "name": "ILog",
+      "filePath": "Engine/Logging/diag_intf.cs",
+      "lineRange": [
+        15,
+        54
+      ],
+      "summary": "日志源接口，由 ILogContext 创建，提供多个 LogEvent 重载方法用于记录日志事件。",
+      "tags": [
+        "logging",
+        "interface",
+        "diagnostic",
+        "public-api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Logging/diag_intf.cs:EventCollection",
+      "type": "class",
+      "name": "EventCollection",
+      "filePath": "Engine/Logging/diag_intf.cs",
+      "lineRange": [
+        108,
+        273
+      ],
+      "summary": "只读日志事件集合，内部管理 LogEvent 数组并支持自动扩展，实现 IEnumerable 和 IDisposable。",
+      "tags": [
+        "logging",
+        "collection",
+        "event",
+        "enumerable"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Logging/diag_intf.cs:ILogListener",
+      "type": "class",
+      "name": "ILogListener",
+      "filePath": "Engine/Logging/diag_intf.cs",
+      "lineRange": [
+        278,
+        289
+      ],
+      "summary": "日志监听器接口，定义 EventsLogged（接收日志事件）和 Flush（刷新缓冲）方法。",
+      "tags": [
+        "logging",
+        "listener",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Logging/diag_intf.cs:ILogTimestampProvider",
+      "type": "class",
+      "name": "ILogTimestampProvider",
+      "filePath": "Engine/Logging/diag_intf.cs",
+      "lineRange": [
+        294,
+        305
+      ],
+      "summary": "时间戳提供者接口，定义 Timestamp 和 ConvertToTicks 方法。",
+      "tags": [
+        "logging",
+        "timestamp",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Logging/diag_intf.cs:ILogContext",
+      "type": "class",
+      "name": "ILogContext",
+      "filePath": "Engine/Logging/diag_intf.cs",
+      "lineRange": [
+        311,
+        365
+      ],
+      "summary": "日志上下文接口，定义 CreateLog、RemoveLog、AttachListener、DetachListener 和 Flush 等方法来管理日志生命周期。",
+      "tags": [
+        "logging",
+        "context",
+        "interface"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Logging/diag_intf.cs:ILogContext2",
+      "type": "class",
+      "name": "ILogContext2",
+      "filePath": "Engine/Logging/diag_intf.cs",
+      "lineRange": [
+        370,
+        377
+      ],
+      "summary": "ILogContext 的扩展接口，添加 AddEvent 方法支持直接注入日志事件。",
+      "tags": [
+        "logging",
+        "context",
+        "interface",
+        "extension"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/MacroPath.cs",
+      "type": "file",
+      "name": "MacroPath.cs",
+      "filePath": "Engine/MacroPath.cs",
+      "summary": "宏路径字符串处理，MacroExpansion 描述宏扩展信息，MacroString 支持字符串中宏的展开（如日期、测试计划目录等占位符替换）。",
+      "tags": [
+        "macro",
+        "string-interpolation",
+        "path-resolution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/MacroPath.cs:MacroString",
+      "type": "class",
+      "name": "MacroString",
+      "filePath": "Engine/MacroPath.cs",
+      "lineRange": [
+        32,
+        290
+      ],
+      "summary": "支持宏展开的字符串类，提供 Expand 方法用实际值替换宏占位符（如日期、测试计划目录），支持递归宏替换和上下文感知。",
+      "tags": [
+        "macro",
+        "string-interpolation",
+        "expandable"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/MenuAnnotation.cs",
+      "type": "file",
+      "name": "MenuAnnotation.cs",
+      "filePath": "Engine/MenuAnnotation.cs",
+      "summary": "上下文菜单注解系统，定义 MenuAnnotation 注解类及其相关的 IMenuModel、IMemberMenuModel、ITypeMenuModel、IMenuModelFactory、ITypeMenuModelFactory 等接口，以及 IconNames 常量类。",
+      "tags": [
+        "annotation",
+        "menu",
+        "ui-model",
+        "context-menu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/MenuAnnotation.cs:MenuAnnotation",
+      "type": "class",
+      "name": "MenuAnnotation",
+      "filePath": "Engine/MenuAnnotation.cs",
+      "lineRange": [
+        12,
+        187
+      ],
+      "summary": "上下文菜单注解类，实现 IOwnedAnnotation，根据 IMemberData 和 ITypeData 生成相应的菜单项（通过 IMenuModelFactory 和 ITypeMenuModelFactory 机制）。",
+      "tags": [
+        "annotation",
+        "menu",
+        "context-menu",
+        "serializable"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/MixinMemberMenuModel.cs",
+      "type": "file",
+      "name": "MixinMemberMenuModel.cs",
+      "filePath": "Engine/MixinMemberMenuModel.cs",
+      "summary": "Mixin 成员菜单模型，提供修改和移除 Mixin 成员的功能。",
+      "tags": [
+        "mixin",
+        "menu-model",
+        "ui"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/MixinMemberMenuModel.cs:MixinMemberMenuModel",
+      "type": "class",
+      "name": "MixinMemberMenuModel",
+      "filePath": "Engine/MixinMemberMenuModel.cs",
+      "lineRange": [
+        6,
+        93
+      ],
+      "summary": "Mixin 成员菜单模型，提供 ModifyMixin（修改 Mixin 配置）和 RemoveMixin（移除 Mixin）的 UI 操作。",
+      "tags": [
+        "mixin",
+        "menu-model",
+        "ui",
+        "modify-remove"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/MixinMenuModel.cs",
+      "type": "file",
+      "name": "MixinMenuModel.cs",
+      "filePath": "Engine/MixinMenuModel.cs",
+      "summary": "Mixin 类型菜单模型，提供为测试步骤或资源添加 Mixin 的功能，包含 AddMixin 方法。",
+      "tags": [
+        "mixin",
+        "menu-model",
+        "ui",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/MixinMenuModel.cs:MixinMenuModel",
+      "type": "class",
+      "name": "MixinMenuModel",
+      "filePath": "Engine/MixinMenuModel.cs",
+      "lineRange": [
+        5,
+        52
+      ],
+      "summary": "Mixin 类型菜单模型，实现 ITypeMenuModel，提供 AddMixin 方法来为测试步骤或资源添加新的 Mixin 实例。",
+      "tags": [
+        "mixin",
+        "menu-model",
+        "ui",
+        "add"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/MixinMenuModelFactory.cs",
+      "type": "file",
+      "name": "MixinMenuModelFactory.cs",
+      "filePath": "Engine/MixinMenuModelFactory.cs",
+      "summary": "Mixin 菜单模型工厂，实现 ITypeMenuModelFactory 和 IMenuModelFactory，根据类型或成员创建对应的 Mixin 菜单模型。",
+      "tags": [
+        "factory",
+        "mixin",
+        "menu-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/MixinMenuModelFactory.cs:MixinMenuModelFactory",
+      "type": "class",
+      "name": "MixinMenuModelFactory",
+      "filePath": "Engine/MixinMenuModelFactory.cs",
+      "lineRange": [
+        3,
+        26
+      ],
+      "summary": "Mixin 菜单模型工厂，根据目标类型（ITestStepParent 或 IResource）创建 MixinMenuModel，或根据 MixinMemberData 创建 MixinMemberMenuModel。",
+      "tags": [
+        "mixin",
+        "factory",
+        "menu-model"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:Engine/Log.cs:Log",
+      "target": "class:Engine/Log.cs:TraceSource",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Log.cs:Log",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogContext",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Log.cs:TextWriterTraceListener",
+      "target": "class:Engine/Log.cs:TraceListener",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:Engine/Log.cs:TraceSource",
+      "target": "class:Engine/Logging/diag_intf.cs:ILog",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/LogResultListener.cs:LogResultListener",
+      "target": "file:Engine/Log.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Logging/LogFactory.cs:LogFactory",
+      "target": "class:Engine/Logging/diag_impl.cs:LogContext",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Logging/LogFile.cs:BinaryLog",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogListener",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:Engine/Logging/LogFile.cs:LogFile",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogListener",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:Engine/Logging/diag_impl.cs:AccurateStamper",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogTimestampProvider",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:Engine/Logging/diag_impl.cs:LogContext",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogContext",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:Engine/Logging/diag_impl.cs:LogContext",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogContext2",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:Engine/Logging/diag_intf.cs:ILogContext2",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogContext",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "class:Engine/Log.cs:ExceptionExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "class:Engine/Log.cs:ExceptionExtensions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "class:Engine/Log.cs:Log",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "class:Engine/Log.cs:Log",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "class:Engine/Log.cs:TextWriterTraceListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "class:Engine/Log.cs:TextWriterTraceListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "class:Engine/Log.cs:TraceListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "class:Engine/Log.cs:TraceListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "class:Engine/Log.cs:TraceSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Log.cs",
+      "target": "class:Engine/Log.cs:TraceSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/LogResultListener.cs",
+      "target": "class:Engine/LogResultListener.cs:LogResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/LogResultListener.cs",
+      "target": "class:Engine/LogResultListener.cs:LogResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/LogResultListener.cs",
+      "target": "file:Engine/MacroPath.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine/Logging/LogFactory.cs",
+      "target": "class:Engine/Logging/LogFactory.cs:LogFactory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/LogFactory.cs",
+      "target": "class:Engine/Logging/LogFactory.cs:LogFactory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/LogFile.cs",
+      "target": "class:Engine/Logging/LogFile.cs:BinaryLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/LogFile.cs",
+      "target": "class:Engine/Logging/LogFile.cs:BinaryLog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/LogFile.cs",
+      "target": "class:Engine/Logging/LogFile.cs:LogFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/LogFile.cs",
+      "target": "class:Engine/Logging/LogFile.cs:LogFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/LogQueues.cs",
+      "target": "class:Engine/Logging/LogQueues.cs:LogQueue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/LogQueues.cs",
+      "target": "class:Engine/Logging/LogQueues.cs:LogQueue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/diag_impl.cs",
+      "target": "class:Engine/Logging/diag_impl.cs:AccurateStamper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/diag_impl.cs",
+      "target": "class:Engine/Logging/diag_impl.cs:AccurateStamper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/diag_impl.cs",
+      "target": "class:Engine/Logging/diag_impl.cs:LogContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/diag_impl.cs",
+      "target": "class:Engine/Logging/diag_impl.cs:LogContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:EventCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:EventCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:ILog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:ILog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogContext2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogContext2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogTimestampProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Logging/diag_intf.cs",
+      "target": "class:Engine/Logging/diag_intf.cs:ILogTimestampProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/MacroPath.cs",
+      "target": "class:Engine/MacroPath.cs:MacroString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/MacroPath.cs",
+      "target": "class:Engine/MacroPath.cs:MacroString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/MenuAnnotation.cs",
+      "target": "class:Engine/MenuAnnotation.cs:MenuAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/MenuAnnotation.cs",
+      "target": "class:Engine/MenuAnnotation.cs:MenuAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/MixinMemberMenuModel.cs",
+      "target": "class:Engine/MixinMemberMenuModel.cs:MixinMemberMenuModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/MixinMemberMenuModel.cs",
+      "target": "class:Engine/MixinMemberMenuModel.cs:MixinMemberMenuModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/MixinMemberMenuModel.cs",
+      "target": "file:Engine/Mixins/MixinBuilderUi.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine/MixinMemberMenuModel.cs",
+      "target": "file:Engine/Mixins/MixinFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine/MixinMemberMenuModel.cs",
+      "target": "file:Engine/Mixins/MixinMemberData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine/MixinMenuModel.cs",
+      "target": "class:Engine/MixinMenuModel.cs:MixinMenuModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/MixinMenuModel.cs",
+      "target": "class:Engine/MixinMenuModel.cs:MixinMenuModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/MixinMenuModel.cs",
+      "target": "file:Engine/Mixins/MixinBuilderUi.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine/MixinMenuModel.cs",
+      "target": "file:Engine/Mixins/MixinFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine/MixinMenuModelFactory.cs",
+      "target": "class:Engine/MixinMenuModelFactory.cs:MixinMenuModelFactory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/MixinMenuModelFactory.cs",
+      "target": "class:Engine/MixinMenuModelFactory.cs:MixinMenuModelFactory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/MixinMenuModelFactory.cs",
+      "target": "file:Engine/MixinMemberMenuModel.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine/MixinMenuModelFactory.cs",
+      "target": "file:Engine/MixinMenuModel.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

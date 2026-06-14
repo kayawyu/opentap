@@ -1,0 +1,266 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/XmlError.cs",
+      "type": "file",
+      "name": "XmlError.cs",
+      "filePath": "Engine/XmlError.cs",
+      "summary": "XML序列化错误表示类，在XML反序列化过程中捕获并包装异常信息，关联到具体的XML元素和行号。",
+      "tags": [
+        "xml",
+        "serialization",
+        "error-handling",
+        "diagnostics"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/XmlError.cs:XmlError",
+      "type": "class",
+      "name": "XmlError",
+      "filePath": "Engine/XmlError.cs",
+      "lineRange": [
+        8,
+        30
+      ],
+      "summary": "XML错误类，持有异常对象和XML行信息，ToString方法格式化输出包含行号的错误消息。",
+      "tags": [
+        "xml",
+        "serialization",
+        "error-wrapping",
+        "diagnostics"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/XmlMessage.cs",
+      "type": "file",
+      "name": "XmlMessage.cs",
+      "filePath": "Engine/XmlMessage.cs",
+      "summary": "XML序列化信息消息类，在XML加载过程中记录非错误的消息信息，关联到具体的XML元素。",
+      "tags": [
+        "xml",
+        "serialization",
+        "message",
+        "diagnostics"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/XmlMessage.cs:XmlMessage",
+      "type": "class",
+      "name": "XmlMessage",
+      "filePath": "Engine/XmlMessage.cs",
+      "lineRange": [
+        7,
+        29
+      ],
+      "summary": "XML消息类，持有消息文本和XML元素引用，ToString方法格式化输出包含行号的消息。",
+      "tags": [
+        "xml",
+        "serialization",
+        "message",
+        "diagnostics"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Installer/Assets/LogoSide.bmp",
+      "type": "file",
+      "name": "LogoSide.bmp",
+      "filePath": "Installer/Assets/LogoSide.bmp",
+      "summary": "安装程序使用的侧边栏Logo位图资源（BMP格式）。",
+      "tags": [
+        "asset",
+        "installer",
+        "logo",
+        "bitmap",
+        "binary"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Installer/Assets/LogoTop.bmp",
+      "type": "file",
+      "name": "LogoTop.bmp",
+      "filePath": "Installer/Assets/LogoTop.bmp",
+      "summary": "安装程序使用的顶部横幅Logo位图资源（BMP格式）。",
+      "tags": [
+        "asset",
+        "installer",
+        "logo",
+        "bitmap",
+        "binary"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Installer/Assets/Newtonsoft.Json.dll",
+      "type": "file",
+      "name": "Newtonsoft.Json.dll",
+      "filePath": "Installer/Assets/Newtonsoft.Json.dll",
+      "summary": "Newtonsoft.Json（Json.NET）程序集文件，用于OpenTAP安装包中的JSON序列化/反序列化支持。",
+      "tags": [
+        "json",
+        "dependency",
+        "serialization",
+        "binary",
+        "third-party"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:LinuxInstall/INSTALL.sh",
+      "type": "file",
+      "name": "INSTALL.sh",
+      "filePath": "LinuxInstall/INSTALL.sh",
+      "summary": "OpenTAP Linux自动安装脚本，检测.NET Core运行时依赖，解压TapPackage到~/.tap目录并创建bin目录快捷方式。",
+      "tags": [
+        "installer",
+        "linux",
+        "shell-script",
+        "deployment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:LinuxInstall/README",
+      "type": "file",
+      "name": "README",
+      "filePath": "LinuxInstall/README",
+      "summary": "OpenTAP Linux发行版说明文档，包含前置依赖（.NET 6.0、Ubuntu 16.04+）、自动/手动安装步骤和使用说明。",
+      "tags": [
+        "documentation",
+        "linux",
+        "installation",
+        "readme"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:LinuxInstall/package/Debian/control.in",
+      "type": "file",
+      "name": "control.in",
+      "filePath": "LinuxInstall/package/Debian/control.in",
+      "summary": "Debian软件包控制文件模板，定义OpenTAP包的元数据（名称、版本占位符、依赖项如libc6-dev和libcurl4、架构amd64）。",
+      "tags": [
+        "debian",
+        "packaging",
+        "template",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:LinuxInstall/package/Debian/create-deb",
+      "type": "file",
+      "name": "create-deb",
+      "filePath": "LinuxInstall/package/Debian/create-deb",
+      "summary": "Debian软件包构建脚本，从TapPackage解压文件，生成DEBIAN/control和postinst文件，使用dpkg --build创建.deb安装包。",
+      "tags": [
+        "debian",
+        "packaging",
+        "build-script",
+        "deployment"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:LinuxInstall/package/Debian/postinst.in",
+      "type": "file",
+      "name": "postinst.in",
+      "filePath": "LinuxInstall/package/Debian/postinst.in",
+      "summary": "Debian软件包安装后脚本模板，创建opentap用户组、设置安装目录权限（g+rwxs粘滞位）并提示用户加入opentap组。",
+      "tags": [
+        "debian",
+        "post-install",
+        "template",
+        "permissions"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:LinuxInstall/tap.sh",
+      "type": "file",
+      "name": "tap.sh",
+      "filePath": "LinuxInstall/tap.sh",
+      "summary": "OpenTAP Linux启动脚本，解析tap可执行文件的真实路径，检测dotnet运行时并执行tap.dll。",
+      "tags": [
+        "launcher",
+        "linux",
+        "shell-script",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:LinuxInstall/tap.sh:realpath",
+      "type": "function",
+      "name": "realpath",
+      "filePath": "LinuxInstall/tap.sh",
+      "lineRange": [
+        13,
+        32
+      ],
+      "summary": "自定义realpath实现，通过readlink递归解析符号链接，返回文件的绝对真实路径，包含无限循环检测。",
+      "tags": [
+        "path-resolution",
+        "symlink",
+        "utility",
+        "shell-function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:nuget/OpenTAP.nuspec",
+      "type": "file",
+      "name": "OpenTAP.nuspec",
+      "filePath": "nuget/OpenTAP.nuspec",
+      "summary": "NuGet包规范文件，定义OpenTAP包的元数据（id、版本、描述）、许可信息（MPL-2.0）和文件包含规则。",
+      "tags": [
+        "nuget",
+        "packaging",
+        "metadata",
+        "configuration"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/XmlError.cs",
+      "target": "class:Engine/XmlError.cs:XmlError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/XmlError.cs",
+      "target": "class:Engine/XmlError.cs:XmlError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/XmlMessage.cs",
+      "target": "class:Engine/XmlMessage.cs:XmlMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/XmlMessage.cs",
+      "target": "class:Engine/XmlMessage.cs:XmlMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:LinuxInstall/tap.sh",
+      "target": "function:LinuxInstall/tap.sh:realpath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

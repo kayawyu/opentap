@@ -1,0 +1,14 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": "Installer/Assets/Dotnet.Glob.License.txt", "language": "txt", "sizeLines": 10, "fileCategory": "docs"},
+    {"path": "Installer/Assets/Mono.Cecil.License.txt", "language": "txt", "sizeLines": 17, "fileCategory": "docs"},
+    {"path": "Installer/Assets/dotnet_library_license.txt", "language": "txt", "sizeLines": 28, "fileCategory": "docs"},
+    {"path": "Installer/Assets/dotnet_mit_license.txt", "language": "txt", "sizeLines": 8, "fileCategory": "docs"},
+    {"path": "Installer/Assets/libgit2sharp.license.md", "language": "markdown", "sizeLines": 21, "fileCategory": "docs"},
+    {"path": "Installer/Assets/newtonsoft_mit_license.txt", "language": "txt", "sizeLines": 8, "fileCategory": "docs"},
+    {"path": "Installer/Assets/opentap.installer.linux.xml", "language": "xml", "sizeLines": 156, "fileCategory": "config"},
+    {"path": "Installer/Assets/opentap.installer.xml", "language": "xml", "sizeLines": 165, "fileCategory": "config"}
+  ],
+  "batchImportData": {"Installer/Assets/Dotnet.Glob.License.txt":[],"Installer/Assets/Mono.Cecil.License.txt":[],"Installer/Assets/dotnet_library_license.txt":[],"Installer/Assets/dotnet_mit_license.txt":[],"Installer/Assets/libgit2sharp.license.md":[],"Installer/Assets/newtonsoft_mit_license.txt":[],"Installer/Assets/opentap.installer.linux.xml":[],"Installer/Assets/opentap.installer.xml":[]}
+}

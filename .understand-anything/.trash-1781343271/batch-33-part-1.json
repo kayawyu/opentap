@@ -1,0 +1,1206 @@
+{
+  "nodes": [
+    {
+      "id": "config:Engine/Tap.Engine.csproj",
+      "type": "config",
+      "name": "Tap.Engine.csproj",
+      "filePath": "Engine/Tap.Engine.csproj",
+      "summary": "OpenTap Engine 项目的 MSBuild 项目文件，定义程序集名称为 OpenTap，引入 Shared 目录下的编译文件，并声明第三方 NuGet 包依赖（如 System.Text.Json、Microsoft.CodeAnalysis 等）。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "csharp-project",
+        "nuget"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Tap.Engine.csproj.vspscc",
+      "type": "file",
+      "name": "Tap.Engine.csproj.vspscc",
+      "filePath": "Engine/Tap.Engine.csproj.vspscc",
+      "summary": "Visual Studio 源代码控制绑定文件，记录项目的版本控制提供程序配置。",
+      "tags": [
+        "source-control",
+        "visual-studio",
+        "metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Tap.snk",
+      "type": "file",
+      "name": "Tap.snk",
+      "filePath": "Engine/Tap.snk",
+      "summary": "RSA 强名称密钥文件（.snk），用于对 OpenTap 程序集进行强名称签名。",
+      "tags": [
+        "signing",
+        "security",
+        "strong-name-key"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/TapSerialization.cs",
+      "type": "file",
+      "name": "TapSerialization.cs",
+      "filePath": "Engine/TapSerialization.cs",
+      "summary": "OpenTap 核心 XML 序列化/反序列化引擎，负责测试计划、测试步骤等对象的持久化读写，支持延迟加载、错误收集、类型通知等机制。",
+      "tags": [
+        "serialization",
+        "xml",
+        "deserialization",
+        "core-engine"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用 XmlWriter/XmlReader 进行手写 XML 序列化，支持延迟反序列化和插件类型注册机制。"
+    },
+    {
+      "id": "file:Engine/TeeStream.cs",
+      "type": "file",
+      "name": "TeeStream.cs",
+      "filePath": "Engine/TeeStream.cs",
+      "summary": "实现 TeeStream 流分叉类，允许单个输入流的数据被多个客户端流同时读取，用于测试计划 XML 的并行序列化场景。",
+      "tags": [
+        "stream",
+        "tee",
+        "data-distribution",
+        "io"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/TapSerialization.cs:IDeserializedCallback",
+      "type": "class",
+      "name": "IDeserializedCallback",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        22,
+        28
+      ],
+      "summary": "IDeserializedCallback 反序列化回调接口，对象反序列化完成后调用 OnDeserialized 方法进行后处理。",
+      "tags": [
+        "interface",
+        "serialization",
+        "callback"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TapSerialization.cs:DeserializeOrderAttribute",
+      "type": "class",
+      "name": "DeserializeOrderAttribute",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        33,
+        47
+      ],
+      "summary": "DeserializeOrderAttribute 序列化顺序属性，控制反序列化时的处理优先级。",
+      "tags": [
+        "attribute",
+        "serialization",
+        "ordering"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TapSerialization.cs:TapSerializer",
+      "type": "class",
+      "name": "TapSerializer",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        52,
+        706
+      ],
+      "summary": "TapSerializer 是 OpenTap 的核心 XML 序列化器，负责测试计划、步骤等对象的序列化与反序列化，支持错误收集、延迟加载、类型通知和自定义序列化步骤注册。",
+      "tags": [
+        "serializer",
+        "xml",
+        "core-engine",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:DeserializeOrderAttribute",
+      "type": "function",
+      "name": "DeserializeOrderAttribute",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        43,
+        46
+      ],
+      "summary": "方法 DeserializeOrderAttribute，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:PushError:71",
+      "type": "function",
+      "name": "PushError (line 71)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        71,
+        74
+      ],
+      "summary": "方法 PushError (line 71)，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:PushError:77",
+      "type": "function",
+      "name": "PushError (line 77)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        77,
+        80
+      ],
+      "summary": "方法 PushError (line 77)，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:LogMessages",
+      "type": "function",
+      "name": "LogMessages",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        96,
+        112
+      ],
+      "summary": "LogMessages 错误/消息日志方法，将序列化过程中收集的警告和错误输出到日志。",
+      "tags": [
+        "logging",
+        "error-handling",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Deserialize:122",
+      "type": "function",
+      "name": "Deserialize (line 122)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        122,
+        172
+      ],
+      "summary": "反序列化方法 Deserialize (line 122)，从 XML 文档/字符串/文件中还原 OpenTap 对象图，51 行。",
+      "tags": [
+        "deserialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Flush",
+      "type": "function",
+      "name": "Flush",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        177,
+        192
+      ],
+      "summary": "Flush 延迟加载刷新方法，触发所有已注册的延迟反序列化执行。",
+      "tags": [
+        "serialization",
+        "flush",
+        "deferred-loading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Deserialize:202",
+      "type": "function",
+      "name": "Deserialize (line 202)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        202,
+        208
+      ],
+      "summary": "反序列化方法 Deserialize (line 202)，从 XML 文档/字符串/文件中还原 OpenTap 对象图，7 行。",
+      "tags": [
+        "deserialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:DeserializeFromString",
+      "type": "function",
+      "name": "DeserializeFromString",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        218,
+        224
+      ],
+      "summary": "反序列化方法 DeserializeFromString，从 XML 文档/字符串/文件中还原 OpenTap 对象图，7 行。",
+      "tags": [
+        "deserialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:DeserializeFromFile",
+      "type": "function",
+      "name": "DeserializeFromFile",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        233,
+        239
+      ],
+      "summary": "反序列化方法 DeserializeFromFile，从 XML 文档/字符串/文件中还原 OpenTap 对象图，7 行。",
+      "tags": [
+        "deserialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:GetSerializers",
+      "type": "function",
+      "name": "GetSerializers",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        245,
+        245
+      ],
+      "summary": "方法 GetSerializers，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:GetSerializer",
+      "type": "function",
+      "name": "GetSerializer",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        264,
+        272
+      ],
+      "summary": "方法 GetSerializer，9 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:AddSerializers",
+      "type": "function",
+      "name": "AddSerializers",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        276,
+        279
+      ],
+      "summary": "方法 AddSerializers，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:GetCurrentSerializer",
+      "type": "function",
+      "name": "GetCurrentSerializer",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        284,
+        284
+      ],
+      "summary": "方法 GetCurrentSerializer，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:TapSerializer",
+      "type": "function",
+      "name": "TapSerializer",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        288,
+        307
+      ],
+      "summary": "TapSerializer 构造函数，初始化序列化器并注册默认的 XML 读写设置和内置序列化步骤，20 行。",
+      "tags": [
+        "constructor",
+        "serialization",
+        "initialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:DeferLoad:335",
+      "type": "function",
+      "name": "DeferLoad (line 335)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        335,
+        338
+      ],
+      "summary": "DeferLoad 延迟加载方法，注册待延迟反序列化的对象及其加载顺序，4 行。",
+      "tags": [
+        "deferred-loading",
+        "serialization",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:DeferLoad:340",
+      "type": "function",
+      "name": "DeferLoad (line 340)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        340,
+        357
+      ],
+      "summary": "DeferLoad 延迟加载方法，注册待延迟反序列化的对象及其加载顺序，18 行。",
+      "tags": [
+        "deferred-loading",
+        "serialization",
+        "registration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Deserialize:384",
+      "type": "function",
+      "name": "Deserialize (line 384)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        384,
+        387
+      ],
+      "summary": "反序列化方法 Deserialize (line 384)，从 XML 文档/字符串/文件中还原 OpenTap 对象图，4 行。",
+      "tags": [
+        "deserialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Deserialize:398",
+      "type": "function",
+      "name": "Deserialize (line 398)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        398,
+        446
+      ],
+      "summary": "反序列化方法 Deserialize (line 398)，从 XML 文档/字符串/文件中还原 OpenTap 对象图，49 行。",
+      "tags": [
+        "deserialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Serialize:453",
+      "type": "function",
+      "name": "Serialize (line 453)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        453,
+        460
+      ],
+      "summary": "序列化方法 Serialize (line 453)，将 OpenTap 对象图写入 XML 流/字符串，8 行。",
+      "tags": [
+        "serialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Serialize:471",
+      "type": "function",
+      "name": "Serialize (line 471)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        471,
+        489
+      ],
+      "summary": "序列化方法 Serialize (line 471)，将 OpenTap 对象图写入 XML 流/字符串，19 行。",
+      "tags": [
+        "serialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:SerializeToString",
+      "type": "function",
+      "name": "SerializeToString",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        496,
+        504
+      ],
+      "summary": "序列化方法 SerializeToString，将 OpenTap 对象图写入 XML 流/字符串，9 行。",
+      "tags": [
+        "serialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Serialize:507",
+      "type": "function",
+      "name": "Serialize (line 507)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        507,
+        508
+      ],
+      "summary": "序列化方法 Serialize (line 507)，将 OpenTap 对象图写入 XML 流/字符串，2 行。",
+      "tags": [
+        "serialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Serialize:511",
+      "type": "function",
+      "name": "Serialize (line 511)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        511,
+        574
+      ],
+      "summary": "序列化方法 Serialize (line 511)，将 OpenTap 对象图写入 XML 流/字符串，64 行。",
+      "tags": [
+        "serialization",
+        "xml",
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:MakeValidXmlName",
+      "type": "function",
+      "name": "MakeValidXmlName",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        576,
+        597
+      ],
+      "summary": "MakeValidXmlName 将 C# 成员名称转换为合法的 XML 名称，处理特殊字符转义。",
+      "tags": [
+        "xml",
+        "naming",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:TypeToXmlString",
+      "type": "function",
+      "name": "TypeToXmlString",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        604,
+        630
+      ],
+      "summary": "TypeToXmlString 将 .NET Type 转换为 XML 友好的类型字符串表示。",
+      "tags": [
+        "xml",
+        "type-conversion",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Clone:637",
+      "type": "function",
+      "name": "Clone (line 637)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        637,
+        646
+      ],
+      "summary": "Clone 对象克隆方法，通过序列化/反序列化实现深度拷贝。",
+      "tags": [
+        "clone",
+        "deep-copy",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:Clone:648",
+      "type": "function",
+      "name": "Clone (line 648)",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        648,
+        648
+      ],
+      "summary": "Clone 对象克隆方法，通过序列化/反序列化实现深度拷贝。",
+      "tags": [
+        "clone",
+        "deep-copy",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:GetObjectDeserializer",
+      "type": "function",
+      "name": "GetObjectDeserializer",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        659,
+        663
+      ],
+      "summary": "方法 GetObjectDeserializer，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:GetUsedTypes",
+      "type": "function",
+      "name": "GetUsedTypes",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        681,
+        681
+      ],
+      "summary": "方法 GetUsedTypes，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TapSerialization.cs:GetUsedFiles",
+      "type": "function",
+      "name": "GetUsedFiles",
+      "filePath": "Engine/TapSerialization.cs",
+      "lineRange": [
+        684,
+        684
+      ],
+      "summary": "方法 GetUsedFiles，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TeeStream.cs:TeeStream",
+      "type": "class",
+      "name": "TeeStream",
+      "filePath": "Engine/TeeStream.cs",
+      "lineRange": [
+        8,
+        177
+      ],
+      "summary": "TeeStream 实现流分叉功能，从单个主输入流中读取数据并分发给多个客户端流，支持同步等待所有客户端消费完毕。",
+      "tags": [
+        "stream",
+        "tee",
+        "io",
+        "data-distribution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TeeStream.cs:TeeStream",
+      "type": "function",
+      "name": "TeeStream",
+      "filePath": "Engine/TeeStream.cs",
+      "lineRange": [
+        71,
+        71
+      ],
+      "summary": "方法 TeeStream，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TeeStream.cs:CreateClientStreams",
+      "type": "function",
+      "name": "CreateClientStreams",
+      "filePath": "Engine/TeeStream.cs",
+      "lineRange": [
+        75,
+        90
+      ],
+      "summary": "方法 CreateClientStreams，16 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TeeStream.cs:ReadNextBlock",
+      "type": "function",
+      "name": "ReadNextBlock",
+      "filePath": "Engine/TeeStream.cs",
+      "lineRange": [
+        94,
+        125
+      ],
+      "summary": "方法 ReadNextBlock，32 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TeeStream.cs:Read",
+      "type": "function",
+      "name": "Read",
+      "filePath": "Engine/TeeStream.cs",
+      "lineRange": [
+        131,
+        176
+      ],
+      "summary": "方法 Read，46 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "class:Engine/TapSerialization.cs:IDeserializedCallback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "class:Engine/TapSerialization.cs:IDeserializedCallback",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "class:Engine/TapSerialization.cs:DeserializeOrderAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "class:Engine/TapSerialization.cs:DeserializeOrderAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "class:Engine/TapSerialization.cs:TapSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "class:Engine/TapSerialization.cs:TapSerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:DeserializeOrderAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:DeserializeOrderAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:PushError:71",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:PushError:71",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:PushError:77",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:PushError:77",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:LogMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Deserialize:122",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Deserialize:122",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Flush",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Flush",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Deserialize:202",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Deserialize:202",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:DeserializeFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:DeserializeFromString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:DeserializeFromFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:DeserializeFromFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetSerializers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetSerializers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetSerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:AddSerializers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:AddSerializers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetCurrentSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetCurrentSerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:TapSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:TapSerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:DeferLoad:335",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:DeferLoad:335",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:DeferLoad:340",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:DeferLoad:340",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Deserialize:384",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Deserialize:384",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Deserialize:398",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Deserialize:398",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Serialize:453",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Serialize:453",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Serialize:471",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Serialize:471",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:SerializeToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:SerializeToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Serialize:507",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Serialize:507",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Serialize:511",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Serialize:511",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:MakeValidXmlName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:TypeToXmlString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:TypeToXmlString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Clone:637",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Clone:637",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Clone:648",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:Clone:648",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetObjectDeserializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetObjectDeserializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetUsedTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetUsedTypes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetUsedFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerialization.cs",
+      "target": "function:Engine/TapSerialization.cs:GetUsedFiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TeeStream.cs",
+      "target": "class:Engine/TeeStream.cs:TeeStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TeeStream.cs",
+      "target": "class:Engine/TeeStream.cs:TeeStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TeeStream.cs",
+      "target": "function:Engine/TeeStream.cs:TeeStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TeeStream.cs",
+      "target": "function:Engine/TeeStream.cs:TeeStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TeeStream.cs",
+      "target": "function:Engine/TeeStream.cs:CreateClientStreams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TeeStream.cs",
+      "target": "function:Engine/TeeStream.cs:CreateClientStreams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TeeStream.cs",
+      "target": "function:Engine/TeeStream.cs:ReadNextBlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TeeStream.cs",
+      "target": "function:Engine/TeeStream.cs:Read",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TeeStream.cs",
+      "target": "function:Engine/TeeStream.cs:Read",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

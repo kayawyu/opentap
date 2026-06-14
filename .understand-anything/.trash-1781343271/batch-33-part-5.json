@@ -1,0 +1,1404 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/Translation/TranslationManager.cs",
+      "type": "file",
+      "name": "TranslationManager.cs",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "summary": "翻译管理器，提供统一的翻译入口点，支持成员翻译、枚举翻译、键翻译和带占位符的格式化字符串翻译。",
+      "tags": [
+        "translation",
+        "localization",
+        "manager",
+        "formatting"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Translation/Translator.cs",
+      "type": "file",
+      "name": "Translator.cs",
+      "filePath": "Engine/Translation/Translator.cs",
+      "summary": "翻译器核心实现，聚合多个 ITranslationProvider 并按语言优先级查找翻译结果，是 OpenTap 国际化功能的核心组件。",
+      "tags": [
+        "translation",
+        "localization",
+        "core",
+        "lookup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/TypeData.cs",
+      "type": "file",
+      "name": "TypeData.cs",
+      "filePath": "Engine/TypeData.cs",
+      "summary": "类型元数据描述系统，缓存和查询 OpenTap 类型的属性、成员、基类、派生类型、Display/HelpLink 等信息，为序列化和插件系统提供反射基础设施。",
+      "tags": [
+        "type-metadata",
+        "reflection",
+        "cache",
+        "plugin-system"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用缓存和延迟加载策略优化反射性能，包含类型派生关系查找和 Assembly 加载逻辑。"
+    },
+    {
+      "id": "file:Engine/UnitAttribute.cs",
+      "type": "file",
+      "name": "UnitAttribute.cs",
+      "filePath": "Engine/UnitAttribute.cs",
+      "summary": "单位属性标注，允许为测试步骤属性指定物理单位（如 \"s\"、\"V\"）、工程前缀（m、k、M 等）和自定义字符串格式。",
+      "tags": [
+        "attribute",
+        "unit",
+        "annotation",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/UnmergableAttribute.cs",
+      "type": "file",
+      "name": "UnmergableAttribute.cs",
+      "filePath": "Engine/UnmergableAttribute.cs",
+      "summary": "不可合并属性标注，标记测试步骤的属性在跨步骤合并操作中不可被合并。",
+      "tags": [
+        "attribute",
+        "annotation",
+        "merge-behavior"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Translation/TranslationManager.cs:TranslationManager",
+      "type": "class",
+      "name": "TranslationManager",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        15,
+        166
+      ],
+      "summary": "TranslationManager 翻译管理器，统一入口提供成员、枚举、键和格式化字符串的多语言翻译。",
+      "tags": [
+        "translation",
+        "manager",
+        "localization",
+        "formatting"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Translation/TranslationManager.cs:IStringLocalizer",
+      "type": "class",
+      "name": "IStringLocalizer",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        174,
+        176
+      ],
+      "summary": "IStringLocalizer 字符串本地化接口，定义字符串翻译的抽象契约。",
+      "tags": [
+        "interface",
+        "translation",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Translation/TranslationManager.cs:FormatString",
+      "type": "class",
+      "name": "FormatString",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        181,
+        190
+      ],
+      "summary": "FormatString 格式化字符串类，封装带占位符的翻译模板及其格式化逻辑。",
+      "tags": [
+        "translation",
+        "formatting",
+        "string-template"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/TranslationManager.cs:TranslateMember",
+      "type": "function",
+      "name": "TranslateMember",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        43,
+        46
+      ],
+      "summary": "TranslateMember 翻译类型成员的 Display 属性为指定语言。",
+      "tags": [
+        "translation",
+        "member",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/TranslationManager.cs:TranslateEnum",
+      "type": "function",
+      "name": "TranslateEnum",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        54,
+        57
+      ],
+      "summary": "TranslateEnum 翻译枚举值的显示名称为指定语言。",
+      "tags": [
+        "translation",
+        "enum",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/TranslationManager.cs:TranslateKey",
+      "type": "function",
+      "name": "TranslateKey",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        70,
+        73
+      ],
+      "summary": "TranslateKey 通过键查找翻译字符串。",
+      "tags": [
+        "translation",
+        "lookup",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/TranslationManager.cs:TranslateFormat",
+      "type": "function",
+      "name": "TranslateFormat",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        84,
+        105
+      ],
+      "summary": "TranslateFormat 格式化翻译方法，支持占位符替换的字符串翻译。",
+      "tags": [
+        "translation",
+        "formatting",
+        "localization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Translation/TranslationManager.cs:Translate",
+      "type": "function",
+      "name": "Translate",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        115,
+        119
+      ],
+      "summary": "Translate 格式化翻译方法，支持占位符替换的字符串翻译。",
+      "tags": [
+        "translation",
+        "formatting",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/TranslationManager.cs:_translate",
+      "type": "function",
+      "name": "_translate",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        126,
+        137
+      ],
+      "summary": "_translate 内部翻译实现，尝试键查找并回退到原文。",
+      "tags": [
+        "translation",
+        "internal",
+        "fallback"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/TranslationManager.cs:CountTemplates",
+      "type": "function",
+      "name": "CountTemplates",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        139,
+        163
+      ],
+      "summary": "CountTemplates 计算格式化字符串中的占位符模板数量。",
+      "tags": [
+        "translation",
+        "formatting",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Translation/TranslationManager.cs:Format",
+      "type": "function",
+      "name": "Format",
+      "filePath": "Engine/Translation/TranslationManager.cs",
+      "lineRange": [
+        189,
+        189
+      ],
+      "summary": "Format 格式化 TimeSpan 为可读字符串，根据 Verbosity 控制详细程度。",
+      "tags": [
+        "formatting",
+        "time-span",
+        "display"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Translation/Translator.cs:ITranslator",
+      "type": "class",
+      "name": "ITranslator",
+      "filePath": "Engine/Translation/Translator.cs",
+      "lineRange": [
+        10,
+        16
+      ],
+      "summary": "ITranslator 翻译器接口，定义翻译成员、枚举和字符串的契约。",
+      "tags": [
+        "interface",
+        "translation",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Translation/Translator.cs:Translator",
+      "type": "class",
+      "name": "Translator",
+      "filePath": "Engine/Translation/Translator.cs",
+      "lineRange": [
+        18,
+        129
+      ],
+      "summary": "Translator 翻译器核心实现，聚合多个翻译提供程序并支持按语言优先级查找翻译结果。",
+      "tags": [
+        "translation",
+        "core",
+        "lookup",
+        "localization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Translation/Translator.cs:TranslateMember",
+      "type": "function",
+      "name": "TranslateMember",
+      "filePath": "Engine/Translation/Translator.cs",
+      "lineRange": [
+        30,
+        39
+      ],
+      "summary": "TranslateMember 翻译类型成员的 Display 属性为指定语言。",
+      "tags": [
+        "translation",
+        "member",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/Translator.cs:TranslateEnum",
+      "type": "function",
+      "name": "TranslateEnum",
+      "filePath": "Engine/Translation/Translator.cs",
+      "lineRange": [
+        41,
+        55
+      ],
+      "summary": "TranslateEnum 翻译枚举值的显示名称为指定语言。",
+      "tags": [
+        "translation",
+        "enum",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/Translator.cs:TranslateString",
+      "type": "function",
+      "name": "TranslateString",
+      "filePath": "Engine/Translation/Translator.cs",
+      "lineRange": [
+        57,
+        62
+      ],
+      "summary": "TranslateString 通过键查找翻译字符串。",
+      "tags": [
+        "translation",
+        "lookup",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/Translator.cs:Translator",
+      "type": "function",
+      "name": "Translator",
+      "filePath": "Engine/Translation/Translator.cs",
+      "lineRange": [
+        66,
+        120
+      ],
+      "summary": "方法 Translator，55 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/Translation/Translator.cs:Dispose",
+      "type": "function",
+      "name": "Dispose",
+      "filePath": "Engine/Translation/Translator.cs",
+      "lineRange": [
+        122,
+        128
+      ],
+      "summary": "Dispose 释放资源，取消工作线程并清理线程池。",
+      "tags": [
+        "dispose",
+        "cleanup",
+        "threading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TypeData.cs:TypeData",
+      "type": "class",
+      "name": "TypeData",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        18,
+        887
+      ],
+      "summary": "TypeData 类型元数据描述器，缓存 OpenTap 类型的属性、成员、派生关系、Display/HelpLink 等反射信息，为整个插件和序列化系统提供类型基础设施。",
+      "tags": [
+        "type-metadata",
+        "reflection",
+        "cache",
+        "plugin-system"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:Clone",
+      "type": "function",
+      "name": "Clone",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        48,
+        59
+      ],
+      "summary": "Clone 对象克隆方法，通过序列化/反序列化实现深度拷贝。",
+      "tags": [
+        "clone",
+        "deep-copy",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:IsAssemblyLoaded",
+      "type": "function",
+      "name": "IsAssemblyLoaded",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        157,
+        157
+      ],
+      "summary": "方法 IsAssemblyLoaded，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:AddDerivedType",
+      "type": "function",
+      "name": "AddDerivedType",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        341,
+        353
+      ],
+      "summary": "方法 AddDerivedType，13 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:TypeData:361",
+      "type": "function",
+      "name": "TypeData (line 361)",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        361,
+        365
+      ],
+      "summary": "方法 TypeData (line 361)，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:TypeData:374",
+      "type": "function",
+      "name": "TypeData (line 374)",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        374,
+        387
+      ],
+      "summary": "方法 TypeData (line 374)，14 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:Load",
+      "type": "function",
+      "name": "Load",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        394,
+        446
+      ],
+      "summary": "Load 加载测试计划，从文件或流中反序列化 XML 并重建 TestPlan 对象图，支持缓存和错误处理模式，53 行。",
+      "tags": [
+        "load",
+        "deserialization",
+        "xml",
+        "test-plan"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:GetBestName",
+      "type": "function",
+      "name": "GetBestName",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        452,
+        455
+      ],
+      "summary": "方法 GetBestName，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        458,
+        458
+      ],
+      "summary": "方法 ToString，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:PostLoad",
+      "type": "function",
+      "name": "PostLoad",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        460,
+        479
+      ],
+      "summary": "方法 PostLoad，20 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:CreateInstance",
+      "type": "function",
+      "name": "CreateInstance",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        486,
+        492
+      ],
+      "summary": "CreateInstance 创建该类型的实例，支持构造函数参数传递。",
+      "tags": [
+        "factory",
+        "instantiation",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:GetMember",
+      "type": "function",
+      "name": "GetMember",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        498,
+        508
+      ],
+      "summary": "方法 GetMember，11 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:GetMembers",
+      "type": "function",
+      "name": "GetMembers",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        514,
+        558
+      ],
+      "summary": "GetMembers 获取类型的公共成员列表（属性、字段），支持缓存。",
+      "tags": [
+        "reflection",
+        "members",
+        "type-metadata"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:Equals",
+      "type": "function",
+      "name": "Equals",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        569,
+        574
+      ],
+      "summary": "方法 Equals，6 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:GetHashCode",
+      "type": "function",
+      "name": "GetHashCode",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        578,
+        583
+      ],
+      "summary": "方法 GetHashCode，6 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:GetTypeData:587",
+      "type": "function",
+      "name": "GetTypeData (line 587)",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        587,
+        602
+      ],
+      "summary": "GetTypeData GetTypeData (line 587) 获取给定对象的 TypeData 元数据。",
+      "tags": [
+        "type-metadata",
+        "lookup",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:GetDerivedTypes:607",
+      "type": "function",
+      "name": "GetDerivedTypes (line 607)",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        607,
+        712
+      ],
+      "summary": "GetDerivedTypes GetDerivedTypes (line 607) 获取当前类型的所有派生类型列表。",
+      "tags": [
+        "type-metadata",
+        "inheritance",
+        "reflection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:GetTypeDataSource",
+      "type": "function",
+      "name": "GetTypeDataSource",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        723,
+        751
+      ],
+      "summary": "方法 GetTypeDataSource，29 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:GetDerivedTypes:762",
+      "type": "function",
+      "name": "GetDerivedTypes (line 762)",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        762,
+        765
+      ],
+      "summary": "GetDerivedTypes GetDerivedTypes (line 762) 获取当前类型的所有派生类型列表。",
+      "tags": [
+        "type-metadata",
+        "inheritance",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:TypeData:767",
+      "type": "function",
+      "name": "TypeData (line 767)",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        767,
+        778
+      ],
+      "summary": "方法 TypeData (line 767)，12 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:WithTypeDataCache",
+      "type": "function",
+      "name": "WithTypeDataCache",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        794,
+        795
+      ],
+      "summary": "方法 WithTypeDataCache，2 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:GetTypeData:798",
+      "type": "function",
+      "name": "GetTypeData (line 798)",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        798,
+        798
+      ],
+      "summary": "GetTypeData GetTypeData (line 798) 获取给定对象的 TypeData 元数据。",
+      "tags": [
+        "type-metadata",
+        "lookup",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:GetTypeData:804",
+      "type": "function",
+      "name": "GetTypeData (line 804)",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        804,
+        813
+      ],
+      "summary": "GetTypeData GetTypeData (line 804) 获取给定对象的 TypeData 元数据。",
+      "tags": [
+        "type-metadata",
+        "lookup",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TypeData.cs:FromType",
+      "type": "function",
+      "name": "FromType",
+      "filePath": "Engine/TypeData.cs",
+      "lineRange": [
+        816,
+        858
+      ],
+      "summary": "FromType 从 .NET Type 创建 TypeData 实例，扫描成员和属性。",
+      "tags": [
+        "factory",
+        "reflection",
+        "type-metadata"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/UnitAttribute.cs:UnitAttribute",
+      "type": "class",
+      "name": "UnitAttribute",
+      "filePath": "Engine/UnitAttribute.cs",
+      "lineRange": [
+        12,
+        62
+      ],
+      "summary": "UnitAttribute 单位属性标注，为属性指定物理单位、工程前缀和自定义格式化选项。",
+      "tags": [
+        "attribute",
+        "unit",
+        "annotation",
+        "formatting"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/UnitAttribute.cs:UnitAttribute",
+      "type": "function",
+      "name": "UnitAttribute",
+      "filePath": "Engine/UnitAttribute.cs",
+      "lineRange": [
+        46,
+        53
+      ],
+      "summary": "方法 UnitAttribute，8 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/UnmergableAttribute.cs:UnmergableAttribute",
+      "type": "class",
+      "name": "UnmergableAttribute",
+      "filePath": "Engine/UnmergableAttribute.cs",
+      "lineRange": [
+        6,
+        7
+      ],
+      "summary": "UnmergableAttribute 标记属性为不可合并，防止跨步骤合并操作修改该属性值。",
+      "tags": [
+        "attribute",
+        "annotation",
+        "merge-behavior"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "class:Engine/Translation/TranslationManager.cs:TranslationManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "class:Engine/Translation/TranslationManager.cs:TranslationManager",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "class:Engine/Translation/TranslationManager.cs:IStringLocalizer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "class:Engine/Translation/TranslationManager.cs:IStringLocalizer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "class:Engine/Translation/TranslationManager.cs:FormatString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "class:Engine/Translation/TranslationManager.cs:FormatString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:TranslateMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:TranslateMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:TranslateEnum",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:TranslateEnum",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:TranslateKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:TranslateKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:TranslateFormat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:TranslateFormat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:Translate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:Translate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:_translate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:CountTemplates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:Format",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/TranslationManager.cs",
+      "target": "function:Engine/Translation/TranslationManager.cs:Format",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "class:Engine/Translation/Translator.cs:ITranslator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "class:Engine/Translation/Translator.cs:Translator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "class:Engine/Translation/Translator.cs:Translator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "function:Engine/Translation/Translator.cs:TranslateMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "function:Engine/Translation/Translator.cs:TranslateMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "function:Engine/Translation/Translator.cs:TranslateEnum",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "function:Engine/Translation/Translator.cs:TranslateEnum",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "function:Engine/Translation/Translator.cs:TranslateString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "function:Engine/Translation/Translator.cs:TranslateString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "function:Engine/Translation/Translator.cs:Translator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "function:Engine/Translation/Translator.cs:Translator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "function:Engine/Translation/Translator.cs:Dispose",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/Translator.cs",
+      "target": "function:Engine/Translation/Translator.cs:Dispose",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "class:Engine/TypeData.cs:TypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "class:Engine/TypeData.cs:TypeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:Clone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:IsAssemblyLoaded",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:IsAssemblyLoaded",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:AddDerivedType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:TypeData:361",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:TypeData:361",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:TypeData:374",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:TypeData:374",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:Load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:Load",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetBestName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetBestName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:PostLoad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:CreateInstance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:CreateInstance",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetMembers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:Equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetHashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetHashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetTypeData:587",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetTypeData:587",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetDerivedTypes:607",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetDerivedTypes:607",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetTypeDataSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetTypeDataSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetDerivedTypes:762",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetDerivedTypes:762",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:TypeData:767",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:TypeData:767",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:WithTypeDataCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:WithTypeDataCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetTypeData:798",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetTypeData:798",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetTypeData:804",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:GetTypeData:804",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:FromType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "function:Engine/TypeData.cs:FromType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/UnitAttribute.cs",
+      "target": "class:Engine/UnitAttribute.cs:UnitAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/UnitAttribute.cs",
+      "target": "class:Engine/UnitAttribute.cs:UnitAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/UnitAttribute.cs",
+      "target": "function:Engine/UnitAttribute.cs:UnitAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/UnitAttribute.cs",
+      "target": "function:Engine/UnitAttribute.cs:UnitAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/UnmergableAttribute.cs",
+      "target": "class:Engine/UnmergableAttribute.cs:UnmergableAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/UnmergableAttribute.cs",
+      "target": "class:Engine/UnmergableAttribute.cs:UnmergableAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

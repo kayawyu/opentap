@@ -1,0 +1,2314 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package/Image/ImageIdentifier.cs",
+      "type": "file",
+      "name": "ImageIdentifier.cs",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "summary": "镜像标识符核心类，表示一个已解析的安装镜像，包含包列表和仓库信息，提供部署、缓存、安装、卸载等操作。",
+      "tags": [
+        "image-system",
+        "package-management",
+        "installation",
+        "deployment"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/Image/ImageIdentifier.cs:ImageIdentifier",
+      "type": "class",
+      "name": "ImageIdentifier",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        15,
+        358
+      ],
+      "summary": "镜像标识符，表示已解析的安装镜像，包含包列表、仓库、ID 哈希，支持部署/缓存/安装/卸载生命周期。",
+      "tags": [
+        "image-system",
+        "package-management",
+        "installation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Image/ImageIdentifier.cs:ToSpecifier",
+      "type": "function",
+      "name": "ToSpecifier",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        51,
+        58
+      ],
+      "summary": "将当前 ImageIdentifier 转换为 ImageSpecifier。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageIdentifier.cs:ImageIdentifier",
+      "type": "function",
+      "name": "ImageIdentifier",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        60,
+        76
+      ],
+      "summary": "构造函数，初始化包列表和仓库列表。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/ImageIdentifier.cs:CalculateId",
+      "type": "function",
+      "name": "CalculateId",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        78,
+        119
+      ],
+      "summary": "基于包列表的哈希计算镜像唯一 ID，用于缓存键识别。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/ImageIdentifier.cs:Deploy_L129",
+      "type": "function",
+      "name": "Deploy",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        129,
+        139
+      ],
+      "summary": "部署镜像到目标目录，复制并安装所有包文件。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageIdentifier.cs:Cache",
+      "type": "function",
+      "name": "Cache",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        144,
+        150
+      ],
+      "summary": "将镜像所需的所有包下载到本地缓存。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageIdentifier.cs:Deploy_L152",
+      "type": "function",
+      "name": "Deploy",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        152,
+        198
+      ],
+      "summary": "部署镜像到目标目录，支持取消令牌控制（详细实现）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/ImageIdentifier.cs:Install",
+      "type": "function",
+      "name": "Install",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        200,
+        258
+      ],
+      "summary": "安装镜像中的所有包到指定 OpenTAP 安装目录。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Image/ImageIdentifier.cs:Uninstall",
+      "type": "function",
+      "name": "Uninstall",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        260,
+        283
+      ],
+      "summary": "从安装目录卸载镜像中指定的包。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/ImageIdentifier.cs:OrderPackagesForInstallation",
+      "type": "function",
+      "name": "OrderPackagesForInstallation",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        285,
+        299
+      ],
+      "summary": "按依赖顺序排列包以确定正确的安装顺序。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageIdentifier.cs:Download",
+      "type": "function",
+      "name": "Download",
+      "filePath": "Package/Image/ImageIdentifier.cs",
+      "lineRange": [
+        306,
+        345
+      ],
+      "summary": "从仓库下载包文件到本地缓存路径。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/Image/ImageResolution.cs",
+      "type": "file",
+      "name": "ImageResolution.cs",
+      "filePath": "Package/Image/ImageResolution.cs",
+      "summary": "镜像解析结果枚举，描述镜像依赖解析后的状态（成功/失败/冲突等）。",
+      "tags": [
+        "resolution-result",
+        "image",
+        "enum"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/ImageResolution.cs:ImageResolution",
+      "type": "class",
+      "name": "ImageResolution",
+      "filePath": "Package/Image/ImageResolution.cs",
+      "lineRange": [
+        5,
+        19
+      ],
+      "summary": "镜像解析结果枚举，表示依赖解析的最终状态（成功、失败、无变化等）。",
+      "tags": [
+        "enum",
+        "resolution-result"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolution.cs:ImageResolution",
+      "type": "function",
+      "name": "ImageResolution",
+      "filePath": "Package/Image/ImageResolution.cs",
+      "lineRange": [
+        7,
+        11
+      ],
+      "summary": "构造函数，初始化解析结果枚举值和可选消息。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolution.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Package/Image/ImageResolution.cs",
+      "lineRange": [
+        17,
+        18
+      ],
+      "summary": "返回解析结果的友好字符串表示。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/ImageResolveException.cs",
+      "type": "file",
+      "name": "ImageResolveException.cs",
+      "filePath": "Package/Image/ImageResolveException.cs",
+      "summary": "镜像解析异常，携带平台兼容性约束信息，用于表示包依赖解析过程中的详细错误并提供诊断信息。",
+      "tags": [
+        "exception",
+        "error-handling",
+        "dependency-resolution",
+        "diagnostics"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/Image/ImageResolveException.cs:ImageResolveException",
+      "type": "class",
+      "name": "ImageResolveException",
+      "filePath": "Package/Image/ImageResolveException.cs",
+      "lineRange": [
+        12,
+        93
+      ],
+      "summary": "镜像解析异常，携带 OS 和 CPU 架构约束信息，为依赖解析失败提供诊断性错误详情。",
+      "tags": [
+        "exception",
+        "error-handling",
+        "dependency-resolution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/ImageResolveException.cs:ImageResolveException",
+      "type": "function",
+      "name": "ImageResolveException",
+      "filePath": "Package/Image/ImageResolveException.cs",
+      "lineRange": [
+        18,
+        24
+      ],
+      "summary": "构造函数，初始化异常并设置平台兼容性约束。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolveException.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Package/Image/ImageResolveException.cs",
+      "lineRange": [
+        35,
+        71
+      ],
+      "summary": "生成包含全部解析问题的详细诊断字符串。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/ImageResolveException.cs:isSatisfied",
+      "type": "function",
+      "name": "isSatisfied",
+      "filePath": "Package/Image/ImageResolveException.cs",
+      "lineRange": [
+        73,
+        85
+      ],
+      "summary": "检查给定包定义是否满足异常携带的平台兼容性约束。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/ImageResolver.cs",
+      "type": "file",
+      "name": "ImageResolver.cs",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "summary": "镜像解析器，负责将 ImageSpecifier 解析为具体的包依赖方案，处理版本冲突、互斥包等复杂依赖问题。",
+      "tags": [
+        "dependency-resolution",
+        "image",
+        "constraint-solving",
+        "package-management"
+      ],
+      "complexity": "complex",
+      "languageNotes": "包含多种解析失败类型（ResolutionProblem 子类）用于精细化错误报告"
+    },
+    {
+      "id": "class:Package/Image/ImageResolver.cs:ImageResolver",
+      "type": "class",
+      "name": "ImageResolver",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        12,
+        379
+      ],
+      "summary": "镜像依赖解析器，通过迭代式算法求解包依赖关系，消除冗余规范和冲突。",
+      "tags": [
+        "dependency-resolution",
+        "constraint-solving",
+        "image"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/Image/ImageResolver.cs:ResolutionProblem",
+      "type": "class",
+      "name": "ResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        381,
+        397
+      ],
+      "summary": "解析问题基类，描述镜像解析过程中遇到的问题及其描述信息。",
+      "tags": [
+        "error-model",
+        "diagnostics"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/ImageResolver.cs:GenericResolutionProblem",
+      "type": "class",
+      "name": "GenericResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        399,
+        407
+      ],
+      "summary": "通用解析问题，用于报告无法归类的一般性依赖冲突。",
+      "tags": [
+        "error-model",
+        "dependency-resolution"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/ImageResolver.cs:DoesNotExistResolutionProblem",
+      "type": "class",
+      "name": "DoesNotExistResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        409,
+        419
+      ],
+      "summary": "不存在解析问题，表示所需包在仓库中完全找不到。",
+      "tags": [
+        "error-model",
+        "missing-package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/ImageResolver.cs:IncompatbileResolutionProblem",
+      "type": "class",
+      "name": "IncompatbileResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        421,
+        436
+      ],
+      "summary": "不兼容解析问题，表示包存在但与当前平台（OS/架构）不兼容。",
+      "tags": [
+        "error-model",
+        "platform-compatibility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/ImageResolver.cs:NoPackagesSatisfyingResolutionProblem",
+      "type": "class",
+      "name": "NoPackagesSatisfyingResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        438,
+        446
+      ],
+      "summary": "无满足版本解析问题，表示没有包版本能满足指定的版本约束。",
+      "tags": [
+        "error-model",
+        "version-constraint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/ImageResolver.cs:MutuallyExclusiveResolutionProblem",
+      "type": "class",
+      "name": "MutuallyExclusiveResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        448,
+        456
+      ],
+      "summary": "互斥解析问题，表示两个包的需求相互冲突无法同时满足。",
+      "tags": [
+        "error-model",
+        "conflict"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/ImageResolver.cs:FailedImageResolution",
+      "type": "class",
+      "name": "FailedImageResolution",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        458,
+        476
+      ],
+      "summary": "镜像解析失败结果，聚合多个解析问题并生成综合诊断报告。",
+      "tags": [
+        "error-model",
+        "aggregation",
+        "diagnostics"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:ImageResolver",
+      "type": "function",
+      "name": "ImageResolver",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        15,
+        18
+      ],
+      "summary": "构造函数，初始化取消令牌。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:ResolveImage",
+      "type": "function",
+      "name": "ResolveImage",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        23,
+        339
+      ],
+      "summary": "核心解析算法，迭代求解包依赖关系，消除冗余和冲突。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:DetermineResolveError",
+      "type": "function",
+      "name": "DetermineResolveError",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        341,
+        378
+      ],
+      "summary": "分析解析结果并生成对应的 ResolutionProblem 列表。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:Description_L383",
+      "type": "function",
+      "name": "Description",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        383,
+        383
+      ],
+      "summary": "获取 ResolutionProblem 的描述属性。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:SpecifierString",
+      "type": "function",
+      "name": "SpecifierString",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        385,
+        385
+      ],
+      "summary": "获取 ResolutionProblem 的规范字符串。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:GetCommaSeparatedString",
+      "type": "function",
+      "name": "GetCommaSeparatedString",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        386,
+        386
+      ],
+      "summary": "获取 ResolutionProblem 的逗号分隔字符串。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:ResolutionProblem",
+      "type": "function",
+      "name": "ResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        389,
+        392
+      ],
+      "summary": "构造函数，初始化解析问题及其描述信息。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:GenericResolutionProblem",
+      "type": "function",
+      "name": "GenericResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        401,
+        403
+      ],
+      "summary": "构造函数，创建通用解析问题。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:Description_L405",
+      "type": "function",
+      "name": "Description",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        405,
+        406
+      ],
+      "summary": "获取 GenericResolutionProblem 的描述。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:DoesNotExistResolutionProblem",
+      "type": "function",
+      "name": "DoesNotExistResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        411,
+        413
+      ],
+      "summary": "构造函数，创建包不存在问题。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:Description_L415",
+      "type": "function",
+      "name": "Description",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        415,
+        418
+      ],
+      "summary": "获取 DoesNotExistResolutionProblem 的描述。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:IncompatbileResolutionProblem",
+      "type": "function",
+      "name": "IncompatbileResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        423,
+        428
+      ],
+      "summary": "构造函数，创建平台不兼容问题。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:Description_L434",
+      "type": "function",
+      "name": "Description",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        434,
+        435
+      ],
+      "summary": "获取 IncompatbileResolutionProblem 的描述。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:NoPackagesSatisfyingResolutionProblem",
+      "type": "function",
+      "name": "NoPackagesSatisfyingResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        440,
+        442
+      ],
+      "summary": "构造函数，创建版本约束不满足问题。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:Description_L444",
+      "type": "function",
+      "name": "Description",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        444,
+        445
+      ],
+      "summary": "获取 NoPackagesSatisfyingResolutionProblem 的描述。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:MutuallyExclusiveResolutionProblem",
+      "type": "function",
+      "name": "MutuallyExclusiveResolutionProblem",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        450,
+        452
+      ],
+      "summary": "构造函数，创建互斥依赖问题。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:Description_L454",
+      "type": "function",
+      "name": "Description",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        454,
+        455
+      ],
+      "summary": "获取 MutuallyExclusiveResolutionProblem 的描述。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:FailedImageResolution",
+      "type": "function",
+      "name": "FailedImageResolution",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        462,
+        466
+      ],
+      "summary": "构造函数，聚合解析问题生成综合失败结果。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageResolver.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Package/Image/ImageResolver.cs",
+      "lineRange": [
+        470,
+        475
+      ],
+      "summary": "返回镜像解析失败的完整错误描述。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/ImageSpecifier.cs",
+      "type": "file",
+      "name": "ImageSpecifier.cs",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "summary": "镜像规范器，定义 OpenTAP 安装所需的包集合与版本规范，支持从已完成安装派生、合并多个规范器等操作。",
+      "tags": [
+        "image-system",
+        "package-specification",
+        "installation-definition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/Image/ImageSpecifier.cs:ImageSpecifier",
+      "type": "class",
+      "name": "ImageSpecifier",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "lineRange": [
+        15,
+        226
+      ],
+      "summary": "镜像规范，定义 OpenTAP 安装所需的包集合，支持从已有安装派生和多个规范合并。",
+      "tags": [
+        "image-system",
+        "package-specification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Image/ImageSpecifier.cs:ImageSpecifier_L36",
+      "type": "function",
+      "name": "ImageSpecifier",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "lineRange": [
+        36,
+        40
+      ],
+      "summary": "构造函数，从包列表和可选名称创建镜像规范。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageSpecifier.cs:ImageSpecifier_L43",
+      "type": "function",
+      "name": "ImageSpecifier",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "lineRange": [
+        43,
+        46
+      ],
+      "summary": "构造函数，从指定 ImageIdentifier 创建镜像规范。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageSpecifier.cs:FromAddedPackages",
+      "type": "function",
+      "name": "FromAddedPackages",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "lineRange": [
+        58,
+        110
+      ],
+      "summary": "从未安装新包和已安装包列表派生出镜像规范，标识新增/移除的包。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Image/ImageSpecifier.cs:Resolve",
+      "type": "function",
+      "name": "Resolve",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "lineRange": [
+        133,
+        163
+      ],
+      "summary": "解析镜像规范为 ImageIdentifier，执行依赖图分析和仓库查询。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/ImageSpecifier.cs:MergeAndResolve_L172",
+      "type": "function",
+      "name": "MergeAndResolve",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "lineRange": [
+        172,
+        178
+      ],
+      "summary": "合并本镜像与另一个镜像规范并解析。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageSpecifier.cs:MergeAndResolve_L184",
+      "type": "function",
+      "name": "MergeAndResolve",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "lineRange": [
+        184,
+        195
+      ],
+      "summary": "合并两个镜像规范并解析为统一镜像标识符。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageSpecifier.cs:MergeAndDeploy",
+      "type": "function",
+      "name": "MergeAndDeploy",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "lineRange": [
+        206,
+        211
+      ],
+      "summary": "合并并部署镜像，将结果写入指定安装目录。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageSpecifier.cs:FromString",
+      "type": "function",
+      "name": "FromString",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "lineRange": [
+        218,
+        221
+      ],
+      "summary": "从 XML 或 JSON 字符串反序列化 ImageSpecifier。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageSpecifier.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Package/Image/ImageSpecifier.cs",
+      "lineRange": [
+        225,
+        225
+      ],
+      "summary": "返回镜像规范的人类可读字符串表示。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/PackageDependencyCache.cs",
+      "type": "file",
+      "name": "PackageDependencyCache.cs",
+      "filePath": "Package/Image/PackageDependencyCache.cs",
+      "summary": "包依赖缓存，聚合多个仓库中的包定义构建 PackageDependencyGraph，提供预发布版本回退查询机制。",
+      "tags": [
+        "dependency-cache",
+        "package-query",
+        "repository-aggregation",
+        "prerelease"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/Image/PackageDependencyCache.cs:PackageDependencyCache",
+      "type": "class",
+      "name": "PackageDependencyCache",
+      "filePath": "Package/Image/PackageDependencyCache.cs",
+      "lineRange": [
+        10,
+        172
+      ],
+      "summary": "包依赖缓存，聚合多个仓库的包定义构建依赖图，支持按需加载预发布版本。",
+      "tags": [
+        "cache",
+        "dependency-graph",
+        "repository-aggregation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyCache.cs:PackageDependencyCache",
+      "type": "function",
+      "name": "PackageDependencyCache",
+      "filePath": "Package/Image/PackageDependencyCache.cs",
+      "lineRange": [
+        19,
+        26
+      ],
+      "summary": "构造函数，初始化操作系统、架构和仓库列表。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyCache.cs:UpdatePrerelease",
+      "type": "function",
+      "name": "UpdatePrerelease",
+      "filePath": "Package/Image/PackageDependencyCache.cs",
+      "lineRange": [
+        28,
+        45
+      ],
+      "summary": "按需加载指定包的预发布版本信息到依赖图。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyCache.cs:LoadFromRepositories",
+      "type": "function",
+      "name": "LoadFromRepositories",
+      "filePath": "Package/Image/PackageDependencyCache.cs",
+      "lineRange": [
+        50,
+        90
+      ],
+      "summary": "并行查询多个仓库，加载所有包定义并构建依赖图。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyCache.cs:AddPackages",
+      "type": "function",
+      "name": "AddPackages",
+      "filePath": "Package/Image/PackageDependencyCache.cs",
+      "lineRange": [
+        93,
+        99
+      ],
+      "summary": "将额外的包定义添加到缓存中。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyCache.cs:GetGraph",
+      "type": "function",
+      "name": "GetGraph",
+      "filePath": "Package/Image/PackageDependencyCache.cs",
+      "lineRange": [
+        101,
+        146
+      ],
+      "summary": "获取依赖图，如已过期则重新加载。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyCache.cs:GetPackageDef",
+      "type": "function",
+      "name": "GetPackageDef",
+      "filePath": "Package/Image/PackageDependencyCache.cs",
+      "lineRange": [
+        148,
+        171
+      ],
+      "summary": "从所有仓库中检索指定包定义。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/Image/PackageDependencyGraph.cs",
+      "type": "file",
+      "name": "PackageDependencyGraph.cs",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "summary": "包依赖图，以内存高效的方式存储所有包名、版本和版本规范之间的依赖关系，支持依赖查询与图合并。",
+      "tags": [
+        "dependency-graph",
+        "data-structure",
+        "package-management",
+        "version-resolution"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用 ID 索引映射和多重字典结构实现紧凑的图表示"
+    },
+    {
+      "id": "class:Package/Image/PackageDependencyGraph.cs:PackageDependencyGraph",
+      "type": "class",
+      "name": "PackageDependencyGraph",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        14,
+        407
+      ],
+      "summary": "包依赖图数据结构，以紧凑的内存布局存储包名/版本/版本规范间的多对多依赖关系。",
+      "tags": [
+        "graph",
+        "data-structure",
+        "dependency-resolution"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:GetNameId",
+      "type": "function",
+      "name": "GetNameId",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        45,
+        56
+      ],
+      "summary": "获取或注册包名的内部 ID。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:LoadFromPackageDefs",
+      "type": "function",
+      "name": "LoadFromPackageDefs",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        90,
+        119
+      ],
+      "summary": "从包定义集合加载依赖关系到图中。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:LoadFromDictionaries",
+      "type": "function",
+      "name": "LoadFromDictionaries",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        121,
+        149
+      ],
+      "summary": "从拆分的名字/版本/依赖字典加载依赖图。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:LoadFromJson",
+      "type": "function",
+      "name": "LoadFromJson",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        154,
+        190
+      ],
+      "summary": "从 JSON 格式反序列化依赖图。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:EnsurePreReleasesCached",
+      "type": "function",
+      "name": "EnsurePreReleasesCached",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        192,
+        219
+      ],
+      "summary": "按需为依赖图加载预发布版本信息。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:PackagesSatisfying",
+      "type": "function",
+      "name": "PackagesSatisfying",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        224,
+        244
+      ],
+      "summary": "查找满足指定包名和版本规范的所有包版本。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:PackageSpecifiers",
+      "type": "function",
+      "name": "PackageSpecifiers",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        251,
+        278
+      ],
+      "summary": "列出图中所有包的所有可用版本规范。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:CouldSatisfy",
+      "type": "function",
+      "name": "CouldSatisfy",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        280,
+        314
+      ],
+      "summary": "检查是否可能存在满足特定包名+版本规范的包（用于早期剪枝）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:GetAllDependencies",
+      "type": "function",
+      "name": "GetAllDependencies",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        320,
+        345
+      ],
+      "summary": "获取图中指定版本的所有直接依赖（展开所有架构）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:GetDependencies",
+      "type": "function",
+      "name": "GetDependencies",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        351,
+        373
+      ],
+      "summary": "获取指定版本的直接依赖，按架构过滤。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:HasPackage",
+      "type": "function",
+      "name": "HasPackage",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        375,
+        381
+      ],
+      "summary": "检查图中是否存在指定包名。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:Absorb",
+      "type": "function",
+      "name": "Absorb",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        384,
+        387
+      ],
+      "summary": "合并另一个 PackageDependencyGraph 的数据到当前图中。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyGraph.cs:EnsurePackagePreReleasesCached",
+      "type": "function",
+      "name": "EnsurePackagePreReleasesCached",
+      "filePath": "Package/Image/PackageDependencyGraph.cs",
+      "lineRange": [
+        389,
+        406
+      ],
+      "summary": "按需加载指定包的预发布版本。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "class:Package/Image/ImageIdentifier.cs:ImageIdentifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "class:Package/Image/ImageIdentifier.cs:ImageIdentifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:ToSpecifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:ToSpecifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:ImageIdentifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:ImageIdentifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:CalculateId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:Deploy_L129",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:Deploy_L129",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:Cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:Cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:Deploy_L152",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:Deploy_L152",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:Install",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:Uninstall",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:OrderPackagesForInstallation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "function:Package/Image/ImageIdentifier.cs:Download",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolution.cs",
+      "target": "class:Package/Image/ImageResolution.cs:ImageResolution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolution.cs",
+      "target": "class:Package/Image/ImageResolution.cs:ImageResolution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolution.cs",
+      "target": "function:Package/Image/ImageResolution.cs:ImageResolution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolution.cs",
+      "target": "function:Package/Image/ImageResolution.cs:ImageResolution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolution.cs",
+      "target": "function:Package/Image/ImageResolution.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolution.cs",
+      "target": "function:Package/Image/ImageResolution.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolveException.cs",
+      "target": "class:Package/Image/ImageResolveException.cs:ImageResolveException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolveException.cs",
+      "target": "class:Package/Image/ImageResolveException.cs:ImageResolveException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolveException.cs",
+      "target": "function:Package/Image/ImageResolveException.cs:ImageResolveException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolveException.cs",
+      "target": "function:Package/Image/ImageResolveException.cs:ImageResolveException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolveException.cs",
+      "target": "function:Package/Image/ImageResolveException.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolveException.cs",
+      "target": "function:Package/Image/ImageResolveException.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolveException.cs",
+      "target": "function:Package/Image/ImageResolveException.cs:isSatisfied",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:ImageResolver",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:ImageResolver",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:ResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:ResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:GenericResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:GenericResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:DoesNotExistResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:DoesNotExistResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:IncompatbileResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:IncompatbileResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:NoPackagesSatisfyingResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:NoPackagesSatisfyingResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:MutuallyExclusiveResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:MutuallyExclusiveResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:FailedImageResolution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "class:Package/Image/ImageResolver.cs:FailedImageResolution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:ImageResolver",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:ImageResolver",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:ResolveImage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:ResolveImage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:DetermineResolveError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L383",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L383",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:SpecifierString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:SpecifierString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:GetCommaSeparatedString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:GetCommaSeparatedString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:ResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:ResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:GenericResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:GenericResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L405",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L405",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:DoesNotExistResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:DoesNotExistResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L415",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L415",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:IncompatbileResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:IncompatbileResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L434",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L434",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:NoPackagesSatisfyingResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:NoPackagesSatisfyingResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L444",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L444",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:MutuallyExclusiveResolutionProblem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:MutuallyExclusiveResolutionProblem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L454",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:Description_L454",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:FailedImageResolution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:FailedImageResolution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "function:Package/Image/ImageResolver.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "class:Package/Image/ImageSpecifier.cs:ImageSpecifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "class:Package/Image/ImageSpecifier.cs:ImageSpecifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:ImageSpecifier_L36",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:ImageSpecifier_L36",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:ImageSpecifier_L43",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:ImageSpecifier_L43",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:FromAddedPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:Resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:Resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:MergeAndResolve_L172",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:MergeAndResolve_L172",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:MergeAndResolve_L184",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:MergeAndResolve_L184",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:MergeAndDeploy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:MergeAndDeploy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:FromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:FromString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "function:Package/Image/ImageSpecifier.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "class:Package/Image/PackageDependencyCache.cs:PackageDependencyCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "class:Package/Image/PackageDependencyCache.cs:PackageDependencyCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "function:Package/Image/PackageDependencyCache.cs:PackageDependencyCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "function:Package/Image/PackageDependencyCache.cs:PackageDependencyCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "function:Package/Image/PackageDependencyCache.cs:UpdatePrerelease",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "function:Package/Image/PackageDependencyCache.cs:LoadFromRepositories",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "function:Package/Image/PackageDependencyCache.cs:LoadFromRepositories",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "function:Package/Image/PackageDependencyCache.cs:AddPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "function:Package/Image/PackageDependencyCache.cs:AddPackages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "function:Package/Image/PackageDependencyCache.cs:GetGraph",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "function:Package/Image/PackageDependencyCache.cs:GetPackageDef",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "function:Package/Image/PackageDependencyCache.cs:GetPackageDef",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "class:Package/Image/PackageDependencyGraph.cs:PackageDependencyGraph",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:GetNameId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:LoadFromPackageDefs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:LoadFromPackageDefs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:LoadFromDictionaries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:LoadFromDictionaries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:LoadFromJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:LoadFromJson",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:EnsurePreReleasesCached",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:EnsurePreReleasesCached",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:PackagesSatisfying",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:PackagesSatisfying",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:PackageSpecifiers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:PackageSpecifiers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:CouldSatisfy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:CouldSatisfy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:GetAllDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:GetDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:GetDependencies",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:HasPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:HasPackage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:Absorb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:Absorb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:EnsurePackagePreReleasesCached",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyGraph.cs",
+      "target": "function:Package/Image/PackageDependencyGraph.cs:EnsurePackagePreReleasesCached",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "file:Package/Image/ImageIdentifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "file:Package/Image/ImageResolver.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/ImageSpecifier.cs",
+      "target": "file:Package/Image/ImageHelper.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "file:Package/Image/ImageResolver.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "file:Package/IPackageRepository.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "file:Package/IPackageIdentifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/ImageIdentifier.cs",
+      "target": "file:Package/Image/ImageSpecifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyCache.cs",
+      "target": "file:Package/Image/PackageDependencyGraph.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "file:Package/Image/PackageDependencyGraph.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/ImageResolver.cs",
+      "target": "file:Package/Image/ImageSpecifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/ImageResolveException.cs",
+      "target": "file:Package/IPackageIdentifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

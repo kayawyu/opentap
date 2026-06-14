@@ -1,0 +1,1818 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "type": "file",
+      "name": "IncludePackageDependenciesData.cs",
+      "filePath": "Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "summary": "包含包依赖数据的 Package Action，在创建包时将依赖包的元信息嵌入生成的包定义中。",
+      "tags": [
+        "package-creation",
+        "dependency-metadata",
+        "package-action"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "file",
+      "name": "IVersionConverter.cs",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "summary": "版本号转换器接口及实现集合，将多种版本字符串格式统一转换为 SemanticVersion。",
+      "tags": [
+        "version-converter",
+        "semver",
+        "interface",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/CreatePackage/Package.cs",
+      "type": "file",
+      "name": "Package.cs",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "summary": "包创建核心引擎（PackageDefExt），提供从 XML 加载、枚举插件、解析依赖、创建/压缩 TapPackage 的完整流水线。",
+      "tags": [
+        "package-creation",
+        "core-engine",
+        "compression",
+        "assembly-scanning",
+        "dependency-resolution"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/CreatePackage/ProgramHelper.cs",
+      "type": "file",
+      "name": "ProgramHelper.cs",
+      "filePath": "Package/CreatePackage/ProgramHelper.cs",
+      "summary": "外部程序执行辅助类，封装了运行外部进程和带重试与回退的文件复制操作。",
+      "tags": [
+        "utility",
+        "process-execution",
+        "file-operations"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/DependencyAnalyzer.cs",
+      "type": "file",
+      "name": "DependencyAnalyzer.cs",
+      "filePath": "Package/DependencyAnalyzer.cs",
+      "summary": "依赖分析器，检测已安装包之间的依赖问题，构建包间依赖关系有向图。",
+      "tags": [
+        "dependency-analysis",
+        "graph",
+        "package-management",
+        "diagnostics"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/DependencyChecker.cs",
+      "type": "file",
+      "name": "DependencyChecker.cs",
+      "filePath": "Package/DependencyChecker.cs",
+      "summary": "依赖检查器，验证已安装包的依赖完整性，检测缺失和版本不兼容问题，支持不同严重级别。",
+      "tags": [
+        "dependency-checker",
+        "package-management",
+        "validation",
+        "diagnostics"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/DependencyResolver.cs",
+      "type": "file",
+      "name": "DependencyResolver.cs",
+      "filePath": "Package/DependencyResolver.cs",
+      "summary": "依赖解析器（已标记为 [Obsolete]），从仓库查找指定包的依赖项，列出已安装、缺失和未知依赖。",
+      "tags": [
+        "dependency-resolution",
+        "obsolete",
+        "package-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/CreatePackage/IncludePackageDependenciesData.cs:IncludePackageDependencies",
+      "type": "class",
+      "name": "IncludePackageDependencies",
+      "filePath": "Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "lineRange": [
+        9,
+        168
+      ],
+      "summary": "在包创建阶段将依赖包的元信息（名称、版本、架构等）嵌入当前包定义中的 Package Action。",
+      "tags": [
+        "package-creation",
+        "dependency-metadata",
+        "package-action"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/IncludePackageDependenciesData.cs:IncludePackageDependencies.Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "lineRange": [
+        29,
+        167
+      ],
+      "summary": "执行依赖数据嵌入操作，遍历包定义中的依赖项并从 XML 文件中加载完整元数据。",
+      "tags": [
+        "dependency-embedding",
+        "metadata-extraction",
+        "xml"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/CreatePackage/IVersionConverter.cs:IVersionConverter",
+      "type": "class",
+      "name": "IVersionConverter",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        11,
+        15
+      ],
+      "summary": "版本号转换器接口，定义将版本字符串转换为 SemanticVersion 的统一约定。",
+      "tags": [
+        "interface",
+        "version-converter",
+        "semver",
+        "type-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/CreatePackage/IVersionConverter.cs:IVersionTryConverter",
+      "type": "class",
+      "name": "IVersionTryConverter",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        18,
+        22
+      ],
+      "summary": "带 Try 模式的版本转换器接口，扩展 IVersionConverter 提供不抛异常的 TryConvert 方法。",
+      "tags": [
+        "interface",
+        "version-converter",
+        "try-pattern",
+        "type-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter",
+      "type": "class",
+      "name": "MajorMinorBuildRevisionVersionConverter",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        24,
+        52
+      ],
+      "summary": "四段式版本号转换实现，将 a.b.c.d 格式转换为 SemanticVersion（兼容 NuGet 式版本号）。",
+      "tags": [
+        "version-converter",
+        "four-part-version",
+        "semver",
+        "nuget"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert",
+      "type": "function",
+      "name": "Convert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        29,
+        35
+      ],
+      "summary": "将四段式版本字符串（major.minor.build.revision）转换为 SemanticVersion。",
+      "tags": [
+        "version-conversion",
+        "semver",
+        "four-part"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.TryConvert",
+      "type": "function",
+      "name": "TryConvert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        37,
+        51
+      ],
+      "summary": "尝试将四段式版本字符串转换为 SemanticVersion，失败时返回 false 而不抛异常。",
+      "tags": [
+        "version-conversion",
+        "try-pattern",
+        "semver"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert__1",
+      "type": "function",
+      "name": "Convert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        59,
+        65
+      ],
+      "summary": "将四段式版本字符串（major.minor.build.revision）转换为 SemanticVersion。",
+      "tags": [
+        "version-conversion",
+        "semver",
+        "four-part"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.TryConvert__1",
+      "type": "function",
+      "name": "TryConvert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        67,
+        81
+      ],
+      "summary": "尝试将四段式版本字符串转换为 SemanticVersion，失败时返回 false 而不抛异常。",
+      "tags": [
+        "version-conversion",
+        "try-pattern",
+        "semver"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert__2",
+      "type": "function",
+      "name": "Convert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        89,
+        147
+      ],
+      "summary": "将四段式版本字符串（major.minor.build.revision）转换为 SemanticVersion。",
+      "tags": [
+        "version-conversion",
+        "semver",
+        "four-part"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter",
+      "type": "class",
+      "name": "FourValueVersionConverter",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        54,
+        82
+      ],
+      "summary": "四值版本号转换实现，支持 a.b.c.d 格式以及预发布标签和构建元数据的解析。",
+      "tags": [
+        "version-converter",
+        "four-part-version",
+        "semver",
+        "prerelease"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert",
+      "type": "function",
+      "name": "Convert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        29,
+        35
+      ],
+      "summary": "将带可选预发布和构建元数据的四值版本字符串转换为 SemanticVersion。",
+      "tags": [
+        "version-conversion",
+        "semver",
+        "prerelease",
+        "build-metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.TryConvert",
+      "type": "function",
+      "name": "TryConvert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        37,
+        51
+      ],
+      "summary": "尝试转换带预发布/构建元数据的四值版本，失败返回 false。",
+      "tags": [
+        "version-conversion",
+        "try-pattern",
+        "semver"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert__1",
+      "type": "function",
+      "name": "Convert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        59,
+        65
+      ],
+      "summary": "将带可选预发布和构建元数据的四值版本字符串转换为 SemanticVersion。",
+      "tags": [
+        "version-conversion",
+        "semver",
+        "prerelease",
+        "build-metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.TryConvert__1",
+      "type": "function",
+      "name": "TryConvert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        67,
+        81
+      ],
+      "summary": "尝试转换带预发布/构建元数据的四值版本，失败返回 false。",
+      "tags": [
+        "version-conversion",
+        "try-pattern",
+        "semver"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert__2",
+      "type": "function",
+      "name": "Convert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        89,
+        147
+      ],
+      "summary": "将带可选预发布和构建元数据的四值版本字符串转换为 SemanticVersion。",
+      "tags": [
+        "version-conversion",
+        "semver",
+        "prerelease",
+        "build-metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter",
+      "type": "class",
+      "name": "Tap8CompatibilityVersionConverter",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        84,
+        148
+      ],
+      "summary": "Tap8 兼容版本转换器，处理 Tap8 及更早版本的版本号格式，提供向 SemanticVersion 的迁移转换。",
+      "tags": [
+        "version-converter",
+        "tap8-compatibility",
+        "semver",
+        "legacy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert",
+      "type": "function",
+      "name": "Convert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        29,
+        35
+      ],
+      "summary": "将 Tap8/旧版版本号字符串转换为 SemanticVersion，处理兼容性转换规则。",
+      "tags": [
+        "version-conversion",
+        "tap8",
+        "legacy",
+        "compatibility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert__1",
+      "type": "function",
+      "name": "Convert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        59,
+        65
+      ],
+      "summary": "将 Tap8/旧版版本号字符串转换为 SemanticVersion，处理兼容性转换规则。",
+      "tags": [
+        "version-conversion",
+        "tap8",
+        "legacy",
+        "compatibility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert__2",
+      "type": "function",
+      "name": "Convert",
+      "filePath": "Package/CreatePackage/IVersionConverter.cs",
+      "lineRange": [
+        89,
+        147
+      ],
+      "summary": "将 Tap8/旧版版本号字符串转换为 SemanticVersion，处理兼容性转换规则。",
+      "tags": [
+        "version-conversion",
+        "tap8",
+        "legacy",
+        "compatibility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "type": "class",
+      "name": "PackageDefExt",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        19,
+        979
+      ],
+      "summary": "包创建核心引擎，提供从 XML 加载、插件枚举、依赖解析、文件压缩到最终 TapPackage 归档的完整流水线。",
+      "tags": [
+        "package-creation",
+        "core-engine",
+        "compression",
+        "assembly-scanning",
+        "dependency-resolution"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.EnumeratePlugins",
+      "type": "function",
+      "name": "EnumeratePlugins",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        37,
+        109
+      ],
+      "summary": "枚举包中所有插件类型定义，扫描程序集中的 TestStep、Instrument 等插件标记。",
+      "tags": [
+        "plugin-enumeration",
+        "assembly-scanning",
+        "typedata"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.IsDotNetAssembly",
+      "type": "function",
+      "name": "IsDotNetAssembly",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        111,
+        126
+      ],
+      "summary": "检测指定文件路径是否为有效的 .NET 程序集（PE 格式检查）。",
+      "tags": [
+        "assembly-detection",
+        "pe-header",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.tdPluginTypes",
+      "type": "function",
+      "name": "tdPluginTypes",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        132,
+        146
+      ],
+      "summary": "从 TypeData 列表中提取标记为插件的类型集合。",
+      "tags": [
+        "plugin-types",
+        "typedata",
+        "type-filtering"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.EnumerateAdditionalPlugins",
+      "type": "function",
+      "name": "EnumerateAdditionalPlugins",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        148,
+        238
+      ],
+      "summary": "枚举额外插件（Step、DUT、Instrument 等），处理命名空间和程序集引用绑定。",
+      "tags": [
+        "plugin-enumeration",
+        "additional-plugins",
+        "binding"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.FromInputXml",
+      "type": "function",
+      "name": "FromInputXml",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        247,
+        335
+      ],
+      "summary": "从 XML 文件加载包定义，验证结构并解析文件依赖和元数据。",
+      "tags": [
+        "xml-parsing",
+        "package-definition",
+        "deserialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.expandGlobEntries",
+      "type": "function",
+      "name": "expandGlobEntries",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        337,
+        415
+      ],
+      "summary": "展开包定义中的 glob 文件匹配模式为具体文件列表，处理相对路径和排除模式。",
+      "tags": [
+        "glob-expansion",
+        "file-matching",
+        "pattern"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.AssembliesOfferedBy",
+      "type": "function",
+      "name": "AssembliesOfferedBy",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        417,
+        442
+      ],
+      "summary": "递归分析包的依赖链，列出每个包所提供的程序集文件。",
+      "tags": [
+        "dependency-chain",
+        "assembly-offering",
+        "recursive"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.VerifyDependenciesInstalled",
+      "type": "function",
+      "name": "VerifyDependenciesInstalled",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        499,
+        529
+      ],
+      "summary": "验证包定义中的依赖项是否在指定的已安装包集合中均存在。",
+      "tags": [
+        "dependency-verification",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.findDependenciesAndHandleOverrides",
+      "type": "function",
+      "name": "findDependenciesAndHandleOverrides",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        531,
+        555
+      ],
+      "summary": "查找包的依赖项，处理依赖覆盖（依赖版本重定向）逻辑。",
+      "tags": [
+        "dependency-resolution",
+        "override-handling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.findDependencies",
+      "type": "function",
+      "name": "findDependencies",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        557,
+        718
+      ],
+      "summary": "核心依赖查找逻辑，递归扫描文件引用和依赖属性以构建完整依赖树。",
+      "tags": [
+        "dependency-resolution",
+        "recursive",
+        "file-reference"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.AddFileDependencies",
+      "type": "function",
+      "name": "AddFileDependencies",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        720,
+        740
+      ],
+      "summary": "将单个文件依赖项添加到包定义中，处理程序集名称和平台信息的推断。",
+      "tags": [
+        "file-dependency",
+        "assembly-name",
+        "platform-info"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.CreatePackage",
+      "type": "function",
+      "name": "CreatePackage",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        745,
+        813
+      ],
+      "summary": "创建 TapPackage 的主入口方法，执行从定义到压缩归档的完整流水线。",
+      "tags": [
+        "package-creation",
+        "entry-point",
+        "pipeline"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.UpdateVersionInfo",
+      "type": "function",
+      "name": "UpdateVersionInfo",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        826,
+        885
+      ],
+      "summary": "更新包中的版本信息文件，在临时目录中替换版本字符串占位符。",
+      "tags": [
+        "version-update",
+        "placeholder",
+        "file-patching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.VerifyArchiveIntegrity",
+      "type": "function",
+      "name": "VerifyArchiveIntegrity",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        887,
+        943
+      ],
+      "summary": "验证压缩归档的完整性，检查所有需要的文件是否存在于 zip 流中。",
+      "tags": [
+        "integrity-verification",
+        "archive",
+        "zip"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/Package.cs:PackageDefExt.Compress",
+      "type": "function",
+      "name": "Compress",
+      "filePath": "Package/CreatePackage/Package.cs",
+      "lineRange": [
+        948,
+        978
+      ],
+      "summary": "使用 tar + gzip 将包文件和元数据压缩为 .TapPackage 归档格式。",
+      "tags": [
+        "compression",
+        "tar",
+        "gzip",
+        "archive"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/CreatePackage/ProgramHelper.cs:ProgramHelper",
+      "type": "class",
+      "name": "ProgramHelper",
+      "filePath": "Package/CreatePackage/ProgramHelper.cs",
+      "lineRange": [
+        8,
+        75
+      ],
+      "summary": "外部程序执行辅助类，封装进程运行和带重试逻辑的文件复制操作。",
+      "tags": [
+        "utility",
+        "process-execution",
+        "file-operations"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/ProgramHelper.cs:ProgramHelper.RunProgram",
+      "type": "function",
+      "name": "RunProgram",
+      "filePath": "Package/CreatePackage/ProgramHelper.cs",
+      "lineRange": [
+        12,
+        53
+      ],
+      "summary": "启动外部程序并捕获标准输出和错误，支持超时、取消标记和环境变量配置。",
+      "tags": [
+        "process-execution",
+        "stdout",
+        "stderr",
+        "timeout"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/ProgramHelper.cs:ProgramHelper.FileCopy",
+      "type": "function",
+      "name": "FileCopy",
+      "filePath": "Package/CreatePackage/ProgramHelper.cs",
+      "lineRange": [
+        55,
+        74
+      ],
+      "summary": "带重试和回退的文件复制方法，先复制到临时文件再移动到目标位置确保原子性。",
+      "tags": [
+        "file-copy",
+        "retry",
+        "atomic",
+        "robustness"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/DependencyAnalyzer.cs:DependencyAnalyzer",
+      "type": "class",
+      "name": "DependencyAnalyzer",
+      "filePath": "Package/DependencyAnalyzer.cs",
+      "lineRange": [
+        52,
+        204
+      ],
+      "summary": "依赖分析器，检测已安装包之间的依赖问题（版本不匹配、缺失依赖），构建包依赖关系有向图。",
+      "tags": [
+        "dependency-analysis",
+        "graph",
+        "package-management",
+        "diagnostics"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.GetIssues",
+      "type": "function",
+      "name": "GetIssues",
+      "filePath": "Package/DependencyAnalyzer.cs",
+      "lineRange": [
+        67,
+        97
+      ],
+      "summary": "分析指定包的依赖问题，返回版本不匹配和缺失依赖的诊断信息列表。",
+      "tags": [
+        "dependency-issues",
+        "diagnostics",
+        "version-mismatch"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.FilterRelated",
+      "type": "function",
+      "name": "FilterRelated",
+      "filePath": "Package/DependencyAnalyzer.cs",
+      "lineRange": [
+        101,
+        149
+      ],
+      "summary": "从已验证的重要包列表中过滤出与目标包有依赖关系的相关包。",
+      "tags": [
+        "dependency-filtering",
+        "graph-traversal",
+        "related-packages"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.BuildAnalyzerContext",
+      "type": "function",
+      "name": "BuildAnalyzerContext",
+      "filePath": "Package/DependencyAnalyzer.cs",
+      "lineRange": [
+        156,
+        203
+      ],
+      "summary": "构建包依赖分析上下文，关联依赖引用类型以判断包间关系。",
+      "tags": [
+        "analysis-context",
+        "dependency-graph",
+        "reference-types"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/DependencyChecker.cs:DependencyChecker",
+      "type": "class",
+      "name": "DependencyChecker",
+      "filePath": "Package/DependencyChecker.cs",
+      "lineRange": [
+        11,
+        116
+      ],
+      "summary": "依赖检查器，验证已安装包的依赖完整性并检测缺失和版本不兼容，支持不同严重级别的错误报告。",
+      "tags": [
+        "dependency-checker",
+        "package-management",
+        "validation",
+        "diagnostics"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/DependencyChecker.cs:DependencyChecker.CheckInstalledPackages",
+      "type": "function",
+      "name": "CheckInstalledPackages",
+      "filePath": "Package/DependencyChecker.cs",
+      "lineRange": [
+        18,
+        46
+      ],
+      "summary": "扫描安装目录中的所有已安装包，验证每个包的依赖是否全部满足。",
+      "tags": [
+        "installed-packages",
+        "dependency-validation",
+        "directory-scan"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/DependencyChecker.cs:DependencyChecker.CheckPackages",
+      "type": "function",
+      "name": "CheckPackages",
+      "filePath": "Package/DependencyChecker.cs",
+      "lineRange": [
+        51,
+        78
+      ],
+      "summary": "检查新包与已安装包之间的依赖兼容性，返回指定严重级别及以上的依赖问题。",
+      "tags": [
+        "dependency-compatibility",
+        "new-packages",
+        "severity"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/DependencyChecker.cs:DependencyChecker.checkPackages",
+      "type": "function",
+      "name": "checkPackages",
+      "filePath": "Package/DependencyChecker.cs",
+      "lineRange": [
+        80,
+        96
+      ],
+      "summary": "内部依赖检查实现，对比已安装包集合与新包的依赖要求。",
+      "tags": [
+        "dependency-check",
+        "internal",
+        "comparison"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/DependencyChecker.cs:DependencyChecker.CheckDependencies",
+      "type": "function",
+      "name": "CheckDependencies",
+      "filePath": "Package/DependencyChecker.cs",
+      "lineRange": [
+        110,
+        115
+      ],
+      "summary": "重载：从安装目录加载 / 使用已加载列表检查新包依赖兼容性。",
+      "tags": [
+        "dependency-check",
+        "convenience"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/DependencyResolver.cs:DependencyResolver",
+      "type": "class",
+      "name": "DependencyResolver",
+      "filePath": "Package/DependencyResolver.cs",
+      "lineRange": [
+        13,
+        45
+      ],
+      "summary": "依赖解析器（已标记为 [Obsolete]），从包仓库中查找指定包的依赖项，列出已安装、缺失和未知依赖。",
+      "tags": [
+        "dependency-resolution",
+        "obsolete",
+        "package-management"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "target": "class:Package/CreatePackage/IncludePackageDependenciesData.cs:IncludePackageDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "target": "function:Package/CreatePackage/IncludePackageDependenciesData.cs:IncludePackageDependencies.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IncludePackageDependenciesData.cs:IncludePackageDependencies",
+      "target": "function:Package/CreatePackage/IncludePackageDependenciesData.cs:IncludePackageDependencies.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IncludePackageDependenciesData.cs:IncludePackageDependencies.Execute",
+      "target": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "class:Package/CreatePackage/IVersionConverter.cs:IVersionConverter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:IVersionConverter",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "class:Package/CreatePackage/IVersionConverter.cs:IVersionTryConverter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:IVersionTryConverter",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "class:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.TryConvert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.TryConvert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.TryConvert",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert__1",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.TryConvert__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.TryConvert__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.TryConvert__1",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert__2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert__2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:MajorMinorBuildRevisionVersionConverter.Convert__2",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "class:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.TryConvert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.TryConvert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.TryConvert",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert__1",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.TryConvert__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.TryConvert__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.TryConvert__1",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert__2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert__2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:FourValueVersionConverter.Convert__2",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "class:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert__1",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert__2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter",
+      "target": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert__2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/IVersionConverter.cs:Tap8CompatibilityVersionConverter.Convert__2",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.EnumeratePlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.EnumeratePlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.IsDotNetAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.IsDotNetAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.tdPluginTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.tdPluginTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.EnumerateAdditionalPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.EnumerateAdditionalPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.FromInputXml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.FromInputXml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/Package.cs:PackageDefExt.FromInputXml",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.expandGlobEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.expandGlobEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.AssembliesOfferedBy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.AssembliesOfferedBy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.VerifyDependenciesInstalled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.VerifyDependenciesInstalled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.findDependenciesAndHandleOverrides",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.findDependenciesAndHandleOverrides",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.findDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.findDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.AddFileDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.AddFileDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.CreatePackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.CreatePackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/Package.cs:PackageDefExt.CreatePackage",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.UpdateVersionInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.UpdateVersionInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.VerifyArchiveIntegrity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.VerifyArchiveIntegrity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.Compress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/Package.cs:PackageDefExt",
+      "target": "function:Package/CreatePackage/Package.cs:PackageDefExt.Compress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/ProgramHelper.cs",
+      "target": "class:Package/CreatePackage/ProgramHelper.cs:ProgramHelper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/ProgramHelper.cs",
+      "target": "function:Package/CreatePackage/ProgramHelper.cs:ProgramHelper.RunProgram",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/ProgramHelper.cs:ProgramHelper",
+      "target": "function:Package/CreatePackage/ProgramHelper.cs:ProgramHelper.RunProgram",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/ProgramHelper.cs",
+      "target": "function:Package/CreatePackage/ProgramHelper.cs:ProgramHelper.FileCopy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/ProgramHelper.cs:ProgramHelper",
+      "target": "function:Package/CreatePackage/ProgramHelper.cs:ProgramHelper.FileCopy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/DependencyAnalyzer.cs",
+      "target": "class:Package/DependencyAnalyzer.cs:DependencyAnalyzer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/DependencyAnalyzer.cs:DependencyAnalyzer",
+      "target": "file:Package/DependencyAnalyzer.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/DependencyAnalyzer.cs",
+      "target": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.GetIssues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/DependencyAnalyzer.cs:DependencyAnalyzer",
+      "target": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.GetIssues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.GetIssues",
+      "target": "file:Package/DependencyAnalyzer.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/DependencyAnalyzer.cs",
+      "target": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.FilterRelated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/DependencyAnalyzer.cs:DependencyAnalyzer",
+      "target": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.FilterRelated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.FilterRelated",
+      "target": "file:Package/DependencyAnalyzer.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/DependencyAnalyzer.cs",
+      "target": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.BuildAnalyzerContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/DependencyAnalyzer.cs:DependencyAnalyzer",
+      "target": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.BuildAnalyzerContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/DependencyAnalyzer.cs:DependencyAnalyzer.BuildAnalyzerContext",
+      "target": "file:Package/DependencyAnalyzer.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/DependencyChecker.cs",
+      "target": "class:Package/DependencyChecker.cs:DependencyChecker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/DependencyChecker.cs",
+      "target": "function:Package/DependencyChecker.cs:DependencyChecker.CheckInstalledPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/DependencyChecker.cs:DependencyChecker",
+      "target": "function:Package/DependencyChecker.cs:DependencyChecker.CheckInstalledPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/DependencyChecker.cs:DependencyChecker.CheckInstalledPackages",
+      "target": "file:Package/DependencyChecker.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/DependencyChecker.cs",
+      "target": "function:Package/DependencyChecker.cs:DependencyChecker.CheckPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/DependencyChecker.cs:DependencyChecker",
+      "target": "function:Package/DependencyChecker.cs:DependencyChecker.CheckPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/DependencyChecker.cs",
+      "target": "function:Package/DependencyChecker.cs:DependencyChecker.checkPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/DependencyChecker.cs:DependencyChecker",
+      "target": "function:Package/DependencyChecker.cs:DependencyChecker.checkPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/DependencyChecker.cs",
+      "target": "function:Package/DependencyChecker.cs:DependencyChecker.CheckDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/DependencyChecker.cs:DependencyChecker",
+      "target": "function:Package/DependencyChecker.cs:DependencyChecker.CheckDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/DependencyChecker.cs:DependencyChecker.CheckDependencies",
+      "target": "file:Package/DependencyChecker.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/DependencyResolver.cs",
+      "target": "class:Package/DependencyResolver.cs:DependencyResolver",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/DependencyResolver.cs:DependencyResolver",
+      "target": "file:Package/DependencyResolver.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "file:Package/CreatePackage/ProgramHelper.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/DependencyAnalyzer.cs",
+      "target": "file:Package/DependencyChecker.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/DependencyChecker.cs",
+      "target": "file:Package/DependencyResolver.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "file:Package/ConsoleUtils.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/IVersionConverter.cs",
+      "target": "file:Package/CreatePackage/ProgramHelper.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "target": "file:Package/CreatePackage/ProgramHelper.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/Package.cs",
+      "target": "file:Package/CreatePackage/ProgramHelper.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/DependencyAnalyzer.cs",
+      "target": "file:Package/DependencyResolver.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,1293 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/ScpiInstrument.cs",
+      "type": "file",
+      "name": "ScpiInstrument.cs",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "summary": "实现完整的SCPI仪器通信驱动基类，含VISA资源管理、SCPI命令/查询、IEEE二进制块传输、事件处理及错误队列查询。",
+      "tags": [
+        "scpi",
+        "instrument-control",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/ScpiIO.cs",
+      "type": "file",
+      "name": "ScpiIO.cs",
+      "filePath": "Engine/ScpiIO.cs",
+      "summary": "封装VISA I/O底层原生操作，提供Open/Close/Read/Write/Lock/Unlock等VISA资源的C#统一接口和SRQ事件支持。",
+      "tags": [
+        "scpi",
+        "instrument-control",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/SemanticVersion.cs",
+      "type": "file",
+      "name": "SemanticVersion.cs",
+      "filePath": "Engine/SemanticVersion.cs",
+      "summary": "实现语义化版本（SemVer 2.0）的完整解析与比较逻辑，支持主/次/补丁版本号、预发布标签排序和构建元数据。",
+      "tags": [
+        "versioning",
+        "engine",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ScpiInstrument.cs:VISAException",
+      "type": "class",
+      "name": "VISAException",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        19,
+        41
+      ],
+      "summary": "VISA通信异常类，封装VISA错误码（ErrorCode）并提供详细的错误描述信息。",
+      "tags": [
+        "exception",
+        "scpi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ScpiInstrument.cs:ScpiInstrument",
+      "type": "class",
+      "name": "ScpiInstrument",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        46,
+        1431
+      ],
+      "summary": "SCPI仪器驱动基类，封装完整的VISA I/O通信栈、SCPI命令/查询、IEEE块传输和事件/错误处理逻辑。",
+      "tags": [
+        "scpi",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ScpiIO.cs:ScpiIO",
+      "type": "class",
+      "name": "ScpiIO",
+      "filePath": "Engine/ScpiIO.cs",
+      "lineRange": [
+        11,
+        315
+      ],
+      "summary": "VISA I/O底层通信封装类，提供Open/Close/Read/Write/Lock/Unlock等原生VISA操作的C#接口和SRQ支持。",
+      "tags": [
+        "scpi",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/SemanticVersion.cs:SemanticVersion",
+      "type": "class",
+      "name": "SemanticVersion",
+      "filePath": "Engine/SemanticVersion.cs",
+      "lineRange": [
+        21,
+        286
+      ],
+      "summary": "语义化版本类，实现SemVer 2.0规范的解析、比较（CompareTo）、兼容性检查（IsCompatible）和字符串格式化。",
+      "tags": [
+        "versioning",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:GetResourceManager",
+      "type": "function",
+      "name": "GetResourceManager",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        87,
+        103
+      ],
+      "summary": "函数 GetResourceManager，17 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:checkVisaAddressAsync",
+      "type": "function",
+      "name": "checkVisaAddressAsync",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        105,
+        126
+      ],
+      "summary": "异步验证VISA地址格式的有效性，通过后台线程调用viParseRsrc并在超时后返回验证结果。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:checkVisaAddress",
+      "type": "function",
+      "name": "checkVisaAddress",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        128,
+        144
+      ],
+      "summary": "同步验证VISA地址格式，调用VISA viParseRsrc进行底层资源字符串解析。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:ScpiInstrument",
+      "type": "function",
+      "name": "ScpiInstrument",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        278,
+        296
+      ],
+      "summary": "函数 ScpiInstrument，19 行，参数: io。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:LockRetry",
+      "type": "function",
+      "name": "LockRetry",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        320,
+        342
+      ],
+      "summary": "带重试机制的锁操作包装，在锁定失败时按配置的LockRetries次数重试并休眠LockHoldoff时长。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:LockRetry#344",
+      "type": "function",
+      "name": "LockRetry",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        344,
+        366
+      ],
+      "summary": "带重试机制的锁操作包装，在锁定失败时按配置的LockRetries次数重试并休眠LockHoldoff时长。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:Open",
+      "type": "function",
+      "name": "Open",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        371,
+        454
+      ],
+      "summary": "打开SCPI仪器连接，执行VISA地址验证、终端字符配置、设备清除、IDN查询和SRQ事件注册。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        459,
+        488
+      ],
+      "summary": "函数 Close，30 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:ReadString",
+      "type": "function",
+      "name": "ReadString",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        542,
+        566
+      ],
+      "summary": "函数 ReadString，25 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:WriteIEEEBlock",
+      "type": "function",
+      "name": "WriteIEEEBlock",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        588,
+        609
+      ],
+      "summary": "函数 WriteIEEEBlock，22 行，参数: command, data。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:ReadStringOrBlock",
+      "type": "function",
+      "name": "ReadStringOrBlock",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        611,
+        656
+      ],
+      "summary": "读取SCPI响应数据，自动检测字符串或IEEE块格式并分别处理。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:ScpiQuery",
+      "type": "function",
+      "name": "ScpiQuery",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        674,
+        737
+      ],
+      "summary": "执行SCPI查询（写后读），使用锁重试机制确保线程安全，含超时检测和详细错误日志。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:DoReadIEEEBlock",
+      "type": "function",
+      "name": "DoReadIEEEBlock",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        768,
+        876
+      ],
+      "summary": "读取IEEE二进制块数据，解析块头格式、读取数据并处理终止符，支持泛型类型的字节重组。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:ScpiQueryBlock",
+      "type": "function",
+      "name": "ScpiQueryBlock",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        896,
+        946
+      ],
+      "summary": "执行SCPI查询块操作，发送命令后读取IEEE块数据响应并转换为指定类型。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:ScpiCommand",
+      "type": "function",
+      "name": "ScpiCommand",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        954,
+        961
+      ],
+      "summary": "函数 ScpiCommand，8 行，参数: command。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:ScpiCommand#968",
+      "type": "function",
+      "name": "ScpiCommand",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        968,
+        974
+      ],
+      "summary": "函数 ScpiCommand，7 行，参数: command。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:ScpiCommandInternal",
+      "type": "function",
+      "name": "ScpiCommandInternal",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        976,
+        1014
+      ],
+      "summary": "执行SCPI命令的内部实现，发送写入后等待操作完成（*OPC?）并检查错误队列。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:ScpiIEEEBlockCommand",
+      "type": "function",
+      "name": "ScpiIEEEBlockCommand",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        1019,
+        1063
+      ],
+      "summary": "发送SCPI IEEE二进制块命令，将字节数据分块传输并处理块头格式化与传输确认。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:ScpiIEEEBlockCommand#1068",
+      "type": "function",
+      "name": "ScpiIEEEBlockCommand",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        1068,
+        1191
+      ],
+      "summary": "发送SCPI IEEE二进制块命令，将字节数据分块传输并处理块头格式化与传输确认。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:EnableEvent",
+      "type": "function",
+      "name": "EnableEvent",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        1194,
+        1202
+      ],
+      "summary": "函数 EnableEvent，9 行，参数: eventType, mechanism。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:DisableEvent",
+      "type": "function",
+      "name": "DisableEvent",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        1205,
+        1213
+      ],
+      "summary": "函数 DisableEvent，9 行，参数: eventType, mechanism。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:WaitOnEvent",
+      "type": "function",
+      "name": "WaitOnEvent",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        1216,
+        1224
+      ],
+      "summary": "函数 WaitOnEvent，9 行，参数: eventType, timeout, outEventType。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:queryErrors",
+      "type": "function",
+      "name": "queryErrors",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        1249,
+        1283
+      ],
+      "summary": "查询SCPI仪器错误队列直到空，解析错误响应字符串为ScpiError对象列表，支持日志级别覆盖。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:QueryErrors",
+      "type": "function",
+      "name": "QueryErrors",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        1291,
+        1301
+      ],
+      "summary": "函数 QueryErrors，11 行，参数: suppressLogMessages, maxErrors。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:queryErrorParse",
+      "type": "function",
+      "name": "queryErrorParse",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        1328,
+        1345
+      ],
+      "summary": "函数 queryErrorParse，18 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiInstrument.cs:WaitForOperationComplete",
+      "type": "function",
+      "name": "WaitForOperationComplete",
+      "filePath": "Engine/ScpiInstrument.cs",
+      "lineRange": [
+        1351,
+        1370
+      ],
+      "summary": "等待仪器操作完成，通过*OPC?查询实现的阻塞等待，支持自定义超时。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiIO.cs:invokeSrqListeners",
+      "type": "function",
+      "name": "invokeSrqListeners",
+      "filePath": "Engine/ScpiIO.cs",
+      "lineRange": [
+        61,
+        76
+      ],
+      "summary": "函数 invokeSrqListeners，16 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiIO.cs:EnableSRQ",
+      "type": "function",
+      "name": "EnableSRQ",
+      "filePath": "Engine/ScpiIO.cs",
+      "lineRange": [
+        80,
+        107
+      ],
+      "summary": "启用VISA服务请求（SRQ），注册GCHandle回调委托以处理异步仪器事件通知。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ScpiIO.cs:OpenSRQ",
+      "type": "function",
+      "name": "OpenSRQ",
+      "filePath": "Engine/ScpiIO.cs",
+      "lineRange": [
+        121,
+        126
+      ],
+      "summary": "函数 OpenSRQ，6 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiIO.cs:MakeError",
+      "type": "function",
+      "name": "MakeError",
+      "filePath": "Engine/ScpiIO.cs",
+      "lineRange": [
+        137,
+        155
+      ],
+      "summary": "函数 MakeError，19 行，参数: result。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiIO.cs:Open",
+      "type": "function",
+      "name": "Open",
+      "filePath": "Engine/ScpiIO.cs",
+      "lineRange": [
+        165,
+        184
+      ],
+      "summary": "函数 Open，20 行，参数: visaAddress, exclusiveLock。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiIO.cs:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "Engine/ScpiIO.cs",
+      "lineRange": [
+        186,
+        197
+      ],
+      "summary": "函数 Close，12 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiIO.cs:Read",
+      "type": "function",
+      "name": "Read",
+      "filePath": "Engine/ScpiIO.cs",
+      "lineRange": [
+        274,
+        279
+      ],
+      "summary": "函数 Read，6 行，参数: buffer, count, eoi, read。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiIO.cs:ReadSTB",
+      "type": "function",
+      "name": "ReadSTB",
+      "filePath": "Engine/ScpiIO.cs",
+      "lineRange": [
+        281,
+        287
+      ],
+      "summary": "函数 ReadSTB，7 行，参数: stb。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ScpiIO.cs:WaitOnEvent",
+      "type": "function",
+      "name": "WaitOnEvent",
+      "filePath": "Engine/ScpiIO.cs",
+      "lineRange": [
+        309,
+        314
+      ],
+      "summary": "函数 WaitOnEvent，6 行，参数: eventType, timeout, outEventType。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SemanticVersion.cs:SemanticVersion",
+      "type": "function",
+      "name": "SemanticVersion",
+      "filePath": "Engine/SemanticVersion.cs",
+      "lineRange": [
+        64,
+        75
+      ],
+      "summary": "函数 SemanticVersion，12 行，参数: major, minor, patch, preRelease, buildMetadata。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SemanticVersion.cs:TryParse",
+      "type": "function",
+      "name": "TryParse",
+      "filePath": "Engine/SemanticVersion.cs",
+      "lineRange": [
+        81,
+        100
+      ],
+      "summary": "函数 TryParse，20 行，参数: version, result。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SemanticVersion.cs:Parse",
+      "type": "function",
+      "name": "Parse",
+      "filePath": "Engine/SemanticVersion.cs",
+      "lineRange": [
+        108,
+        115
+      ],
+      "summary": "函数 Parse，8 行，参数: version。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SemanticVersion.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Engine/SemanticVersion.cs",
+      "lineRange": [
+        134,
+        175
+      ],
+      "summary": "格式化为语义化版本字符串，支持1-4字段的输出控制（主/次/补丁/预发布/构建元数据）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SemanticVersion.cs:IsCompatible",
+      "type": "function",
+      "name": "IsCompatible",
+      "filePath": "Engine/SemanticVersion.cs",
+      "lineRange": [
+        182,
+        189
+      ],
+      "summary": "函数 IsCompatible，8 行，参数: other。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SemanticVersion.cs:CompareTo",
+      "type": "function",
+      "name": "CompareTo",
+      "filePath": "Engine/SemanticVersion.cs",
+      "lineRange": [
+        196,
+        210
+      ],
+      "summary": "函数 CompareTo，15 行，参数: obj。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SemanticVersion.cs:ComparePreRelease",
+      "type": "function",
+      "name": "ComparePreRelease",
+      "filePath": "Engine/SemanticVersion.cs",
+      "lineRange": [
+        212,
+        248
+      ],
+      "summary": "比较两个预发布标签字符串，按SemVer规范处理纯数字标识符的数值比较和字母标识符的词典序比较。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SemanticVersion.cs:Equals",
+      "type": "function",
+      "name": "Equals",
+      "filePath": "Engine/SemanticVersion.cs",
+      "lineRange": [
+        255,
+        260
+      ],
+      "summary": "函数 Equals，6 行，参数: obj。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "class:Engine/ScpiInstrument.cs:VISAException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "class:Engine/ScpiInstrument.cs:VISAException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "class:Engine/ScpiInstrument.cs:ScpiInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "class:Engine/ScpiInstrument.cs:ScpiInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:GetResourceManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:checkVisaAddressAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:checkVisaAddress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:LockRetry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:LockRetry#344",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:Open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:Open",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ReadString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:WriteIEEEBlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ReadStringOrBlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:DoReadIEEEBlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiQueryBlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiQueryBlock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiCommand",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiCommand#968",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiCommand#968",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiCommandInternal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiIEEEBlockCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiIEEEBlockCommand",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiIEEEBlockCommand#1068",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:ScpiIEEEBlockCommand#1068",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:EnableEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:EnableEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:DisableEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:DisableEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:WaitOnEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:WaitOnEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:queryErrors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:QueryErrors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:QueryErrors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:queryErrorParse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:WaitForOperationComplete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiInstrument.cs",
+      "target": "function:Engine/ScpiInstrument.cs:WaitForOperationComplete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "class:Engine/ScpiIO.cs:ScpiIO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:invokeSrqListeners",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:EnableSRQ",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:OpenSRQ",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:OpenSRQ",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:MakeError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:Open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:Open",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:Read",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:Read",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:ReadSTB",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:ReadSTB",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:WaitOnEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiIO.cs",
+      "target": "function:Engine/ScpiIO.cs:WaitOnEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "class:Engine/SemanticVersion.cs:SemanticVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "class:Engine/SemanticVersion.cs:SemanticVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:SemanticVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:SemanticVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:TryParse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:TryParse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:Parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:Parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:IsCompatible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:IsCompatible",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:CompareTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:CompareTo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:ComparePreRelease",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SemanticVersion.cs",
+      "target": "function:Engine/SemanticVersion.cs:Equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

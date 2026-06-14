@@ -1,0 +1,1099 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package/PackageActions/Uninstall.cs",
+      "type": "file",
+      "name": "Uninstall.cs",
+      "filePath": "Package/PackageActions/Uninstall.cs",
+      "summary": "包卸载 CLI 动作，移除已安装包及其文件，检测反向依赖关系并处理用户交互确认和强制选项。",
+      "tags": [
+        "cli-action",
+        "package",
+        "uninstall",
+        "cleanup",
+        "dependency"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageActions/Uninstall.cs:PackageUninstallAction",
+      "type": "class",
+      "name": "PackageUninstallAction",
+      "filePath": "Package/PackageActions/Uninstall.cs",
+      "lineRange": [
+        13,
+        286
+      ],
+      "summary": "包卸载 CLI 动作，移除已安装包及其文件，检测反向依赖并处理用户交互确认。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageActions/Uninstall.cs:UninstallRequest",
+      "type": "class",
+      "name": "UninstallRequest",
+      "filePath": "Package/PackageActions/Uninstall.cs",
+      "lineRange": [
+        321,
+        335
+      ],
+      "summary": "卸载过程中提示用户输入包名的交互请求数据模型。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/PackageCacheHelper.cs",
+      "type": "file",
+      "name": "PackageCacheHelper.cs",
+      "filePath": "Package/PackageCacheHelper.cs",
+      "summary": "本地包缓存管理类，提供缓存目录路径解析、文件存取和清理功能，支持通过环境变量覆盖缓存位置。",
+      "tags": [
+        "utility",
+        "package",
+        "cache",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/PackageCacheHelper.cs:PackageCacheHelper",
+      "type": "class",
+      "name": "PackageCacheHelper",
+      "filePath": "Package/PackageCacheHelper.cs",
+      "lineRange": [
+        12,
+        75
+      ],
+      "summary": "本地包缓存管理类，提供缓存目录路径解析、缓存文件存取和清理功能，支持环境变量覆盖。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/PackageCompatibilityHelper.cs",
+      "type": "file",
+      "name": "PackageCompatibilityHelper.cs",
+      "filePath": "Package/PackageCompatibilityHelper.cs",
+      "summary": "包版本兼容性辅助类，提供语义化版本的兼容性判断、超集检测和规格转换方法。",
+      "tags": [
+        "utility",
+        "package",
+        "version",
+        "compatibility",
+        "semver"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/PackageCompatibilityHelper.cs:PackageCompatibilityHelper",
+      "type": "class",
+      "name": "PackageCompatibilityHelper",
+      "filePath": "Package/PackageCompatibilityHelper.cs",
+      "lineRange": [
+        3,
+        57
+      ],
+      "summary": "语义化版本兼容性辅助类，提供 IsSatisfiedBy（兼容性匹配）、IsSuperSetOf（超集检测）及规格转换方法。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/PackageDefinitionSerializerPlugin.cs",
+      "type": "file",
+      "name": "PackageDefinitionSerializerPlugin.cs",
+      "filePath": "Package/PackageDefinitionSerializerPlugin.cs",
+      "summary": "包定义 XML 序列化/反序列化插件集，将 PackageDef 和 PackageDependency 对象与 package.xml 格式双向映射，处理命名空间和版本格式兼容。",
+      "tags": [
+        "serialization",
+        "package",
+        "xml",
+        "plugin",
+        "serializer"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageDefinitionSerializerPlugin.cs:PackageDefinitionSerializerPlugin",
+      "type": "class",
+      "name": "PackageDefinitionSerializerPlugin",
+      "filePath": "Package/PackageDefinitionSerializerPlugin.cs",
+      "lineRange": [
+        23,
+        219
+      ],
+      "summary": "PackageDef 对象的 XML 序列化/反序列化插件，将 package.xml 与 PackageDef 对象模型双向映射，同时处理命名空间设置。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageDefinitionSerializerPlugin.cs:PackageDependencySerializerPlugin",
+      "type": "class",
+      "name": "PackageDependencySerializerPlugin",
+      "filePath": "Package/PackageDefinitionSerializerPlugin.cs",
+      "lineRange": [
+        224,
+        313
+      ],
+      "summary": "PackageDependency 对象的 XML 序列化/反序列化插件，负责依赖项的 XML 双向转换和版本格式兼容处理。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/PackageFile.cs",
+      "type": "file",
+      "name": "PackageFile.cs",
+      "filePath": "Package/PackageFile.cs",
+      "summary": "包系统的核心定义文件，包含 PackageDef（包元数据）、PackageFile（文件列表）、PluginFile（插件声明）、PackageDependency（依赖）、ActionStep（自定义步骤）和 ArchitectureHelper（架构兼容）等 11 个类，是包数据模型的中央枢纽。",
+      "tags": [
+        "data-model",
+        "package",
+        "core",
+        "xml",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:PluginFile",
+      "type": "class",
+      "name": "PluginFile",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        26,
+        78
+      ],
+      "summary": "插件文件声明模型，描述 TapPackage 中包含的插件类型、名称、分组和可见性等元数据。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:PackageFile",
+      "type": "class",
+      "name": "PackageFile",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        83,
+        165
+      ],
+      "summary": "包文件声明模型，描述 TapPackage 中的物理文件条目，包含源路径、目标路径、插件引用和依赖序集信息。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:PackageDependency",
+      "type": "class",
+      "name": "PackageDependency",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        170,
+        219
+      ],
+      "summary": "包依赖声明模型，包含包名称、版本约束和原始版本字符串，支持相等比较。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:ActionStep",
+      "type": "class",
+      "name": "ActionStep",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        224,
+        289
+      ],
+      "summary": "自定义操作步骤模型，定义包安装/卸载前后执行的外部程序（EXE）、参数和退出码处理规则。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:EulaAcceptanceDialog",
+      "type": "class",
+      "name": "EulaAcceptanceDialog",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        310,
+        422
+      ],
+      "summary": "EULA 接受对话框，在安装时显示许可证文本并等待用户接受或拒绝。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:EULA",
+      "type": "class",
+      "name": "EULA",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        427,
+        440
+      ],
+      "summary": "最终用户许可协议数据模型，包含标识符和源文本。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:PackageDef",
+      "type": "class",
+      "name": "PackageDef",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        445,
+        1094
+      ],
+      "summary": "包定义核心数据模型，是包系统中最重要的类。封装包的所有元数据：名称、版本、描述、依赖、文件列表、许可证、标签等。同时提供 XML 序列化/反序列化、哈希计算、文件系统查找等完整的包生命周期方法。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:Validation",
+      "type": "class",
+      "name": "Validation",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        1099,
+        1106
+      ],
+      "summary": "包验证规则基类，定义 IsValid 抽象方法用于自定义验证逻辑。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:FileExists",
+      "type": "class",
+      "name": "FileExists",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        1111,
+        1128
+      ],
+      "summary": "文件存在性验证规则，检查指定路径的文件是否存在。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:NamespaceIgnorantXmlTextReader",
+      "type": "class",
+      "name": "NamespaceIgnorantXmlTextReader",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        1133,
+        1141
+      ],
+      "summary": "忽略命名空间的 XML 读取器，用于向后兼容读取旧版无命名空间的 package.xml 文件。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageFile.cs:ArchitectureHelper",
+      "type": "class",
+      "name": "ArchitectureHelper",
+      "filePath": "Package/PackageFile.cs",
+      "lineRange": [
+        1146,
+        1232
+      ],
+      "summary": "CPU 架构兼容性辅助类，检测主机架构、猜测基础架构并判断插件与主机或两个插件之间的架构兼容性。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/PackageFileSerializerPlugin.cs",
+      "type": "file",
+      "name": "PackageFileSerializerPlugin.cs",
+      "filePath": "Package/PackageFileSerializerPlugin.cs",
+      "summary": "PackageFile 对象的 XML 序列化/反序列化插件，处理包含插件声明的文件列表节点与 XML 的双向转换。",
+      "tags": [
+        "serialization",
+        "package",
+        "xml",
+        "plugin",
+        "serializer"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageFileSerializerPlugin.cs:PackageFileSerializerPlugin",
+      "type": "class",
+      "name": "PackageFileSerializerPlugin",
+      "filePath": "Package/PackageFileSerializerPlugin.cs",
+      "lineRange": [
+        11,
+        156
+      ],
+      "summary": "PackageFile 对象的 XML 序列化/反序列化插件，处理包含插件声明的文件列表节点。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/PackageIconData.cs",
+      "type": "file",
+      "name": "PackageIconData.cs",
+      "filePath": "Package/PackageIconData.cs",
+      "summary": "包图标数据标记类，实现 ICustomPackageData 接口，用于在 package.xml 的 File 节点中嵌入图标信息。",
+      "tags": [
+        "data-model",
+        "package",
+        "icon",
+        "marker-class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageIconData.cs:PackageIconData",
+      "type": "class",
+      "name": "PackageIconData",
+      "filePath": "Package/PackageIconData.cs",
+      "lineRange": [
+        8,
+        11
+      ],
+      "summary": "包图标数据标记类，实现 ICustomPackageData 接口，用于在 package.xml 的 File 元素中嵌入图标资源。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/PackageIdentifier.cs",
+      "type": "file",
+      "name": "PackageIdentifier.cs",
+      "filePath": "Package/PackageIdentifier.cs",
+      "summary": "包四维标识符类（Name + Version + Architecture + OS），支持多构造函数重载、相等比较和哈希计算，用于在集合中唯一标识包实例。",
+      "tags": [
+        "data-model",
+        "package",
+        "identifier",
+        "version"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/PackageIdentifier.cs:PackageIdentifier",
+      "type": "class",
+      "name": "PackageIdentifier",
+      "filePath": "Package/PackageIdentifier.cs",
+      "lineRange": [
+        12,
+        108
+      ],
+      "summary": "包四维标识符类，通过 Name、Version、Architecture、OS 四个属性唯一标识一个包实例，支持相等比较和哈希。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/PackageInstallHelpers/PackageInstallStep.cs",
+      "type": "file",
+      "name": "PackageInstallStep.cs",
+      "filePath": "Package/PackageInstallHelpers/PackageInstallStep.cs",
+      "summary": "定义包安装和卸载的 TestPlan 步骤类，支持在测试计划流程中嵌入包管理操作。",
+      "tags": [
+        "testplan-step",
+        "package",
+        "install",
+        "uninstall"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageInstallHelpers/PackageInstallStep.cs:PackageUninstallStep",
+      "type": "class",
+      "name": "PackageUninstallStep",
+      "filePath": "Package/PackageInstallHelpers/PackageInstallStep.cs",
+      "lineRange": [
+        7,
+        35
+      ],
+      "summary": "TestPlan 包卸载步骤，将包卸载操作嵌入测试计划流程。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageInstallHelpers/PackageInstallStep.cs:PackageInstallStep",
+      "type": "class",
+      "name": "PackageInstallStep",
+      "filePath": "Package/PackageInstallHelpers/PackageInstallStep.cs",
+      "lineRange": [
+        37,
+        73
+      ],
+      "summary": "TestPlan 包安装步骤，将包安装操作嵌入测试计划流程，支持指定仓库和系统级安装。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/PackageManagerSettings.cs",
+      "type": "file",
+      "name": "PackageManagerSettings.cs",
+      "filePath": "Package/PackageManagerSettings.cs",
+      "summary": "包管理器全局设置类，管理仓库列表及其启用状态、缓存策略、不兼容包显示、更新检查和排序偏好。",
+      "tags": [
+        "configuration",
+        "package",
+        "settings",
+        "repository"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageManagerSettings.cs:PackageManagerSettings",
+      "type": "class",
+      "name": "PackageManagerSettings",
+      "filePath": "Package/PackageManagerSettings.cs",
+      "lineRange": [
+        17,
+        102
+      ],
+      "summary": "包管理器全局设置类，管理仓库列表、本地缓存策略、不兼容包显示、更新检查和排序偏好等配置。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/PackageManagerSettings.cs:RepositorySettingEntry",
+      "type": "class",
+      "name": "RepositorySettingEntry",
+      "filePath": "Package/PackageManagerSettings.cs",
+      "lineRange": [
+        107,
+        180
+      ],
+      "summary": "单个仓库设置条目，封装仓库 URL、启用状态和管理器引用，支持绑定通知。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Package/PackageSchema.xsd",
+      "type": "config",
+      "name": "PackageSchema.xsd",
+      "filePath": "Package/PackageSchema.xsd",
+      "summary": "包定义 XML Schema（XSD），定义 package.xml 的合法结构和元素约束，包括 File、Dependencies、Description、EULA 等复杂类型定义。",
+      "tags": [
+        "configuration",
+        "schema-definition",
+        "xml",
+        "validation",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/PackageSource/IPackageSource.cs",
+      "type": "file",
+      "name": "IPackageSource.cs",
+      "filePath": "Package/PackageSource/IPackageSource.cs",
+      "summary": "定义包定义来源的接口层级体系：IPackageDefSource 及各实现类（文件、HTTP 仓库、文件仓库、XML、已安装），用于标识包定义的加载来源。",
+      "tags": [
+        "interface",
+        "package",
+        "source",
+        "repository",
+        "abstraction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageSource/IPackageSource.cs:IPackageDefSource",
+      "type": "class",
+      "name": "IPackageDefSource",
+      "filePath": "Package/PackageSource/IPackageSource.cs",
+      "lineRange": [
+        6,
+        8
+      ],
+      "summary": "包定义来源的标记接口。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageSource/IPackageSource.cs:IFilePackageDefSource",
+      "type": "class",
+      "name": "IFilePackageDefSource",
+      "filePath": "Package/PackageSource/IPackageSource.cs",
+      "lineRange": [
+        13,
+        19
+      ],
+      "summary": "文件型包定义来源接口，标识从 .TapPackage 文件加载。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageSource/IPackageSource.cs:FilePackageDefSource",
+      "type": "class",
+      "name": "FilePackageDefSource",
+      "filePath": "Package/PackageSource/IPackageSource.cs",
+      "lineRange": [
+        24,
+        30
+      ],
+      "summary": "文件型包定义来源实现类。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageSource/IPackageSource.cs:IRepositoryPackageDefSource",
+      "type": "class",
+      "name": "IRepositoryPackageDefSource",
+      "filePath": "Package/PackageSource/IPackageSource.cs",
+      "lineRange": [
+        35,
+        41
+      ],
+      "summary": "仓库型包定义来源接口，标识从包仓库加载。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageSource/IPackageSource.cs:HttpRepositoryPackageDefSource",
+      "type": "class",
+      "name": "HttpRepositoryPackageDefSource",
+      "filePath": "Package/PackageSource/IPackageSource.cs",
+      "lineRange": [
+        46,
+        56
+      ],
+      "summary": "HTTP 仓库型包定义来源，包含仓库 URL 和直接下载地址。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageSource/IPackageSource.cs:FileRepositoryPackageDefSource",
+      "type": "class",
+      "name": "FileRepositoryPackageDefSource",
+      "filePath": "Package/PackageSource/IPackageSource.cs",
+      "lineRange": [
+        61,
+        67
+      ],
+      "summary": "文件仓库型包定义来源，继承自 FilePackageDefSource 并实现仓库来源接口。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageSource/IPackageSource.cs:XmlPackageDefSource",
+      "type": "class",
+      "name": "XmlPackageDefSource",
+      "filePath": "Package/PackageSource/IPackageSource.cs",
+      "lineRange": [
+        72,
+        78
+      ],
+      "summary": "XML 文件型包定义来源，从本地 package.xml 文件加载。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageSource/IPackageSource.cs:InstalledPackageDefSource",
+      "type": "class",
+      "name": "InstalledPackageDefSource",
+      "filePath": "Package/PackageSource/IPackageSource.cs",
+      "lineRange": [
+        83,
+        89
+      ],
+      "summary": "已安装包定义来源，继承自 XmlPackageDefSource，附加所属 Installation 信息。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package/PackageActions/Uninstall.cs",
+      "target": "class:Package/PackageActions/Uninstall.cs:PackageUninstallAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/Uninstall.cs",
+      "target": "class:Package/PackageActions/Uninstall.cs:PackageUninstallAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageActions/Uninstall.cs",
+      "target": "class:Package/PackageActions/Uninstall.cs:UninstallRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/Uninstall.cs",
+      "target": "class:Package/PackageActions/Uninstall.cs:UninstallRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageCacheHelper.cs",
+      "target": "class:Package/PackageCacheHelper.cs:PackageCacheHelper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageCompatibilityHelper.cs",
+      "target": "class:Package/PackageCompatibilityHelper.cs:PackageCompatibilityHelper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageDefinitionSerializerPlugin.cs",
+      "target": "class:Package/PackageDefinitionSerializerPlugin.cs:PackageDefinitionSerializerPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageDefinitionSerializerPlugin.cs",
+      "target": "class:Package/PackageDefinitionSerializerPlugin.cs:PackageDependencySerializerPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:PluginFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:PluginFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:PackageFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:PackageFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:PackageDependency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:PackageDependency",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:ActionStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:ActionStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:EulaAcceptanceDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:EulaAcceptanceDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:EULA",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:EULA",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:PackageDef",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:PackageDef",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:Validation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:Validation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:FileExists",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:FileExists",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:NamespaceIgnorantXmlTextReader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:NamespaceIgnorantXmlTextReader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:ArchitectureHelper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFile.cs",
+      "target": "class:Package/PackageFile.cs:ArchitectureHelper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageFileSerializerPlugin.cs",
+      "target": "class:Package/PackageFileSerializerPlugin.cs:PackageFileSerializerPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageFileSerializerPlugin.cs",
+      "target": "class:Package/PackageFileSerializerPlugin.cs:PackageFileSerializerPlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageIconData.cs",
+      "target": "class:Package/PackageIconData.cs:PackageIconData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageIconData.cs",
+      "target": "class:Package/PackageIconData.cs:PackageIconData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageIdentifier.cs",
+      "target": "class:Package/PackageIdentifier.cs:PackageIdentifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageIdentifier.cs",
+      "target": "class:Package/PackageIdentifier.cs:PackageIdentifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageInstallHelpers/PackageInstallStep.cs",
+      "target": "class:Package/PackageInstallHelpers/PackageInstallStep.cs:PackageUninstallStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageInstallHelpers/PackageInstallStep.cs",
+      "target": "class:Package/PackageInstallHelpers/PackageInstallStep.cs:PackageInstallStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageManagerSettings.cs",
+      "target": "class:Package/PackageManagerSettings.cs:PackageManagerSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageManagerSettings.cs",
+      "target": "class:Package/PackageManagerSettings.cs:PackageManagerSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageManagerSettings.cs",
+      "target": "class:Package/PackageManagerSettings.cs:RepositorySettingEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageManagerSettings.cs",
+      "target": "class:Package/PackageManagerSettings.cs:RepositorySettingEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:IPackageDefSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:IPackageDefSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:IFilePackageDefSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:IFilePackageDefSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:FilePackageDefSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:FilePackageDefSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:IRepositoryPackageDefSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:IRepositoryPackageDefSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:HttpRepositoryPackageDefSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:HttpRepositoryPackageDefSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:FileRepositoryPackageDefSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:FileRepositoryPackageDefSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:XmlPackageDefSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:XmlPackageDefSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:InstalledPackageDefSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageSource/IPackageSource.cs",
+      "target": "class:Package/PackageSource/IPackageSource.cs:InstalledPackageDefSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

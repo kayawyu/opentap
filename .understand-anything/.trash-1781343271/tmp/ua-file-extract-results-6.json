@@ -1,0 +1,31 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "Engine.UnitTests/TestTestPlan/EngineTest/DutSettings.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "metrics": {}
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlan/EngineTest/PlatformSettings.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 11,
+      "nonEmptyLines": 11,
+      "metrics": {}
+    },
+    {
+      "path": "Engine.UnitTests/TestTestPlan/EngineTest/ResultSettings.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 9,
+      "nonEmptyLines": 9,
+      "metrics": {}
+    }
+  ]
+}

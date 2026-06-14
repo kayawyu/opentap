@@ -1,0 +1,63 @@
+{
+  "nodes": [
+    {
+      "id": "config:doc/API Documentation/DoxygenLayout.xml",
+      "type": "config",
+      "name": "DoxygenLayout.xml",
+      "filePath": "doc/API Documentation/DoxygenLayout.xml",
+      "summary": "Doxygen 布局配置文件，定制 API 文档 HTML 输出的导航选项卡和类/命名空间/文件/分组/目录页面的内容布局，隐藏了 namespaces、hierarchy 等默认 Doxygen 板块。",
+      "tags": ["configuration", "doxygen", "documentation", "layout", "api-documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:doc/API Documentation/doxyfile.css",
+      "type": "file",
+      "name": "doxyfile.css",
+      "filePath": "doc/API Documentation/doxyfile.css",
+      "summary": "Doxygen 生成 HTML 文档的自定义 CSS 样式表，定义 OpenTAP 品牌视觉风格，包括 Segoe UI 字体、暗红色链接色（#891518、#e90029）和深灰标题栏背景。",
+      "tags": ["stylesheet", "doxygen", "documentation", "branding", "visual-styling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/API Documentation/doxyfile.md",
+      "type": "document",
+      "name": "doxyfile.md",
+      "filePath": "doc/API Documentation/doxyfile.md",
+      "summary": "Doxygen 生成 API 文档的欢迎主页内容，简要介绍 OpenTAP.dll API 文档范围，并指引用户查阅 OpenTAP 开发者指南和安装目录中的 SDK 示例。",
+      "tags": ["documentation", "main-page", "api-documentation", "welcome"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc/API Documentation/doxyfile_footer.html",
+      "type": "file",
+      "name": "doxyfile_footer.html",
+      "filePath": "doc/API Documentation/doxyfile_footer.html",
+      "summary": "Doxygen 生成 HTML 文档的页脚 HTML 片段，在每个页面底部显示 OpenTAP 项目编号（$projectnumber）和构建日期时间（$datetime）。",
+      "tags": ["footer", "html-snippet", "doxygen", "documentation"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:doc/API Documentation/DoxygenLayout.xml",
+      "target": "document:doc/API Documentation/doxyfile.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:doc/API Documentation/doxyfile.css",
+      "target": "config:doc/API Documentation/DoxygenLayout.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:doc/API Documentation/doxyfile_footer.html",
+      "target": "config:doc/API Documentation/DoxygenLayout.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

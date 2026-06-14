@@ -1,0 +1,31 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "sdk/Examples/ExamplePlugin/ExamplePlugin.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 30,
+      "nonEmptyLines": 26,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/SomeSampleData.txt",
+      "language": "txt",
+      "fileCategory": "data",
+      "totalLines": 2,
+      "nonEmptyLines": 2,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/package.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 22,
+      "nonEmptyLines": 21,
+      "metrics": {}
+    }
+  ]
+}

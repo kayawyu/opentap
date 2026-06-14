@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/Examples/.HiddenFolder/Empty.txt",
+      "type": "file",
+      "name": "Empty.txt",
+      "filePath": "sdk/Examples/.HiddenFolder/Empty.txt",
+      "summary": "占位空文件，位于隐藏文件夹中，用于确保 .HiddenFolder 目录被版本控制跟踪。",
+      "tags": ["placeholder", "hidden", "version-control"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/.OpenTapIgnore",
+      "type": "file",
+      "name": ".OpenTapIgnore",
+      "filePath": "sdk/Examples/.OpenTapIgnore",
+      "summary": "OpenTAP 插件搜索忽略标记文件，阻止在构建输出目录中重复扫描示例插件的程序集。",
+      "tags": ["plugin-scanning", "configuration", "ignore"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/Directory.Build.props",
+      "type": "file",
+      "name": "Directory.Build.props",
+      "filePath": "sdk/Examples/Directory.Build.props",
+      "summary": "示例项目的 MSBuild 属性配置文件，定义目标框架（net9）、输出路径、平台目标和跨平台（Windows/Linux）配置开关。",
+      "tags": ["msbuild", "build-config", "cross-platform", "properties"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs",
+      "type": "file",
+      "name": "GeneratorInstrument.cs",
+      "filePath": "sdk/Examples/ExamplePlugin/GeneratorInstrument.cs",
+      "summary": "示例仪器类：模拟任意波形发生器（AWG），演示如何继承 Instrument 基类并实现 Open/Close/SetInputData 方法。",
+      "tags": ["example", "instrument", "demo", "plugin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs:GeneratorInstrument",
+      "type": "class",
+      "name": "GeneratorInstrument",
+      "filePath": "sdk/Examples/ExamplePlugin/GeneratorInstrument.cs",
+      "lineRange": [19, 69],
+      "summary": "继承 Instrument 的示例发生器类，包含 VisaAddress 属性标记为 Display，实现生命周期管理（Open/Close）和数据输入（SetInputData）。",
+      "tags": ["example", "instrument", "plugin", "display-attribute"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs:GeneratorInstrument_ctor",
+      "type": "function",
+      "name": "GeneratorInstrument",
+      "filePath": "sdk/Examples/ExamplePlugin/GeneratorInstrument.cs",
+      "lineRange": [31, 40],
+      "summary": "默认构造函数：设置仪器名称、组和默认 VISA 地址。",
+      "tags": ["constructor", "example", "instrument"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs:Open",
+      "type": "function",
+      "name": "Open",
+      "filePath": "sdk/Examples/ExamplePlugin/GeneratorInstrument.cs",
+      "lineRange": [43, 52],
+      "summary": "打开仪器连接并输出生成波形，捕获异常并记录日志。",
+      "tags": ["example", "instrument", "lifecycle"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/ExamplePlugin/LowPassFilterDut.cs",
+      "type": "file",
+      "name": "LowPassFilterDut.cs",
+      "filePath": "sdk/Examples/ExamplePlugin/LowPassFilterDut.cs",
+      "summary": "示例被测设备（DUT）类：模拟低通滤波器，演示如何继承 Dut 基类并实现 Open/Close/CalcMovingAverage 信号处理方法。",
+      "tags": ["example", "dut", "demo", "plugin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/ExamplePlugin/LowPassFilterDut.cs:LowPassFilterDut",
+      "type": "class",
+      "name": "LowPassFilterDut",
+      "filePath": "sdk/Examples/ExamplePlugin/LowPassFilterDut.cs",
+      "lineRange": [21, 86],
+      "summary": "继承 Dut 的示例低通滤波器类，包含 WindowSize 属性（移动平均窗口大小）和 CalcMovingAverage 信号处理算法。",
+      "tags": ["example", "dut", "plugin", "signal-processing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/ExamplePlugin/LowPassFilterDut.cs:CalcMovingAverage",
+      "type": "function",
+      "name": "CalcMovingAverage",
+      "filePath": "sdk/Examples/ExamplePlugin/LowPassFilterDut.cs",
+      "lineRange": [62, 85],
+      "summary": "移动平均滤波算法：对输入数据应用滑动窗口平均，模拟硬件低通滤波器行为。",
+      "tags": ["example", "signal-processing", "moving-average", "algorithm"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {"source": "file:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs", "target": "class:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs:GeneratorInstrument", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs", "target": "function:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs:GeneratorInstrument_ctor", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs", "target": "function:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs:Open", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs", "target": "class:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs:GeneratorInstrument", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs", "target": "function:sdk/Examples/ExamplePlugin/GeneratorInstrument.cs:Open", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:sdk/Examples/ExamplePlugin/LowPassFilterDut.cs", "target": "class:sdk/Examples/ExamplePlugin/LowPassFilterDut.cs:LowPassFilterDut", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:sdk/Examples/ExamplePlugin/LowPassFilterDut.cs", "target": "function:sdk/Examples/ExamplePlugin/LowPassFilterDut.cs:CalcMovingAverage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:sdk/Examples/ExamplePlugin/LowPassFilterDut.cs", "target": "class:sdk/Examples/ExamplePlugin/LowPassFilterDut.cs:LowPassFilterDut", "type": "exports", "direction": "forward", "weight": 0.8}
+  ]
+}

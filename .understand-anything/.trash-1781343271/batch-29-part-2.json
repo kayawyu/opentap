@@ -1,0 +1,967 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/Mixins/IAssignOutputMixin.cs",
+      "type": "file",
+      "name": "IAssignOutputMixin.cs",
+      "filePath": "Engine/Mixins/IAssignOutputMixin.cs",
+      "summary": "定义 IAssignOutputMixin 接口（允许在输出赋值前处理输出值）及其相关的 AssignOutputEvent 和 AssignOutputEventArgs。",
+      "tags": [
+        "mixin",
+        "interface",
+        "output-assignment",
+        "event"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Mixins/IAssignOutputMixin.cs:IAssignOutputMixin",
+      "type": "class",
+      "name": "IAssignOutputMixin",
+      "filePath": "Engine/Mixins/IAssignOutputMixin.cs",
+      "lineRange": [
+        4,
+        8
+      ],
+      "summary": "Mixin 接口，允许在输出赋值前拦截和处理输出值。",
+      "tags": [
+        "mixin",
+        "interface",
+        "output"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Mixins/IAssignOutputMixin.cs:AssignOutputEventArgs",
+      "type": "class",
+      "name": "AssignOutputEventArgs",
+      "filePath": "Engine/Mixins/IAssignOutputMixin.cs",
+      "lineRange": [
+        17,
+        29
+      ],
+      "summary": "输出赋值事件的参数类，包含测试步骤、成员数据和可被覆盖的输出值。",
+      "tags": [
+        "mixin",
+        "event-args",
+        "output"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Mixins/IMixin.cs",
+      "type": "file",
+      "name": "IMixin.cs",
+      "filePath": "Engine/Mixins/IMixin.cs",
+      "summary": "Mixin 系统核心接口文件，定义 IMixin 基础接口、MixinEvent 泛型基类以及各类 Mixin 事件（PreRun/PostRun/PreOpen）和对应的子接口（ITestStepPostRunMixin、ITestPlanPreRunMixin 等）。",
+      "tags": [
+        "mixin",
+        "interface",
+        "event",
+        "test-plan",
+        "test-step"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Mixins/IMixin.cs:IMixin",
+      "type": "class",
+      "name": "IMixin",
+      "filePath": "Engine/Mixins/IMixin.cs",
+      "lineRange": [
+        10,
+        13
+      ],
+      "summary": "Mixin 基础接口，所有 Mixin 的根接口，继承自 ITapPlugin。",
+      "tags": [
+        "mixin",
+        "interface",
+        "root",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Mixins/IMixin.cs:MixinEvent",
+      "type": "class",
+      "name": "MixinEvent",
+      "filePath": "Engine/Mixins/IMixin.cs",
+      "lineRange": [
+        15,
+        63
+      ],
+      "summary": "泛型 Mixin 事件基类，提供 Invoke 方法来发现并调用对象上所有嵌入式 Mixin 的对应事件处理程序。",
+      "tags": [
+        "mixin",
+        "event",
+        "generic",
+        "invocation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Mixins/IMixin.cs:TestStepPreRunEvent",
+      "type": "class",
+      "name": "TestStepPreRunEvent",
+      "filePath": "Engine/Mixins/IMixin.cs",
+      "lineRange": [
+        65,
+        74
+      ],
+      "summary": "测试步骤运行前事件，继承自 MixinEvent，用于触发 ITestStepPreRunMixin 的 OnPreRun。",
+      "tags": [
+        "mixin",
+        "event",
+        "test-step",
+        "pre-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Mixins/IMixin.cs:TestPlanPreRunEvent",
+      "type": "class",
+      "name": "TestPlanPreRunEvent",
+      "filePath": "Engine/Mixins/IMixin.cs",
+      "lineRange": [
+        90,
+        94
+      ],
+      "summary": "测试计划运行前事件，用于触发 ITestPlanPreRunMixin 的 OnPreRun。",
+      "tags": [
+        "mixin",
+        "event",
+        "test-plan",
+        "pre-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Mixins/IMixin.cs:TestPlanPostRunEvent",
+      "type": "class",
+      "name": "TestPlanPostRunEvent",
+      "filePath": "Engine/Mixins/IMixin.cs",
+      "lineRange": [
+        112,
+        116
+      ],
+      "summary": "测试计划运行后事件，用于触发 ITestPlanPostRunMixin 的 OnPostRun。",
+      "tags": [
+        "mixin",
+        "event",
+        "test-plan",
+        "post-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Mixins/IMixin.cs:TestStepPostRunEvent",
+      "type": "class",
+      "name": "TestStepPostRunEvent",
+      "filePath": "Engine/Mixins/IMixin.cs",
+      "lineRange": [
+        134,
+        138
+      ],
+      "summary": "测试步骤运行后事件，用于触发 ITestStepPostRunMixin 的 OnPostRun。",
+      "tags": [
+        "mixin",
+        "event",
+        "test-step",
+        "post-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Mixins/IMixin.cs:ResourcePreOpenEvent",
+      "type": "class",
+      "name": "ResourcePreOpenEvent",
+      "filePath": "Engine/Mixins/IMixin.cs",
+      "lineRange": [
+        149,
+        153
+      ],
+      "summary": "资源打开前事件，用于触发 IResourcePreOpenMixin 的 OnPreOpen。",
+      "tags": [
+        "mixin",
+        "event",
+        "resource",
+        "pre-open"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Mixins/IMixinBuilder.cs",
+      "type": "file",
+      "name": "IMixinBuilder.cs",
+      "filePath": "Engine/Mixins/IMixinBuilder.cs",
+      "summary": "定义 IMixinBuilder 接口，描述如何创建和应用特定 Mixin 的 Builder 模式接口。",
+      "tags": [
+        "mixin",
+        "builder",
+        "interface",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Mixins/IMixinBuilder.cs:IMixinBuilder",
+      "type": "class",
+      "name": "IMixinBuilder",
+      "filePath": "Engine/Mixins/IMixinBuilder.cs",
+      "lineRange": [
+        4,
+        11
+      ],
+      "summary": "Mixin Builder 接口，定义 Initialize（初始化目标类型）和 ToDynamicMember（创建动态成员数据）方法。",
+      "tags": [
+        "mixin",
+        "builder",
+        "interface",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Mixins/MixinBuilderAttribute.cs",
+      "type": "file",
+      "name": "MixinBuilderAttribute.cs",
+      "filePath": "Engine/Mixins/MixinBuilderAttribute.cs",
+      "summary": "MixinBuilder 特性，用于标记 MixinBuilder 支持的目标类型。",
+      "tags": [
+        "mixin",
+        "attribute",
+        "builder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Mixins/MixinBuilderAttribute.cs:MixinBuilderAttribute",
+      "type": "class",
+      "name": "MixinBuilderAttribute",
+      "filePath": "Engine/Mixins/MixinBuilderAttribute.cs",
+      "lineRange": [
+        5,
+        13
+      ],
+      "summary": "特性类，标记 Mixin Builder 所支持的目标类型列表。",
+      "tags": [
+        "mixin",
+        "attribute",
+        "builder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Mixins/MixinBuilderUi.cs",
+      "type": "file",
+      "name": "MixinBuilderUi.cs",
+      "filePath": "Engine/Mixins/MixinBuilderUi.cs",
+      "summary": "Mixin Builder 的用户界面类，提供 Mixin 选择和验证的 UI 交互（包括添加和修改模式）。",
+      "tags": [
+        "mixin",
+        "ui",
+        "user-input",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Mixins/MixinBuilderUi.cs:MixinBuilderUi",
+      "type": "class",
+      "name": "MixinBuilderUi",
+      "filePath": "Engine/Mixins/MixinBuilderUi.cs",
+      "lineRange": [
+        8,
+        72
+      ],
+      "summary": "Mixin Builder 的用户界面对话框，支持添加和修改 Mixin，包含 Mixin 类型选择器和验证规则重定向。",
+      "tags": [
+        "mixin",
+        "ui",
+        "user-input",
+        "dialog"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Mixins/MixinBuilderUiTypeData.cs",
+      "type": "file",
+      "name": "MixinBuilderUiTypeData.cs",
+      "filePath": "Engine/Mixins/MixinBuilderUiTypeData.cs",
+      "summary": "MixinBuilderUi 的 TypeData 实现，包装 Mixin Builder 的属性为 IMemberData 集合，提供类型反射支持。",
+      "tags": [
+        "mixin",
+        "type-data",
+        "reflection",
+        "ui"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Mixins/MixinBuilderUiTypeData.cs:MixinBuilderUiTypeData",
+      "type": "class",
+      "name": "MixinBuilderUiTypeData",
+      "filePath": "Engine/Mixins/MixinBuilderUiTypeData.cs",
+      "lineRange": [
+        8,
+        103
+      ],
+      "summary": "MixinBuilderUi 的自定义 TypeData 实现，将 Mixin Builder 的属性包装为 IMemberData 集合，支持名称转换和实例创建。",
+      "tags": [
+        "mixin",
+        "type-data",
+        "reflection",
+        "wrapper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Mixins/MixinFactory.cs",
+      "type": "file",
+      "name": "MixinFactory.cs",
+      "filePath": "Engine/Mixins/MixinFactory.cs",
+      "summary": "静态辅助类，提供 Mixin Builder 的创建、Mixin 的加载（LoadMixin）和卸载（UnloadMixin）功能。",
+      "tags": [
+        "mixin",
+        "factory",
+        "loader"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Mixins/MixinFactory.cs:MixinFactory",
+      "type": "class",
+      "name": "MixinFactory",
+      "filePath": "Engine/Mixins/MixinFactory.cs",
+      "lineRange": [
+        8,
+        67
+      ],
+      "summary": "静态辅助类，提供 GetMixinBuilders（获取适用的 Mixin Builder 列表）、LoadMixin（加载并应用 Mixin）和 UnloadMixin（卸载和释放 Mixin）功能。",
+      "tags": [
+        "mixin",
+        "factory",
+        "loader",
+        "static"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Mixins/MixinMemberData.cs",
+      "type": "file",
+      "name": "MixinMemberData.cs",
+      "filePath": "Engine/Mixins/MixinMemberData.cs",
+      "summary": "Mixin 成员数据实现，实现 IMemberData 和 IDynamicMemberData 接口，基于 ConditionalWeakTable 管理 Mixin 的值存储。",
+      "tags": [
+        "mixin",
+        "member-data",
+        "dynamic-member",
+        "value-storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Mixins/MixinMemberData.cs:MixinMemberData",
+      "type": "class",
+      "name": "MixinMemberData",
+      "filePath": "Engine/Mixins/MixinMemberData.cs",
+      "lineRange": [
+        8,
+        81
+      ],
+      "summary": "Mixin 成员数据实现，实现 IMemberData 和 IDynamicMemberData，使用 ConditionalWeakTable 进行弱引用值存储，支持 Dispose 生命周期。",
+      "tags": [
+        "mixin",
+        "member-data",
+        "dynamic-member",
+        "value-storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Mixins/MixinTypeDataProvider.cs",
+      "type": "file",
+      "name": "MixinTypeDataProvider.cs",
+      "filePath": "Engine/Mixins/MixinTypeDataProvider.cs",
+      "summary": "Mixin 的 TypeData 提供者，实现 ITypeDataProvider 接口，为 MixinBuilderUi 对象提供自定义的 TypeData。",
+      "tags": [
+        "mixin",
+        "type-data",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Mixins/MixinTypeDataProvider.cs:MixinTypeDataProvider",
+      "type": "class",
+      "name": "MixinTypeDataProvider",
+      "filePath": "Engine/Mixins/MixinTypeDataProvider.cs",
+      "lineRange": [
+        3,
+        21
+      ],
+      "summary": "TypeData 提供者，对 MixinBuilderUi 对象返回自定义的 MixinBuilderUiTypeData。",
+      "tags": [
+        "mixin",
+        "type-data",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ModuleInitializer.cs",
+      "type": "file",
+      "name": "ModuleInitializer.cs",
+      "filePath": "Engine/ModuleInitializer.cs",
+      "summary": "模块初始化器，在程序集加载时自动调用 PluginManager.Load() 以加载所有 OpenTAP 插件。",
+      "tags": [
+        "entry-point",
+        "module-init",
+        "plugin-loader"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ModuleInitializer.cs:ModuleInitializer",
+      "type": "class",
+      "name": "ModuleInitializer",
+      "filePath": "Engine/ModuleInitializer.cs",
+      "lineRange": [
+        8,
+        17
+      ],
+      "summary": "静态模块初始化器，在程序集加载时调用 PluginManager.Load() 以加载所有 OpenTAP 插件。",
+      "tags": [
+        "module-init",
+        "plugin-loader",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/NonMetaDataAttribute.cs",
+      "type": "file",
+      "name": "NonMetaDataAttribute.cs",
+      "filePath": "Engine/NonMetaDataAttribute.cs",
+      "summary": "标记特性，指定某个属性不构成测试计划运行的元数据。",
+      "tags": [
+        "attribute",
+        "metadata",
+        "marker"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/NonMetaDataAttribute.cs:NonMetaDataAttribute",
+      "type": "class",
+      "name": "NonMetaDataAttribute",
+      "filePath": "Engine/NonMetaDataAttribute.cs",
+      "lineRange": [
+        8,
+        12
+      ],
+      "summary": "标记特性，应用于属性以指示该属性不构成测试计划运行的元数据。",
+      "tags": [
+        "attribute",
+        "metadata",
+        "marker"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/NumberParser.cs",
+      "type": "file",
+      "name": "NumberParser.cs",
+      "filePath": "Engine/NumberParser.cs",
+      "summary": "数字解析和格式化核心文件，提供 Range（大数范围迭代）、UnitFormatter（带工程单位前缀的数值格式化/解析）、CombinedNumberSequences（组合数字序列）和 NumberFormatter（支持范围和单位的高级数字格式化/解析）等功能。",
+      "tags": [
+        "number-parsing",
+        "formatting",
+        "unit-conversion",
+        "range"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/NumberParser.cs:Range",
+      "type": "class",
+      "name": "Range",
+      "filePath": "Engine/NumberParser.cs",
+      "lineRange": [
+        15,
+        85
+      ],
+      "summary": "基于 BigFloat 的数值范围类，支持 Start/Stop/Step 范围和枚举器，可用于生成步进序列。",
+      "tags": [
+        "range",
+        "number",
+        "bigfloat",
+        "enumerable"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/NumberParser.cs:UnitFormatter",
+      "type": "class",
+      "name": "UnitFormatter",
+      "filePath": "Engine/NumberParser.cs",
+      "lineRange": [
+        87,
+        330
+      ],
+      "summary": "单位格式化器，支持工程单位前缀（如 k、M、G、m、u、n）的数值格式化和解析，提供 Format、Parse、TryParse 方法。",
+      "tags": [
+        "unit",
+        "formatting",
+        "engineering-prefix",
+        "parse"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/NumberParser.cs:CombinedNumberSequences",
+      "type": "class",
+      "name": "CombinedNumberSequences",
+      "filePath": "Engine/NumberParser.cs",
+      "lineRange": [
+        384,
+        425
+      ],
+      "summary": "组合数字序列容器，管理多个子序列并以迭代方式提供统一的枚举访问。",
+      "tags": [
+        "number",
+        "sequence",
+        "combined",
+        "enumerable"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/NumberParser.cs:NumberFormatter",
+      "type": "class",
+      "name": "NumberFormatter",
+      "filePath": "Engine/NumberParser.cs",
+      "lineRange": [
+        430,
+        923
+      ],
+      "summary": "高级数字格式化/解析器，支持范围和单位的数字序列解析，包括 Parse（解析范围表达式如 \"1-10:0.1\"）、FormatNumber 和 FormatRange 等方法。",
+      "tags": [
+        "number",
+        "formatting",
+        "parse",
+        "range-expression"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用符号表（symbolTable）实现度量单位符号的灵活配置，支持回退式解析策略（parseBackNumber/parseBackRange）以处理数字后缀的语法歧义。"
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:Engine/Mixins/IAssignOutputMixin.cs:IAssignOutputMixin",
+      "target": "class:Engine/Mixins/IMixin.cs:IMixin",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:Engine/Mixins/IMixinBuilder.cs:IMixinBuilder",
+      "target": "class:Engine/Mixins/MixinMemberData.cs:MixinMemberData",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Mixins/MixinBuilderUi.cs:MixinBuilderUi",
+      "target": "class:Engine/Mixins/IMixinBuilder.cs:IMixinBuilder",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Mixins/MixinBuilderUiTypeData.cs:MixinBuilderUiTypeData",
+      "target": "class:Engine/Mixins/IMixinBuilder.cs:IMixinBuilder",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Mixins/MixinFactory.cs:MixinFactory",
+      "target": "class:Engine/Mixins/IMixinBuilder.cs:IMixinBuilder",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Mixins/MixinFactory.cs:MixinFactory",
+      "target": "class:Engine/Mixins/MixinBuilderAttribute.cs:MixinBuilderAttribute",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Mixins/MixinFactory.cs:MixinFactory",
+      "target": "class:Engine/Mixins/MixinMemberData.cs:MixinMemberData",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Mixins/MixinTypeDataProvider.cs:MixinTypeDataProvider",
+      "target": "class:Engine/Mixins/MixinBuilderUi.cs:MixinBuilderUi",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/Mixins/MixinTypeDataProvider.cs:MixinTypeDataProvider",
+      "target": "class:Engine/Mixins/MixinBuilderUiTypeData.cs:MixinBuilderUiTypeData",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/NumberParser.cs:NumberFormatter",
+      "target": "class:Engine/NumberParser.cs:CombinedNumberSequences",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/NumberParser.cs:NumberFormatter",
+      "target": "class:Engine/NumberParser.cs:Range",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Engine/NumberParser.cs:NumberFormatter",
+      "target": "class:Engine/NumberParser.cs:UnitFormatter",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine/Mixins/IAssignOutputMixin.cs",
+      "target": "class:Engine/Mixins/IAssignOutputMixin.cs:AssignOutputEventArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/IAssignOutputMixin.cs",
+      "target": "class:Engine/Mixins/IAssignOutputMixin.cs:AssignOutputEventArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/IAssignOutputMixin.cs",
+      "target": "class:Engine/Mixins/IAssignOutputMixin.cs:IAssignOutputMixin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/IAssignOutputMixin.cs",
+      "target": "class:Engine/Mixins/IAssignOutputMixin.cs:IAssignOutputMixin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/IAssignOutputMixin.cs",
+      "target": "file:Engine/Mixins/IMixin.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:IMixin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:IMixin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:MixinEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:MixinEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:ResourcePreOpenEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:ResourcePreOpenEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:TestPlanPostRunEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:TestPlanPostRunEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:TestPlanPreRunEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:TestPlanPreRunEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:TestStepPostRunEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:TestStepPostRunEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:TestStepPreRunEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/IMixin.cs",
+      "target": "class:Engine/Mixins/IMixin.cs:TestStepPreRunEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/IMixinBuilder.cs",
+      "target": "class:Engine/Mixins/IMixinBuilder.cs:IMixinBuilder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/IMixinBuilder.cs",
+      "target": "class:Engine/Mixins/IMixinBuilder.cs:IMixinBuilder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/MixinBuilderAttribute.cs",
+      "target": "class:Engine/Mixins/MixinBuilderAttribute.cs:MixinBuilderAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/MixinBuilderAttribute.cs",
+      "target": "class:Engine/Mixins/MixinBuilderAttribute.cs:MixinBuilderAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/MixinBuilderUi.cs",
+      "target": "class:Engine/Mixins/MixinBuilderUi.cs:MixinBuilderUi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/MixinBuilderUi.cs",
+      "target": "class:Engine/Mixins/MixinBuilderUi.cs:MixinBuilderUi",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/MixinBuilderUiTypeData.cs",
+      "target": "class:Engine/Mixins/MixinBuilderUiTypeData.cs:MixinBuilderUiTypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/MixinBuilderUiTypeData.cs",
+      "target": "class:Engine/Mixins/MixinBuilderUiTypeData.cs:MixinBuilderUiTypeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/MixinFactory.cs",
+      "target": "class:Engine/Mixins/MixinFactory.cs:MixinFactory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/MixinFactory.cs",
+      "target": "class:Engine/Mixins/MixinFactory.cs:MixinFactory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/MixinMemberData.cs",
+      "target": "class:Engine/Mixins/MixinMemberData.cs:MixinMemberData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/MixinMemberData.cs",
+      "target": "class:Engine/Mixins/MixinMemberData.cs:MixinMemberData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Mixins/MixinTypeDataProvider.cs",
+      "target": "class:Engine/Mixins/MixinTypeDataProvider.cs:MixinTypeDataProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Mixins/MixinTypeDataProvider.cs",
+      "target": "class:Engine/Mixins/MixinTypeDataProvider.cs:MixinTypeDataProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ModuleInitializer.cs",
+      "target": "class:Engine/ModuleInitializer.cs:ModuleInitializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ModuleInitializer.cs",
+      "target": "class:Engine/ModuleInitializer.cs:ModuleInitializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ModuleInitializer.cs",
+      "target": "file:Engine/Log.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine/NonMetaDataAttribute.cs",
+      "target": "class:Engine/NonMetaDataAttribute.cs:NonMetaDataAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/NonMetaDataAttribute.cs",
+      "target": "class:Engine/NonMetaDataAttribute.cs:NonMetaDataAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/NumberParser.cs",
+      "target": "class:Engine/NumberParser.cs:CombinedNumberSequences",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/NumberParser.cs",
+      "target": "class:Engine/NumberParser.cs:CombinedNumberSequences",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/NumberParser.cs",
+      "target": "class:Engine/NumberParser.cs:NumberFormatter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/NumberParser.cs",
+      "target": "class:Engine/NumberParser.cs:NumberFormatter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/NumberParser.cs",
+      "target": "class:Engine/NumberParser.cs:Range",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/NumberParser.cs",
+      "target": "class:Engine/NumberParser.cs:Range",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/NumberParser.cs",
+      "target": "class:Engine/NumberParser.cs:UnitFormatter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/NumberParser.cs",
+      "target": "class:Engine/NumberParser.cs:UnitFormatter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

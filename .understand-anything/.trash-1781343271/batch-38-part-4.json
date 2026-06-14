@@ -1,0 +1,452 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package/InstallationLoggerStartupInfo.cs",
+      "type": "file",
+      "name": "InstallationLoggerStartupInfo.cs",
+      "filePath": "Package/InstallationLoggerStartupInfo.cs",
+      "summary": "安装日志启动信息，在启动时输出当前安装的包版本等诊断信息到日志系统。",
+      "tags": [
+        "logging",
+        "diagnostics",
+        "startup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/InstallationLoggerStartupInfo.cs:InstallationLoggerStartupInfo",
+      "type": "class",
+      "name": "InstallationLoggerStartupInfo",
+      "filePath": "Package/InstallationLoggerStartupInfo.cs",
+      "lineRange": [
+        8,
+        31
+      ],
+      "summary": "启动日志信息输出，在应用程序启动时记录安装版本等诊断信息。",
+      "tags": [
+        "logging",
+        "diagnostics",
+        "startup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/InstallationLoggerStartupInfo.cs:LogStartupInfo",
+      "type": "function",
+      "name": "LogStartupInfo",
+      "filePath": "Package/InstallationLoggerStartupInfo.cs",
+      "lineRange": [
+        13,
+        30
+      ],
+      "summary": "记录启动信息，包括当前安装的 OpenTAP 和其他包版本。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/Installer.cs",
+      "type": "file",
+      "name": "Installer.cs",
+      "filePath": "Package/Installer.cs",
+      "summary": "包安装器，处理包的物理安装与卸载流程，包括文件解压、文件锁定检测、并在失败时支持 Abort/Retry 交互。",
+      "tags": [
+        "package-installation",
+        "file-operations",
+        "uninstall",
+        "error-recovery"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/Installer.cs:Installer",
+      "type": "class",
+      "name": "Installer",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        18,
+        451
+      ],
+      "summary": "包安装器，执行包的物理安装和卸载，处理文件锁检测、重命名和错误恢复。",
+      "tags": [
+        "installation",
+        "file-operations",
+        "uninstall"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/Installer.cs:AbortOrRetryRequest",
+      "type": "class",
+      "name": "AbortOrRetryRequest",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        459,
+        474
+      ],
+      "summary": "安装中断/重试请求，封装安装失败时的用户交互选项。",
+      "tags": [
+        "error-recovery",
+        "user-interaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Installer.cs:Installer",
+      "type": "function",
+      "name": "Installer",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        35,
+        50
+      ],
+      "summary": "构造函数，初始化安装目标目录和取消令牌。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Installer.cs:InstallThread",
+      "type": "function",
+      "name": "InstallThread",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        52,
+        138
+      ],
+      "summary": "在专用线程中执行包安装流程：解压、冲突检测、文件复制。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Installer.cs:RunCommand",
+      "type": "function",
+      "name": "RunCommand",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        153,
+        259
+      ],
+      "summary": "执行安装/卸载命令行操作。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Installer.cs:GetFilesInUse",
+      "type": "function",
+      "name": "GetFilesInUse",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        261,
+        284
+      ],
+      "summary": "检测哪些包文件当前被其他进程占用。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Installer.cs:WaitForPackageFilesFree",
+      "type": "function",
+      "name": "WaitForPackageFilesFree",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        286,
+        337
+      ],
+      "summary": "等待被占用的包文件释放，支持超时和重试。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Installer.cs:BuildString",
+      "type": "function",
+      "name": "BuildString",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        339,
+        357
+      ],
+      "summary": "构建文件使用情况的错误描述字符串。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Installer.cs:isPackageFilesInUse",
+      "type": "function",
+      "name": "isPackageFilesInUse",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        361,
+        373
+      ],
+      "summary": "检查包文件是否被他进程使用。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Installer.cs:IsFileLocked",
+      "type": "function",
+      "name": "IsFileLocked",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        375,
+        411
+      ],
+      "summary": "通过尝试独占打开检测单个文件是否被锁定。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Installer.cs:RenamePackageFiles",
+      "type": "function",
+      "name": "RenamePackageFiles",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        413,
+        428
+      ],
+      "summary": "重命名包文件以允许覆盖更新。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Installer.cs:AbortOrRetryRequest",
+      "type": "function",
+      "name": "AbortOrRetryRequest",
+      "filePath": "Package/Installer.cs",
+      "lineRange": [
+        461,
+        465
+      ],
+      "summary": "构造函数，封装安装失败时的中止/重试选项。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/libgit2-b7bad55.source",
+      "type": "file",
+      "name": "libgit2-b7bad55.source",
+      "filePath": "Package/libgit2-b7bad55.source",
+      "summary": "libgit2 原生库的嵌入式源文件标识，为包管理器提供 Git 操作所需的原生依赖标记。",
+      "tags": [
+        "native-dependency",
+        "libgit2",
+        "embedded-source"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/NonInteractiveUserInputInterface.cs",
+      "type": "file",
+      "name": "NonInteractiveUserInputInterface.cs",
+      "filePath": "Package/NonInteractiveUserInputInterface.cs",
+      "summary": "非交互式用户输入接口实现，在无用户交互场景下提供默认的用户输入响应，用于自动化包操作流程。",
+      "tags": [
+        "user-input",
+        "non-interactive",
+        "automation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/NonInteractiveUserInputInterface.cs:NonInteractiveUserInputInterface",
+      "type": "class",
+      "name": "NonInteractiveUserInputInterface",
+      "filePath": "Package/NonInteractiveUserInputInterface.cs",
+      "lineRange": [
+        8,
+        16
+      ],
+      "summary": "非交互式用户输入实现，在自动化场景下返回默认值，不阻塞包操作。",
+      "tags": [
+        "user-input",
+        "non-interactive",
+        "automation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package/InstallationLoggerStartupInfo.cs",
+      "target": "class:Package/InstallationLoggerStartupInfo.cs:InstallationLoggerStartupInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/InstallationLoggerStartupInfo.cs",
+      "target": "function:Package/InstallationLoggerStartupInfo.cs:LogStartupInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/InstallationLoggerStartupInfo.cs",
+      "target": "function:Package/InstallationLoggerStartupInfo.cs:LogStartupInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "class:Package/Installer.cs:Installer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "class:Package/Installer.cs:AbortOrRetryRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "class:Package/Installer.cs:AbortOrRetryRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:Installer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:InstallThread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:RunCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:GetFilesInUse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:WaitForPackageFilesFree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:BuildString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:isPackageFilesInUse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:IsFileLocked",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:RenamePackageFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:RenamePackageFiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:AbortOrRetryRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "function:Package/Installer.cs:AbortOrRetryRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/NonInteractiveUserInputInterface.cs",
+      "target": "class:Package/NonInteractiveUserInputInterface.cs:NonInteractiveUserInputInterface",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "file:Package/Installation.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "file:Package/FileLocks.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Installer.cs",
+      "target": "file:Package/Image/ImageIdentifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/InstallationLoggerStartupInfo.cs",
+      "target": "file:Package/Installation.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

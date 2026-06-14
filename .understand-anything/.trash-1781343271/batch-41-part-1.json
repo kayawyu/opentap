@@ -1,0 +1,693 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "type": "file",
+      "name": "MeasurePeakAmplitudeTestStep.cs",
+      "filePath": "sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "summary": "OpenTAP 示例测试步骤，演示如何使用生成器、过滤器进行峰值振幅测量，并结合 LimitCheck 进行结果判定和表格发布。",
+      "tags": ["example", "test-step", "api-handler", "data-pipeline", "measurement"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs:MeasurePeakAmplitudeTestStep",
+      "type": "class",
+      "name": "MeasurePeakAmplitudeTestStep",
+      "filePath": "sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "lineRange": [41, 174],
+      "summary": "峰值振幅测量测试步骤类，包含输入数据、生成器、过滤器等属性，并实现 Run 方法和结果验证规则。",
+      "tags": ["test-step", "data-model", "measurement", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs:MeasurePeakAmplitudeTestStep",
+      "type": "function",
+      "name": "MeasurePeakAmplitudeTestStep",
+      "filePath": "sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "lineRange": [95, 106],
+      "summary": "构造函数，添加 LimitCheck 验证规则以确保 WindowSize 不超过输入数据长度。",
+      "tags": ["constructor", "validation", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "lineRange": [115, 160],
+      "summary": "执行峰值振幅测量的核心方法：设置输入数据、计算滑动平均、比较最大振幅与限制值，并发布结果表格。",
+      "tags": ["test-step", "measurement", "data-processing", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs:SizesAreAppropriate",
+      "type": "function",
+      "name": "SizesAreAppropriate",
+      "filePath": "sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "lineRange": [170, 173],
+      "summary": "验证规则方法，检查 WindowSize 是否小于输入数据长度。",
+      "tags": ["validation", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/ExamplePlugin/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "sdk/Examples/ExamplePlugin/Properties/AssemblyInfo.cs",
+      "summary": "ExamplePlugin 程序集元数据信息文件，定义插件版本、名称和描述等属性。",
+      "tags": ["assembly-metadata", "configuration", "plugin-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/Examples/ExamplePlugin/Properties/launchSettings.json",
+      "type": "config",
+      "name": "launchSettings.json",
+      "filePath": "sdk/Examples/ExamplePlugin/Properties/launchSettings.json",
+      "summary": "ExamplePlugin 调试启动配置文件，定义以 OpenTAP 命令行运行插件时的启动参数和工作目录。",
+      "tags": ["configuration", "debug", "launch-settings"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/Examples/PluginDevelopment.Gui/Custom.runtimeconfig.json",
+      "type": "config",
+      "name": "Custom.runtimeconfig.json",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/Custom.runtimeconfig.json",
+      "summary": "PluginDevelopment.Gui 项目的 .NET 运行时配置文件，指定框架版本和运行时选项。",
+      "tags": ["configuration", "runtime", "dotnet"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "type": "file",
+      "name": "CustomControlProvider.cs",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "summary": "自定义控件提供者示例，演示如何实现 IControlProvider 为带有特定属性的成员创建自定义 WPF 图像控件，并列出已注册的控件提供者。",
+      "tags": ["gui", "control-provider", "wpf", "example", "annotation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:PictureControlProvider",
+      "type": "class",
+      "name": "PictureControlProvider",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "lineRange": [40, 118],
+      "summary": "实现 IControlProvider 接口，为标记了 PictureAttribute 的属性创建 WPF Image 控件，支持动态更新绑定。",
+      "tags": ["control-provider", "wpf", "gui", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:PictureAttribute",
+      "type": "class",
+      "name": "PictureAttribute",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "lineRange": [121, 124],
+      "summary": "标记属性，用于指示 PictureControlProvider 应为该属性创建图片控件。",
+      "tags": ["attribute", "annotation", "gui", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:StepWithPicture",
+      "type": "class",
+      "name": "StepWithPicture",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "lineRange": [126, 157],
+      "summary": "示例测试步骤类，包含 Picture 和 Path 属性，用于演示 PictureControlProvider 的控件创建和列出所有已注册控件提供者。",
+      "tags": ["test-step", "example", "gui"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:CreateControl",
+      "type": "function",
+      "name": "CreateControl",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "lineRange": [51, 84],
+      "summary": "创建 WPF Image 控件的核心方法，根据注解类型设置图像源绑定和 FileToImageConverter，并注册源更新监听。",
+      "tags": ["gui", "control-creation", "wpf", "binding", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:ListAllControlProviders",
+      "type": "function",
+      "name": "ListAllControlProviders",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "lineRange": [142, 151],
+      "summary": "通过 PluginManager 获取所有 IControlProvider 插件实例并按 Order 排序输出。",
+      "tags": ["plugin-discovery", "debug", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "lineRange": [153, 156],
+      "summary": "测试步骤的 Run 方法，调用 ListAllControlProviders 展示所有已注册控件提供者。",
+      "tags": ["test-step", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "type": "file",
+      "name": "DockablePanel.cs",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "summary": "可停靠面板示例，演示如何创建自定义 IDE 面板，提供测试计划加载/运行/暂停的 UI 控件，以及跨线程 GUI 调用辅助类。",
+      "tags": ["gui", "dockable-panel", "ide", "test-plan", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:DockablePanel",
+      "type": "class",
+      "name": "DockablePanel",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "lineRange": [29, 126],
+      "summary": "自定义 IDE 可停靠面板，包含加载测试计划、运行和暂停的按钮界面，以及测试计划运行结果监听器。",
+      "tags": ["dockable-panel", "ide", "gui", "test-plan", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:GuiHelper",
+      "type": "class",
+      "name": "GuiHelper",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "lineRange": [129, 184],
+      "summary": "GUI 线程辅助类，提供跨线程安全地在 UI 调度线程上执行操作的 GuiInvoke 方法。",
+      "tags": ["gui", "threading", "dispatcher", "utility", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:CreateElement",
+      "type": "function",
+      "name": "CreateElement",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "lineRange": [45, 87],
+      "summary": "创建面板 UI 元素：构建加载、运行、暂停按钮和文件选择对话框，绑定测试计划加载和运行逻辑。",
+      "tags": ["gui", "ui-creation", "test-plan", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:getGuiDispatcher",
+      "type": "function",
+      "name": "getGuiDispatcher",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "lineRange": [131, 136],
+      "summary": "获取当前应用程序的 GUI 调度线程 Dispatcher 对象。",
+      "tags": ["gui", "threading", "dispatcher", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:GuiInvoke",
+      "type": "function",
+      "name": "GuiInvoke",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "lineRange": [143, 183],
+      "summary": "在 GUI 调度线程上安全地调用指定操作，依据优先级决定使用同步 Invoke 还是异步 BeginInvoke。",
+      "tags": ["gui", "threading", "dispatcher", "invoke", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "type": "file",
+      "name": "ResultXYChartExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "summary": "XY 图表结果展示示例，实现 IResultTable 接口，将 XY 坐标数据以散点图形式渲染到 WPF Canvas 上，支持序列化。",
+      "tags": ["gui", "chart", "result-table", "wpf", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:ResultXYChartExample",
+      "type": "class",
+      "name": "ResultXYChartExample",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "lineRange": [36, 206],
+      "summary": "XY 散点图结果表格类，支持坐标点绘制、轴组管理、偏移量控制，以及序列化和反序列化。",
+      "tags": ["chart", "result-table", "wpf", "serialization", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:Clear",
+      "type": "function",
+      "name": "Clear",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "lineRange": [67, 70],
+      "summary": "清除 Canvas 上所有子元素。",
+      "tags": ["chart", "canvas", "gui"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:Invalidate",
+      "type": "function",
+      "name": "Invalidate",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "lineRange": [73, 76],
+      "summary": "使图表失效并触发重绘。",
+      "tags": ["chart", "gui", "refresh"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:getPoints",
+      "type": "function",
+      "name": "getPoints",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "lineRange": [107, 127],
+      "summary": "根据 X/Y 轴数据和绘图系列将坐标数据转换为 WPF Point 列表。",
+      "tags": ["chart", "data-conversion", "coordinate"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:RedrawPlot",
+      "type": "function",
+      "name": "RedrawPlot",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "lineRange": [134, 177],
+      "summary": "重绘整个 XY 图表：计算坐标范围、缩放比例，并将每个数据点绘制为 Canvas 上的矩形。",
+      "tags": ["chart", "rendering", "canvas", "wpf", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:ResultXYChartExample",
+      "type": "function",
+      "name": "ResultXYChartExample",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "lineRange": [181, 185],
+      "summary": "构造函数，注册属性变更通知。",
+      "tags": ["constructor", "property-notify", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:DeserializeProperties",
+      "type": "function",
+      "name": "DeserializeProperties",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "lineRange": [190, 196],
+      "summary": "从字典反序列化属性，恢复 OffsetX 和 OffsetY 值。",
+      "tags": ["serialization", "deserialization", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:SerializeProperties",
+      "type": "function",
+      "name": "SerializeProperties",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "lineRange": [198, 205],
+      "summary": "将 OffsetX 和 OffsetY 属性序列化为字符串字典。",
+      "tags": ["serialization", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "type": "file",
+      "name": "ToolsMenu.cs",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "summary": "工具菜单示例，演示如何通过实现 IToolMenu 接口在 IDE 工具菜单中添加三个自定义菜单项（ToolMenuA/B/C）。",
+      "tags": ["gui", "menu", "ide", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:ToolMenuA",
+      "type": "class",
+      "name": "ToolMenuA",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "lineRange": [34, 39],
+      "summary": "工具菜单项 A，实现 IToolMenu 接口，Invoke 时输出日志信息。",
+      "tags": ["menu", "ide", "gui", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:ToolMenuB",
+      "type": "class",
+      "name": "ToolMenuB",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "lineRange": [41, 47],
+      "summary": "工具菜单项 B，实现 IToolMenu 接口。",
+      "tags": ["menu", "ide", "gui", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:ToolMenuC",
+      "type": "class",
+      "name": "ToolMenuC",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "lineRange": [49, 57],
+      "summary": "工具菜单项 C，实现 IToolMenu 接口，Invoke 时输出日志信息。",
+      "tags": ["menu", "ide", "gui", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:Invoke",
+      "type": "function",
+      "name": "Invoke (ToolMenuA)",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "lineRange": [38, 38],
+      "summary": "ToolMenuA 的菜单调用方法，输出日志信息。",
+      "tags": ["menu", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "type": "config",
+      "name": "PluginDevelopment.Gui.csproj",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "summary": "PluginDevelopment.Gui 示例项目的 MSBuild 项目文件，定义目标框架、OpenTAP 包引用和 WPF 相关配置。",
+      "tags": ["configuration", "build-system", "csproj", "wpf"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "target": "class:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs:MeasurePeakAmplitudeTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "target": "function:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs:MeasurePeakAmplitudeTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "target": "function:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "target": "function:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs:SizesAreAppropriate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "target": "class:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs:MeasurePeakAmplitudeTestStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "target": "function:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:sdk/Examples/ExamplePlugin/Properties/launchSettings.json",
+      "target": "file:sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:PictureControlProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:PictureAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:StepWithPicture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:CreateControl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:ListAllControlProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:PictureControlProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:PictureAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:StepWithPicture",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs:CreateControl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:DockablePanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:GuiHelper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:CreateElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:getGuiDispatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:GuiInvoke",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:DockablePanel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs:GuiInvoke",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:ResultXYChartExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:Clear",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:Invalidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:getPoints",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:RedrawPlot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:ResultXYChartExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:DeserializeProperties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:SerializeProperties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:ResultXYChartExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:RedrawPlot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:DeserializeProperties",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs:SerializeProperties",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:ToolMenuA",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:ToolMenuB",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:ToolMenuC",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "target": "function:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:Invoke",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:ToolMenuA",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:ToolMenuB",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "target": "class:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs:ToolMenuC",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/Custom.runtimeconfig.json",
+      "target": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

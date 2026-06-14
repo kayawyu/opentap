@@ -1,0 +1,6448 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 70,
+      "nonEmptyLines": 62,
+      "functions": [
+        {
+          "name": "Equals",
+          "startLine": 34,
+          "endLine": 39,
+          "params": [
+            "obj"
+          ]
+        },
+        {
+          "name": "GetHashCode",
+          "startLine": 41,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 65,
+          "endLine": 68,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ReadOnlyListElement",
+          "startLine": 23,
+          "endLine": 45,
+          "methods": [
+            "Equals",
+            "GetHashCode"
+          ],
+          "properties": [
+            "_rnd",
+            "_randomValue",
+            "X",
+            "Message",
+            "Note"
+          ]
+        },
+        {
+          "name": "ReadOnlyListExample",
+          "startLine": 47,
+          "endLine": 69,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "elements",
+            "Elements"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "X",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "Message",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "Note",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "Equals",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "GetHashCode",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "ReadOnlyListElement",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "Elements",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "ReadOnlyListExample",
+          "line": 47,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetHashCode",
+          "callee": "Message.GetHashCode",
+          "lineNumber": 43
+        },
+        {
+          "caller": "GetHashCode",
+          "callee": "Note.GetHashCode",
+          "lineNumber": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 3,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 72,
+      "nonEmptyLines": 62,
+      "functions": [
+        {
+          "name": "RuleValidation",
+          "startLine": 30,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "CheckShouldBeTrueFunc",
+          "startLine": 53,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 66,
+          "endLine": 70,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RuleValidation",
+          "startLine": 17,
+          "endLine": 71,
+          "methods": [
+            "RuleValidation",
+            "CheckShouldBeTrueFunc",
+            "Run"
+          ],
+          "properties": [
+            "ShouldBeTrueProp",
+            "MyInt1",
+            "MyInt2",
+            "MyInt3"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ShouldBeTrueProp",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "MyInt1",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "MyInt2",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "MyInt3",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "RuleValidation",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "RuleValidation",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RuleValidation",
+          "callee": "Rules.Add",
+          "lineNumber": 38
+        },
+        {
+          "caller": "RuleValidation",
+          "callee": "nameof",
+          "lineNumber": 38
+        },
+        {
+          "caller": "RuleValidation",
+          "callee": "Rules.Add",
+          "lineNumber": 41
+        },
+        {
+          "caller": "RuleValidation",
+          "callee": "nameof",
+          "lineNumber": 41
+        },
+        {
+          "caller": "RuleValidation",
+          "callee": "nameof",
+          "lineNumber": 41
+        },
+        {
+          "caller": "RuleValidation",
+          "callee": "Rules.Add",
+          "lineNumber": 44
+        },
+        {
+          "caller": "RuleValidation",
+          "callee": "nameof",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Run",
+          "callee": "ThrowOnValidationError",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/BuildTestPlan.Api.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 18,
+      "nonEmptyLines": 15,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 77,
+      "functions": [
+        {
+          "name": "Main",
+          "startLine": 27,
+          "endLine": 80,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Program",
+          "startLine": 25,
+          "endLine": 92,
+          "methods": [
+            "Main"
+          ],
+          "properties": [
+            "AssemblyDirectory"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AssemblyDirectory",
+          "line": 82,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Main",
+          "callee": "PluginManager.SearchAsync",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Main",
+          "callee": "SessionLogs.Initialize",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Main",
+          "callee": "new TestPlan",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Main",
+          "callee": "myTestPlan.ChildTestSteps.Add",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Main",
+          "callee": "new DelayStep",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Main",
+          "callee": "new SequenceStep",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Main",
+          "callee": "mySequenceStep.ChildTestSteps.Add",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Main",
+          "callee": "new DelayStep",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Main",
+          "callee": "new LogStep",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Main",
+          "callee": "DateTime.Now.ToLongTimeString",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Main",
+          "callee": "mySequenceStep.ChildTestSteps.Add",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Main",
+          "callee": "myTestPlan.ChildTestSteps.Add",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Main",
+          "callee": "Path.Combine",
+          "lineNumber": 60
+        },
+        {
+          "caller": "Main",
+          "callee": "myTestPlan.Save",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Main",
+          "callee": "new List<ResultListener>",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Main",
+          "callee": "resultListeners.Add",
+          "lineNumber": 67
+        },
+        {
+          "caller": "Main",
+          "callee": "new LogResultListener",
+          "lineNumber": 67
+        },
+        {
+          "caller": "Main",
+          "callee": "myTestPlan.Execute",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Main",
+          "callee": "SessionLogs.Rename",
+          "lineNumber": 74
+        },
+        {
+          "caller": "Main",
+          "callee": "EngineSettings.Current.SessionLogPath.Expand",
+          "lineNumber": 74
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 77
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.ReadLine",
+          "lineNumber": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 44,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 83,
+      "nonEmptyLines": 71,
+      "functions": [
+        {
+          "name": "Main",
+          "startLine": 26,
+          "endLine": 81,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Program",
+          "startLine": 20,
+          "endLine": 82,
+          "methods": [
+            "Main"
+          ],
+          "properties": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Main",
+          "callee": "PluginManager.SearchAsync",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Main",
+          "callee": "SessionLogs.Initialize",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Main",
+          "callee": "File.Exists",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Main",
+          "callee": "TestPlan.Load",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Main",
+          "callee": "myTestPlan.Execute",
+          "lineNumber": 62
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 63
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Main",
+          "callee": "SessionLogs.Rename",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Main",
+          "callee": "EngineSettings.Current.SessionLogPath.Expand",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 74
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.ReadLine",
+          "lineNumber": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 44,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/RunTestPlan.Api.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 17,
+      "nonEmptyLines": 14,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 446,
+      "nonEmptyLines": 379,
+      "functions": [
+        {
+          "name": "GlobWrapper",
+          "startLine": 31,
+          "endLine": 35,
+          "params": [
+            "pattern",
+            "include"
+          ]
+        },
+        {
+          "name": "CompareTo",
+          "startLine": 37,
+          "endLine": 64,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "LogWarningWithLineNumber",
+          "startLine": 69,
+          "endLine": 72,
+          "params": [
+            "msg"
+          ]
+        },
+        {
+          "name": "Parse",
+          "startLine": 75,
+          "endLine": 97,
+          "params": [
+            "tasks",
+            "caller"
+          ]
+        },
+        {
+          "name": "GlobTask",
+          "startLine": 108,
+          "endLine": 122,
+          "params": [
+            "item",
+            "includePatterns",
+            "excludePatterns",
+            "owner"
+          ]
+        },
+        {
+          "name": "Includes",
+          "startLine": 124,
+          "endLine": 146,
+          "params": [
+            "file",
+            "log"
+          ]
+        },
+        {
+          "name": "LogWarningWithLineNumber",
+          "startLine": 173,
+          "endLine": 177,
+          "params": [
+            "msg",
+            "item"
+          ]
+        },
+        {
+          "name": "GetLineNumber",
+          "startLine": 178,
+          "endLine": 222,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "AddAssemblyReferencesFromPackage",
+          "startLine": 224,
+          "endLine": 227,
+          "params": []
+        },
+        {
+          "name": "Write",
+          "startLine": 242,
+          "endLine": 252,
+          "params": []
+        },
+        {
+          "name": "WriteItemGroup",
+          "startLine": 261,
+          "endLine": 286,
+          "params": [
+            "assembliesInPackage",
+            "isPrivate"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 288,
+          "endLine": 367,
+          "params": []
+        },
+        {
+          "name": "HandlePackage",
+          "startLine": 369,
+          "endLine": 430,
+          "params": [
+            "globTask"
+          ]
+        },
+        {
+          "name": "IsDotNetAssembly",
+          "startLine": 432,
+          "endLine": 444,
+          "params": [
+            "fullPath"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "GlobWrapper",
+          "startLine": 22,
+          "endLine": 65,
+          "methods": [
+            "GlobWrapper",
+            "CompareTo"
+          ],
+          "properties": [
+            "Include",
+            "_globOptions",
+            "Globber"
+          ]
+        },
+        {
+          "name": "GlobTask",
+          "startLine": 67,
+          "endLine": 147,
+          "methods": [
+            "LogWarningWithLineNumber",
+            "Parse",
+            "GlobTask",
+            "Includes"
+          ],
+          "properties": [
+            "Globs",
+            "DefaultExclude",
+            "DefaultInclude",
+            "PackageName",
+            "Private",
+            "TaskItem",
+            "Owner"
+          ]
+        },
+        {
+          "name": "AddAssemblyReferencesFromPackage",
+          "startLine": 152,
+          "endLine": 445,
+          "methods": [
+            "LogWarningWithLineNumber",
+            "GetLineNumber",
+            "AddAssemblyReferencesFromPackage",
+            "Write",
+            "WriteItemGroup",
+            "Execute",
+            "HandlePackage",
+            "IsDotNetAssembly"
+          ],
+          "properties": [
+            "_document",
+            "Expander",
+            "Document",
+            "SourceFile",
+            "_added",
+            "dllRx",
+            "Assemblies",
+            "PackageInstallDir",
+            "TargetMsBuildFile",
+            "OpenTapPackagesToReference",
+            "Result",
+            "Separator",
+            "ShouldAppendSeparator"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CompareTo",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "SourceFile",
+          "line": 223,
+          "isDefault": false
+        },
+        {
+          "name": "AddAssemblyReferencesFromPackage",
+          "line": 224,
+          "isDefault": false
+        },
+        {
+          "name": "Assemblies",
+          "line": 231,
+          "isDefault": false
+        },
+        {
+          "name": "PackageInstallDir",
+          "line": 234,
+          "isDefault": false
+        },
+        {
+          "name": "TargetMsBuildFile",
+          "line": 237,
+          "isDefault": false
+        },
+        {
+          "name": "OpenTapPackagesToReference",
+          "line": 238,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 288,
+          "isDefault": false
+        },
+        {
+          "name": "AddAssemblyReferencesFromPackage",
+          "line": 152,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GlobWrapper",
+          "callee": "Glob.Parse",
+          "lineNumber": 34
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "glob.ToString",
+          "lineNumber": 41
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "pattern.EndsWith",
+          "lineNumber": 42
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "pattern.EndsWith",
+          "lineNumber": 42
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "pattern.EndsWith",
+          "lineNumber": 42
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "pattern.EndsWith",
+          "lineNumber": 42
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "glob.Tokens.All",
+          "lineNumber": 43
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "isLiteral",
+          "lineNumber": 46
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "isLiteral",
+          "lineNumber": 47
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "t2IsLiteral.CompareTo",
+          "lineNumber": 52
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "other.Globber.Tokens.Length.CompareTo",
+          "lineNumber": 58
+        },
+        {
+          "caller": "CompareTo",
+          "callee": "other.Include.CompareTo",
+          "lineNumber": 63
+        },
+        {
+          "caller": "LogWarningWithLineNumber",
+          "callee": "Owner.LogWarningWithLineNumber",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Parse",
+          "callee": "new List<GlobTask>",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Parse",
+          "callee": "task.GetMetadata",
+          "lineNumber": 82
+        },
+        {
+          "caller": "Parse",
+          "callee": "task.GetMetadata",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Parse",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 86
+        },
+        {
+          "caller": "Parse",
+          "callee": "includeAssemblies.Split",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Parse",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 89
+        },
+        {
+          "caller": "Parse",
+          "callee": "excludeAssemblies.Split",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Parse",
+          "callee": "result.Add",
+          "lineNumber": 93
+        },
+        {
+          "caller": "Parse",
+          "callee": "new GlobTask",
+          "lineNumber": 93
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "item.GetMetadata",
+          "lineNumber": 114
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "string.Equals",
+          "lineNumber": 116
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "includePatterns.Distinct().Where",
+          "lineNumber": 117
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "includePatterns.Distinct",
+          "lineNumber": 117
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 117
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "excludePatterns.Distinct().Where",
+          "lineNumber": 118
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "excludePatterns.Distinct",
+          "lineNumber": 118
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 118
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "includePatterns.Select(x => new GlobWrapper(x, true)).Concat(\n                excludePatterns.Select(x => new GlobWrapper(x, false))).ToList",
+          "lineNumber": 119
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "includePatterns.Select(x => new GlobWrapper(x, true)).Concat",
+          "lineNumber": 119
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "includePatterns.Select",
+          "lineNumber": 119
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "new GlobWrapper",
+          "lineNumber": 119
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "excludePatterns.Select",
+          "lineNumber": 120
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "new GlobWrapper",
+          "lineNumber": 120
+        },
+        {
+          "caller": "GlobTask",
+          "callee": "Globs.Sort",
+          "lineNumber": 121
+        },
+        {
+          "caller": "Includes",
+          "callee": "glob.Globber.IsMatch",
+          "lineNumber": 130
+        },
+        {
+          "caller": "Includes",
+          "callee": "log.LogError",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Includes",
+          "callee": "Owner.GetLineNumber",
+          "lineNumber": 138
+        },
+        {
+          "caller": "LogWarningWithLineNumber",
+          "callee": "Log.LogWarning",
+          "lineNumber": 175
+        },
+        {
+          "caller": "LogWarningWithLineNumber",
+          "callee": "GetLineNumber",
+          "lineNumber": 176
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "item.GetMetadata",
+          "lineNumber": 183
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "item.GetMetadata",
+          "lineNumber": 184
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "item.GetMetadata",
+          "lineNumber": 185
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "item.GetMetadata",
+          "lineNumber": 186
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 188
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 191
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "Document.GetPackageElements",
+          "lineNumber": 195
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "lineInfo.HasLineInfo",
+          "lineNumber": 197
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "elem.ElemOrAttributeValue",
+          "lineNumber": 199
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "elem.ElemOrAttributeValue",
+          "lineNumber": 200
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "elem.ElemOrAttributeValue",
+          "lineNumber": 202
+        },
+        {
+          "caller": "GetLineNumber",
+          "callee": "elem.ElemOrAttributeValue",
+          "lineNumber": 204
+        },
+        {
+          "caller": "AddAssemblyReferencesFromPackage",
+          "callee": "new HashSet<string>",
+          "lineNumber": 226
+        },
+        {
+          "caller": "Write",
+          "callee": "File.CreateText",
+          "lineNumber": 244
+        },
+        {
+          "caller": "Write",
+          "callee": "writer.WriteLine",
+          "lineNumber": 246
+        },
+        {
+          "caller": "Write",
+          "callee": "writer.WriteLine",
+          "lineNumber": 247
+        },
+        {
+          "caller": "Write",
+          "callee": "writer.Write",
+          "lineNumber": 249
+        },
+        {
+          "caller": "Write",
+          "callee": "Result.ToString",
+          "lineNumber": 249
+        },
+        {
+          "caller": "Write",
+          "callee": "writer.WriteLine",
+          "lineNumber": 250
+        },
+        {
+          "caller": "WriteItemGroup",
+          "callee": "Result.AppendLine",
+          "lineNumber": 263
+        },
+        {
+          "caller": "WriteItemGroup",
+          "callee": "asmPath.Replace",
+          "lineNumber": 273
+        },
+        {
+          "caller": "WriteItemGroup",
+          "callee": "asmPath.Replace",
+          "lineNumber": 273
+        },
+        {
+          "caller": "WriteItemGroup",
+          "callee": "Result.AppendLine",
+          "lineNumber": 275
+        },
+        {
+          "caller": "WriteItemGroup",
+          "callee": "Path.GetFileNameWithoutExtension",
+          "lineNumber": 275
+        },
+        {
+          "caller": "WriteItemGroup",
+          "callee": "Result.AppendLine",
+          "lineNumber": 280
+        },
+        {
+          "caller": "WriteItemGroup",
+          "callee": "Result.AppendLine",
+          "lineNumber": 281
+        },
+        {
+          "caller": "WriteItemGroup",
+          "callee": "Result.AppendLine",
+          "lineNumber": 282
+        },
+        {
+          "caller": "WriteItemGroup",
+          "callee": "Result.AppendLine",
+          "lineNumber": 285
+        },
+        {
+          "caller": "Execute",
+          "callee": "Write",
+          "lineNumber": 292
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogMessage",
+          "lineNumber": 293
+        },
+        {
+          "caller": "Execute",
+          "callee": "new BuildVariableExpander",
+          "lineNumber": 300
+        },
+        {
+          "caller": "Execute",
+          "callee": "Expander.ExpandBuildVariables",
+          "lineNumber": 302
+        },
+        {
+          "caller": "Execute",
+          "callee": "pathSeparators.Contains",
+          "lineNumber": 304
+        },
+        {
+          "caller": "Execute",
+          "callee": "outDir.Last().ToString",
+          "lineNumber": 304
+        },
+        {
+          "caller": "Execute",
+          "callee": "outDir.Last",
+          "lineNumber": 304
+        },
+        {
+          "caller": "Execute",
+          "callee": "pathSeparators.Max",
+          "lineNumber": 308
+        },
+        {
+          "caller": "Execute",
+          "callee": "outDir[separatorCharIndex].ToString",
+          "lineNumber": 309
+        },
+        {
+          "caller": "Execute",
+          "callee": "new Exception",
+          "lineNumber": 315
+        },
+        {
+          "caller": "Execute",
+          "callee": "new List<ITaskItem>",
+          "lineNumber": 325
+        },
+        {
+          "caller": "Execute",
+          "callee": "distinctTasks.Contains",
+          "lineNumber": 328
+        },
+        {
+          "caller": "Execute",
+          "callee": "LogWarningWithLineNumber",
+          "lineNumber": 329
+        },
+        {
+          "caller": "Execute",
+          "callee": "distinctTasks.Add",
+          "lineNumber": 332
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogWarning",
+          "lineNumber": 337
+        },
+        {
+          "caller": "Execute",
+          "callee": "GlobTask.Parse",
+          "lineNumber": 339
+        },
+        {
+          "caller": "Execute",
+          "callee": "distinctTasks.ToArray",
+          "lineNumber": 339
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogMessage",
+          "lineNumber": 340
+        },
+        {
+          "caller": "Execute",
+          "callee": "task.Globs.Where(x => x.Include).Select",
+          "lineNumber": 344
+        },
+        {
+          "caller": "Execute",
+          "callee": "task.Globs.Where",
+          "lineNumber": 344
+        },
+        {
+          "caller": "Execute",
+          "callee": "x.Globber.ToString",
+          "lineNumber": 344
+        },
+        {
+          "caller": "Execute",
+          "callee": "task.Globs.Where(x => x.Include == false).Select",
+          "lineNumber": 345
+        },
+        {
+          "caller": "Execute",
+          "callee": "task.Globs.Where",
+          "lineNumber": 345
+        },
+        {
+          "caller": "Execute",
+          "callee": "x.Globber.ToString",
+          "lineNumber": 345
+        },
+        {
+          "caller": "Execute",
+          "callee": "string.Join",
+          "lineNumber": 346
+        },
+        {
+          "caller": "Execute",
+          "callee": "string.Join",
+          "lineNumber": 347
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogMessage",
+          "lineNumber": 349
+        },
+        {
+          "caller": "Execute",
+          "callee": "globTasks.SelectMany",
+          "lineNumber": 352
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogWarning",
+          "lineNumber": 356
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogErrorFromException",
+          "lineNumber": 357
+        },
+        {
+          "caller": "Execute",
+          "callee": "Write",
+          "lineNumber": 363
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "new List<string>",
+          "lineNumber": 371
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "Path.Combine",
+          "lineNumber": 373
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "File.Exists",
+          "lineNumber": 375
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "globTask.LogWarningWithLineNumber",
+          "lineNumber": 377
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "dllRx.Matches(File.ReadAllText(packageDefPath)).Cast<Match>()\n                .Where(match => match.Groups[\"name\"].Success)\n                .Select",
+          "lineNumber": 382
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "dllRx.Matches(File.ReadAllText(packageDefPath)).Cast<Match>()\n                .Where",
+          "lineNumber": 382
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "dllRx.Matches(File.ReadAllText(packageDefPath)).Cast<Match>",
+          "lineNumber": 382
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "dllRx.Matches",
+          "lineNumber": 382
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "File.ReadAllText",
+          "lineNumber": 382
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "dllsInPackage.Where",
+          "lineNumber": 386
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "globTask.Includes",
+          "lineNumber": 386
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "matchedDlls.Distinct",
+          "lineNumber": 388
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "Path.Combine",
+          "lineNumber": 390
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "_added.Contains",
+          "lineNumber": 393
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "Log.LogMessage",
+          "lineNumber": 395
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "_added.Add",
+          "lineNumber": 399
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "IsDotNetAssembly",
+          "lineNumber": 401
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "assembliesInPackage.Add",
+          "lineNumber": 403
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "globTask.LogWarningWithLineNumber",
+          "lineNumber": 407
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "Log.LogMessage",
+          "lineNumber": 411
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "string.Join",
+          "lineNumber": 412
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "assembliesInPackage.Any",
+          "lineNumber": 414
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "globTask.LogWarningWithLineNumber",
+          "lineNumber": 416
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "WriteItemGroup",
+          "lineNumber": 421
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "assembliesInPackage.Select",
+          "lineNumber": 423
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "new TaskItem",
+          "lineNumber": 425
+        },
+        {
+          "caller": "HandlePackage",
+          "callee": "item.SetMetadata",
+          "lineNumber": 426
+        },
+        {
+          "caller": "IsDotNetAssembly",
+          "callee": "AssemblyName.GetAssemblyName",
+          "lineNumber": 436
+        },
+        {
+          "caller": "IsDotNetAssembly",
+          "callee": "Log.LogMessage",
+          "lineNumber": 441
+        },
+        {
+          "caller": "IsDotNetAssembly",
+          "callee": "ex.GetType",
+          "lineNumber": 441
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 14,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "ElemOrAttributeValue",
+          "startLine": 12,
+          "endLine": 15,
+          "params": [
+            "ele",
+            "name",
+            "defaultValue"
+          ]
+        },
+        {
+          "name": "GetPackageElements",
+          "startLine": 17,
+          "endLine": 32,
+          "params": [
+            "ele",
+            "packageName"
+          ]
+        },
+        {
+          "name": "BuildVariableExpander",
+          "startLine": 41,
+          "endLine": 44,
+          "params": [
+            "sourceFile"
+          ]
+        },
+        {
+          "name": "ExpandBuildVariables",
+          "startLine": 46,
+          "endLine": 62,
+          "params": [
+            "input"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExtensionClass",
+          "startLine": 10,
+          "endLine": 33,
+          "methods": [
+            "ElemOrAttributeValue",
+            "GetPackageElements"
+          ],
+          "properties": []
+        },
+        {
+          "name": "BuildVariableExpander",
+          "startLine": 35,
+          "endLine": 63,
+          "methods": [
+            "BuildVariableExpander",
+            "ExpandBuildVariables"
+          ],
+          "properties": [
+            "_projectInstance",
+            "Pattern"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ElemOrAttributeValue",
+          "callee": "ele.Attribute",
+          "lineNumber": 14
+        },
+        {
+          "caller": "ElemOrAttributeValue",
+          "callee": "ele.Element",
+          "lineNumber": 14
+        },
+        {
+          "caller": "GetPackageElements",
+          "callee": "ele.Elements().Where",
+          "lineNumber": 21
+        },
+        {
+          "caller": "GetPackageElements",
+          "callee": "ele.Elements",
+          "lineNumber": 21
+        },
+        {
+          "caller": "GetPackageElements",
+          "callee": "new List<XElement>",
+          "lineNumber": 22
+        },
+        {
+          "caller": "GetPackageElements",
+          "callee": "itemGroup.Elements().Where",
+          "lineNumber": 26
+        },
+        {
+          "caller": "GetPackageElements",
+          "callee": "itemGroup.Elements",
+          "lineNumber": 26
+        },
+        {
+          "caller": "GetPackageElements",
+          "callee": "tagNames.Contains",
+          "lineNumber": 26
+        },
+        {
+          "caller": "GetPackageElements",
+          "callee": "packageElems.Where",
+          "lineNumber": 27
+        },
+        {
+          "caller": "GetPackageElements",
+          "callee": "e?.Attribute",
+          "lineNumber": 27
+        },
+        {
+          "caller": "GetPackageElements",
+          "callee": "packageInstallElements.AddRange",
+          "lineNumber": 28
+        },
+        {
+          "caller": "GetPackageElements",
+          "callee": "packageInstallElements.ToArray",
+          "lineNumber": 31
+        },
+        {
+          "caller": "BuildVariableExpander",
+          "callee": "new ProjectInstance",
+          "lineNumber": 43
+        },
+        {
+          "caller": "ExpandBuildVariables",
+          "callee": "Regex.Matches",
+          "lineNumber": 48
+        },
+        {
+          "caller": "ExpandBuildVariables",
+          "callee": "match.Value.Substring",
+          "lineNumber": 53
+        },
+        {
+          "caller": "ExpandBuildVariables",
+          "callee": "_projectInstance.GetProperty",
+          "lineNumber": 56
+        },
+        {
+          "caller": "ExpandBuildVariables",
+          "callee": "Environment.GetEnvironmentVariable",
+          "lineNumber": 57
+        },
+        {
+          "caller": "ExpandBuildVariables",
+          "callee": "input.Replace",
+          "lineNumber": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 4,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 269,
+      "nonEmptyLines": 236,
+      "functions": [
+        {
+          "name": "tryParseXElement",
+          "startLine": 49,
+          "endLine": 61,
+          "params": [
+            "text",
+            "elem"
+          ]
+        },
+        {
+          "name": "runProcess",
+          "startLine": 63,
+          "endLine": 100,
+          "params": [
+            "filename",
+            "arguments",
+            "workingDirectory",
+            "stdout",
+            "stderr"
+          ]
+        },
+        {
+          "name": "isWindows",
+          "startLine": 102,
+          "endLine": 114,
+          "params": []
+        },
+        {
+          "name": "fileIsAncestor",
+          "startLine": 117,
+          "endLine": 128,
+          "params": [
+            "name",
+            "root"
+          ]
+        },
+        {
+          "name": "tryParseVersion",
+          "startLine": 132,
+          "endLine": 145,
+          "params": [
+            "inputVersion",
+            "shortVersion",
+            "longVersion"
+          ]
+        },
+        {
+          "name": "tryCalculateGitversion",
+          "startLine": 147,
+          "endLine": 204,
+          "params": [
+            "shortVersion",
+            "gitversion"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 206,
+          "endLine": 262,
+          "params": []
+        },
+        {
+          "name": "Cancel",
+          "startLine": 264,
+          "endLine": 267,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CalculateVersion",
+          "startLine": 16,
+          "endLine": 268,
+          "methods": [
+            "tryParseXElement",
+            "runProcess",
+            "isWindows",
+            "fileIsAncestor",
+            "tryParseVersion",
+            "tryCalculateGitversion",
+            "Execute",
+            "Cancel"
+          ],
+          "properties": [
+            "TargetName",
+            "TapDir",
+            "SourceFile",
+            "InputVersion",
+            "OutputShortVersion",
+            "OutputLongVersion",
+            "versionRegex"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TapDir",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "SourceFile",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "InputVersion",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "OutputShortVersion",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "OutputLongVersion",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 206,
+          "isDefault": false
+        },
+        {
+          "name": "Cancel",
+          "line": 264,
+          "isDefault": false
+        },
+        {
+          "name": "CalculateVersion",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "tryParseXElement",
+          "callee": "XElement.Parse",
+          "lineNumber": 53
+        },
+        {
+          "caller": "runProcess",
+          "callee": "new ProcessStartInfo",
+          "lineNumber": 66
+        },
+        {
+          "caller": "runProcess",
+          "callee": "new StringBuilder",
+          "lineNumber": 73
+        },
+        {
+          "caller": "runProcess",
+          "callee": "new StringBuilder",
+          "lineNumber": 74
+        },
+        {
+          "caller": "runProcess",
+          "callee": "new Process",
+          "lineNumber": 75
+        },
+        {
+          "caller": "runProcess",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 79
+        },
+        {
+          "caller": "runProcess",
+          "callee": "outStream.Append",
+          "lineNumber": 79
+        },
+        {
+          "caller": "runProcess",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 83
+        },
+        {
+          "caller": "runProcess",
+          "callee": "errStream.Append",
+          "lineNumber": 83
+        },
+        {
+          "caller": "runProcess",
+          "callee": "proc.Start",
+          "lineNumber": 85
+        },
+        {
+          "caller": "runProcess",
+          "callee": "proc.BeginOutputReadLine",
+          "lineNumber": 86
+        },
+        {
+          "caller": "runProcess",
+          "callee": "proc.BeginErrorReadLine",
+          "lineNumber": 87
+        },
+        {
+          "caller": "runProcess",
+          "callee": "proc.WaitForExit",
+          "lineNumber": 88
+        },
+        {
+          "caller": "runProcess",
+          "callee": "Log.LogError",
+          "lineNumber": 93
+        },
+        {
+          "caller": "runProcess",
+          "callee": "outStream.ToString",
+          "lineNumber": 96
+        },
+        {
+          "caller": "runProcess",
+          "callee": "errStream.ToString",
+          "lineNumber": 97
+        },
+        {
+          "caller": "fileIsAncestor",
+          "callee": "isWindows",
+          "lineNumber": 119
+        },
+        {
+          "caller": "fileIsAncestor",
+          "callee": "root.EnumerateFileSystemInfos().Any",
+          "lineNumber": 122
+        },
+        {
+          "caller": "fileIsAncestor",
+          "callee": "root.EnumerateFileSystemInfos",
+          "lineNumber": 122
+        },
+        {
+          "caller": "fileIsAncestor",
+          "callee": "i.Name.Equals",
+          "lineNumber": 122
+        },
+        {
+          "caller": "tryParseVersion",
+          "callee": "inputVersion.Trim",
+          "lineNumber": 134
+        },
+        {
+          "caller": "tryParseVersion",
+          "callee": "versionRegex.Match",
+          "lineNumber": 135
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 152
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "new DirectoryInfo",
+          "lineNumber": 153
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "fileIsAncestor",
+          "lineNumber": 156
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "Log.LogError",
+          "lineNumber": 158
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "fileIsAncestor",
+          "lineNumber": 164
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "Log.LogError",
+          "lineNumber": 166
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "isWindows",
+          "lineNumber": 177
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "Path.Combine",
+          "lineNumber": 178
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "runProcess",
+          "lineNumber": 179
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 184
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "Log.LogWarning",
+          "lineNumber": 188
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "stdout.Split('\\n').Select(line => line.Trim()).ToArray",
+          "lineNumber": 193
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "stdout.Split('\\n').Select",
+          "lineNumber": 193
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "stdout.Split",
+          "lineNumber": 193
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "line.Trim",
+          "lineNumber": 193
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "tryParseVersion",
+          "lineNumber": 197
+        },
+        {
+          "caller": "tryCalculateGitversion",
+          "callee": "Log.LogError",
+          "lineNumber": 201
+        },
+        {
+          "caller": "Execute",
+          "callee": "new[] { \"true\", \"1\" , \"gitversion\", \"auto\", \"git\" }.Contains",
+          "lineNumber": 218
+        },
+        {
+          "caller": "Execute",
+          "callee": "InputVersion.Trim",
+          "lineNumber": 218
+        },
+        {
+          "caller": "Execute",
+          "callee": "tryCalculateGitversion",
+          "lineNumber": 220
+        },
+        {
+          "caller": "Execute",
+          "callee": "tryParseXElement",
+          "lineNumber": 231
+        },
+        {
+          "caller": "Execute",
+          "callee": "InputVersion.Trim",
+          "lineNumber": 231
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogError",
+          "lineNumber": 235
+        },
+        {
+          "caller": "Execute",
+          "callee": "elem.Element",
+          "lineNumber": 239
+        },
+        {
+          "caller": "Execute",
+          "callee": "gv.Value.Trim",
+          "lineNumber": 241
+        },
+        {
+          "caller": "Execute",
+          "callee": "tryParseVersion",
+          "lineNumber": 243
+        },
+        {
+          "caller": "Execute",
+          "callee": "elem.Value.Trim",
+          "lineNumber": 243
+        },
+        {
+          "caller": "Execute",
+          "callee": "elem.Value.Trim",
+          "lineNumber": 245
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogError",
+          "lineNumber": 249
+        },
+        {
+          "caller": "Execute",
+          "callee": "tryParseVersion",
+          "lineNumber": 253
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogError",
+          "lineNumber": 255
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 318,
+      "nonEmptyLines": 275,
+      "functions": [
+        {
+          "name": "GetLineNum",
+          "startLine": 70,
+          "endLine": 108,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 114,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "Cancel",
+          "startLine": 125,
+          "endLine": 128,
+          "params": []
+        },
+        {
+          "name": "ProcessAuthTokens",
+          "startLine": 132,
+          "endLine": 210,
+          "params": []
+        },
+        {
+          "name": "UpdateMarkerFiles",
+          "startLine": 212,
+          "endLine": 240,
+          "params": []
+        },
+        {
+          "name": "InstallPackages",
+          "startLine": 247,
+          "endLine": 279,
+          "params": []
+        },
+        {
+          "name": "OnInstallerLogMessage",
+          "startLine": 281,
+          "endLine": 316,
+          "params": [
+            "message",
+            "logEventType",
+            "item"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "InstallOpenTapPackages",
+          "startLine": 18,
+          "endLine": 317,
+          "methods": [
+            "GetLineNum",
+            "Execute",
+            "Cancel",
+            "ProcessAuthTokens",
+            "UpdateMarkerFiles",
+            "InstallPackages",
+            "OnInstallerLogMessage"
+          ],
+          "properties": [
+            "ImageDeployer",
+            "SourceFile",
+            "PackagesToInstall",
+            "Repositories",
+            "TapDir",
+            "OpenTapRuntimeDir",
+            "PlatformTarget",
+            "_document",
+            "Document",
+            "cts"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SourceFile",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "PackagesToInstall",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "Repositories",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "TapDir",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "OpenTapRuntimeDir",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "PlatformTarget",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "Cancel",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "InstallOpenTapPackages",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetLineNum",
+          "callee": "new List<int>",
+          "lineNumber": 72
+        },
+        {
+          "caller": "GetLineNum",
+          "callee": "item.GetMetadata",
+          "lineNumber": 77
+        },
+        {
+          "caller": "GetLineNum",
+          "callee": "item.GetMetadata",
+          "lineNumber": 78
+        },
+        {
+          "caller": "GetLineNum",
+          "callee": "doc.GetPackageElements",
+          "lineNumber": 83
+        },
+        {
+          "caller": "GetLineNum",
+          "callee": "lineInfo.HasLineInfo",
+          "lineNumber": 85
+        },
+        {
+          "caller": "GetLineNum",
+          "callee": "lines.Add",
+          "lineNumber": 88
+        },
+        {
+          "caller": "GetLineNum",
+          "callee": "elem.ElemOrAttributeValue",
+          "lineNumber": 90
+        },
+        {
+          "caller": "GetLineNum",
+          "callee": "elem.ElemOrAttributeValue",
+          "lineNumber": 91
+        },
+        {
+          "caller": "GetLineNum",
+          "callee": "lines.ToArray",
+          "lineNumber": 106
+        },
+        {
+          "caller": "Execute",
+          "callee": "OpenTapContext.Create",
+          "lineNumber": 119
+        },
+        {
+          "caller": "Execute",
+          "callee": "InstallPackages",
+          "lineNumber": 120
+        },
+        {
+          "caller": "Cancel",
+          "callee": "cts.Cancel",
+          "lineNumber": 127
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "new Dictionary<string, string>",
+          "lineNumber": 134
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "new List<(string repo, string token)>",
+          "lineNumber": 136
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "Array.Empty<ITaskItem>",
+          "lineNumber": 138
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "item.GetMetadata(\"Repository\")?.Trim",
+          "lineNumber": 141
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "item.GetMetadata",
+          "lineNumber": 141
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "item.GetMetadata(\"Token\").Trim",
+          "lineNumber": 142
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "item.GetMetadata",
+          "lineNumber": 142
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 146
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "Log.LogError",
+          "lineNumber": 148
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "repoTokens.Add",
+          "lineNumber": 151
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "package.GetMetadata(\"Repository\")?.Trim",
+          "lineNumber": 159
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "package.GetMetadata",
+          "lineNumber": 159
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "package.GetMetadata(\"Token\").Trim",
+          "lineNumber": 160
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "package.GetMetadata",
+          "lineNumber": 160
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 161
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 164
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "Log.LogError",
+          "lineNumber": 166
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "repoTokens.Add",
+          "lineNumber": 169
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "repo2token.TryGetValue",
+          "lineNumber": 173
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "Log.LogError",
+          "lineNumber": 177
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "repo2token.Add",
+          "lineNumber": 180
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "new Uri",
+          "lineNumber": 189
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "AuthenticationSettings.Current.Tokens.Insert",
+          "lineNumber": 201
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "new TokenInfo",
+          "lineNumber": 201
+        },
+        {
+          "caller": "ProcessAuthTokens",
+          "callee": "Log.LogError",
+          "lineNumber": 205
+        },
+        {
+          "caller": "UpdateMarkerFiles",
+          "callee": "Path.Combine",
+          "lineNumber": 221
+        },
+        {
+          "caller": "UpdateMarkerFiles",
+          "callee": "Directory.Exists",
+          "lineNumber": 222
+        },
+        {
+          "caller": "UpdateMarkerFiles",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 223
+        },
+        {
+          "caller": "UpdateMarkerFiles",
+          "callee": "Directory.GetFiles",
+          "lineNumber": 224
+        },
+        {
+          "caller": "UpdateMarkerFiles",
+          "callee": "File.Delete",
+          "lineNumber": 229
+        },
+        {
+          "caller": "UpdateMarkerFiles",
+          "callee": "pkg.GetMetadata",
+          "lineNumber": 236
+        },
+        {
+          "caller": "UpdateMarkerFiles",
+          "callee": "File.Create",
+          "lineNumber": 237
+        },
+        {
+          "caller": "UpdateMarkerFiles",
+          "callee": "Path.Combine",
+          "lineNumber": 237
+        },
+        {
+          "caller": "UpdateMarkerFiles",
+          "callee": "fs.Close",
+          "lineNumber": 238
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "ProcessAuthTokens",
+          "lineNumber": 249
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "Repositories?.SelectMany(r =>\n                    r.ItemSpec.Split(new[] { \";\" }, StringSplitOptions.RemoveEmptyEntries))\n                .ToList",
+          "lineNumber": 252
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "Repositories?.SelectMany",
+          "lineNumber": 252
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "r.ItemSpec.Split",
+          "lineNumber": 253
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "new List<string>",
+          "lineNumber": 254
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "repos.AddRange",
+          "lineNumber": 256
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "PackagesToInstall.Select(p => p.GetMetadata(\"Repository\"))\n                .Where",
+          "lineNumber": 256
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "PackagesToInstall.Select",
+          "lineNumber": 256
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "p.GetMetadata",
+          "lineNumber": 256
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 257
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "repos.Distinct(StringComparer.OrdinalIgnoreCase).ToList",
+          "lineNumber": 259
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "repos.Distinct",
+          "lineNumber": 259
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "new OpenTapImageInstaller",
+          "lineNumber": 261
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "imageInstaller.InstallImage",
+          "lineNumber": 268
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "UpdateMarkerFiles",
+          "lineNumber": 270
+        },
+        {
+          "caller": "InstallPackages",
+          "callee": "Log.LogError",
+          "lineNumber": 275
+        },
+        {
+          "caller": "OnInstallerLogMessage",
+          "callee": "new Dictionary<int, string>",
+          "lineNumber": 285
+        },
+        {
+          "caller": "OnInstallerLogMessage",
+          "callee": "Array.Empty<int>",
+          "lineNumber": 295
+        },
+        {
+          "caller": "OnInstallerLogMessage",
+          "callee": "GetLineNum",
+          "lineNumber": 295
+        },
+        {
+          "caller": "OnInstallerLogMessage",
+          "callee": "numbers.Any",
+          "lineNumber": 296
+        },
+        {
+          "caller": "OnInstallerLogMessage",
+          "callee": "numbers.First",
+          "lineNumber": 296
+        },
+        {
+          "caller": "OnInstallerLogMessage",
+          "callee": "Log.LogError",
+          "lineNumber": 304
+        },
+        {
+          "caller": "OnInstallerLogMessage",
+          "callee": "Log.LogWarning",
+          "lineNumber": 307
+        },
+        {
+          "caller": "OnInstallerLogMessage",
+          "callee": "Log.LogMessage",
+          "lineNumber": 310
+        },
+        {
+          "caller": "OnInstallerLogMessage",
+          "callee": "Log.LogMessage",
+          "lineNumber": 313
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/OpenTap.Sdk.MSBuild.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 42,
+      "nonEmptyLines": 36,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 224,
+      "nonEmptyLines": 191,
+      "functions": [
+        {
+          "name": "Install",
+          "startLine": 21,
+          "endLine": 26,
+          "params": [
+            "spec",
+            "install",
+            "cts"
+          ]
+        },
+        {
+          "name": "onEvent",
+          "startLine": 42,
+          "endLine": 59,
+          "params": [
+            "events"
+          ]
+        },
+        {
+          "name": "attachTraceListener",
+          "startLine": 65,
+          "endLine": 70,
+          "params": []
+        },
+        {
+          "name": "OpenTapImageInstaller",
+          "startLine": 72,
+          "endLine": 78,
+          "params": [
+            "tapDir",
+            "runtimeDir",
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "InstallImage",
+          "startLine": 95,
+          "endLine": 166,
+          "params": [
+            "packagesToInstall",
+            "repositories"
+          ]
+        },
+        {
+          "name": "Dispose",
+          "startLine": 171,
+          "endLine": 174,
+          "params": []
+        },
+        {
+          "name": "ImageSpecifierFromTaskItems",
+          "startLine": 176,
+          "endLine": 222,
+          "params": [
+            "items"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IImageDeployer",
+          "startLine": 14,
+          "endLine": 17,
+          "methods": [
+            "Install"
+          ],
+          "properties": []
+        },
+        {
+          "name": "DefaultImageDeployer",
+          "startLine": 19,
+          "endLine": 27,
+          "methods": [
+            "Install"
+          ],
+          "properties": []
+        },
+        {
+          "name": "OpenTapImageInstaller",
+          "startLine": 29,
+          "endLine": 223,
+          "methods": [
+            "onEvent",
+            "attachTraceListener",
+            "OpenTapImageInstaller",
+            "InstallImage",
+            "Dispose",
+            "ImageSpecifierFromTaskItems"
+          ],
+          "properties": [
+            "TapDir",
+            "RuntimeDir",
+            "CancellationToken",
+            "OpenTapNugetPackage",
+            "ImageDeployer",
+            "traceListener",
+            "LogMessage"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Install",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "TapDir",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "RuntimeDir",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "CancellationToken",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "OpenTapNugetPackage",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "ImageDeployer",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "OpenTapImageInstaller",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "InstallImage",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "LogMessage",
+          "line": 169,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 171,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Install",
+          "callee": "spec.Repositories.Any",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Install",
+          "callee": "r.ToLower().Contains",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Install",
+          "callee": "r.ToLower",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Install",
+          "callee": "r.ToLower().Contains",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Install",
+          "callee": "r.ToLower",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Install",
+          "callee": "spec.Repositories.Add",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Install",
+          "callee": "spec.MergeAndDeploy",
+          "lineNumber": 25
+        },
+        {
+          "caller": "onEvent",
+          "callee": "new HashSet<string>",
+          "lineNumber": 47
+        },
+        {
+          "caller": "onEvent",
+          "callee": "mutedSources.Contains",
+          "lineNumber": 54
+        },
+        {
+          "caller": "onEvent",
+          "callee": "LogMessage",
+          "lineNumber": 57
+        },
+        {
+          "caller": "attachTraceListener",
+          "callee": "new EventTraceListener",
+          "lineNumber": 67
+        },
+        {
+          "caller": "attachTraceListener",
+          "callee": "Log.AddListener",
+          "lineNumber": 69
+        },
+        {
+          "caller": "OpenTapImageInstaller",
+          "callee": "attachTraceListener",
+          "lineNumber": 77
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 98
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "FileLock.Create",
+          "lineNumber": 99
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "Stopwatch.StartNew",
+          "lineNumber": 100
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "filelock.WaitOne",
+          "lineNumber": 102
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "TimeSpan.FromSeconds",
+          "lineNumber": 102
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "TimeSpan.FromMinutes",
+          "lineNumber": 104
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "LogMessage",
+          "lineNumber": 106
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "LogMessage",
+          "lineNumber": 111
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "UserInput.SetInterface",
+          "lineNumber": 118
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "new NonInteractiveUserInputInterface",
+          "lineNumber": 118
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "new Installation",
+          "lineNumber": 119
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "install.GetOpenTapPackage",
+          "lineNumber": 121
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "ImageSpecifierFromTaskItems",
+          "lineNumber": 123
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "imageSpecifier.Repositories.AddRange",
+          "lineNumber": 124
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "new PackageSpecifier",
+          "lineNumber": 126
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "VersionSpecifier.Parse",
+          "lineNumber": 127
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "OpenTapNugetPackage.Version.ToString",
+          "lineNumber": 127
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "imageSpecifier.Packages.Add",
+          "lineNumber": 129
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "new DefaultImageDeployer",
+          "lineNumber": 131
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "ImageDeployer.Install",
+          "lineNumber": 135
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "LogMessage",
+          "lineNumber": 140
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "LogMessage",
+          "lineNumber": 141
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "LogMessage",
+          "lineNumber": 146
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "LogMessage",
+          "lineNumber": 149
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "LogMessage",
+          "lineNumber": 154
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "filelock.Release",
+          "lineNumber": 158
+        },
+        {
+          "caller": "InstallImage",
+          "callee": "LogMessage",
+          "lineNumber": 161
+        },
+        {
+          "caller": "Dispose",
+          "callee": "Log.RemoveListener",
+          "lineNumber": 173
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "new ImageSpecifier",
+          "lineNumber": 178
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "i.GetMetadata",
+          "lineNumber": 182
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 188
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "VersionSpecifier.TryParse",
+          "lineNumber": 189
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "versionSpecifier.IsCompatible",
+          "lineNumber": 192
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "LogMessage",
+          "lineNumber": 195
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "i.GetMetadata",
+          "lineNumber": 205
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "i.GetMetadata",
+          "lineNumber": 206
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "Enum.TryParse",
+          "lineNumber": 208
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "VersionSpecifier.TryParse",
+          "lineNumber": 211
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "LogMessage",
+          "lineNumber": 213
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "VersionSpecifier.Parse",
+          "lineNumber": 215
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "spec.Packages.Add",
+          "lineNumber": 218
+        },
+        {
+          "caller": "ImageSpecifierFromTaskItems",
+          "callee": "new PackageSpecifier",
+          "lineNumber": 218
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 7,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/OpenTapLoader.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 112,
+      "nonEmptyLines": 97,
+      "functions": [
+        {
+          "name": "loadOpenTap",
+          "startLine": 21,
+          "endLine": 42,
+          "params": [
+            "tapDir",
+            "runtimeDir"
+          ]
+        },
+        {
+          "name": "Create",
+          "startLine": 50,
+          "endLine": 54,
+          "params": [
+            "tapDir",
+            "runtimeDir"
+          ]
+        },
+        {
+          "name": "numberedFileName",
+          "startLine": 61,
+          "endLine": 72,
+          "params": [
+            "logName"
+          ]
+        },
+        {
+          "name": "OpenTapContext",
+          "startLine": 81,
+          "endLine": 100,
+          "params": [
+            "tapDir"
+          ]
+        },
+        {
+          "name": "Dispose",
+          "startLine": 105,
+          "endLine": 109,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OpenTapContext",
+          "startLine": 15,
+          "endLine": 111,
+          "methods": [
+            "loadOpenTap",
+            "Create",
+            "numberedFileName",
+            "OpenTapContext",
+            "Dispose"
+          ],
+          "properties": [
+            "loadLock"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Create",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "OpenTapContext",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 105,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "loadOpenTap",
+          "callee": "Environment.SetEnvironmentVariable",
+          "lineNumber": 26
+        },
+        {
+          "caller": "loadOpenTap",
+          "callee": "Environment.SetEnvironmentVariable",
+          "lineNumber": 27
+        },
+        {
+          "caller": "loadOpenTap",
+          "callee": "Environment.SetEnvironmentVariable",
+          "lineNumber": 28
+        },
+        {
+          "caller": "loadOpenTap",
+          "callee": "AppDomain.CurrentDomain.GetAssemblies().Select(l => l.GetName().Name).ToArray",
+          "lineNumber": 32
+        },
+        {
+          "caller": "loadOpenTap",
+          "callee": "AppDomain.CurrentDomain.GetAssemblies().Select",
+          "lineNumber": 32
+        },
+        {
+          "caller": "loadOpenTap",
+          "callee": "AppDomain.CurrentDomain.GetAssemblies",
+          "lineNumber": 32
+        },
+        {
+          "caller": "loadOpenTap",
+          "callee": "l.GetName",
+          "lineNumber": 32
+        },
+        {
+          "caller": "loadOpenTap",
+          "callee": "loaded.Contains",
+          "lineNumber": 36
+        },
+        {
+          "caller": "loadOpenTap",
+          "callee": "Assembly.LoadFrom",
+          "lineNumber": 39
+        },
+        {
+          "caller": "loadOpenTap",
+          "callee": "Path.Combine",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Create",
+          "callee": "loadOpenTap",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Create",
+          "callee": "new OpenTapContext",
+          "lineNumber": 53
+        },
+        {
+          "caller": "numberedFileName",
+          "callee": "Path.Combine",
+          "lineNumber": 63
+        },
+        {
+          "caller": "numberedFileName",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 63
+        },
+        {
+          "caller": "numberedFileName",
+          "callee": "Path.GetFileNameWithoutExtension",
+          "lineNumber": 63
+        },
+        {
+          "caller": "numberedFileName",
+          "callee": "File.Exists",
+          "lineNumber": 65
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "System.Diagnostics.Process.GetCurrentProcess",
+          "lineNumber": 83
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "buildProc.StartTime.ToString",
+          "lineNumber": 84
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "Assembly.GetEntryAssembly",
+          "lineNumber": 89
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "String.IsNullOrWhiteSpace",
+          "lineNumber": 89
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "Assembly.GetEntryAssembly",
+          "lineNumber": 89
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "Path.GetFileNameWithoutExtension",
+          "lineNumber": 91
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "Assembly.GetEntryAssembly",
+          "lineNumber": 91
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 96
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "Path.Combine",
+          "lineNumber": 96
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "numberedFileName",
+          "lineNumber": 97
+        },
+        {
+          "caller": "OpenTapContext",
+          "callee": "SessionLogs.Initialize",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Dispose",
+          "callee": "Log.Flush",
+          "lineNumber": 107
+        },
+        {
+          "caller": "Dispose",
+          "callee": "SessionLogs.Flush",
+          "lineNumber": 108
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 229,
+      "nonEmptyLines": 201,
+      "functions": [
+        {
+          "name": "PackageTask",
+          "startLine": 42,
+          "endLine": 46,
+          "params": []
+        },
+        {
+          "name": "confFileRun",
+          "startLine": 48,
+          "endLine": 168,
+          "params": [
+            "packagePath"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 170,
+          "endLine": 198,
+          "params": []
+        },
+        {
+          "name": "GetTapExePath",
+          "startLine": 200,
+          "endLine": 218,
+          "params": []
+        },
+        {
+          "name": "formatOutput",
+          "startLine": 219,
+          "endLine": 227,
+          "params": [
+            "output",
+            "appendVersionToOutput",
+            "assemblyPath"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BuildType",
+          "startLine": 14,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "None",
+            "Package"
+          ]
+        },
+        {
+          "name": "InstallType",
+          "startLine": 20,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "None",
+            "PackageDef"
+          ]
+        },
+        {
+          "name": "PackageTask",
+          "startLine": 29,
+          "endLine": 228,
+          "methods": [
+            "PackageTask",
+            "confFileRun",
+            "Execute",
+            "GetTapExePath",
+            "formatOutput"
+          ],
+          "properties": [
+            "ConfFile",
+            "Dir",
+            "Build",
+            "Install"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "None",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "Package",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "BuildType",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "None",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "PackageDef",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "InstallType",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "ConfFile",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "Dir",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "Build",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "Install",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "PackageTask",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 170,
+          "isDefault": false
+        },
+        {
+          "name": "PackageTask",
+          "line": 29,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "confFileRun",
+          "callee": "new ProcessStartInfo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "String.Format",
+          "lineNumber": 52
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "Directory.GetCurrentDirectory",
+          "lineNumber": 52
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "Log.LogMessage",
+          "lineNumber": 73
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "Process.Start",
+          "lineNumber": 79
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "System.Threading.Tasks.Task.Run",
+          "lineNumber": 84
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "p.StandardOutput.ReadLine",
+          "lineNumber": 89
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "new Regex",
+          "lineNumber": 91
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "sucessRegex.Match",
+          "lineNumber": 92
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "new Regex",
+          "lineNumber": 99
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "msgRegex.Match",
+          "lineNumber": 100
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "BuildEngine.LogWarningEvent",
+          "lineNumber": 110
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "new BuildWarningEventArgs",
+          "lineNumber": 110
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "BuildEngine.LogMessageEvent",
+          "lineNumber": 113
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "new BuildMessageEventArgs",
+          "lineNumber": 113
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "Log.LogMessage",
+          "lineNumber": 116
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "p.StandardError.ReadLine",
+          "lineNumber": 126
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "new Regex",
+          "lineNumber": 128
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "dtofErrorRegex.Match",
+          "lineNumber": 129
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "int.Parse",
+          "lineNumber": 132
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "int.Parse",
+          "lineNumber": 133
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "new BuildErrorEventArgs",
+          "lineNumber": 135
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "BuildEngine.LogErrorEvent",
+          "lineNumber": 136
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "new Regex",
+          "lineNumber": 141
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "tapErrorRegex.Match",
+          "lineNumber": 142
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "BuildEngine.LogErrorEvent",
+          "lineNumber": 148
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "new BuildErrorEventArgs",
+          "lineNumber": 148
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "Log.LogError",
+          "lineNumber": 151
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "task.Wait",
+          "lineNumber": 155
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "p.WaitForExit",
+          "lineNumber": 156
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 161
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "Log.LogMessage",
+          "lineNumber": 162
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "Path.Combine",
+          "lineNumber": 162
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "Log.LogMessage",
+          "lineNumber": 164
+        },
+        {
+          "caller": "confFileRun",
+          "callee": "Log.LogError",
+          "lineNumber": 167
+        },
+        {
+          "caller": "Execute",
+          "callee": "GetTapExePath",
+          "lineNumber": 172
+        },
+        {
+          "caller": "Execute",
+          "callee": "File.Exists",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogError",
+          "lineNumber": 176
+        },
+        {
+          "caller": "Execute",
+          "callee": "Log.LogError",
+          "lineNumber": 182
+        },
+        {
+          "caller": "Execute",
+          "callee": "be3.Yield",
+          "lineNumber": 188
+        },
+        {
+          "caller": "Execute",
+          "callee": "confFileRun",
+          "lineNumber": 191
+        },
+        {
+          "caller": "Execute",
+          "callee": "be3.Reacquire",
+          "lineNumber": 195
+        },
+        {
+          "caller": "GetTapExePath",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 204
+        },
+        {
+          "caller": "GetTapExePath",
+          "callee": "this.GetType",
+          "lineNumber": 204
+        },
+        {
+          "caller": "GetTapExePath",
+          "callee": "File.Exists",
+          "lineNumber": 207
+        },
+        {
+          "caller": "GetTapExePath",
+          "callee": "Path.Combine",
+          "lineNumber": 207
+        },
+        {
+          "caller": "GetTapExePath",
+          "callee": "Path.Combine",
+          "lineNumber": 209
+        },
+        {
+          "caller": "GetTapExePath",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 211
+        },
+        {
+          "caller": "formatOutput",
+          "callee": "Path.GetExtension",
+          "lineNumber": 223
+        },
+        {
+          "caller": "formatOutput",
+          "callee": "Path.GetFileNameWithoutExtension",
+          "lineNumber": 224
+        },
+        {
+          "caller": "formatOutput",
+          "callee": "FileVersionInfo.GetVersionInfo",
+          "lineNumber": 225
+        },
+        {
+          "caller": "formatOutput",
+          "callee": "String.Format",
+          "lineNumber": 226
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 5,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.MSBuild/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 6,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 221,
+      "nonEmptyLines": 190,
+      "functions": [
+        {
+          "name": "Execute",
+          "startLine": 22,
+          "endLine": 38,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 46,
+          "endLine": 61,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 69,
+          "endLine": 84,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 92,
+          "endLine": 107,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 115,
+          "endLine": 130,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 142,
+          "endLine": 171,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 179,
+          "endLine": 194,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 202,
+          "endLine": 217,
+          "params": [
+            "cancellationToken"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "GenerateDut",
+          "startLine": 16,
+          "endLine": 39,
+          "methods": [
+            "Execute"
+          ],
+          "properties": [
+            "Name"
+          ]
+        },
+        {
+          "name": "GenerateInstrument",
+          "startLine": 40,
+          "endLine": 62,
+          "methods": [
+            "Execute"
+          ],
+          "properties": [
+            "Name"
+          ]
+        },
+        {
+          "name": "GenerateResultListener",
+          "startLine": 63,
+          "endLine": 85,
+          "methods": [
+            "Execute"
+          ],
+          "properties": [
+            "Name"
+          ]
+        },
+        {
+          "name": "GenerateSetting",
+          "startLine": 86,
+          "endLine": 108,
+          "methods": [
+            "Execute"
+          ],
+          "properties": [
+            "Name"
+          ]
+        },
+        {
+          "name": "GenerateTestStep",
+          "startLine": 109,
+          "endLine": 131,
+          "methods": [
+            "Execute"
+          ],
+          "properties": [
+            "Name"
+          ]
+        },
+        {
+          "name": "GenerateTestPlan",
+          "startLine": 134,
+          "endLine": 172,
+          "methods": [
+            "Execute"
+          ],
+          "properties": [
+            "Name"
+          ]
+        },
+        {
+          "name": "GenerateCliAction",
+          "startLine": 173,
+          "endLine": 195,
+          "methods": [
+            "Execute"
+          ],
+          "properties": [
+            "Name"
+          ]
+        },
+        {
+          "name": "GeneratePackageXml",
+          "startLine": 196,
+          "endLine": 218,
+          "methods": [
+            "Execute"
+          ],
+          "properties": [
+            "Name"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Name",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateDut",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateInstrument",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateResultListener",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateSetting",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateTestStep",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateTestPlan",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 176,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 179,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateCliAction",
+          "line": 173,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 199,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 202,
+          "isDefault": false
+        },
+        {
+          "name": "GeneratePackageXml",
+          "line": 196,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Execute",
+          "callee": "Validate",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly()\n                .GetManifestResourceStream",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Execute",
+          "callee": "Validate",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly()\n                .GetManifestResourceStream",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Execute",
+          "callee": "Validate",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly()\n                .GetManifestResourceStream",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 79
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 79
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 79
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 80
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 80
+        },
+        {
+          "caller": "Execute",
+          "callee": "Validate",
+          "lineNumber": 94
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly()\n                .GetManifestResourceStream",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Execute",
+          "callee": "Validate",
+          "lineNumber": 117
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 122
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly()\n                .GetManifestResourceStream",
+          "lineNumber": 122
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 122
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 126
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 126
+        },
+        {
+          "caller": "Execute",
+          "callee": "Validate",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 149
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly()\n                .GetManifestResourceStream",
+          "lineNumber": 149
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 149
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StringBuilder",
+          "lineNumber": 152
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 153
+        },
+        {
+          "caller": "Execute",
+          "callee": "Directory.GetFiles",
+          "lineNumber": 154
+        },
+        {
+          "caller": "Execute",
+          "callee": "File.ReadAllText",
+          "lineNumber": 157
+        },
+        {
+          "caller": "Execute",
+          "callee": "Regex.Match",
+          "lineNumber": 158
+        },
+        {
+          "caller": "Execute",
+          "callee": "steps.AppendLine",
+          "lineNumber": 160
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 163
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 163
+        },
+        {
+          "caller": "Execute",
+          "callee": "steps.ToString",
+          "lineNumber": 163
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 164
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 164
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Warning",
+          "lineNumber": 167
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Warning",
+          "lineNumber": 168
+        },
+        {
+          "caller": "Execute",
+          "callee": "Validate",
+          "lineNumber": 181
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly()\n                .GetManifestResourceStream",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 190
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 190
+        },
+        {
+          "caller": "Execute",
+          "callee": "Validate",
+          "lineNumber": 204
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 209
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly()\n                .GetManifestResourceStream",
+          "lineNumber": 209
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 209
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 212
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 212
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 212
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 213
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 213
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 24,
+        "functionCount": 8,
+        "classCount": 8
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 386,
+      "nonEmptyLines": 328,
+      "functions": [
+        {
+          "name": "IsAncestor",
+          "startLine": 66,
+          "endLine": 76,
+          "params": [
+            "root",
+            "dest"
+          ]
+        },
+        {
+          "name": "DotnetNew",
+          "startLine": 91,
+          "endLine": 106,
+          "params": [
+            "projectName",
+            "directory",
+            "template",
+            "token"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 108,
+          "endLine": 229,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "ReplaceVersion",
+          "startLine": 231,
+          "endLine": 249,
+          "params": [
+            "csproj"
+          ]
+        },
+        {
+          "name": "WaitForExit",
+          "startLine": 251,
+          "endLine": 266,
+          "params": [
+            "p",
+            "token"
+          ]
+        },
+        {
+          "name": "InstallTemplate",
+          "startLine": 268,
+          "endLine": 290,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "RunDotnet",
+          "startLine": 292,
+          "endLine": 308,
+          "params": [
+            "args",
+            "token"
+          ]
+        },
+        {
+          "name": "DotnetNewSln",
+          "startLine": 310,
+          "endLine": 314,
+          "params": [
+            "projectName",
+            "directory",
+            "token"
+          ]
+        },
+        {
+          "name": "DotnetSlnAdd",
+          "startLine": 316,
+          "endLine": 321,
+          "params": [
+            "sln",
+            "csproj",
+            "token"
+          ]
+        },
+        {
+          "name": "GetOpenTapVersion",
+          "startLine": 324,
+          "endLine": 341,
+          "params": []
+        },
+        {
+          "name": "GetLatestNugetVersion",
+          "startLine": 347,
+          "endLine": 384,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "GenerateProject",
+          "startLine": 20,
+          "endLine": 342,
+          "methods": [
+            "IsAncestor",
+            "DotnetNew",
+            "Execute",
+            "ReplaceVersion",
+            "WaitForExit",
+            "InstallTemplate",
+            "RunDotnet",
+            "DotnetNewSln",
+            "DotnetSlnAdd",
+            "GetOpenTapVersion"
+          ],
+          "properties": [
+            "TemplateNotFound",
+            "output",
+            "Name",
+            "DUT",
+            "Instrument",
+            "ComponentSettings",
+            "ResultListener",
+            "CliAction",
+            "Editor",
+            "_opentapVersion"
+          ]
+        },
+        {
+          "name": "NugetInterop",
+          "startLine": 344,
+          "endLine": 385,
+          "methods": [
+            "GetLatestNugetVersion"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "output",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "DUT",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "Instrument",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "ComponentSettings",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "ResultListener",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "CliAction",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "Editor",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateProject",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "GetLatestNugetVersion",
+          "line": 347,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "IsAncestor",
+          "callee": "root.FullName.Equals",
+          "lineNumber": 70
+        },
+        {
+          "caller": "DotnetNew",
+          "callee": "RunDotnet",
+          "lineNumber": 105
+        },
+        {
+          "caller": "Execute",
+          "callee": "Validate",
+          "lineNumber": 110
+        },
+        {
+          "caller": "Execute",
+          "callee": "editors.Contains",
+          "lineNumber": 116
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Error",
+          "lineNumber": 118
+        },
+        {
+          "caller": "Execute",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 122
+        },
+        {
+          "caller": "Execute",
+          "callee": "new DirectoryInfo",
+          "lineNumber": 123
+        },
+        {
+          "caller": "Execute",
+          "callee": "new DirectoryInfo",
+          "lineNumber": 124
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.Create",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.EnumerateFiles(\"*.sln\").FirstOrDefault",
+          "lineNumber": 126
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.EnumerateFiles",
+          "lineNumber": 126
+        },
+        {
+          "caller": "Execute",
+          "callee": "new DirectoryInfo",
+          "lineNumber": 131
+        },
+        {
+          "caller": "Execute",
+          "callee": "IsAncestor",
+          "lineNumber": 132
+        },
+        {
+          "caller": "Execute",
+          "callee": "workingDirectory.EnumerateFiles(\"*.sln\").FirstOrDefault",
+          "lineNumber": 133
+        },
+        {
+          "caller": "Execute",
+          "callee": "workingDirectory.EnumerateFiles",
+          "lineNumber": 133
+        },
+        {
+          "caller": "Execute",
+          "callee": "directory.EnumerateFiles(\".OpenTapIgnore\").Any",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Execute",
+          "callee": "directory.EnumerateFiles",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Execute",
+          "callee": "directory.EnumerateFiles(\"OpenTap.dll\").Any",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Execute",
+          "callee": "directory.EnumerateFiles",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Warning",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Execute",
+          "callee": "new CreateProjectQuestion",
+          "lineNumber": 150
+        },
+        {
+          "caller": "Execute",
+          "callee": "UserInput.Request",
+          "lineNumber": 155
+        },
+        {
+          "caller": "Execute",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 170
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.CreateSubdirectory",
+          "lineNumber": 171
+        },
+        {
+          "caller": "Execute",
+          "callee": "DotnetNewSln",
+          "lineNumber": 173
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.EnumerateFiles(\"*.sln\").FirstOrDefault",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.EnumerateFiles",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.EnumerateFiles(\"*.slnx\").FirstOrDefault",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.EnumerateFiles",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.EnumerateFiles(\"Directory.Build.props\").Any",
+          "lineNumber": 181
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.EnumerateFiles",
+          "lineNumber": 181
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 183
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly()!\n                        .GetManifestResourceStream",
+          "lineNumber": 183
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 183
+        },
+        {
+          "caller": "Execute",
+          "callee": "GetOpenTapVersion",
+          "lineNumber": 185
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Execute",
+          "callee": "version.ToString",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 187
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 187
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 188
+        },
+        {
+          "caller": "Execute",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 198
+        },
+        {
+          "caller": "Execute",
+          "callee": "sln.Directory.FullName.Equals",
+          "lineNumber": 198
+        },
+        {
+          "caller": "Execute",
+          "callee": "sln.Directory.CreateSubdirectory",
+          "lineNumber": 199
+        },
+        {
+          "caller": "Execute",
+          "callee": "DotnetNew",
+          "lineNumber": 202
+        },
+        {
+          "caller": "Execute",
+          "callee": "new CreateProjectQuestion",
+          "lineNumber": 205
+        },
+        {
+          "caller": "Execute",
+          "callee": "UserInput.Request",
+          "lineNumber": 206
+        },
+        {
+          "caller": "Execute",
+          "callee": "InstallTemplate",
+          "lineNumber": 209
+        },
+        {
+          "caller": "Execute",
+          "callee": "DotnetNew",
+          "lineNumber": 211
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.EnumerateFiles(\"*.csproj\").First",
+          "lineNumber": 218
+        },
+        {
+          "caller": "Execute",
+          "callee": "dest.EnumerateFiles",
+          "lineNumber": 218
+        },
+        {
+          "caller": "Execute",
+          "callee": "sln.Directory.EnumerateFiles(\"Directory.Build.props\").Any",
+          "lineNumber": 221
+        },
+        {
+          "caller": "Execute",
+          "callee": "sln.Directory.EnumerateFiles",
+          "lineNumber": 221
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceVersion",
+          "lineNumber": 222
+        },
+        {
+          "caller": "Execute",
+          "callee": "DotnetSlnAdd",
+          "lineNumber": 226
+        },
+        {
+          "caller": "ReplaceVersion",
+          "callee": "XElement.Load",
+          "lineNumber": 235
+        },
+        {
+          "caller": "ReplaceVersion",
+          "callee": "doc.Elements(\"ItemGroup\").ToArray",
+          "lineNumber": 236
+        },
+        {
+          "caller": "ReplaceVersion",
+          "callee": "doc.Elements",
+          "lineNumber": 236
+        },
+        {
+          "caller": "ReplaceVersion",
+          "callee": "grp.Elements(\"PackageReference\").ToArray",
+          "lineNumber": 239
+        },
+        {
+          "caller": "ReplaceVersion",
+          "callee": "grp.Elements",
+          "lineNumber": 239
+        },
+        {
+          "caller": "ReplaceVersion",
+          "callee": "r?.Attribute",
+          "lineNumber": 242
+        },
+        {
+          "caller": "ReplaceVersion",
+          "callee": "r.SetAttributeValue",
+          "lineNumber": 244
+        },
+        {
+          "caller": "ReplaceVersion",
+          "callee": "doc.Save",
+          "lineNumber": 248
+        },
+        {
+          "caller": "WaitForExit",
+          "callee": "new ManualResetEventSlim",
+          "lineNumber": 253
+        },
+        {
+          "caller": "WaitForExit",
+          "callee": "TapThread.Start",
+          "lineNumber": 254
+        },
+        {
+          "caller": "WaitForExit",
+          "callee": "p.WaitForExit",
+          "lineNumber": 256
+        },
+        {
+          "caller": "WaitForExit",
+          "callee": "evt.Set",
+          "lineNumber": 261
+        },
+        {
+          "caller": "WaitForExit",
+          "callee": "WaitHandle.WaitAny",
+          "lineNumber": 264
+        },
+        {
+          "caller": "WaitForExit",
+          "callee": "token.ThrowIfCancellationRequested",
+          "lineNumber": 265
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "Installation.Current.FindPackage",
+          "lineNumber": 270
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "new ExitCodeException",
+          "lineNumber": 272
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "sdk.Files.FirstOrDefault",
+          "lineNumber": 273
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "Path.GetExtension",
+          "lineNumber": 273
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "new ExitCodeException",
+          "lineNumber": 275
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "Path.Combine",
+          "lineNumber": 276
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "File.Exists",
+          "lineNumber": 277
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "new ExitCodeException",
+          "lineNumber": 278
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "new ProcessStartInfo",
+          "lineNumber": 281
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "new Process",
+          "lineNumber": 286
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "p.Start",
+          "lineNumber": 287
+        },
+        {
+          "caller": "InstallTemplate",
+          "callee": "WaitForExit",
+          "lineNumber": 288
+        },
+        {
+          "caller": "RunDotnet",
+          "callee": "new ProcessStartInfo",
+          "lineNumber": 294
+        },
+        {
+          "caller": "RunDotnet",
+          "callee": "log.Info",
+          "lineNumber": 299
+        },
+        {
+          "caller": "RunDotnet",
+          "callee": "new Process",
+          "lineNumber": 301
+        },
+        {
+          "caller": "RunDotnet",
+          "callee": "p.Start",
+          "lineNumber": 302
+        },
+        {
+          "caller": "RunDotnet",
+          "callee": "WaitForExit",
+          "lineNumber": 304
+        },
+        {
+          "caller": "DotnetNewSln",
+          "callee": "RunDotnet",
+          "lineNumber": 313
+        },
+        {
+          "caller": "DotnetSlnAdd",
+          "callee": "RunDotnet",
+          "lineNumber": 320
+        },
+        {
+          "caller": "GetOpenTapVersion",
+          "callee": "NugetInterop.GetLatestNugetVersion",
+          "lineNumber": 327
+        },
+        {
+          "caller": "GetOpenTapVersion",
+          "callee": "log.Warning",
+          "lineNumber": 331
+        },
+        {
+          "caller": "GetOpenTapVersion",
+          "callee": "new Installation(Path.GetDirectoryName(typeof(ITestStep).Assembly.Location))\n                    .GetOpenTapPackage",
+          "lineNumber": 333
+        },
+        {
+          "caller": "GetOpenTapVersion",
+          "callee": "new Installation",
+          "lineNumber": 333
+        },
+        {
+          "caller": "GetOpenTapVersion",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 333
+        },
+        {
+          "caller": "GetOpenTapVersion",
+          "callee": "new SemanticVersion",
+          "lineNumber": 336
+        },
+        {
+          "caller": "GetOpenTapVersion",
+          "callee": "new SemanticVersion",
+          "lineNumber": 337
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "Log.CreateSource",
+          "lineNumber": 349
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "new HttpClient",
+          "lineNumber": 353
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "Stopwatch.StartNew",
+          "lineNumber": 355
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "http.GetAsync",
+          "lineNumber": 357
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "log.Debug",
+          "lineNumber": 358
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "stringTask.Wait",
+          "lineNumber": 360
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "log.Debug",
+          "lineNumber": 364
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "log.Debug",
+          "lineNumber": 369
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "str.Content.ReadAsStringAsync",
+          "lineNumber": 370
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "JObject.Parse",
+          "lineNumber": 372
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "log.Debug",
+          "lineNumber": 373
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "SemanticVersion.TryParse",
+          "lineNumber": 374
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "j[\"data\"][0][\"version\"].Value<string>",
+          "lineNumber": 374
+        },
+        {
+          "caller": "GetLatestNugetVersion",
+          "callee": "log.Warning",
+          "lineNumber": 381
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 11,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 144,
+      "nonEmptyLines": 126,
+      "functions": [
+        {
+          "name": "Execute",
+          "startLine": 20,
+          "endLine": 30,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 36,
+          "endLine": 46,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 52,
+          "endLine": 94,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "GetPackageXmlFiles",
+          "startLine": 100,
+          "endLine": 114,
+          "params": [
+            "root",
+            "include"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 115,
+          "endLine": 142,
+          "params": [
+            "cancellationToken"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "GenerateVs",
+          "startLine": 17,
+          "endLine": 31,
+          "methods": [
+            "Execute"
+          ],
+          "properties": []
+        },
+        {
+          "name": "GenerateGitlab",
+          "startLine": 33,
+          "endLine": 47,
+          "methods": [
+            "Execute"
+          ],
+          "properties": []
+        },
+        {
+          "name": "GenerateVsCode",
+          "startLine": 49,
+          "endLine": 95,
+          "methods": [
+            "Execute"
+          ],
+          "properties": []
+        },
+        {
+          "name": "GenerateGit",
+          "startLine": 97,
+          "endLine": 143,
+          "methods": [
+            "GetPackageXmlFiles",
+            "Execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Execute",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateVs",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateGitlab",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateVsCode",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateGit",
+          "line": 97,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly().GetManifestResourceStream",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly().GetManifestResourceStream",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Execute",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Execute",
+          "callee": "output.EndsWith",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Execute",
+          "callee": "output.EndsWith",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Execute",
+          "callee": "Directory.Exists",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Execute",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 67
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly().GetManifestResourceStream",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Execute",
+          "callee": "ReplaceInTemplate",
+          "lineNumber": 73
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 73
+        },
+        {
+          "caller": "Execute",
+          "callee": "TryGetNamespace",
+          "lineNumber": 73
+        },
+        {
+          "caller": "Execute",
+          "callee": "Directory.GetFiles",
+          "lineNumber": 74
+        },
+        {
+          "caller": "Execute",
+          "callee": "tapPlans.Count",
+          "lineNumber": 75
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 77
+        },
+        {
+          "caller": "Execute",
+          "callee": "Regex.Replace",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.GetFullPath(tapPlans.First()).Substring(Path.GetFullPath(WorkingDirectory).Length + 1).Replace",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.GetFullPath(tapPlans.First()).Substring",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Execute",
+          "callee": "tapPlans.First",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 81
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 84
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly().GetManifestResourceStream",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 89
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 90
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 90
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 90
+        },
+        {
+          "caller": "GetPackageXmlFiles",
+          "callee": "root.GetFiles",
+          "lineNumber": 102
+        },
+        {
+          "caller": "GetPackageXmlFiles",
+          "callee": "root.GetDirectories().Where",
+          "lineNumber": 107
+        },
+        {
+          "caller": "GetPackageXmlFiles",
+          "callee": "root.GetDirectories",
+          "lineNumber": 107
+        },
+        {
+          "caller": "GetPackageXmlFiles",
+          "callee": "include",
+          "lineNumber": 107
+        },
+        {
+          "caller": "GetPackageXmlFiles",
+          "callee": "GetPackageXmlFiles",
+          "lineNumber": 109
+        },
+        {
+          "caller": "Execute",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 117
+        },
+        {
+          "caller": "Execute",
+          "callee": "Path.Combine",
+          "lineNumber": 117
+        },
+        {
+          "caller": "Execute",
+          "callee": "new FileInfo",
+          "lineNumber": 118
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly().GetManifestResourceStream",
+          "lineNumber": 120
+        },
+        {
+          "caller": "Execute",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 120
+        },
+        {
+          "caller": "Execute",
+          "callee": "new StreamReader",
+          "lineNumber": 121
+        },
+        {
+          "caller": "Execute",
+          "callee": "GetPackageXmlFiles",
+          "lineNumber": 123
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 126
+        },
+        {
+          "caller": "Execute",
+          "callee": "new OverrideRequest",
+          "lineNumber": 128
+        },
+        {
+          "caller": "Execute",
+          "callee": "UserInput.Request",
+          "lineNumber": 129
+        },
+        {
+          "caller": "Execute",
+          "callee": "File.ReadAllText",
+          "lineNumber": 133
+        },
+        {
+          "caller": "Execute",
+          "callee": "Regex.Replace",
+          "lineNumber": 134
+        },
+        {
+          "caller": "Execute",
+          "callee": "File.WriteAllText",
+          "lineNumber": 135
+        },
+        {
+          "caller": "Execute",
+          "callee": "WriteFile",
+          "lineNumber": 138
+        },
+        {
+          "caller": "Execute",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 138
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 5,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 150,
+      "nonEmptyLines": 124,
+      "functions": [
+        {
+          "name": "Validate",
+          "startLine": 17,
+          "endLine": 54,
+          "params": [
+            "name",
+            "allowWhiteSpace",
+            "allowLeadingNumbers",
+            "allowAlphaNumericOnly"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 74,
+          "endLine": 74,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "WriteFile",
+          "startLine": 76,
+          "endLine": 100,
+          "params": [
+            "filepath",
+            "content",
+            "force"
+          ]
+        },
+        {
+          "name": "TryGetNamespace",
+          "startLine": 102,
+          "endLine": 123,
+          "params": []
+        },
+        {
+          "name": "ReplaceInTemplate",
+          "startLine": 125,
+          "endLine": 135,
+          "params": [
+            "content"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "GenerateType",
+          "startLine": 15,
+          "endLine": 136,
+          "methods": [
+            "Validate",
+            "Execute",
+            "WriteFile",
+            "TryGetNamespace",
+            "ReplaceInTemplate"
+          ],
+          "properties": [
+            "log",
+            "output",
+            "workingDirectory",
+            "WorkingDirectory"
+          ]
+        },
+        {
+          "name": "OverrideRequest",
+          "startLine": 138,
+          "endLine": 143,
+          "methods": [],
+          "properties": [
+            "Override"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "log",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "output",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "WriteFile",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "GenerateType",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "Override",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "OverrideRequest",
+          "line": 138,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Validate",
+          "callee": "Path.GetInvalidFileNameChars",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Validate",
+          "callee": "new StringBuilder",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Validate",
+          "callee": "char.IsNumber",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Validate",
+          "callee": "sb.Append",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Validate",
+          "callee": "invalid.Contains",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Validate",
+          "callee": "char.IsWhiteSpace",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Validate",
+          "callee": "char.IsLetterOrDigit",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Validate",
+          "callee": "sb.Append",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Validate",
+          "callee": "sb.Append",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Validate",
+          "callee": "log.Error",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Validate",
+          "callee": "sb.ToString",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Validate",
+          "callee": "log.Error",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Validate",
+          "callee": "hint.PadLeft",
+          "lineNumber": 52
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "File.Exists",
+          "lineNumber": 78
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "log.Error",
+          "lineNumber": 80
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "Path.GetFileName",
+          "lineNumber": 80
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "log.Info",
+          "lineNumber": 81
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "new OverrideRequest",
+          "lineNumber": 83
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "UserInput.Request",
+          "lineNumber": 84
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "log.Info",
+          "lineNumber": 88
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "Directory.Exists",
+          "lineNumber": 93
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 93
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 93
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 93
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 94
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 94
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "File.WriteAllText",
+          "lineNumber": 96
+        },
+        {
+          "caller": "WriteFile",
+          "callee": "log.Info",
+          "lineNumber": 97
+        },
+        {
+          "caller": "TryGetNamespace",
+          "callee": "output.EndsWith",
+          "lineNumber": 107
+        },
+        {
+          "caller": "TryGetNamespace",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 108
+        },
+        {
+          "caller": "TryGetNamespace",
+          "callee": "Directory.GetFiles",
+          "lineNumber": 110
+        },
+        {
+          "caller": "TryGetNamespace",
+          "callee": "csprojFiles.FirstOrDefault",
+          "lineNumber": 111
+        },
+        {
+          "caller": "TryGetNamespace",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 113
+        },
+        {
+          "caller": "TryGetNamespace",
+          "callee": "Regex.Match",
+          "lineNumber": 115
+        },
+        {
+          "caller": "TryGetNamespace",
+          "callee": "File.ReadAllText",
+          "lineNumber": 115
+        },
+        {
+          "caller": "TryGetNamespace",
+          "callee": "Path.GetFileNameWithoutExtension",
+          "lineNumber": 119
+        },
+        {
+          "caller": "TryGetNamespace",
+          "callee": "new Exception",
+          "lineNumber": 122
+        },
+        {
+          "caller": "ReplaceInTemplate",
+          "callee": "Regex.Replace",
+          "lineNumber": 127
+        },
+        {
+          "caller": "ReplaceInTemplate",
+          "callee": "int.TryParse",
+          "lineNumber": 129
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 5,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/NewPackageReference.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 175,
+      "nonEmptyLines": 147,
+      "functions": [
+        {
+          "name": "Execute",
+          "startLine": 34,
+          "endLine": 155,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "get_csproj",
+          "startLine": 157,
+          "endLine": 173,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "NewPackageReference",
+          "startLine": 11,
+          "endLine": 174,
+          "methods": [
+            "Execute",
+            "get_csproj"
+          ],
+          "properties": [
+            "PackageName",
+            "Version",
+            "Project",
+            "PackageRepository",
+            "NoReference",
+            "Configuration",
+            "log"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PackageName",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "Version",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "Project",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "PackageRepository",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "NoReference",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "Configuration",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "NewPackageReference",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Execute",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Error",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Execute",
+          "callee": "new HttpPackageRepository",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Execute",
+          "callee": "new PackageSpecifier",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Execute",
+          "callee": "VersionSpecifier.Parse",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Execute",
+          "callee": "repo.GetPackages(spec, TapThread.Current.AbortToken).FirstOrDefault",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Execute",
+          "callee": "repo.GetPackages",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Error",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Execute",
+          "callee": "pkg.Version.ToString",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Execute",
+          "callee": "get_csproj",
+          "lineNumber": 63
+        },
+        {
+          "caller": "Execute",
+          "callee": "File.Exists",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Error",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Execute",
+          "callee": "XDocument.Load",
+          "lineNumber": 75
+        },
+        {
+          "caller": "Execute",
+          "callee": "document.Element",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Execute",
+          "callee": "projectXml.Elements",
+          "lineNumber": 80
+        },
+        {
+          "caller": "Execute",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Execute",
+          "callee": "itemGroups.Where",
+          "lineNumber": 84
+        },
+        {
+          "caller": "Execute",
+          "callee": "grp.Attribute",
+          "lineNumber": 84
+        },
+        {
+          "caller": "Execute",
+          "callee": "grp.Elements(\"OpenTapPackageReference\")\n                    .Where(elem => string.Equals(elem.Attribute(\"Reference\")?.Value ?? \"True\", (!NoReference).ToString(), StringComparison.OrdinalIgnoreCase))\n                    .FirstOrDefault",
+          "lineNumber": 90
+        },
+        {
+          "caller": "Execute",
+          "callee": "grp.Elements(\"OpenTapPackageReference\")\n                    .Where",
+          "lineNumber": 90
+        },
+        {
+          "caller": "Execute",
+          "callee": "grp.Elements",
+          "lineNumber": 90
+        },
+        {
+          "caller": "Execute",
+          "callee": "string.Equals",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Execute",
+          "callee": "elem.Attribute",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Execute",
+          "callee": "(!NoReference).ToString",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Execute",
+          "callee": "elem.Attribute",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Execute",
+          "callee": "existingElem.Attribute",
+          "lineNumber": 97
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 106
+        },
+        {
+          "caller": "Execute",
+          "callee": "grp.Elements(\"OpenTapPackageReference\").Any",
+          "lineNumber": 123
+        },
+        {
+          "caller": "Execute",
+          "callee": "grp.Elements",
+          "lineNumber": 123
+        },
+        {
+          "caller": "Execute",
+          "callee": "new XElement",
+          "lineNumber": 132
+        },
+        {
+          "caller": "Execute",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 133
+        },
+        {
+          "caller": "Execute",
+          "callee": "itemGroupXml.Add",
+          "lineNumber": 136
+        },
+        {
+          "caller": "Execute",
+          "callee": "new XAttribute",
+          "lineNumber": 136
+        },
+        {
+          "caller": "Execute",
+          "callee": "itemGroupXml.Add",
+          "lineNumber": 138
+        },
+        {
+          "caller": "Execute",
+          "callee": "itemGroupXml.Add",
+          "lineNumber": 139
+        },
+        {
+          "caller": "Execute",
+          "callee": "projectXml.Add",
+          "lineNumber": 140
+        },
+        {
+          "caller": "Execute",
+          "callee": "projectXml.Add",
+          "lineNumber": 141
+        },
+        {
+          "caller": "Execute",
+          "callee": "projectXml.Add",
+          "lineNumber": 142
+        },
+        {
+          "caller": "Execute",
+          "callee": "projectXml.Add",
+          "lineNumber": 143
+        },
+        {
+          "caller": "Execute",
+          "callee": "itemGroupXml.Add",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Execute",
+          "callee": "itemGroupXml.Add",
+          "lineNumber": 147
+        },
+        {
+          "caller": "Execute",
+          "callee": "XElement.Parse",
+          "lineNumber": 147
+        },
+        {
+          "caller": "Execute",
+          "callee": "itemGroupXml.Add",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Execute",
+          "callee": "itemGroupXml.Add",
+          "lineNumber": 149
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 150
+        },
+        {
+          "caller": "Execute",
+          "callee": "document.Save",
+          "lineNumber": 153
+        },
+        {
+          "caller": "get_csproj",
+          "callee": "Directory.GetFiles(Directory.GetCurrentDirectory(), \"*.csproj\").ToArray",
+          "lineNumber": 159
+        },
+        {
+          "caller": "get_csproj",
+          "callee": "Directory.GetFiles",
+          "lineNumber": 159
+        },
+        {
+          "caller": "get_csproj",
+          "callee": "Directory.GetCurrentDirectory",
+          "lineNumber": 159
+        },
+        {
+          "caller": "get_csproj",
+          "callee": "log.Error",
+          "lineNumber": 162
+        },
+        {
+          "caller": "get_csproj",
+          "callee": "log.Error",
+          "lineNumber": 168
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/OpenTap.Sdk.New.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 17,
+      "nonEmptyLines": 15,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/ResXWriter.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "ResXWriter",
+          "startLine": 14,
+          "endLine": 17,
+          "params": [
+            "filename"
+          ]
+        },
+        {
+          "name": "AddResource",
+          "startLine": 19,
+          "endLine": 28,
+          "params": [
+            "name",
+            "d"
+          ]
+        },
+        {
+          "name": "AddResource",
+          "startLine": 30,
+          "endLine": 33,
+          "params": [
+            "name",
+            "value"
+          ]
+        },
+        {
+          "name": "Generate",
+          "startLine": 35,
+          "endLine": 51,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ResXWriter",
+          "startLine": 9,
+          "endLine": 52,
+          "methods": [
+            "ResXWriter",
+            "AddResource",
+            "AddResource",
+            "Generate"
+          ],
+          "properties": [
+            "keys",
+            "filename"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ResXWriter",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "AddResource",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "AddResource",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "Generate",
+          "line": 35,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AddResource",
+          "callee": "d.ToString",
+          "lineNumber": 21
+        },
+        {
+          "caller": "AddResource",
+          "callee": "double.Parse",
+          "lineNumber": 22
+        },
+        {
+          "caller": "AddResource",
+          "callee": "d.ToString",
+          "lineNumber": 25
+        },
+        {
+          "caller": "AddResource",
+          "callee": "AddResource",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Generate",
+          "callee": "new XDocument",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Generate",
+          "callee": "new XElement",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Generate",
+          "callee": "document.Add",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Generate",
+          "callee": "keys.OrderBy",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Generate",
+          "callee": "new XElement",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Generate",
+          "callee": "ele.SetAttributeValue",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Generate",
+          "callee": "ele.SetAttributeValue",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Generate",
+          "callee": "ele.Add",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Generate",
+          "callee": "new XElement",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Generate",
+          "callee": "root.Add",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Generate",
+          "callee": "document.Save",
+          "lineNumber": 50
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    }
+  ]
+}

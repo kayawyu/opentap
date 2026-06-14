@@ -1,0 +1,733 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/Resource.cs",
+      "type": "file",
+      "name": "Resource.cs",
+      "filePath": "Engine/Resource.cs",
+      "summary": "定义资源（Resource）抽象基类和MetaDataAttribute元数据属性，为OpenTAP仪器资源提供Open/Close/OnActivity生命周期抽象。",
+      "tags": [
+        "resource-management",
+        "engine",
+        "core"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/ResourceDependencyAnalyzer.cs",
+      "type": "file",
+      "name": "ResourceDependencyAnalyzer.cs",
+      "filePath": "Engine/ResourceDependencyAnalyzer.cs",
+      "summary": "实现资源依赖图分析器，构建ResourceNode依赖树并通过Tarjan强连通分量算法检测循环依赖。",
+      "tags": [
+        "resource-management",
+        "dependency-analysis",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/ResourceTaskManager.cs",
+      "type": "file",
+      "name": "ResourceTaskManager.cs",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "summary": "实现资源任务管理系统，含ResourceTaskManager（同步版）和LazyResourceManager（惰性版），编排资源的异步打开/关闭全生命周期。",
+      "tags": [
+        "resource-management",
+        "task-management",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Resource.cs:Resource",
+      "type": "class",
+      "name": "Resource",
+      "filePath": "Engine/Resource.cs",
+      "lineRange": [
+        16,
+        125
+      ],
+      "summary": "资源抽象基类，定义Open/Close/OnActivity生命周期方法、IsConnected状态和Log日志实例。",
+      "tags": [
+        "resource-management",
+        "core"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Resource.cs:MetaDataAttribute",
+      "type": "class",
+      "name": "MetaDataAttribute",
+      "filePath": "Engine/Resource.cs",
+      "lineRange": [
+        133,
+        196
+      ],
+      "summary": "元数据自定义属性，标记结果参数的元信息：分组（Group）、名称（Name）、是否冻结（Frozen）、宏名称等。",
+      "tags": [
+        "attribute",
+        "core"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ResourceDependencyAnalyzer.cs:ResourceNode",
+      "type": "class",
+      "name": "ResourceNode",
+      "filePath": "Engine/ResourceDependencyAnalyzer.cs",
+      "lineRange": [
+        15,
+        54
+      ],
+      "summary": "资源依赖图节点，存储资源的强弱依赖引用（StrongDependencies/WeakDependencies）及依赖者信息。",
+      "tags": [
+        "resource-management",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ResourceDependencyAnalyzer.cs:ResourceDependencyAnalyzer",
+      "type": "class",
+      "name": "ResourceDependencyAnalyzer",
+      "filePath": "Engine/ResourceDependencyAnalyzer.cs",
+      "lineRange": [
+        57,
+        342
+      ],
+      "summary": "资源依赖图分析器，构建依赖树、展开传递依赖、通过Tarjan算法检测强连通分量（循环依赖）。",
+      "tags": [
+        "resource-management",
+        "algorithm"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ResourceTaskManager.cs:ResourceOpenAttribute",
+      "type": "class",
+      "name": "ResourceOpenAttribute",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        39,
+        55
+      ],
+      "summary": "资源打开行为属性，指定资源的打开策略，含Behavior属性控制并行/先于执行方式。",
+      "tags": [
+        "attribute",
+        "resource-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ResourceTaskManager.cs:IResourceManager",
+      "type": "class",
+      "name": "IResourceManager",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        89,
+        138
+      ],
+      "summary": "资源管理器接口，声明BeginStep/EndStep方法和资源集合属性，是资源生命周期管理的核心契约。",
+      "tags": [
+        "interface",
+        "manager",
+        "resource-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ResourceTaskManager.cs:ResourceManagerUtils",
+      "type": "class",
+      "name": "ResourceManagerUtils",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        143,
+        207
+      ],
+      "summary": "资源管理器工具静态类，提供GetResourceNodes和GetResourceNodesNoCache缓存感知方法。",
+      "tags": [
+        "manager",
+        "resource-management"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ResourceTaskManager.cs:ResourceTaskManager",
+      "type": "class",
+      "name": "ResourceTaskManager",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        213,
+        546
+      ],
+      "summary": "资源任务管理器实现，通过Task机制编排资源的异步打开/关闭全生命周期，含错误传播和超时处理。",
+      "tags": [
+        "manager",
+        "resource-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ResourceTaskManager.cs:LazyResourceManager",
+      "type": "class",
+      "name": "LazyResourceManager",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        552,
+        1000
+      ],
+      "summary": "惰性资源管理器，延迟初始化资源依赖，通过请求-锁机制（RequestResourceOpen/Close）控制资源的并发安全访问。",
+      "tags": [
+        "manager",
+        "resource-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/Resource.cs:OnActivity",
+      "type": "function",
+      "name": "OnActivity",
+      "filePath": "Engine/Resource.cs",
+      "lineRange": [
+        99,
+        105
+      ],
+      "summary": "函数 OnActivity，7 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Resource.cs:GetMetaDataParameters",
+      "type": "function",
+      "name": "GetMetaDataParameters",
+      "filePath": "Engine/Resource.cs",
+      "lineRange": [
+        189,
+        195
+      ],
+      "summary": "函数 GetMetaDataParameters，7 行，参数: obj。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResourceDependencyAnalyzer.cs:GetResourceTree",
+      "type": "function",
+      "name": "GetResourceTree",
+      "filePath": "Engine/ResourceDependencyAnalyzer.cs",
+      "lineRange": [
+        131,
+        166
+      ],
+      "summary": "构建资源依赖树，从初始资源集合出发广度优先遍历所有强弱依赖关系。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResourceDependencyAnalyzer.cs:ExpandTree",
+      "type": "function",
+      "name": "ExpandTree",
+      "filePath": "Engine/ResourceDependencyAnalyzer.cs",
+      "lineRange": [
+        168,
+        192
+      ],
+      "summary": "展开资源依赖树，将传递性依赖关系递归添加到每个节点的强依赖列表中。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResourceDependencyAnalyzer.cs:StrongConnect",
+      "type": "function",
+      "name": "StrongConnect",
+      "filePath": "Engine/ResourceDependencyAnalyzer.cs",
+      "lineRange": [
+        204,
+        241
+      ],
+      "summary": "Tarjan强连通分量算法递归实现，用于检测资源依赖图中的循环依赖关系。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResourceDependencyAnalyzer.cs:FindStronglyConnectedComponents",
+      "type": "function",
+      "name": "FindStronglyConnectedComponents",
+      "filePath": "Engine/ResourceDependencyAnalyzer.cs",
+      "lineRange": [
+        243,
+        257
+      ],
+      "summary": "查找资源依赖图中的所有强连通分量，使用Tarjan算法检测并报告循环依赖。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResourceDependencyAnalyzer.cs:GetAllResources",
+      "type": "function",
+      "name": "GetAllResources",
+      "filePath": "Engine/ResourceDependencyAnalyzer.cs",
+      "lineRange": [
+        264,
+        341
+      ],
+      "summary": "综合分析所有资源引用，构建依赖树、展开传递依赖、检测强连通分量，报告循环依赖错误。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:GetResourceNodes",
+      "type": "function",
+      "name": "GetResourceNodes",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        187,
+        206
+      ],
+      "summary": "函数 GetResourceNodes，20 行，参数: _source。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:OpenResource",
+      "type": "function",
+      "name": "OpenResource",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        240,
+        292
+      ],
+      "summary": "异步打开单个资源，等待强依赖资源就绪后打开目标资源，然后触发弱依赖资源的异步打开。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:WaitUntilResourcesOpened",
+      "type": "function",
+      "name": "WaitUntilResourcesOpened",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        297,
+        326
+      ],
+      "summary": "等待指定资源集合全部打开完成，处理finally任务队列和异常传播。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:CloseAllResources",
+      "type": "function",
+      "name": "CloseAllResources",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        354,
+        418
+      ],
+      "summary": "按依赖顺序逆序关闭所有已打开资源，确保强依赖资源最后关闭，含超时和异常处理。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:BeginOpenResources",
+      "type": "function",
+      "name": "BeginOpenResources",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        420,
+        469
+      ],
+      "summary": "初始化资源批量打开流程，检查依赖关系合法性、过滤已存活资源并启动异步打开任务。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:BeginStep",
+      "type": "function",
+      "name": "BeginStep",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        478,
+        520
+      ],
+      "summary": "函数 BeginStep，43 行，参数: planRun, item, stage, cancellationToken。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:EndStep",
+      "type": "function",
+      "name": "EndStep",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        527,
+        545
+      ],
+      "summary": "函数 EndStep，19 行，参数: item, stage。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:OpenResources",
+      "type": "function",
+      "name": "OpenResources",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        735,
+        752
+      ],
+      "summary": "函数 OpenResources，18 行，参数: toOpen, cancellationToken。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:BeginStep#803",
+      "type": "function",
+      "name": "BeginStep",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        803,
+        903
+      ],
+      "summary": "函数 BeginStep，101 行，参数: planRun, item, stage, cancellationToken。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:EndStep#910",
+      "type": "function",
+      "name": "EndStep",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        910,
+        936
+      ],
+      "summary": "函数 EndStep，27 行，参数: item, stage。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResourceTaskManager.cs:WaitFor",
+      "type": "function",
+      "name": "WaitFor",
+      "filePath": "Engine/ResourceTaskManager.cs",
+      "lineRange": [
+        938,
+        963
+      ],
+      "summary": "函数 WaitFor，26 行，参数: cancellationToken, targets。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/Resource.cs",
+      "target": "class:Engine/Resource.cs:Resource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Resource.cs",
+      "target": "class:Engine/Resource.cs:Resource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Resource.cs",
+      "target": "class:Engine/Resource.cs:MetaDataAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Resource.cs",
+      "target": "class:Engine/Resource.cs:MetaDataAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Resource.cs",
+      "target": "function:Engine/Resource.cs:OnActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Resource.cs",
+      "target": "function:Engine/Resource.cs:OnActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Resource.cs",
+      "target": "function:Engine/Resource.cs:GetMetaDataParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Resource.cs",
+      "target": "function:Engine/Resource.cs:GetMetaDataParameters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResourceDependencyAnalyzer.cs",
+      "target": "class:Engine/ResourceDependencyAnalyzer.cs:ResourceNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceDependencyAnalyzer.cs",
+      "target": "class:Engine/ResourceDependencyAnalyzer.cs:ResourceDependencyAnalyzer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceDependencyAnalyzer.cs",
+      "target": "function:Engine/ResourceDependencyAnalyzer.cs:GetResourceTree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceDependencyAnalyzer.cs",
+      "target": "function:Engine/ResourceDependencyAnalyzer.cs:ExpandTree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceDependencyAnalyzer.cs",
+      "target": "function:Engine/ResourceDependencyAnalyzer.cs:StrongConnect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceDependencyAnalyzer.cs",
+      "target": "function:Engine/ResourceDependencyAnalyzer.cs:FindStronglyConnectedComponents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceDependencyAnalyzer.cs",
+      "target": "function:Engine/ResourceDependencyAnalyzer.cs:GetAllResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "class:Engine/ResourceTaskManager.cs:ResourceOpenAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "class:Engine/ResourceTaskManager.cs:ResourceOpenAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "class:Engine/ResourceTaskManager.cs:IResourceManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "class:Engine/ResourceTaskManager.cs:IResourceManager",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "class:Engine/ResourceTaskManager.cs:ResourceManagerUtils",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "class:Engine/ResourceTaskManager.cs:ResourceTaskManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "class:Engine/ResourceTaskManager.cs:LazyResourceManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:GetResourceNodes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:GetResourceNodes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:OpenResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:WaitUntilResourcesOpened",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:WaitUntilResourcesOpened",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:CloseAllResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:BeginOpenResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:BeginStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:BeginStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:EndStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:EndStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:OpenResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:BeginStep#803",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:BeginStep#803",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:EndStep#910",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:EndStep#910",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "function:Engine/ResourceTaskManager.cs:WaitFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

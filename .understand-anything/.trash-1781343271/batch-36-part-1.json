@@ -1,0 +1,1063 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package.UnitTests/Packages/DependencyTest.dll",
+      "type": "file",
+      "name": "DependencyTest.dll",
+      "filePath": "Package.UnitTests/Packages/DependencyTest.dll",
+      "summary": "用于包依赖检查测试的 DLL 二进制测试夹具文件。",
+      "tags": [
+        "binary",
+        "test-fixture",
+        "dll"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/Packages/FromXmlFile_NonDllFile/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "Package.UnitTests/Packages/FromXmlFile_NonDllFile/package.xml",
+      "summary": "包含非 DLL 文件（XML 文件）的包清单，用于测试 FromXmlFile 对非 DLL 文件的处理。",
+      "tags": [
+        "package-manifest",
+        "test-fixture",
+        "xml",
+        "non-dll"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/Packages/Package_NoBinFiles/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "Package.UnitTests/Packages/Package_NoBinFiles/package.xml",
+      "summary": "无二进制文件的包清单，仅包含一个 XML 文件引用，用于测试无 DLL 包场景。",
+      "tags": [
+        "package-manifest",
+        "test-fixture",
+        "xml",
+        "no-binaries"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/Packages/Package_sign/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "Package.UnitTests/Packages/Package_sign/package.xml",
+      "summary": "包含 OpenTap.dll 的签名示例包清单，使用旧版 Keysight XML 命名空间，用于包签名测试。",
+      "tags": [
+        "package-manifest",
+        "test-fixture",
+        "xml",
+        "signing",
+        "legacy-namespace"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/Packages/Package/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "Package.UnitTests/Packages/Package/package.xml",
+      "summary": "标准包清单，包含版本号、OpenTAP 依赖声明、SetAssemblyInfo 指令、依赖忽略规则及包安装扩展动作（chmod）。",
+      "tags": [
+        "package-manifest",
+        "test-fixture",
+        "xml",
+        "dependencies",
+        "assembly-info",
+        "action-extensions"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/Packages/PackagePluginOrder/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "Package.UnitTests/Packages/PackagePluginOrder/package.xml",
+      "summary": "定义带有 Order 属性（值为 9.58）的插件 TestPlugin（基于 BaseTestPlugin），用于测试插件排序功能。",
+      "tags": [
+        "package-manifest",
+        "test-fixture",
+        "xml",
+        "plugin-order"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/Packages/SetAsmInfoTest.dll",
+      "type": "file",
+      "name": "SetAsmInfoTest.dll",
+      "filePath": "Package.UnitTests/Packages/SetAsmInfoTest.dll",
+      "summary": "用于 SetAssemblyInfo 测试的 DLL 二进制测试夹具文件。",
+      "tags": [
+        "binary",
+        "test-fixture",
+        "dll",
+        "assembly-info"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/Packages/Test.package.xml",
+      "type": "config",
+      "name": "Test.package.xml",
+      "filePath": "Package.UnitTests/Packages/Test.package.xml",
+      "summary": "使用旧版 Keysight TAP Package XML 命名空间的包清单，以属性形式定义文件配置（Obfuscate/UseVersion），用于旧格式兼容性测试。",
+      "tags": [
+        "package-manifest",
+        "test-fixture",
+        "xml",
+        "legacy-format"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/Packages/test1/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "Package.UnitTests/Packages/test1/package.xml",
+      "summary": "测试包系列中的第一个包清单（Test1 v1.2.3+4），包含单个 nunit.framework.dll 文件引用。",
+      "tags": [
+        "package-manifest",
+        "test-fixture",
+        "xml",
+        "test-series"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/Packages/XSeries/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "Package.UnitTests/Packages/XSeries/package.xml",
+      "summary": "复杂的 X 系列信号分析仪包清单（v2.4.0），包含两个 DLL 共 15 个插件定义，涵盖信号分析、信号源、调制分析等多种仪器步骤。",
+      "tags": [
+        "package-manifest",
+        "test-fixture",
+        "xml",
+        "complex-plugins",
+        "signal-analyzer",
+        "x-series"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/PackageSlashTests.cs",
+      "type": "file",
+      "name": "PackageSlashTests.cs",
+      "filePath": "Package.UnitTests/PackageSlashTests.cs",
+      "summary": "测试包路径中正斜杠（slash）处理的单元测试类，覆盖包创建、下载、安装、验证内容和卸载的完整生命周期。",
+      "tags": [
+        "test",
+        "package-lifecycle",
+        "slash-handling",
+        "package-action"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package.UnitTests/PackageTestTest.cs",
+      "type": "file",
+      "name": "PackageTestTest.cs",
+      "filePath": "Package.UnitTests/PackageTestTest.cs",
+      "summary": "测试 'tap package test' 命令行功能的单元测试类，包括日志解析、进程执行、日志继承和失败测试场景。",
+      "tags": [
+        "test",
+        "package-test-command",
+        "log-parsing",
+        "subprocess"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "type": "file",
+      "name": "PackageXmlPreprocessorTests.cs",
+      "filePath": "Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "summary": "测试包 XML 预处理器的单元测试类，验证条件展开、XML 元素处理及 Pedantic 模式下未定义变量的异常行为。",
+      "tags": [
+        "test",
+        "xml-preprocessor",
+        "condition-expansion",
+        "package-xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package.UnitTests/PackageSlashTests.cs:PackageSlashTests",
+      "type": "class",
+      "name": "PackageSlashTests",
+      "filePath": "Package.UnitTests/PackageSlashTests.cs",
+      "lineRange": [
+        9,
+        202
+      ],
+      "summary": "测试包斜杠（正斜杠/反斜杠）处理的 NUnit 测试夹具类，覆盖包的创建、下载、安装、验证及卸载的完整流程。",
+      "tags": [
+        "test-class",
+        "package-lifecycle",
+        "slash-handling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package.UnitTests/PackageTestTest.cs:PackageTestTest",
+      "type": "class",
+      "name": "PackageTestTest",
+      "filePath": "Package.UnitTests/PackageTestTest.cs",
+      "lineRange": [
+        9,
+        205
+      ],
+      "summary": "测试 'tap package test' 命令行功能的 NUnit 测试夹具类，包含日志解析工具方法和多种测试场景。",
+      "tags": [
+        "test-class",
+        "cli-testing",
+        "log-parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package.UnitTests/PackageXmlPreprocessorTests.cs:PackageXmlPreprocessorTests",
+      "type": "class",
+      "name": "PackageXmlPreprocessorTests",
+      "filePath": "Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "lineRange": [
+        9,
+        160
+      ],
+      "summary": "测试包 XML 预处理器和条件展开器的 NUnit 测试夹具类。",
+      "tags": [
+        "test-class",
+        "xml-preprocessor",
+        "condition-expansion"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageSlashTests.cs:VerifyContent",
+      "type": "function",
+      "name": "VerifyContent",
+      "filePath": "Package.UnitTests/PackageSlashTests.cs",
+      "lineRange": [
+        12,
+        33
+      ],
+      "summary": "通过 Path.Combine 构建文件路径，对比文件存在性与预期值，验证包内容是否正确安装/卸载。",
+      "tags": [
+        "test-helper",
+        "file-verification"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageSlashTests.cs:SlashTests",
+      "type": "function",
+      "name": "SlashTests",
+      "filePath": "Package.UnitTests/PackageSlashTests.cs",
+      "lineRange": [
+        59,
+        71
+      ],
+      "summary": "包斜杠处理的集成测试入口，串联创建、验证、下载、安装、验证已安装和卸载六个步骤。",
+      "tags": [
+        "test",
+        "integration-test",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageSlashTests.cs:CreateTestPackage",
+      "type": "function",
+      "name": "CreateTestPackage",
+      "filePath": "Package.UnitTests/PackageSlashTests.cs",
+      "lineRange": [
+        72,
+        91
+      ],
+      "summary": "创建测试包文件，使用 PackageCreateAction 打包并验证输出路径。",
+      "tags": [
+        "test",
+        "package-creation",
+        "setup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageSlashTests.cs:VerifyPackageContent",
+      "type": "function",
+      "name": "VerifyPackageContent",
+      "filePath": "Package.UnitTests/PackageSlashTests.cs",
+      "lineRange": [
+        93,
+        104
+      ],
+      "summary": "将包解压到临时目录并递归验证内容结构。",
+      "tags": [
+        "test",
+        "content-verification"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageSlashTests.cs:DownloadPackage",
+      "type": "function",
+      "name": "DownloadPackage",
+      "filePath": "Package.UnitTests/PackageSlashTests.cs",
+      "lineRange": [
+        107,
+        150
+      ],
+      "summary": "测试包下载功能，分别通过包名称和文件路径两种方式下载并验证完整性。",
+      "tags": [
+        "test",
+        "package-download"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageSlashTests.cs:InstallPackage",
+      "type": "function",
+      "name": "InstallPackage",
+      "filePath": "Package.UnitTests/PackageSlashTests.cs",
+      "lineRange": [
+        152,
+        177
+      ],
+      "summary": "测试包安装流程，验证文件从包中正确解压到目标目录。",
+      "tags": [
+        "test",
+        "package-installation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageSlashTests.cs:VerifyInstalled",
+      "type": "function",
+      "name": "VerifyInstalled",
+      "filePath": "Package.UnitTests/PackageSlashTests.cs",
+      "lineRange": [
+        179,
+        183
+      ],
+      "summary": "通过 Installation API 验证包已成功安装到系统中。",
+      "tags": [
+        "test",
+        "installation-verification"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageSlashTests.cs:UninstallPackage",
+      "type": "function",
+      "name": "UninstallPackage",
+      "filePath": "Package.UnitTests/PackageSlashTests.cs",
+      "lineRange": [
+        185,
+        201
+      ],
+      "summary": "测试包卸载流程，验证卸载后文件被清理且不再存在于安装目录。",
+      "tags": [
+        "test",
+        "package-uninstall"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageTestTest.cs:RunTest",
+      "type": "function",
+      "name": "RunTest",
+      "filePath": "Package.UnitTests/PackageTestTest.cs",
+      "lineRange": [
+        30,
+        60
+      ],
+      "summary": "启动子进程执行 tap package test 命令，配置工作目录和参数，等待进程完成并捕获标准输出/错误。",
+      "tags": [
+        "test-helper",
+        "subprocess-execution",
+        "complex"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageTestTest.cs:InstallTestPackage",
+      "type": "function",
+      "name": "InstallTestPackage",
+      "filePath": "Package.UnitTests/PackageTestTest.cs",
+      "lineRange": [
+        62,
+        79
+      ],
+      "summary": "通过子进程调用 tap package install 命令预安装测试所需的包文件。",
+      "tags": [
+        "test-helper",
+        "package-install",
+        "setup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageTestTest.cs:AddTestElement",
+      "type": "function",
+      "name": "AddTestElement",
+      "filePath": "Package.UnitTests/PackageTestTest.cs",
+      "lineRange": [
+        92,
+        107
+      ],
+      "summary": "编辑 TapPlan 测试计划文件，在正确位置插入测试元素步骤定义。",
+      "tags": [
+        "test-helper",
+        "xml-editing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageTestTest.cs:PackageTestTest",
+      "type": "function",
+      "name": "PackageTestTest",
+      "filePath": "Package.UnitTests/PackageTestTest.cs",
+      "lineRange": [
+        120,
+        125
+      ],
+      "summary": "测试夹具的 SetUp 方法，依次执行安装测试包、备份和还原操作。",
+      "tags": [
+        "test",
+        "setup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageTestTest.cs:BasicTest",
+      "type": "function",
+      "name": "BasicTest",
+      "filePath": "Package.UnitTests/PackageTestTest.cs",
+      "lineRange": [
+        127,
+        135
+      ],
+      "summary": "基本的 tap package test 功能测试，验证测试结果包含预期日志消息。",
+      "tags": [
+        "test",
+        "smoke-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageTestTest.cs:EchoTest",
+      "type": "function",
+      "name": "EchoTest",
+      "filePath": "Package.UnitTests/PackageTestTest.cs",
+      "lineRange": [
+        137,
+        156
+      ],
+      "summary": "测试 echo 步骤的详细输出解析，分别在普通和 verbose 模式下验证日志消息内容。",
+      "tags": [
+        "test",
+        "log-parsing",
+        "echo"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageTestTest.cs:LogInheritTest",
+      "type": "function",
+      "name": "LogInheritTest",
+      "filePath": "Package.UnitTests/PackageTestTest.cs",
+      "lineRange": [
+        158,
+        189
+      ],
+      "summary": "验证子进程日志能正确继承父进程日志格式（时间戳、源名称、日志级别等），并在 verbose 模式下验证版本信息。",
+      "tags": [
+        "test",
+        "log-inheritance",
+        "verbose"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageTestTest.cs:FailingTest",
+      "type": "function",
+      "name": "FailingTest",
+      "filePath": "Package.UnitTests/PackageTestTest.cs",
+      "lineRange": [
+        191,
+        204
+      ],
+      "summary": "测试失败的包测试场景，验证错误消息包含预期内容且退出码非零。",
+      "tags": [
+        "test",
+        "failure-scenario"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:TestPreprocessXml",
+      "type": "function",
+      "name": "TestPreprocessXml",
+      "filePath": "Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "lineRange": [
+        12,
+        92
+      ],
+      "summary": "XML 预处理器的核心测试，创建临时文件、解析 XML、执行预处理器并验证元素移除、命名空间保持和文件包含等行为。",
+      "tags": [
+        "test",
+        "xml-preprocessor",
+        "core-test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:ConditionExpanderTest",
+      "type": "function",
+      "name": "ConditionExpanderTest",
+      "filePath": "Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "lineRange": [
+        94,
+        116
+      ],
+      "summary": "测试 ConditionExpander 对相等和不相等条件的展开结果。",
+      "tags": [
+        "test",
+        "condition-expander",
+        "equality"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:ConditionExpanderTest2",
+      "type": "function",
+      "name": "ConditionExpanderTest2",
+      "filePath": "Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "lineRange": [
+        118,
+        130
+      ],
+      "summary": "测试 ConditionExpander 对复杂字符串条件表达式的展开结果。",
+      "tags": [
+        "test",
+        "condition-expander",
+        "string-expression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:DefaultExpanderThrowsIfPedanticTest",
+      "type": "function",
+      "name": "DefaultExpanderThrowsIfPedanticTest",
+      "filePath": "Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "lineRange": [
+        133,
+        159
+      ],
+      "summary": "验证 Pedantic 模式下未定义变量会抛出异常并包含关键错误信息。",
+      "tags": [
+        "test",
+        "pedantic-mode",
+        "error-handling"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "class:Package.UnitTests/PackageSlashTests.cs:PackageSlashTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "class:Package.UnitTests/PackageTestTest.cs:PackageTestTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "class:Package.UnitTests/PackageXmlPreprocessorTests.cs:PackageXmlPreprocessorTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:SlashTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:CreateTestPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyPackageContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:DownloadPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:InstallPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyInstalled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:UninstallPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:RunTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:InstallTestPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:AddTestElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:PackageTestTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:BasicTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:EchoTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:LogInheritTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:FailingTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:TestPreprocessXml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:ConditionExpanderTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:ConditionExpanderTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:DefaultExpanderThrowsIfPedanticTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:SlashTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:CreateTestPackage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyPackageContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:DownloadPackage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:InstallPackage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyInstalled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:UninstallPackage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:PackageTestTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:BasicTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:EchoTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:LogInheritTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:FailingTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:TestPreprocessXml",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:ConditionExpanderTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:ConditionExpanderTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "function:Package.UnitTests/PackageXmlPreprocessorTests.cs:DefaultExpanderThrowsIfPedanticTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "class:Package.UnitTests/PackageSlashTests.cs:PackageSlashTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageTestTest.cs",
+      "target": "class:Package.UnitTests/PackageTestTest.cs:PackageTestTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "class:Package.UnitTests/PackageXmlPreprocessorTests.cs:PackageXmlPreprocessorTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PackageXmlPreprocessorTests.cs",
+      "target": "config:Package.UnitTests/Packages/Package/package.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/PackageSlashTests.cs",
+      "target": "config:Package.UnitTests/Packages/Package/package.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:Package.UnitTests/PackageSlashTests.cs:SlashTests",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:CreateTestPackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageSlashTests.cs:SlashTests",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyPackageContent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageSlashTests.cs:SlashTests",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:DownloadPackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageSlashTests.cs:SlashTests",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:InstallPackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageSlashTests.cs:SlashTests",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyInstalled",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageSlashTests.cs:SlashTests",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:UninstallPackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageSlashTests.cs:VerifyPackageContent",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyContent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageSlashTests.cs:InstallPackage",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyContent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageSlashTests.cs:UninstallPackage",
+      "target": "function:Package.UnitTests/PackageSlashTests.cs:VerifyContent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:PackageTestTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:InstallTestPackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:PackageTestTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:Backup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:PackageTestTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:Restore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:BasicTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:Restore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:BasicTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:RunTest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:EchoTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:Restore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:EchoTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:AddTestElement",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:EchoTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:RunTest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:EchoTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:ParseStdout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:LogInheritTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:Restore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:LogInheritTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:AddTestElement",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:LogInheritTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:RunTest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:LogInheritTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:ParseStdout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:FailingTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:Restore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:FailingTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:AddTestElement",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Package.UnitTests/PackageTestTest.cs:FailingTest",
+      "target": "function:Package.UnitTests/PackageTestTest.cs:RunTest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

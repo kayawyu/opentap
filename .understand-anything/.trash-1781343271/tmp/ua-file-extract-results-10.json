@@ -1,0 +1,45 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "doc/API Documentation/DoxygenLayout.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 194,
+      "nonEmptyLines": 189,
+      "metrics": {}
+    },
+    {
+      "path": "doc/API Documentation/doxyfile.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 88,
+      "nonEmptyLines": 71,
+      "metrics": {}
+    },
+    {
+      "path": "doc/API Documentation/doxyfile.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 8,
+      "nonEmptyLines": 4,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "doc/API Documentation/doxyfile_footer.html",
+      "language": "html",
+      "fileCategory": "markup",
+      "totalLines": 5,
+      "nonEmptyLines": 5,
+      "metrics": {}
+    }
+  ]
+}

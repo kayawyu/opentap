@@ -1,0 +1,595 @@
+{
+  "nodes": [
+    {
+      "id": "pipeline:.github/workflows/ci.yml",
+      "type": "pipeline",
+      "name": "ci.yml",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "OpenTAP 的主 CI/CD 流水线，涵盖版本获取、跨平台构建（Windows/Linux/MacOS）、单元测试、回归测试、文档生成、多平台打包、签名、Docker 镜像构建、安装器编译以及 NuGet/TapPackage 发布的全流程自动化。",
+      "tags": ["ci-cd", "deployment", "testing", "packaging", "docker"],
+      "complexity": "complex",
+      "languageNotes": "YAML GitHub Actions workflow，包含 29 个 Job，涵盖构建、测试、打包、签名、发布和 SDK 验证全过程，使用矩阵策略覆盖多平台与多架构。"
+    },
+    {
+      "id": "pipeline:.github/workflows/issue-in-project.yml",
+      "type": "pipeline",
+      "name": "issue-in-project.yml",
+      "filePath": ".github/workflows/issue-in-project.yml",
+      "summary": "在 Issue 被关闭时自动将其添加到指定的 GitHub Project 面板的「Needs Verification」列，用于问题追踪与验收流程。",
+      "tags": ["ci-cd", "issue-tracking", "automation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "pipeline:.github/workflows/pages.yml",
+      "type": "pipeline",
+      "name": "pages.yml",
+      "filePath": ".github/workflows/pages.yml",
+      "summary": "手动触发的文档站点构建与部署流水线，生成 Doxygen API 文档和 VitePress 静态站点，并部署到 opentap.github.io 仓库。",
+      "tags": ["ci-cd", "documentation", "deployment", "vitePress"],
+      "complexity": "moderate",
+      "languageNotes": "YAML GitHub Actions workflow，通过 workflow_dispatch 手动触发，包含 CheckSecrets、Build-ApiDoc 和 Build-Pages 三个 Job。"
+    },
+    {
+      "id": "pipeline:.github/workflows/pr-comment.yml",
+      "type": "pipeline",
+      "name": "pr-comment.yml",
+      "filePath": ".github/workflows/pr-comment.yml",
+      "summary": "在 main 分支推送时自动在关联的 PR 上评论，标注本次变更所属的 OpenTAP 版本号，用于版本追溯与变更追踪。",
+      "tags": ["ci-cd", "pr-automation", "versioning"],
+      "complexity": "simple"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:GetVersion",
+      "type": "step",
+      "name": "GetVersion",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "使用 opentap/get-gitversion action 计算并输出 ShortVersion、LongVersion 和 GitVersion，同时输出 Docker 镜像版本的 SmartInstallerVersion，为下游所有 Job 提供统一的版本号。",
+      "tags": ["versioning", "git", "build-dependency"],
+      "complexity": "simple"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:CheckSecrets",
+      "type": "step",
+      "name": "CheckSecrets",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "检查 GitLab Registry Token、KS8500 Repo Token 以及签名相关 Secrets 是否已配置，输出布尔标志供后续条件 Job 使用。",
+      "tags": ["security", "secret-check", "build-dependency"],
+      "complexity": "simple"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Build-DevGuide",
+      "type": "step",
+      "name": "Build-DevGuide",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "使用 OpenTAP 的 tap CLI 工具将开发者指南 Markdown 文件转换为 PDF 格式，生成带目录和封面页的文档。",
+      "tags": ["build", "documentation", "pdf-generator"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Build-ApiDoc",
+      "type": "step",
+      "name": "Build-ApiDoc",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "使用 Doxygen 从源码生成 API 参考文档，并将 HTML 输出打包为 CHM（Windows 帮助文件）格式。",
+      "tags": ["build", "documentation", "doxygen", "api-reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Build-Pages",
+      "type": "step",
+      "name": "Build-Pages",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "使用 VitePress 构建文档静态站点，合并 Doxygen API 文档，并在标签推送时通过 peaceiris/actions-gh-pages 部署到 opentap.github.io 仓库。",
+      "tags": ["build", "documentation", "vitePress", "deployment"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Build-Linux",
+      "type": "step",
+      "name": "Build-Linux",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 Linux 容器中使用 .NET 10.0 构建并发布 OpenTAP 核心项目（tap、Engine、Package、BasicSteps），确保 netstandard2.0 依赖不被覆写。",
+      "tags": ["build", "dotnet", "linux", "publishing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Build-Win",
+      "type": "step",
+      "name": "Build-Win",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 Windows 自托管 Runner 上使用矩阵策略（x86/x64/arm64）构建 OpenTAP 项目，通过 dotnet build 生成各架构的二进制文件。",
+      "tags": ["build", "dotnet", "windows", "multi-architecture"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Build-MacOS",
+      "type": "step",
+      "name": "Build-MacOS",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 macOS 14 Runner 上使用 .NET 10.0 构建并发布 OpenTAP 项目，生成 macOS 平台的二进制文件。",
+      "tags": ["build", "dotnet", "macos", "publishing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:TestEngine",
+      "type": "step",
+      "name": "TestEngine",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 Windows 上运行 Engine 单元测试（OpenTap.UnitTests.dll），带超时挂起检测和失败重试机制，失败时上传测试结果。",
+      "tags": ["testing", "unit-test", "engine", "retry"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:TestPackage",
+      "type": "step",
+      "name": "TestPackage",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 Windows 上运行 Package 模块的单元测试（OpenTap.Package.UnitTests.dll），使用 vstest 执行器并设置 10 分钟会话超时。",
+      "tags": ["testing", "unit-test", "package"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:TestWindowsPlan",
+      "type": "step",
+      "name": "TestWindowsPlan",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 Windows 上运行回归测试计划（regression.TapPlan），通过 tap.exe 执行验证端到端流程，失败时上传生成的项目文件。",
+      "tags": ["testing", "regression-test", "windows", "e2e"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:TestLinuxPlan",
+      "type": "step",
+      "name": "TestLinuxPlan",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 Linux 容器中运行回归测试计划，安装模板包并执行 tap run 验证端到端流程。",
+      "tags": ["testing", "regression-test", "linux", "e2e"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:TestMacPlan",
+      "type": "step",
+      "name": "TestMacPlan",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 macOS Runner 上运行回归测试计划，安装模板包并执行 tap run 验证端到端流程。",
+      "tags": ["testing", "regression-test", "macos", "e2e"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Package-Win",
+      "type": "step",
+      "name": "Package-Win",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 Windows 上为各架构（x86/x64/arm64）创建已签名的 TapPackage，包含从 S3 缓存下载签名工具、安装签名证书并执行 tap package create 的完整流程。",
+      "tags": ["packaging", "signing", "windows", "multi-architecture"],
+      "complexity": "complex"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Package-Cross",
+      "type": "step",
+      "name": "Package-Cross",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 Linux 容器中为跨平台目标（MacOS x64/arm64 和 Linux x64/arm/arm64）创建未签名的 TapPackage，使用矩阵策略覆盖五种组合。",
+      "tags": ["packaging", "cross-platform", "linux", "macos"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Package-Templates",
+      "type": "step",
+      "name": "Package-Templates",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "构建并打包 OpenTAP 项目模板的 NuGet 包（.nupkg），为 SDK 和回归测试提供模板文件。",
+      "tags": ["packaging", "templates", "nuget", "sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Package-SDK",
+      "type": "step",
+      "name": "Package-SDK",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "构建 OpenTAP SDK TapPackage，整合开发者指南、API 参考文档、项目模板和示例代码为一个可分发的 SDK 包。",
+      "tags": ["packaging", "sdk", "documentation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Package-Diff",
+      "type": "step",
+      "name": "Package-Diff",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "使用 Package Diff 插件对 Linux x64 TapPackage 执行差异分析，验证包结构的一致性。",
+      "tags": ["packaging", "diff", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Package-NuGet",
+      "type": "step",
+      "name": "Package-NuGet",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "将各平台的 TapPackage 解压并重新打包为 NuGet 包（.nupkg），包含运行时文件（win-x64/x86、linux-x64/arm64、macos-x64/arm64）和 SDK MSBuild 目标。",
+      "tags": ["packaging", "nuget", "cross-platform"],
+      "complexity": "complex"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Build-Installer-Windows",
+      "type": "step",
+      "name": "Build-Installer-Windows",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "使用 SmartInstaller Docker 镜像创建 Windows 安装程序（setup.exe），整合 Windows TapPackage 和 SDK 包。",
+      "tags": ["packaging", "installer", "windows", "docker"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Publish-Installer-Windows",
+      "type": "step",
+      "name": "Publish-Installer-Windows",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "将 Windows 安装程序发布到 packages.opentap.io 和 Artifactory 存档服务器。",
+      "tags": ["deployment", "publishing", "installer", "windows"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Build-Installer-Linux",
+      "type": "step",
+      "name": "Build-Installer-Linux",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "使用 SmartInstaller Docker 镜像创建 Linux 安装程序包，整合 Linux TapPackage 和 SDK 包。",
+      "tags": ["packaging", "installer", "linux", "docker"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Publish-Installer-Linux",
+      "type": "step",
+      "name": "Publish-Installer-Linux",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "将 Linux 安装程序包发布到 packages.opentap.io 和 Artifactory 存档服务器。",
+      "tags": ["deployment", "publishing", "installer", "linux"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Docker-Linux",
+      "type": "step",
+      "name": "Docker-Linux",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "构建并推送 OpenTAP Docker 镜像到 Docker Hub（opentapio/opentap），覆盖 production、development 和 production-hardened 三种目标，根据分支自动分配 alpha/beta/rc/release 标签。",
+      "tags": ["docker", "containerization", "publishing", "multi-target"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Publish-NuGet",
+      "type": "step",
+      "name": "Publish-NuGet",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "将 NuGet 包发布到 nuget.org，使用 nuget push 推送到公共 NuGet 仓库。",
+      "tags": ["deployment", "publishing", "nuget"],
+      "complexity": "simple"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Publish-Templates",
+      "type": "step",
+      "name": "Publish-Templates",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "将项目模板 NuGet 包发布到 nuget.org，使用 dotnet nuget push 推送。",
+      "tags": ["deployment", "publishing", "templates", "nuget"],
+      "complexity": "simple"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Publish-TapPackages",
+      "type": "step",
+      "name": "Publish-TapPackages",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "将各平台 TapPackage 批量上传到 packages.opentap.io 仓库，使用 Repository Client 插件支持并行上传和跳过已存在的包。",
+      "tags": ["deployment", "publishing", "tap-package", "repository"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Build-SDK-Linux",
+      "type": "step",
+      "name": "Build-SDK-Linux",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 Linux 上验证 SDK 包的构建可用性——解压 SDK TapPackage、配置本地 NuGet 源并使用 Debug 和 Release 配置构建示例项目。",
+      "tags": ["build", "sdk", "validation", "linux"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/ci.yml:Build-SDK-Windows",
+      "type": "step",
+      "name": "Build-SDK-Windows",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "在 Windows 上验证 SDK 包的构建可用性——解压 SDK TapPackage、配置本地 NuGet 源并使用 Debug、Debug CE 和 Release 配置构建示例项目。",
+      "tags": ["build", "sdk", "validation", "windows"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/issue-in-project.yml:issue-in-project",
+      "type": "step",
+      "name": "issue-in-project",
+      "filePath": ".github/workflows/issue-in-project.yml",
+      "summary": "当 Issue 关闭时，调用 ghcr.io/asgeriversen/issue-in-project 容器自动将 Issue 添加到项目面板的「Needs Verification」列。",
+      "tags": ["automation", "issue-tracking", "project-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "step:.github/workflows/pages.yml:CheckSecrets",
+      "type": "step",
+      "name": "CheckSecrets",
+      "filePath": ".github/workflows/pages.yml",
+      "summary": "检查 GITLAB_REGISTRY_TOKEN 和签名相关 Secrets 是否已配置，输出布尔标志作为后续 Job 的条件判断。",
+      "tags": ["security", "secret-check"],
+      "complexity": "simple"
+    },
+    {
+      "id": "step:.github/workflows/pages.yml:Build-ApiDoc",
+      "type": "step",
+      "name": "Build-ApiDoc",
+      "filePath": ".github/workflows/pages.yml",
+      "summary": "在 GitLab Registry 的 Doxygen 容器中生成 API 参考文档，输出 CHM 和 HTML 两种格式。",
+      "tags": ["build", "documentation", "doxygen", "api-reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/pages.yml:Build-Pages",
+      "type": "step",
+      "name": "Build-Pages",
+      "filePath": ".github/workflows/pages.yml",
+      "summary": "使用 VitePress 构建文档静态站点，整合 API 文档，并通过 peaceiris/actions-gh-pages 部署到 opentap.github.io 外部仓库。",
+      "tags": ["build", "documentation", "vitePress", "deployment"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:.github/workflows/pr-comment.yml:pr-version-comment",
+      "type": "step",
+      "name": "pr-version-comment",
+      "filePath": ".github/workflows/pr-comment.yml",
+      "summary": "在 main 分支推送后，调用 ghcr.io/asgeriversen/pr-version-comment 容器自动在关联 PR 和 Issue 上评论当前版本号信息。",
+      "tags": ["automation", "pr-comment", "versioning"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:GetVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:CheckSecrets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Build-DevGuide",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Build-ApiDoc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Build-Pages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Build-Linux",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Build-Win",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Build-MacOS",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:TestEngine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:TestPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:TestWindowsPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:TestLinuxPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:TestMacPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Package-Win",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Package-Cross",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Package-Templates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Package-SDK",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Package-Diff",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Package-NuGet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Build-Installer-Windows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Publish-Installer-Windows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Build-Installer-Linux",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Publish-Installer-Linux",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Docker-Linux",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Publish-NuGet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Publish-Templates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Publish-TapPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Build-SDK-Linux",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yml",
+      "target": "step:.github/workflows/ci.yml:Build-SDK-Windows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/issue-in-project.yml",
+      "target": "step:.github/workflows/issue-in-project.yml:issue-in-project",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/pages.yml",
+      "target": "step:.github/workflows/pages.yml:CheckSecrets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/pages.yml",
+      "target": "step:.github/workflows/pages.yml:Build-ApiDoc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/pages.yml",
+      "target": "step:.github/workflows/pages.yml:Build-Pages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/pr-comment.yml",
+      "target": "step:.github/workflows/pr-comment.yml:pr-version-comment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "pipeline:.github/workflows/pages.yml",
+      "target": "pipeline:.github/workflows/ci.yml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

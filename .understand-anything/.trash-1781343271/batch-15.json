@@ -1,0 +1,149 @@
+{
+  "nodes": [
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/CliActionTemplate.txt",
+      "type": "config",
+      "name": "CliActionTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/CliActionTemplate.txt",
+      "summary": "OpenTAP CLI 动作类的 C# 代码模板，实现 ICliAction 接口，使用 {0} 和 {1} 占位符分别替换命名空间和类名。",
+      "tags": ["scaffolding", "code-template", "cli", "csharp", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/Directory.Build.props.txt",
+      "type": "config",
+      "name": "Directory.Build.props.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/Directory.Build.props.txt",
+      "summary": "MSBuild Directory.Build.props 模板，设置 OpenTAP 版本占位符、禁用自动 AssemblyInfo 生成，并配置输出路径以支持插件构建。",
+      "tags": ["scaffolding", "msbuild", "build-system", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/DutTemplate.txt",
+      "type": "config",
+      "name": "DutTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/DutTemplate.txt",
+      "summary": "OpenTAP 被测设备（DUT）类的 C# 代码模板，继承 Dut 基类，包含 Open/Close 连接方法框架和 Settings 区域占位符。",
+      "tags": ["scaffolding", "code-template", "dut", "csharp", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/GitVersionTemplate.txt",
+      "type": "config",
+      "name": "GitVersionTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/GitVersionTemplate.txt",
+      "summary": "GitVersion 配置文件模板，定义语义化版本号、beta 分支、release 分支和 release tag 的正则匹配规则，用于 tap sdk gitversion 命令的版本计算。",
+      "tags": ["scaffolding", "versioning", "git", "configuration", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/InstrumentTemplate.txt",
+      "type": "config",
+      "name": "InstrumentTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/InstrumentTemplate.txt",
+      "summary": "OpenTAP 仪器驱动类的 C# 代码模板，继承 Instrument 基类，包含 Open/Close 连接方法、IDN 校验注释示例和 Settings 区域占位符。",
+      "tags": ["scaffolding", "code-template", "instrument", "csharp", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/PackageXmlTemplate.txt",
+      "type": "config",
+      "name": "PackageXmlTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/PackageXmlTemplate.txt",
+      "summary": "OpenTAP 包定义 XML 模板（package.xml），使用 {0}/{1} 占位符定义包名、版本、描述和 DLL 文件映射，支持 $(GitVersion) 宏自动版本计算。",
+      "tags": ["scaffolding", "package-definition", "xml", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/ResultListenerTemplate.txt",
+      "type": "config",
+      "name": "ResultListenerTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/ResultListenerTemplate.txt",
+      "summary": "OpenTAP 结果监听器类的 C# 代码模板，继承 ResultListener 基类，包含 Open/Close 资源管理方法和 Settings 区域占位符。",
+      "tags": ["scaffolding", "code-template", "result-listener", "csharp", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/SettingsTemplate.txt",
+      "type": "config",
+      "name": "SettingsTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/SettingsTemplate.txt",
+      "summary": "OpenTAP 组件设置类的 C# 代码模板，继承 ComponentSettings<T>，包含带 DisplayAttribute 的示例布尔属性，展示如何在 GUI 中注册可配置设置项。",
+      "tags": ["scaffolding", "code-template", "settings", "csharp", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/TapPlanTemplate.txt",
+      "type": "config",
+      "name": "TapPlanTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/TapPlanTemplate.txt",
+      "summary": "OpenTAP TestPlan XML 模板，定义 TestPlan 根元素和 Steps 容器，使用 {0} 占位符插入测试步骤内容。",
+      "tags": ["scaffolding", "test-plan", "xml", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/TestStepTemplate.txt",
+      "type": "config",
+      "name": "TestStepTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/TestStepTemplate.txt",
+      "summary": "OpenTAP 测试步骤类的 C# 代码模板，继承 TestStep 基类，包含 PrePlanRun/Run/PostPlanRun 生命周期方法框架和子步骤调用示例。",
+      "tags": ["scaffolding", "code-template", "test-step", "csharp", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/csprojTemplate.txt",
+      "type": "config",
+      "name": "csprojTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/csprojTemplate.txt",
+      "summary": "MSBuild .csproj 项目文件模板，目标框架为 net9，引用 OpenTAP NuGet 包，支持在 Release 配置下自动创建 OpenTAP 包（.TapPackage）。",
+      "tags": ["scaffolding", "msbuild", "project-file", "build-system", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/gitlabCiTemplate.txt",
+      "type": "config",
+      "name": "gitlabCiTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/gitlabCiTemplate.txt",
+      "summary": "GitLab CI 流水线模板，包含 BuildAndPackage（构建并打包 .TapPackage）和 Publish（手动触发发布）两个阶段，使用 opentapio Docker 镜像。",
+      "tags": ["scaffolding", "ci-cd", "gitlab", "pipeline", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/launchTemplate.txt",
+      "type": "config",
+      "name": "launchTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/launchTemplate.txt",
+      "summary": "VS Code launch.json 调试配置模板，提供 .NET Framework（clr）和 .NET Core（coreclr）两种调试器配置，用于调试 tap run 命令执行测试计划。",
+      "tags": ["scaffolding", "debugging", "vscode", "configuration", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/newProjectSlnTemplate.txt",
+      "type": "config",
+      "name": "newProjectSlnTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/newProjectSlnTemplate.txt",
+      "summary": "Visual Studio 解决方案 .sln 模板文件，使用 {0} 占位符替换项目名称、{1} 占位符替换项目 GUID，定义 Debug/Release 的 Any CPU 平台配置。",
+      "tags": ["scaffolding", "solution-file", "visual-studio", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/slnTemplate.txt",
+      "type": "config",
+      "name": "slnTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/slnTemplate.txt",
+      "summary": "Visual Studio 解决方案 .sln 模板文件，使用 {0} 占位符替换项目名称，采用固定 GUID 作为项目标识，定义 Debug/Release Any CPU 平台配置。",
+      "tags": ["scaffolding", "solution-file", "visual-studio", "opentap-sdk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/Resources/tasksTemplate.txt",
+      "type": "config",
+      "name": "tasksTemplate.txt",
+      "filePath": "sdk/OpenTap.Sdk.New/Resources/tasksTemplate.txt",
+      "summary": "VS Code tasks.json 模板，定义 Build 和 Build Release 两个 dotnet build 任务，配置 MSBuild 问题匹配器用于 IDE 编译错误集成。",
+      "tags": ["scaffolding", "build-task", "vscode", "configuration", "opentap-sdk"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

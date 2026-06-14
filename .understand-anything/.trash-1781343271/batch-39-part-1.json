@@ -1,0 +1,565 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package/PackageAction.cs",
+      "type": "file",
+      "name": "PackageAction.cs",
+      "filePath": "Package/PackageAction.cs",
+      "summary": "定义包操作抽象基类 PackageAction（实现 ICliAction）及静态辅助类 PackageActionHelper，提供进度更新事件、错误事件、仓库令牌提取和预发布版本过滤等公共功能。",
+      "tags": [
+        "api-handler",
+        "abstract-class",
+        "package",
+        "cli-action",
+        "base-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageAction.cs:PackageAction",
+      "type": "class",
+      "name": "PackageAction",
+      "filePath": "Package/PackageAction.cs",
+      "lineRange": [
+        20,
+        161
+      ],
+      "summary": "包操作的抽象基类，实现 ICliAction 接口。提供日志、进度更新事件、错误事件及仓库令牌提取等公共基础设施，所有包 CLI 动作均直接或间接继承自此。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageAction.cs:PackageActionHelper",
+      "type": "class",
+      "name": "PackageActionHelper",
+      "filePath": "Package/PackageAction.cs",
+      "lineRange": [
+        163,
+        206
+      ],
+      "summary": "提供 PackageAction 的静态辅助方法，包括从 CLI 上下文执行任意包操作、按预发布标签过滤包列表以及记录程序集版本信息。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/PackageActionHelpers.cs",
+      "type": "file",
+      "name": "PackageActionHelpers.cs",
+      "filePath": "Package/PackageActionHelpers.cs",
+      "summary": "提供包操作的静态辅助方法：快速包解析、依赖与包定义收集、批量下载及规范文件名生成，是安装流程的核心工具类。",
+      "tags": [
+        "utility",
+        "package",
+        "dependency-resolution",
+        "download",
+        "helper"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageActionHelpers.cs:PackageActionHelpers",
+      "type": "class",
+      "name": "PackageActionHelpers",
+      "filePath": "Package/PackageActionHelpers.cs",
+      "lineRange": [
+        14,
+        357
+      ],
+      "summary": "包操作静态辅助类，提供包的快速解析、依赖与包定义收集、批量下载及规范文件名生成等核心工具方法。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/PackageActions/CacheAction.cs",
+      "type": "file",
+      "name": "CacheAction.cs",
+      "filePath": "Package/PackageActions/CacheAction.cs",
+      "summary": "包缓存管理 CLI 动作，清除本地包缓存目录中的所有缓存文件。",
+      "tags": [
+        "cli-action",
+        "package",
+        "cache",
+        "cleanup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageActions/CacheAction.cs:CacheAction",
+      "type": "class",
+      "name": "CacheAction",
+      "filePath": "Package/PackageActions/CacheAction.cs",
+      "lineRange": [
+        14,
+        30
+      ],
+      "summary": "清除本地包缓存目录的 CLI 动作，继承自 LockingPackageAction。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/PackageActions/Create.cs",
+      "type": "file",
+      "name": "Create.cs",
+      "filePath": "Package/PackageActions/Create.cs",
+      "summary": "包创建 CLI 动作，从工程目录或 XML 描述文件生成 .TapPackage 归档，处理文件路径、版本注入和依赖分析。",
+      "tags": [
+        "cli-action",
+        "package",
+        "create",
+        "build"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageActions/Create.cs:PackageCreateAction",
+      "type": "class",
+      "name": "PackageCreateAction",
+      "filePath": "Package/PackageActions/Create.cs",
+      "lineRange": [
+        19,
+        253
+      ],
+      "summary": "包创建 CLI 动作，从工程目录或 package.xml 生成 .TapPackage 归档，处理文件路径、版本注入和依赖分析。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/PackageActions/Download.cs",
+      "type": "file",
+      "name": "Download.cs",
+      "filePath": "Package/PackageActions/Download.cs",
+      "summary": "包下载 CLI 动作，从仓库解析并下载包及其依赖到本地输出路径，支持版本、架构和操作系统筛选。",
+      "tags": [
+        "cli-action",
+        "package",
+        "download",
+        "repository"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageActions/Download.cs:PackageDownloadAction",
+      "type": "class",
+      "name": "PackageDownloadAction",
+      "filePath": "Package/PackageActions/Download.cs",
+      "lineRange": [
+        15,
+        171
+      ],
+      "summary": "包下载 CLI 动作，从仓库解析并下载包及其依赖到本地输出路径。支持版本、架构、操作系统筛选和无缓存模式。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/PackageActions/ImageInstall.cs",
+      "type": "file",
+      "name": "ImageInstall.cs",
+      "filePath": "Package/PackageActions/ImageInstall.cs",
+      "summary": "镜像安装 CLI 动作，将 OpenTAP 部署镜像中的包集合并或复制到目标安装目录，支持 DryRun 预览模式。",
+      "tags": [
+        "cli-action",
+        "package",
+        "image",
+        "install",
+        "merge"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageActions/ImageInstall.cs:ImageInstallAction",
+      "type": "class",
+      "name": "ImageInstallAction",
+      "filePath": "Package/PackageActions/ImageInstall.cs",
+      "lineRange": [
+        11,
+        187
+      ],
+      "summary": "镜像安装 CLI 动作，将 OpenTAP 部署镜像中的包集合并或复制到目标安装目录，支持 DryRun 预览。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/PackageActions/Install.cs",
+      "type": "file",
+      "name": "Install.cs",
+      "filePath": "Package/PackageActions/Install.cs",
+      "summary": "包安装 CLI 动作，完整的安装流程包括依赖解析、下载、兼容性检查、覆盖控制、许可证验证和安装状态记录，是包管理器最核心的动作。",
+      "tags": [
+        "cli-action",
+        "package",
+        "install",
+        "dependency",
+        "main-action"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageActions/Install.cs:PackageInstallAction",
+      "type": "class",
+      "name": "PackageInstallAction",
+      "filePath": "Package/PackageActions/Install.cs",
+      "lineRange": [
+        18,
+        661
+      ],
+      "summary": "包安装 CLI 动作，完整的安装流程包括依赖解析、下载、兼容性检查、覆盖处理和许可证验证，是包管理器最核心的执行动作。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/PackageActions/IsolatedPackageAction.cs",
+      "type": "file",
+      "name": "IsolatedPackageAction.cs",
+      "filePath": "Package/PackageActions/IsolatedPackageAction.cs",
+      "summary": "隔离包操作抽象基类，继承自 LockingPackageAction，提供变更 ID 跟踪和隔离进程执行支持，用于需要覆盖运行时 DLL 的安装/卸载操作。",
+      "tags": [
+        "abstract-class",
+        "package",
+        "isolation",
+        "base-class",
+        "cli-action"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/PackageActions/IsolatedPackageAction.cs:IsolatedPackageAction",
+      "type": "class",
+      "name": "IsolatedPackageAction",
+      "filePath": "Package/PackageActions/IsolatedPackageAction.cs",
+      "lineRange": [
+        20,
+        143
+      ],
+      "summary": "隔离包操作抽象基类，继承自 LockingPackageAction，在隔离进程中执行变更操作以确保正在运行的 DLL 可被安全覆盖。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/PackageActions/List.cs",
+      "type": "file",
+      "name": "List.cs",
+      "filePath": "Package/PackageActions/List.cs",
+      "summary": "包列表 CLI 动作，查询仓库中可用或已安装的包及其版本，以 Markdown 表格格式输出，支持多种过滤条件。",
+      "tags": [
+        "cli-action",
+        "package",
+        "list",
+        "repository",
+        "query"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageActions/List.cs:PackageListAction",
+      "type": "class",
+      "name": "PackageListAction",
+      "filePath": "Package/PackageActions/List.cs",
+      "lineRange": [
+        11,
+        239
+      ],
+      "summary": "包列表 CLI 动作，查询仓库中可用或已安装的包，支持多种过滤条件并以 Markdown 表格等格式输出。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/PackageActions/LockingPackageAction.cs",
+      "type": "file",
+      "name": "LockingPackageAction.cs",
+      "filePath": "Package/PackageActions/LockingPackageAction.cs",
+      "summary": "带互斥锁的包操作抽象基类，继承自 PackageAction，通过命名 Mutex 确保同一安装目录下的包操作串行执行，防止并发冲突。",
+      "tags": [
+        "abstract-class",
+        "package",
+        "locking",
+        "base-class",
+        "concurrency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/PackageActions/LockingPackageAction.cs:LockingPackageAction",
+      "type": "class",
+      "name": "LockingPackageAction",
+      "filePath": "Package/PackageActions/LockingPackageAction.cs",
+      "lineRange": [
+        17,
+        155
+      ],
+      "summary": "带互斥锁的包操作抽象基类，继承自 PackageAction，通过命名 Mutex 确保同一安装目录下的操作串行化。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/PackageActions/PackageExitCodes.cs",
+      "type": "file",
+      "name": "PackageExitCodes.cs",
+      "filePath": "Package/PackageActions/PackageExitCodes.cs",
+      "summary": "定义包 CLI 操作的退出码枚举（范围 30-59），覆盖创建失败、无效定义、依赖错误、安装/卸载错误和 EULA 未接受等场景。",
+      "tags": [
+        "enum",
+        "package",
+        "exit-code",
+        "error-handling"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/PackageActions/Show.cs",
+      "type": "file",
+      "name": "Show.cs",
+      "filePath": "Package/PackageActions/Show.cs",
+      "summary": "包详情展示 CLI 动作，以 Markdown 格式输出包的元数据、依赖关系、文件列表和插件信息，支持离线模式。",
+      "tags": [
+        "cli-action",
+        "package",
+        "show",
+        "info",
+        "markdown"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/PackageActions/Show.cs:PackageShowAction",
+      "type": "class",
+      "name": "PackageShowAction",
+      "filePath": "Package/PackageActions/Show.cs",
+      "lineRange": [
+        14,
+        353
+      ],
+      "summary": "包详情展示 CLI 动作，显示包的元数据、依赖关系、包含的文件及插件信息，支持 Markdown 格式化输出。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/PackageActions/Test.cs",
+      "type": "file",
+      "name": "Test.cs",
+      "filePath": "Package/PackageActions/Test.cs",
+      "summary": "包测试 CLI 动作，检查指定包是否存在于安装目录中并报告存在性结果。",
+      "tags": [
+        "cli-action",
+        "package",
+        "test",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/PackageActions/Test.cs:PackageTestAction",
+      "type": "class",
+      "name": "PackageTestAction",
+      "filePath": "Package/PackageActions/Test.cs",
+      "lineRange": [
+        10,
+        54
+      ],
+      "summary": "包测试 CLI 动作，验证指定包是否存在于安装目录中并报告结果。",
+      "tags": [
+        "class",
+        "package"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package/PackageAction.cs",
+      "target": "class:Package/PackageAction.cs:PackageAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageAction.cs",
+      "target": "class:Package/PackageAction.cs:PackageAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageAction.cs",
+      "target": "class:Package/PackageAction.cs:PackageActionHelper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActionHelpers.cs",
+      "target": "class:Package/PackageActionHelpers.cs:PackageActionHelpers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/CacheAction.cs",
+      "target": "class:Package/PackageActions/CacheAction.cs:CacheAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/CacheAction.cs",
+      "target": "class:Package/PackageActions/CacheAction.cs:CacheAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageActions/Create.cs",
+      "target": "class:Package/PackageActions/Create.cs:PackageCreateAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/Create.cs",
+      "target": "class:Package/PackageActions/Create.cs:PackageCreateAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageActions/Download.cs",
+      "target": "class:Package/PackageActions/Download.cs:PackageDownloadAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/Download.cs",
+      "target": "class:Package/PackageActions/Download.cs:PackageDownloadAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageActions/ImageInstall.cs",
+      "target": "class:Package/PackageActions/ImageInstall.cs:ImageInstallAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/Install.cs",
+      "target": "class:Package/PackageActions/Install.cs:PackageInstallAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/Install.cs",
+      "target": "class:Package/PackageActions/Install.cs:PackageInstallAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageActions/IsolatedPackageAction.cs",
+      "target": "class:Package/PackageActions/IsolatedPackageAction.cs:IsolatedPackageAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/IsolatedPackageAction.cs",
+      "target": "class:Package/PackageActions/IsolatedPackageAction.cs:IsolatedPackageAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageActions/List.cs",
+      "target": "class:Package/PackageActions/List.cs:PackageListAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/List.cs",
+      "target": "class:Package/PackageActions/List.cs:PackageListAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageActions/LockingPackageAction.cs",
+      "target": "class:Package/PackageActions/LockingPackageAction.cs:LockingPackageAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/LockingPackageAction.cs",
+      "target": "class:Package/PackageActions/LockingPackageAction.cs:LockingPackageAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageActions/Show.cs",
+      "target": "class:Package/PackageActions/Show.cs:PackageShowAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/Show.cs",
+      "target": "class:Package/PackageActions/Show.cs:PackageShowAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/PackageActions/Test.cs",
+      "target": "class:Package/PackageActions/Test.cs:PackageTestAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/PackageActions/Test.cs",
+      "target": "class:Package/PackageActions/Test.cs:PackageTestAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

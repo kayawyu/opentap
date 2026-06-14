@@ -1,0 +1,222 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "docker/Linux/Dockerfile",
+      "language": "dockerfile",
+      "fileCategory": "infra",
+      "totalLines": 66,
+      "nonEmptyLines": 49,
+      "services": [
+        {
+          "name": "development",
+          "image": "mcr.microsoft.com/dotnet/sdk:9.0",
+          "ports": [],
+          "startLine": 1,
+          "endLine": 25
+        },
+        {
+          "name": "production",
+          "image": "mcr.microsoft.com/dotnet/runtime:9.0",
+          "ports": [],
+          "startLine": 26,
+          "endLine": 41
+        },
+        {
+          "name": "production-hardened",
+          "image": "production",
+          "ports": [],
+          "startLine": 42,
+          "endLine": 67
+        }
+      ],
+      "steps": [
+        {
+          "name": "FROM mcr.microsoft.com/dotnet/sdk:9.0 AS development",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "name": "RUN apt update",
+          "startLine": 4,
+          "endLine": 4
+        },
+        {
+          "name": "RUN apt upgrade -y",
+          "startLine": 5,
+          "endLine": 5
+        },
+        {
+          "name": "RUN apt install -y wget apt-transport-https libc6-dev libunwind8",
+          "startLine": 7,
+          "endLine": 7
+        },
+        {
+          "name": "RUN locale-gen en_US.UTF-8",
+          "startLine": 10,
+          "endLine": 10
+        },
+        {
+          "name": "COPY OpenTAP.Linux.TapPackage OpenTAP.Linux.TapPackage",
+          "startLine": 12,
+          "endLine": 12
+        },
+        {
+          "name": "RUN unzip OpenTAP.Linux.TapPackage -d /opt/tap",
+          "startLine": 13,
+          "endLine": 13
+        },
+        {
+          "name": "RUN chmod -R +w /opt/tap",
+          "startLine": 14,
+          "endLine": 14
+        },
+        {
+          "name": "RUN chmod +x /opt/tap/tap",
+          "startLine": 15,
+          "endLine": 15
+        },
+        {
+          "name": "ENV PATH=\"/opt/tap:${PATH}\"",
+          "startLine": 16,
+          "endLine": 16
+        },
+        {
+          "name": "ENV TAP_PATH=\"/opt/tap\"",
+          "startLine": 17,
+          "endLine": 17
+        },
+        {
+          "name": "RUN mkdir -p /root/.local/share/OpenTap",
+          "startLine": 18,
+          "endLine": 18
+        },
+        {
+          "name": "RUN echo 11111111-1111-1111-1111-111111111111 > /root/.local/sha",
+          "startLine": 19,
+          "endLine": 19
+        },
+        {
+          "name": "RUN tap -h",
+          "startLine": 22,
+          "endLine": 22
+        },
+        {
+          "name": "RUN tap package list -v",
+          "startLine": 23,
+          "endLine": 23
+        },
+        {
+          "name": "FROM mcr.microsoft.com/dotnet/runtime:9.0 AS production",
+          "startLine": 26,
+          "endLine": 26
+        },
+        {
+          "name": "COPY --from=development /opt/tap /opt/tap",
+          "startLine": 29,
+          "endLine": 29
+        },
+        {
+          "name": "RUN chmod -R +w /opt/tap",
+          "startLine": 31,
+          "endLine": 31
+        },
+        {
+          "name": "RUN chmod +x /opt/tap/tap",
+          "startLine": 32,
+          "endLine": 32
+        },
+        {
+          "name": "RUN apt-get update",
+          "startLine": 34,
+          "endLine": 34
+        },
+        {
+          "name": "RUN apt-get install -y --no-install-recommends libunwind8 curl g",
+          "startLine": 35,
+          "endLine": 35
+        },
+        {
+          "name": "RUN rm -rf /var/lib/apt/lists/*",
+          "startLine": 36,
+          "endLine": 36
+        },
+        {
+          "name": "ENV PATH=\"/opt/tap:${PATH}\"",
+          "startLine": 38,
+          "endLine": 38
+        },
+        {
+          "name": "ENV TAP_PATH=\"/opt/tap\"",
+          "startLine": 39,
+          "endLine": 39
+        },
+        {
+          "name": "FROM production AS production-hardened",
+          "startLine": 42,
+          "endLine": 42
+        },
+        {
+          "name": "ARG USER=opentap UID=1001 GROUP=opentap GID=1001 DUMMYSHELL=/bin",
+          "startLine": 47,
+          "endLine": 47
+        },
+        {
+          "name": "ARG HOMEDIR=/home/${USER}",
+          "startLine": 48,
+          "endLine": 48
+        },
+        {
+          "name": "ARG OPENTAP_CACHE=${HOMEDIR}/.local/share/OpenTap",
+          "startLine": 49,
+          "endLine": 49
+        },
+        {
+          "name": "RUN groupadd --gid=$GID $GROUP && \\",
+          "startLine": 50,
+          "endLine": 50
+        },
+        {
+          "name": "WORKDIR $TAP_PATH",
+          "startLine": 56,
+          "endLine": 56
+        },
+        {
+          "name": "RUN chown --recursive \"${UID}:${GID}\" .",
+          "startLine": 57,
+          "endLine": 57
+        },
+        {
+          "name": "RUN chmod --recursive u=rwx,g=rwx,o= .",
+          "startLine": 58,
+          "endLine": 58
+        },
+        {
+          "name": "ENTRYPOINT [ \"tap\" ]",
+          "startLine": 60,
+          "endLine": 60
+        },
+        {
+          "name": "VOLUME $OPENTAP_CACHE",
+          "startLine": 63,
+          "endLine": 63
+        },
+        {
+          "name": "USER $UID",
+          "startLine": 66,
+          "endLine": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "serviceCount": 3,
+        "stepCount": 35
+      }
+    }
+  ]
+}

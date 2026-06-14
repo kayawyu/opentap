@@ -1,0 +1,55 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "tests/test-cli-environment-variables.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "config",
+      "totalLines": 133,
+      "nonEmptyLines": 133,
+      "metrics": {}
+    },
+    {
+      "path": "tests/test-cli-load-plan-with-error.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "config",
+      "totalLines": 19,
+      "nonEmptyLines": 19,
+      "metrics": {}
+    },
+    {
+      "path": "tests/test-install-package.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "config",
+      "totalLines": 64,
+      "nonEmptyLines": 64,
+      "metrics": {}
+    },
+    {
+      "path": "tests/test-piped-input.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "config",
+      "totalLines": 124,
+      "nonEmptyLines": 124,
+      "metrics": {}
+    },
+    {
+      "path": "tests/test-sdk-templates.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "config",
+      "totalLines": 176,
+      "nonEmptyLines": 176,
+      "metrics": {}
+    },
+    {
+      "path": "tests/verdictPlan.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "config",
+      "totalLines": 16,
+      "nonEmptyLines": 16,
+      "metrics": {}
+    }
+  ]
+}

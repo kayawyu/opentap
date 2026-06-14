@@ -1,0 +1,807 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/TestCliActions/TestSigterm.cs",
+      "type": "file",
+      "name": "TestSigterm.cs",
+      "filePath": "Engine.UnitTests/TestCliActions/TestSigterm.cs",
+      "summary": "供 CLI 测试使用的 SIGTERM 信号处理 ICliAction 实现，通过 AbortToken 等待机制验证进程终止信号能否被正确捕获和处理。",
+      "tags": [
+        "cli",
+        "sigterm",
+        "abort",
+        "signal-handling",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestCliActions/TestSigterm.cs:SigtermAction",
+      "type": "class",
+      "name": "SigtermAction",
+      "filePath": "Engine.UnitTests/TestCliActions/TestSigterm.cs",
+      "lineRange": [
+        7,
+        30
+      ],
+      "summary": "测试 SIGTERM 信号的 ICliAction 实现，通过 AbortToken 等待机制验证信号处理。",
+      "tags": [
+        "cli",
+        "sigterm",
+        "signal-handling",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestCliActions/TestSigterm.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Engine.UnitTests/TestCliActions/TestSigterm.cs",
+      "lineRange": [
+        11,
+        29
+      ],
+      "summary": "ICliAction 入口：注册 AbortToken 处理器后等待信号触发（10 秒超时），验证 SIGTERM 信号处理。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestCliActions/TestSudoCli.cs",
+      "type": "file",
+      "name": "TestSudoCli.cs",
+      "filePath": "Engine.UnitTests/TestCliActions/TestSudoCli.cs",
+      "summary": "供 CLI 测试使用的 Sudo 权限提升 ICliAction 实现，验证跨平台（Linux/macOS）的 SudoHelper 认证流程，Windows 上预期抛出异常。",
+      "tags": [
+        "cli",
+        "sudo",
+        "authentication",
+        "cross-platform",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestCliActions/TestSudoCli.cs:TestSudoCli",
+      "type": "class",
+      "name": "TestSudoCli",
+      "filePath": "Engine.UnitTests/TestCliActions/TestSudoCli.cs",
+      "lineRange": [
+        7,
+        36
+      ],
+      "summary": "测试 Sudo 权限提升的 ICliAction 实现，跨平台验证 SudoHelper 认证流程。",
+      "tags": [
+        "cli",
+        "sudo",
+        "authentication",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestCliActions/TestSudoCli.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Engine.UnitTests/TestCliActions/TestSudoCli.cs",
+      "lineRange": [
+        12,
+        35
+      ],
+      "summary": "ICliAction 入口：Windows 上直接抛出异常，Linux/macOS 上通过 SudoHelper 执行认证流程。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "type": "file",
+      "name": "TestPlanBreakRequestedTests.cs",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "summary": "TestPlan Break/BreakRequested 机制的单元测试，覆盖 BreakJumpToStep、BreakAbortStep、层级结构（含线程）、循环中断、总启用步骤计数、参数校验及子计划引用死锁检测等场景。",
+      "tags": [
+        "test-plan",
+        "break-request",
+        "hierarchy",
+        "deadlock",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "type": "class",
+      "name": "TestPlanBreakRequestedTests",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "lineRange": [
+        14,
+        321
+      ],
+      "summary": "TestPlanBreakRequestedTests 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunFlatTestplan",
+      "type": "function",
+      "name": "RunFlatTestplan",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "lineRange": [
+        32,
+        55
+      ],
+      "summary": "测试 Flat（平坦）测试计划的运行和 Break 请求处理。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:BreakJumpToStepRunNull",
+      "type": "function",
+      "name": "BreakJumpToStepRunNull",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "lineRange": [
+        60,
+        79
+      ],
+      "summary": "测试 BreakJumpToStep 在 StepRun 为 null 时的边界处理。",
+      "tags": [
+        "test",
+        "break"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:BreakAbortStepRunNull",
+      "type": "function",
+      "name": "BreakAbortStepRunNull",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "lineRange": [
+        90,
+        114
+      ],
+      "summary": "测试 BreakAbortStep 在 StepRun 为 null 时的边界处理。",
+      "tags": [
+        "test",
+        "break"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:HierarchyLocalWithThreads",
+      "type": "function",
+      "name": "HierarchyLocalWithThreads",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "lineRange": [
+        117,
+        137
+      ],
+      "summary": "测试层级结构中的本地线程 Break 请求行为。",
+      "tags": [
+        "test",
+        "concurrency"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunHierarchical",
+      "type": "function",
+      "name": "RunHierarchical",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "lineRange": [
+        139,
+        167
+      ],
+      "summary": "测试层级测试计划的运行和 Break 请求，验证 OfferBreak 在嵌套步骤中的传播。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunHierarchical2",
+      "type": "function",
+      "name": "RunHierarchical2",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "lineRange": [
+        169,
+        199
+      ],
+      "summary": "扩展层级测试计划的 Break 测试，验证多级嵌套 Break 行为。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunLoop",
+      "type": "function",
+      "name": "RunLoop",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "lineRange": [
+        202,
+        229
+      ],
+      "summary": "测试循环步骤中的 Break 请求，验证循环可被正确中断。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:ParmsCheck",
+      "type": "function",
+      "name": "ParmsCheck",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "lineRange": [
+        250,
+        266
+      ],
+      "summary": "验证测试计划中参数设置的正确性。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestDeadlockInReferencedPlan",
+      "type": "function",
+      "name": "TestDeadlockInReferencedPlan",
+      "filePath": "Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "lineRange": [
+        278,
+        320
+      ],
+      "summary": "参数化测试：验证子计划引用中的死锁检测——根据 inputVerdict/expectedVerdict 参数验证特定死锁场景。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "type": "file",
+      "name": "TestPlanCompositeRunTests.cs",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "summary": "TestPlan 复合运行模式（CompositeRun）的单元测试，覆盖日志对比过滤、Short/Long TimeSpan、多次运行、Open/Close 状态管理、开始时间、元数据绑定及运行中动态添加仪器等场景。",
+      "tags": [
+        "composite-run",
+        "test-plan",
+        "lifecycle",
+        "logging",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "type": "class",
+      "name": "TestPlanCompositeRunTests",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        15,
+        425
+      ],
+      "summary": "TestPlanCompositeRunTests 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:filterLog",
+      "type": "function",
+      "name": "filterLog",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        19,
+        42
+      ],
+      "summary": "NUnit 测试方法。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeLogComparison",
+      "type": "function",
+      "name": "RunCompositeLogComparison",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        44,
+        108
+      ],
+      "summary": "综合测试 CompositeRun 的日志对比，将运行日志经 filterLog 过滤后与黄金参考比较。",
+      "tags": [
+        "test",
+        "logging",
+        "composite-run"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:ShortTimeSpanTest",
+      "type": "function",
+      "name": "ShortTimeSpanTest",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        110,
+        123
+      ],
+      "summary": "测试短时间段（ShortTimeSpan）的 CompositeRun 行为。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:LongTimeSpanTest",
+      "type": "function",
+      "name": "LongTimeSpanTest",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        125,
+        164
+      ],
+      "summary": "测试长时间段（LongTimeSpan）的 CompositeRun，验证多次重复运行及日志时间戳。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeFollowedByRun",
+      "type": "function",
+      "name": "RunCompositeFollowedByRun",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        167,
+        198
+      ],
+      "summary": "测试 CompositeRun 结束后再次普通运行（Run）的场景。",
+      "tags": [
+        "test",
+        "composite-run"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeRunTwice",
+      "type": "function",
+      "name": "RunCompositeRunTwice",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        210,
+        227
+      ],
+      "summary": "测试 CompositeRun 连续调用两次的行为。",
+      "tags": [
+        "test",
+        "composite-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeCloseWhileRunning",
+      "type": "function",
+      "name": "RunCompositeCloseWhileRunning",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        239,
+        256
+      ],
+      "summary": "测试在 CompositeRun 运行期间调用 Close 的行为。",
+      "tags": [
+        "test",
+        "composite-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeStartTime",
+      "type": "function",
+      "name": "RunCompositeStartTime",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        258,
+        280
+      ],
+      "summary": "验证 CompositeRun 的 StartTime 属性正确设置。",
+      "tags": [
+        "test",
+        "composite-run"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeMetaData",
+      "type": "function",
+      "name": "RunCompositeMetaData",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        282,
+        299
+      ],
+      "summary": "测试 CompositeRun 的 MetaData 序列化与反序列化。",
+      "tags": [
+        "test",
+        "composite-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeMetaData2",
+      "type": "function",
+      "name": "RunCompositeMetaData2",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        301,
+        321
+      ],
+      "summary": "扩展测试 CompositeRun MetaData 的序列化与合并行为。",
+      "tags": [
+        "test",
+        "composite-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeAddInstrumentAfterOpen",
+      "type": "function",
+      "name": "RunCompositeAddInstrumentAfterOpen",
+      "filePath": "Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "lineRange": [
+        323,
+        354
+      ],
+      "summary": "测试 CompositeRun Open 后动态添加 Instrument 的场景，验证资源正确注册。",
+      "tags": [
+        "test",
+        "composite-run"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/TestCliActions/TestSigterm.cs",
+      "target": "class:Engine.UnitTests/TestCliActions/TestSigterm.cs:SigtermAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TestCliActions/TestSigterm.cs:SigtermAction",
+      "target": "function:Engine.UnitTests/TestCliActions/TestSigterm.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestCliActions/TestSigterm.cs",
+      "target": "function:Engine.UnitTests/TestCliActions/TestSigterm.cs:Execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/TestCliActions/TestSudoCli.cs",
+      "target": "class:Engine.UnitTests/TestCliActions/TestSudoCli.cs:TestSudoCli",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TestCliActions/TestSudoCli.cs:TestSudoCli",
+      "target": "function:Engine.UnitTests/TestCliActions/TestSudoCli.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestCliActions/TestSudoCli.cs",
+      "target": "function:Engine.UnitTests/TestCliActions/TestSudoCli.cs:Execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "target": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunFlatTestplan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunFlatTestplan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:BreakJumpToStepRunNull",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:BreakJumpToStepRunNull",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:BreakAbortStepRunNull",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:BreakAbortStepRunNull",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:HierarchyLocalWithThreads",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:HierarchyLocalWithThreads",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunHierarchical",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunHierarchical",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunHierarchical2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunHierarchical2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:RunLoop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:ParmsCheck",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:ParmsCheck",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestPlanBreakRequestedTests",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestDeadlockInReferencedPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanBreakRequestedTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanBreakRequestedTests.cs:TestDeadlockInReferencedPlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:filterLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeLogComparison",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeLogComparison",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:ShortTimeSpanTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:ShortTimeSpanTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:LongTimeSpanTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:LongTimeSpanTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeFollowedByRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeFollowedByRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeRunTwice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeRunTwice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeCloseWhileRunning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeCloseWhileRunning",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeStartTime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeStartTime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeMetaData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeMetaData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeMetaData2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeMetaData2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TestPlanCompositeRunTests.cs:TestPlanCompositeRunTests",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeAddInstrumentAfterOpen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestPlanCompositeRunTests.cs",
+      "target": "function:Engine.UnitTests/TestPlanCompositeRunTests.cs:RunCompositeAddInstrumentAfterOpen",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

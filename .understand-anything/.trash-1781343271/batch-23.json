@@ -1,0 +1,647 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/TestPlanDependencyTest.cs",
+      "type": "file",
+      "name": "TestPlanDependencyTest.cs",
+      "filePath": "Engine.UnitTests/TestPlanDependencyTest.cs",
+      "summary": "NUnit 测试类，验证测试计划文件的依赖关系扫描，包括文件路径引用（FilePathAttribute）、图片依赖解析和包文件依赖查找。",
+      "tags": ["test", "test-plan", "dependency", "file-path", "nunit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanEmptyStringProp.cs",
+      "type": "file",
+      "name": "TestPlanEmptyStringProp.cs",
+      "filePath": "Engine.UnitTests/TestPlanEmptyStringProp.cs",
+      "summary": "NUnit 测试，验证测试计划中空字符串属性的序列化和反序列化一致性，确保空字符串不会被错误处理或丢失。",
+      "tags": ["test", "serialization", "test-plan", "nunit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanReferencePerformance.cs",
+      "type": "file",
+      "name": "TestPlanReferencePerformance.cs",
+      "filePath": "Engine.UnitTests/TestPlanReferencePerformance.cs",
+      "summary": "性能基准测试（标记为 Ignore），测量嵌套测试计划引用的保存/加载和 Annotation 操作的性能开销。",
+      "tags": ["test", "performance", "test-plan", "nunit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanReferenceTest.cs",
+      "type": "file",
+      "name": "TestPlanReferenceTest.cs",
+      "filePath": "Engine.UnitTests/TestPlanReferenceTest.cs",
+      "summary": "NUnit 测试，验证测试计划引用中的参数移除和测试计划转换为 Sequence 的功能。",
+      "tags": ["test", "test-plan", "reference", "parameter", "nunit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanRunnerTests.cs",
+      "type": "file",
+      "name": "TestPlanRunnerTests.cs",
+      "filePath": "Engine.UnitTests/TestPlanRunnerTests.cs",
+      "summary": "NUnit 测试，验证 TestPlanRunner CLI 功能，包括计划执行、Verdict 设置、CSV 测试文件创建和 null 参数处理。",
+      "tags": ["test", "cli", "test-plan", "runner", "nunit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanTest.cs",
+      "type": "file",
+      "name": "TestPlanTest.cs",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "summary": "大规模 NUnit 测试套件（~2891 行），全面覆盖 TestPlan 核心功能：保存/加载、子步骤管理、资源管理（打开/关闭顺序）、Defer 并行执行、线程安全、结果排序、断点条件、平台交互竞态等数十种场景。同时包含多个辅助测试步骤类（BusyStep、ScpiTestStep、RegexStepTest 等）。",
+      "tags": ["test", "test-plan", "resource-management", "threading", "nunit"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanTestFixture1.cs",
+      "type": "file",
+      "name": "TestPlanTestFixture1.cs",
+      "filePath": "Engine.UnitTests/TestPlanTestFixture1.cs",
+      "summary": "NUnit 测试夹具，验证同一 TestPlan 中嵌套类定义的同名 TestStep 能够正确序列化。",
+      "tags": ["test", "test-plan", "serialization", "nunit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanTestFixture2.cs",
+      "type": "file",
+      "name": "TestPlanTestFixture2.cs",
+      "filePath": "Engine.UnitTests/TestPlanTestFixture2.cs",
+      "summary": "NUnit 测试夹具，验证不同命名空间下同名 TestStep 嵌套类的序列化兼容性。",
+      "tags": ["test", "test-plan", "serialization", "nunit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanTestFixture3.cs",
+      "type": "file",
+      "name": "TestPlanTestFixture3.cs",
+      "filePath": "Engine.UnitTests/TestPlanTestFixture3.cs",
+      "summary": "NUnit 测试，验证带 [AllowAnyChild] 属性的 TestStep 的子步骤序列化和反序列化正确性。",
+      "tags": ["test", "test-plan", "serialization", "nunit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestPlanTimespan.cs",
+      "type": "file",
+      "name": "TestPlanTimespan.cs",
+      "filePath": "Engine.UnitTests/TestPlanTimespan.cs",
+      "summary": "NUnit 测试，验证 TimeSpan 属性在 TestStep 中的序列化往返一致性。",
+      "tags": ["test", "test-plan", "serialization", "timespan", "nunit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestSelfReferentialTypeData.cs",
+      "type": "file",
+      "name": "TestSelfReferentialTypeData.cs",
+      "filePath": "Engine.UnitTests/TestSelfReferentialTypeData.cs",
+      "summary": "NUnit 测试，验证自引用 TypeData 查找不会引发无限递归，确保 IStackedTypeDataProvider 的循环引用被正确处理。",
+      "tags": ["test", "type-data", "self-referential", "recursion", "nunit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestStepIdTests.cs",
+      "type": "file",
+      "name": "TestStepIdTests.cs",
+      "filePath": "Engine.UnitTests/TestStepIdTests.cs",
+      "summary": "NUnit 测试，验证从文件加载测试计划时 TestStep 的 ID 保持一致，并测试 ResultListener 在子步骤运行时的行为。加载 FiveDelays.TapPlan 进行验证。",
+      "tags": ["test", "test-step", "id", "serialization", "nunit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestStepListTest.cs",
+      "type": "file",
+      "name": "TestStepListTest.cs",
+      "filePath": "Engine.UnitTests/TestStepListTest.cs",
+      "summary": "NUnit 测试，验证 TestStepList 的 ChildStepsChanged 事件在替换步骤（SetStep）和移动步骤（MovedStep）时正确触发。",
+      "tags": ["test", "test-step", "events", "nunit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestStepNameFormattingTests.cs",
+      "type": "file",
+      "name": "TestStepNameFormattingTests.cs",
+      "filePath": "Engine.UnitTests/TestStepNameFormattingTests.cs",
+      "summary": "NUnit 测试，验证 IFormatName 接口的自定义名称格式化功能，使用 TestCase 参数覆盖多种替换模式。",
+      "tags": ["test", "test-step", "formatting", "interface", "nunit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestStepRunTests.cs",
+      "type": "file",
+      "name": "TestStepRunTests.cs",
+      "filePath": "Engine.UnitTests/TestStepRunTests.cs",
+      "summary": "NUnit 测试，验证 TestStepRun 的 StartTime 属性默认值、无效值处理和精确日期解析，以及 MockPlanRun 的 Verdict 设置。",
+      "tags": ["test", "test-step", "run", "nunit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestStepTest.cs",
+      "type": "file",
+      "name": "TestStepTest.cs",
+      "filePath": "Engine.UnitTests/TestStepTest.cs",
+      "summary": "大型 NUnit 测试套件（~836 行），包含 29 个测试辅助类和 43 个测试方法，全面覆盖 TestStep 相关行为：Verdict 升级竞态、Continue Loop、验证错误、格式化名称、只读列表、Instrument 删除、资源打开/关闭异常等。",
+      "tags": ["test", "test-step", "verdict", "resource", "nunit"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestStepTests.cs",
+      "type": "file",
+      "name": "TestStepTests.cs",
+      "filePath": "Engine.UnitTests/TestStepTests.cs",
+      "summary": "NUnit 测试，验证 TestStep.GetFormattedName 的格式化输出、AnnotatedFormattedName 的一致性，以及 GetObjectSettings 在多线程下的竞态安全性。",
+      "tags": ["test", "test-step", "formatting", "threading", "nunit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestPlan/EngineTest.TapPlan",
+      "type": "file",
+      "name": "EngineTest.TapPlan",
+      "filePath": "Engine.UnitTests/TestTestPlan/EngineTest.TapPlan",
+      "summary": "XML 测试计划文件，包含 FixedCountLoop（1000次）、ParallelStep、SineResults、Result1DTest、VerdictStep、IfStep 和 DutConnectionTest 等多种步骤类型，用于全面的引擎测试。",
+      "tags": ["test", "test-plan", "xml", "engine"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestPlans/FiveDelays.TapPlan",
+      "type": "file",
+      "name": "FiveDelays.TapPlan",
+      "filePath": "Engine.UnitTests/TestTestPlans/FiveDelays.TapPlan",
+      "summary": "XML 测试计划文件，包含 5 个 DelayStep（各 0.01 秒），用于测试计划加载、步骤 ID 一致性和执行流程。",
+      "tags": ["test", "test-plan", "xml", "delay"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestPlans/LegacyRefPlan.TapPlan",
+      "type": "file",
+      "name": "LegacyRefPlan.TapPlan",
+      "filePath": "Engine.UnitTests/TestTestPlans/LegacyRefPlan.TapPlan",
+      "summary": "XML 测试计划文件，包含 4 个使用 DynamicDataContents 格式的传统 TestPlanReference 步骤，引用 testReferencedPlan.TapPlan，用于验证向后兼容性。",
+      "tags": ["test", "test-plan", "xml", "legacy", "reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestPlans/tap70_sweep_loop.TapPlan",
+      "type": "file",
+      "name": "tap70_sweep_loop.TapPlan",
+      "filePath": "Engine.UnitTests/TestTestPlans/tap70_sweep_loop.TapPlan",
+      "summary": "XML 测试计划文件，包含 SweepLoop（带 SweepParameters）、DialogStep 和 DelayStep，用于测试 sweep loop 的跨计划运行和动态执行。",
+      "tags": ["test", "test-plan", "xml", "sweep", "loop"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestPlans/testMultiReferencePlan.TapPlan",
+      "type": "file",
+      "name": "testMultiReferencePlan.TapPlan",
+      "filePath": "Engine.UnitTests/TestTestPlans/testMultiReferencePlan.TapPlan",
+      "summary": "XML 测试计划文件，包含多个 TestPlanReference 步骤（使用 ExternalParameterEntryData），链式引用 testReferencedPlan2 和 testReferencedPlan3，用于测试多级计划引用。",
+      "tags": ["test", "test-plan", "xml", "reference", "chain"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan.TapPlan",
+      "type": "file",
+      "name": "testReferencedPlan.TapPlan",
+      "filePath": "Engine.UnitTests/TestTestPlans/testReferencedPlan.TapPlan",
+      "summary": "XML 测试计划文件，包含单个 VerdictStep（输出 Verdict 为 Pass），作为其他计划引用的基础目标计划。",
+      "tags": ["test", "test-plan", "xml", "verdict", "reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan2.TapPlan",
+      "type": "file",
+      "name": "testReferencedPlan2.TapPlan",
+      "filePath": "Engine.UnitTests/TestTestPlans/testReferencedPlan2.TapPlan",
+      "summary": "XML 测试计划文件，包含单个 TestPlanReference 步骤（使用 external 参数绑定 Filepath），引用 testReferencedPlan.TapPlan，用于测试外部参数映射。",
+      "tags": ["test", "test-plan", "xml", "reference", "parameter"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan3.TapPlan",
+      "type": "file",
+      "name": "testReferencedPlan3.TapPlan",
+      "filePath": "Engine.UnitTests/TestTestPlans/testReferencedPlan3.TapPlan",
+      "summary": "XML 测试计划文件，包含两个 VerdictStep 和一个 LogStep（输出 AHOY!），用于测试多步骤引用计划和日志输出。",
+      "tags": ["test", "test-plan", "xml", "verdict", "log"],
+      "complexity": "simple"
+    },
+
+    {
+      "id": "class:Engine.UnitTests/TestPlanDependencyTest.cs:TestPlanDependencyTest",
+      "type": "class",
+      "name": "TestPlanDependencyTest",
+      "filePath": "Engine.UnitTests/TestPlanDependencyTest.cs",
+      "lineRange": [26, 339],
+      "summary": "NUnit 测试夹具，包含测试计划依赖关系扫描的所有测试方法：文件路径引用解析、图片依赖检查、包文件依赖查找和参数附着验证。",
+      "tags": ["test", "test-fixture", "dependency", "nunit"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanDependencyTest.cs:TestPackageFileDependencies",
+      "type": "function",
+      "name": "TestPackageFileDependencies",
+      "filePath": "Engine.UnitTests/TestPlanDependencyTest.cs",
+      "lineRange": [124, 207],
+      "summary": "核心测试方法，创建包含文件路径引用的测试计划，保存并通过 XML 解析验证包文件依赖关系是否正确记录。",
+      "tags": ["test", "dependency", "package", "xml"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanDependencyTest.cs:TestFindPackageOf",
+      "type": "function",
+      "name": "TestFindPackageOf",
+      "filePath": "Engine.UnitTests/TestPlanDependencyTest.cs",
+      "lineRange": [220, 271],
+      "summary": "测试 DependenciesPackageFileHelper.FindPackageOf 方法，验证从文件路径查找所属包的功能。",
+      "tags": ["test", "dependency", "package", "helper"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanDependencyTest.cs:EnsureParameterAttached",
+      "type": "function",
+      "name": "EnsureParameterAttached",
+      "filePath": "Engine.UnitTests/TestPlanDependencyTest.cs",
+      "lineRange": [295, 338],
+      "summary": "验证图片依赖参数和文件引用的附着机制，确保参数正确关联到测试计划后运行时不会抛出异常。",
+      "tags": ["test", "dependency", "parameter", "attachment"],
+      "complexity": "moderate"
+    },
+
+    {
+      "id": "class:Engine.UnitTests/TestPlanReferencePerformance.cs:TestPlanReferencePerformance",
+      "type": "class",
+      "name": "TestPlanReferencePerformance",
+      "filePath": "Engine.UnitTests/TestPlanReferencePerformance.cs",
+      "lineRange": [10, 129],
+      "summary": "性能测试类（标记为 Ignore），包含嵌套测试计划引用的保存/加载和 Annotation 操作的性能基准测试。",
+      "tags": ["test", "performance", "ignore", "nunit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanReferencePerformance.cs:SaveLoadPerformance",
+      "type": "function",
+      "name": "SaveLoadPerformance",
+      "filePath": "Engine.UnitTests/TestPlanReferencePerformance.cs",
+      "lineRange": [12, 65],
+      "summary": "性能基准测试，循环创建嵌套引用测试计划并测量保存/加载时间，步数随迭代递增。",
+      "tags": ["test", "performance", "save-load", "ignore"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanReferencePerformance.cs:AnnotatePerformance",
+      "type": "function",
+      "name": "AnnotatePerformance",
+      "filePath": "Engine.UnitTests/TestPlanReferencePerformance.cs",
+      "lineRange": [67, 128],
+      "summary": "性能基准测试，测量对嵌套测试计划引用进行 Annotation 处理的时间开销。",
+      "tags": ["test", "performance", "annotation", "ignore"],
+      "complexity": "moderate"
+    },
+
+    {
+      "id": "class:Engine.UnitTests/TestPlanReferenceTest.cs:TestPlanReferenceTest",
+      "type": "class",
+      "name": "TestPlanReferenceTest",
+      "filePath": "Engine.UnitTests/TestPlanReferenceTest.cs",
+      "lineRange": [7, 152],
+      "summary": "NUnit 测试夹具，验证测试计划引用中的参数移除和转换为 Sequence 的功能。",
+      "tags": ["test", "test-plan", "reference", "nunit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanReferenceTest.cs:RemovingParameterFromReferencedPlan",
+      "type": "function",
+      "name": "RemovingParameterFromReferencedPlan",
+      "filePath": "Engine.UnitTests/TestPlanReferenceTest.cs",
+      "lineRange": [10, 68],
+      "summary": "验证当引用计划移除了原本存在的外部参数后，重新加载引用计划时参数化能自动清理。",
+      "tags": ["test", "test-plan", "reference", "parameter"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanReferenceTest.cs:TestConvertToSequence",
+      "type": "function",
+      "name": "TestConvertToSequence",
+      "filePath": "Engine.UnitTests/TestPlanReferenceTest.cs",
+      "lineRange": [73, 151],
+      "summary": "验证将包含引用计划的 TestPlan 转换为 Sequence 后的正确性，检查步骤数据和引用保留。",
+      "tags": ["test", "test-plan", "sequence", "conversion"],
+      "complexity": "moderate"
+    },
+
+    {
+      "id": "class:Engine.UnitTests/TestPlanRunnerTests.cs:TestPlanRunnerTests",
+      "type": "class",
+      "name": "TestPlanRunnerTests",
+      "filePath": "Engine.UnitTests/TestPlanRunnerTests.cs",
+      "lineRange": [13, 110],
+      "summary": "NUnit 测试夹具，验证 TestPlanRunner CLI 的多种执行路径，包括计划运行、Verdict 测试、隐藏 Action 过滤和 null 参数处理。",
+      "tags": ["test", "cli", "runner", "plan", "nunit"],
+      "complexity": "moderate"
+    },
+
+    {
+      "id": "class:Engine.UnitTests/TestPlanTest.cs:TestPlanTest",
+      "type": "class",
+      "name": "TestPlanTest",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [26, 2167],
+      "summary": "巨型 NUnit 测试夹具（~2142 行），覆盖 TestPlan 核心功能：保存/加载、子步骤管理、断点条件、Defer 执行、计划哈希、计划引用（包括递归引用）、Sweep 动态执行、资源 null 处理、DUT 提示、正则步骤、大规模并行/同步执行等。",
+      "tags": ["test", "test-plan", "core", "nunit", "comprehensive"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestPlanTest.cs:ResourceManagementTests",
+      "type": "class",
+      "name": "ResourceManagementTests",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [2169, 2605],
+      "summary": "NUnit 测试类，专注资源管理验证：打开/关闭顺序、线程安全、懒加载资源管理器的顺序正确性、Defer 结果步骤并行执行等。",
+      "tags": ["test", "resource", "ordering", "threading", "nunit"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestPlanTest.cs:ResultOrderTester",
+      "type": "class",
+      "name": "ResultOrderTester",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [2678, 2769],
+      "summary": "IResultListener 实现类，用于验证事件回调的执行顺序（OnTestPlanRunStart→OnTestStepRunStart→OnResultPublished→OnTestStepRunCompleted→OnTestPlanRunCompleted）。",
+      "tags": ["test", "result-listener", "ordering", "events"],
+      "complexity": "moderate"
+    },
+
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:DeferAndAbort",
+      "type": "function",
+      "name": "DeferAndAbort",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [800, 843],
+      "summary": "测试 Defer 执行与计划 Abort 的组合场景，验证在 Defer 步骤被中断时的行为正确性。",
+      "tags": ["test", "defer", "abort", "test-plan"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:ParameterizedTestPlanReferenceTest",
+      "type": "function",
+      "name": "ParameterizedTestPlanReferenceTest",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [865, 907],
+      "summary": "测试带参数化的测试计划引用，验证外部参数的传递和解析机制。",
+      "tags": ["test", "test-plan", "reference", "parameter"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:SweepDynamic",
+      "type": "function",
+      "name": "SweepDynamic",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [943, 996],
+      "summary": "测试 Sweep Loop 中的动态步骤生成和执行，验证动态添加的步骤在 Sweep 中正确运行。",
+      "tags": ["test", "sweep", "dynamic", "loop"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:NullResourceTest",
+      "type": "function",
+      "name": "NullResourceTest",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [998, 1037],
+      "summary": "验证当 DUT 或 Instrument 资源为 null 时测试计划的错误处理行为。",
+      "tags": ["test", "resource", "null", "error-handling"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:ChildITestStep",
+      "type": "function",
+      "name": "ChildITestStep",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [1084, 1125],
+      "summary": "测试子步骤通过 ITestStep 接口设置时的正确性，验证步骤属性访问和数据完整性。",
+      "tags": ["test", "test-step", "interface", "child"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:DutPromptMetadataTest",
+      "type": "function",
+      "name": "DutPromptMetadataTest",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [1317, 1366],
+      "summary": "验证 DUT 提示（UserPrompt）的元数据处理和在测试计划中的序列化/反序列化。",
+      "tags": ["test", "dut", "prompt", "metadata"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:TestPlanDeferError",
+      "type": "function",
+      "name": "TestPlanDeferError",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [1390, 1485],
+      "summary": "全面测试 Defer 执行模式下的各种错误场景，验证错误传播和恢复机制。",
+      "tags": ["test", "defer", "error", "error-handling"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:DeferSynchronization",
+      "type": "function",
+      "name": "DeferSynchronization",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [1613, 1675],
+      "summary": "验证 Defer 同步管理器在多步骤并行执行时的同步正确性。",
+      "tags": ["test", "defer", "synchronization", "parallel"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:PlatformInteractionRace",
+      "type": "function",
+      "name": "PlatformInteractionRace",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [1797, 1869],
+      "summary": "测试平台交互中的竞态条件，通过 lazy/open 参数组合验证资源打开期间的线程安全。",
+      "tags": ["test", "race-condition", "platform", "threading"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:TryMultipleRunsWithResources",
+      "type": "function",
+      "name": "TryMultipleRunsWithResources",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [1871, 1918],
+      "summary": "在资源存在的情况下多次运行测试计划，验证资源管理的稳定性和一致性。",
+      "tags": ["test", "resource", "run", "stability"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestPlanTest.cs:TestSleepOneTestPlan",
+      "type": "function",
+      "name": "TestSleepOneTestPlan",
+      "filePath": "Engine.UnitTests/TestPlanTest.cs",
+      "lineRange": [1972, 2050],
+      "summary": "创建包含 Sleep 步骤的测试计划并执行，验证计划暂停和继续的时间准确性。",
+      "tags": ["test", "sleep", "test-plan", "timing"],
+      "complexity": "moderate"
+    },
+
+    {
+      "id": "class:Engine.UnitTests/TestSelfReferentialTypeData.cs:SelfReferentialTypeDataProvider",
+      "type": "class",
+      "name": "SelfReferentialTypeDataProvider",
+      "filePath": "Engine.UnitTests/TestSelfReferentialTypeData.cs",
+      "lineRange": [10, 28],
+      "summary": "IStackedTypeDataProvider 测试实现，在提供 TypeData 时调用 Installation.Current.GetPackages() 来模拟自引用场景。",
+      "tags": ["test", "type-data", "provider", "self-referential"],
+      "complexity": "simple"
+    },
+
+    {
+      "id": "class:Engine.UnitTests/TestStepListTest.cs:TestStepListTest",
+      "type": "class",
+      "name": "TestStepListTest",
+      "filePath": "Engine.UnitTests/TestStepListTest.cs",
+      "lineRange": [5, 84],
+      "summary": "NUnit 测试夹具，验证 TestStepList 的 ChildStepsChanged 事件在 SetStep 和 MovedStep 操作时正确触发和携带正确的参数。",
+      "tags": ["test", "test-step", "list", "events", "nunit"],
+      "complexity": "moderate"
+    },
+
+    {
+      "id": "class:Engine.UnitTests/TestStepRunTests.cs:TestStepRunTests",
+      "type": "class",
+      "name": "TestStepRunTests",
+      "filePath": "Engine.UnitTests/TestStepRunTests.cs",
+      "lineRange": [9, 55],
+      "summary": "NUnit 测试夹具，验证 TestStepRun.StartTime 的各种场景（默认值、无效值、精确日期）和 MockPlanRun 的 Verdict 设置。",
+      "tags": ["test", "test-step", "run", "nunit"],
+      "complexity": "simple"
+    },
+
+    {
+      "id": "class:Engine.UnitTests/TestStepTest.cs:ReadOnlyTests",
+      "type": "class",
+      "name": "ReadOnlyTests",
+      "filePath": "Engine.UnitTests/TestStepTest.cs",
+      "lineRange": [407, 454],
+      "summary": "NUnit 嵌套测试类，验证 ReadOnlyList 属性在 TestStep 中的行为，包括序列化后的列表可修改性。",
+      "tags": ["test", "readonly", "list", "test-step", "nunit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestStepTest.cs:BasicTestStepTests",
+      "type": "class",
+      "name": "BasicTestStepTests",
+      "filePath": "Engine.UnitTests/TestStepTest.cs",
+      "lineRange": [466, 734],
+      "summary": "NUnit 测试类（~269 行），覆盖 TestStep 核心功能：名称格式化、Verdict 测试（包括升级竞态）、Continue Loop、验证错误和 Instrument 删除后的引用处理。",
+      "tags": ["test", "test-step", "verdict", "loop", "nunit"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestStepTest.cs:FormattedNameTests",
+      "type": "class",
+      "name": "FormattedNameTests",
+      "filePath": "Engine.UnitTests/TestStepTest.cs",
+      "lineRange": [736, 835],
+      "summary": "测试辅助类，定义了大量用于格式化名称测试的属性和成员，包含 CheckedBool、CheckedDouble、CheckedString 等多种类型标记。",
+      "tags": ["test", "formatting", "name", "annotation"],
+      "complexity": "moderate"
+    },
+
+    {
+      "id": "function:Engine.UnitTests/TestStepTest.cs:TestNameFormat",
+      "type": "function",
+      "name": "TestNameFormat",
+      "filePath": "Engine.UnitTests/TestStepTest.cs",
+      "lineRange": [481, 544],
+      "summary": "核心测试方法（~64 行），全面验证 TestStep 的名称格式化功能，覆盖多种属性替换模式和嵌套格式化。",
+      "tags": ["test", "name", "formatting", "test-step"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestStepTest.cs:ContinueLoop2",
+      "type": "function",
+      "name": "ContinueLoop2",
+      "filePath": "Engine.UnitTests/TestStepTest.cs",
+      "lineRange": [645, 676],
+      "summary": "测试 Continue Loop 在 BreakCondition 场景下的行为，验证循环继续/中断逻辑的边界情况。",
+      "tags": ["test", "loop", "continue", "break"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestStepTest.cs:RefInstrumentDeletedTest",
+      "type": "function",
+      "name": "RefInstrumentDeletedTest",
+      "filePath": "Engine.UnitTests/TestStepTest.cs",
+      "lineRange": [707, 731],
+      "summary": "测试当 TestStep 引用了一个已被删除的 Instrument 时的异常处理行为。",
+      "tags": ["test", "instrument", "deleted", "reference", "error-handling"],
+      "complexity": "moderate"
+    },
+
+    {
+      "id": "class:Engine.UnitTests/TestStepTests.cs:TestStepTests",
+      "type": "class",
+      "name": "TestStepTests",
+      "filePath": "Engine.UnitTests/TestStepTests.cs",
+      "lineRange": [10, 102],
+      "summary": "NUnit 测试夹具，验证 TestStep.GetFormattedName 格式化输出、AnnotatedFormattedName 一致性，以及 GetObjectSettings 在多线程下的竞态安全。",
+      "tags": ["test", "test-step", "formatting", "threading", "nunit"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    { "source": "file:Engine.UnitTests/TestPlanDependencyTest.cs", "target": "class:Engine.UnitTests/TestPlanDependencyTest.cs:TestPlanDependencyTest", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanDependencyTest.cs", "target": "function:Engine.UnitTests/TestPlanDependencyTest.cs:TestPackageFileDependencies", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanDependencyTest.cs", "target": "function:Engine.UnitTests/TestPlanDependencyTest.cs:TestFindPackageOf", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanDependencyTest.cs", "target": "function:Engine.UnitTests/TestPlanDependencyTest.cs:EnsureParameterAttached", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:Engine.UnitTests/TestPlanReferencePerformance.cs", "target": "class:Engine.UnitTests/TestPlanReferencePerformance.cs:TestPlanReferencePerformance", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanReferencePerformance.cs", "target": "function:Engine.UnitTests/TestPlanReferencePerformance.cs:SaveLoadPerformance", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanReferencePerformance.cs", "target": "function:Engine.UnitTests/TestPlanReferencePerformance.cs:AnnotatePerformance", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:Engine.UnitTests/TestPlanReferenceTest.cs", "target": "class:Engine.UnitTests/TestPlanReferenceTest.cs:TestPlanReferenceTest", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanReferenceTest.cs", "target": "function:Engine.UnitTests/TestPlanReferenceTest.cs:RemovingParameterFromReferencedPlan", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanReferenceTest.cs", "target": "function:Engine.UnitTests/TestPlanReferenceTest.cs:TestConvertToSequence", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:Engine.UnitTests/TestPlanRunnerTests.cs", "target": "class:Engine.UnitTests/TestPlanRunnerTests.cs:TestPlanRunnerTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "class:Engine.UnitTests/TestPlanTest.cs:TestPlanTest", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "class:Engine.UnitTests/TestPlanTest.cs:ResourceManagementTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "class:Engine.UnitTests/TestPlanTest.cs:ResultOrderTester", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:DeferAndAbort", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:ParameterizedTestPlanReferenceTest", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:SweepDynamic", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:NullResourceTest", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:ChildITestStep", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:DutPromptMetadataTest", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:TestPlanDeferError", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:DeferSynchronization", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:PlatformInteractionRace", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:TryMultipleRunsWithResources", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "function:Engine.UnitTests/TestPlanTest.cs:TestSleepOneTestPlan", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:Engine.UnitTests/TestSelfReferentialTypeData.cs", "target": "class:Engine.UnitTests/TestSelfReferentialTypeData.cs:SelfReferentialTypeDataProvider", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:Engine.UnitTests/TestStepListTest.cs", "target": "class:Engine.UnitTests/TestStepListTest.cs:TestStepListTest", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:Engine.UnitTests/TestStepRunTests.cs", "target": "class:Engine.UnitTests/TestStepRunTests.cs:TestStepRunTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:Engine.UnitTests/TestStepTest.cs", "target": "class:Engine.UnitTests/TestStepTest.cs:ReadOnlyTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestStepTest.cs", "target": "class:Engine.UnitTests/TestStepTest.cs:BasicTestStepTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestStepTest.cs", "target": "class:Engine.UnitTests/TestStepTest.cs:FormattedNameTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestStepTest.cs", "target": "function:Engine.UnitTests/TestStepTest.cs:TestNameFormat", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestStepTest.cs", "target": "function:Engine.UnitTests/TestStepTest.cs:ContinueLoop2", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:Engine.UnitTests/TestStepTest.cs", "target": "function:Engine.UnitTests/TestStepTest.cs:RefInstrumentDeletedTest", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:Engine.UnitTests/TestStepTests.cs", "target": "class:Engine.UnitTests/TestStepTests.cs:TestStepTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:Engine.UnitTests/TestStepIdTests.cs", "target": "file:Engine.UnitTests/TestTestPlans/FiveDelays.TapPlan", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "file:Engine.UnitTests/TestPlanReferenceTest.cs", "target": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan.TapPlan", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "file:Engine.UnitTests/TestPlanReferenceTest.cs", "target": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan2.TapPlan", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "file:Engine.UnitTests/TestPlanReferenceTest.cs", "target": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan3.TapPlan", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "file:Engine.UnitTests/TestTestPlans/testMultiReferencePlan.TapPlan", "target": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan2.TapPlan", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:Engine.UnitTests/TestTestPlans/testMultiReferencePlan.TapPlan", "target": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan3.TapPlan", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan2.TapPlan", "target": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan.TapPlan", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:Engine.UnitTests/TestTestPlans/LegacyRefPlan.TapPlan", "target": "file:Engine.UnitTests/TestTestPlans/testReferencedPlan.TapPlan", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:Engine.UnitTests/TestPlanTest.cs", "target": "file:Engine.UnitTests/TestTestPlan/EngineTest.TapPlan", "type": "related", "direction": "forward", "weight": 0.5 }
+  ]
+}

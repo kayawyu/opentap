@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "config:Engine.UnitTests/TestTestPlan/EngineTest/DutSettings.xml",
+      "type": "config",
+      "name": "DutSettings.xml",
+      "filePath": "Engine.UnitTests/TestTestPlan/EngineTest/DutSettings.xml",
+      "summary": "EngineTest 单元测试的 DUT（被测设备）配置，定义一个 DummyDut 类型的 Dut 实例，用于测试 TestPlan 的 DUT 设置序列化行为。",
+      "tags": ["test-config", "dut", "serialization", "xml"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Engine.UnitTests/TestTestPlan/EngineTest/PlatformSettings.xml",
+      "type": "config",
+      "name": "PlatformSettings.xml",
+      "filePath": "Engine.UnitTests/TestTestPlan/EngineTest/PlatformSettings.xml",
+      "summary": "EngineTest 单元测试的平台设置配置，包含系统日志路径、远程连接参数（127.0.0.1:7300）、结果写入优先级及实验性功能开关等运行时参数。",
+      "tags": ["test-config", "platform-settings", "serialization", "xml"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Engine.UnitTests/TestTestPlan/EngineTest/ResultSettings.xml",
+      "type": "config",
+      "name": "ResultSettings.xml",
+      "filePath": "Engine.UnitTests/TestTestPlan/EngineTest/ResultSettings.xml",
+      "summary": "EngineTest 单元测试的结果监听器配置，包含一个 LogResultListener（输出到带日期和判决标记的文件）和两个 ResultListenerValidator 实例，用于验证结果输出行为。",
+      "tags": ["test-config", "result-listener", "serialization", "xml"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

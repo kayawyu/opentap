@@ -1,0 +1,5961 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "Engine.UnitTests/TestTestPlans/whiletest.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 68,
+      "metrics": {}
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/AvailableValuesUpdateTest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "IncreaseNumber",
+          "startLine": 28,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 34,
+          "endLine": 37,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AvailableValuesUpdateTest",
+          "startLine": 13,
+          "endLine": 38,
+          "methods": [
+            "IncreaseNumber",
+            "Run"
+          ],
+          "properties": [
+            "A",
+            "B",
+            "NotA",
+            "NotB",
+            "FromIncreasingNumber",
+            "IncreasingNumbers",
+            "IncreasingNumber"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "A",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "B",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "NotA",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "NotB",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "FromIncreasingNumber",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "IncreasingNumbers",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "IncreasingNumber",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "IncreaseNumber",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "AvailableValuesUpdateTest",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/CompareIntStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 22,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 10,
+          "endLine": 22,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CompareIntStep",
+          "startLine": 3,
+          "endLine": 23,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "InputValue",
+            "ExpectedValue"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "InputValue",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "ExpectedValue",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "CompareIntStep",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 14
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 19
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/DummySwitchInstrument.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "DummySwitchIntrument",
+          "startLine": 23,
+          "endLine": 30,
+          "params": []
+        },
+        {
+          "name": "SetPosition",
+          "startLine": 32,
+          "endLine": 39,
+          "params": [
+            "pos"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DummySwitchIntrument",
+          "startLine": 10,
+          "endLine": 40,
+          "methods": [
+            "DummySwitchIntrument",
+            "SetPosition"
+          ],
+          "properties": [
+            "Position1",
+            "Position2",
+            "Position3",
+            "Positions"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Position1",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "Position2",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "Position3",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "Positions",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "DummySwitchIntrument",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "SetPosition",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "DummySwitchIntrument",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DummySwitchIntrument",
+          "callee": "new SwitchPosition",
+          "lineNumber": 26
+        },
+        {
+          "caller": "DummySwitchIntrument",
+          "callee": "new SwitchPosition",
+          "lineNumber": 27
+        },
+        {
+          "caller": "DummySwitchIntrument",
+          "callee": "new SwitchPosition",
+          "lineNumber": 28
+        },
+        {
+          "caller": "DummySwitchIntrument",
+          "callee": "new List<SwitchPosition>",
+          "lineNumber": 29
+        },
+        {
+          "caller": "DummySwitchIntrument",
+          "callee": "new SwitchPosition",
+          "lineNumber": 29
+        },
+        {
+          "caller": "DummySwitchIntrument",
+          "callee": "new SwitchPosition",
+          "lineNumber": 29
+        },
+        {
+          "caller": "DummySwitchIntrument",
+          "callee": "new SwitchPosition",
+          "lineNumber": 29
+        },
+        {
+          "caller": "SetPosition",
+          "callee": "Positions.ForEach",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/FourPortDut.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 29,
+      "functions": [
+        {
+          "name": "FourPortDut",
+          "startLine": 23,
+          "endLine": 29,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FourPortDut",
+          "startLine": 10,
+          "endLine": 30,
+          "methods": [
+            "FourPortDut"
+          ],
+          "properties": [
+            "PortA",
+            "PortB",
+            "PortC",
+            "PortD"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PortA",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "PortB",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "PortC",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "PortD",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "FourPortDut",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "FourPortDut",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FourPortDut",
+          "callee": "new Port",
+          "lineNumber": 25
+        },
+        {
+          "caller": "FourPortDut",
+          "callee": "new Port",
+          "lineNumber": 26
+        },
+        {
+          "caller": "FourPortDut",
+          "callee": "new Port",
+          "lineNumber": 27
+        },
+        {
+          "caller": "FourPortDut",
+          "callee": "new Port",
+          "lineNumber": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/PipingProcessStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 204,
+      "nonEmptyLines": 180,
+      "functions": [
+        {
+          "name": "DescribeBytes",
+          "startLine": 26,
+          "endLine": 41,
+          "params": [
+            "i"
+          ]
+        },
+        {
+          "name": "Execute",
+          "startLine": 43,
+          "endLine": 71,
+          "params": [
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "Run",
+          "startLine": 108,
+          "endLine": 202,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserInputTestAction",
+          "startLine": 13,
+          "endLine": 72,
+          "methods": [
+            "DescribeBytes",
+            "Execute"
+          ],
+          "properties": [
+            "ExpectedAnswers",
+            "log"
+          ]
+        },
+        {
+          "name": "PipingProcessStep",
+          "startLine": 74,
+          "endLine": 203,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Application",
+            "Arguments",
+            "ExpectedExitCode",
+            "WriteSpeed",
+            "StdIn",
+            "Mode"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExpectedAnswers",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "DescribeBytes",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "Execute",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "UserInputTestAction",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "Application",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "Arguments",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "ExpectedExitCode",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "WriteSpeed",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "StdIn",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "Mode",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "PipingProcessStep",
+          "line": 74,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DescribeBytes",
+          "callee": "i.ToArray",
+          "lineNumber": 28
+        },
+        {
+          "caller": "DescribeBytes",
+          "callee": "new StringBuilder",
+          "lineNumber": 31
+        },
+        {
+          "caller": "DescribeBytes",
+          "callee": "sb.Append",
+          "lineNumber": 32
+        },
+        {
+          "caller": "DescribeBytes",
+          "callee": "sb.Append",
+          "lineNumber": 35
+        },
+        {
+          "caller": "DescribeBytes",
+          "callee": "string.Format",
+          "lineNumber": 35
+        },
+        {
+          "caller": "DescribeBytes",
+          "callee": "sb.Append",
+          "lineNumber": 36
+        },
+        {
+          "caller": "DescribeBytes",
+          "callee": "sb.Remove",
+          "lineNumber": 38
+        },
+        {
+          "caller": "DescribeBytes",
+          "callee": "sb.Append",
+          "lineNumber": 39
+        },
+        {
+          "caller": "DescribeBytes",
+          "callee": "sb.ToString",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Execute",
+          "callee": "new RequestObject",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Execute",
+          "callee": "UserInput.Request",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Execute",
+          "callee": "DescribeBytes",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Execute",
+          "callee": "DescribeBytes",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Info",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Execute",
+          "callee": "r.Answer.Equals",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Error",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Error",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Error",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Execute",
+          "callee": "log.Debug",
+          "lineNumber": 67
+        },
+        {
+          "caller": "Run",
+          "callee": "new Process",
+          "lineNumber": 110
+        },
+        {
+          "caller": "Run",
+          "callee": "Directory.GetCurrentDirectory",
+          "lineNumber": 116
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Run",
+          "callee": "process.Start",
+          "lineNumber": 127
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Error",
+          "lineNumber": 129
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 130
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Error",
+          "lineNumber": 142
+        },
+        {
+          "caller": "Run",
+          "callee": "process.BeginOutputReadLine",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Run",
+          "callee": "process.BeginErrorReadLine",
+          "lineNumber": 145
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Run",
+          "callee": "UserInputTestAction.DescribeBytes",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Run",
+          "callee": "w.Write",
+          "lineNumber": 156
+        },
+        {
+          "caller": "Run",
+          "callee": "StdIn.Trim().Split",
+          "lineNumber": 159
+        },
+        {
+          "caller": "Run",
+          "callee": "StdIn.Trim",
+          "lineNumber": 159
+        },
+        {
+          "caller": "Run",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 162
+        },
+        {
+          "caller": "Run",
+          "callee": "w.WriteLine",
+          "lineNumber": 164
+        },
+        {
+          "caller": "Run",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 172
+        },
+        {
+          "caller": "Run",
+          "callee": "w.Write",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Run",
+          "callee": "process.StandardInput.Close",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Run",
+          "callee": "process.WaitForExit",
+          "lineNumber": 188
+        },
+        {
+          "caller": "Run",
+          "callee": "TimeSpan.FromSeconds",
+          "lineNumber": 188
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Error",
+          "lineNumber": 190
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 191
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 196
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Error",
+          "lineNumber": 199
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 200
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 3,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/RunTimeStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 21,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 12,
+          "endLine": 21,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RunTimeStep",
+          "startLine": 5,
+          "endLine": 22,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "RunCount",
+            "RestartMarker",
+            "lastRestartMarker"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RunCount",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "RestartMarker",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "RunTimeStep",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/SineResultsStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 10,
+          "endLine": 17,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SineResultsStep",
+          "startLine": 5,
+          "endLine": 18,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Periods",
+            "Samples"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Periods",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "Samples",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "SineResultsStep",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "Results.Publish",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Run",
+          "callee": "Math.Sin",
+          "lineNumber": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/ThrowInDefer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "ThrowInDefer",
+          "startLine": 13,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 18,
+          "endLine": 29,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ThrowInDefer",
+          "startLine": 9,
+          "endLine": 30,
+          "methods": [
+            "ThrowInDefer",
+            "Run"
+          ],
+          "properties": [
+            "Throw",
+            "WaitMs"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Throw",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "WaitMs",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "ThrowInDefer",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "ThrowInDefer",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "Results.Defer",
+          "lineNumber": 20
+        },
+        {
+          "caller": "Run",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Run",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/TimingTestStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "TimingTestStep",
+          "startLine": 16,
+          "endLine": 22,
+          "params": []
+        },
+        {
+          "name": "PrePlanRun",
+          "startLine": 24,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 30,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "PostPlanRun",
+          "startLine": 36,
+          "endLine": 40,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TimingTestStep",
+          "startLine": 9,
+          "endLine": 41,
+          "methods": [
+            "TimingTestStep",
+            "PrePlanRun",
+            "Run",
+            "PostPlanRun"
+          ],
+          "properties": [
+            "PreRunDelay",
+            "RunDelay",
+            "DeferDelay",
+            "PostRunDelay"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PreRunDelay",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "RunDelay",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "DeferDelay",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "PostRunDelay",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "TimingTestStep",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "PrePlanRun",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "PostPlanRun",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "TimingTestStep",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PrePlanRun",
+          "callee": "base.PrePlanRun",
+          "lineNumber": 26
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 27
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "TimeSpan.FromSeconds",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Run",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Run",
+          "callee": "TimeSpan.FromSeconds",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Run",
+          "callee": "Results.Defer",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Run",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Run",
+          "callee": "TimeSpan.FromSeconds",
+          "lineNumber": 33
+        },
+        {
+          "caller": "PostPlanRun",
+          "callee": "base.PostPlanRun",
+          "lineNumber": 38
+        },
+        {
+          "caller": "PostPlanRun",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 39
+        },
+        {
+          "caller": "PostPlanRun",
+          "callee": "TimeSpan.FromSeconds",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/VerdictStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 22,
+      "functions": [
+        {
+          "name": "VerdictStep",
+          "startLine": 13,
+          "endLine": 17,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 19,
+          "endLine": 24,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "VerdictStep",
+          "startLine": 4,
+          "endLine": 25,
+          "methods": [
+            "VerdictStep",
+            "Run"
+          ],
+          "properties": [
+            "VerdictOutput",
+            "RequestAbort"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VerdictOutput",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "RequestAbort",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "VerdictStep",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "VerdictStep",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Run",
+          "callee": "PlanRun.MainThread.Abort",
+          "lineNumber": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TestTestSteps/WriteFileStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 286,
+      "nonEmptyLines": 251,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 16,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 23,
+          "endLine": 26,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 42,
+          "endLine": 47,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 55,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "CheckFileVersion",
+          "startLine": 82,
+          "endLine": 103,
+          "params": []
+        },
+        {
+          "name": "CheckSemanticVersion",
+          "startLine": 105,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 145,
+          "endLine": 161,
+          "params": []
+        },
+        {
+          "name": "GetVersion",
+          "startLine": 163,
+          "endLine": 206,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "Run",
+          "startLine": 226,
+          "endLine": 230,
+          "params": []
+        },
+        {
+          "name": "RunOnOs",
+          "startLine": 244,
+          "endLine": 247,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 249,
+          "endLine": 259,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 269,
+          "endLine": 284,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "WriteFileStep",
+          "startLine": 10,
+          "endLine": 17,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "String",
+            "File"
+          ]
+        },
+        {
+          "name": "CreateDirectoryStep",
+          "startLine": 19,
+          "endLine": 27,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Directory"
+          ]
+        },
+        {
+          "name": "ReplaceInFileStep",
+          "startLine": 29,
+          "endLine": 48,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "File",
+            "Search",
+            "Replace"
+          ]
+        },
+        {
+          "name": "ExpectStep",
+          "startLine": 50,
+          "endLine": 65,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "ExpectedVerdict"
+          ]
+        },
+        {
+          "name": "ReadAssemblyVersionStep",
+          "startLine": 73,
+          "endLine": 219,
+          "methods": [
+            "CheckFileVersion",
+            "CheckSemanticVersion",
+            "Run",
+            "GetVersion"
+          ],
+          "properties": [
+            "File",
+            "MatchVersion",
+            "VersionType"
+          ]
+        },
+        {
+          "name": "RemoveDirectory",
+          "startLine": 221,
+          "endLine": 231,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Path"
+          ]
+        },
+        {
+          "name": "RunOnOs",
+          "startLine": 234,
+          "endLine": 260,
+          "methods": [
+            "RunOnOs",
+            "Run"
+          ],
+          "properties": [
+            "AvailableOperatingSystems",
+            "OperatingSystem"
+          ]
+        },
+        {
+          "name": "FindFileStep",
+          "startLine": 262,
+          "endLine": 285,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "SearchDir",
+            "Regex"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "String",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "File",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "WriteFileStep",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "Directory",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "CreateDirectoryStep",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "File",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "Search",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "Replace",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "ReplaceInFileStep",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "ExpectedVerdict",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "ExpectStep",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "File",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "MatchVersion",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "VersionType",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "GetVersion",
+          "line": 163,
+          "isDefault": false
+        },
+        {
+          "name": "ReadAssemblyVersionStep",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "Path",
+          "line": 224,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 226,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveDirectory",
+          "line": 221,
+          "isDefault": false
+        },
+        {
+          "name": "AvailableOperatingSystems",
+          "line": 239,
+          "isDefault": false
+        },
+        {
+          "name": "OperatingSystem",
+          "line": 241,
+          "isDefault": false
+        },
+        {
+          "name": "RunOnOs",
+          "line": 244,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 249,
+          "isDefault": false
+        },
+        {
+          "name": "RunOnOs",
+          "line": 234,
+          "isDefault": false
+        },
+        {
+          "name": "SearchDir",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "Regex",
+          "line": 267,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 269,
+          "isDefault": false
+        },
+        {
+          "name": "FindFileStep",
+          "line": 262,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "System.IO.File.WriteAllText",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Run",
+          "callee": "System.IO.Directory.CreateDirectory",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Run",
+          "callee": "System.IO.File.ReadAllText",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Run",
+          "callee": "content.Replace",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Run",
+          "callee": "System.IO.File.WriteAllText",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps",
+          "lineNumber": 57
+        },
+        {
+          "caller": "CheckFileVersion",
+          "callee": "GetVersion",
+          "lineNumber": 84
+        },
+        {
+          "caller": "CheckFileVersion",
+          "callee": "Log.Error",
+          "lineNumber": 87
+        },
+        {
+          "caller": "CheckFileVersion",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 90
+        },
+        {
+          "caller": "CheckFileVersion",
+          "callee": "Equals",
+          "lineNumber": 92
+        },
+        {
+          "caller": "CheckFileVersion",
+          "callee": "semver.ToString",
+          "lineNumber": 92
+        },
+        {
+          "caller": "CheckFileVersion",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 94
+        },
+        {
+          "caller": "CheckFileVersion",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 98
+        },
+        {
+          "caller": "CheckFileVersion",
+          "callee": "Log.Info",
+          "lineNumber": 101
+        },
+        {
+          "caller": "CheckFileVersion",
+          "callee": "semver.ToString",
+          "lineNumber": 101
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "SemanticVersion.TryParse",
+          "lineNumber": 107
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "Log.Error",
+          "lineNumber": 109
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 110
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "PluginManager.GetSearcher",
+          "lineNumber": 114
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "s.AddAssembly",
+          "lineNumber": 115
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "Path.GetFullPath(s).TrimEnd",
+          "lineNumber": 119
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 119
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "normalize",
+          "lineNumber": 122
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "s.Assemblies.FirstOrDefault",
+          "lineNumber": 123
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "normalize(a.Location).Equals",
+          "lineNumber": 123
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "normalize",
+          "lineNumber": 123
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "Log.Error",
+          "lineNumber": 127
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 128
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "Equals",
+          "lineNumber": 134
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "asmVer.ToString",
+          "lineNumber": 134
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "semver.ToString",
+          "lineNumber": 134
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 136
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 140
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "Log.Info",
+          "lineNumber": 142
+        },
+        {
+          "caller": "CheckSemanticVersion",
+          "callee": "asmVer.ToString",
+          "lineNumber": 142
+        },
+        {
+          "caller": "Run",
+          "callee": "System.IO.File.Exists",
+          "lineNumber": 147
+        },
+        {
+          "caller": "Run",
+          "callee": "new FileNotFoundException",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Run",
+          "callee": "CheckFileVersion",
+          "lineNumber": 153
+        },
+        {
+          "caller": "Run",
+          "callee": "CheckSemanticVersion",
+          "lineNumber": 156
+        },
+        {
+          "caller": "Run",
+          "callee": "new ArgumentOutOfRangeException",
+          "lineNumber": 159
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "new PluginSearcher",
+          "lineNumber": 165
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "searcher.Search",
+          "lineNumber": 166
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "Log.Debug",
+          "lineNumber": 167
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "searcher.Assemblies.First",
+          "lineNumber": 168
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "new FileStream",
+          "lineNumber": 169
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "new PEReader",
+          "lineNumber": 170
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "header.GetMetadataReader",
+          "lineNumber": 172
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "Log.Debug",
+          "lineNumber": 173
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "CurrentReader.GetAssemblyDefinition().GetCustomAttributes",
+          "lineNumber": 174
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "CurrentReader.GetAssemblyDefinition",
+          "lineNumber": 174
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "CurrentReader.GetCustomAttribute",
+          "lineNumber": 177
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "Log.Info",
+          "lineNumber": 178
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "CurrentReader.GetMemberReference",
+          "lineNumber": 181
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "CurrentReader.GetTypeDefinition",
+          "lineNumber": 185
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "string.Format",
+          "lineNumber": 186
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "CurrentReader.GetString",
+          "lineNumber": 186
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "CurrentReader.GetString",
+          "lineNumber": 186
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "CurrentReader.GetTypeReference",
+          "lineNumber": 190
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "string.Format",
+          "lineNumber": 191
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "CurrentReader.GetString",
+          "lineNumber": 191
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "CurrentReader.GetString",
+          "lineNumber": 191
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "Log.Info",
+          "lineNumber": 193
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "attr.DecodeValue",
+          "lineNumber": 197
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "new CustomAttributeTypeProvider",
+          "lineNumber": 197
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "SemanticVersion.TryParse",
+          "lineNumber": 198
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "valueString.FixedArguments[0].Value.ToString",
+          "lineNumber": 198
+        },
+        {
+          "caller": "GetVersion",
+          "callee": "Log.Warning",
+          "lineNumber": 204
+        },
+        {
+          "caller": "Run",
+          "callee": "Directory.Exists",
+          "lineNumber": 228
+        },
+        {
+          "caller": "Run",
+          "callee": "Directory.Delete",
+          "lineNumber": 229
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps",
+          "lineNumber": 253
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 257
+        },
+        {
+          "caller": "Run",
+          "callee": "SearchDir.Expand",
+          "lineNumber": 271
+        },
+        {
+          "caller": "Run",
+          "callee": "new Regex",
+          "lineNumber": 272
+        },
+        {
+          "caller": "Run",
+          "callee": "Directory.GetFiles",
+          "lineNumber": 273
+        },
+        {
+          "caller": "Run",
+          "callee": "regex.IsMatch",
+          "lineNumber": 276
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Debug",
+          "lineNumber": 278
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 279
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 283
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 33,
+        "functionCount": 12,
+        "classCount": 8
+      }
+    },
+    {
+      "path": "Engine.UnitTests/ThreadManagerTest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 87,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "TestAsyncTest",
+          "startLine": 9,
+          "endLine": 15,
+          "params": []
+        },
+        {
+          "name": "TestWorkQueueContext",
+          "startLine": 17,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "AwaitableTest",
+          "startLine": 63,
+          "endLine": 77,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ThreadManagerTest",
+          "startLine": 7,
+          "endLine": 86,
+          "methods": [
+            "TestAsyncTest",
+            "TestWorkQueueContext",
+            "AwaitableTest"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TestAsyncTest",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "TestWorkQueueContext",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "AwaitableTest",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "ThreadManagerTest",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TestAsyncTest",
+          "callee": "TapThread.StartAwaitable(() => completed = true, \"test\").Wait",
+          "lineNumber": 13
+        },
+        {
+          "caller": "TestAsyncTest",
+          "callee": "TapThread.StartAwaitable",
+          "lineNumber": 13
+        },
+        {
+          "caller": "TestAsyncTest",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 14
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "new SemaphoreSlim",
+          "lineNumber": 20
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "new SemaphoreSlim",
+          "lineNumber": 21
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "new SemaphoreSlim",
+          "lineNumber": 22
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "TapThread.Start",
+          "lineNumber": 24
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "blockBaseThreadWait.Wait",
+          "lineNumber": 24
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "new WorkQueue",
+          "lineNumber": 26
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "TapThread.Start",
+          "lineNumber": 28
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "trd1AbortWait.Wait",
+          "lineNumber": 30
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "workQueue.EnqueueWork",
+          "lineNumber": 31
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "TapThread.ThrowIfAborted",
+          "lineNumber": 35
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "jobEndWait.Release",
+          "lineNumber": 37
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "trd1.Abort",
+          "lineNumber": 44
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "trd1AbortWait.Release",
+          "lineNumber": 45
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 47
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "jobEndWait.Wait",
+          "lineNumber": 47
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 48
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "blockBaseThreadWait.Release",
+          "lineNumber": 49
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "baseThread.Abort",
+          "lineNumber": 50
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "workQueue.EnqueueWork",
+          "lineNumber": 53
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 56
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "workQueue.Wait",
+          "lineNumber": 59
+        },
+        {
+          "caller": "TestWorkQueueContext",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 60
+        },
+        {
+          "caller": "AwaitableTest",
+          "callee": "TapThread.StartAwaitable",
+          "lineNumber": 66
+        },
+        {
+          "caller": "AwaitableTest",
+          "callee": "new ExpectedException",
+          "lineNumber": 66
+        },
+        {
+          "caller": "AwaitableTest",
+          "callee": "task.Wait",
+          "lineNumber": 69
+        },
+        {
+          "caller": "AwaitableTest",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TraceBarTest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 62,
+      "functions": [
+        {
+          "name": "TraceBarSimpleValues",
+          "startLine": 14,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "TraceBarOutsiderValues",
+          "startLine": 38,
+          "endLine": 63,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TraceBarTest",
+          "startLine": 11,
+          "endLine": 65,
+          "methods": [
+            "TraceBarSimpleValues",
+            "TraceBarOutsiderValues"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TraceBarSimpleValues",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "TraceBarOutsiderValues",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "TraceBarTest",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "new TraceBar",
+          "lineNumber": 17
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar.GetBar",
+          "lineNumber": 21
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 22
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 23
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar1.Contains",
+          "lineNumber": 23
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar.GetBar",
+          "lineNumber": 24
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 25
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar.GetBar",
+          "lineNumber": 26
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 27
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar.GetBar",
+          "lineNumber": 28
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 29
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar.GetBar",
+          "lineNumber": 30
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 31
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar2.Contains",
+          "lineNumber": 31
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar2.Contains",
+          "lineNumber": 31
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 32
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar.GetBar",
+          "lineNumber": 33
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 34
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar3.Contains",
+          "lineNumber": 34
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "bar3.Contains",
+          "lineNumber": 34
+        },
+        {
+          "caller": "TraceBarSimpleValues",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 35
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "new TraceBar",
+          "lineNumber": 44
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "bar.GetBar",
+          "lineNumber": 47
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 48
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "bar.GetBar",
+          "lineNumber": 49
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 50
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "bar.GetBar",
+          "lineNumber": 51
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "double.IsNaN",
+          "lineNumber": 52
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 54
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "StringAssert.Contains",
+          "lineNumber": 55
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 59
+        },
+        {
+          "caller": "TraceBarOutsiderValues",
+          "callee": "StringAssert.Contains",
+          "lineNumber": 60
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/TypeDataTest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 138,
+      "nonEmptyLines": 121,
+      "functions": [
+        {
+          "name": "InheritedAttributesTest",
+          "startLine": 21,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "SettingPropertyToInvalidType",
+          "startLine": 31,
+          "endLine": 41,
+          "params": []
+        },
+        {
+          "name": "ValueTypeCanCreateInstanceTest",
+          "startLine": 44,
+          "endLine": 63,
+          "params": []
+        },
+        {
+          "name": "DynamicTypeBrowsableFalse",
+          "startLine": 65,
+          "endLine": 95,
+          "params": []
+        },
+        {
+          "name": "TestMultipleEnumerableInterfaceImplementations",
+          "startLine": 129,
+          "endLine": 136,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TypeDataTest",
+          "startLine": 11,
+          "endLine": 137,
+          "methods": [
+            "InheritedAttributesTest",
+            "SettingPropertyToInvalidType",
+            "ValueTypeCanCreateInstanceTest",
+            "DynamicTypeBrowsableFalse",
+            "TestMultipleEnumerableInterfaceImplementations"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "InheritedAttributesTest",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "SettingPropertyToInvalidType",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "ValueTypeCanCreateInstanceTest",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "DynamicTypeBrowsableFalse",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "TestMultipleEnumerableInterfaceImplementations",
+          "line": 129,
+          "isDefault": false
+        },
+        {
+          "name": "TypeDataTest",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "InheritedAttributesTest",
+          "callee": "TypeData.FromType",
+          "lineNumber": 24
+        },
+        {
+          "caller": "InheritedAttributesTest",
+          "callee": "TypeData.FromType",
+          "lineNumber": 25
+        },
+        {
+          "caller": "InheritedAttributesTest",
+          "callee": "Assert.IsEmpty",
+          "lineNumber": 26
+        },
+        {
+          "caller": "InheritedAttributesTest",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 27
+        },
+        {
+          "caller": "InheritedAttributesTest",
+          "callee": "type1.HasAttribute<BrowsableAttribute>",
+          "lineNumber": 27
+        },
+        {
+          "caller": "InheritedAttributesTest",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 28
+        },
+        {
+          "caller": "InheritedAttributesTest",
+          "callee": "type2.BaseType.HasAttribute<BrowsableAttribute>",
+          "lineNumber": 28
+        },
+        {
+          "caller": "SettingPropertyToInvalidType",
+          "callee": "new IntObject",
+          "lineNumber": 34
+        },
+        {
+          "caller": "SettingPropertyToInvalidType",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 35
+        },
+        {
+          "caller": "SettingPropertyToInvalidType",
+          "callee": "typeData.GetMember",
+          "lineNumber": 36
+        },
+        {
+          "caller": "SettingPropertyToInvalidType",
+          "callee": "nameof",
+          "lineNumber": 36
+        },
+        {
+          "caller": "SettingPropertyToInvalidType",
+          "callee": "Assert.DoesNotThrow",
+          "lineNumber": 37
+        },
+        {
+          "caller": "SettingPropertyToInvalidType",
+          "callee": "memberData.SetValue",
+          "lineNumber": 37
+        },
+        {
+          "caller": "SettingPropertyToInvalidType",
+          "callee": "Assert.DoesNotThrow",
+          "lineNumber": 40
+        },
+        {
+          "caller": "SettingPropertyToInvalidType",
+          "callee": "memberData.SetValue",
+          "lineNumber": 40
+        },
+        {
+          "caller": "ValueTypeCanCreateInstanceTest",
+          "callee": "TypeData.FromType",
+          "lineNumber": 58
+        },
+        {
+          "caller": "ValueTypeCanCreateInstanceTest",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 59
+        },
+        {
+          "caller": "ValueTypeCanCreateInstanceTest",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 60
+        },
+        {
+          "caller": "ValueTypeCanCreateInstanceTest",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 61
+        },
+        {
+          "caller": "ValueTypeCanCreateInstanceTest",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 61
+        },
+        {
+          "caller": "ValueTypeCanCreateInstanceTest",
+          "callee": "td.CreateInstance",
+          "lineNumber": 61
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "AssemblyBuilder.DefineDynamicAssembly",
+          "lineNumber": 70
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "new AssemblyName",
+          "lineNumber": 70
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "assemblyBuilder.DefineDynamicModule",
+          "lineNumber": 71
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "moduleBuilder.DefineType",
+          "lineNumber": 72
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "Array.Empty<Type>",
+          "lineNumber": 74
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "typeBuilder.CreateType",
+          "lineNumber": 75
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "TypeData.FromType",
+          "lineNumber": 76
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 80
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "moduleBuilder.DefineType",
+          "lineNumber": 84
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "Array.Empty<Type>",
+          "lineNumber": 86
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "new CustomAttributeBuilder",
+          "lineNumber": 87
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "typeof(BrowsableAttribute).GetConstructor",
+          "lineNumber": 88
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "typeBuilder2.SetCustomAttribute",
+          "lineNumber": 89
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "TypeData.FromType",
+          "lineNumber": 91
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "typeBuilder2.CreateType",
+          "lineNumber": 91
+        },
+        {
+          "caller": "DynamicTypeBrowsableFalse",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 92
+        },
+        {
+          "caller": "TestMultipleEnumerableInterfaceImplementations",
+          "callee": "Assert.IsNull",
+          "lineNumber": 132
+        },
+        {
+          "caller": "TestMultipleEnumerableInterfaceImplementations",
+          "callee": "TypeData.FromType",
+          "lineNumber": 132
+        },
+        {
+          "caller": "TestMultipleEnumerableInterfaceImplementations",
+          "callee": "Assert.IsNull",
+          "lineNumber": 133
+        },
+        {
+          "caller": "TestMultipleEnumerableInterfaceImplementations",
+          "callee": "TypeData.FromType",
+          "lineNumber": 133
+        },
+        {
+          "caller": "TestMultipleEnumerableInterfaceImplementations",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 134
+        },
+        {
+          "caller": "TestMultipleEnumerableInterfaceImplementations",
+          "callee": "TypeData.FromType(typeof(List<double>)).AsTypeData",
+          "lineNumber": 134
+        },
+        {
+          "caller": "TestMultipleEnumerableInterfaceImplementations",
+          "callee": "TypeData.FromType",
+          "lineNumber": 134
+        },
+        {
+          "caller": "TestMultipleEnumerableInterfaceImplementations",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 135
+        },
+        {
+          "caller": "TestMultipleEnumerableInterfaceImplementations",
+          "callee": "TypeData.FromType(typeof(IEnumerable<double>)).AsTypeData",
+          "lineNumber": 135
+        },
+        {
+          "caller": "TestMultipleEnumerableInterfaceImplementations",
+          "callee": "TypeData.FromType",
+          "lineNumber": 135
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/UnitFormatterTest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 79,
+      "functions": [
+        {
+          "name": "TestFormats",
+          "startLine": 10,
+          "endLine": 23,
+          "params": [
+            "unit",
+            "format",
+            "value",
+            "expected"
+          ]
+        },
+        {
+          "name": "TestBigFloat",
+          "startLine": 25,
+          "endLine": 36,
+          "params": [
+            "strValue",
+            "approxDouble"
+          ]
+        },
+        {
+          "name": "TestParseSequence",
+          "startLine": 38,
+          "endLine": 49,
+          "params": [
+            "sequence",
+            "expected"
+          ]
+        },
+        {
+          "name": "TestDecimal",
+          "startLine": 51,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 86,
+          "endLine": 89,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UnitFormatterTest",
+          "startLine": 7,
+          "endLine": 63,
+          "methods": [
+            "TestFormats",
+            "TestBigFloat",
+            "TestParseSequence",
+            "TestDecimal"
+          ],
+          "properties": []
+        },
+        {
+          "name": "StepWithHexProperties",
+          "startLine": 65,
+          "endLine": 90,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "X",
+            "X2",
+            "X3",
+            "X4",
+            "X5",
+            "X6",
+            "X7",
+            "X8"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TestFormats",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "TestBigFloat",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "TestParseSequence",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "TestDecimal",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "UnitFormatterTest",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "X",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "X2",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "X3",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "X4",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "X5",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "X6",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "X7",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "X8",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "StepWithHexProperties",
+          "line": 65,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TestFormats",
+          "callee": "UnitFormatter.Format",
+          "lineNumber": 18
+        },
+        {
+          "caller": "TestFormats",
+          "callee": "BigFloat.Convert",
+          "lineNumber": 18
+        },
+        {
+          "caller": "TestFormats",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 19
+        },
+        {
+          "caller": "TestFormats",
+          "callee": "UnitFormatter.Parse",
+          "lineNumber": 20
+        },
+        {
+          "caller": "TestFormats",
+          "callee": "flt.ConvertTo",
+          "lineNumber": 21
+        },
+        {
+          "caller": "TestFormats",
+          "callee": "value.GetType",
+          "lineNumber": 21
+        },
+        {
+          "caller": "TestFormats",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 22
+        },
+        {
+          "caller": "TestBigFloat",
+          "callee": "UnitFormatter.Parse",
+          "lineNumber": 33
+        },
+        {
+          "caller": "TestBigFloat",
+          "callee": "bf.ConvertTo",
+          "lineNumber": 34
+        },
+        {
+          "caller": "TestBigFloat",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 35
+        },
+        {
+          "caller": "TestBigFloat",
+          "callee": "Math.Abs",
+          "lineNumber": 35
+        },
+        {
+          "caller": "TestParseSequence",
+          "callee": "expected.Split(\",\").Select(double.Parse).ToArray",
+          "lineNumber": 45
+        },
+        {
+          "caller": "TestParseSequence",
+          "callee": "expected.Split(\",\").Select",
+          "lineNumber": 45
+        },
+        {
+          "caller": "TestParseSequence",
+          "callee": "expected.Split",
+          "lineNumber": 45
+        },
+        {
+          "caller": "TestParseSequence",
+          "callee": "new NumberFormatter",
+          "lineNumber": 46
+        },
+        {
+          "caller": "TestParseSequence",
+          "callee": "parser.Parse",
+          "lineNumber": 47
+        },
+        {
+          "caller": "TestParseSequence",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 48
+        },
+        {
+          "caller": "TestParseSequence",
+          "callee": "values2.SequenceEqual",
+          "lineNumber": 48
+        },
+        {
+          "caller": "TestDecimal",
+          "callee": "decimal.Parse",
+          "lineNumber": 55
+        },
+        {
+          "caller": "TestDecimal",
+          "callee": "new NumberFormatter",
+          "lineNumber": 56
+        },
+        {
+          "caller": "TestDecimal",
+          "callee": "fmt.FormatNumber",
+          "lineNumber": 57
+        },
+        {
+          "caller": "TestDecimal",
+          "callee": "fmt.ParseNumber",
+          "lineNumber": 58
+        },
+        {
+          "caller": "TestDecimal",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 59
+        },
+        {
+          "caller": "TestDecimal",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 60
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 15,
+        "functionCount": 5,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/DiagnosticTraceListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "Write",
+          "startLine": 16,
+          "endLine": 19,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "WriteLine",
+          "startLine": 21,
+          "endLine": 24,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "TraceEvent",
+          "startLine": 26,
+          "endLine": 30,
+          "params": [
+            "source",
+            "eventType",
+            "id",
+            "message"
+          ]
+        },
+        {
+          "name": "TraceEvent",
+          "startLine": 32,
+          "endLine": 36,
+          "params": [
+            "source",
+            "eventType",
+            "id",
+            "format"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DiagnosticTraceListener",
+          "startLine": 13,
+          "endLine": 37,
+          "methods": [
+            "Write",
+            "WriteLine",
+            "TraceEvent",
+            "TraceEvent"
+          ],
+          "properties": [
+            "globalTimer"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Write",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "WriteLine",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvent",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvent",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "DiagnosticTraceListener",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TraceEvent",
+          "callee": "Debug.WriteLine",
+          "lineNumber": 28
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "String.Format",
+          "lineNumber": 28
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "base.TraceEvent",
+          "lineNumber": 29
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "Debug.WriteLine",
+          "lineNumber": 34
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "String.Format",
+          "lineNumber": 34
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "String.Format",
+          "lineNumber": 34
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "base.TraceEvent",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 33,
+      "functions": [
+        {
+          "name": "TestConformance",
+          "startLine": 11,
+          "endLine": 34,
+          "params": [
+            "nonOpenResource"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ResourceTest",
+          "startLine": 9,
+          "endLine": 35,
+          "methods": [
+            "TestConformance"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TestConformance",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "ResourceTest",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TestConformance",
+          "callee": "nonOpenResource.Open",
+          "lineNumber": 19
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 20
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "nonOpenResource.Close",
+          "lineNumber": 21
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "Assert.IsFalse",
+          "lineNumber": 22
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "nonOpenResource.Open",
+          "lineNumber": 24
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 25
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "nonOpenResource.Open",
+          "lineNumber": 26
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 27
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "nonOpenResource.Close",
+          "lineNumber": 28
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "Assert.IsFalse",
+          "lineNumber": 29
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "nonOpenResource.Close",
+          "lineNumber": 30
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "Assert.IsFalse",
+          "lineNumber": 31
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "nonOpenResource.Close",
+          "lineNumber": 32
+        },
+        {
+          "caller": "TestConformance",
+          "callee": "Assert.IsFalse",
+          "lineNumber": 33
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 87,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "TestPlanRunner",
+          "startLine": 16,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "RunTestPlanCommon",
+          "startLine": 21,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "runTestPlanPre",
+          "startLine": 52,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "RunTestPlan",
+          "startLine": 59,
+          "endLine": 64,
+          "params": [
+            "plan"
+          ]
+        },
+        {
+          "name": "RunTestPlan",
+          "startLine": 66,
+          "endLine": 85,
+          "params": [
+            "resourceNamespaceName",
+            "testPlanName"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestPlanRunner",
+          "startLine": 14,
+          "endLine": 86,
+          "methods": [
+            "TestPlanRunner",
+            "RunTestPlanCommon",
+            "runTestPlanPre",
+            "RunTestPlan",
+            "RunTestPlan"
+          ],
+          "properties": [
+            "trace",
+            "plan"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RunTestPlan",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "RunTestPlan",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanRunner",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "new PlanRunCollectorListener",
+          "lineNumber": 24
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "Directory.Exists",
+          "lineNumber": 27
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 28
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "ResultSettings.Current.GetDefault<LogResultListener>",
+          "lineNumber": 31
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "new LogResultListener",
+          "lineNumber": 34
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "ResultSettings.Current.Add",
+          "lineNumber": 35
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "plan.Execute",
+          "lineNumber": 39
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "ResultSettings.Current.Concat",
+          "lineNumber": 39
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "ResultSettings.Current.Remove",
+          "lineNumber": 41
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "Log.RemoveListener",
+          "lineNumber": 42
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "trace.AssertErrors",
+          "lineNumber": 43
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 46
+        },
+        {
+          "caller": "RunTestPlanCommon",
+          "callee": "trace.GetLog",
+          "lineNumber": 48
+        },
+        {
+          "caller": "runTestPlanPre",
+          "callee": "new TestTraceListener",
+          "lineNumber": 54
+        },
+        {
+          "caller": "runTestPlanPre",
+          "callee": "Log.AddListener",
+          "lineNumber": 55
+        },
+        {
+          "caller": "runTestPlanPre",
+          "callee": "new TestPlanRunner",
+          "lineNumber": 56
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "runTestPlanPre",
+          "lineNumber": 61
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "runner.RunTestPlanCommon",
+          "lineNumber": 63
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "runTestPlanPre",
+          "lineNumber": 68
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "new TestTraceListener",
+          "lineNumber": 69
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "Log.AddListener",
+          "lineNumber": 70
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "new AutoResetEvent",
+          "lineNumber": 72
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "PluginManager.SearchAsync",
+          "lineNumber": 73
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "Assembly.GetCallingAssembly",
+          "lineNumber": 75
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "asm.GetManifestResourceStream",
+          "lineNumber": 76
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "new StreamReader",
+          "lineNumber": 77
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "File.WriteAllText",
+          "lineNumber": 79
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "reader.ReadToEnd",
+          "lineNumber": 79
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "TestPlan.Load",
+          "lineNumber": 82
+        },
+        {
+          "caller": "RunTestPlan",
+          "callee": "runner.RunTestPlanCommon",
+          "lineNumber": 84
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "RunTestStep",
+          "startLine": 33,
+          "endLine": 37,
+          "params": [
+            "step",
+            "allowedLogErrors"
+          ]
+        },
+        {
+          "name": "RunTestStep",
+          "startLine": 43,
+          "endLine": 63,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "CheckForInconclusive",
+          "startLine": 65,
+          "endLine": 69,
+          "params": [
+            "errorMessage"
+          ]
+        },
+        {
+          "name": "SetupPlan",
+          "startLine": 71,
+          "endLine": 74,
+          "params": [
+            "plan",
+            "step"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestStepTestBase",
+          "startLine": 17,
+          "endLine": 75,
+          "methods": [
+            "RunTestStep",
+            "RunTestStep",
+            "CheckForInconclusive",
+            "SetupPlan"
+          ],
+          "properties": [
+            "allowedLogErrors",
+            "testContextInstance",
+            "TestContext"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TestContext",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "TestStepTestBase",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RunTestStep",
+          "callee": "RunTestStep",
+          "lineNumber": 36
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "new TestTraceListener",
+          "lineNumber": 45
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "new PlanRunCollectorListener",
+          "lineNumber": 46
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "Log.AddListener",
+          "lineNumber": 47
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "new TestPlan",
+          "lineNumber": 49
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "SetupPlan",
+          "lineNumber": 50
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "new Mutex",
+          "lineNumber": 52
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "mux.WaitOne",
+          "lineNumber": 54
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "plan.Execute",
+          "lineNumber": 56
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "ResultSettings.Current.Concat",
+          "lineNumber": 56
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "mux.ReleaseMutex",
+          "lineNumber": 57
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "Log.RemoveListener",
+          "lineNumber": 59
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "CheckForInconclusive",
+          "lineNumber": 60
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "trace.AssertErrors",
+          "lineNumber": 61
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 62
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "pl.StepRuns.First",
+          "lineNumber": 62
+        },
+        {
+          "caller": "RunTestStep",
+          "callee": "trace.allLog.ToString",
+          "lineNumber": 62
+        },
+        {
+          "caller": "CheckForInconclusive",
+          "callee": "errorMessage.Any",
+          "lineNumber": 67
+        },
+        {
+          "caller": "CheckForInconclusive",
+          "callee": "em.Contains",
+          "lineNumber": 67
+        },
+        {
+          "caller": "CheckForInconclusive",
+          "callee": "Assert.Inconclusive",
+          "lineNumber": 68
+        },
+        {
+          "caller": "CheckForInconclusive",
+          "callee": "string.Join",
+          "lineNumber": 68
+        },
+        {
+          "caller": "SetupPlan",
+          "callee": "plan.Steps.Add",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 125,
+      "nonEmptyLines": 113,
+      "functions": [
+        {
+          "name": "ClearErrors",
+          "startLine": 20,
+          "endLine": 24,
+          "params": []
+        },
+        {
+          "name": "AssertErrors",
+          "startLine": 26,
+          "endLine": 43,
+          "params": [
+            "allowedMessages"
+          ]
+        },
+        {
+          "name": "AssertErrors",
+          "startLine": 45,
+          "endLine": 61,
+          "params": [
+            "allowedMessages"
+          ]
+        },
+        {
+          "name": "AssertErrors",
+          "startLine": 63,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "GetLog",
+          "startLine": 71,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "TraceEvent",
+          "startLine": 80,
+          "endLine": 88,
+          "params": [
+            "source",
+            "eventType",
+            "id",
+            "message"
+          ]
+        },
+        {
+          "name": "TraceEvent",
+          "startLine": 90,
+          "endLine": 103,
+          "params": [
+            "source",
+            "eventType",
+            "id",
+            "format"
+          ]
+        },
+        {
+          "name": "Write",
+          "startLine": 105,
+          "endLine": 107,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "WriteLine",
+          "startLine": 109,
+          "endLine": 111,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "ExpectWarnings",
+          "startLine": 113,
+          "endLine": 117,
+          "params": []
+        },
+        {
+          "name": "ExpectErrors",
+          "startLine": 119,
+          "endLine": 123,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestTraceListener",
+          "startLine": 18,
+          "endLine": 124,
+          "methods": [
+            "ClearErrors",
+            "AssertErrors",
+            "AssertErrors",
+            "AssertErrors",
+            "GetLog",
+            "TraceEvent",
+            "TraceEvent",
+            "Write",
+            "WriteLine",
+            "ExpectWarnings",
+            "ExpectErrors"
+          ],
+          "properties": [
+            "allLog",
+            "globalTimer",
+            "ErrorMessage",
+            "WarningMessage"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ClearErrors",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "AssertErrors",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "AssertErrors",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "AssertErrors",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "GetLog",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "allLog",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "ErrorMessage",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "WarningMessage",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvent",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvent",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "Write",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "WriteLine",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "ExpectWarnings",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "ExpectErrors",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "TestTraceListener",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ClearErrors",
+          "callee": "new List<string>",
+          "lineNumber": 22
+        },
+        {
+          "caller": "ClearErrors",
+          "callee": "new List<string>",
+          "lineNumber": 23
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "allowedMessages.Contains",
+          "lineNumber": 30
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "Assert.Fail",
+          "lineNumber": 32
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "GetLog",
+          "lineNumber": 32
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "allowedMessages.Contains",
+          "lineNumber": 38
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "Assert.Inconclusive",
+          "lineNumber": 40
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "GetLog",
+          "lineNumber": 40
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "allowedMessages.All",
+          "lineNumber": 49
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "r.IsMatch",
+          "lineNumber": 49
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "Assert.Fail",
+          "lineNumber": 51
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "GetLog",
+          "lineNumber": 51
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "allowedMessages.All",
+          "lineNumber": 56
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "r.IsMatch",
+          "lineNumber": 56
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "Assert.Inconclusive",
+          "lineNumber": 58
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "GetLog",
+          "lineNumber": 58
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "Flush",
+          "lineNumber": 65
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 66
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "string.Join",
+          "lineNumber": 66
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "GetLog",
+          "lineNumber": 66
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "Assert.Inconclusive",
+          "lineNumber": 68
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "string.Join",
+          "lineNumber": 68
+        },
+        {
+          "caller": "AssertErrors",
+          "callee": "GetLog",
+          "lineNumber": 68
+        },
+        {
+          "caller": "GetLog",
+          "callee": "allLog.ToString",
+          "lineNumber": 73
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "base.TraceEvent",
+          "lineNumber": 82
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "allLog.AppendLine",
+          "lineNumber": 83
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "String.Format",
+          "lineNumber": 83
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "ErrorMessage.Add",
+          "lineNumber": 85
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "WarningMessage.Add",
+          "lineNumber": 87
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "TraceEvent",
+          "lineNumber": 94
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "base.TraceEvent",
+          "lineNumber": 97
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "allLog.AppendLine",
+          "lineNumber": 98
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "String.Format",
+          "lineNumber": 98
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "String.Format",
+          "lineNumber": 98
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "ErrorMessage.Add",
+          "lineNumber": 100
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "String.Format",
+          "lineNumber": 100
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "WarningMessage.Add",
+          "lineNumber": 102
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "String.Format",
+          "lineNumber": 102
+        },
+        {
+          "caller": "ExpectWarnings",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 116
+        },
+        {
+          "caller": "ExpectWarnings",
+          "callee": "WarningMessage.Any",
+          "lineNumber": 116
+        },
+        {
+          "caller": "ExpectWarnings",
+          "callee": "x.Contains",
+          "lineNumber": 116
+        },
+        {
+          "caller": "ExpectErrors",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 122
+        },
+        {
+          "caller": "ExpectErrors",
+          "callee": "ErrorMessage.Any",
+          "lineNumber": 122
+        },
+        {
+          "caller": "ExpectErrors",
+          "callee": "x.Contains",
+          "lineNumber": 122
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 15,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 248,
+      "nonEmptyLines": 221,
+      "functions": [
+        {
+          "name": "validProp",
+          "startLine": 25,
+          "endLine": 45,
+          "params": [
+            "prop"
+          ]
+        },
+        {
+          "name": "GetUniqueValue",
+          "startLine": 47,
+          "endLine": 96,
+          "params": [
+            "genType"
+          ]
+        },
+        {
+          "name": "propertyChangedOk",
+          "startLine": 99,
+          "endLine": 116,
+          "params": [
+            "holder",
+            "args"
+          ]
+        },
+        {
+          "name": "testTypeProperties",
+          "startLine": 135,
+          "endLine": 200,
+          "params": [
+            "tp"
+          ]
+        },
+        {
+          "name": "TestINotifyPropertyChanged",
+          "startLine": 202,
+          "endLine": 223,
+          "params": []
+        },
+        {
+          "name": "TestAssembly",
+          "startLine": 225,
+          "endLine": 246,
+          "params": [
+            "asm"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ValidatingObjectConformance",
+          "startLine": 21,
+          "endLine": 247,
+          "methods": [
+            "validProp",
+            "GetUniqueValue",
+            "propertyChangedOk",
+            "testTypeProperties",
+            "TestINotifyPropertyChanged",
+            "TestAssembly"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "testTypeProperties",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "TestINotifyPropertyChanged",
+          "line": 202,
+          "isDefault": false
+        },
+        {
+          "name": "TestAssembly",
+          "line": 225,
+          "isDefault": false
+        },
+        {
+          "name": "ValidatingObjectConformance",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "validProp",
+          "callee": "prop.HasAttribute<XmlIgnoreAttribute>",
+          "lineNumber": 31
+        },
+        {
+          "caller": "validProp",
+          "callee": "prop.HasAttribute<BrowsableAttribute>",
+          "lineNumber": 36
+        },
+        {
+          "caller": "validProp",
+          "callee": "prop.GetAttribute<BrowsableAttribute>",
+          "lineNumber": 38
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "Enum.GetValues",
+          "lineNumber": 56
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "vals.GetValue",
+          "lineNumber": 59
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "vals.GetValue",
+          "lineNumber": 61
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "Convert.ChangeType",
+          "lineNumber": 68
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "PluginManager.GetPlugins(genType)\n                        .FirstOrDefault",
+          "lineNumber": 72
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "PluginManager.GetPlugins",
+          "lineNumber": 72
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "new Guid().ToString",
+          "lineNumber": 78
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "new Guid",
+          "lineNumber": 78
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "genType.GetElementType",
+          "lineNumber": 82
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "Array.CreateInstance",
+          "lineNumber": 83
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "outarr.SetValue",
+          "lineNumber": 84
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "GetUniqueValue",
+          "lineNumber": 84
+        },
+        {
+          "caller": "GetUniqueValue",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 90
+        },
+        {
+          "caller": "propertyChangedOk",
+          "callee": "String.IsNullOrEmpty",
+          "lineNumber": 102
+        },
+        {
+          "caller": "propertyChangedOk",
+          "callee": "propStr.Split",
+          "lineNumber": 106
+        },
+        {
+          "caller": "propertyChangedOk",
+          "callee": "holder.GetProperty",
+          "lineNumber": 108
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "new List<Exception>",
+          "lineNumber": 137
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "tp.HasInterface<INotifyPropertyChanged>",
+          "lineNumber": 138
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "tp.GetProperties(BindingFlags.Instance\n                | BindingFlags.SetProperty | BindingFlags.Public | BindingFlags.NonPublic)\n                .Where(validProp).ToArray",
+          "lineNumber": 143
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "tp.GetProperties(BindingFlags.Instance\n                | BindingFlags.SetProperty | BindingFlags.Public | BindingFlags.NonPublic)\n                .Where",
+          "lineNumber": 143
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "tp.GetProperties",
+          "lineNumber": 143
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 154
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "propertyChangedOk",
+          "lineNumber": 162
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "new ErrorPropException",
+          "lineNumber": 164
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "String.Format",
+          "lineNumber": 164
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "new WarningPropException",
+          "lineNumber": 175
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "String.Format",
+          "lineNumber": 175
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "prop.SetValue",
+          "lineNumber": 183
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "GetUniqueValue",
+          "lineNumber": 183
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "prop.SetValue",
+          "lineNumber": 187
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "prop.GetValue",
+          "lineNumber": 187
+        },
+        {
+          "caller": "testTypeProperties",
+          "callee": "ex.Add",
+          "lineNumber": 194
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "new List<Exception>",
+          "lineNumber": 205
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "PluginManager.GetPlugins<INotifyPropertyChanged>",
+          "lineNumber": 206
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "exceptions.AddRange",
+          "lineNumber": 208
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "testTypeProperties",
+          "lineNumber": 208
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "exceptions.Any",
+          "lineNumber": 210
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "exceptions.Where",
+          "lineNumber": 212
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "warnings.ForEach",
+          "lineNumber": 213
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "Debug.Print",
+          "lineNumber": 215
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "exceptions.Where(ex => !(ex is WarningPropException)).ToList",
+          "lineNumber": 217
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "exceptions.Where",
+          "lineNumber": 217
+        },
+        {
+          "caller": "TestINotifyPropertyChanged",
+          "callee": "new AggregateException",
+          "lineNumber": 220
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "new List<Exception>",
+          "lineNumber": 227
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "asm.GetTypes",
+          "lineNumber": 229
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "exceptions.AddRange",
+          "lineNumber": 231
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "testTypeProperties",
+          "lineNumber": 231
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "exceptions.Any",
+          "lineNumber": 233
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "exceptions.Where",
+          "lineNumber": 235
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "warnings.ForEach",
+          "lineNumber": 236
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "Debug.Print",
+          "lineNumber": 238
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "exceptions.Where(ex => !(ex is WarningPropException)).ToList",
+          "lineNumber": 240
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "exceptions.Where",
+          "lineNumber": 240
+        },
+        {
+          "caller": "TestAssembly",
+          "callee": "new AggregateException",
+          "lineNumber": 243
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine.UnitTests/UserCodeTest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 521,
+      "nonEmptyLines": 445,
+      "functions": [
+        {
+          "name": "ResultListeners",
+          "startLine": 16,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "ResultListenerAbortPlan",
+          "startLine": 37,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "VersionProperties",
+          "startLine": 85,
+          "endLine": 93,
+          "params": []
+        },
+        {
+          "name": "InstrumentTestMethod",
+          "startLine": 95,
+          "endLine": 107,
+          "params": []
+        },
+        {
+          "name": "DutInheritingFromIDut",
+          "startLine": 109,
+          "endLine": 122,
+          "params": []
+        },
+        {
+          "name": "ResultListenerInheritingFromIResultListener",
+          "startLine": 124,
+          "endLine": 137,
+          "params": []
+        },
+        {
+          "name": "InstrumentInheritingFromIInstrument",
+          "startLine": 139,
+          "endLine": 151,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 157,
+          "endLine": 160,
+          "params": []
+        },
+        {
+          "name": "InstrumentTest",
+          "startLine": 165,
+          "endLine": 168,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 178,
+          "endLine": 182,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 184,
+          "endLine": 188,
+          "params": []
+        },
+        {
+          "name": "tryCrash",
+          "startLine": 190,
+          "endLine": 196,
+          "params": [
+            "phase"
+          ]
+        },
+        {
+          "name": "resultListenerCrash",
+          "startLine": 218,
+          "endLine": 222,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 224,
+          "endLine": 231,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 233,
+          "endLine": 240,
+          "params": []
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "startLine": 243,
+          "endLine": 253,
+          "params": [
+            "planRun"
+          ]
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "startLine": 255,
+          "endLine": 266,
+          "params": [
+            "planRun",
+            "logStream"
+          ]
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "startLine": 272,
+          "endLine": 281,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "startLine": 283,
+          "endLine": 292,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "OnResultPublished",
+          "startLine": 294,
+          "endLine": 303,
+          "params": [
+            "stepRunId",
+            "result"
+          ]
+        },
+        {
+          "name": "Close",
+          "startLine": 339,
+          "endLine": 342,
+          "params": []
+        },
+        {
+          "name": "Dispose",
+          "startLine": 344,
+          "endLine": 347,
+          "params": []
+        },
+        {
+          "name": "OnActivity",
+          "startLine": 349,
+          "endLine": 355,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 357,
+          "endLine": 360,
+          "params": []
+        },
+        {
+          "name": "OnResultPublished",
+          "startLine": 396,
+          "endLine": 399,
+          "params": [
+            "stepRun",
+            "result"
+          ]
+        },
+        {
+          "name": "Close",
+          "startLine": 401,
+          "endLine": 404,
+          "params": []
+        },
+        {
+          "name": "Dispose",
+          "startLine": 406,
+          "endLine": 409,
+          "params": []
+        },
+        {
+          "name": "OnActivity",
+          "startLine": 411,
+          "endLine": 417,
+          "params": []
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "startLine": 419,
+          "endLine": 422,
+          "params": [
+            "planRun",
+            "logStream"
+          ]
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "startLine": 424,
+          "endLine": 427,
+          "params": [
+            "planRun"
+          ]
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "startLine": 429,
+          "endLine": 432,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "startLine": 434,
+          "endLine": 437,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "Open",
+          "startLine": 439,
+          "endLine": 442,
+          "params": []
+        },
+        {
+          "name": "OnPropertyChanged",
+          "startLine": 460,
+          "endLine": 466,
+          "params": [
+            "v"
+          ]
+        },
+        {
+          "name": "Close",
+          "startLine": 488,
+          "endLine": 491,
+          "params": []
+        },
+        {
+          "name": "Dispose",
+          "startLine": 493,
+          "endLine": 496,
+          "params": []
+        },
+        {
+          "name": "OnActivity",
+          "startLine": 498,
+          "endLine": 504,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 506,
+          "endLine": 509,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 516,
+          "endLine": 519,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserCodeTest",
+          "startLine": 13,
+          "endLine": 152,
+          "methods": [
+            "ResultListeners",
+            "ResultListenerAbortPlan",
+            "VersionProperties",
+            "InstrumentTestMethod",
+            "DutInheritingFromIDut",
+            "ResultListenerInheritingFromIResultListener",
+            "InstrumentInheritingFromIInstrument"
+          ],
+          "properties": []
+        },
+        {
+          "name": "InstrumentTestStep",
+          "startLine": 154,
+          "endLine": 161,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Instrument"
+          ]
+        },
+        {
+          "name": "InstrumentTest",
+          "startLine": 163,
+          "endLine": 197,
+          "methods": [
+            "InstrumentTest",
+            "Open",
+            "Close",
+            "tryCrash"
+          ],
+          "properties": [
+            "CrashPhase"
+          ]
+        },
+        {
+          "name": "resultListenerCrash",
+          "startLine": 199,
+          "endLine": 304,
+          "methods": [
+            "resultListenerCrash",
+            "Close",
+            "Open",
+            "OnTestPlanRunStart",
+            "OnTestPlanRunCompleted",
+            "OnTestStepRunStart",
+            "OnTestStepRunCompleted",
+            "OnResultPublished"
+          ],
+          "properties": [
+            "AbortPlan",
+            "CrashResultPhase",
+            "FinalVerdict",
+            "planrun"
+          ]
+        },
+        {
+          "name": "InterfaceTestDut",
+          "startLine": 306,
+          "endLine": 361,
+          "methods": [
+            "Close",
+            "Dispose",
+            "OnActivity",
+            "Open"
+          ],
+          "properties": [
+            "isConnected",
+            "IsConnected",
+            "_shortName",
+            "Name"
+          ]
+        },
+        {
+          "name": "InterfaceTestResultListenser",
+          "startLine": 363,
+          "endLine": 443,
+          "methods": [
+            "OnResultPublished",
+            "Close",
+            "Dispose",
+            "OnActivity",
+            "OnTestPlanRunCompleted",
+            "OnTestPlanRunStart",
+            "OnTestStepRunCompleted",
+            "OnTestStepRunStart",
+            "Open"
+          ],
+          "properties": [
+            "isConnected",
+            "IsConnected",
+            "_shortName",
+            "Name"
+          ]
+        },
+        {
+          "name": "InterfaceTestInstrument",
+          "startLine": 445,
+          "endLine": 510,
+          "methods": [
+            "OnPropertyChanged",
+            "Close",
+            "Dispose",
+            "OnActivity",
+            "Open"
+          ],
+          "properties": [
+            "isConnected",
+            "IsConnected",
+            "_shortName",
+            "Name"
+          ]
+        },
+        {
+          "name": "QuickTestStep",
+          "startLine": 512,
+          "endLine": 520,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Instrument"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ResultListeners",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "ResultListenerAbortPlan",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "VersionProperties",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentTestMethod",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "DutInheritingFromIDut",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "ResultListenerInheritingFromIResultListener",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentInheritingFromIInstrument",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "UserCodeTest",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "Instrument",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 157,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentTestStep",
+          "line": 154,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentTest",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "CrashPhase",
+          "line": 176,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 178,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentTest",
+          "line": 163,
+          "isDefault": false
+        },
+        {
+          "name": "AbortPlan",
+          "line": 214,
+          "isDefault": false
+        },
+        {
+          "name": "CrashResultPhase",
+          "line": 216,
+          "isDefault": false
+        },
+        {
+          "name": "FinalVerdict",
+          "line": 217,
+          "isDefault": false
+        },
+        {
+          "name": "resultListenerCrash",
+          "line": 218,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 224,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 233,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "line": 243,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "line": 255,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "line": 272,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "line": 283,
+          "isDefault": false
+        },
+        {
+          "name": "OnResultPublished",
+          "line": 294,
+          "isDefault": false
+        },
+        {
+          "name": "resultListenerCrash",
+          "line": 199,
+          "isDefault": false
+        },
+        {
+          "name": "IsConnected",
+          "line": 309,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 321,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 339,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 344,
+          "isDefault": false
+        },
+        {
+          "name": "OnActivity",
+          "line": 349,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 357,
+          "isDefault": false
+        },
+        {
+          "name": "InterfaceTestDut",
+          "line": 306,
+          "isDefault": false
+        },
+        {
+          "name": "IsConnected",
+          "line": 366,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 378,
+          "isDefault": false
+        },
+        {
+          "name": "OnResultPublished",
+          "line": 396,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 401,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 406,
+          "isDefault": false
+        },
+        {
+          "name": "OnActivity",
+          "line": 411,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "line": 419,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "line": 424,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "line": 429,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "line": 434,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 439,
+          "isDefault": false
+        },
+        {
+          "name": "InterfaceTestResultListenser",
+          "line": 363,
+          "isDefault": false
+        },
+        {
+          "name": "IsConnected",
+          "line": 449,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 469,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 488,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 493,
+          "isDefault": false
+        },
+        {
+          "name": "OnActivity",
+          "line": 498,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 506,
+          "isDefault": false
+        },
+        {
+          "name": "InterfaceTestInstrument",
+          "line": 445,
+          "isDefault": false
+        },
+        {
+          "name": "Instrument",
+          "line": 514,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 516,
+          "isDefault": false
+        },
+        {
+          "name": "QuickTestStep",
+          "line": 512,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ResultListeners",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 20
+        },
+        {
+          "caller": "ResultListeners",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 21
+        },
+        {
+          "caller": "ResultListeners",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 22
+        },
+        {
+          "caller": "ResultListeners",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 23
+        },
+        {
+          "caller": "ResultListeners",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 24
+        },
+        {
+          "caller": "ResultListeners",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 25
+        },
+        {
+          "caller": "ResultListeners",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 26
+        },
+        {
+          "caller": "ResultListeners",
+          "callee": "new TestPlan",
+          "lineNumber": 29
+        },
+        {
+          "caller": "ResultListeners",
+          "callee": "testplan.Steps.Add",
+          "lineNumber": 30
+        },
+        {
+          "caller": "ResultListeners",
+          "callee": "new TestStepTest",
+          "lineNumber": 30
+        },
+        {
+          "caller": "ResultListeners",
+          "callee": "testplan.Execute",
+          "lineNumber": 33
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 44
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 45
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 46
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 47
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "new resultListenerCrash",
+          "lineNumber": 49
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "new TestPlan",
+          "lineNumber": 52
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "testplan.Steps.Add",
+          "lineNumber": 53
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "new TestStepTest",
+          "lineNumber": 53
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "testplan.Execute",
+          "lineNumber": 63
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 64
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 65
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "testplan.Open",
+          "lineNumber": 70
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 72
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "testplan.Execute",
+          "lineNumber": 72
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 73
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 76
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "testplan.Execute",
+          "lineNumber": 76
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "Assert.AreEqual",
+          "lineNumber": 77
+        },
+        {
+          "caller": "ResultListenerAbortPlan",
+          "callee": "testplan.Close",
+          "lineNumber": 78
+        },
+        {
+          "caller": "VersionProperties",
+          "callee": "new TestPlan",
+          "lineNumber": 88
+        },
+        {
+          "caller": "VersionProperties",
+          "callee": "tp.ChildTestSteps.Add",
+          "lineNumber": 89
+        },
+        {
+          "caller": "VersionProperties",
+          "callee": "tp.Execute",
+          "lineNumber": 90
+        },
+        {
+          "caller": "VersionProperties",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 92
+        },
+        {
+          "caller": "VersionProperties",
+          "callee": "tpr.Parameters.Any",
+          "lineNumber": 92
+        },
+        {
+          "caller": "InstrumentTestMethod",
+          "callee": "new InstrumentTest",
+          "lineNumber": 98
+        },
+        {
+          "caller": "InstrumentTestMethod",
+          "callee": "new InstrumentTest",
+          "lineNumber": 99
+        },
+        {
+          "caller": "InstrumentTestMethod",
+          "callee": "new InstrumentTestStep",
+          "lineNumber": 102
+        },
+        {
+          "caller": "InstrumentTestMethod",
+          "callee": "new TestPlan",
+          "lineNumber": 103
+        },
+        {
+          "caller": "InstrumentTestMethod",
+          "callee": "plan.Steps.Add",
+          "lineNumber": 104
+        },
+        {
+          "caller": "InstrumentTestMethod",
+          "callee": "plan.Execute",
+          "lineNumber": 105
+        },
+        {
+          "caller": "DutInheritingFromIDut",
+          "callee": "new InterfaceTestDut",
+          "lineNumber": 114
+        },
+        {
+          "caller": "DutInheritingFromIDut",
+          "callee": "new DutSettings",
+          "lineNumber": 115
+        },
+        {
+          "caller": "DutInheritingFromIDut",
+          "callee": "setting.Add",
+          "lineNumber": 116
+        },
+        {
+          "caller": "DutInheritingFromIDut",
+          "callee": "Assert.Fail",
+          "lineNumber": 120
+        },
+        {
+          "caller": "ResultListenerInheritingFromIResultListener",
+          "callee": "new InterfaceTestResultListenser",
+          "lineNumber": 129
+        },
+        {
+          "caller": "ResultListenerInheritingFromIResultListener",
+          "callee": "new ResultSettings",
+          "lineNumber": 130
+        },
+        {
+          "caller": "ResultListenerInheritingFromIResultListener",
+          "callee": "setting.Add",
+          "lineNumber": 131
+        },
+        {
+          "caller": "ResultListenerInheritingFromIResultListener",
+          "callee": "Assert.Fail",
+          "lineNumber": 135
+        },
+        {
+          "caller": "InstrumentInheritingFromIInstrument",
+          "callee": "new InterfaceTestInstrument",
+          "lineNumber": 143
+        },
+        {
+          "caller": "InstrumentInheritingFromIInstrument",
+          "callee": "new InstrumentSettings",
+          "lineNumber": 144
+        },
+        {
+          "caller": "InstrumentInheritingFromIInstrument",
+          "callee": "setting.Add",
+          "lineNumber": 145
+        },
+        {
+          "caller": "InstrumentInheritingFromIInstrument",
+          "callee": "Assert.Fail",
+          "lineNumber": 149
+        },
+        {
+          "caller": "Run",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 159
+        },
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 180
+        },
+        {
+          "caller": "Open",
+          "callee": "tryCrash",
+          "lineNumber": 181
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Close",
+          "callee": "tryCrash",
+          "lineNumber": 187
+        },
+        {
+          "caller": "tryCrash",
+          "callee": "new Exception",
+          "lineNumber": 194
+        },
+        {
+          "caller": "tryCrash",
+          "callee": "phase.ToString",
+          "lineNumber": 194
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 226
+        },
+        {
+          "caller": "Close",
+          "callee": "new Exception",
+          "lineNumber": 229
+        },
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 235
+        },
+        {
+          "caller": "Open",
+          "callee": "new Exception",
+          "lineNumber": 238
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "TapThread.Current.Abort",
+          "lineNumber": 249
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "new Exception",
+          "lineNumber": 251
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "TapThread.Current.Abort",
+          "lineNumber": 261
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "new Exception",
+          "lineNumber": 263
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "TapThread.Current.Abort",
+          "lineNumber": 277
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "new Exception",
+          "lineNumber": 279
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "TapThread.Current.Abort",
+          "lineNumber": 288
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "new Exception",
+          "lineNumber": 290
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "TapThread.Current.Abort",
+          "lineNumber": 299
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "new Exception",
+          "lineNumber": 301
+        },
+        {
+          "caller": "OnActivity",
+          "callee": "ActivityStateChanged.Invoke",
+          "lineNumber": 353
+        },
+        {
+          "caller": "OnActivity",
+          "callee": "new EventArgs",
+          "lineNumber": 353
+        },
+        {
+          "caller": "OnActivity",
+          "callee": "ActivityStateChanged.Invoke",
+          "lineNumber": 415
+        },
+        {
+          "caller": "OnActivity",
+          "callee": "new EventArgs",
+          "lineNumber": 415
+        },
+        {
+          "caller": "OnPropertyChanged",
+          "callee": "PropertyChanged.Invoke",
+          "lineNumber": 464
+        },
+        {
+          "caller": "OnPropertyChanged",
+          "callee": "new PropertyChangedEventArgs",
+          "lineNumber": 464
+        },
+        {
+          "caller": "OnActivity",
+          "callee": "ActivityStateChanged.Invoke",
+          "lineNumber": 502
+        },
+        {
+          "caller": "OnActivity",
+          "callee": "new EventArgs",
+          "lineNumber": 502
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 57,
+        "functionCount": 39,
+        "classCount": 8
+      }
+    },
+    {
+      "path": "Engine.UnitTests/UserInputTest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 139,
+      "nonEmptyLines": 124,
+      "functions": [
+        {
+          "name": "RequestUserInput",
+          "startLine": 16,
+          "endLine": 19,
+          "params": [
+            "dataObject",
+            "Timeout",
+            "modal"
+          ]
+        },
+        {
+          "name": "TestValuesExtremes",
+          "startLine": 25,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "TestUserInputOrder",
+          "startLine": 68,
+          "endLine": 94,
+          "params": []
+        },
+        {
+          "name": "TestRequest",
+          "startLine": 128,
+          "endLine": 137,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserInputTest",
+          "startLine": 13,
+          "endLine": 95,
+          "methods": [
+            "RequestUserInput",
+            "TestValuesExtremes",
+            "TestUserInputOrder"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestRequest",
+          "startLine": 97,
+          "endLine": 138,
+          "methods": [
+            "TestRequest"
+          ],
+          "properties": [
+            "g",
+            "e",
+            "d",
+            "c",
+            "b",
+            "a",
+            "f"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RequestUserInput",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "TestValuesExtremes",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "TestUserInputOrder",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "UserInputTest",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "g",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "e",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "d",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "c",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "b",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "a",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "f",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "TestRequest",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "TestRequest",
+          "line": 97,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "UserInput.GetInterface",
+          "lineNumber": 29
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "CliUserInputInterface.Load",
+          "lineNumber": 32
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "new TestObject",
+          "lineNumber": 33
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "new SemaphoreSlim",
+          "lineNumber": 34
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "UserInput.Request",
+          "lineNumber": 38
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "Assert.Fail",
+          "lineNumber": 39
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "TapThread.Start",
+          "lineNumber": 45
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "UserInput.Request",
+          "lineNumber": 49
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "sem.Release",
+          "lineNumber": 56
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "trd.Abort",
+          "lineNumber": 58
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "sem.Wait",
+          "lineNumber": 59
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "Assert.Fail",
+          "lineNumber": 60
+        },
+        {
+          "caller": "TestValuesExtremes",
+          "callee": "UserInput.SetInterface",
+          "lineNumber": 64
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "Session.Create",
+          "lineNumber": 71
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "CliUserInputInterface.Load",
+          "lineNumber": 73
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "new TestRequest",
+          "lineNumber": 74
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "new StringWriter",
+          "lineNumber": 75
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "Console.SetOut",
+          "lineNumber": 80
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "UserInput.Request",
+          "lineNumber": 81
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "writer.ToString()\n                            .Split",
+          "lineNumber": 83
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "writer.ToString",
+          "lineNumber": 83
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "Assert.IsTrue",
+          "lineNumber": 86
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "log[i].EndsWith",
+          "lineNumber": 86
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "i.ToString",
+          "lineNumber": 86
+        },
+        {
+          "caller": "TestUserInputOrder",
+          "callee": "Console.SetOut",
+          "lineNumber": 90
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 4,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine.UnitTests/UserInputTestImpl.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "RequestUserInput",
+          "startLine": 8,
+          "endLine": 11,
+          "params": [
+            "dataObject",
+            "Timeout",
+            "modal"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserInputTestImpl",
+          "startLine": 4,
+          "endLine": 12,
+          "methods": [
+            "RequestUserInput"
+          ],
+          "properties": [
+            "Func"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Func",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "RequestUserInput",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RequestUserInput",
+          "callee": "Func",
+          "lineNumber": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    }
+  ]
+}

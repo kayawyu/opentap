@@ -1,0 +1,1249 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/DeserializeInPlaceAttribute.cs",
+      "type": "file",
+      "name": "DeserializeInPlaceAttribute.cs",
+      "filePath": "Engine/DeserializeInPlaceAttribute.cs",
+      "summary": "标记属性，指示反序列化器直接在当前实例上反序列化而非创建新对象，用于实现原地反序列化的语义控制。",
+      "tags": [
+        "attribute",
+        "serialization",
+        "deserialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/DeserializeInPlaceAttribute.cs:DeserializeInPlaceAttribute",
+      "type": "class",
+      "name": "DeserializeInPlaceAttribute",
+      "filePath": "Engine/DeserializeInPlaceAttribute.cs",
+      "lineRange": [
+        9,
+        13
+      ],
+      "summary": "标记类/成员应原地反序列化的 Attribute，避免创建新实例。",
+      "tags": [
+        "attribute",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/DirectoryPathAttribute.cs",
+      "type": "file",
+      "name": "DirectoryPathAttribute.cs",
+      "filePath": "Engine/DirectoryPathAttribute.cs",
+      "summary": "标记属性，指示该属性值为目录路径，供编辑器/UI 提供目录选择器。",
+      "tags": [
+        "attribute",
+        "ui",
+        "directory-path"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/DirectoryPathAttribute.cs:DirectoryPathAttribute",
+      "type": "class",
+      "name": "DirectoryPathAttribute",
+      "filePath": "Engine/DirectoryPathAttribute.cs",
+      "lineRange": [
+        12,
+        15
+      ],
+      "summary": "标记字符串属性为目录路径的 Attribute，编辑器据此提供目录浏览 UI。",
+      "tags": [
+        "attribute",
+        "ui",
+        "directory"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/DisplayAttribute.cs",
+      "type": "file",
+      "name": "DisplayAttribute.cs",
+      "filePath": "Engine/DisplayAttribute.cs",
+      "summary": "定义核心的显示属性，为组件/属性/步骤提供 Name（名称）、Description（描述）、Group（分组路径）、Order（排序）和 Collapsed（折叠状态）等元数据，支持多语言和中立回退。",
+      "tags": [
+        "display",
+        "attribute",
+        "metadata",
+        "localization",
+        "grouping"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/DisplayAttribute.cs:DisplayAttribute",
+      "type": "class",
+      "name": "DisplayAttribute",
+      "filePath": "Engine/DisplayAttribute.cs",
+      "lineRange": [
+        16,
+        132
+      ],
+      "summary": "控制组件和属性在 UI 中显示属性的核心 Attribute，支持 Name/Description/Group/Order/Collapsed/Language 字段和多层级分组路径。",
+      "tags": [
+        "display",
+        "attribute",
+        "metadata",
+        "grouping"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/DisplayAttribute.cs:GetFullName",
+      "type": "function",
+      "name": "GetFullName",
+      "filePath": "Engine/DisplayAttribute.cs",
+      "lineRange": [
+        56,
+        66
+      ],
+      "summary": "生成完整显示名称：将 Group（分组路径）和 Name 通过 GroupSeparator（\"/\"）连接，如 \"Instrument/Settings/Power\"。",
+      "tags": [
+        "display",
+        "naming",
+        "path"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/DisplayAttribute.cs:DisplayAttribute",
+      "type": "function",
+      "name": "DisplayAttribute",
+      "filePath": "Engine/DisplayAttribute.cs",
+      "lineRange": [
+        85,
+        97
+      ],
+      "summary": "创建 DisplayAttribute 的主构造函数（无语言版本），接收 Name/Description/Group/Order/Collapsed/Groups 参数。",
+      "tags": [
+        "constructor",
+        "display"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Dut.cs",
+      "type": "file",
+      "name": "Dut.cs",
+      "filePath": "Engine/Dut.cs",
+      "summary": "定义被测设备（DUT）的实体类，包含 ID（标识符）和 Comment（备注）两个核心属性，支持 DUT 的自动编号生成。",
+      "tags": [
+        "data-model",
+        "dut",
+        "device-under-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Dut.cs:Dut",
+      "type": "class",
+      "name": "Dut",
+      "filePath": "Engine/Dut.cs",
+      "lineRange": [
+        11,
+        45
+      ],
+      "summary": "表示被测设备（Device Under Test）的模型类，提供自增 ID 和 Comment（非序列化）属性。",
+      "tags": [
+        "data-model",
+        "dut",
+        "device"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/DutSettings.cs",
+      "type": "file",
+      "name": "DutSettings.cs",
+      "filePath": "Engine/DutSettings.cs",
+      "summary": "DUT 设置集合类，继承自 ComponentSettingsList<Dut>，在集合变更时自动更新关联连接的端口。",
+      "tags": [
+        "settings",
+        "dut",
+        "collection",
+        "connection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/DutSettings.cs:DutSettings",
+      "type": "class",
+      "name": "DutSettings",
+      "filePath": "Engine/DutSettings.cs",
+      "lineRange": [
+        11,
+        31
+      ],
+      "summary": "DUT 的组件设置集合，重写 OnCollectionChanged 以在集合变化时触发 CurrentConnection?.UpdateConnectionPorts。",
+      "tags": [
+        "settings",
+        "dut",
+        "collection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/DutSettings.cs:OnCollectionChanged",
+      "type": "function",
+      "name": "OnCollectionChanged",
+      "filePath": "Engine/DutSettings.cs",
+      "lineRange": [
+        20,
+        30
+      ],
+      "summary": "集合变更回调：调用基类方法并触发当前连接的端口更新，保持 DUT 与连接状态同步。",
+      "tags": [
+        "collection",
+        "event-handler",
+        "connection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "type": "file",
+      "name": "DynamicMemberTypeDataProvider.cs",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "summary": "实现测试步骤的动态成员系统：支持参数化（Parameterize/Unparameterize）、动态成员添加/删除、类型数据键管理、BreakCondition 标签常量定义，是 OpenTAP 动态属性和步骤参数化的核心引擎。",
+      "tags": [
+        "type-data",
+        "dynamic-members",
+        "parameterization",
+        "test-step",
+        "plugin-system"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/DynamicMemberTypeDataProvider.cs:ParameterExtensions",
+      "type": "class",
+      "name": "ParameterExtensions",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "lineRange": [
+        39,
+        88
+      ],
+      "summary": "为 IMemberData 提供参数化扩展方法：Parameterize/Unparameterize/GetParameter/IsParameterized，是动态成员参数化的入口 API。",
+      "tags": [
+        "extension-method",
+        "parameterization",
+        "dynamic-members"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/DynamicMemberTypeDataProvider.cs:ParameterMemberData",
+      "type": "class",
+      "name": "ParameterMemberData",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "lineRange": [
+        98,
+        350
+      ],
+      "summary": "参数化成员的元数据包装器：存储 Target 和 Source、管理嵌套参数层级、提供 GetValue/SetValue 转发、支持额外成员的动态添加和删除。",
+      "tags": [
+        "parameterization",
+        "type-data",
+        "dynamic-members",
+        "proxy"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/DynamicMemberTypeDataProvider.cs:DynamicMember",
+      "type": "class",
+      "name": "DynamicMember",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "lineRange": [
+        375,
+        595
+      ],
+      "summary": "动态成员的核心实现类：管理动态属性的值查找表、类型数据键、参数注册/注销、ParameterizeMember 和 UnparameterizeMember 流程，是 DynamicMemberTypeDataProvider 的基石。",
+      "tags": [
+        "dynamic-members",
+        "type-data",
+        "parameterization",
+        "registry"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/DynamicMemberTypeDataProvider.cs:DynamicMemberTypeDataProvider",
+      "type": "class",
+      "name": "DynamicMemberTypeDataProvider",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "lineRange": [
+        597,
+        957
+      ],
+      "summary": "实现 ITypeDataProvider 接口，为 TestStep 派生类型提供动态生成的 TypeData，包含 DescriptionMember 生成、BreakCondition 字符串注入和动态成员成员映射。",
+      "tags": [
+        "type-data",
+        "dynamic-members",
+        "provider",
+        "test-step"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/DynamicMemberTypeDataProvider.cs:ParameterizeMember",
+      "type": "function",
+      "name": "ParameterizeMember",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "lineRange": [
+        523,
+        579
+      ],
+      "summary": "将成员参数化：验证参数、创建 ParameterMemberData、添加动态成员、注册参数，支持多层级嵌套参数化。",
+      "tags": [
+        "parameterization",
+        "dynamic-members",
+        "registration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/DynamicMemberTypeDataProvider.cs:UnparameterizeMember",
+      "type": "function",
+      "name": "UnparameterizeMember",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "lineRange": [
+        581,
+        589
+      ],
+      "summary": "解除成员的参数化：移除动态成员、注销参数、恢复原始成员状态。",
+      "tags": [
+        "parameterization",
+        "dynamic-members",
+        "cleanup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/DynamicMemberTypeDataProvider.cs:GetTypeData__927",
+      "type": "function",
+      "name": "GetTypeData (line 927)",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "lineRange": [
+        927,
+        938
+      ],
+      "summary": "ITypeDataProvider 的 GetTypeData 实现（类型标识符版本）：检查 subtype 是否属于 TestStep，生成带动态成员的包装类型数据。",
+      "tags": [
+        "type-data",
+        "provider",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/DynamicMemberTypeDataProvider.cs:GetTypeData__944",
+      "type": "function",
+      "name": "GetTypeData (line 944)",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "lineRange": [
+        944,
+        955
+      ],
+      "summary": "ITypeDataProvider 的 GetTypeData 实现（对象实例版本）：检查 DynamicMember.TypeDataKey，生成 DynamicTestStepTypeData 包装器。",
+      "tags": [
+        "type-data",
+        "provider",
+        "dynamic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/DynamicMemberTypeDataProvider.cs:SetValue",
+      "type": "function",
+      "name": "SetValue",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "lineRange": [
+        411,
+        421
+      ],
+      "summary": "动态成员的 SetValue：更新值查找表，转发到 IDynamicMemberValue.SetValue，处理参数化成员的嵌套值设置。",
+      "tags": [
+        "dynamic-members",
+        "setter",
+        "value-lookup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/DynamicMemberTypeDataProvider.cs:GetValue",
+      "type": "function",
+      "name": "GetValue",
+      "filePath": "Engine/DynamicMemberTypeDataProvider.cs",
+      "lineRange": [
+        424,
+        436
+      ],
+      "summary": "动态成员的 GetValue：优先从 IDynamicMemberValue.TryGetValue 获取，回退到值查找表，支持参数化值检索。",
+      "tags": [
+        "dynamic-members",
+        "getter",
+        "value-lookup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/EmbedPropertiesAttribute.cs",
+      "type": "file",
+      "name": "EmbedPropertiesAttribute.cs",
+      "filePath": "Engine/EmbedPropertiesAttribute.cs",
+      "summary": "实现属性嵌入（Embedding）机制：将子对象属性提升到父对象层级显示，支持属性前缀（Prefix/PrefixPropertyName）、DisplayAttribute 转换、可用值/建议值/启用条件等属性的转发映射，通过 EmbeddedTypeDataProvider 提供类型数据包装。",
+      "tags": [
+        "type-data",
+        "embedding",
+        "attribute",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/EmbedPropertiesAttribute.cs:EmbedPropertiesAttribute",
+      "type": "class",
+      "name": "EmbedPropertiesAttribute",
+      "filePath": "Engine/EmbedPropertiesAttribute.cs",
+      "lineRange": [
+        17,
+        31
+      ],
+      "summary": "标记属性应嵌入到父级的 Attribute，通过 PrefixPropertyName 和 Prefix 控制嵌入属性的名称前缀。",
+      "tags": [
+        "attribute",
+        "embedding",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/EmbedPropertiesAttribute.cs:EmbeddedMemberData",
+      "type": "class",
+      "name": "EmbeddedMemberData",
+      "filePath": "Engine/EmbedPropertiesAttribute.cs",
+      "lineRange": [
+        38,
+        220
+      ],
+      "summary": "嵌入成员的元数据包装器：持有 OwnerMember 和 InnerMember，提供 GetValue/SetValue 转发、属性转换（DisplayAttribute/EnabledIf/AvailableValues/SuggestedValues 等）和名称前缀处理。",
+      "tags": [
+        "type-data",
+        "embedding",
+        "proxy",
+        "attribute-transform"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/EmbedPropertiesAttribute.cs:EmbeddedTypeData",
+      "type": "class",
+      "name": "EmbeddedTypeData",
+      "filePath": "Engine/EmbedPropertiesAttribute.cs",
+      "lineRange": [
+        222,
+        300
+      ],
+      "summary": "包装嵌入了属性的类型数据，重写 GetMembers 以过滤 EmbedPropertiesAttribute 标记并将嵌入成员注入成员列表。",
+      "tags": [
+        "type-data",
+        "embedding",
+        "wrapper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/EmbedPropertiesAttribute.cs:EmbeddedTypeDataProvider",
+      "type": "class",
+      "name": "EmbeddedTypeDataProvider",
+      "filePath": "Engine/EmbedPropertiesAttribute.cs",
+      "lineRange": [
+        302,
+        363
+      ],
+      "summary": "实现 ITypeDataProvider，为包含 EmbedPropertiesAttribute 的类型自动生成 EmbeddedTypeData 包装，支持 DynamicMember.TypeDataKey 感知的缓存。",
+      "tags": [
+        "type-data",
+        "provider",
+        "embedding"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/EmbedPropertiesAttribute.cs:loadAndTransformAttributes",
+      "type": "function",
+      "name": "loadAndTransformAttributes",
+      "filePath": "Engine/EmbedPropertiesAttribute.cs",
+      "lineRange": [
+        111,
+        217
+      ],
+      "summary": "加载并转换嵌入成员的属性：合并 DisplayAttribute（添加前缀分组）、转发 AvailableValues/SuggestedValues/EnabledIf，处理嵌入层级中的属性重映射。",
+      "tags": [
+        "embedding",
+        "attribute-transform",
+        "display"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/EmbedPropertiesAttribute.cs:ListEmbeddedMembers",
+      "type": "function",
+      "name": "ListEmbeddedMembers",
+      "filePath": "Engine/EmbedPropertiesAttribute.cs",
+      "lineRange": [
+        258,
+        298
+      ],
+      "summary": "递归列出所有嵌入成员：遍历基础类型的 EmbedPropertiesAttribute 标记属性，递归处理嵌套嵌入，生成完整的 EmbeddedMemberData 扁平列表。",
+      "tags": [
+        "embedding",
+        "recursive",
+        "member-listing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/EmbedPropertiesAttribute.cs:GetTypeData",
+      "type": "function",
+      "name": "GetTypeData",
+      "filePath": "Engine/EmbedPropertiesAttribute.cs",
+      "lineRange": [
+        335,
+        362
+      ],
+      "summary": "EmbeddedTypeDataProvider 的 GetTypeData 实现（对象版本）：检测 EmbedPropertiesAttribute 存在，使用 DynamicMember.TypeDataKey 感知缓存生成 EmbeddedTypeData 包装。",
+      "tags": [
+        "type-data",
+        "provider",
+        "embedding"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/EmptyDictionary.cs",
+      "type": "file",
+      "name": "EmptyDictionary.cs",
+      "filePath": "Engine/EmptyDictionary.cs",
+      "summary": "泛型空字典实现（单例模式），提供 IDictionary<K,V> 和 IList<KeyValuePair<K,V>> 的只读空集合，所有修改操作抛出 NotSupportedException，用于避免 null 检查和空引用。",
+      "tags": [
+        "collection",
+        "singleton",
+        "immutable",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/EmptyDictionary.cs:EmptyDictionary",
+      "type": "class",
+      "name": "EmptyDictionary",
+      "filePath": "Engine/EmptyDictionary.cs",
+      "lineRange": [
+        8,
+        36
+      ],
+      "summary": "空字典的泛型单例实现，通过 Instance 静态属性获取只读空实例，Count=0/IsReadOnly=true，修改操作（Add/Remove/Clear）抛出 NotSupportedException。",
+      "tags": [
+        "collection",
+        "singleton",
+        "immutable"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Enabled.cs",
+      "type": "file",
+      "name": "Enabled.cs",
+      "filePath": "Engine/Enabled.cs",
+      "summary": "定义泛型 Enabled<T> 类型，将任意值包装为可启用/禁用的实体，包含 Value 和 IsEnabled 属性，支持 IEnabled/IEnabledValue 接口和 ICloneable 克隆。",
+      "tags": [
+        "data-model",
+        "enabling",
+        "generic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Enabled.cs:Enabled<T>",
+      "type": "class",
+      "name": "Enabled<T>",
+      "filePath": "Engine/Enabled.cs",
+      "lineRange": [
+        30,
+        78
+      ],
+      "summary": "可启用/禁用的值包装器泛型类，提供 Value（包装值）和 IsEnabled（启用标志）属性，支持 ToString 到字符串转换和 Clone 深拷贝。",
+      "tags": [
+        "data-model",
+        "enabling",
+        "generic",
+        "wrapper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/EnabledIfAttribute.cs",
+      "type": "file",
+      "name": "EnabledIfAttribute.cs",
+      "filePath": "Engine/EnabledIfAttribute.cs",
+      "summary": "基于依赖属性的条件启用 Attribute：根据指定属性名和值（PropertyValues/Values）动态控制目标属性的启用/禁用状态，支持 Invert 反转和 HideIfDisabled 隐藏模式。",
+      "tags": [
+        "attribute",
+        "conditional",
+        "enabling",
+        "ui-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/EnabledIfAttribute.cs:EnabledIfAttribute",
+      "type": "class",
+      "name": "EnabledIfAttribute",
+      "filePath": "Engine/EnabledIfAttribute.cs",
+      "lineRange": [
+        14,
+        197
+      ],
+      "summary": "基于依赖属性的条件启用 Attribute，通过 PropertyName 指定依赖属性、PropertyValues/Values 指定条件值、HideIfDisabled/Invert/Flags 控制显示行为，是 UI 中动态表单逻辑的核心。",
+      "tags": [
+        "attribute",
+        "conditional",
+        "enabling",
+        "ui-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/EnabledIfAttribute.cs:IsEnabled__96",
+      "type": "function",
+      "name": "IsEnabled (line 96)",
+      "filePath": "Engine/EnabledIfAttribute.cs",
+      "lineRange": [
+        96,
+        118
+      ],
+      "summary": "判断属性是否应启用（property 实例版本）：递归收集所有 EnabledIfAttribute，依次评估 calcEnabled2，支持多 Attribute 的逻辑 Or 运算。",
+      "tags": [
+        "conditional",
+        "enabling",
+        "evaluation",
+        "attribute-chain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/EnabledIfAttribute.cs:IsEnabled__160",
+      "type": "function",
+      "name": "IsEnabled (line 160)",
+      "filePath": "Engine/EnabledIfAttribute.cs",
+      "lineRange": [
+        160,
+        184
+      ],
+      "summary": "判断属性是否应启用（instance + attribute 版本）：获取依赖属性值，调用 calcEnabled 评估条件是否满足。",
+      "tags": [
+        "conditional",
+        "enabling",
+        "evaluation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/EnabledIfAttribute.cs:calcEnabled2",
+      "type": "function",
+      "name": "calcEnabled2",
+      "filePath": "Engine/EnabledIfAttribute.cs",
+      "lineRange": [
+        128,
+        152
+      ],
+      "summary": "条件评估的核心逻辑：使用 Convert.ChangeType 统一类型比较，支持 Flags 位掩码组合模式和 Equals 等值判断。",
+      "tags": [
+        "conditional",
+        "evaluation",
+        "comparison"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/EngineSettings.cs",
+      "type": "file",
+      "name": "EngineSettings.cs",
+      "filePath": "Engine/EngineSettings.cs",
+      "summary": "全局引擎设置类，管理 SessionLogPath/PromptForMetaData/AbortTestPlan/OperatorName/StationName 等核心运行时设置，支持工作目录管理、资源管理器类型配置和多语言设置。",
+      "tags": [
+        "settings",
+        "configuration",
+        "engine",
+        "global"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/EngineSettings.cs:EngineSettings",
+      "type": "class",
+      "name": "EngineSettings",
+      "filePath": "Engine/EngineSettings.cs",
+      "lineRange": [
+        18,
+        207
+      ],
+      "summary": "OpenTAP 引擎的全局设置单例，控制日志路径、元数据提示、测试计划中止、操作员/站名、语言等运行时行为。",
+      "tags": [
+        "settings",
+        "configuration",
+        "engine",
+        "singleton"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/EngineSettings.cs:EngineSettings",
+      "type": "function",
+      "name": "EngineSettings",
+      "filePath": "Engine/EngineSettings.cs",
+      "lineRange": [
+        122,
+        135
+      ],
+      "summary": "EngineSettings 构造函数：初始化 SessionLogPath（带环境变量宏）、OperatorName/StationName（来自环境变量）、ResourceManagerType 等默认值。",
+      "tags": [
+        "constructor",
+        "settings",
+        "initialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/EngineSettings.cs:LoadWorkingDirectory",
+      "type": "function",
+      "name": "LoadWorkingDirectory",
+      "filePath": "Engine/EngineSettings.cs",
+      "lineRange": [
+        153,
+        157
+      ],
+      "summary": "设置并切换到新的工作目录，更新当前目录和环境变量 OPENTAP_START_DIR。",
+      "tags": [
+        "settings",
+        "directory",
+        "environment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/EventTraceListener.cs",
+      "type": "file",
+      "name": "EventTraceListener.cs",
+      "filePath": "Engine/EventTraceListener.cs",
+      "summary": "事件驱动的 TraceListener 实现，通过 MessageLogged 事件将日志消息分发给外部订阅者，支持批量 TraceEvents 处理和单条 TraceEvent 触发及字符串格式化。",
+      "tags": [
+        "logging",
+        "trace-listener",
+        "event-driven",
+        "observer-pattern"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/EventTraceListener.cs:EventTraceListener",
+      "type": "class",
+      "name": "EventTraceListener",
+      "filePath": "Engine/EventTraceListener.cs",
+      "lineRange": [
+        13,
+        56
+      ],
+      "summary": "自定义事件驱动的 TraceListener，通过 MessageLogged 事件提供日志消息的事件通知机制，将日志包装为 Event 对象并触发。",
+      "tags": [
+        "logging",
+        "trace-listener",
+        "event-driven"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/EventTraceListener.cs:TraceEvents",
+      "type": "function",
+      "name": "TraceEvents",
+      "filePath": "Engine/EventTraceListener.cs",
+      "lineRange": [
+        29,
+        33
+      ],
+      "summary": "批量处理多个 Event 对象，为每个事件触发 MessageLogged 事件通知。",
+      "tags": [
+        "logging",
+        "event",
+        "batch"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/EventTraceListener.cs:TraceEvent",
+      "type": "function",
+      "name": "TraceEvent",
+      "filePath": "Engine/EventTraceListener.cs",
+      "lineRange": [
+        42,
+        49
+      ],
+      "summary": "处理单条跟踪事件：将文本消息包装为 Event 对象并触发 MessageLogged 事件。",
+      "tags": [
+        "logging",
+        "event",
+        "notification"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/DeserializeInPlaceAttribute.cs",
+      "target": "class:Engine/DeserializeInPlaceAttribute.cs:DeserializeInPlaceAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DeserializeInPlaceAttribute.cs",
+      "target": "class:Engine/DeserializeInPlaceAttribute.cs:DeserializeInPlaceAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/DirectoryPathAttribute.cs",
+      "target": "class:Engine/DirectoryPathAttribute.cs:DirectoryPathAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DirectoryPathAttribute.cs",
+      "target": "class:Engine/DirectoryPathAttribute.cs:DirectoryPathAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/DisplayAttribute.cs",
+      "target": "class:Engine/DisplayAttribute.cs:DisplayAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DisplayAttribute.cs",
+      "target": "function:Engine/DisplayAttribute.cs:GetFullName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DisplayAttribute.cs",
+      "target": "function:Engine/DisplayAttribute.cs:DisplayAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DisplayAttribute.cs",
+      "target": "class:Engine/DisplayAttribute.cs:DisplayAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/DisplayAttribute.cs",
+      "target": "function:Engine/DisplayAttribute.cs:GetFullName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/DisplayAttribute.cs",
+      "target": "function:Engine/DisplayAttribute.cs:DisplayAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Dut.cs",
+      "target": "class:Engine/Dut.cs:Dut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Dut.cs",
+      "target": "class:Engine/Dut.cs:Dut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/DutSettings.cs",
+      "target": "class:Engine/DutSettings.cs:DutSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DutSettings.cs",
+      "target": "function:Engine/DutSettings.cs:OnCollectionChanged",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DutSettings.cs",
+      "target": "class:Engine/DutSettings.cs:DutSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "class:Engine/DynamicMemberTypeDataProvider.cs:ParameterExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "class:Engine/DynamicMemberTypeDataProvider.cs:ParameterMemberData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "class:Engine/DynamicMemberTypeDataProvider.cs:DynamicMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "class:Engine/DynamicMemberTypeDataProvider.cs:DynamicMemberTypeDataProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "function:Engine/DynamicMemberTypeDataProvider.cs:ParameterizeMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "function:Engine/DynamicMemberTypeDataProvider.cs:UnparameterizeMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "function:Engine/DynamicMemberTypeDataProvider.cs:GetTypeData__927",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "function:Engine/DynamicMemberTypeDataProvider.cs:GetTypeData__944",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "function:Engine/DynamicMemberTypeDataProvider.cs:SetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "function:Engine/DynamicMemberTypeDataProvider.cs:GetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "class:Engine/DynamicMemberTypeDataProvider.cs:ParameterExtensions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "class:Engine/DynamicMemberTypeDataProvider.cs:ParameterMemberData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "class:Engine/DynamicMemberTypeDataProvider.cs:DynamicMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "function:Engine/DynamicMemberTypeDataProvider.cs:GetTypeData__927",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/DynamicMemberTypeDataProvider.cs",
+      "target": "function:Engine/DynamicMemberTypeDataProvider.cs:GetTypeData__944",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EmbedPropertiesAttribute.cs",
+      "target": "class:Engine/EmbedPropertiesAttribute.cs:EmbedPropertiesAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EmbedPropertiesAttribute.cs",
+      "target": "class:Engine/EmbedPropertiesAttribute.cs:EmbeddedMemberData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EmbedPropertiesAttribute.cs",
+      "target": "class:Engine/EmbedPropertiesAttribute.cs:EmbeddedTypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EmbedPropertiesAttribute.cs",
+      "target": "class:Engine/EmbedPropertiesAttribute.cs:EmbeddedTypeDataProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EmbedPropertiesAttribute.cs",
+      "target": "function:Engine/EmbedPropertiesAttribute.cs:loadAndTransformAttributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EmbedPropertiesAttribute.cs",
+      "target": "function:Engine/EmbedPropertiesAttribute.cs:ListEmbeddedMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EmbedPropertiesAttribute.cs",
+      "target": "function:Engine/EmbedPropertiesAttribute.cs:GetTypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EmbedPropertiesAttribute.cs",
+      "target": "class:Engine/EmbedPropertiesAttribute.cs:EmbedPropertiesAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EmbedPropertiesAttribute.cs",
+      "target": "class:Engine/EmbedPropertiesAttribute.cs:EmbeddedTypeDataProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EmbedPropertiesAttribute.cs",
+      "target": "function:Engine/EmbedPropertiesAttribute.cs:GetTypeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EmptyDictionary.cs",
+      "target": "class:Engine/EmptyDictionary.cs:EmptyDictionary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EmptyDictionary.cs",
+      "target": "class:Engine/EmptyDictionary.cs:EmptyDictionary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Enabled.cs",
+      "target": "class:Engine/Enabled.cs:Enabled<T>",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Enabled.cs",
+      "target": "class:Engine/Enabled.cs:Enabled<T>",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EnabledIfAttribute.cs",
+      "target": "class:Engine/EnabledIfAttribute.cs:EnabledIfAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EnabledIfAttribute.cs",
+      "target": "function:Engine/EnabledIfAttribute.cs:IsEnabled__96",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EnabledIfAttribute.cs",
+      "target": "function:Engine/EnabledIfAttribute.cs:IsEnabled__160",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EnabledIfAttribute.cs",
+      "target": "function:Engine/EnabledIfAttribute.cs:calcEnabled2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EnabledIfAttribute.cs",
+      "target": "class:Engine/EnabledIfAttribute.cs:EnabledIfAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EnabledIfAttribute.cs",
+      "target": "function:Engine/EnabledIfAttribute.cs:IsEnabled__96",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EnabledIfAttribute.cs",
+      "target": "function:Engine/EnabledIfAttribute.cs:IsEnabled__160",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EngineSettings.cs",
+      "target": "class:Engine/EngineSettings.cs:EngineSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EngineSettings.cs",
+      "target": "function:Engine/EngineSettings.cs:EngineSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EngineSettings.cs",
+      "target": "function:Engine/EngineSettings.cs:LoadWorkingDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EngineSettings.cs",
+      "target": "class:Engine/EngineSettings.cs:EngineSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EngineSettings.cs",
+      "target": "function:Engine/EngineSettings.cs:EngineSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EngineSettings.cs",
+      "target": "function:Engine/EngineSettings.cs:LoadWorkingDirectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EventTraceListener.cs",
+      "target": "class:Engine/EventTraceListener.cs:EventTraceListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EventTraceListener.cs",
+      "target": "function:Engine/EventTraceListener.cs:TraceEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EventTraceListener.cs",
+      "target": "function:Engine/EventTraceListener.cs:TraceEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/EventTraceListener.cs",
+      "target": "class:Engine/EventTraceListener.cs:EventTraceListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EventTraceListener.cs",
+      "target": "function:Engine/EventTraceListener.cs:TraceEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/EventTraceListener.cs",
+      "target": "function:Engine/EventTraceListener.cs:TraceEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

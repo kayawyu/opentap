@@ -1,0 +1,13 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": "Package.UnitTests/TapPackages/MyPlugin1.xml", "language": "xml", "sizeLines": 16, "fileCategory": "config"},
+    {"path": "Package.UnitTests/TapPackages/MyPlugin2.xml", "language": "xml", "sizeLines": 16, "fileCategory": "config"},
+    {"path": "Package.UnitTests/TapPackages/MyPlugin3.xml", "language": "xml", "sizeLines": 13, "fileCategory": "config"}
+  ],
+  "batchImportData": {
+    "Package.UnitTests/TapPackages/MyPlugin1.xml": [],
+    "Package.UnitTests/TapPackages/MyPlugin2.xml": [],
+    "Package.UnitTests/TapPackages/MyPlugin3.xml": []
+  }
+}

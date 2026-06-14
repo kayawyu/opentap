@@ -1,0 +1,3004 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/ObjectCloner.cs",
+      "type": "file",
+      "name": "ObjectCloner.cs",
+      "filePath": "Engine/ObjectCloner.cs",
+      "summary": "提供对象克隆功能，支持通过序列化/字符串转换/ICloneable 接口等多种方式复制对象，是 Test Plan 中参数值复制的核心工具。",
+      "tags": [
+        "utility",
+        "serialization",
+        "cloning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ObjectCloner.cs:ObjectCloner",
+      "type": "class",
+      "name": "ObjectCloner",
+      "filePath": "Engine/ObjectCloner.cs",
+      "lineRange": [
+        14,
+        138
+      ],
+      "summary": "对象克隆器类，通过 TypeData 获取类型信息并尝试三种克隆策略：ICloneable 接口、字符串转换序列化、以及 XML 序列化反序列化。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ObjectCloner.cs:CanClone",
+      "type": "function",
+      "name": "CanClone",
+      "filePath": "Engine/ObjectCloner.cs",
+      "lineRange": [
+        34,
+        37
+      ],
+      "summary": "CanClone 方法。",
+      "tags": [
+        "method",
+        "cloning",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ObjectCloner.cs:TryClone",
+      "type": "function",
+      "name": "TryClone",
+      "filePath": "Engine/ObjectCloner.cs",
+      "lineRange": [
+        39,
+        128
+      ],
+      "summary": "尝试克隆的核心方法，依次尝试三种策略：ICloneable.Clone()、StringConvertProvider 字符串序列化、TapSerializer XML 序列化。",
+      "tags": [
+        "method",
+        "cloning"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ObjectCloner.cs:Clone",
+      "type": "function",
+      "name": "Clone",
+      "filePath": "Engine/ObjectCloner.cs",
+      "lineRange": [
+        130,
+        137
+      ],
+      "summary": "公开的克隆入口方法，内部调用 TryClone，若克隆失败则抛出 InvalidCastException。",
+      "tags": [
+        "method",
+        "cloning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/OutputAttribute.cs",
+      "type": "file",
+      "name": "OutputAttribute.cs",
+      "filePath": "Engine/OutputAttribute.cs",
+      "summary": "定义 OutputAttribute 和 ResultAttribute 特性，用于标记测试步骤的输出属性和结果属性，控制属性的可用性（Availability）状态。",
+      "tags": [
+        "attribute",
+        "annotation",
+        "engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/OutputAttribute.cs:OutputAttribute",
+      "type": "class",
+      "name": "OutputAttribute",
+      "filePath": "Engine/OutputAttribute.cs",
+      "lineRange": [
+        12,
+        24
+      ],
+      "summary": "标记测试步骤输出属性的特性，支持指定属性的可用性状态（Availability），用于控制参数在后处理步骤中的可见性。",
+      "tags": [
+        "class",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/OutputAttribute.cs:ResultAttribute",
+      "type": "class",
+      "name": "ResultAttribute",
+      "filePath": "Engine/OutputAttribute.cs",
+      "lineRange": [
+        27,
+        31
+      ],
+      "summary": "标记测试步骤结果属性的特性，继承自 OutputAttribute 并固定可用性为 Result。",
+      "tags": [
+        "class",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ParameterCollection.cs",
+      "type": "file",
+      "name": "ParameterCollection.cs",
+      "filePath": "Engine/ParameterCollection.cs",
+      "summary": "继承自 List<IParameterMemberData> 的参数集合类型，提供按名称或对象类型查找特定参数的方法，包含一个静态 Empty 单例。",
+      "tags": [
+        "utility",
+        "engine",
+        "engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ParameterCollection.cs:ParameterCollection",
+      "type": "class",
+      "name": "ParameterCollection",
+      "filePath": "Engine/ParameterCollection.cs",
+      "lineRange": [
+        10,
+        26
+      ],
+      "summary": "参数成员数据集合，继承自 List<IParameterMemberData>，提供按名称和对象类型查找参数的便捷方法。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ParameterManager.cs",
+      "type": "file",
+      "name": "ParameterManager.cs",
+      "filePath": "Engine/ParameterManager.cs",
+      "summary": "测试步骤参数化的核心管理器，提供参数的创建、编辑、移除、反参数化以及健全性检查（sanity check）功能，支持参数范围验证和自动参数化。",
+      "tags": [
+        "manager",
+        "parameter",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ParameterManager.cs:ParameterManager",
+      "type": "class",
+      "name": "ParameterManager",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        10,
+        760
+      ],
+      "summary": "参数化管理的核心静态类，提供完整的参数生命周期管理：创建、编辑、移除、健全性检查、自动参数化和反参数化。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "function",
+      "name": "WithSanityCheckDelayed",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        364,
+        364
+      ],
+      "summary": "返回 IDisposable 作用域，在 using 块结束时触发参数健全性检查的延迟执行。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "function",
+      "name": "WithSanityCheckDelayed",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        366,
+        373
+      ],
+      "summary": "返回 IDisposable 作用域，在 using 块结束时触发参数健全性检查的延迟执行。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:Parameterize",
+      "type": "function",
+      "name": "Parameterize",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        375,
+        390
+      ],
+      "summary": "执行参数化操作，获取源和目标成员，调用 IParameterMemberData.Parameterize 创建新的参数化关系。",
+      "tags": [
+        "method",
+        "parameter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CreateParameter",
+      "type": "function",
+      "name": "CreateParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        392,
+        415
+      ],
+      "summary": "创建参数的用户交互入口，显示 NamingQuestion 对话框让用户选择参数名称、作用域和配置，然后调用 Parameterize 执行参数化。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:UnmergableListType",
+      "type": "function",
+      "name": "UnmergableListType",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        417,
+        432
+      ],
+      "summary": "检查属性类型是否为不可合并的列表类型，返回不可合并性原因的解释字符串或 null。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:EditParameter",
+      "type": "function",
+      "name": "EditParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        434,
+        495
+      ],
+      "summary": "编辑参数化关系的方法，显示 NamingQuestion 对话框让用户修改参数的作用域、配置和成员分配。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CanUnparameter",
+      "type": "function",
+      "name": "CanUnparameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        497,
+        497
+      ],
+      "summary": "检查给定属性和步骤集合是否可执行反参数化操作，同样委托给 IsValidParameter 验证基本条件。",
+      "tags": [
+        "method",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CanParameter",
+      "type": "function",
+      "name": "CanParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        498,
+        498
+      ],
+      "summary": "检查给定属性和步骤集合是否可执行参数化操作，委托给 IsValidParameter 并检查是否已参数化。",
+      "tags": [
+        "method",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CanEditParameter",
+      "type": "function",
+      "name": "CanEditParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        499,
+        499
+      ],
+      "summary": "CanEditParameter 方法。",
+      "tags": [
+        "method",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:IsValidParameter",
+      "type": "function",
+      "name": "IsValidParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        504,
+        534
+      ],
+      "summary": "验证指定属性是否为有效参数化候选，检查 XmlIgnore、Unparameterizable、Output 特性并验证可克隆性。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CanParameter",
+      "type": "function",
+      "name": "CanParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        536,
+        541
+      ],
+      "summary": "检查给定属性和步骤集合是否可执行参数化操作，委托给 IsValidParameter 并检查是否已参数化。",
+      "tags": [
+        "method",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CanUnparameter",
+      "type": "function",
+      "name": "CanUnparameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        542,
+        547
+      ],
+      "summary": "检查给定属性和步骤集合是否可执行反参数化操作，同样委托给 IsValidParameter 验证基本条件。",
+      "tags": [
+        "method",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CanAutoParameterize",
+      "type": "function",
+      "name": "CanAutoParameterize",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        550,
+        562
+      ],
+      "summary": "自动参数化检查，通过创建 NamingQuestion 验证名称是否可用，若名称为空则不可自动参数化。",
+      "tags": [
+        "method",
+        "parameter",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:RemoveParameter",
+      "type": "function",
+      "name": "RemoveParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        564,
+        575
+      ],
+      "summary": "移除参数并调用所有相关成员的 Unparameterize 方法，若移除失败则抛出 Exception。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:Unparameterize",
+      "type": "function",
+      "name": "Unparameterize",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        577,
+        613
+      ],
+      "summary": "执行反向参数化操作，扫描步骤树中所有引用了指定参数的成员，逐一调用 Unparameterize 恢复原始值。",
+      "tags": [
+        "method",
+        "parameter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "function",
+      "name": "CheckParameterSanity",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        624,
+        629
+      ],
+      "summary": "公开的参数健全性检查入口，记录 ChangeId 以防止重复检查，委托给私有的 checkParameterSanity 实现。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "function",
+      "name": "CheckParameterSanity",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        631,
+        648
+      ],
+      "summary": "公开的参数健全性检查入口，记录 ChangeId 以防止重复检查，委托给私有的 checkParameterSanity 实现。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "function",
+      "name": "checkParameterSanity",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        653,
+        729
+      ],
+      "summary": "私有的参数健全性检查核心实现，遍历步骤树中所有参数化成员，验证参数类型兼容性，自动移除不兼容的参数化关系。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "function",
+      "name": "checkParameterSanity",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        731,
+        742
+      ],
+      "summary": "私有的参数健全性检查核心实现，遍历步骤树中所有参数化成员，验证参数类型兼容性，自动移除不兼容的参数化关系。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ParameterMemberAnnotator.cs",
+      "type": "file",
+      "name": "ParameterMemberAnnotator.cs",
+      "filePath": "Engine/ParameterMemberAnnotator.cs",
+      "summary": "参数成员的注解器实现，负责将子成员（SubMember）的注解转发到根成员的参数化成员上，处理嵌套参数结构的读写和可用值注解。",
+      "tags": [
+        "annotation",
+        "parameter",
+        "engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ParameterMemberAnnotator.cs:ParameterMemberAnnotator",
+      "type": "class",
+      "name": "ParameterMemberAnnotator",
+      "filePath": "Engine/ParameterMemberAnnotator.cs",
+      "lineRange": [
+        7,
+        125
+      ],
+      "summary": "IOwnedAnnotation 实现，将嵌套参数的子成员注解（读取/写入/可用值）转发到根成员的对应参数化成员上。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterMemberAnnotator.cs:GetRootMembers",
+      "type": "function",
+      "name": "GetRootMembers",
+      "filePath": "Engine/ParameterMemberAnnotator.cs",
+      "lineRange": [
+        66,
+        84
+      ],
+      "summary": "获取根成员列表，通过栈遍历参数化成员树，收集所有非参数化根成员及其对应的 IParameterMemberData。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterMemberAnnotator.cs:Annotate",
+      "type": "function",
+      "name": "Annotate",
+      "filePath": "Engine/ParameterMemberAnnotator.cs",
+      "lineRange": [
+        86,
+        124
+      ],
+      "summary": "注解入口方法，从 annotation 解析参数化关系，创建 SubMember/SubAccess/SubAvailable/SubSuggested 注解并添加到成员上。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/ParametersMenuModel.cs",
+      "type": "file",
+      "name": "ParametersMenuModel.cs",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "summary": "测试步骤参数化菜单的 UI 模型，提供 Parameterize/Unparameterize/EditParameter 等菜单命令的实现，支持输出分配和 Sweep 循环控制。",
+      "tags": [
+        "ui-model",
+        "parameter",
+        "menu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ParametersMenuModel.cs:TestStepMenuModel",
+      "type": "class",
+      "name": "TestStepMenuModel",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        8,
+        202
+      ],
+      "summary": "测试步骤参数化菜单的 UI 模型基类，封装了所有参数化操作的菜单项逻辑，包括 Parameterize、Unparameterize、输出分配和 Sweep 控制。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:FromSource",
+      "type": "function",
+      "name": "FromSource",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        11,
+        19
+      ],
+      "summary": "静态工厂方法，根据成员和源步骤创建 TestStepMenuModel 实例，支持多选（MultiSelect）模式。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:Parameterize",
+      "type": "function",
+      "name": "Parameterize",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        40,
+        45
+      ],
+      "summary": "执行参数化菜单命令，调用 ParameterManager.CreateParameter 创建新参数。",
+      "tags": [
+        "method",
+        "parameter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:ParameterizeOnTestPlan",
+      "type": "function",
+      "name": "ParameterizeOnTestPlan",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        50,
+        62
+      ],
+      "summary": "在 Test Plan 级别执行参数化，查找公共父 TestPlan 并调用 ParameterManager.CreateParameter。",
+      "tags": [
+        "method",
+        "parameter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:ParameterizeOnParent",
+      "type": "function",
+      "name": "ParameterizeOnParent",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        68,
+        79
+      ],
+      "summary": "在公共父步骤上执行参数化，获取所有源的父步骤列表并找到公共父节点后创建参数。",
+      "tags": [
+        "method",
+        "parameter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:Unparameterize",
+      "type": "function",
+      "name": "Unparameterize",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        92,
+        98
+      ],
+      "summary": "执行反参数化菜单命令，调用 ParameterManager.Unparameterize 恢复成员的原始值。",
+      "tags": [
+        "method",
+        "parameter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:EditParameter",
+      "type": "function",
+      "name": "EditParameter",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        102,
+        109
+      ],
+      "summary": "显示编辑参数对话框，通过 UserInput.Request 获取用户输入后更新参数化关系的配置。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:RemoveParameter",
+      "type": "function",
+      "name": "RemoveParameter",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        113,
+        118
+      ],
+      "summary": "移除参数菜单命令，调用 ParameterManager.RemoveParameter 删除参数及其所有关联。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:ControlUsingOutput",
+      "type": "function",
+      "name": "ControlUsingOutput",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        135,
+        154
+      ],
+      "summary": "使用输出来控制参数的菜单命令，显示 AssignOutputDialog 让用户选择输出资源，然后通过 InputOutputRelation.Assign 建立关联。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:getCommonParent",
+      "type": "function",
+      "name": "getCommonParent",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        156,
+        172
+      ],
+      "summary": "查找多个源步骤的公共父节点，通过对每个源的父级链进行 Zip 汇聚操作找到最长公共前缀。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:UnassignOutput",
+      "type": "function",
+      "name": "UnassignOutput",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        184,
+        197
+      ],
+      "summary": "取消输出分配的菜单命令，查找步骤的 InputOutputRelation 并调用 Unassign 方法解除关联。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:CreateModel",
+      "type": "function",
+      "name": "CreateModel",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        206,
+        211
+      ],
+      "summary": "工厂方法，根据成员的类型层次选择合适的 TestStepMenuModel 子类或直接创建 TestStepMenuModel 实例。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/PictureAnnotation.cs",
+      "type": "file",
+      "name": "PictureAnnotation.cs",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "summary": "定义图片注解相关的接口和实现类，包括 IPictureAnnotation、IPicture 接口及其默认实现，支持图片源码和描述的读写。",
+      "tags": [
+        "utility",
+        "engine",
+        "engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/PictureAnnotation.cs:IPictureAnnotation",
+      "type": "class",
+      "name": "IPictureAnnotation",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        5,
+        16
+      ],
+      "summary": "图片注解接口，定义 Source（图片源）和 Description（描述）两个属性的读写契约。",
+      "tags": [
+        "class",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/PictureAnnotation.cs:PictureAnnotation",
+      "type": "class",
+      "name": "PictureAnnotation",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        18,
+        57
+      ],
+      "summary": "图片注解的默认实现，通过 IObjectValueAnnotation 读取/写入 Picture 对象。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/PictureAnnotation.cs:IPicture",
+      "type": "class",
+      "name": "IPicture",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        62,
+        73
+      ],
+      "summary": "图片数据接口，继承 INotifyPropertyChanged，定义 Source 和 Description 属性。",
+      "tags": [
+        "class",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/PictureAnnotation.cs:Picture",
+      "type": "class",
+      "name": "Picture",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        78,
+        97
+      ],
+      "summary": "图片数据的默认实现，提供 Equals 和 GetHashCode 方法用于图片对象的比较。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PictureAnnotation.cs:Read",
+      "type": "function",
+      "name": "Read",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        30,
+        39
+      ],
+      "summary": "从注解中读取图片数据，通过 IObjectValueAnnotation 获取存储的对象并返回为 IPicture 类型。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PictureAnnotation.cs:Write",
+      "type": "function",
+      "name": "Write",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        41,
+        56
+      ],
+      "summary": "将图片数据写入注解，创建 Picture 对象并通过 IObjectValueAnnotation 存储到注解中。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PictureAnnotation.cs:Equals",
+      "type": "function",
+      "name": "Equals",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        90,
+        91
+      ],
+      "summary": "Equals 方法。",
+      "tags": [
+        "method",
+        "override"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PictureAnnotation.cs:GetHashCode",
+      "type": "function",
+      "name": "GetHashCode",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        94,
+        96
+      ],
+      "summary": "GetHashCode 方法。",
+      "tags": [
+        "method",
+        "override"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/PluginManager.cs",
+      "type": "file",
+      "name": "PluginManager.cs",
+      "filePath": "Engine/PluginManager.cs",
+      "summary": "OpenTAP 插件系统的核心管理器，负责插件搜索、加载、程序集解析、类型定位和插件版本查询，包含 TapAssemblyResolver 依赖解析器。",
+      "tags": [
+        "manager",
+        "plugin-system",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/PluginManager.cs:PluginManager",
+      "type": "class",
+      "name": "PluginManager",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        22,
+        478
+      ],
+      "summary": "插件管理器单例类，负责插件生命周期的全局管理：程序集搜索、类型发现、插件加载/卸载、类型定位和版本信息查询。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/PluginManager.cs:TapAssemblyResolver",
+      "type": "class",
+      "name": "TapAssemblyResolver",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        481,
+        707
+      ],
+      "summary": "程序集解析器内部类，基于目录搜索和内存缓存解析程序集依赖，支持强名称（PublicKeyToken）匹配和版本优先排序。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/PluginManager.cs:PluginsChangedEventArgs",
+      "type": "class",
+      "name": "PluginsChangedEventArgs",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        712,
+        715
+      ],
+      "summary": "插件变更事件参数类，用于通知插件列表发生变更的事件。",
+      "tags": [
+        "class",
+        "event"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:AddAssemblyLoadFilter",
+      "type": "function",
+      "name": "AddAssemblyLoadFilter",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        50,
+        55
+      ],
+      "summary": "添加程序集加载过滤器，允许调用方控制哪些程序集可以被加载和搜索插件。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "function",
+      "name": "GetPlugins",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        72,
+        75
+      ],
+      "summary": "根据插件基类型获取匹配的插件实例，支持反射仅加载（ReflectionOnly）和并行加载。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "function",
+      "name": "GetPlugins",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        134,
+        153
+      ],
+      "summary": "根据插件基类型获取匹配的插件实例，支持反射仅加载（ReflectionOnly）和并行加载。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "function",
+      "name": "GetSearcher",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        159,
+        172
+      ],
+      "summary": "获取或初始化 PluginSearcher 实例，确保搜索任务已完成后再返回搜索器。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetAllPlugins",
+      "type": "function",
+      "name": "GetAllPlugins",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        181,
+        190
+      ],
+      "summary": "获取全部非抽象非接口的插件类型列表，从 PluginSearcher 的类型集中过滤并返回只读列表。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "function",
+      "name": "GetPlugins",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        203,
+        206
+      ],
+      "summary": "根据插件基类型获取匹配的插件实例，支持反射仅加载（ReflectionOnly）和并行加载。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetOpenTapAssembly",
+      "type": "function",
+      "name": "GetOpenTapAssembly",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        232,
+        236
+      ],
+      "summary": "获取 OpenTAP 核心程序集（包含 ITypeData），通过 PluginSearcher 搜索并加载最合适的版本。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:SearchAsync",
+      "type": "function",
+      "name": "SearchAsync",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        244,
+        249
+      ],
+      "summary": "异步触发插件搜索任务，使用 TapThread 在线程池中执行搜索并更新缓存状态。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:Search",
+      "type": "function",
+      "name": "Search",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        252,
+        272
+      ],
+      "summary": "同步执行插件搜索，首先失效化程序集解析器缓存，然后调用 SearchAndAddToStore 并等待完成。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:Load",
+      "type": "function",
+      "name": "Load",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        277,
+        303
+      ],
+      "summary": "插件管理器加载入口，初始化 SessionLogs、AssemblyResolver，将已加载程序集添加到解析器中。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:Initialize",
+      "type": "function",
+      "name": "Initialize",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        317,
+        320
+      ],
+      "summary": "Initialize 方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "type": "function",
+      "name": "SearchAndAddToStore",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        327,
+        365
+      ],
+      "summary": "执行程序集搜索并添加到存储中，创建临时 PluginSearcher 扫描文件、添加解析结果并记录日志。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:locateType",
+      "type": "function",
+      "name": "locateType",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        367,
+        395
+      ],
+      "summary": "私有的类型定位方法，支持数组类型、嵌套类型和泛型类型的递归解析，回退到 Type.GetType。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:LocateType",
+      "type": "function",
+      "name": "LocateType",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        403,
+        410
+      ],
+      "summary": "公开的类型定位方法，处理 Tap 类型名称前缀（如去除包名前缀），调用 locateType 进行实际解析。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:LocateTypeData",
+      "type": "function",
+      "name": "LocateTypeData",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        418,
+        425
+      ],
+      "summary": "根据类型名称定位 TypeData，通过 PluginSearcher 在所有已知类型中查找。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetVersionResultParameter",
+      "type": "function",
+      "name": "GetVersionResultParameter",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        436,
+        452
+      ],
+      "summary": "获取程序集版本信息的 ResultParameter，通过 MurMurHash3 计算文件哈希作为缓存键。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetPluginVersions",
+      "type": "function",
+      "name": "GetPluginVersions",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        454,
+        476
+      ],
+      "summary": "获取所有插件类型的版本信息，聚合每个程序集的版本、哈希和位置信息到 ResultParameters 集合。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:Invalidate",
+      "type": "function",
+      "name": "Invalidate",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        490,
+        496
+      ],
+      "summary": "失效化程序集解析器缓存，清空文件查找器和解析记忆器的缓存。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:AddAssembly",
+      "type": "function",
+      "name": "AddAssembly",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        500,
+        503
+      ],
+      "summary": "AddAssembly 方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:AddAssembly",
+      "type": "function",
+      "name": "AddAssembly",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        505,
+        521
+      ],
+      "summary": "AddAssembly 方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetAssembliesToSearch",
+      "type": "function",
+      "name": "GetAssembliesToSearch",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        524,
+        533
+      ],
+      "summary": "GetAssembliesToSearch 方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:Resolve",
+      "type": "function",
+      "name": "Resolve",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        535,
+        544
+      ],
+      "summary": "Resolve 方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:tryGetAssemblyName",
+      "type": "function",
+      "name": "tryGetAssemblyName",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        571,
+        583
+      ],
+      "summary": "尝试从文件路径获取程序集名称，优先使用 AssemblyName.GetAssemblyName，失败则回退到从文件名推断。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:resolveAssembly",
+      "type": "function",
+      "name": "resolveAssembly",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        585,
+        696
+      ],
+      "summary": "核心程序集解析方法，按优先级顺序查找：已加载程序集、按名称查找缓存、按路径搜索文件系统，支持强名称匹配和版本排序。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/PluginSearcher.cs",
+      "type": "file",
+      "name": "PluginSearcher.cs",
+      "filePath": "Engine/PluginSearcher.cs",
+      "summary": "插件搜索器实现，通过读取 .NET 程序集元数据（MetadataReader）递归发现所有插件类型，构建类型依赖图，支持内部类型搜索和自定义属性解析。",
+      "tags": [
+        "searcher",
+        "plugin-system",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/PluginSearcher.cs:PluginAssemblyAttribute",
+      "type": "class",
+      "name": "PluginAssemblyAttribute",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        24,
+        55
+      ],
+      "summary": "标记程序集为插件程序集的特性，控制是否搜索内部类型（SearchInternalTypes）及插件初始化方法名称（PluginInitMethod）。",
+      "tags": [
+        "class",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/PluginSearcher.cs:PluginSearcher",
+      "type": "class",
+      "name": "PluginSearcher",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        61,
+        1178
+      ],
+      "summary": "插件搜索器核心类，通过 MetadataReader 读取 .NET 程序集元数据，递归发现所有 ITypeData 类型，构建类型继承图和依赖关系。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:Search",
+      "type": "function",
+      "name": "Search",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        436,
+        442
+      ],
+      "summary": "按目录搜索插件，创建 AssemblyFinder 获取所有程序集文件后调用文件加载版本的 Search。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:AddAssembly",
+      "type": "function",
+      "name": "AddAssembly",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        447,
+        456
+      ],
+      "summary": "添加程序集到搜索图中，通过 AssemblyDependencyGraph 解析依赖关系，然后递归搜索程序集中的插件类型。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:PluginFromPluginRecursive",
+      "type": "function",
+      "name": "PluginFromPluginRecursive",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        458,
+        492
+      ],
+      "summary": "从已加载的插件实例递归添加类型到搜索器，构建类型继承链并添加到 PluginTypes 集合。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:AbsorbLoadedPlugins",
+      "type": "function",
+      "name": "AbsorbLoadedPlugins",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        494,
+        509
+      ],
+      "summary": "吸收已加载的插件类型，将源搜索器中已加载的类型通过 PluginFromPluginRecursive 合并到当前搜索器。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:Search",
+      "type": "function",
+      "name": "Search",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        517,
+        530
+      ],
+      "summary": "按目录搜索插件，创建 AssemblyFinder 获取所有程序集文件后调用文件加载版本的 Search。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "type": "function",
+      "name": "PluginsInAssemblyRecursive",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        534,
+        589
+      ],
+      "summary": "读取程序集元数据并递归发现所有插件类型，解析 PluginAssemblyAttribute 获取配置，通过 MetadataReader 遍历所有类型。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "type": "function",
+      "name": "PluginFromEntityRecursive",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        609,
+        630
+      ],
+      "summary": "从元数据实体（TypeDefinition 或 TypeReference）递归创建插件类型，委托给 PluginFromTypeRef 或 PluginFromTypeDefRecursive。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:IsValueType",
+      "type": "function",
+      "name": "IsValueType",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        642,
+        677
+      ],
+      "summary": "判断类型是否为值类型，递归检查类型的基类链直到遇到 System.ValueType，结果缓存在 ValueTypeMap 中。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:GetTypeName",
+      "type": "function",
+      "name": "GetTypeName",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        679,
+        699
+      ],
+      "summary": "获取类型的完整名称，处理嵌套类型、泛型类型和数组类型的名称格式化，递归调用 PluginFromTypeDefRecursive 确保基类型被注册。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "type": "function",
+      "name": "PluginFromTypeDefRecursive",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        702,
+        990
+      ],
+      "summary": "核心插件类型发现方法（289 行），从 TypeDefinition 元数据解析完整的 TypeData：基类、接口、特性、显示信息、平台支持、方法参数等。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "function",
+      "name": "GetFullName",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        1007,
+        1024
+      ],
+      "summary": "从元数据句柄解析类型的完整命名空间和名称，支持 TypeDefinition 和 TypeReference 两种句柄类型。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:MatchFullName",
+      "type": "function",
+      "name": "MatchFullName",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        1026,
+        1039
+      ],
+      "summary": "检查元数据类型句柄的完整名称是否匹配给定的命名空间和名称，用于精确类型查找。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/ObjectCloner.cs",
+      "target": "class:Engine/ObjectCloner.cs:ObjectCloner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ObjectCloner.cs",
+      "target": "class:Engine/ObjectCloner.cs:ObjectCloner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ObjectCloner.cs",
+      "target": "function:Engine/ObjectCloner.cs:CanClone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ObjectCloner.cs",
+      "target": "function:Engine/ObjectCloner.cs:CanClone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ObjectCloner.cs",
+      "target": "function:Engine/ObjectCloner.cs:TryClone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ObjectCloner.cs",
+      "target": "function:Engine/ObjectCloner.cs:TryClone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ObjectCloner.cs",
+      "target": "function:Engine/ObjectCloner.cs:Clone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ObjectCloner.cs",
+      "target": "function:Engine/ObjectCloner.cs:Clone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ObjectCloner.cs:CanClone",
+      "target": "function:Engine/ObjectCloner.cs:TryClone",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ObjectCloner.cs:Clone",
+      "target": "function:Engine/ObjectCloner.cs:TryClone",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/OutputAttribute.cs",
+      "target": "class:Engine/OutputAttribute.cs:OutputAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/OutputAttribute.cs",
+      "target": "class:Engine/OutputAttribute.cs:OutputAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/OutputAttribute.cs",
+      "target": "class:Engine/OutputAttribute.cs:ResultAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/OutputAttribute.cs",
+      "target": "class:Engine/OutputAttribute.cs:ResultAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterCollection.cs",
+      "target": "class:Engine/ParameterCollection.cs:ParameterCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterCollection.cs",
+      "target": "class:Engine/ParameterCollection.cs:ParameterCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "class:Engine/ParameterManager.cs:ParameterManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:Parameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:Parameterize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CreateParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CreateParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:UnmergableListType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:UnmergableListType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:EditParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:EditParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanUnparameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanUnparameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanEditParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanEditParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:IsValidParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanUnparameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanUnparameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanAutoParameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanAutoParameterize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:RemoveParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:RemoveParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:Unparameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:Unparameterize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:Parameterize",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CreateParameter",
+      "target": "function:Engine/ParameterManager.cs:Parameterize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:EditParameter",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:EditParameter",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CanEditParameter",
+      "target": "function:Engine/ParameterManager.cs:IsValidParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CanParameter",
+      "target": "function:Engine/ParameterManager.cs:IsValidParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CanUnparameter",
+      "target": "function:Engine/ParameterManager.cs:IsValidParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:Unparameterize",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:Unparameterize",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "target": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "target": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterMemberAnnotator.cs",
+      "target": "class:Engine/ParameterMemberAnnotator.cs:ParameterMemberAnnotator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterMemberAnnotator.cs",
+      "target": "function:Engine/ParameterMemberAnnotator.cs:GetRootMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterMemberAnnotator.cs",
+      "target": "function:Engine/ParameterMemberAnnotator.cs:Annotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterMemberAnnotator.cs",
+      "target": "function:Engine/ParameterMemberAnnotator.cs:Annotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterMemberAnnotator.cs:Annotate",
+      "target": "function:Engine/ParameterMemberAnnotator.cs:GetRootMembers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "class:Engine/ParametersMenuModel.cs:TestStepMenuModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "class:Engine/ParametersMenuModel.cs:TestStepMenuModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:FromSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:FromSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:Parameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:Parameterize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:ParameterizeOnTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:ParameterizeOnTestPlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:ParameterizeOnParent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:ParameterizeOnParent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:Unparameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:Unparameterize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:EditParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:EditParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:RemoveParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:RemoveParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:ControlUsingOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:ControlUsingOutput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:getCommonParent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:UnassignOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:UnassignOutput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:CreateModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:CreateModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:Parameterize",
+      "target": "function:Engine/ParametersMenuModel.cs:getCommonParent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:ControlUsingOutput",
+      "target": "function:Engine/ParametersMenuModel.cs:getCommonParent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "class:Engine/PictureAnnotation.cs:IPictureAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "class:Engine/PictureAnnotation.cs:IPictureAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "class:Engine/PictureAnnotation.cs:PictureAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "class:Engine/PictureAnnotation.cs:PictureAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "class:Engine/PictureAnnotation.cs:IPicture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "class:Engine/PictureAnnotation.cs:IPicture",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "class:Engine/PictureAnnotation.cs:Picture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "class:Engine/PictureAnnotation.cs:Picture",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "function:Engine/PictureAnnotation.cs:Read",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "function:Engine/PictureAnnotation.cs:Read",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "function:Engine/PictureAnnotation.cs:Write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "function:Engine/PictureAnnotation.cs:Write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "function:Engine/PictureAnnotation.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "function:Engine/PictureAnnotation.cs:Equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "function:Engine/PictureAnnotation.cs:GetHashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "function:Engine/PictureAnnotation.cs:GetHashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "class:Engine/PluginManager.cs:PluginManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "class:Engine/PluginManager.cs:PluginManager",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "class:Engine/PluginManager.cs:TapAssemblyResolver",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "class:Engine/PluginManager.cs:TapAssemblyResolver",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "class:Engine/PluginManager.cs:PluginsChangedEventArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "class:Engine/PluginManager.cs:PluginsChangedEventArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:AddAssemblyLoadFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:AddAssemblyLoadFilter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetAllPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetAllPlugins",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetOpenTapAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetOpenTapAssembly",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:SearchAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:SearchAsync",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Search",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Search",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Initialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Initialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:locateType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:LocateType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:LocateType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:LocateTypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:LocateTypeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetVersionResultParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetPluginVersions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Invalidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Invalidate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:AddAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:AddAssembly",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:AddAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:AddAssembly",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetAssembliesToSearch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetAssembliesToSearch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:tryGetAssemblyName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:resolveAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:GetSearcher",
+      "target": "function:Engine/PluginManager.cs:Search",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:GetAllPlugins",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:GetOpenTapAssembly",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:Search",
+      "target": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:locateType",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:locateType",
+      "target": "function:Engine/PluginManager.cs:LocateType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:LocateType",
+      "target": "function:Engine/PluginManager.cs:locateType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:LocateType",
+      "target": "function:Engine/PluginManager.cs:locateType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:LocateTypeData",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:resolveAssembly",
+      "target": "function:Engine/PluginManager.cs:tryGetAssemblyName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "class:Engine/PluginSearcher.cs:PluginAssemblyAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "class:Engine/PluginSearcher.cs:PluginAssemblyAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "class:Engine/PluginSearcher.cs:PluginSearcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "class:Engine/PluginSearcher.cs:PluginSearcher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:Search",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:Search",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:AddAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromPluginRecursive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:AbsorbLoadedPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:Search",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:Search",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:IsValueType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:GetTypeName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:MatchFullName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:AddAssembly",
+      "target": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:AbsorbLoadedPlugins",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromPluginRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:Search",
+      "target": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "target": "function:Engine/PluginSearcher.cs:MatchFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "target": "function:Engine/PluginSearcher.cs:MatchFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:IsValueType",
+      "target": "function:Engine/PluginSearcher.cs:GetTypeName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:GetTypeName",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetTypeName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:IsValueType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:Parameterize",
+      "target": "function:Engine/ParameterManager.cs:CreateParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:ParameterizeOnTestPlan",
+      "target": "function:Engine/ParameterManager.cs:CreateParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:ParameterizeOnParent",
+      "target": "function:Engine/ParameterManager.cs:CreateParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:Unparameterize",
+      "target": "function:Engine/ParameterManager.cs:Unparameterize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:EditParameter",
+      "target": "function:Engine/ParameterManager.cs:EditParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:RemoveParameter",
+      "target": "function:Engine/ParameterManager.cs:RemoveParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "target": "class:Engine/PluginSearcher.cs:PluginSearcher",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

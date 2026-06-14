@@ -1,0 +1,6928 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "Engine/UnparameterizableAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 8,
+      "nonEmptyLines": 7,
+      "classes": [
+        {
+          "name": "UnparameterizableAttribute",
+          "startLine": 6,
+          "endLine": 7,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UnparameterizableAttribute",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/UnsweepableAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "UnsweepableAttribute",
+          "startLine": 10,
+          "endLine": 11,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UnsweepableAttribute",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/UserInput.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 570,
+      "nonEmptyLines": 497,
+      "functions": [
+        {
+          "name": "Request",
+          "startLine": 25,
+          "endLine": 28,
+          "params": [
+            "dataObject",
+            "Timeout",
+            "modal"
+          ]
+        },
+        {
+          "name": "Request",
+          "startLine": 33,
+          "endLine": 36,
+          "params": [
+            "dataObject",
+            "modal"
+          ]
+        },
+        {
+          "name": "SetInterface",
+          "startLine": 46,
+          "endLine": 49,
+          "params": [
+            "inputInterface"
+          ]
+        },
+        {
+          "name": "NotifyChanged",
+          "startLine": 54,
+          "endLine": 57,
+          "params": [
+            "obj",
+            "property"
+          ]
+        },
+        {
+          "name": "GetInterface",
+          "startLine": 61,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "LayoutAttribute",
+          "startLine": 116,
+          "endLine": 121,
+          "params": [
+            "mode",
+            "rowHeight",
+            "maxRowHeight"
+          ]
+        },
+        {
+          "name": "LayoutAttribute",
+          "startLine": 124,
+          "endLine": 127,
+          "params": []
+        },
+        {
+          "name": "CliUserInputInterface",
+          "startLine": 163,
+          "endLine": 166,
+          "params": []
+        },
+        {
+          "name": "StartKeyboardReader",
+          "startLine": 171,
+          "endLine": 214,
+          "params": []
+        },
+        {
+          "name": "StartPipeReader",
+          "startLine": 218,
+          "endLine": 245,
+          "params": []
+        },
+        {
+          "name": "MaybeStartReader",
+          "startLine": 247,
+          "endLine": 255,
+          "params": []
+        },
+        {
+          "name": "RequestUserInput",
+          "startLine": 257,
+          "endLine": 488,
+          "params": [
+            "dataObject",
+            "timeout",
+            "modal"
+          ]
+        },
+        {
+          "name": "awaitReadLine",
+          "startLine": 498,
+          "endLine": 532,
+          "params": [
+            "timeOut",
+            "secure"
+          ]
+        },
+        {
+          "name": "Load",
+          "startLine": 542,
+          "endLine": 549,
+          "params": []
+        },
+        {
+          "name": "AcquireUserInputLock",
+          "startLine": 558,
+          "endLine": 568,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserInput",
+          "startLine": 19,
+          "endLine": 62,
+          "methods": [
+            "Request",
+            "Request",
+            "SetInterface",
+            "NotifyChanged",
+            "GetInterface"
+          ],
+          "properties": [
+            "Interface",
+            "_inputInterface",
+            "inputInterface",
+            "userInterface"
+          ]
+        },
+        {
+          "name": "IUserInterface",
+          "startLine": 65,
+          "endLine": 73,
+          "methods": [
+            "NotifyChanged"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IUserInputInterface",
+          "startLine": 76,
+          "endLine": 83,
+          "methods": [
+            "RequestUserInput"
+          ],
+          "properties": []
+        },
+        {
+          "name": "LayoutAttribute",
+          "startLine": 100,
+          "endLine": 128,
+          "methods": [
+            "LayoutAttribute",
+            "LayoutAttribute"
+          ],
+          "properties": [
+            "Mode",
+            "RowHeight",
+            "MaxRowHeight",
+            "MinWidth"
+          ]
+        },
+        {
+          "name": "SubmitAttribute",
+          "startLine": 131,
+          "endLine": 131,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "CliUserInputInterface",
+          "startLine": 134,
+          "endLine": 569,
+          "methods": [
+            "CliUserInputInterface",
+            "StartKeyboardReader",
+            "StartPipeReader",
+            "MaybeStartReader",
+            "RequestUserInput",
+            "awaitReadLine",
+            "Load",
+            "AcquireUserInputLock"
+          ],
+          "properties": [
+            "IsPipeInput",
+            "userInputMutex",
+            "readerLock",
+            "EOFReached",
+            "IsSecure",
+            "readerThread",
+            "lines",
+            "isLoaded",
+            "log"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Request",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "Request",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "Interface",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "SetInterface",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "NotifyChanged",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "GetInterface",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "UserInput",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "IUserInterface",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "IUserInputInterface",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "Mode",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "RowHeight",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "MaxRowHeight",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "MinWidth",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "LayoutAttribute",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "LayoutAttribute",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "LayoutAttribute",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "SubmitAttribute",
+          "line": 131,
+          "isDefault": false
+        },
+        {
+          "name": "CliUserInputInterface",
+          "line": 163,
+          "isDefault": false
+        },
+        {
+          "name": "Load",
+          "line": 542,
+          "isDefault": false
+        },
+        {
+          "name": "AcquireUserInputLock",
+          "line": 558,
+          "isDefault": false
+        },
+        {
+          "name": "CliUserInputInterface",
+          "line": 134,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Request",
+          "callee": "inputInterface?.RequestUserInput",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Request",
+          "callee": "inputInterface?.RequestUserInput",
+          "lineNumber": 35
+        },
+        {
+          "caller": "NotifyChanged",
+          "callee": "userInterface?.NotifyChanged",
+          "lineNumber": 56
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "TapThread.Start",
+          "lineNumber": 173
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "new StringBuilder",
+          "lineNumber": 177
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "Console.ReadKey",
+          "lineNumber": 181
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "Console.Write",
+          "lineNumber": 185
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "lines.Add",
+          "lineNumber": 189
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "sb.ToString",
+          "lineNumber": 189
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "sb.Clear",
+          "lineNumber": 190
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "Console.WriteLine",
+          "lineNumber": 191
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "sb.Remove",
+          "lineNumber": 198
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "Console.Write",
+          "lineNumber": 200
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "sb.Append",
+          "lineNumber": 205
+        },
+        {
+          "caller": "StartKeyboardReader",
+          "callee": "log.Error",
+          "lineNumber": 211
+        },
+        {
+          "caller": "StartPipeReader",
+          "callee": "TapThread.Start",
+          "lineNumber": 220
+        },
+        {
+          "caller": "StartPipeReader",
+          "callee": "new List<byte>",
+          "lineNumber": 224
+        },
+        {
+          "caller": "StartPipeReader",
+          "callee": "Console.OpenStandardInput",
+          "lineNumber": 225
+        },
+        {
+          "caller": "StartPipeReader",
+          "callee": "stdin.ReadByte",
+          "lineNumber": 228
+        },
+        {
+          "caller": "StartPipeReader",
+          "callee": "lines.Add",
+          "lineNumber": 234
+        },
+        {
+          "caller": "StartPipeReader",
+          "callee": "Encoding.UTF8.GetString",
+          "lineNumber": 234
+        },
+        {
+          "caller": "StartPipeReader",
+          "callee": "buf.ToArray",
+          "lineNumber": 234
+        },
+        {
+          "caller": "StartPipeReader",
+          "callee": "buf.Clear",
+          "lineNumber": 235
+        },
+        {
+          "caller": "StartPipeReader",
+          "callee": "buf.Add",
+          "lineNumber": 239
+        },
+        {
+          "caller": "MaybeStartReader",
+          "callee": "StartPipeReader",
+          "lineNumber": 253
+        },
+        {
+          "caller": "MaybeStartReader",
+          "callee": "StartKeyboardReader",
+          "lineNumber": 253
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "new EOFException",
+          "lineNumber": 262
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "MaybeStartReader",
+          "lineNumber": 265
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "new TimeSpan",
+          "lineNumber": 273
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "new TimeSpan",
+          "lineNumber": 274
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "userInputMutex.WaitOne",
+          "lineNumber": 277
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "new TimeoutException",
+          "lineNumber": 280
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "AnnotationCollection.Annotate",
+          "lineNumber": 285
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "a.Get<IMembersAnnotation>",
+          "lineNumber": 289
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "members2.Concat",
+          "lineNumber": 292
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "a.Get<IForwardedAnnotations>",
+          "lineNumber": 292
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Array.Empty<AnnotationCollection>",
+          "lineNumber": 292
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "members2.OrderBy",
+          "lineNumber": 295
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "m.Get<DisplayAttribute>",
+          "lineNumber": 295
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "m.Get<IMemberAnnotation>",
+          "lineNumber": 295
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "members2.OrderBy",
+          "lineNumber": 296
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "m.Get<DisplayAttribute>",
+          "lineNumber": 296
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "members2.OrderBy",
+          "lineNumber": 297
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "m.Get<IMemberAnnotation>()?.Member?.GetAttribute<LayoutAttribute>",
+          "lineNumber": 297
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "m.Get<IMemberAnnotation>",
+          "lineNumber": 297
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "members2.OrderBy",
+          "lineNumber": 298
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "m.Get<IMemberAnnotation>()?.Member?.HasAttribute<SubmitAttribute>",
+          "lineNumber": 298
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "m.Get<IMemberAnnotation>",
+          "lineNumber": 298
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "members2.ToArray",
+          "lineNumber": 299
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "a.Get<IDisplayAnnotation>",
+          "lineNumber": 302
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "attr.IsDefaultAttribute",
+          "lineNumber": 305
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Log.Flush",
+          "lineNumber": 309
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 310
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "TypeData.GetTypeData(dataObject)?.GetMember(\"Name\")?.GetValue",
+          "lineNumber": 312
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "TypeData.GetTypeData(dataObject)?.GetMember",
+          "lineNumber": 312
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 312
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 313
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.WriteLine",
+          "lineNumber": 315
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "m.GetAttribute<System.ComponentModel.BrowsableAttribute>",
+          "lineNumber": 319
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "m.HasAttribute<OutputAttribute>",
+          "lineNumber": 326
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IMemberAnnotation>()?.Member.GetAttribute<LayoutAttribute>",
+          "lineNumber": 339
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IMemberAnnotation>",
+          "lineNumber": 339
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "layout?.Mode.HasFlag",
+          "lineNumber": 340
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IAccessAnnotation>",
+          "lineNumber": 341
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<DisplayAttribute>",
+          "lineNumber": 344
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Math.Max",
+          "lineNumber": 345
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IMemberAnnotation>",
+          "lineNumber": 351
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "isBrowsable",
+          "lineNumber": 354
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IReflectionAnnotation>()?.ReflectionInfo.DescendsTo",
+          "lineNumber": 357
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IReflectionAnnotation>",
+          "lineNumber": 357
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IStringValueAnnotation>",
+          "lineNumber": 358
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<DisplayAttribute>",
+          "lineNumber": 360
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IAccessAnnotation>",
+          "lineNumber": 363
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IMemberAnnotation>()?.Member.GetAttribute<LayoutAttribute>",
+          "lineNumber": 366
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IMemberAnnotation>",
+          "lineNumber": 366
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "layout?.Mode.HasFlag",
+          "lineNumber": 367
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IAccessAnnotation>",
+          "lineNumber": 369
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "text.Replace(\"\\r\", \"\").Split",
+          "lineNumber": 377
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "text.Replace",
+          "lineNumber": 377
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "string.Join",
+          "lineNumber": 379
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.WriteLine",
+          "lineNumber": 380
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "name.PadRight",
+          "lineNumber": 380
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.WriteLine",
+          "lineNumber": 384
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IAvailableValuesAnnotationProxy>",
+          "lineNumber": 390
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "new List<string>",
+          "lineNumber": 396
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "value.Get<IStringValueAnnotation>",
+          "lineNumber": 402
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.Write",
+          "lineNumber": 406
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.WriteLine",
+          "lineNumber": 409
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.WriteLine",
+          "lineNumber": 413
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "options.Add",
+          "lineNumber": 416
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.Write",
+          "lineNumber": 419
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.Write",
+          "lineNumber": 424
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.Write",
+          "lineNumber": 429
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 432
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.Write",
+          "lineNumber": 433
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.Write",
+          "lineNumber": 435
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 436
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.Write",
+          "lineNumber": 437
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.WriteLine",
+          "lineNumber": 438
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "(awaitReadLine(timeoutAt, true)).Trim",
+          "lineNumber": 442
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "awaitReadLine",
+          "lineNumber": 442
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Get<IObjectValueAnnotation>",
+          "lineNumber": 443
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "read2.ToSecureString",
+          "lineNumber": 443
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "(awaitReadLine(timeoutAt, false)).Trim",
+          "lineNumber": 448
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "awaitReadLine",
+          "lineNumber": 448
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "int.TryParse",
+          "lineNumber": 457
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "a.Get<IErrorAnnotation>",
+          "lineNumber": 465
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "_message.Write",
+          "lineNumber": 468
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "errors?.Any",
+          "lineNumber": 469
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.WriteLine",
+          "lineNumber": 471
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "Console.WriteLine",
+          "lineNumber": 478
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "a.Write",
+          "lineNumber": 482
+        },
+        {
+          "caller": "RequestUserInput",
+          "callee": "userInputMutex.ReleaseMutex",
+          "lineNumber": 486
+        },
+        {
+          "caller": "awaitReadLine",
+          "callee": "lines.TryTake",
+          "lineNumber": 505
+        },
+        {
+          "caller": "awaitReadLine",
+          "callee": "Console.WriteLine",
+          "lineNumber": 511
+        },
+        {
+          "caller": "awaitReadLine",
+          "callee": "new EOFException",
+          "lineNumber": 512
+        },
+        {
+          "caller": "awaitReadLine",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 517
+        },
+        {
+          "caller": "awaitReadLine",
+          "callee": "Console.WriteLine",
+          "lineNumber": 518
+        },
+        {
+          "caller": "awaitReadLine",
+          "callee": "Console.WriteLine",
+          "lineNumber": 524
+        },
+        {
+          "caller": "awaitReadLine",
+          "callee": "log.Info",
+          "lineNumber": 525
+        },
+        {
+          "caller": "awaitReadLine",
+          "callee": "new TimeoutException",
+          "lineNumber": 526
+        },
+        {
+          "caller": "Load",
+          "callee": "UserInput.SetInterface",
+          "lineNumber": 547
+        },
+        {
+          "caller": "Load",
+          "callee": "new CliUserInputInterface",
+          "lineNumber": 547
+        },
+        {
+          "caller": "AcquireUserInputLock",
+          "callee": "cli.userInputMutex.WaitOne",
+          "lineNumber": 562
+        },
+        {
+          "caller": "AcquireUserInputLock",
+          "callee": "Utils.WithDisposable",
+          "lineNumber": 563
+        },
+        {
+          "caller": "AcquireUserInputLock",
+          "callee": "Utils.WithDisposable",
+          "lineNumber": 567
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 21,
+        "functionCount": 15,
+        "classCount": 6
+      }
+    },
+    {
+      "path": "Engine/Utils/ExecutableFormatDetector.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 135,
+      "nonEmptyLines": 114,
+      "functions": [
+        {
+          "name": "Detect",
+          "startLine": 22,
+          "endLine": 91,
+          "params": [
+            "fs",
+            "filePath"
+          ]
+        },
+        {
+          "name": "IsDotNet",
+          "startLine": 93,
+          "endLine": 125,
+          "params": [
+            "fs",
+            "peHeaderOffset"
+          ]
+        },
+        {
+          "name": "ReadUInt32BE",
+          "startLine": 127,
+          "endLine": 134,
+          "params": [
+            "data"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExecutableFormatDetector",
+          "startLine": 20,
+          "endLine": 135,
+          "methods": [
+            "Detect",
+            "IsDotNet",
+            "ReadUInt32BE"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Detect",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Detect",
+          "callee": "fs.Read",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Detect",
+          "callee": "fs.Seek",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Detect",
+          "callee": "fs.Read",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Detect",
+          "callee": "fs.Seek",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Detect",
+          "callee": "fs.Read",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Detect",
+          "callee": "IsDotNet",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Detect",
+          "callee": "ReadUInt32BE",
+          "lineNumber": 75
+        },
+        {
+          "caller": "IsDotNet",
+          "callee": "fs.Seek",
+          "lineNumber": 97
+        },
+        {
+          "caller": "IsDotNet",
+          "callee": "fs.ReadByte",
+          "lineNumber": 98
+        },
+        {
+          "caller": "IsDotNet",
+          "callee": "fs.ReadByte",
+          "lineNumber": 98
+        },
+        {
+          "caller": "IsDotNet",
+          "callee": "fs.Seek",
+          "lineNumber": 113
+        },
+        {
+          "caller": "IsDotNet",
+          "callee": "fs.Read",
+          "lineNumber": 115
+        },
+        {
+          "caller": "IsDotNet",
+          "callee": "BitConverter.ToUInt32",
+          "lineNumber": 117
+        },
+        {
+          "caller": "IsDotNet",
+          "callee": "BitConverter.ToUInt32",
+          "lineNumber": 118
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Utils/Utils2.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 77,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "IsLooped",
+          "startLine": 10,
+          "endLine": 35,
+          "params": [
+            "waitingFor",
+            "item"
+          ]
+        },
+        {
+          "name": "Bind",
+          "startLine": 37,
+          "endLine": 44,
+          "params": [
+            "del",
+            "f",
+            "v"
+          ]
+        },
+        {
+          "name": "IsSortedBy",
+          "startLine": 46,
+          "endLine": 62,
+          "params": [
+            "values",
+            "desc"
+          ]
+        },
+        {
+          "name": "Shuffle",
+          "startLine": 64,
+          "endLine": 75,
+          "params": [
+            "list"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Utils2",
+          "startLine": 8,
+          "endLine": 76,
+          "methods": [
+            "IsLooped",
+            "Bind",
+            "IsSortedBy",
+            "Shuffle"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IsLooped",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "Bind",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "IsSortedBy",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "Shuffle",
+          "line": 64,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "IsLooped",
+          "callee": "new Stack<Guid>",
+          "lineNumber": 12
+        },
+        {
+          "caller": "IsLooped",
+          "callee": "stack.Push",
+          "lineNumber": 13
+        },
+        {
+          "caller": "IsLooped",
+          "callee": "new HashSet<Guid>",
+          "lineNumber": 14
+        },
+        {
+          "caller": "IsLooped",
+          "callee": "stack.Pop",
+          "lineNumber": 17
+        },
+        {
+          "caller": "IsLooped",
+          "callee": "visited.Add",
+          "lineNumber": 18
+        },
+        {
+          "caller": "IsLooped",
+          "callee": "stack.Push",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Bind",
+          "callee": "f",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Bind",
+          "callee": "f",
+          "lineNumber": 42
+        },
+        {
+          "caller": "IsSortedBy",
+          "callee": "desc",
+          "lineNumber": 51
+        },
+        {
+          "caller": "IsSortedBy",
+          "callee": "desc",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Shuffle",
+          "callee": "new Random",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Shuffle",
+          "callee": "rng.Next",
+          "lineNumber": 71
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/ValidatingObject.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 394,
+      "nonEmptyLines": 361,
+      "functions": [
+        {
+          "name": "UpdateEmbeddedAndDynamicRules",
+          "startLine": 49,
+          "endLine": 110,
+          "params": []
+        },
+        {
+          "name": "GetError",
+          "startLine": 115,
+          "endLine": 169,
+          "params": [
+            "propertyName"
+          ]
+        },
+        {
+          "name": "ThrowOnValidationError",
+          "startLine": 188,
+          "endLine": 200,
+          "params": [
+            "ignoreDisabledProperties"
+          ]
+        },
+        {
+          "name": "OnPropertyChanged",
+          "startLine": 212,
+          "endLine": 216,
+          "params": [
+            "propertyName"
+          ]
+        },
+        {
+          "name": "ValidationRule",
+          "startLine": 257,
+          "endLine": 262,
+          "params": [
+            "isValid",
+            "errorMessage",
+            "propertyName"
+          ]
+        },
+        {
+          "name": "DelegateValidationRule",
+          "startLine": 306,
+          "endLine": 309,
+          "params": [
+            "isValid",
+            "propertyName",
+            "errorDelegate"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 325,
+          "endLine": 328,
+          "params": [
+            "isValid",
+            "errorMessage",
+            "propertyName"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 335,
+          "endLine": 340,
+          "params": [
+            "isValid",
+            "errorMessage"
+          ]
+        },
+        {
+          "name": "Forward",
+          "startLine": 348,
+          "endLine": 348,
+          "params": [
+            "member"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 356,
+          "endLine": 359,
+          "params": [
+            "isValid",
+            "errorDelegate",
+            "propertyName"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 368,
+          "endLine": 376,
+          "params": [
+            "isValid",
+            "errorMessage"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 384,
+          "endLine": 392,
+          "params": [
+            "isValid",
+            "errorDelegate"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ValidatingObject",
+          "startLine": 20,
+          "endLine": 220,
+          "methods": [
+            "UpdateEmbeddedAndDynamicRules",
+            "GetError",
+            "ThrowOnValidationError",
+            "OnPropertyChanged"
+          ],
+          "properties": [
+            "Rules",
+            "rules",
+            "traversed",
+            "Error"
+          ]
+        },
+        {
+          "name": "ValidationRule",
+          "startLine": 236,
+          "endLine": 263,
+          "methods": [
+            "ValidationRule"
+          ],
+          "properties": [
+            "PropertyName",
+            "ErrorMessage",
+            "IsValid"
+          ]
+        },
+        {
+          "name": "DelegateValidationRule",
+          "startLine": 268,
+          "endLine": 311,
+          "methods": [
+            "DelegateValidationRule"
+          ],
+          "properties": [
+            "log",
+            "ErrorMessage",
+            "ErrorDelegate"
+          ]
+        },
+        {
+          "name": "ValidationRuleCollection",
+          "startLine": 316,
+          "endLine": 393,
+          "methods": [
+            "Add",
+            "Add",
+            "Forward",
+            "Add",
+            "Add",
+            "Add"
+          ],
+          "properties": [
+            "UpdateKey",
+            "ForwardedRules"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Rules",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "Error",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "OnPropertyChanged",
+          "line": 212,
+          "isDefault": false
+        },
+        {
+          "name": "ValidatingObject",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "PropertyName",
+          "line": 241,
+          "isDefault": false
+        },
+        {
+          "name": "ErrorMessage",
+          "line": 245,
+          "isDefault": false
+        },
+        {
+          "name": "IsValid",
+          "line": 250,
+          "isDefault": false
+        },
+        {
+          "name": "ValidationRule",
+          "line": 257,
+          "isDefault": false
+        },
+        {
+          "name": "ValidationRule",
+          "line": 236,
+          "isDefault": false
+        },
+        {
+          "name": "ErrorMessage",
+          "line": 274,
+          "isDefault": false
+        },
+        {
+          "name": "ErrorDelegate",
+          "line": 298,
+          "isDefault": false
+        },
+        {
+          "name": "DelegateValidationRule",
+          "line": 306,
+          "isDefault": false
+        },
+        {
+          "name": "DelegateValidationRule",
+          "line": 268,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 325,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 335,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 356,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 368,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 384,
+          "isDefault": false
+        },
+        {
+          "name": "ValidationRuleCollection",
+          "line": 316,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "DynamicMember.GetTypeDataKey",
+          "lineNumber": 52
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "rules?.RemoveIf",
+          "lineNumber": 58
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 59
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "td.GetMembers",
+          "lineNumber": 61
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "member.TypeDescriptor.DescendsTo",
+          "lineNumber": 63
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "new DynamicRule",
+          "lineNumber": 65
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "member.GetValue",
+          "lineNumber": 67
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 69
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "member.GetValue",
+          "lineNumber": 74
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "Rules.Add",
+          "lineNumber": 80
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "td.GetMembers().OfType<EmbeddedMemberData>",
+          "lineNumber": 87
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "td.GetMembers",
+          "lineNumber": 87
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "member.OwnerMember.TypeDescriptor.DescendsTo",
+          "lineNumber": 89
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "new DynamicRule",
+          "lineNumber": 91
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "member.OwnerMember.GetValue",
+          "lineNumber": 93
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 96
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "member.OwnerMember.GetValue",
+          "lineNumber": 99
+        },
+        {
+          "caller": "UpdateEmbeddedAndDynamicRules",
+          "callee": "Rules.Add",
+          "lineNumber": 103
+        },
+        {
+          "caller": "GetError",
+          "callee": "UpdateEmbeddedAndDynamicRules",
+          "lineNumber": 117
+        },
+        {
+          "caller": "GetError",
+          "callee": "new List<string>",
+          "lineNumber": 122
+        },
+        {
+          "caller": "GetError",
+          "callee": "errors.Contains",
+          "lineNumber": 123
+        },
+        {
+          "caller": "GetError",
+          "callee": "errors.Add",
+          "lineNumber": 124
+        },
+        {
+          "caller": "GetError",
+          "callee": "rule.IsValid",
+          "lineNumber": 132
+        },
+        {
+          "caller": "GetError",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 134
+        },
+        {
+          "caller": "GetError",
+          "callee": "pushError",
+          "lineNumber": 135
+        },
+        {
+          "caller": "GetError",
+          "callee": "pushError",
+          "lineNumber": 138
+        },
+        {
+          "caller": "GetError",
+          "callee": "fwd.GetValue",
+          "lineNumber": 144
+        },
+        {
+          "caller": "GetError",
+          "callee": "new HashSet<object>",
+          "lineNumber": 148
+        },
+        {
+          "caller": "GetError",
+          "callee": "traversed.Contains",
+          "lineNumber": 150
+        },
+        {
+          "caller": "GetError",
+          "callee": "traversed.Add",
+          "lineNumber": 151
+        },
+        {
+          "caller": "GetError",
+          "callee": "traversed.Add",
+          "lineNumber": 152
+        },
+        {
+          "caller": "GetError",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 158
+        },
+        {
+          "caller": "GetError",
+          "callee": "pushError",
+          "lineNumber": 159
+        },
+        {
+          "caller": "GetError",
+          "callee": "err.TrimEnd",
+          "lineNumber": 159
+        },
+        {
+          "caller": "GetError",
+          "callee": "traversed.Remove",
+          "lineNumber": 163
+        },
+        {
+          "caller": "GetError",
+          "callee": "string.Join(Environment.NewLine, errors).TrimEnd",
+          "lineNumber": 168
+        },
+        {
+          "caller": "GetError",
+          "callee": "string.Join",
+          "lineNumber": 168
+        },
+        {
+          "caller": "ThrowOnValidationError",
+          "callee": "new HashSet<string>",
+          "lineNumber": 190
+        },
+        {
+          "caller": "ThrowOnValidationError",
+          "callee": "TestStepExtensions.GetObjectSettings",
+          "lineNumber": 191
+        },
+        {
+          "caller": "ThrowOnValidationError",
+          "callee": "rule.IsValid",
+          "lineNumber": 195
+        },
+        {
+          "caller": "ThrowOnValidationError",
+          "callee": "propertyNames.Contains",
+          "lineNumber": 195
+        },
+        {
+          "caller": "ThrowOnValidationError",
+          "callee": "new Exception",
+          "lineNumber": 197
+        },
+        {
+          "caller": "OnPropertyChanged",
+          "callee": "PropertyChanged?.Invoke",
+          "lineNumber": 214
+        },
+        {
+          "caller": "OnPropertyChanged",
+          "callee": "new PropertyChangedEventArgs",
+          "lineNumber": 214
+        },
+        {
+          "caller": "OnPropertyChanged",
+          "callee": "UserInput.NotifyChanged",
+          "lineNumber": 215
+        },
+        {
+          "caller": "Add",
+          "callee": "this.Add",
+          "lineNumber": 327
+        },
+        {
+          "caller": "Add",
+          "callee": "new ValidationRule",
+          "lineNumber": 327
+        },
+        {
+          "caller": "Forward",
+          "callee": "ForwardedRules.Add",
+          "lineNumber": 348
+        },
+        {
+          "caller": "Add",
+          "callee": "this.Add",
+          "lineNumber": 358
+        },
+        {
+          "caller": "Add",
+          "callee": "new DelegateValidationRule",
+          "lineNumber": 358
+        },
+        {
+          "caller": "Add",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 371
+        },
+        {
+          "caller": "Add",
+          "callee": "nameof",
+          "lineNumber": 371
+        },
+        {
+          "caller": "Add",
+          "callee": "this.Add",
+          "lineNumber": 374
+        },
+        {
+          "caller": "Add",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 387
+        },
+        {
+          "caller": "Add",
+          "callee": "nameof",
+          "lineNumber": 387
+        },
+        {
+          "caller": "Add",
+          "callee": "this.Add",
+          "lineNumber": 390
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 19,
+        "functionCount": 12,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "Engine/Verdict.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 38,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "Engine/Visa.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 787,
+      "nonEmptyLines": 722,
+      "functions": [
+        {
+          "name": "Visa",
+          "startLine": 50,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "viOpenDefaultRM",
+          "startLine": 147,
+          "endLine": 149,
+          "params": [
+            "sesn"
+          ]
+        },
+        {
+          "name": "viFindRsrc",
+          "startLine": 151,
+          "endLine": 153,
+          "params": [
+            "sesn",
+            "expr",
+            "vi",
+            "retCount",
+            "desc"
+          ]
+        },
+        {
+          "name": "viFindNext",
+          "startLine": 154,
+          "endLine": 156,
+          "params": [
+            "vi",
+            "desc"
+          ]
+        },
+        {
+          "name": "viParseRsrc",
+          "startLine": 158,
+          "endLine": 160,
+          "params": [
+            "sesn",
+            "desc",
+            "intfType",
+            "intfNum"
+          ]
+        },
+        {
+          "name": "viParseRsrcEx",
+          "startLine": 161,
+          "endLine": 163,
+          "params": [
+            "sesn",
+            "desc",
+            "intfType",
+            "intfNum",
+            "rsrcClass",
+            "expandedUnaliasedName",
+            "aliasIfExists"
+          ]
+        },
+        {
+          "name": "viOpen",
+          "startLine": 165,
+          "endLine": 167,
+          "params": [
+            "sesn",
+            "viDesc",
+            "mode",
+            "timeout",
+            "vi"
+          ]
+        },
+        {
+          "name": "viClose",
+          "startLine": 168,
+          "endLine": 170,
+          "params": [
+            "vi"
+          ]
+        },
+        {
+          "name": "viGetAttribute",
+          "startLine": 172,
+          "endLine": 174,
+          "params": [
+            "vi",
+            "attrName",
+            "attrValue"
+          ]
+        },
+        {
+          "name": "viGetAttribute",
+          "startLine": 175,
+          "endLine": 177,
+          "params": [
+            "vi",
+            "attrName",
+            "attrValue"
+          ]
+        },
+        {
+          "name": "viGetAttribute",
+          "startLine": 178,
+          "endLine": 180,
+          "params": [
+            "vi",
+            "attrName",
+            "attrValue"
+          ]
+        },
+        {
+          "name": "viSetAttribute",
+          "startLine": 181,
+          "endLine": 183,
+          "params": [
+            "vi",
+            "attrName",
+            "attrValue"
+          ]
+        },
+        {
+          "name": "viSetAttribute",
+          "startLine": 184,
+          "endLine": 186,
+          "params": [
+            "vi",
+            "attrName",
+            "attrValue"
+          ]
+        },
+        {
+          "name": "viStatusDesc",
+          "startLine": 188,
+          "endLine": 190,
+          "params": [
+            "vi",
+            "status",
+            "desc"
+          ]
+        },
+        {
+          "name": "viEnableEvent",
+          "startLine": 192,
+          "endLine": 194,
+          "params": [
+            "vi",
+            "eventType",
+            "mechanism",
+            "context"
+          ]
+        },
+        {
+          "name": "viDisableEvent",
+          "startLine": 195,
+          "endLine": 197,
+          "params": [
+            "vi",
+            "eventType",
+            "mechanism"
+          ]
+        },
+        {
+          "name": "viInstallHandler",
+          "startLine": 198,
+          "endLine": 200,
+          "params": [
+            "vi",
+            "eventType",
+            "handler",
+            "UserHandle"
+          ]
+        },
+        {
+          "name": "viUninstallHandler",
+          "startLine": 201,
+          "endLine": 203,
+          "params": [
+            "vi",
+            "eventType",
+            "handler",
+            "userHandle"
+          ]
+        },
+        {
+          "name": "viWaitOnEvent",
+          "startLine": 205,
+          "endLine": 207,
+          "params": [
+            "vi",
+            "eventType",
+            "timeout",
+            "outEventType",
+            "outContext"
+          ]
+        },
+        {
+          "name": "viRead",
+          "startLine": 209,
+          "endLine": 211,
+          "params": [
+            "vi",
+            "buffer",
+            "count",
+            "retCount"
+          ]
+        },
+        {
+          "name": "viWrite",
+          "startLine": 212,
+          "endLine": 214,
+          "params": [
+            "vi",
+            "buffer",
+            "count",
+            "retCount"
+          ]
+        },
+        {
+          "name": "viReadSTB",
+          "startLine": 216,
+          "endLine": 218,
+          "params": [
+            "vi",
+            "status"
+          ]
+        },
+        {
+          "name": "viClear",
+          "startLine": 220,
+          "endLine": 222,
+          "params": [
+            "vi"
+          ]
+        },
+        {
+          "name": "viLock",
+          "startLine": 224,
+          "endLine": 226,
+          "params": [
+            "vi",
+            "lockType",
+            "timeout",
+            "requestedKey",
+            "accessKey"
+          ]
+        },
+        {
+          "name": "viUnlock",
+          "startLine": 227,
+          "endLine": 229,
+          "params": [
+            "vi"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Visa",
+          "startLine": 12,
+          "endLine": 786,
+          "methods": [
+            "Visa",
+            "viOpenDefaultRM",
+            "viFindRsrc",
+            "viFindNext",
+            "viParseRsrc",
+            "viParseRsrcEx",
+            "viOpen",
+            "viClose",
+            "viGetAttribute",
+            "viGetAttribute",
+            "viGetAttribute",
+            "viSetAttribute",
+            "viSetAttribute",
+            "viStatusDesc",
+            "viEnableEvent",
+            "viDisableEvent",
+            "viInstallHandler",
+            "viUninstallHandler",
+            "viWaitOnEvent",
+            "viRead",
+            "viWrite",
+            "viReadSTB",
+            "viClear",
+            "viLock",
+            "viUnlock"
+          ],
+          "properties": [
+            "VI_SPEC_VERSION",
+            "ViOpenDefaultRmRef",
+            "ViFindRsrcRef",
+            "ViFindNextRef",
+            "ViParseRsrcRef",
+            "ViParseRsrcExRef",
+            "ViOpenRef",
+            "ViCloseRef",
+            "ViGetAttributeBRef",
+            "ViGetAttributeSbRef",
+            "ViGetAttributeIRef",
+            "ViSetAttributeBRef",
+            "ViSetAttributeIRef",
+            "ViStatusDescRef",
+            "ViEnableEventRef",
+            "ViDisableEventRef",
+            "ViInstallHandlerRef",
+            "ViUninstallHandlerRef",
+            "ViWaitOnEventRef",
+            "ViReadRef",
+            "ViWriteRef",
+            "ViReadStbRef",
+            "ViClearRef",
+            "ViLockRef",
+            "ViUnlockRef",
+            "staticLog",
+            "_implementor",
+            "VI_ATTR_RSRC_CLASS",
+            "VI_ATTR_RSRC_NAME",
+            "VI_ATTR_RSRC_IMPL_VERSION",
+            "VI_ATTR_RSRC_LOCK_STATE",
+            "VI_ATTR_MAX_QUEUE_LENGTH",
+            "VI_ATTR_USER_DATA_32",
+            "VI_ATTR_FDC_CHNL",
+            "VI_ATTR_FDC_MODE",
+            "VI_ATTR_FDC_GEN_SIGNAL_EN",
+            "VI_ATTR_FDC_USE_PAIR",
+            "VI_ATTR_SEND_END_EN",
+            "VI_ATTR_TERMCHAR",
+            "VI_ATTR_TMO_VALUE",
+            "VI_ATTR_GPIB_READDR_EN",
+            "VI_ATTR_IO_PROT",
+            "VI_ATTR_DMA_ALLOW_EN",
+            "VI_ATTR_ASRL_BAUD",
+            "VI_ATTR_ASRL_DATA_BITS",
+            "VI_ATTR_ASRL_PARITY",
+            "VI_ATTR_ASRL_STOP_BITS",
+            "VI_ATTR_ASRL_FLOW_CNTRL",
+            "VI_ATTR_RD_BUF_OPER_MODE",
+            "VI_ATTR_RD_BUF_SIZE",
+            "VI_ATTR_WR_BUF_OPER_MODE",
+            "VI_ATTR_WR_BUF_SIZE",
+            "VI_ATTR_SUPPRESS_END_EN",
+            "VI_ATTR_TERMCHAR_EN",
+            "VI_ATTR_DEST_ACCESS_PRIV",
+            "VI_ATTR_DEST_BYTE_ORDER",
+            "VI_ATTR_SRC_ACCESS_PRIV",
+            "VI_ATTR_SRC_BYTE_ORDER",
+            "VI_ATTR_SRC_INCREMENT",
+            "VI_ATTR_DEST_INCREMENT",
+            "VI_ATTR_WIN_ACCESS_PRIV",
+            "VI_ATTR_WIN_BYTE_ORDER",
+            "VI_ATTR_GPIB_ATN_STATE",
+            "VI_ATTR_GPIB_ADDR_STATE",
+            "VI_ATTR_GPIB_CIC_STATE",
+            "VI_ATTR_GPIB_NDAC_STATE",
+            "VI_ATTR_GPIB_SRQ_STATE",
+            "VI_ATTR_GPIB_SYS_CNTRL_STATE",
+            "VI_ATTR_GPIB_HS488_CBL_LEN",
+            "VI_ATTR_CMDR_LA",
+            "VI_ATTR_VXI_DEV_CLASS",
+            "VI_ATTR_MAINFRAME_LA",
+            "VI_ATTR_MANF_NAME",
+            "VI_ATTR_MODEL_NAME",
+            "VI_ATTR_VXI_VME_INTR_STATUS",
+            "VI_ATTR_VXI_TRIG_STATUS",
+            "VI_ATTR_VXI_VME_SYSFAIL_STATE",
+            "VI_ATTR_WIN_BASE_ADDR_32",
+            "VI_ATTR_WIN_SIZE_32",
+            "VI_ATTR_ASRL_AVAIL_NUM",
+            "VI_ATTR_MEM_BASE_32",
+            "VI_ATTR_ASRL_CTS_STATE",
+            "VI_ATTR_ASRL_DCD_STATE",
+            "VI_ATTR_ASRL_DSR_STATE",
+            "VI_ATTR_ASRL_DTR_STATE",
+            "VI_ATTR_ASRL_END_IN",
+            "VI_ATTR_ASRL_END_OUT",
+            "VI_ATTR_ASRL_REPLACE_CHAR",
+            "VI_ATTR_ASRL_RI_STATE",
+            "VI_ATTR_ASRL_RTS_STATE",
+            "VI_ATTR_ASRL_XON_CHAR",
+            "VI_ATTR_ASRL_XOFF_CHAR",
+            "VI_ATTR_WIN_ACCESS",
+            "VI_ATTR_RM_SESSION",
+            "VI_ATTR_VXI_LA",
+            "VI_ATTR_MANF_ID",
+            "VI_ATTR_MEM_SIZE_32",
+            "VI_ATTR_MEM_SPACE",
+            "VI_ATTR_MODEL_CODE",
+            "VI_ATTR_SLOT",
+            "VI_ATTR_INTF_INST_NAME",
+            "VI_ATTR_IMMEDIATE_SERV",
+            "VI_ATTR_INTF_PARENT_NUM",
+            "VI_ATTR_RSRC_SPEC_VERSION",
+            "VI_ATTR_INTF_TYPE",
+            "VI_ATTR_GPIB_PRIMARY_ADDR",
+            "VI_ATTR_GPIB_SECONDARY_ADDR",
+            "VI_ATTR_RSRC_MANF_NAME",
+            "VI_ATTR_RSRC_MANF_ID",
+            "VI_ATTR_INTF_NUM",
+            "VI_ATTR_TRIG_ID",
+            "VI_ATTR_GPIB_REN_STATE",
+            "VI_ATTR_GPIB_UNADDR_EN",
+            "VI_ATTR_DEV_STATUS_BYTE",
+            "VI_ATTR_FILE_APPEND_EN",
+            "VI_ATTR_VXI_TRIG_SUPPORT",
+            "VI_ATTR_TCPIP_ADDR",
+            "VI_ATTR_TCPIP_HOSTNAME",
+            "VI_ATTR_TCPIP_PORT",
+            "VI_ATTR_TCPIP_DEVICE_NAME",
+            "VI_ATTR_TCPIP_NODELAY",
+            "VI_ATTR_TCPIP_KEEPALIVE",
+            "VI_ATTR_4882_COMPLIANT",
+            "VI_ATTR_USB_SERIAL_NUM",
+            "VI_ATTR_USB_INTFC_NUM",
+            "VI_ATTR_USB_PROTOCOL",
+            "VI_ATTR_USB_MAX_INTR_SIZE",
+            "VI_ATTR_PXI_DEV_NUM",
+            "VI_ATTR_PXI_FUNC_NUM",
+            "VI_ATTR_PXI_BUS_NUM",
+            "VI_ATTR_PXI_CHASSIS",
+            "VI_ATTR_PXI_SLOTPATH",
+            "VI_ATTR_PXI_SLOT_LBUS_LEFT",
+            "VI_ATTR_PXI_SLOT_LBUS_RIGHT",
+            "VI_ATTR_PXI_TRIG_BUS",
+            "VI_ATTR_PXI_STAR_TRIG_BUS",
+            "VI_ATTR_PXI_STAR_TRIG_LINE",
+            "VI_ATTR_PXI_SRC_TRIG_BUS",
+            "VI_ATTR_PXI_DEST_TRIG_BUS",
+            "VI_ATTR_PXI_MEM_TYPE_BAR0",
+            "VI_ATTR_PXI_MEM_TYPE_BAR1",
+            "VI_ATTR_PXI_MEM_TYPE_BAR2",
+            "VI_ATTR_PXI_MEM_TYPE_BAR3",
+            "VI_ATTR_PXI_MEM_TYPE_BAR4",
+            "VI_ATTR_PXI_MEM_TYPE_BAR5",
+            "VI_ATTR_PXI_MEM_BASE_BAR0_32",
+            "VI_ATTR_PXI_MEM_BASE_BAR1_32",
+            "VI_ATTR_PXI_MEM_BASE_BAR2_32",
+            "VI_ATTR_PXI_MEM_BASE_BAR3_32",
+            "VI_ATTR_PXI_MEM_BASE_BAR4_32",
+            "VI_ATTR_PXI_MEM_BASE_BAR5_32",
+            "VI_ATTR_PXI_MEM_BASE_BAR0_64",
+            "VI_ATTR_PXI_MEM_BASE_BAR1_64",
+            "VI_ATTR_PXI_MEM_BASE_BAR2_64",
+            "VI_ATTR_PXI_MEM_BASE_BAR3_64",
+            "VI_ATTR_PXI_MEM_BASE_BAR4_64",
+            "VI_ATTR_PXI_MEM_BASE_BAR5_64",
+            "VI_ATTR_PXI_MEM_SIZE_BAR0_32",
+            "VI_ATTR_PXI_MEM_SIZE_BAR1_32",
+            "VI_ATTR_PXI_MEM_SIZE_BAR2_32",
+            "VI_ATTR_PXI_MEM_SIZE_BAR3_32",
+            "VI_ATTR_PXI_MEM_SIZE_BAR4_32",
+            "VI_ATTR_PXI_MEM_SIZE_BAR5_32",
+            "VI_ATTR_PXI_MEM_SIZE_BAR0_64",
+            "VI_ATTR_PXI_MEM_SIZE_BAR1_64",
+            "VI_ATTR_PXI_MEM_SIZE_BAR2_64",
+            "VI_ATTR_PXI_MEM_SIZE_BAR3_64",
+            "VI_ATTR_PXI_MEM_SIZE_BAR4_64",
+            "VI_ATTR_PXI_MEM_SIZE_BAR5_64",
+            "VI_ATTR_PXI_IS_EXPRESS",
+            "VI_ATTR_PXI_SLOT_LWIDTH",
+            "VI_ATTR_PXI_MAX_LWIDTH",
+            "VI_ATTR_PXI_ACTUAL_LWIDTH",
+            "VI_ATTR_PXI_DSTAR_BUS",
+            "VI_ATTR_PXI_DSTAR_SET",
+            "VI_ATTR_PXI_ALLOW_WRITE_COMBINE",
+            "VI_ATTR_TCPIP_HISLIP_OVERLAP_EN",
+            "VI_ATTR_TCPIP_HISLIP_VERSION",
+            "VI_ATTR_TCPIP_HISLIP_MAX_MESSAGE_KB",
+            "VI_ATTR_TCPIP_IS_HISLIP",
+            "VI_ATTR_JOB_ID",
+            "VI_ATTR_EVENT_TYPE",
+            "VI_ATTR_SIGP_STATUS_ID",
+            "VI_ATTR_RECV_TRIG_ID",
+            "VI_ATTR_INTR_STATUS_ID",
+            "VI_ATTR_STATUS",
+            "VI_ATTR_RET_COUNT_32",
+            "VI_ATTR_BUFFER",
+            "VI_ATTR_RECV_INTR_LEVEL",
+            "VI_ATTR_OPER_NAME",
+            "VI_ATTR_GPIB_RECV_CIC_STATE",
+            "VI_ATTR_RECV_TCPIP_ADDR",
+            "VI_ATTR_USB_RECV_INTR_SIZE",
+            "VI_ATTR_USB_RECV_INTR_DATA",
+            "VI_ATTR_PXI_RECV_INTR_SEQ",
+            "VI_ATTR_PXI_RECV_INTR_DATA",
+            "VI_ATTR_WIN_BASE_ADDR_64",
+            "VI_ATTR_WIN_SIZE_64",
+            "VI_ATTR_MEM_BASE_64",
+            "VI_ATTR_MEM_SIZE_64",
+            "VI_ATTR_USER_DATA_64",
+            "VI_ATTR_RET_COUNT_64",
+            "Is64bit",
+            "VI_ATTR_USER_DATA",
+            "VI_ATTR_RET_COUNT",
+            "VI_ATTR_WIN_BASE_ADDR",
+            "VI_ATTR_WIN_SIZE",
+            "VI_ATTR_MEM_BASE",
+            "VI_ATTR_MEM_SIZE",
+            "VI_ATTR_PXI_MEM_BASE_BAR0",
+            "VI_ATTR_PXI_MEM_BASE_BAR1",
+            "VI_ATTR_PXI_MEM_BASE_BAR2",
+            "VI_ATTR_PXI_MEM_BASE_BAR3",
+            "VI_ATTR_PXI_MEM_BASE_BAR4",
+            "VI_ATTR_PXI_MEM_BASE_BAR5",
+            "VI_ATTR_PXI_MEM_SIZE_BAR0",
+            "VI_ATTR_PXI_MEM_SIZE_BAR1",
+            "VI_ATTR_PXI_MEM_SIZE_BAR2",
+            "VI_ATTR_PXI_MEM_SIZE_BAR3",
+            "VI_ATTR_PXI_MEM_SIZE_BAR4",
+            "VI_ATTR_PXI_MEM_SIZE_BAR5",
+            "VI_EVENT_IO_COMPLETION",
+            "VI_EVENT_TRIG",
+            "VI_EVENT_SERVICE_REQ",
+            "VI_EVENT_CLEAR",
+            "VI_EVENT_EXCEPTION",
+            "VI_EVENT_GPIB_CIC",
+            "VI_EVENT_GPIB_TALK",
+            "VI_EVENT_GPIB_LISTEN",
+            "VI_EVENT_VXI_VME_SYSFAIL",
+            "VI_EVENT_VXI_VME_SYSRESET",
+            "VI_EVENT_VXI_SIGP",
+            "VI_EVENT_VXI_VME_INTR",
+            "VI_EVENT_PXI_INTR",
+            "VI_EVENT_TCPIP_CONNECT",
+            "VI_EVENT_USB_INTR",
+            "VI_ALL_ENABLED_EVENTS",
+            "VI_SUCCESS",
+            "VI_SUCCESS_EVENT_EN",
+            "VI_SUCCESS_EVENT_DIS",
+            "VI_SUCCESS_QUEUE_EMPTY",
+            "VI_SUCCESS_TERM_CHAR",
+            "VI_SUCCESS_MAX_CNT",
+            "VI_SUCCESS_DEV_NPRESENT",
+            "VI_SUCCESS_TRIG_MAPPED",
+            "VI_SUCCESS_QUEUE_NEMPTY",
+            "VI_SUCCESS_NCHAIN",
+            "VI_SUCCESS_NESTED_SHARED",
+            "VI_SUCCESS_NESTED_EXCLUSIVE",
+            "VI_SUCCESS_SYNC",
+            "VI_WARN_QUEUE_OVERFLOW",
+            "VI_WARN_CONFIG_NLOADED",
+            "VI_WARN_NULL_OBJECT",
+            "VI_WARN_NSUP_ATTR_STATE",
+            "VI_WARN_UNKNOWN_STATUS",
+            "VI_WARN_NSUP_BUF",
+            "VI_WARN_EXT_FUNC_NIMPL",
+            "VI_ERROR_SYSTEM_ERROR",
+            "VI_ERROR_INV_OBJECT",
+            "VI_ERROR_RSRC_LOCKED",
+            "VI_ERROR_INV_EXPR",
+            "VI_ERROR_RSRC_NFOUND",
+            "VI_ERROR_INV_RSRC_NAME",
+            "VI_ERROR_INV_ACC_MODE",
+            "VI_ERROR_TMO",
+            "VI_ERROR_CLOSING_FAILED",
+            "VI_ERROR_INV_DEGREE",
+            "VI_ERROR_INV_JOB_ID",
+            "VI_ERROR_NSUP_ATTR",
+            "VI_ERROR_NSUP_ATTR_STATE",
+            "VI_ERROR_ATTR_READONLY",
+            "VI_ERROR_INV_LOCK_TYPE",
+            "VI_ERROR_INV_ACCESS_KEY",
+            "VI_ERROR_INV_EVENT",
+            "VI_ERROR_INV_MECH",
+            "VI_ERROR_HNDLR_NINSTALLED",
+            "VI_ERROR_INV_HNDLR_REF",
+            "VI_ERROR_INV_CONTEXT",
+            "VI_ERROR_QUEUE_OVERFLOW",
+            "VI_ERROR_NENABLED",
+            "VI_ERROR_ABORT",
+            "VI_ERROR_RAW_WR_PROT_VIOL",
+            "VI_ERROR_RAW_RD_PROT_VIOL",
+            "VI_ERROR_OUTP_PROT_VIOL",
+            "VI_ERROR_INP_PROT_VIOL",
+            "VI_ERROR_BERR",
+            "VI_ERROR_IN_PROGRESS",
+            "VI_ERROR_INV_SETUP",
+            "VI_ERROR_QUEUE_ERROR",
+            "VI_ERROR_ALLOC",
+            "VI_ERROR_INV_MASK",
+            "VI_ERROR_IO",
+            "VI_ERROR_INV_FMT",
+            "VI_ERROR_NSUP_FMT",
+            "VI_ERROR_LINE_IN_USE",
+            "VI_ERROR_NSUP_MODE",
+            "VI_ERROR_SRQ_NOCCURRED",
+            "VI_ERROR_INV_SPACE",
+            "VI_ERROR_INV_OFFSET",
+            "VI_ERROR_INV_WIDTH",
+            "VI_ERROR_NSUP_OFFSET",
+            "VI_ERROR_NSUP_VAR_WIDTH",
+            "VI_ERROR_WINDOW_NMAPPED",
+            "VI_ERROR_RESP_PENDING",
+            "VI_ERROR_NLISTENERS",
+            "VI_ERROR_NCIC",
+            "VI_ERROR_NSYS_CNTLR",
+            "VI_ERROR_NSUP_OPER",
+            "VI_ERROR_INTR_PENDING",
+            "VI_ERROR_ASRL_PARITY",
+            "VI_ERROR_ASRL_FRAMING",
+            "VI_ERROR_ASRL_OVERRUN",
+            "VI_ERROR_TRIG_NMAPPED",
+            "VI_ERROR_NSUP_ALIGN_OFFSET",
+            "VI_ERROR_USER_BUF",
+            "VI_ERROR_RSRC_BUSY",
+            "VI_ERROR_NSUP_WIDTH",
+            "VI_ERROR_INV_PARAMETER",
+            "VI_ERROR_INV_PROT",
+            "VI_ERROR_INV_SIZE",
+            "VI_ERROR_WINDOW_MAPPED",
+            "VI_ERROR_NIMPL_OPER",
+            "VI_ERROR_INV_LENGTH",
+            "VI_ERROR_INV_MODE",
+            "VI_ERROR_SESN_NLOCKED",
+            "VI_ERROR_MEM_NSHARED",
+            "VI_ERROR_LIBRARY_NFOUND",
+            "VI_ERROR_NSUP_INTR",
+            "VI_ERROR_INV_LINE",
+            "VI_ERROR_FILE_ACCESS",
+            "VI_ERROR_FILE_IO",
+            "VI_ERROR_NSUP_LINE",
+            "VI_ERROR_NSUP_MECH",
+            "VI_ERROR_INTF_NUM_NCONFIG",
+            "VI_ERROR_CONN_LOST",
+            "VI_ERROR_MACHINE_NAVAIL",
+            "VI_ERROR_NPERMISSION",
+            "VI_FIND_BUFLEN",
+            "VI_NULL",
+            "VI_TRUE",
+            "VI_FALSE",
+            "VI_INTF_GPIB",
+            "VI_INTF_VXI",
+            "VI_INTF_GPIB_VXI",
+            "VI_INTF_ASRL",
+            "VI_INTF_PXI",
+            "VI_INTF_TCPIP",
+            "VI_INTF_USB",
+            "VI_PROT_NORMAL",
+            "VI_PROT_FDC",
+            "VI_PROT_HS488",
+            "VI_PROT_4882_STRS",
+            "VI_PROT_USBTMC_VENDOR",
+            "VI_FDC_NORMAL",
+            "VI_FDC_STREAM",
+            "VI_LOCAL_SPACE",
+            "VI_A16_SPACE",
+            "VI_A24_SPACE",
+            "VI_A32_SPACE",
+            "VI_A64_SPACE",
+            "VI_PXI_ALLOC_SPACE",
+            "VI_PXI_CFG_SPACE",
+            "VI_PXI_BAR0_SPACE",
+            "VI_PXI_BAR1_SPACE",
+            "VI_PXI_BAR2_SPACE",
+            "VI_PXI_BAR3_SPACE",
+            "VI_PXI_BAR4_SPACE",
+            "VI_PXI_BAR5_SPACE",
+            "VI_OPAQUE_SPACE",
+            "VI_UNKNOWN_LA",
+            "VI_UNKNOWN_SLOT",
+            "VI_UNKNOWN_LEVEL",
+            "VI_UNKNOWN_CHASSIS",
+            "VI_QUEUE",
+            "VI_HNDLR",
+            "VI_SUSPEND_HNDLR",
+            "VI_ALL_MECH",
+            "VI_ANY_HNDLR",
+            "VI_TRIG_ALL",
+            "VI_TRIG_SW",
+            "VI_TRIG_TTL0",
+            "VI_TRIG_TTL1",
+            "VI_TRIG_TTL2",
+            "VI_TRIG_TTL3",
+            "VI_TRIG_TTL4",
+            "VI_TRIG_TTL5",
+            "VI_TRIG_TTL6",
+            "VI_TRIG_TTL7",
+            "VI_TRIG_TTL8",
+            "VI_TRIG_TTL9",
+            "VI_TRIG_TTL10",
+            "VI_TRIG_TTL11",
+            "VI_TRIG_ECL0",
+            "VI_TRIG_ECL1",
+            "VI_TRIG_PANEL_IN",
+            "VI_TRIG_PANEL_OUT",
+            "VI_TRIG_PROT_DEFAULT",
+            "VI_TRIG_PROT_ON",
+            "VI_TRIG_PROT_OFF",
+            "VI_TRIG_PROT_SYNC",
+            "VI_TRIG_PROT_RESERVE",
+            "VI_TRIG_PROT_UNRESERVE",
+            "VI_READ_BUF",
+            "VI_WRITE_BUF",
+            "VI_READ_BUF_DISCARD",
+            "VI_WRITE_BUF_DISCARD",
+            "VI_IO_IN_BUF",
+            "VI_IO_OUT_BUF",
+            "VI_IO_IN_BUF_DISCARD",
+            "VI_IO_OUT_BUF_DISCARD",
+            "VI_FLUSH_ON_ACCESS",
+            "VI_FLUSH_WHEN_FULL",
+            "VI_FLUSH_DISABLE",
+            "VI_NMAPPED",
+            "VI_USE_OPERS",
+            "VI_DEREF_ADDR",
+            "VI_DEREF_ADDR_BYTE_SWAP",
+            "VI_TMO_IMMEDIATE",
+            "VI_TMO_INFINITE",
+            "VI_NO_LOCK",
+            "VI_EXCLUSIVE_LOCK",
+            "VI_SHARED_LOCK",
+            "VI_LOAD_CONFIG",
+            "VI_NO_SEC_ADDR",
+            "VI_ASRL_PAR_NONE",
+            "VI_ASRL_PAR_ODD",
+            "VI_ASRL_PAR_EVEN",
+            "VI_ASRL_PAR_MARK",
+            "VI_ASRL_PAR_SPACE",
+            "VI_ASRL_STOP_ONE",
+            "VI_ASRL_STOP_ONE5",
+            "VI_ASRL_STOP_TWO",
+            "VI_ASRL_FLOW_NONE",
+            "VI_ASRL_FLOW_XON_XOFF",
+            "VI_ASRL_FLOW_RTS_CTS",
+            "VI_ASRL_FLOW_DTR_DSR",
+            "VI_ASRL_END_NONE",
+            "VI_ASRL_END_LAST_BIT",
+            "VI_ASRL_END_TERMCHAR",
+            "VI_ASRL_END_BREAK",
+            "VI_STATE_ASSERTED",
+            "VI_STATE_UNASSERTED",
+            "VI_STATE_UNKNOWN",
+            "VI_BIG_ENDIAN",
+            "VI_LITTLE_ENDIAN",
+            "VI_DATA_PRIV",
+            "VI_DATA_NPRIV",
+            "VI_PROG_PRIV",
+            "VI_PROG_NPRIV",
+            "VI_BLCK_PRIV",
+            "VI_BLCK_NPRIV",
+            "VI_D64_PRIV",
+            "VI_D64_NPRIV",
+            "VI_WIDTH_8",
+            "VI_WIDTH_16",
+            "VI_WIDTH_32",
+            "VI_WIDTH_64",
+            "VI_GPIB_REN_DEASSERT",
+            "VI_GPIB_REN_ASSERT",
+            "VI_GPIB_REN_DEASSERT_GTL",
+            "VI_GPIB_REN_ASSERT_ADDRESS",
+            "VI_GPIB_REN_ASSERT_LLO",
+            "VI_GPIB_REN_ASSERT_ADDRESS_LLO",
+            "VI_GPIB_REN_ADDRESS_GTL",
+            "VI_GPIB_ATN_DEASSERT",
+            "VI_GPIB_ATN_ASSERT",
+            "VI_GPIB_ATN_DEASSERT_HANDSHAKE",
+            "VI_GPIB_ATN_ASSERT_IMMEDIATE",
+            "VI_GPIB_HS488_DISABLED",
+            "VI_GPIB_HS488_NIMPL",
+            "VI_GPIB_UNADDRESSED",
+            "VI_GPIB_TALKER",
+            "VI_GPIB_LISTENER",
+            "VI_VXI_CMD16",
+            "VI_VXI_CMD16_RESP16",
+            "VI_VXI_RESP16",
+            "VI_VXI_CMD32",
+            "VI_VXI_CMD32_RESP16",
+            "VI_VXI_CMD32_RESP32",
+            "VI_VXI_RESP32",
+            "VI_ASSERT_SIGNAL",
+            "VI_ASSERT_USE_ASSIGNED",
+            "VI_ASSERT_IRQ1",
+            "VI_ASSERT_IRQ2",
+            "VI_ASSERT_IRQ3",
+            "VI_ASSERT_IRQ4",
+            "VI_ASSERT_IRQ5",
+            "VI_ASSERT_IRQ6",
+            "VI_ASSERT_IRQ7",
+            "VI_UTIL_ASSERT_SYSRESET",
+            "VI_UTIL_ASSERT_SYSFAIL",
+            "VI_UTIL_DEASSERT_SYSFAIL",
+            "VI_VXI_CLASS_MEMORY",
+            "VI_VXI_CLASS_EXTENDED",
+            "VI_VXI_CLASS_MESSAGE",
+            "VI_VXI_CLASS_REGISTER",
+            "VI_VXI_CLASS_OTHER",
+            "VI_PXI_ADDR_NONE",
+            "VI_PXI_ADDR_MEM",
+            "VI_PXI_ADDR_IO",
+            "VI_PXI_ADDR_CFG",
+            "VI_TRIG_UNKNOWN",
+            "VI_PXI_LBUS_UNKNOWN",
+            "VI_PXI_LBUS_NONE",
+            "VI_PXI_LBUS_STAR_TRIG_BUS_0",
+            "VI_PXI_LBUS_STAR_TRIG_BUS_1",
+            "VI_PXI_LBUS_STAR_TRIG_BUS_2",
+            "VI_PXI_LBUS_STAR_TRIG_BUS_3",
+            "VI_PXI_LBUS_STAR_TRIG_BUS_4",
+            "VI_PXI_LBUS_STAR_TRIG_BUS_5",
+            "VI_PXI_LBUS_STAR_TRIG_BUS_6",
+            "VI_PXI_LBUS_STAR_TRIG_BUS_7",
+            "VI_PXI_LBUS_STAR_TRIG_BUS_8",
+            "VI_PXI_LBUS_STAR_TRIG_BUS_9",
+            "VI_PXI_STAR_TRIG_CONTROLLER",
+            "VI_ERROR_INV_SESSION",
+            "VI_INFINITE",
+            "VI_NORMAL",
+            "VI_FDC",
+            "VI_HS488",
+            "VI_ASRL488",
+            "VI_ASRL_IN_BUF",
+            "VI_ASRL_OUT_BUF",
+            "VI_ASRL_IN_BUF_DISCARD",
+            "VI_ASRL_OUT_BUF_DISCARD"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VI_SPEC_VERSION",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RSRC_CLASS",
+          "line": 234,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RSRC_NAME",
+          "line": 235,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RSRC_IMPL_VERSION",
+          "line": 236,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RSRC_LOCK_STATE",
+          "line": 237,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MAX_QUEUE_LENGTH",
+          "line": 238,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_USER_DATA_32",
+          "line": 239,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_FDC_CHNL",
+          "line": 240,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_FDC_MODE",
+          "line": 241,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_FDC_GEN_SIGNAL_EN",
+          "line": 242,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_FDC_USE_PAIR",
+          "line": 243,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_SEND_END_EN",
+          "line": 244,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TERMCHAR",
+          "line": 245,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TMO_VALUE",
+          "line": 246,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_READDR_EN",
+          "line": 247,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_IO_PROT",
+          "line": 248,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_DMA_ALLOW_EN",
+          "line": 249,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_BAUD",
+          "line": 250,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_DATA_BITS",
+          "line": 251,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_PARITY",
+          "line": 252,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_STOP_BITS",
+          "line": 253,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_FLOW_CNTRL",
+          "line": 254,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RD_BUF_OPER_MODE",
+          "line": 255,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RD_BUF_SIZE",
+          "line": 256,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WR_BUF_OPER_MODE",
+          "line": 257,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WR_BUF_SIZE",
+          "line": 258,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_SUPPRESS_END_EN",
+          "line": 259,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TERMCHAR_EN",
+          "line": 260,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_DEST_ACCESS_PRIV",
+          "line": 261,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_DEST_BYTE_ORDER",
+          "line": 262,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_SRC_ACCESS_PRIV",
+          "line": 263,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_SRC_BYTE_ORDER",
+          "line": 264,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_SRC_INCREMENT",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_DEST_INCREMENT",
+          "line": 266,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WIN_ACCESS_PRIV",
+          "line": 267,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WIN_BYTE_ORDER",
+          "line": 268,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_ATN_STATE",
+          "line": 269,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_ADDR_STATE",
+          "line": 270,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_CIC_STATE",
+          "line": 271,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_NDAC_STATE",
+          "line": 272,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_SRQ_STATE",
+          "line": 273,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_SYS_CNTRL_STATE",
+          "line": 274,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_HS488_CBL_LEN",
+          "line": 275,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_CMDR_LA",
+          "line": 276,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_VXI_DEV_CLASS",
+          "line": 277,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MAINFRAME_LA",
+          "line": 278,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MANF_NAME",
+          "line": 279,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MODEL_NAME",
+          "line": 280,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_VXI_VME_INTR_STATUS",
+          "line": 281,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_VXI_TRIG_STATUS",
+          "line": 282,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_VXI_VME_SYSFAIL_STATE",
+          "line": 283,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WIN_BASE_ADDR_32",
+          "line": 284,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WIN_SIZE_32",
+          "line": 285,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_AVAIL_NUM",
+          "line": 286,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MEM_BASE_32",
+          "line": 287,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_CTS_STATE",
+          "line": 288,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_DCD_STATE",
+          "line": 289,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_DSR_STATE",
+          "line": 290,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_DTR_STATE",
+          "line": 291,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_END_IN",
+          "line": 292,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_END_OUT",
+          "line": 293,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_REPLACE_CHAR",
+          "line": 294,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_RI_STATE",
+          "line": 295,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_RTS_STATE",
+          "line": 296,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_XON_CHAR",
+          "line": 297,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_ASRL_XOFF_CHAR",
+          "line": 298,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WIN_ACCESS",
+          "line": 299,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RM_SESSION",
+          "line": 300,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_VXI_LA",
+          "line": 301,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MANF_ID",
+          "line": 302,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MEM_SIZE_32",
+          "line": 303,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MEM_SPACE",
+          "line": 304,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MODEL_CODE",
+          "line": 305,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_SLOT",
+          "line": 306,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_INTF_INST_NAME",
+          "line": 307,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_IMMEDIATE_SERV",
+          "line": 308,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_INTF_PARENT_NUM",
+          "line": 309,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RSRC_SPEC_VERSION",
+          "line": 310,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_INTF_TYPE",
+          "line": 311,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_PRIMARY_ADDR",
+          "line": 312,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_SECONDARY_ADDR",
+          "line": 313,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RSRC_MANF_NAME",
+          "line": 314,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RSRC_MANF_ID",
+          "line": 315,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_INTF_NUM",
+          "line": 316,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TRIG_ID",
+          "line": 317,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_REN_STATE",
+          "line": 318,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_UNADDR_EN",
+          "line": 319,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_DEV_STATUS_BYTE",
+          "line": 320,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_FILE_APPEND_EN",
+          "line": 321,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_VXI_TRIG_SUPPORT",
+          "line": 322,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TCPIP_ADDR",
+          "line": 323,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TCPIP_HOSTNAME",
+          "line": 324,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TCPIP_PORT",
+          "line": 325,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TCPIP_DEVICE_NAME",
+          "line": 326,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TCPIP_NODELAY",
+          "line": 327,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TCPIP_KEEPALIVE",
+          "line": 328,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_4882_COMPLIANT",
+          "line": 329,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_USB_SERIAL_NUM",
+          "line": 330,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_USB_INTFC_NUM",
+          "line": 331,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_USB_PROTOCOL",
+          "line": 332,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_USB_MAX_INTR_SIZE",
+          "line": 333,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_DEV_NUM",
+          "line": 334,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_FUNC_NUM",
+          "line": 335,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_BUS_NUM",
+          "line": 336,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_CHASSIS",
+          "line": 337,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_SLOTPATH",
+          "line": 338,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_SLOT_LBUS_LEFT",
+          "line": 339,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_SLOT_LBUS_RIGHT",
+          "line": 340,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_TRIG_BUS",
+          "line": 341,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_STAR_TRIG_BUS",
+          "line": 342,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_STAR_TRIG_LINE",
+          "line": 343,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_SRC_TRIG_BUS",
+          "line": 344,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_DEST_TRIG_BUS",
+          "line": 345,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_TYPE_BAR0",
+          "line": 346,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_TYPE_BAR1",
+          "line": 347,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_TYPE_BAR2",
+          "line": 348,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_TYPE_BAR3",
+          "line": 349,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_TYPE_BAR4",
+          "line": 350,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_TYPE_BAR5",
+          "line": 351,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR0_32",
+          "line": 352,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR1_32",
+          "line": 353,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR2_32",
+          "line": 354,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR3_32",
+          "line": 355,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR4_32",
+          "line": 356,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR5_32",
+          "line": 357,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR0_64",
+          "line": 358,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR1_64",
+          "line": 359,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR2_64",
+          "line": 360,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR3_64",
+          "line": 361,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR4_64",
+          "line": 362,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR5_64",
+          "line": 363,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR0_32",
+          "line": 364,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR1_32",
+          "line": 365,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR2_32",
+          "line": 366,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR3_32",
+          "line": 367,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR4_32",
+          "line": 368,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR5_32",
+          "line": 369,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR0_64",
+          "line": 370,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR1_64",
+          "line": 371,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR2_64",
+          "line": 372,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR3_64",
+          "line": 373,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR4_64",
+          "line": 374,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR5_64",
+          "line": 375,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_IS_EXPRESS",
+          "line": 376,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_SLOT_LWIDTH",
+          "line": 377,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MAX_LWIDTH",
+          "line": 378,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_ACTUAL_LWIDTH",
+          "line": 379,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_DSTAR_BUS",
+          "line": 380,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_DSTAR_SET",
+          "line": 381,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_ALLOW_WRITE_COMBINE",
+          "line": 382,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TCPIP_HISLIP_OVERLAP_EN",
+          "line": 383,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TCPIP_HISLIP_VERSION",
+          "line": 384,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TCPIP_HISLIP_MAX_MESSAGE_KB",
+          "line": 385,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_TCPIP_IS_HISLIP",
+          "line": 386,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_JOB_ID",
+          "line": 387,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_EVENT_TYPE",
+          "line": 388,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_SIGP_STATUS_ID",
+          "line": 389,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RECV_TRIG_ID",
+          "line": 390,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_INTR_STATUS_ID",
+          "line": 391,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_STATUS",
+          "line": 392,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RET_COUNT_32",
+          "line": 393,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_BUFFER",
+          "line": 394,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RECV_INTR_LEVEL",
+          "line": 395,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_OPER_NAME",
+          "line": 396,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_GPIB_RECV_CIC_STATE",
+          "line": 397,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RECV_TCPIP_ADDR",
+          "line": 398,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_USB_RECV_INTR_SIZE",
+          "line": 399,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_USB_RECV_INTR_DATA",
+          "line": 400,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_RECV_INTR_SEQ",
+          "line": 401,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_RECV_INTR_DATA",
+          "line": 402,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WIN_BASE_ADDR_64",
+          "line": 404,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WIN_SIZE_64",
+          "line": 405,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MEM_BASE_64",
+          "line": 406,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MEM_SIZE_64",
+          "line": 407,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_USER_DATA_64",
+          "line": 410,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RET_COUNT_64",
+          "line": 411,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_USER_DATA",
+          "line": 416,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_RET_COUNT",
+          "line": 417,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WIN_BASE_ADDR",
+          "line": 418,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_WIN_SIZE",
+          "line": 419,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MEM_BASE",
+          "line": 420,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_MEM_SIZE",
+          "line": 421,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR0",
+          "line": 422,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR1",
+          "line": 423,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR2",
+          "line": 424,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR3",
+          "line": 425,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR4",
+          "line": 426,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_BASE_BAR5",
+          "line": 427,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR0",
+          "line": 428,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR1",
+          "line": 429,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR2",
+          "line": 430,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR3",
+          "line": 431,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR4",
+          "line": 432,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ATTR_PXI_MEM_SIZE_BAR5",
+          "line": 433,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_IO_COMPLETION",
+          "line": 437,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_TRIG",
+          "line": 438,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_SERVICE_REQ",
+          "line": 439,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_CLEAR",
+          "line": 440,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_EXCEPTION",
+          "line": 441,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_GPIB_CIC",
+          "line": 442,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_GPIB_TALK",
+          "line": 443,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_GPIB_LISTEN",
+          "line": 444,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_VXI_VME_SYSFAIL",
+          "line": 445,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_VXI_VME_SYSRESET",
+          "line": 446,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_VXI_SIGP",
+          "line": 447,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_VXI_VME_INTR",
+          "line": 448,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_PXI_INTR",
+          "line": 449,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_TCPIP_CONNECT",
+          "line": 450,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EVENT_USB_INTR",
+          "line": 451,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ALL_ENABLED_EVENTS",
+          "line": 452,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS",
+          "line": 456,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_EVENT_EN",
+          "line": 457,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_EVENT_DIS",
+          "line": 458,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_QUEUE_EMPTY",
+          "line": 459,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_TERM_CHAR",
+          "line": 460,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_MAX_CNT",
+          "line": 461,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_DEV_NPRESENT",
+          "line": 462,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_TRIG_MAPPED",
+          "line": 463,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_QUEUE_NEMPTY",
+          "line": 464,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_NCHAIN",
+          "line": 465,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_NESTED_SHARED",
+          "line": 466,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_NESTED_EXCLUSIVE",
+          "line": 467,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUCCESS_SYNC",
+          "line": 468,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WARN_QUEUE_OVERFLOW",
+          "line": 469,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WARN_CONFIG_NLOADED",
+          "line": 470,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WARN_NULL_OBJECT",
+          "line": 471,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WARN_NSUP_ATTR_STATE",
+          "line": 472,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WARN_UNKNOWN_STATUS",
+          "line": 473,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WARN_NSUP_BUF",
+          "line": 474,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WARN_EXT_FUNC_NIMPL",
+          "line": 475,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_SYSTEM_ERROR",
+          "line": 476,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_OBJECT",
+          "line": 477,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_RSRC_LOCKED",
+          "line": 478,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_EXPR",
+          "line": 479,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_RSRC_NFOUND",
+          "line": 480,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_RSRC_NAME",
+          "line": 481,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_ACC_MODE",
+          "line": 482,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_TMO",
+          "line": 483,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_CLOSING_FAILED",
+          "line": 484,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_DEGREE",
+          "line": 485,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_JOB_ID",
+          "line": 486,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_ATTR",
+          "line": 487,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_ATTR_STATE",
+          "line": 488,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_ATTR_READONLY",
+          "line": 489,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_LOCK_TYPE",
+          "line": 490,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_ACCESS_KEY",
+          "line": 491,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_EVENT",
+          "line": 492,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_MECH",
+          "line": 493,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_HNDLR_NINSTALLED",
+          "line": 494,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_HNDLR_REF",
+          "line": 495,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_CONTEXT",
+          "line": 496,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_QUEUE_OVERFLOW",
+          "line": 497,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NENABLED",
+          "line": 498,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_ABORT",
+          "line": 499,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_RAW_WR_PROT_VIOL",
+          "line": 500,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_RAW_RD_PROT_VIOL",
+          "line": 501,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_OUTP_PROT_VIOL",
+          "line": 502,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INP_PROT_VIOL",
+          "line": 503,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_BERR",
+          "line": 504,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_IN_PROGRESS",
+          "line": 505,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_SETUP",
+          "line": 506,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_QUEUE_ERROR",
+          "line": 507,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_ALLOC",
+          "line": 508,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_MASK",
+          "line": 509,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_IO",
+          "line": 510,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_FMT",
+          "line": 511,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_FMT",
+          "line": 512,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_LINE_IN_USE",
+          "line": 513,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_MODE",
+          "line": 514,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_SRQ_NOCCURRED",
+          "line": 515,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_SPACE",
+          "line": 516,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_OFFSET",
+          "line": 517,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_WIDTH",
+          "line": 518,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_OFFSET",
+          "line": 519,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_VAR_WIDTH",
+          "line": 520,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_WINDOW_NMAPPED",
+          "line": 521,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_RESP_PENDING",
+          "line": 522,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NLISTENERS",
+          "line": 523,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NCIC",
+          "line": 524,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSYS_CNTLR",
+          "line": 525,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_OPER",
+          "line": 526,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INTR_PENDING",
+          "line": 527,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_ASRL_PARITY",
+          "line": 528,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_ASRL_FRAMING",
+          "line": 529,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_ASRL_OVERRUN",
+          "line": 530,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_TRIG_NMAPPED",
+          "line": 531,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_ALIGN_OFFSET",
+          "line": 532,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_USER_BUF",
+          "line": 533,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_RSRC_BUSY",
+          "line": 534,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_WIDTH",
+          "line": 535,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_PARAMETER",
+          "line": 536,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_PROT",
+          "line": 537,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_SIZE",
+          "line": 538,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_WINDOW_MAPPED",
+          "line": 539,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NIMPL_OPER",
+          "line": 540,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_LENGTH",
+          "line": 541,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_MODE",
+          "line": 542,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_SESN_NLOCKED",
+          "line": 543,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_MEM_NSHARED",
+          "line": 544,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_LIBRARY_NFOUND",
+          "line": 545,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_INTR",
+          "line": 546,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_LINE",
+          "line": 547,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_FILE_ACCESS",
+          "line": 548,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_FILE_IO",
+          "line": 549,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_LINE",
+          "line": 550,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NSUP_MECH",
+          "line": 551,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INTF_NUM_NCONFIG",
+          "line": 552,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_CONN_LOST",
+          "line": 553,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_MACHINE_NAVAIL",
+          "line": 554,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_NPERMISSION",
+          "line": 555,
+          "isDefault": false
+        },
+        {
+          "name": "VI_FIND_BUFLEN",
+          "line": 559,
+          "isDefault": false
+        },
+        {
+          "name": "VI_NULL",
+          "line": 561,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRUE",
+          "line": 562,
+          "isDefault": false
+        },
+        {
+          "name": "VI_FALSE",
+          "line": 563,
+          "isDefault": false
+        },
+        {
+          "name": "VI_INTF_GPIB",
+          "line": 565,
+          "isDefault": false
+        },
+        {
+          "name": "VI_INTF_VXI",
+          "line": 566,
+          "isDefault": false
+        },
+        {
+          "name": "VI_INTF_GPIB_VXI",
+          "line": 567,
+          "isDefault": false
+        },
+        {
+          "name": "VI_INTF_ASRL",
+          "line": 568,
+          "isDefault": false
+        },
+        {
+          "name": "VI_INTF_PXI",
+          "line": 569,
+          "isDefault": false
+        },
+        {
+          "name": "VI_INTF_TCPIP",
+          "line": 570,
+          "isDefault": false
+        },
+        {
+          "name": "VI_INTF_USB",
+          "line": 571,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PROT_NORMAL",
+          "line": 573,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PROT_FDC",
+          "line": 574,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PROT_HS488",
+          "line": 575,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PROT_4882_STRS",
+          "line": 576,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PROT_USBTMC_VENDOR",
+          "line": 577,
+          "isDefault": false
+        },
+        {
+          "name": "VI_FDC_NORMAL",
+          "line": 579,
+          "isDefault": false
+        },
+        {
+          "name": "VI_FDC_STREAM",
+          "line": 580,
+          "isDefault": false
+        },
+        {
+          "name": "VI_LOCAL_SPACE",
+          "line": 582,
+          "isDefault": false
+        },
+        {
+          "name": "VI_A16_SPACE",
+          "line": 583,
+          "isDefault": false
+        },
+        {
+          "name": "VI_A24_SPACE",
+          "line": 584,
+          "isDefault": false
+        },
+        {
+          "name": "VI_A32_SPACE",
+          "line": 585,
+          "isDefault": false
+        },
+        {
+          "name": "VI_A64_SPACE",
+          "line": 586,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_ALLOC_SPACE",
+          "line": 587,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_CFG_SPACE",
+          "line": 588,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_BAR0_SPACE",
+          "line": 589,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_BAR1_SPACE",
+          "line": 590,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_BAR2_SPACE",
+          "line": 591,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_BAR3_SPACE",
+          "line": 592,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_BAR4_SPACE",
+          "line": 593,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_BAR5_SPACE",
+          "line": 594,
+          "isDefault": false
+        },
+        {
+          "name": "VI_OPAQUE_SPACE",
+          "line": 595,
+          "isDefault": false
+        },
+        {
+          "name": "VI_UNKNOWN_LA",
+          "line": 597,
+          "isDefault": false
+        },
+        {
+          "name": "VI_UNKNOWN_SLOT",
+          "line": 598,
+          "isDefault": false
+        },
+        {
+          "name": "VI_UNKNOWN_LEVEL",
+          "line": 599,
+          "isDefault": false
+        },
+        {
+          "name": "VI_UNKNOWN_CHASSIS",
+          "line": 600,
+          "isDefault": false
+        },
+        {
+          "name": "VI_QUEUE",
+          "line": 602,
+          "isDefault": false
+        },
+        {
+          "name": "VI_HNDLR",
+          "line": 603,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SUSPEND_HNDLR",
+          "line": 604,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ALL_MECH",
+          "line": 605,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ANY_HNDLR",
+          "line": 606,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_ALL",
+          "line": 608,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_SW",
+          "line": 609,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL0",
+          "line": 610,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL1",
+          "line": 611,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL2",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL3",
+          "line": 613,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL4",
+          "line": 614,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL5",
+          "line": 615,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL6",
+          "line": 616,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL7",
+          "line": 617,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL8",
+          "line": 618,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL9",
+          "line": 619,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL10",
+          "line": 620,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_TTL11",
+          "line": 621,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_ECL0",
+          "line": 622,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_ECL1",
+          "line": 623,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_PANEL_IN",
+          "line": 624,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_PANEL_OUT",
+          "line": 625,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_PROT_DEFAULT",
+          "line": 627,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_PROT_ON",
+          "line": 628,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_PROT_OFF",
+          "line": 629,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_PROT_SYNC",
+          "line": 630,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_PROT_RESERVE",
+          "line": 631,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_PROT_UNRESERVE",
+          "line": 632,
+          "isDefault": false
+        },
+        {
+          "name": "VI_READ_BUF",
+          "line": 634,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WRITE_BUF",
+          "line": 635,
+          "isDefault": false
+        },
+        {
+          "name": "VI_READ_BUF_DISCARD",
+          "line": 636,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WRITE_BUF_DISCARD",
+          "line": 637,
+          "isDefault": false
+        },
+        {
+          "name": "VI_IO_IN_BUF",
+          "line": 638,
+          "isDefault": false
+        },
+        {
+          "name": "VI_IO_OUT_BUF",
+          "line": 639,
+          "isDefault": false
+        },
+        {
+          "name": "VI_IO_IN_BUF_DISCARD",
+          "line": 640,
+          "isDefault": false
+        },
+        {
+          "name": "VI_IO_OUT_BUF_DISCARD",
+          "line": 641,
+          "isDefault": false
+        },
+        {
+          "name": "VI_FLUSH_ON_ACCESS",
+          "line": 643,
+          "isDefault": false
+        },
+        {
+          "name": "VI_FLUSH_WHEN_FULL",
+          "line": 644,
+          "isDefault": false
+        },
+        {
+          "name": "VI_FLUSH_DISABLE",
+          "line": 645,
+          "isDefault": false
+        },
+        {
+          "name": "VI_NMAPPED",
+          "line": 647,
+          "isDefault": false
+        },
+        {
+          "name": "VI_USE_OPERS",
+          "line": 648,
+          "isDefault": false
+        },
+        {
+          "name": "VI_DEREF_ADDR",
+          "line": 649,
+          "isDefault": false
+        },
+        {
+          "name": "VI_DEREF_ADDR_BYTE_SWAP",
+          "line": 650,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TMO_IMMEDIATE",
+          "line": 652,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TMO_INFINITE",
+          "line": 653,
+          "isDefault": false
+        },
+        {
+          "name": "VI_NO_LOCK",
+          "line": 655,
+          "isDefault": false
+        },
+        {
+          "name": "VI_EXCLUSIVE_LOCK",
+          "line": 656,
+          "isDefault": false
+        },
+        {
+          "name": "VI_SHARED_LOCK",
+          "line": 657,
+          "isDefault": false
+        },
+        {
+          "name": "VI_LOAD_CONFIG",
+          "line": 658,
+          "isDefault": false
+        },
+        {
+          "name": "VI_NO_SEC_ADDR",
+          "line": 660,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_PAR_NONE",
+          "line": 662,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_PAR_ODD",
+          "line": 663,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_PAR_EVEN",
+          "line": 664,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_PAR_MARK",
+          "line": 665,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_PAR_SPACE",
+          "line": 666,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_STOP_ONE",
+          "line": 668,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_STOP_ONE5",
+          "line": 669,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_STOP_TWO",
+          "line": 670,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_FLOW_NONE",
+          "line": 672,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_FLOW_XON_XOFF",
+          "line": 673,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_FLOW_RTS_CTS",
+          "line": 674,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_FLOW_DTR_DSR",
+          "line": 675,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_END_NONE",
+          "line": 677,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_END_LAST_BIT",
+          "line": 678,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_END_TERMCHAR",
+          "line": 679,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_END_BREAK",
+          "line": 680,
+          "isDefault": false
+        },
+        {
+          "name": "VI_STATE_ASSERTED",
+          "line": 682,
+          "isDefault": false
+        },
+        {
+          "name": "VI_STATE_UNASSERTED",
+          "line": 683,
+          "isDefault": false
+        },
+        {
+          "name": "VI_STATE_UNKNOWN",
+          "line": 684,
+          "isDefault": false
+        },
+        {
+          "name": "VI_BIG_ENDIAN",
+          "line": 686,
+          "isDefault": false
+        },
+        {
+          "name": "VI_LITTLE_ENDIAN",
+          "line": 687,
+          "isDefault": false
+        },
+        {
+          "name": "VI_DATA_PRIV",
+          "line": 689,
+          "isDefault": false
+        },
+        {
+          "name": "VI_DATA_NPRIV",
+          "line": 690,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PROG_PRIV",
+          "line": 691,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PROG_NPRIV",
+          "line": 692,
+          "isDefault": false
+        },
+        {
+          "name": "VI_BLCK_PRIV",
+          "line": 693,
+          "isDefault": false
+        },
+        {
+          "name": "VI_BLCK_NPRIV",
+          "line": 694,
+          "isDefault": false
+        },
+        {
+          "name": "VI_D64_PRIV",
+          "line": 695,
+          "isDefault": false
+        },
+        {
+          "name": "VI_D64_NPRIV",
+          "line": 696,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WIDTH_8",
+          "line": 698,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WIDTH_16",
+          "line": 699,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WIDTH_32",
+          "line": 700,
+          "isDefault": false
+        },
+        {
+          "name": "VI_WIDTH_64",
+          "line": 701,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_REN_DEASSERT",
+          "line": 703,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_REN_ASSERT",
+          "line": 704,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_REN_DEASSERT_GTL",
+          "line": 705,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_REN_ASSERT_ADDRESS",
+          "line": 706,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_REN_ASSERT_LLO",
+          "line": 707,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_REN_ASSERT_ADDRESS_LLO",
+          "line": 708,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_REN_ADDRESS_GTL",
+          "line": 709,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_ATN_DEASSERT",
+          "line": 711,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_ATN_ASSERT",
+          "line": 712,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_ATN_DEASSERT_HANDSHAKE",
+          "line": 713,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_ATN_ASSERT_IMMEDIATE",
+          "line": 714,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_HS488_DISABLED",
+          "line": 716,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_HS488_NIMPL",
+          "line": 717,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_UNADDRESSED",
+          "line": 719,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_TALKER",
+          "line": 720,
+          "isDefault": false
+        },
+        {
+          "name": "VI_GPIB_LISTENER",
+          "line": 721,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_CMD16",
+          "line": 723,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_CMD16_RESP16",
+          "line": 724,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_RESP16",
+          "line": 725,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_CMD32",
+          "line": 726,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_CMD32_RESP16",
+          "line": 727,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_CMD32_RESP32",
+          "line": 728,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_RESP32",
+          "line": 729,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASSERT_SIGNAL",
+          "line": 731,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASSERT_USE_ASSIGNED",
+          "line": 732,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASSERT_IRQ1",
+          "line": 733,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASSERT_IRQ2",
+          "line": 734,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASSERT_IRQ3",
+          "line": 735,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASSERT_IRQ4",
+          "line": 736,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASSERT_IRQ5",
+          "line": 737,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASSERT_IRQ6",
+          "line": 738,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASSERT_IRQ7",
+          "line": 739,
+          "isDefault": false
+        },
+        {
+          "name": "VI_UTIL_ASSERT_SYSRESET",
+          "line": 741,
+          "isDefault": false
+        },
+        {
+          "name": "VI_UTIL_ASSERT_SYSFAIL",
+          "line": 742,
+          "isDefault": false
+        },
+        {
+          "name": "VI_UTIL_DEASSERT_SYSFAIL",
+          "line": 743,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_CLASS_MEMORY",
+          "line": 745,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_CLASS_EXTENDED",
+          "line": 746,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_CLASS_MESSAGE",
+          "line": 747,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_CLASS_REGISTER",
+          "line": 748,
+          "isDefault": false
+        },
+        {
+          "name": "VI_VXI_CLASS_OTHER",
+          "line": 749,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_ADDR_NONE",
+          "line": 750,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_ADDR_MEM",
+          "line": 751,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_ADDR_IO",
+          "line": 752,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_ADDR_CFG",
+          "line": 753,
+          "isDefault": false
+        },
+        {
+          "name": "VI_TRIG_UNKNOWN",
+          "line": 755,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_UNKNOWN",
+          "line": 756,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_NONE",
+          "line": 757,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_STAR_TRIG_BUS_0",
+          "line": 758,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_STAR_TRIG_BUS_1",
+          "line": 759,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_STAR_TRIG_BUS_2",
+          "line": 760,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_STAR_TRIG_BUS_3",
+          "line": 761,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_STAR_TRIG_BUS_4",
+          "line": 762,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_STAR_TRIG_BUS_5",
+          "line": 763,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_STAR_TRIG_BUS_6",
+          "line": 764,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_STAR_TRIG_BUS_7",
+          "line": 765,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_STAR_TRIG_BUS_8",
+          "line": 766,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_LBUS_STAR_TRIG_BUS_9",
+          "line": 767,
+          "isDefault": false
+        },
+        {
+          "name": "VI_PXI_STAR_TRIG_CONTROLLER",
+          "line": 768,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ERROR_INV_SESSION",
+          "line": 773,
+          "isDefault": false
+        },
+        {
+          "name": "VI_INFINITE",
+          "line": 774,
+          "isDefault": false
+        },
+        {
+          "name": "VI_NORMAL",
+          "line": 775,
+          "isDefault": false
+        },
+        {
+          "name": "VI_FDC",
+          "line": 776,
+          "isDefault": false
+        },
+        {
+          "name": "VI_HS488",
+          "line": 777,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL488",
+          "line": 778,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_IN_BUF",
+          "line": 779,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_OUT_BUF",
+          "line": 780,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_IN_BUF_DISCARD",
+          "line": 781,
+          "isDefault": false
+        },
+        {
+          "name": "VI_ASRL_OUT_BUF_DISCARD",
+          "line": 782,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Visa",
+          "callee": "TypeData.GetDerivedTypes<IVisaFunctionLoader>()\n                .Select(t => t.CreateInstanceSafe())\n                .OfType<IVisaFunctionLoader>()\n                .Where(loader =>\n                        {\n                            try\n                            {\n                                return loader.Functions.HasValue;\n                            }\n                            catch\n                            {\n                                return false;\n                            }\n                        })\n                .Select",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Visa",
+          "callee": "TypeData.GetDerivedTypes<IVisaFunctionLoader>()\n                .Select(t => t.CreateInstanceSafe())\n                .OfType<IVisaFunctionLoader>()\n                .Where",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Visa",
+          "callee": "TypeData.GetDerivedTypes<IVisaFunctionLoader>()\n                .Select(t => t.CreateInstanceSafe())\n                .OfType<IVisaFunctionLoader>",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Visa",
+          "callee": "TypeData.GetDerivedTypes<IVisaFunctionLoader>()\n                .Select",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Visa",
+          "callee": "TypeData.GetDerivedTypes<IVisaFunctionLoader>",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Visa",
+          "callee": "t.CreateInstanceSafe",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Visa",
+          "callee": "TypeData.GetDerivedTypes<IVisaProvider>()\n                .Select(type => type.CreateInstanceSafe())\n                .OfType<IVisaProvider>()\n                .Select",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Visa",
+          "callee": "TypeData.GetDerivedTypes<IVisaProvider>()\n                .Select(type => type.CreateInstanceSafe())\n                .OfType<IVisaProvider>",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Visa",
+          "callee": "TypeData.GetDerivedTypes<IVisaProvider>()\n                .Select",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Visa",
+          "callee": "TypeData.GetDerivedTypes<IVisaProvider>",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Visa",
+          "callee": "type.CreateInstanceSafe",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Visa",
+          "callee": "(visaProviders).ToArray",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Visa",
+          "callee": "loaders.OrderBy(t => t.order).Select",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Visa",
+          "callee": "loaders.OrderBy",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Visa",
+          "callee": "staticLog.Debug",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Visa",
+          "callee": "staticLog.Debug",
+          "lineNumber": 114
+        },
+        {
+          "caller": "Visa",
+          "callee": "visa.viInstallHandler",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Visa",
+          "callee": "Delegate.CreateDelegate",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Visa",
+          "callee": "visa.viInstallHandler",
+          "lineNumber": 138
+        },
+        {
+          "caller": "Visa",
+          "callee": "Delegate.CreateDelegate",
+          "lineNumber": 138
+        },
+        {
+          "caller": "Visa",
+          "callee": "staticLog.Error",
+          "lineNumber": 142
+        },
+        {
+          "caller": "viOpenDefaultRM",
+          "callee": "ViOpenDefaultRmRef?.Invoke",
+          "lineNumber": 148
+        },
+        {
+          "caller": "viOpenDefaultRM",
+          "callee": "new NotSupportedException",
+          "lineNumber": 149
+        },
+        {
+          "caller": "viFindRsrc",
+          "callee": "ViFindRsrcRef?.Invoke",
+          "lineNumber": 152
+        },
+        {
+          "caller": "viFindRsrc",
+          "callee": "new NotSupportedException",
+          "lineNumber": 153
+        },
+        {
+          "caller": "viFindNext",
+          "callee": "ViFindNextRef?.Invoke",
+          "lineNumber": 155
+        },
+        {
+          "caller": "viFindNext",
+          "callee": "new NotSupportedException",
+          "lineNumber": 156
+        },
+        {
+          "caller": "viParseRsrc",
+          "callee": "ViParseRsrcRef?.Invoke",
+          "lineNumber": 159
+        },
+        {
+          "caller": "viParseRsrc",
+          "callee": "new NotSupportedException",
+          "lineNumber": 160
+        },
+        {
+          "caller": "viParseRsrcEx",
+          "callee": "ViParseRsrcExRef?.Invoke",
+          "lineNumber": 162
+        },
+        {
+          "caller": "viParseRsrcEx",
+          "callee": "new NotSupportedException",
+          "lineNumber": 163
+        },
+        {
+          "caller": "viOpen",
+          "callee": "ViOpenRef?.Invoke",
+          "lineNumber": 166
+        },
+        {
+          "caller": "viOpen",
+          "callee": "new NotSupportedException",
+          "lineNumber": 167
+        },
+        {
+          "caller": "viClose",
+          "callee": "ViCloseRef?.Invoke",
+          "lineNumber": 169
+        },
+        {
+          "caller": "viClose",
+          "callee": "new NotSupportedException",
+          "lineNumber": 170
+        },
+        {
+          "caller": "viGetAttribute",
+          "callee": "ViGetAttributeBRef?.Invoke",
+          "lineNumber": 173
+        },
+        {
+          "caller": "viGetAttribute",
+          "callee": "new NotSupportedException",
+          "lineNumber": 174
+        },
+        {
+          "caller": "viGetAttribute",
+          "callee": "ViGetAttributeSbRef?.Invoke",
+          "lineNumber": 176
+        },
+        {
+          "caller": "viGetAttribute",
+          "callee": "new NotSupportedException",
+          "lineNumber": 177
+        },
+        {
+          "caller": "viGetAttribute",
+          "callee": "ViGetAttributeIRef?.Invoke",
+          "lineNumber": 179
+        },
+        {
+          "caller": "viGetAttribute",
+          "callee": "new NotSupportedException",
+          "lineNumber": 180
+        },
+        {
+          "caller": "viSetAttribute",
+          "callee": "ViSetAttributeBRef?.Invoke",
+          "lineNumber": 182
+        },
+        {
+          "caller": "viSetAttribute",
+          "callee": "new NotSupportedException",
+          "lineNumber": 183
+        },
+        {
+          "caller": "viSetAttribute",
+          "callee": "ViSetAttributeIRef?.Invoke",
+          "lineNumber": 185
+        },
+        {
+          "caller": "viSetAttribute",
+          "callee": "new NotSupportedException",
+          "lineNumber": 186
+        },
+        {
+          "caller": "viStatusDesc",
+          "callee": "ViStatusDescRef?.Invoke",
+          "lineNumber": 189
+        },
+        {
+          "caller": "viStatusDesc",
+          "callee": "new NotSupportedException",
+          "lineNumber": 190
+        },
+        {
+          "caller": "viEnableEvent",
+          "callee": "ViEnableEventRef?.Invoke",
+          "lineNumber": 193
+        },
+        {
+          "caller": "viEnableEvent",
+          "callee": "new NotSupportedException",
+          "lineNumber": 194
+        },
+        {
+          "caller": "viDisableEvent",
+          "callee": "ViDisableEventRef?.Invoke",
+          "lineNumber": 196
+        },
+        {
+          "caller": "viDisableEvent",
+          "callee": "new NotSupportedException",
+          "lineNumber": 197
+        },
+        {
+          "caller": "viInstallHandler",
+          "callee": "ViInstallHandlerRef?.Invoke",
+          "lineNumber": 199
+        },
+        {
+          "caller": "viInstallHandler",
+          "callee": "new NotSupportedException",
+          "lineNumber": 200
+        },
+        {
+          "caller": "viUninstallHandler",
+          "callee": "ViUninstallHandlerRef?.Invoke",
+          "lineNumber": 202
+        },
+        {
+          "caller": "viUninstallHandler",
+          "callee": "new NotSupportedException",
+          "lineNumber": 203
+        },
+        {
+          "caller": "viWaitOnEvent",
+          "callee": "ViWaitOnEventRef?.Invoke",
+          "lineNumber": 206
+        },
+        {
+          "caller": "viWaitOnEvent",
+          "callee": "new NotSupportedException",
+          "lineNumber": 207
+        },
+        {
+          "caller": "viRead",
+          "callee": "ViReadRef?.Invoke",
+          "lineNumber": 210
+        },
+        {
+          "caller": "viRead",
+          "callee": "new NotSupportedException",
+          "lineNumber": 211
+        },
+        {
+          "caller": "viWrite",
+          "callee": "ViWriteRef?.Invoke",
+          "lineNumber": 213
+        },
+        {
+          "caller": "viWrite",
+          "callee": "new NotSupportedException",
+          "lineNumber": 214
+        },
+        {
+          "caller": "viReadSTB",
+          "callee": "ViReadStbRef?.Invoke",
+          "lineNumber": 217
+        },
+        {
+          "caller": "viReadSTB",
+          "callee": "new NotSupportedException",
+          "lineNumber": 218
+        },
+        {
+          "caller": "viClear",
+          "callee": "ViClearRef?.Invoke",
+          "lineNumber": 221
+        },
+        {
+          "caller": "viClear",
+          "callee": "new NotSupportedException",
+          "lineNumber": 222
+        },
+        {
+          "caller": "viLock",
+          "callee": "ViLockRef?.Invoke",
+          "lineNumber": 225
+        },
+        {
+          "caller": "viLock",
+          "callee": "new NotSupportedException",
+          "lineNumber": 226
+        },
+        {
+          "caller": "viUnlock",
+          "callee": "ViUnlockRef?.Invoke",
+          "lineNumber": 228
+        },
+        {
+          "caller": "viUnlock",
+          "callee": "new NotSupportedException",
+          "lineNumber": 229
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 498,
+        "functionCount": 25,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/VisaDeviceDiscovery.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 179,
+      "nonEmptyLines": 153,
+      "functions": [
+        {
+          "name": "IsVisaDiscoveryDisabled",
+          "startLine": 18,
+          "endLine": 25,
+          "params": []
+        },
+        {
+          "name": "GetDeviceAddresses",
+          "startLine": 29,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "getAliases",
+          "startLine": 62,
+          "endLine": 92,
+          "params": [
+            "rm",
+            "address"
+          ]
+        },
+        {
+          "name": "updateDeviceAddresses",
+          "startLine": 97,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "DetectDeviceAddresses",
+          "startLine": 120,
+          "endLine": 141,
+          "params": [
+            "AddressType"
+          ]
+        },
+        {
+          "name": "CanDetect",
+          "startLine": 146,
+          "endLine": 151,
+          "params": [
+            "DeviceAddress"
+          ]
+        },
+        {
+          "name": "GetResourceManager",
+          "startLine": 158,
+          "endLine": 171,
+          "params": []
+        },
+        {
+          "name": "RaiseError2",
+          "startLine": 173,
+          "endLine": 177,
+          "params": [
+            "error"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "VisaDeviceDiscovery",
+          "startLine": 15,
+          "endLine": 178,
+          "methods": [
+            "IsVisaDiscoveryDisabled",
+            "GetDeviceAddresses",
+            "getAliases",
+            "updateDeviceAddresses",
+            "DetectDeviceAddresses",
+            "CanDetect",
+            "GetResourceManager",
+            "RaiseError2"
+          ],
+          "properties": [
+            "isDisabled",
+            "getAliasesBroken",
+            "detectAddressQueue",
+            "deviceAddresses",
+            "log",
+            "visa_resource",
+            "visa_tried_load"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DetectDeviceAddresses",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "CanDetect",
+          "line": 146,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "IsVisaDiscoveryDisabled",
+          "callee": "Environment.GetEnvironmentVariable",
+          "lineNumber": 20
+        },
+        {
+          "caller": "IsVisaDiscoveryDisabled",
+          "callee": "string.Equals",
+          "lineNumber": 24
+        },
+        {
+          "caller": "IsVisaDiscoveryDisabled",
+          "callee": "string.Equals",
+          "lineNumber": 24
+        },
+        {
+          "caller": "GetDeviceAddresses",
+          "callee": "GetResourceManager",
+          "lineNumber": 31
+        },
+        {
+          "caller": "GetDeviceAddresses",
+          "callee": "new StringBuilder",
+          "lineNumber": 34
+        },
+        {
+          "caller": "GetDeviceAddresses",
+          "callee": "Visa.viFindRsrc",
+          "lineNumber": 36
+        },
+        {
+          "caller": "GetDeviceAddresses",
+          "callee": "sb.ToString",
+          "lineNumber": 41
+        },
+        {
+          "caller": "GetDeviceAddresses",
+          "callee": "Visa.viFindNext",
+          "lineNumber": 44
+        },
+        {
+          "caller": "GetDeviceAddresses",
+          "callee": "sb.ToString",
+          "lineNumber": 46
+        },
+        {
+          "caller": "GetDeviceAddresses",
+          "callee": "Array.Resize",
+          "lineNumber": 50
+        },
+        {
+          "caller": "GetDeviceAddresses",
+          "callee": "Visa.viClose",
+          "lineNumber": 52
+        },
+        {
+          "caller": "getAliases",
+          "callee": "Array.Empty<string>",
+          "lineNumber": 64
+        },
+        {
+          "caller": "getAliases",
+          "callee": "new Semaphore",
+          "lineNumber": 65
+        },
+        {
+          "caller": "getAliases",
+          "callee": "Array.Empty<string>",
+          "lineNumber": 67
+        },
+        {
+          "caller": "getAliases",
+          "callee": "TapThread.Start",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getAliases",
+          "callee": "new StringBuilder",
+          "lineNumber": 71
+        },
+        {
+          "caller": "getAliases",
+          "callee": "Visa.viParseRsrcEx",
+          "lineNumber": 74
+        },
+        {
+          "caller": "getAliases",
+          "callee": "aliases.ToString",
+          "lineNumber": 78
+        },
+        {
+          "caller": "getAliases",
+          "callee": "semaphore.Release",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getAliases",
+          "callee": "semaphore.WaitOne",
+          "lineNumber": 84
+        },
+        {
+          "caller": "getAliases",
+          "callee": "log.Warning",
+          "lineNumber": 87
+        },
+        {
+          "caller": "updateDeviceAddresses",
+          "callee": "GetDeviceAddresses",
+          "lineNumber": 101
+        },
+        {
+          "caller": "updateDeviceAddresses",
+          "callee": "GetResourceManager",
+          "lineNumber": 104
+        },
+        {
+          "caller": "updateDeviceAddresses",
+          "callee": "baseAddresses.SelectMany(addr => getAliases(rm, addr)).Concat(baseAddresses).ToArray",
+          "lineNumber": 111
+        },
+        {
+          "caller": "updateDeviceAddresses",
+          "callee": "baseAddresses.SelectMany(addr => getAliases(rm, addr)).Concat",
+          "lineNumber": 111
+        },
+        {
+          "caller": "updateDeviceAddresses",
+          "callee": "baseAddresses.SelectMany",
+          "lineNumber": 111
+        },
+        {
+          "caller": "updateDeviceAddresses",
+          "callee": "getAliases",
+          "lineNumber": 111
+        },
+        {
+          "caller": "updateDeviceAddresses",
+          "callee": "Array.Empty<string>",
+          "lineNumber": 116
+        },
+        {
+          "caller": "DetectDeviceAddresses",
+          "callee": "Array.Empty<string>",
+          "lineNumber": 122
+        },
+        {
+          "caller": "DetectDeviceAddresses",
+          "callee": "new ManualResetEvent",
+          "lineNumber": 123
+        },
+        {
+          "caller": "DetectDeviceAddresses",
+          "callee": "detectAddressQueue.EnqueueWork",
+          "lineNumber": 126
+        },
+        {
+          "caller": "DetectDeviceAddresses",
+          "callee": "updateDeviceAddresses",
+          "lineNumber": 129
+        },
+        {
+          "caller": "DetectDeviceAddresses",
+          "callee": "wait.Set",
+          "lineNumber": 131
+        },
+        {
+          "caller": "DetectDeviceAddresses",
+          "callee": "wait.WaitOne",
+          "lineNumber": 133
+        },
+        {
+          "caller": "DetectDeviceAddresses",
+          "callee": "Utils.ErrorOnce",
+          "lineNumber": 137
+        },
+        {
+          "caller": "DetectDeviceAddresses",
+          "callee": "Array.Empty<string>",
+          "lineNumber": 139
+        },
+        {
+          "caller": "GetResourceManager",
+          "callee": "RaiseError2",
+          "lineNumber": 164
+        },
+        {
+          "caller": "GetResourceManager",
+          "callee": "Visa.viOpenDefaultRM",
+          "lineNumber": 164
+        },
+        {
+          "caller": "RaiseError2",
+          "callee": "new Exception",
+          "lineNumber": 176
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/VisaFunctions.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 344,
+      "nonEmptyLines": 318,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "Engine/VisaLibraryLoader.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 142,
+      "nonEmptyLines": 123,
+      "functions": [
+        {
+          "name": "LoadLibrary",
+          "startLine": 21,
+          "endLine": 22,
+          "params": [
+            "filename"
+          ]
+        },
+        {
+          "name": "GetProcAddress",
+          "startLine": 24,
+          "endLine": 25,
+          "params": [
+            "hModule",
+            "procname"
+          ]
+        },
+        {
+          "name": "VisaLibraryLoader",
+          "startLine": 34,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "viRead",
+          "startLine": 39,
+          "endLine": 48,
+          "params": [
+            "vi",
+            "buffer",
+            "count",
+            "retCount"
+          ]
+        },
+        {
+          "name": "viWrite",
+          "startLine": 49,
+          "endLine": 58,
+          "params": [
+            "vi",
+            "buffer",
+            "count",
+            "retCount"
+          ]
+        },
+        {
+          "name": "Load",
+          "startLine": 66,
+          "endLine": 140,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "VisaLibraryLoader",
+          "startLine": 15,
+          "endLine": 141,
+          "methods": [
+            "LoadLibrary",
+            "GetProcAddress",
+            "VisaLibraryLoader",
+            "viRead",
+            "viWrite",
+            "Load"
+          ],
+          "properties": [
+            "OPENTAP_LIBVISA_LOCATION_ENV",
+            "Order",
+            "staticLog",
+            "viReadRef",
+            "viWriteRef",
+            "Functions",
+            "_linuxPaths",
+            "_macOsPaths"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VisaLibraryLoader",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "viRead",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "viWrite",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "Functions",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "Load",
+          "line": 66,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "VisaLibraryLoader",
+          "callee": "Load",
+          "lineNumber": 36
+        },
+        {
+          "caller": "viRead",
+          "callee": "new ArgumentException",
+          "lineNumber": 42
+        },
+        {
+          "caller": "viRead",
+          "callee": "viReadRef",
+          "lineNumber": 46
+        },
+        {
+          "caller": "viWrite",
+          "callee": "new ArgumentException",
+          "lineNumber": 52
+        },
+        {
+          "caller": "viWrite",
+          "callee": "viWriteRef",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Load",
+          "callee": "Environment.GetEnvironmentVariable",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Load",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Load",
+          "callee": "LoadLibrary",
+          "lineNumber": 77
+        },
+        {
+          "caller": "Load",
+          "callee": "LoadLibrary",
+          "lineNumber": 80
+        },
+        {
+          "caller": "Load",
+          "callee": "GetProcAddress",
+          "lineNumber": 81
+        },
+        {
+          "caller": "Load",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 87
+        },
+        {
+          "caller": "Load",
+          "callee": "LibDl.Load",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Load",
+          "callee": "paths.Select(LibDl.Load).FirstOrDefault",
+          "lineNumber": 90
+        },
+        {
+          "caller": "Load",
+          "callee": "paths.Select",
+          "lineNumber": 90
+        },
+        {
+          "caller": "Load",
+          "callee": "LibDl.Sym",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Load",
+          "callee": "staticLog.Debug",
+          "lineNumber": 95
+        },
+        {
+          "caller": "Load",
+          "callee": "new VisaFunctions",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViOpenDefaultRmDelegate>",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViFindRsrcDelegate>",
+          "lineNumber": 101
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViFindNextDelegate>",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViParseRsrcDelegate>",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViParseRsrcExDelegate>",
+          "lineNumber": 104
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViOpenDelegate>",
+          "lineNumber": 105
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViCloseDelegate>",
+          "lineNumber": 106
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<ViReadDelegate>",
+          "lineNumber": 108
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<ViWriteDelegate>",
+          "lineNumber": 110
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViReadStbDelegate>",
+          "lineNumber": 111
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViClearDelegate>",
+          "lineNumber": 112
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViLockDelegate>",
+          "lineNumber": 113
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViUnlockDelegate>",
+          "lineNumber": 114
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViGetAttributeBDelegate>",
+          "lineNumber": 115
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViGetAttributeSbDelegate>",
+          "lineNumber": 116
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViGetAttributeIDelegate>",
+          "lineNumber": 117
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViSetAttributeBDelegate>",
+          "lineNumber": 118
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViSetAttributeIDelegate>",
+          "lineNumber": 119
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViStatusDescDelegate>",
+          "lineNumber": 120
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViEnableEventDelegate>",
+          "lineNumber": 121
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViDisableEventDelegate>",
+          "lineNumber": 122
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViInstallHandlerDelegate>",
+          "lineNumber": 123
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViUninstallHandlerDelegate>",
+          "lineNumber": 124
+        },
+        {
+          "caller": "Load",
+          "callee": "GetSymbol<VisaFunctions.ViWaitOnEventDelegate>",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Load",
+          "callee": "Marshal.GetDelegateForFunctionPointer<T>",
+          "lineNumber": 132
+        },
+        {
+          "caller": "Load",
+          "callee": "loadSym",
+          "lineNumber": 132
+        },
+        {
+          "caller": "Load",
+          "callee": "staticLog.Debug",
+          "lineNumber": 137
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/WeakHashSet.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "Contains",
+          "startLine": 12,
+          "endLine": 12,
+          "params": [
+            "obj"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 14,
+          "endLine": 25,
+          "params": [
+            "obj"
+          ]
+        },
+        {
+          "name": "GetElements",
+          "startLine": 27,
+          "endLine": 34,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "WeakHashSet",
+          "startLine": 6,
+          "endLine": 35,
+          "methods": [
+            "Contains",
+            "Add",
+            "GetElements"
+          ],
+          "properties": [
+            "table",
+            "lst",
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Contains",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "GetElements",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Contains",
+          "callee": "table.TryGetValue",
+          "lineNumber": 12
+        },
+        {
+          "caller": "Add",
+          "callee": "table.TryGetValue",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Add",
+          "callee": "table.Add",
+          "lineNumber": 18
+        },
+        {
+          "caller": "Add",
+          "callee": "lst.FirstOrDefault",
+          "lineNumber": 19
+        },
+        {
+          "caller": "Add",
+          "callee": "x.TryGetTarget",
+          "lineNumber": 19
+        },
+        {
+          "caller": "Add",
+          "callee": "free.SetTarget",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Add",
+          "callee": "lst.Add",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Add",
+          "callee": "new WeakReference<T>",
+          "lineNumber": 23
+        },
+        {
+          "caller": "GetElements",
+          "callee": "item.TryGetTarget",
+          "lineNumber": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/WorkQueue.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 283,
+      "nonEmptyLines": 252,
+      "functions": [
+        {
+          "name": "Peek",
+          "startLine": 38,
+          "endLine": 47,
+          "params": []
+        },
+        {
+          "name": "WorkQueue",
+          "startLine": 85,
+          "endLine": 91,
+          "params": [
+            "options",
+            "name"
+          ]
+        },
+        {
+          "name": "WorkQueue",
+          "startLine": 97,
+          "endLine": 100,
+          "params": [
+            "options",
+            "name",
+            "threadContext"
+          ]
+        },
+        {
+          "name": "EnqueueWork",
+          "startLine": 104,
+          "endLine": 104,
+          "params": [
+            "a"
+          ]
+        },
+        {
+          "name": "EnqueueWork",
+          "startLine": 105,
+          "endLine": 105,
+          "params": [
+            "v",
+            "a1",
+            "a2"
+          ]
+        },
+        {
+          "name": "WorkerFunction",
+          "startLine": 110,
+          "endLine": 168,
+          "params": []
+        },
+        {
+          "name": "EnqueueWork",
+          "startLine": 171,
+          "endLine": 196,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "Dispose",
+          "startLine": 201,
+          "endLine": 208,
+          "params": []
+        },
+        {
+          "name": "Wait",
+          "startLine": 211,
+          "endLine": 218,
+          "params": []
+        },
+        {
+          "name": "Dequeue",
+          "startLine": 220,
+          "endLine": 247,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "WorkQueue",
+          "startLine": 16,
+          "endLine": 282,
+          "methods": [
+            "Peek",
+            "WorkQueue",
+            "WorkQueue",
+            "EnqueueWork",
+            "EnqueueWork",
+            "WorkerFunction",
+            "EnqueueWork",
+            "Dispose",
+            "Wait",
+            "Dequeue"
+          ],
+          "properties": [
+            "Timeout",
+            "workItems",
+            "average",
+            "AverageTimeSpent",
+            "QueueSize",
+            "IsBusy",
+            "threadCreationLock",
+            "cancel",
+            "threadContext",
+            "threadCount",
+            "semaphoreMaxCount",
+            "addSemaphore",
+            "countdown",
+            "Name",
+            "longRunning",
+            "disposed"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Timeout",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "AverageTimeSpent",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "QueueSize",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "WorkQueue",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "WorkQueue",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "EnqueueWork",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 201,
+          "isDefault": false
+        },
+        {
+          "name": "Wait",
+          "line": 211,
+          "isDefault": false
+        },
+        {
+          "name": "WorkQueue",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Peek",
+          "callee": "workItems.TryPeek",
+          "lineNumber": 40
+        },
+        {
+          "caller": "WorkQueue",
+          "callee": "options.HasFlag",
+          "lineNumber": 87
+        },
+        {
+          "caller": "WorkQueue",
+          "callee": "options.HasFlag",
+          "lineNumber": 88
+        },
+        {
+          "caller": "WorkQueue",
+          "callee": "new TimeSpanAverager",
+          "lineNumber": 89
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "EnqueueWork",
+          "lineNumber": 104
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "new ActionInvokable",
+          "lineNumber": 104
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "EnqueueWork",
+          "lineNumber": 105
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "new WrappedInvokable<T1,T2>",
+          "lineNumber": 105
+        },
+        {
+          "caller": "WorkerFunction",
+          "callee": "WaitHandle.WaitAny",
+          "lineNumber": 121
+        },
+        {
+          "caller": "WorkerFunction",
+          "callee": "WaitHandle.WaitAny",
+          "lineNumber": 123
+        },
+        {
+          "caller": "WorkerFunction",
+          "callee": "addSemaphore.Wait",
+          "lineNumber": 124
+        },
+        {
+          "caller": "WorkerFunction",
+          "callee": "workItems.TryDequeue",
+          "lineNumber": 140
+        },
+        {
+          "caller": "WorkerFunction",
+          "callee": "Thread.Yield",
+          "lineNumber": 141
+        },
+        {
+          "caller": "WorkerFunction",
+          "callee": "Stopwatch.StartNew",
+          "lineNumber": 146
+        },
+        {
+          "caller": "WorkerFunction",
+          "callee": "run.Invoke",
+          "lineNumber": 147
+        },
+        {
+          "caller": "WorkerFunction",
+          "callee": "average.PushTimeSpan",
+          "lineNumber": 148
+        },
+        {
+          "caller": "WorkerFunction",
+          "callee": "run.Invoke",
+          "lineNumber": 152
+        },
+        {
+          "caller": "WorkerFunction",
+          "callee": "Interlocked.Decrement",
+          "lineNumber": 157
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "new ObjectDisposedException",
+          "lineNumber": 173
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "nameof",
+          "lineNumber": 173
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "Thread.Sleep",
+          "lineNumber": 179
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "Interlocked.Increment",
+          "lineNumber": 181
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "workItems.Enqueue",
+          "lineNumber": 182
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "addSemaphore.Release",
+          "lineNumber": 183
+        },
+        {
+          "caller": "EnqueueWork",
+          "callee": "TapThread.Start",
+          "lineNumber": 191
+        },
+        {
+          "caller": "Dispose",
+          "callee": "cancel.Cancel",
+          "lineNumber": 206
+        },
+        {
+          "caller": "Wait",
+          "callee": "Thread.Sleep",
+          "lineNumber": 216
+        },
+        {
+          "caller": "Dequeue",
+          "callee": "addSemaphore.Wait",
+          "lineNumber": 223
+        },
+        {
+          "caller": "Dequeue",
+          "callee": "workItems.TryDequeue",
+          "lineNumber": 230
+        },
+        {
+          "caller": "Dequeue",
+          "callee": "Interlocked.Decrement",
+          "lineNumber": 233
+        },
+        {
+          "caller": "Dequeue",
+          "callee": "Debug.Assert",
+          "lineNumber": 234
+        },
+        {
+          "caller": "Dequeue",
+          "callee": "Debug.Fail",
+          "lineNumber": 243
+        },
+        {
+          "caller": "Dequeue",
+          "callee": "addSemaphore.Release",
+          "lineNumber": 244
+        },
+        {
+          "caller": "Invoke",
+          "callee": "action",
+          "lineNumber": 263
+        },
+        {
+          "caller": "Invoke",
+          "callee": "wrapped.Invoke",
+          "lineNumber": 279
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/XmlError.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "XmlError",
+          "startLine": 15,
+          "endLine": 18,
+          "params": [
+            "xmlElement",
+            "message",
+            "exception"
+          ]
+        },
+        {
+          "name": "ToString",
+          "startLine": 21,
+          "endLine": 29,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "XmlError",
+          "startLine": 8,
+          "endLine": 30,
+          "methods": [
+            "XmlError",
+            "ToString"
+          ],
+          "properties": [
+            "Exception"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Exception",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "XmlError",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "XmlError",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ToString",
+          "callee": "lineInfo.HasLineInfo",
+          "lineNumber": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/XmlMessage.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "XmlMessage",
+          "startLine": 15,
+          "endLine": 19,
+          "params": [
+            "xmlElement",
+            "message"
+          ]
+        },
+        {
+          "name": "ToString",
+          "startLine": 22,
+          "endLine": 28,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "XmlMessage",
+          "startLine": 7,
+          "endLine": 29,
+          "methods": [
+            "XmlMessage",
+            "ToString"
+          ],
+          "properties": [
+            "Element",
+            "Message"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Element",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "Message",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "XmlMessage",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "XmlMessage",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ToString",
+          "callee": "lineInfo.HasLineInfo",
+          "lineNumber": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Installer/Assets/LogoSide.bmp",
+      "language": "bmp",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {}
+    },
+    {
+      "path": "Installer/Assets/LogoTop.bmp",
+      "language": "bmp",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {}
+    },
+    {
+      "path": "Installer/Assets/Newtonsoft.Json.dll",
+      "language": "dll",
+      "fileCategory": "code",
+      "totalLines": 14086,
+      "nonEmptyLines": 13841,
+      "metrics": {}
+    },
+    {
+      "path": "LinuxInstall/INSTALL.sh",
+      "language": "shell",
+      "fileCategory": "script",
+      "totalLines": 56,
+      "nonEmptyLines": 43,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "LinuxInstall/package/Debian/control.in",
+      "language": "in",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 11,
+      "metrics": {}
+    },
+    {
+      "path": "LinuxInstall/package/Debian/create-deb",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 57,
+      "nonEmptyLines": 41,
+      "metrics": {}
+    },
+    {
+      "path": "LinuxInstall/package/Debian/postinst.in",
+      "language": "in",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 22,
+      "metrics": {}
+    },
+    {
+      "path": "LinuxInstall/README",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 15,
+      "metrics": {}
+    },
+    {
+      "path": "LinuxInstall/tap.sh",
+      "language": "shell",
+      "fileCategory": "script",
+      "totalLines": 67,
+      "nonEmptyLines": 60,
+      "functions": [
+        {
+          "name": "realpath",
+          "startLine": 13,
+          "endLine": 32,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "nuget/OpenTAP.nuspec",
+      "language": "nuspec",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 24,
+      "metrics": {}
+    }
+  ]
+}

@@ -1,0 +1,562 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EmbedPropertiesAttributeExample.cs",
+      "type": "file",
+      "name": "EmbedPropertiesAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/EmbedPropertiesAttributeExample.cs",
+      "summary": "演示 EmbedProperties 特性的示例 TestStep，展示如何通过 [EmbedProperties] 将嵌套对象的属性嵌入到父步骤的设置面板中。",
+      "tags": ["example", "test-step", "embed-properties", "attribute"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EnabledIfAttributeExample.cs",
+      "type": "file",
+      "name": "EnabledIfAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/EnabledIfAttributeExample.cs",
+      "summary": "演示 EnabledIf 特性的示例 TestStep，展示如何根据其他属性值动态启用/隐藏编辑控件。",
+      "tags": ["example", "test-step", "enabled-if", "attribute"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/FlagsAttributeExample.cs",
+      "type": "file",
+      "name": "FlagsAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/FlagsAttributeExample.cs",
+      "summary": "演示 Flags 特性的示例 TestStep，展示如何使用位掩码枚举实现多选属性编辑器。",
+      "tags": ["example", "test-step", "flags", "attribute", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/PathAttributeExample.cs",
+      "type": "file",
+      "name": "PathAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/PathAttributeExample.cs",
+      "summary": "演示 Path 相关特性的示例 TestStep，展示文件路径和目录路径选择器的配置与使用。",
+      "tags": ["example", "test-step", "path", "attribute"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "type": "file",
+      "name": "ResourceOpenAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "summary": "演示 ResourceOpen 特性的示例文件，包含四种资源打开模式（Prior/Parallel 及其对应的 Instrument 类），展示仪器资源的 Open/Close 生命周期管理。",
+      "tags": ["example", "test-step", "resource-open", "instrument", "lifecycle"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs",
+      "type": "file",
+      "name": "ScpiAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs",
+      "summary": "演示 SCPI 特性的示例 TestStep，展示如何使用 Scpi.Format 和 Scpi.Parse 在 C# 与 SCPI 命令之间进行转换。",
+      "tags": ["example", "test-step", "scpi", "attribute", "instrument-communication"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/UnitAttributeExample.cs",
+      "type": "file",
+      "name": "UnitAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/UnitAttributeExample.cs",
+      "summary": "演示 Unit 特性的示例 TestStep，展示如何为单位添加工程前缀、预缩放和格式化字符串。",
+      "tags": ["example", "test-step", "unit", "attribute"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/XmlIgnoreAttributeExample.cs",
+      "type": "file",
+      "name": "XmlIgnoreAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/XmlIgnoreAttributeExample.cs",
+      "summary": "演示 XmlIgnore 及 Display 特性在 TestStep 序列化控制中的应用：控制属性的可见性与序列化行为。",
+      "tags": ["example", "test-step", "xml-ignore", "attribute", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/GenerateOutput.cs",
+      "type": "file",
+      "name": "GenerateOutput.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/InputOutput/GenerateOutput.cs",
+      "summary": "演示 TestStep 输出值的示例，展示如何通过 OutputValue 将数据传递给下游步骤并使用 UpgradeVerdict 设置判定。",
+      "tags": ["example", "test-step", "output", "data-flow"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/HandleInput.cs",
+      "type": "file",
+      "name": "HandleInput.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/InputOutput/HandleInput.cs",
+      "summary": "演示 TestStep 输入值的示例，展示如何通过 Input<double> 接收上游步骤传递的数据并进行校验。",
+      "tags": ["example", "test-step", "input", "data-flow"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs",
+      "type": "file",
+      "name": "ChildSeekingResources.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs",
+      "summary": "演示子步骤向上查找父步骤资源的示例，在 PrePlanRun 中通过 GetParent<T> 获取父步骤的 Dut 和 Instrument。",
+      "tags": ["example", "test-step", "parent-child", "resource-seeking"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentAnyChildren.cs",
+      "type": "file",
+      "name": "ParentAnyChildren.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentAnyChildren.cs",
+      "summary": "演示 AllowAnyChild 父步骤的示例，展示父步骤如何执行任意子步骤并管理 PrePlanRun / PostPlanRun 生命周期。",
+      "tags": ["example", "test-step", "parent-child", "allow-any-child"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentWithResources.cs",
+      "type": "file",
+      "name": "ParentWithResources.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentWithResources.cs",
+      "summary": "演示持有资源的父步骤示例，展示父步骤将 Dut 和 Instrument 资源暴露给子步骤的机制。",
+      "tags": ["example", "test-step", "parent-child", "resource-sharing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EmbedPropertiesAttributeExample.cs:EmbedPropertiesAttributeExample",
+      "type": "class",
+      "name": "EmbedPropertiesAttributeExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/EmbedPropertiesAttributeExample.cs",
+      "lineRange": [17, 52],
+      "summary": "演示 EmbedProperties 特性的 TestStep，包含一个嵌套的 EmbeddedClass 并通过 [EmbedProperties] 将其属性嵌入到自身的设置面板中。",
+      "tags": ["test-step", "example", "embed-properties"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EnabledIfAttributeExample.cs:EnabledIfAttributeExample",
+      "type": "class",
+      "name": "EnabledIfAttributeExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/EnabledIfAttributeExample.cs",
+      "lineRange": [17, 52],
+      "summary": "使用 [EnabledIf] 特性根据 RadioStandard 枚举值动态控制属性编辑状态的 TestStep，支持 HideIfDisabled 选项。",
+      "tags": ["test-step", "example", "enabled-if", "conditional-ui"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/FlagsAttributeExample.cs:FlagsAttributeExample",
+      "type": "class",
+      "name": "FlagsAttributeExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/FlagsAttributeExample.cs",
+      "lineRange": [19, 64],
+      "summary": "使用 [Flags] 特性装饰枚举实现位掩码多选编辑的 TestStep，包含 FixturePositions 枚举及 HasFlag 验证。",
+      "tags": ["test-step", "example", "flags", "bitmask"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/PathAttributeExample.cs:PathAttributesExample",
+      "type": "class",
+      "name": "PathAttributesExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/PathAttributeExample.cs",
+      "lineRange": [18, 47],
+      "summary": "展示 [FilePath]、[DirectoryPath] 等路径选择特性用法的 TestStep，覆盖单文件、多文件、CSV 文件及媒体文件路径等场景。",
+      "tags": ["test-step", "example", "path-attribute"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenPriorResource",
+      "type": "class",
+      "name": "OpenPriorResource",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "lineRange": [17, 26],
+      "summary": "使用 ResourceOpen 优先模式打开资源的 TestStep 包装类，关联 OpenPriorInstrument。",
+      "tags": ["test-step", "example", "resource-open", "prior"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenParallelResource",
+      "type": "class",
+      "name": "OpenParallelResource",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "lineRange": [28, 37],
+      "summary": "使用 ResourceOpen 并行模式打开资源的 TestStep 包装类，关联 OpenParallelInstrument。",
+      "tags": ["test-step", "example", "resource-open", "parallel"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenPriorInstrument",
+      "type": "class",
+      "name": "OpenPriorInstrument",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "lineRange": [43, 75],
+      "summary": "OpenPriorResource 使用的 Instrument 实现，演示优先模式下资源的 Open/Close 生命周期和子仪器状态打印。",
+      "tags": ["instrument", "example", "resource-open", "lifecycle"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenParallelInstrument",
+      "type": "class",
+      "name": "OpenParallelInstrument",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "lineRange": [79, 109],
+      "summary": "OpenParallelResource 使用的 Instrument 实现，演示并行模式下资源的 Open/Close 生命周期和子仪器状态打印。",
+      "tags": ["instrument", "example", "resource-open", "lifecycle"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs:ScpiAttributeExample",
+      "type": "class",
+      "name": "ScpiAttributeExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs",
+      "lineRange": [18, 96],
+      "summary": "全面演示 SCPI 特性用法的 TestStep，包含 TriggerType 和 LinkType 枚举定义及 SCPI 命令的格式化与解析。",
+      "tags": ["test-step", "example", "scpi", "instrument-communication"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/UnitAttributeExample.cs:UnitAttributeExample",
+      "type": "class",
+      "name": "UnitAttributeExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/UnitAttributeExample.cs",
+      "lineRange": [18, 50],
+      "summary": "演示 [Unit] 特性多种用法的 TestStep，包括工程前缀、预缩放、十六进制格式及数组单位范围设置。",
+      "tags": ["test-step", "example", "unit-attribute"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/XmlIgnoreAttributeExample.cs:XmlIgnoreAttributeExample",
+      "type": "class",
+      "name": "XmlIgnoreAttributeExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/XmlIgnoreAttributeExample.cs",
+      "lineRange": [24, 57],
+      "summary": "演示 [XmlIgnore] 与 [Display] 协同控制属性序列化和编辑器可见性的 TestStep，覆盖四种不同的可见性/序列化组合。",
+      "tags": ["test-step", "example", "xml-ignore", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/GenerateOutput.cs:GenerateOutput",
+      "type": "class",
+      "name": "GenerateOutput",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/InputOutput/GenerateOutput.cs",
+      "lineRange": [18, 43],
+      "summary": "演示 TestStep 数据输出的示例，通过 OutputValue 属性和 UpgradeVerdict 在测试步骤间传递结果。",
+      "tags": ["test-step", "example", "output", "data-flow"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/HandleInput.cs:HandleInput",
+      "type": "class",
+      "name": "HandleInput",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/InputOutput/HandleInput.cs",
+      "lineRange": [19, 40],
+      "summary": "演示 TestStep 数据输入的示例，通过 Input<double> 属性接收上游输出并进行空值校验。",
+      "tags": ["test-step", "example", "input", "data-flow"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs:ChildSeekingResources",
+      "type": "class",
+      "name": "ChildSeekingResources",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs",
+      "lineRange": [21, 53],
+      "summary": "演示子步骤通过 GetParent<ParentWithResources> 查找父步骤所持有 Dut/Instrument 资源的 TestStep。",
+      "tags": ["test-step", "example", "parent-child", "resource-seeking"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentAnyChildren.cs:ParentAnyChildren",
+      "type": "class",
+      "name": "ParentAnyChildren",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentAnyChildren.cs",
+      "lineRange": [18, 45],
+      "summary": "演示 AllowAnyChild 模式的父 TestStep，在 Run 中调用 RunChildSteps 执行子步骤并管理完整生命周期。",
+      "tags": ["test-step", "example", "allow-any-child", "parent-child"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentWithResources.cs:ParentWithResources",
+      "type": "class",
+      "name": "ParentWithResources",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentWithResources.cs",
+      "lineRange": [22, 47],
+      "summary": "持有 Dut 和 Instrument 资源的父 TestStep，子步骤可通过 GetParent 获取这些共享资源。",
+      "tags": ["test-step", "example", "parent-child", "resource-sharing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs",
+      "lineRange": [60, 95],
+      "summary": "核心运行方法，全面展示 Scpi.Format 与 Scpi.Parse 在布尔值、枚举、数组间与 SCPI 命令的格式化与解析能力。",
+      "tags": ["test-step", "run", "scpi", "format", "parse"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs:PrePlanRun",
+      "type": "function",
+      "name": "PrePlanRun",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs",
+      "lineRange": [30, 47],
+      "summary": "在 PrePlanRun 阶段通过 GetParent<ParentWithResources> 获取父步骤的 Dut 和 Instrument 资源引用。",
+      "tags": ["test-step", "pre-plan-run", "resource-seeking"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EmbedPropertiesAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EmbedPropertiesAttributeExample.cs:EmbedPropertiesAttributeExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EmbedPropertiesAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EmbedPropertiesAttributeExample.cs:EmbedPropertiesAttributeExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EnabledIfAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EnabledIfAttributeExample.cs:EnabledIfAttributeExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EnabledIfAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/EnabledIfAttributeExample.cs:EnabledIfAttributeExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/FlagsAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/FlagsAttributeExample.cs:FlagsAttributeExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/FlagsAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/FlagsAttributeExample.cs:FlagsAttributeExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/PathAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/PathAttributeExample.cs:PathAttributesExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/PathAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/PathAttributeExample.cs:PathAttributesExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenPriorResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenPriorResource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenParallelResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenParallelResource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenPriorInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenPriorInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenParallelInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ResourceOpenAttributeExample.cs:OpenParallelInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs:ScpiAttributeExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs:ScpiAttributeExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ScpiAttributeExample.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/UnitAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/UnitAttributeExample.cs:UnitAttributeExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/UnitAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/UnitAttributeExample.cs:UnitAttributeExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/XmlIgnoreAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/XmlIgnoreAttributeExample.cs:XmlIgnoreAttributeExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/XmlIgnoreAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/XmlIgnoreAttributeExample.cs:XmlIgnoreAttributeExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/GenerateOutput.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/GenerateOutput.cs:GenerateOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/GenerateOutput.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/GenerateOutput.cs:GenerateOutput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/HandleInput.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/HandleInput.cs:HandleInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/HandleInput.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/InputOutput/HandleInput.cs:HandleInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs:ChildSeekingResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs:ChildSeekingResources",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs:PrePlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs:PrePlanRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentAnyChildren.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentAnyChildren.cs:ParentAnyChildren",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentAnyChildren.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentAnyChildren.cs:ParentAnyChildren",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentWithResources.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentWithResources.cs:ParentWithResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentWithResources.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentWithResources.cs:ParentWithResources",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ChildSeekingResources.cs",
+      "target": "file:sdk/Examples/PluginDevelopment/TestSteps/ParentChild/ParentWithResources.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

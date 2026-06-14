@@ -1,0 +1,537 @@
+{
+  "nodes": [
+    {
+      "id": "config:tap/tap.csproj",
+      "type": "config",
+      "name": "tap.csproj",
+      "filePath": "tap/tap.csproj",
+      "summary": "OpenTAP CLI 主入口点的 MSBuild 项目文件，定义 tap 可执行程序的 TargetFramework、AssemblyName、平台检测、项目依赖引用以及构建后自动将 OpenTAP 作为包安装的 PostBuild 目标。",
+      "tags": ["entry-point", "build-system", "configuration", "cli"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:templates/src/project/.template.config/ide.host.json",
+      "type": "config",
+      "name": "ide.host.json",
+      "filePath": "templates/src/project/.template.config/ide.host.json",
+      "summary": "IDE 宿主配置文件，定义 dotnet new opentap 模板在 IDE 中可选用的符号项（CliAction、ComponentSettings、DUT、Instrument、ResultListener、TestStep、Editor），控制各模板组件的可见性。",
+      "tags": ["configuration", "template", "ide-integration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:templates/src/project/.template.config/template.json",
+      "type": "config",
+      "name": "template.json",
+      "filePath": "templates/src/project/.template.config/template.json",
+      "summary": "dotnet new opentap 模板的核心定义文件，配置模板元数据（名称、作者、分类），定义符号参数（TestStep/DUT/Instrument/ComponentSettings/ResultListener/CliAction/Editor）及其条件修饰器，实现按需包含或排除模板源文件的模板生成逻辑。",
+      "tags": ["template", "configuration", "code-generation", "schema-definition"],
+      "complexity": "moderate",
+      "languageNotes": "使用符号参数（symbols）与条件修饰器（modifiers）的组合，根据用户选择的组件类型条件性地包含或排除对应的 C# 源文件。"
+    },
+    {
+      "id": "file:templates/src/project/MyCliAction.cs",
+      "type": "file",
+      "name": "MyCliAction.cs",
+      "filePath": "templates/src/project/MyCliAction.cs",
+      "summary": "CLI 操作模板类，实现 ICliAction 接口并定义 Execute 方法。作为 dotnet new opentap 模板的一部分，当用户选择包含 CliAction 时生成到新项目中。",
+      "tags": ["template", "cli", "api-handler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:templates/src/project/MyComponentSettings.cs",
+      "type": "file",
+      "name": "MyComponentSettings.cs",
+      "filePath": "templates/src/project/MyComponentSettings.cs",
+      "summary": "组件设置模板类，继承 ComponentSettings<MyComponentSettings>，展示如何在 OpenTAP 插件中定义可配置的设置属性，提供 ExampleSetting 示例属性。",
+      "tags": ["template", "settings", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:templates/src/project/MyDUT.cs",
+      "type": "file",
+      "name": "MyDUT.cs",
+      "filePath": "templates/src/project/MyDUT.cs",
+      "summary": "被测试设备（DUT）模板类，继承 Dut 基类，提供初始化构造函数以及 Open/Close 连接方法的模板实现，供插件开发者参考和修改。",
+      "tags": ["template", "dut", "device", "instrumentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:templates/src/project/MyInstrument.cs",
+      "type": "file",
+      "name": "MyInstrument.cs",
+      "filePath": "templates/src/project/MyInstrument.cs",
+      "summary": "仪器驱动模板类，继承 Instrument 基类，提供构造函数及 Open/Close 方法的实现框架，包含基于 IDN 字符串验证仪器类型的注释示例代码。",
+      "tags": ["template", "instrument", "driver", "instrumentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:templates/src/project/MyResultListener.cs",
+      "type": "file",
+      "name": "MyResultListener.cs",
+      "filePath": "templates/src/project/MyResultListener.cs",
+      "summary": "结果监听器模板类，继承 ResultListener 基类，提供用于监听和处理测试计划执行结果的框架代码，包含构造函数及 Open/Close 资源管理方法。",
+      "tags": ["template", "result-listener", "event-handler"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:templates/src/project/MyTestStep.cs",
+      "type": "file",
+      "name": "MyTestStep.cs",
+      "filePath": "templates/src/project/MyTestStep.cs",
+      "summary": "测试步骤模板类，继承 TestStep 基类，实现完整的测试步骤生命周期（PrePlanRun/Run/PostPlanRun），在 Run 方法中调用 RunChildSteps 执行子步骤并通过 UpgradeVerdict 设定判定结果。",
+      "tags": ["template", "test-step", "test", "lifecycle"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:templates/src/project/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "templates/src/project/package.xml",
+      "summary": "OpenTAP 插件包清单模板，定义包的名称（ProjectName 占位符）、版本、支持的操作系统（Windows/Linux/MacOS）、描述以及 DLL 文件引用，供新插件项目使用。",
+      "tags": ["configuration", "package", "manifest", "template"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:templates/src/project/ProjectName.csproj",
+      "type": "config",
+      "name": "ProjectName.csproj",
+      "filePath": "templates/src/project/ProjectName.csproj",
+      "summary": "新 OpenTAP 插件项目的 C# 项目文件模板，配置 TargetFramework（net9）、OpenTAP NuGet 包引用、调试编辑器选择（TapEditor/TUI）及 Release 模式下自动创建 TapPackage 的设置。",
+      "tags": ["configuration", "template", "build-system", "nuget"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:templates/src/project/Properties/Editor.LaunchSettings.json",
+      "type": "config",
+      "name": "Editor.LaunchSettings.json",
+      "filePath": "templates/src/project/Properties/Editor.LaunchSettings.json",
+      "summary": "使用 Keysight Test Automation Editor 调试插件的启动配置文件，定义 Windows（Editor.exe）和 Linux/MacOS（Editor.dll）两种平台的调试命令与可执行路径。",
+      "tags": ["configuration", "debug", "launch-settings"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:templates/src/project/Properties/TUI.LaunchSettings.json",
+      "type": "config",
+      "name": "TUI.LaunchSettings.json",
+      "filePath": "templates/src/project/Properties/TUI.LaunchSettings.json",
+      "summary": "使用 OpenTAP TUI 调试插件的启动配置文件，定义 Windows（tap.exe tui）和 Linux/MacOS（tap.dll tui）两种平台的调试命令参数与可执行路径。",
+      "tags": ["configuration", "debug", "launch-settings"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:templates/Templates.csproj",
+      "type": "config",
+      "name": "Templates.csproj",
+      "filePath": "templates/Templates.csproj",
+      "summary": "将 src/ 目录下所有模板内容打包为 OpenTap.Templates NuGet 模板包的 MSBuild 项目文件，配置包元数据（MPL-2.0 许可证、Authors、RepositoryUrl）并将内容文件输出到 content 目录。",
+      "tags": ["configuration", "nuget", "template", "packaging", "build-system"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/ILGitVersionBug.TapPlan",
+      "type": "file",
+      "name": "ILGitVersionBug.TapPlan",
+      "filePath": "tests/ILGitVersionBug.TapPlan",
+      "summary": "测试计划：通过创建临时项目、写入 C# 代码和项目文件、使用 dotnet build 构建、再用 tap package create 创建包，验证 IL 级别的 GitVersion 程序集版本属性是否正确设置。",
+      "tags": ["test", "test-plan", "package", "versioning"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/NoAssemblyInfo.TapPlan",
+      "type": "file",
+      "name": "NoAssemblyInfo.TapPlan",
+      "filePath": "tests/NoAssemblyInfo.TapPlan",
+      "summary": "测试计划：在无 AssemblyInfo 的情况下创建项目并构建包，通过 SweepParameterStep 循环测试 FileVersion 与 SemanticVersion 两种版本类型，验证 ReadAssemblyVersionStep 能正确读取程序集版本属性。",
+      "tags": ["test", "test-plan", "package", "assembly", "versioning"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tests/package-create-error.TapPlan",
+      "type": "file",
+      "name": "package-create-error.TapPlan",
+      "filePath": "tests/package-create-error.TapPlan",
+      "summary": "测试计划：验证存在依赖版本冲突（SSH.NET 版本不匹配）时 tap package create 失败的行为，并通过 ReplaceInFileStep 降级依赖版本后验证包再次创建成功，同时测试 --verbose 错误输出和 --out 输出路径参数。",
+      "tags": ["test", "test-plan", "package", "error-handling", "dependency"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tests/package-create-newtonsoft.TapPlan",
+      "type": "file",
+      "name": "package-create-newtonsoft.TapPlan",
+      "filePath": "tests/package-create-newtonsoft.TapPlan",
+      "summary": "测试计划：验证引用 Newtonsoft.Json 12.0.3 的项目在首次打包时因依赖未声明而失败，修改 package.xml 添加 OpenTAP 依赖后重新构建并再次验证打包失败（依赖版本不匹配），用于回归测试包依赖解析逻辑。",
+      "tags": ["test", "test-plan", "package", "dependency", "newtonsoft"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tests/package-create-out-of-installation.TapPlan",
+      "type": "file",
+      "name": "package-create-out-of-installation.TapPlan",
+      "filePath": "tests/package-create-out-of-installation.TapPlan",
+      "summary": "测试计划：在安装目录外创建一个依赖 OpenTAP 的测试包，验证 tap package create 能够正确处理不在安装路径内的包创建场景。",
+      "tags": ["test", "test-plan", "package"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/planWithLoadErrors.TapPlan",
+      "type": "file",
+      "name": "planWithLoadErrors.TapPlan",
+      "filePath": "tests/planWithLoadErrors.TapPlan",
+      "summary": "最小测试计划，仅包含一个 LogStep2 步骤，依赖 OpenTAP ^9.18.4。用于测试在加载测试计划时遇到错误的情况。",
+      "tags": ["test", "test-plan", "error-handling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/regression.TapPlan",
+      "type": "file",
+      "name": "regression.TapPlan",
+      "filePath": "tests/regression.TapPlan",
+      "summary": "主回归测试计划，使用 Sequence 步骤通过 TestPlanReference 按顺序引用并执行多个子测试计划（test-install-package、show-tags、package-create-error、ILGitVersionBug、NoAssemblyInfo、package-create-out-of-installation、package-create-newtonsoft、RepeatOutputCompare、test-cli-args、test-sdk-templates、run-parse-test、test-cli-load-plan-with-error、test-piped-input），是回归测试套件的编排器。",
+      "tags": ["test", "test-plan", "regression", "orchestration"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tests/RepeatOutputCompare.TapPlan",
+      "type": "file",
+      "name": "RepeatOutputCompare.TapPlan",
+      "filePath": "tests/RepeatOutputCompare.TapPlan",
+      "summary": "测试计划：验证 RepeatStep 重复循环的参数化功能和输入/输出（Input/Output）系统，通过 RunTimeStep 计数运行次数并由 CompareIntStep 验证计数值与期望值一致。",
+      "tags": ["test", "test-plan", "repeat", "parameterization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/run-parse-test.TapPlan",
+      "type": "file",
+      "name": "run-parse-test.TapPlan",
+      "filePath": "tests/run-parse-test.TapPlan",
+      "summary": "测试计划：先安装 CSV 插件，然后通过 SweepParameterStep 循环使用不同的命令行参数执行 tap run，用 ExpectStep 验证各参数组合下的判定结果是否正确，覆盖 tap CLI 的 run 命令参数解析逻辑。",
+      "tags": ["test", "test-plan", "cli", "sweep", "parsing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/show-tags.TapPlan",
+      "type": "file",
+      "name": "show-tags.TapPlan",
+      "filePath": "tests/show-tags.TapPlan",
+      "summary": "测试计划：通过 WriteFileStep 写入包含 Tags 的 package.xml、用 tap package create 打包（禁用 BreakOnError）、再用 tap package show 显示包信息并通过正则表达式验证 Tags 字段正确显示，覆盖包标签的创建和展示功能。",
+      "tags": ["test", "test-plan", "package", "tags"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test-cli-args.TapPlan",
+      "type": "file",
+      "name": "test-cli-args.TapPlan",
+      "filePath": "tests/test-cli-args.TapPlan",
+      "summary": "测试计划：通过 ProcessStep 运行 tap test action testargaction，传入多种命令行参数类型（-a 到 -f、-i 数组参数），用正则表达式验证输出格式，覆盖 tap CLI 各种参数类型的解析。",
+      "tags": ["test", "test-plan", "cli", "arguments"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:templates/src/project/MyCliAction.cs:MyCliAction",
+      "type": "class",
+      "name": "MyCliAction",
+      "filePath": "templates/src/project/MyCliAction.cs",
+      "lineRange": [8, 15],
+      "summary": "CLI 操作模板类，实现 ICliAction 接口，提供一个返回 NotImplementedException 的 Execute 方法骨架，供插件开发者实现自定义 CLI 操作。",
+      "tags": ["template", "cli", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:templates/src/project/MyComponentSettings.cs:MyComponentSettings",
+      "type": "class",
+      "name": "MyComponentSettings",
+      "filePath": "templates/src/project/MyComponentSettings.cs",
+      "lineRange": [10, 18],
+      "summary": "组件设置模板类，继承 ComponentSettings<MyComponentSettings>，提供 ExampleSetting 布尔属性示例，展示 OpenTAP 中组件配置项的声明方式。",
+      "tags": ["template", "settings", "component"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:templates/src/project/MyDUT.cs:MyDUT",
+      "type": "class",
+      "name": "MyDUT",
+      "filePath": "templates/src/project/MyDUT.cs",
+      "lineRange": [10, 44],
+      "summary": "被测试设备模板类，继承 Dut 基类，提供 Name 初始化、基类 Open/Close 方法调用模板以及 settings region 占位，供开发者实现特定设备的连接与断开逻辑。",
+      "tags": ["template", "dut", "device", "instrumentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:templates/src/project/MyInstrument.cs:MyInstrument",
+      "type": "class",
+      "name": "MyInstrument",
+      "filePath": "templates/src/project/MyInstrument.cs",
+      "lineRange": [10, 39],
+      "summary": "仪器驱动模板类，继承 Instrument 基类，提供构造函数、Open/Close 方法框架以及基于 IDN 字符串验证仪器类型的注释示例，供开发者实现特定仪器驱动。",
+      "tags": ["template", "instrument", "driver", "instrumentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:templates/src/project/MyResultListener.cs:MyResultListener",
+      "type": "class",
+      "name": "MyResultListener",
+      "filePath": "templates/src/project/MyResultListener.cs",
+      "lineRange": [10, 33],
+      "summary": "结果监听器模板类，继承 ResultListener 基类，提供构造函数及 Open/Close 资源管理方法，供开发者实现自定义测试结果处理逻辑。",
+      "tags": ["template", "result-listener", "event-handler"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:templates/src/project/MyTestStep.cs:MyTestStep",
+      "type": "class",
+      "name": "MyTestStep",
+      "filePath": "templates/src/project/MyTestStep.cs",
+      "lineRange": [5, 35],
+      "summary": "测试步骤模板类，继承 TestStep 基类，实现完整测试生命周期（PrePlanRun/Run/PostPlanRun），在 Run 中调用 RunChildSteps 和 UpgradeVerdict(Verdict.Pass) 作为测试判定示例。",
+      "tags": ["template", "test-step", "test", "lifecycle"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:templates/src/project/MyCliAction.cs",
+      "target": "class:templates/src/project/MyCliAction.cs:MyCliAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:templates/src/project/MyComponentSettings.cs",
+      "target": "class:templates/src/project/MyComponentSettings.cs:MyComponentSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:templates/src/project/MyDUT.cs",
+      "target": "class:templates/src/project/MyDUT.cs:MyDUT",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:templates/src/project/MyInstrument.cs",
+      "target": "class:templates/src/project/MyInstrument.cs:MyInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:templates/src/project/MyResultListener.cs",
+      "target": "class:templates/src/project/MyResultListener.cs:MyResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:templates/src/project/MyTestStep.cs",
+      "target": "class:templates/src/project/MyTestStep.cs:MyTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:templates/src/project/MyCliAction.cs",
+      "target": "class:templates/src/project/MyCliAction.cs:MyCliAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:templates/src/project/MyComponentSettings.cs",
+      "target": "class:templates/src/project/MyComponentSettings.cs:MyComponentSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:templates/src/project/MyDUT.cs",
+      "target": "class:templates/src/project/MyDUT.cs:MyDUT",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:templates/src/project/MyInstrument.cs",
+      "target": "class:templates/src/project/MyInstrument.cs:MyInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:templates/src/project/MyResultListener.cs",
+      "target": "class:templates/src/project/MyResultListener.cs:MyResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:templates/src/project/MyTestStep.cs",
+      "target": "class:templates/src/project/MyTestStep.cs:MyTestStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:templates/src/project/.template.config/template.json",
+      "target": "file:templates/src/project/MyCliAction.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:templates/src/project/.template.config/template.json",
+      "target": "file:templates/src/project/MyComponentSettings.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:templates/src/project/.template.config/template.json",
+      "target": "file:templates/src/project/MyDUT.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:templates/src/project/.template.config/template.json",
+      "target": "file:templates/src/project/MyInstrument.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:templates/src/project/.template.config/template.json",
+      "target": "file:templates/src/project/MyResultListener.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:templates/src/project/.template.config/template.json",
+      "target": "file:templates/src/project/MyTestStep.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:templates/src/project/.template.config/template.json",
+      "target": "config:templates/src/project/ProjectName.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:templates/src/project/.template.config/ide.host.json",
+      "target": "config:templates/src/project/.template.config/template.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:templates/src/project/ProjectName.csproj",
+      "target": "config:templates/src/project/package.xml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:templates/src/project/Properties/Editor.LaunchSettings.json",
+      "target": "config:templates/src/project/ProjectName.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:templates/src/project/Properties/TUI.LaunchSettings.json",
+      "target": "config:templates/src/project/ProjectName.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:templates/Templates.csproj",
+      "target": "file:templates/src/project/MyTestStep.cs",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "config:templates/Templates.csproj",
+      "target": "config:templates/src/project/ProjectName.csproj",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "config:templates/Templates.csproj",
+      "target": "config:templates/src/project/.template.config/template.json",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/regression.TapPlan",
+      "target": "file:tests/package-create-error.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/regression.TapPlan",
+      "target": "file:tests/ILGitVersionBug.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/regression.TapPlan",
+      "target": "file:tests/NoAssemblyInfo.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/regression.TapPlan",
+      "target": "file:tests/package-create-out-of-installation.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/regression.TapPlan",
+      "target": "file:tests/package-create-newtonsoft.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/regression.TapPlan",
+      "target": "file:tests/RepeatOutputCompare.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/regression.TapPlan",
+      "target": "file:tests/test-cli-args.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/regression.TapPlan",
+      "target": "file:tests/run-parse-test.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/regression.TapPlan",
+      "target": "file:tests/show-tags.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

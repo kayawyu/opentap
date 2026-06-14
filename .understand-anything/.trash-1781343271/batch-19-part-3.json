@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "id": "document:doc/Release Notes/9.31/Readme.md",
+      "type": "document",
+      "name": "OpenTAP 9.31 发布说明",
+      "filePath": "doc/Release Notes/9.31/Readme.md",
+      "summary": "OpenTAP 9.31.0 版本发布说明，包含文件占用状态下包更新/删除的新功能，以及多项 Bug 修复（测试计划保存、API 文档缺失、tap.dll 更新、编辑器启动竞态条件等）。",
+      "tags": [
+        "release-notes",
+        "documentation",
+        "changelog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Release Notes/9.32/Readme.md",
+      "type": "document",
+      "name": "OpenTAP 9.32 发布说明",
+      "filePath": "doc/Release Notes/9.32/Readme.md",
+      "summary": "OpenTAP 9.32.0 版本发布说明，涵盖多级嵌套 Sweep 功能、参数优化（嵌入式设置参数化）、数字解析与对象克隆的广泛性能提升，以及 ILoopStep 新 API 等多项改进和 Bug 修复。",
+      "tags": [
+        "release-notes",
+        "documentation",
+        "changelog"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/9.33/Readme.md",
+      "type": "document",
+      "name": "OpenTAP 9.33 发布说明",
+      "filePath": "doc/Release Notes/9.33/Readme.md",
+      "summary": "OpenTAP 9.33.0 版本发布说明，主要亮点包括输出参数化（Outputs Parameterization）、更安全的测试计划保存机制（先写入临时文件再原子替换），以及自定义 VISA 库路径等小型功能和 Bug 修复。",
+      "tags": [
+        "release-notes",
+        "documentation",
+        "changelog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/User Guide/CLI Usage/Readme.md",
+      "type": "document",
+      "name": "CLI 使用指南",
+      "filePath": "doc/User Guide/CLI Usage/Readme.md",
+      "summary": "OpenTAP CLI 命令行工具的完整使用指南，涵盖包管理器（install/list/uninstall/download/verify 等子命令）、测试计划运行、Bench 设置、插件搜索路径、Result Listener 配置以及非交互式运行模式等内容。",
+      "tags": [
+        "documentation",
+        "user-guide",
+        "cli",
+        "package-manager"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/User Guide/Editors/Readme.md",
+      "type": "document",
+      "name": "编辑器指南",
+      "filePath": "doc/User Guide/Editors/Readme.md",
+      "summary": "介绍 OpenTAP 测试计划编辑器的两种选择：商业/社区版的 Developer System（GUI）和开源的 TUI（终端文本界面），以及编辑器的核心功能概述。",
+      "tags": [
+        "documentation",
+        "user-guide",
+        "editor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc/User Guide/Introduction/Flow.drawio",
+      "type": "file",
+      "name": "Flow.drawio",
+      "filePath": "doc/User Guide/Introduction/Flow.drawio",
+      "summary": "测试步骤执行流程示意图，展示 Sequential 和 Parallel 两种子步骤执行拓扑结构。",
+      "tags": [
+        "diagram",
+        "documentation",
+        "execution-flow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc/User Guide/Introduction/OpenTAP_plugins.drawio",
+      "type": "file",
+      "name": "OpenTAP_plugins.drawio",
+      "filePath": "doc/User Guide/Introduction/OpenTAP_plugins.drawio",
+      "summary": "OpenTAP 与插件生态关系示意图，展示以 OpenTAP 引擎为中心、各类功能插件围绕其四周的架构。",
+      "tags": [
+        "diagram",
+        "documentation",
+        "architecture"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:doc/Release Notes/9.31/Readme.md",
+      "target": "document:doc/Release Notes/9.32/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/9.32/Readme.md",
+      "target": "document:doc/Release Notes/9.33/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

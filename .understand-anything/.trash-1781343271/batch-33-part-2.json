@@ -1,0 +1,3297 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/TestPlan.cs",
+      "type": "file",
+      "name": "TestPlan.cs",
+      "filePath": "Engine/TestPlan.cs",
+      "summary": "测试计划的核心数据模型，定义 Plan 的步骤集合、保存/加载、参数注册和断点（Break）机制，是 TestPlan 类型的主要实现文件。",
+      "tags": [
+        "test-plan",
+        "data-model",
+        "serialization",
+        "save-load"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/TestPlanExecution.cs",
+      "type": "file",
+      "name": "TestPlanExecution.cs",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "summary": "测试计划的执行引擎（partial class 扩展），实现 Open/Execute/Close 生命周期、资源 Prompt、异步执行、结果监听等核心运行逻辑。",
+      "tags": [
+        "test-execution",
+        "lifecycle",
+        "async",
+        "resource-management"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用 partial class 扩展 TestPlan，包含异步执行流程和 ManualResetEvent 同步机制。"
+    },
+    {
+      "id": "file:Engine/TestPlanRun.cs",
+      "type": "file",
+      "name": "TestPlanRun.cs",
+      "filePath": "Engine/TestPlanRun.cs",
+      "summary": "测试运行实例的数据模型，管理结果监听器（IResultListener）的注册与通知、步骤运行的调度与节流、Artifact 发布以及运行生命周期。",
+      "tags": [
+        "test-run",
+        "result-listener",
+        "artifact",
+        "run-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/TestPlanRunSummaryListener.cs",
+      "type": "file",
+      "name": "TestPlanRunSummaryListener.cs",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "summary": "测试运行摘要输出监听器，收集并格式化打印测试计划的执行结果、步骤判定（Verdict）、耗时统计和 Artifact 发布信息。",
+      "tags": [
+        "result-listener",
+        "summary",
+        "logging",
+        "verdict"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/TestStep.cs",
+      "type": "file",
+      "name": "TestStep.cs",
+      "filePath": "Engine/TestStep.cs",
+      "summary": "测试步骤的核心实现（partial class），定义 TestStep 基类及其扩展方法，包括子步骤执行、资源检查、参数化成员注册和格式化名称生成。",
+      "tags": [
+        "test-step",
+        "execution",
+        "data-model",
+        "extensions"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用 partial class 拆分 TestStep 和 TestStepExtensions，包含大量重载方法和缓存优化。"
+    },
+    {
+      "id": "class:Engine/TestPlan.cs:TestPlan",
+      "type": "class",
+      "name": "TestPlan",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        21,
+        484
+      ],
+      "summary": "TestPlan 测试计划核心类，封装步骤集合、参数注册、保存/加载逻辑以及断点（Break）机制，是 OpenTap 测试工作流的基础数据模型。",
+      "tags": [
+        "test-plan",
+        "data-model",
+        "serialization",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/TestPlan.cs:BreakOfferedEventArgs",
+      "type": "class",
+      "name": "BreakOfferedEventArgs",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        489,
+        515
+      ],
+      "summary": "BreakOfferedEventArgs 断点事件参数，携带当前步骤运行信息和是否起始断点的标记。",
+      "tags": [
+        "event",
+        "breakpoint",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:OnBreakOffered",
+      "type": "function",
+      "name": "OnBreakOffered",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        106,
+        126
+      ],
+      "summary": "OnBreakOffered 断点事件处理方法，在步骤暂停/终止时触发，支持 JumpToStep 回调。",
+      "tags": [
+        "breakpoint",
+        "event-handler",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:TestPlan",
+      "type": "function",
+      "name": "TestPlan",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        179,
+        184
+      ],
+      "summary": "方法 TestPlan，6 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:FlushXmlCache",
+      "type": "function",
+      "name": "FlushXmlCache",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        194,
+        194
+      ],
+      "summary": "方法 FlushXmlCache，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:GetCachedXml",
+      "type": "function",
+      "name": "GetCachedXml",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        197,
+        197
+      ],
+      "summary": "方法 GetCachedXml，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:Save:206",
+      "type": "function",
+      "name": "Save (line 206)",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        206,
+        228
+      ],
+      "summary": "Save 保存测试计划到 XML 流或文件，使用 TapSerializer 进行序列化并支持 XML 缓存，23 行。",
+      "tags": [
+        "save",
+        "serialization",
+        "xml",
+        "test-plan"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:Save:234",
+      "type": "function",
+      "name": "Save (line 234)",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        234,
+        234
+      ],
+      "summary": "Save 保存测试计划到 XML 流或文件，使用 TapSerializer 进行序列化并支持 XML 缓存，1 行。",
+      "tags": [
+        "save",
+        "serialization",
+        "xml",
+        "test-plan"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:Save:240",
+      "type": "function",
+      "name": "Save (line 240)",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        240,
+        267
+      ],
+      "summary": "Save 保存测试计划到 XML 流或文件，使用 TapSerializer 进行序列化并支持 XML 缓存，28 行。",
+      "tags": [
+        "save",
+        "serialization",
+        "xml",
+        "test-plan"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:Load:272",
+      "type": "function",
+      "name": "Load (line 272)",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        272,
+        272
+      ],
+      "summary": "Load 加载测试计划，从文件或流中反序列化 XML 并重建 TestPlan 对象图，支持缓存和错误处理模式，1 行。",
+      "tags": [
+        "load",
+        "deserialization",
+        "xml",
+        "test-plan"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:Load:278",
+      "type": "function",
+      "name": "Load (line 278)",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        278,
+        290
+      ],
+      "summary": "Load 加载测试计划，从文件或流中反序列化 XML 并重建 TestPlan 对象图，支持缓存和错误处理模式，13 行。",
+      "tags": [
+        "load",
+        "deserialization",
+        "xml",
+        "test-plan"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:Load:327",
+      "type": "function",
+      "name": "Load (line 327)",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        327,
+        327
+      ],
+      "summary": "Load 加载测试计划，从文件或流中反序列化 XML 并重建 TestPlan 对象图，支持缓存和错误处理模式，1 行。",
+      "tags": [
+        "load",
+        "deserialization",
+        "xml",
+        "test-plan"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:Load:335",
+      "type": "function",
+      "name": "Load (line 335)",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        335,
+        338
+      ],
+      "summary": "Load 加载测试计划，从文件或流中反序列化 XML 并重建 TestPlan 对象图，支持缓存和错误处理模式，4 行。",
+      "tags": [
+        "load",
+        "deserialization",
+        "xml",
+        "test-plan"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:Load:340",
+      "type": "function",
+      "name": "Load (line 340)",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        340,
+        374
+      ],
+      "summary": "Load 加载测试计划，从文件或流中反序列化 XML 并重建 TestPlan 对象图，支持缓存和错误处理模式，35 行。",
+      "tags": [
+        "load",
+        "deserialization",
+        "xml",
+        "test-plan"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:Reload",
+      "type": "function",
+      "name": "Reload",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        381,
+        392
+      ],
+      "summary": "Reload 重新加载测试计划，从已有文件流中刷新测试计划状态。",
+      "tags": [
+        "reload",
+        "deserialization",
+        "test-plan"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:GetPluginsRequiredToLoad",
+      "type": "function",
+      "name": "GetPluginsRequiredToLoad",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        399,
+        416
+      ],
+      "summary": "GetPluginsRequiredToLoad 扫描 XML 文件获取加载所需的插件列表，用于预加载验证。",
+      "tags": [
+        "plugin",
+        "validation",
+        "xml",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlan.cs:BreakOfferedEventArgs",
+      "type": "function",
+      "name": "BreakOfferedEventArgs",
+      "filePath": "Engine/TestPlan.cs",
+      "lineRange": [
+        510,
+        514
+      ],
+      "summary": "方法 BreakOfferedEventArgs，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TestPlanExecution.cs:TestPlan",
+      "type": "class",
+      "name": "TestPlan",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        16,
+        865
+      ],
+      "summary": "TestPlan 执行引擎（partial 扩展），实现测试计划的 Open/Execute/Close 生命周期，支持资源 Prompt、异步执行 AbortToken 和元数据参数传递。",
+      "tags": [
+        "test-execution",
+        "lifecycle",
+        "async",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:RunPrePlanRunMethods",
+      "type": "function",
+      "name": "RunPrePlanRunMethods",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        18,
+        83
+      ],
+      "summary": "RunPrePlanRunMethods 执行所有步骤的 PrePlanRun 生命周期方法，为测试执行做准备工作。",
+      "tags": [
+        "lifecycle",
+        "pre-run",
+        "execution",
+        "test-plan"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:PrintWaitingMessage",
+      "type": "function",
+      "name": "PrintWaitingMessage",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        95,
+        109
+      ],
+      "summary": "PrintWaitingMessage 等待资源时打印提示信息，列出当前等待的资源和仪器。",
+      "tags": [
+        "resource",
+        "logging",
+        "prompt"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:ExecTestPlan",
+      "type": "function",
+      "name": "ExecTestPlan",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        111,
+        248
+      ],
+      "summary": "ExecTestPlan 核心执行循环，遍历步骤树并按序执行每个测试步骤，支持动态步骤列表变更。",
+      "tags": [
+        "execution",
+        "core-loop",
+        "test-plan",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:finishTestPlanRun",
+      "type": "function",
+      "name": "finishTestPlanRun",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        250,
+        360
+      ],
+      "summary": "finishTestPlanRun 运行结束处理，收集执行统计、发布 Artifact、打印摘要并更新运行状态。",
+      "tags": [
+        "execution",
+        "finish",
+        "summary",
+        "artifact"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:StartResourcePromptAsync",
+      "type": "function",
+      "name": "StartResourcePromptAsync",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        369,
+        449
+      ],
+      "summary": "StartResourcePromptAsync 资源提示异步启动，在测试执行前展示所需的硬件资源和仪器配置要求。",
+      "tags": [
+        "resource",
+        "prompt",
+        "async",
+        "execution"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:Execute:455",
+      "type": "function",
+      "name": "Execute (line 455)",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        455,
+        458
+      ],
+      "summary": "Execute (line 455) 执行方法，启动测试计划的同步/异步执行，4 行。",
+      "tags": [
+        "execution",
+        "test-plan",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:ExecuteAsync:462",
+      "type": "function",
+      "name": "ExecuteAsync (line 462)",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        462,
+        465
+      ],
+      "summary": "ExecuteAsync (line 462) 执行方法，启动测试计划的同步/异步执行，4 行。",
+      "tags": [
+        "execution",
+        "test-plan",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:ExecuteAsync:472",
+      "type": "function",
+      "name": "ExecuteAsync (line 472)",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        472,
+        475
+      ],
+      "summary": "ExecuteAsync (line 472) 执行方法，启动测试计划的同步/异步执行，4 行。",
+      "tags": [
+        "execution",
+        "test-plan",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:ExecuteAsync:486",
+      "type": "function",
+      "name": "ExecuteAsync (line 486)",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        486,
+        503
+      ],
+      "summary": "ExecuteAsync (line 486) 执行方法，启动测试计划的同步/异步执行，18 行。",
+      "tags": [
+        "execution",
+        "test-plan",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:Execute:514",
+      "type": "function",
+      "name": "Execute (line 514)",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        514,
+        517
+      ],
+      "summary": "Execute (line 514) 执行方法，启动测试计划的同步/异步执行，4 行。",
+      "tags": [
+        "execution",
+        "test-plan",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:DoExecute",
+      "type": "function",
+      "name": "DoExecute",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        528,
+        722
+      ],
+      "summary": "DoExecute 实际执行入口，管理测试计划从 Open 到 Execute 到 Close 的完整生命周期，195 行。",
+      "tags": [
+        "execution",
+        "lifecycle",
+        "test-plan",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:Execute:730",
+      "type": "function",
+      "name": "Execute (line 730)",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        730,
+        733
+      ],
+      "summary": "Execute (line 730) 执行方法，启动测试计划的同步/异步执行，4 行。",
+      "tags": [
+        "execution",
+        "test-plan",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:Open:745",
+      "type": "function",
+      "name": "Open (line 745)",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        745,
+        748
+      ],
+      "summary": "Open 打开测试计划运行，初始化资源并注册结果监听器，4 行。",
+      "tags": [
+        "open",
+        "initialization",
+        "test-plan",
+        "resource"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:Open:755",
+      "type": "function",
+      "name": "Open (line 755)",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        755,
+        758
+      ],
+      "summary": "Open 打开测试计划运行，初始化资源并注册结果监听器，4 行。",
+      "tags": [
+        "open",
+        "initialization",
+        "test-plan",
+        "resource"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:Open:766",
+      "type": "function",
+      "name": "Open (line 766)",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        766,
+        769
+      ],
+      "summary": "Open 打开测试计划运行，初始化资源并注册结果监听器，4 行。",
+      "tags": [
+        "open",
+        "initialization",
+        "test-plan",
+        "resource"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:Open:778",
+      "type": "function",
+      "name": "Open (line 778)",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        778,
+        826
+      ],
+      "summary": "Open 打开测试计划运行，初始化资源并注册结果监听器，49 行。",
+      "tags": [
+        "open",
+        "initialization",
+        "test-plan",
+        "resource"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:OpenInternal",
+      "type": "function",
+      "name": "OpenInternal",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        828,
+        841
+      ],
+      "summary": "OpenInternal 内部打开实现，执行 PrePlanRun 并完成运行初始化步骤序列。",
+      "tags": [
+        "open",
+        "internal",
+        "test-plan",
+        "initialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanExecution.cs:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "Engine/TestPlanExecution.cs",
+      "lineRange": [
+        847,
+        864
+      ],
+      "summary": "Close 关闭测试计划运行，释放资源并完成最终日志输出。",
+      "tags": [
+        "close",
+        "cleanup",
+        "test-plan",
+        "lifecycle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TestPlanRun.cs:TestPlanRun",
+      "type": "class",
+      "name": "TestPlanRun",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        24,
+        762
+      ],
+      "summary": "TestPlanRun 运行实例类，管理结果监听器注册/移除、步骤运行调度与节流、Artifact 发布和运行状态生命周期。",
+      "tags": [
+        "test-run",
+        "result-listener",
+        "artifact",
+        "scheduling"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:AddResultListener",
+      "type": "function",
+      "name": "AddResultListener",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        104,
+        113
+      ],
+      "summary": "AddResultListener 注册结果监听器，将其加入运行的结果通知列表。",
+      "tags": [
+        "result-listener",
+        "registration",
+        "test-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:RemoveResultListener",
+      "type": "function",
+      "name": "RemoveResultListener",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        121,
+        130
+      ],
+      "summary": "方法 RemoveResultListener，10 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:ThrottleResultPropagation",
+      "type": "function",
+      "name": "ThrottleResultPropagation",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        159,
+        189
+      ],
+      "summary": "ThrottleResultPropagation 结果传播节流，限制高频结果事件的发送速率以避免 UI 过载。",
+      "tags": [
+        "throttling",
+        "result-propagation",
+        "performance"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:WaitForResults",
+      "type": "function",
+      "name": "WaitForResults",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        194,
+        200
+      ],
+      "summary": "WaitForResults 等待所有待处理的结果通知完成。",
+      "tags": [
+        "synchronization",
+        "result",
+        "wait"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:AddTestPlanCompleted",
+      "type": "function",
+      "name": "AddTestPlanCompleted",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        225,
+        296
+      ],
+      "summary": "AddTestPlanCompleted 测试计划完成事件处理，创建最终运行结果并通知所有监听器。",
+      "tags": [
+        "completion",
+        "result",
+        "event",
+        "test-run"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:ScheduleInResultProcessingThread:304",
+      "type": "function",
+      "name": "ScheduleInResultProcessingThread (line 304)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        304,
+        322
+      ],
+      "summary": "ScheduleInResultProcessingThread 在结果处理线程中调度执行，确保结果通知按序处理。",
+      "tags": [
+        "scheduling",
+        "result-processing",
+        "threading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:ScheduleInResultProcessingThread:336",
+      "type": "function",
+      "name": "ScheduleInResultProcessingThread (line 336)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        336,
+        360
+      ],
+      "summary": "ScheduleInResultProcessingThread 在结果处理线程中调度执行，确保结果通知按序处理。",
+      "tags": [
+        "scheduling",
+        "result-processing",
+        "threading"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:AddTestStepRunStart",
+      "type": "function",
+      "name": "AddTestStepRunStart",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        362,
+        386
+      ],
+      "summary": "AddTestStepRunStart 步骤运行开始/完成时通知所有结果监听器。",
+      "tags": [
+        "result-listener",
+        "event",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:AddTestStepStateUpdate",
+      "type": "function",
+      "name": "AddTestStepStateUpdate",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        388,
+        405
+      ],
+      "summary": "AddTestStepStateUpdate 步骤状态更新通知，将步骤的运行状态变更告知监听器。",
+      "tags": [
+        "result-listener",
+        "state-update",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:AddTestStepRunCompleted",
+      "type": "function",
+      "name": "AddTestStepRunCompleted",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        407,
+        428
+      ],
+      "summary": "AddTestStepRunCompleted 步骤运行开始/完成时通知所有结果监听器。",
+      "tags": [
+        "result-listener",
+        "event",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:RemoveFaultyResultListener",
+      "type": "function",
+      "name": "RemoveFaultyResultListener",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        430,
+        442
+      ],
+      "summary": "RemoveFaultyResultListener 移除出错的结果监听器，防止异常监听器阻塞后续结果传播。",
+      "tags": [
+        "error-handling",
+        "result-listener",
+        "cleanup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:WaitForResourcesOpened",
+      "type": "function",
+      "name": "WaitForResourcesOpened",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        450,
+        453
+      ],
+      "summary": "方法 WaitForResourcesOpened，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:TestPlanRun:464",
+      "type": "function",
+      "name": "TestPlanRun (line 464)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        464,
+        468
+      ],
+      "summary": "方法 TestPlanRun (line 464)，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:TestPlanRun:489",
+      "type": "function",
+      "name": "TestPlanRun (line 489)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        489,
+        583
+      ],
+      "summary": "方法 TestPlanRun (line 489)，95 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:Start",
+      "type": "function",
+      "name": "Start",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        586,
+        605
+      ],
+      "summary": "Start Start 启动运行或线程，20 行。",
+      "tags": [
+        "start",
+        "lifecycle"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:TestPlanRun:607",
+      "type": "function",
+      "name": "TestPlanRun (line 607)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        607,
+        626
+      ],
+      "summary": "方法 TestPlanRun (line 607)，20 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:TestPlanRun:628",
+      "type": "function",
+      "name": "TestPlanRun (line 628)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        628,
+        665
+      ],
+      "summary": "方法 TestPlanRun (line 628)，38 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:PublishArtifactWithRunAsync:675",
+      "type": "function",
+      "name": "PublishArtifactWithRunAsync (line 675)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        675,
+        741
+      ],
+      "summary": "PublishArtifactWithRunAsync (line 675) 发布运行产物，将文件或流关联到当前测试运行。",
+      "tags": [
+        "artifact",
+        "publish",
+        "test-run"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:PublishArtifact:746",
+      "type": "function",
+      "name": "PublishArtifact (line 746)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        746,
+        746
+      ],
+      "summary": "PublishArtifact (line 746) 发布运行产物，将文件或流关联到当前测试运行。",
+      "tags": [
+        "artifact",
+        "publish",
+        "test-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:PublishArtifactAsync:751",
+      "type": "function",
+      "name": "PublishArtifactAsync (line 751)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        751,
+        751
+      ],
+      "summary": "PublishArtifactAsync (line 751) 发布运行产物，将文件或流关联到当前测试运行。",
+      "tags": [
+        "artifact",
+        "publish",
+        "test-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:PublishArtifact:754",
+      "type": "function",
+      "name": "PublishArtifact (line 754)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        754,
+        754
+      ],
+      "summary": "PublishArtifact (line 754) 发布运行产物，将文件或流关联到当前测试运行。",
+      "tags": [
+        "artifact",
+        "publish",
+        "test-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRun.cs:PublishArtifactAsync:757",
+      "type": "function",
+      "name": "PublishArtifactAsync (line 757)",
+      "filePath": "Engine/TestPlanRun.cs",
+      "lineRange": [
+        757,
+        757
+      ],
+      "summary": "PublishArtifactAsync (line 757) 发布运行产物，将文件或流关联到当前测试运行。",
+      "tags": [
+        "artifact",
+        "publish",
+        "test-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TestPlanRunSummaryListener.cs:TestPlanRunSummaryListener",
+      "type": "class",
+      "name": "TestPlanRunSummaryListener",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        15,
+        301
+      ],
+      "summary": "TestPlanRunSummaryListener 运行摘要监听器，收集并格式化打印测试执行结果、步骤判定（Verdict）、耗时和 Artifact 信息。",
+      "tags": [
+        "result-listener",
+        "summary",
+        "verdict",
+        "logging"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:TestPlanRunSummaryListener",
+      "type": "function",
+      "name": "TestPlanRunSummaryListener",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        53,
+        57
+      ],
+      "summary": "方法 TestPlanRunSummaryListener，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:OnTestPlanRunStart",
+      "type": "function",
+      "name": "OnTestPlanRunStart",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        61,
+        72
+      ],
+      "summary": "OnTestPlanRunStart 测试计划运行开始时调用的监听器回调。",
+      "tags": [
+        "callback",
+        "listener",
+        "test-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:OnTestStepRunStart",
+      "type": "function",
+      "name": "OnTestStepRunStart",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        76,
+        87
+      ],
+      "summary": "OnTestStepRunStart 步骤运行开始/完成时收集运行数据并更新摘要统计。",
+      "tags": [
+        "callback",
+        "listener",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:OnTestStepRunCompleted",
+      "type": "function",
+      "name": "OnTestStepRunCompleted",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        89,
+        103
+      ],
+      "summary": "OnTestStepRunCompleted 步骤运行开始/完成时收集运行数据并更新摘要统计。",
+      "tags": [
+        "callback",
+        "listener",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:stepRunIndent",
+      "type": "function",
+      "name": "stepRunIndent",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        105,
+        117
+      ],
+      "summary": "stepRunIndent 计算步骤运行的缩进层级，用于树形结构输出。",
+      "tags": [
+        "formatting",
+        "indentation",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:printSummary",
+      "type": "function",
+      "name": "printSummary",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        119,
+        133
+      ],
+      "summary": "打印测试运行统计摘要，包括每个步骤的判定、耗时和嵌套层级，15 行。",
+      "tags": [
+        "summary",
+        "logging",
+        "verdict",
+        "performance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:FormatSize",
+      "type": "function",
+      "name": "FormatSize",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        137,
+        147
+      ],
+      "summary": "FormatSize 将字节大小格式化为人类可读的字符串（B/KB/MB/GB）。",
+      "tags": [
+        "formatting",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:PrintArtifactsSummary",
+      "type": "function",
+      "name": "PrintArtifactsSummary",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        150,
+        174
+      ],
+      "summary": "PrintArtifactsSummary 打印 Artifact 发布总结，列出所有已发布的产物文件。",
+      "tags": [
+        "summary",
+        "artifact",
+        "logging"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:PrintSummary",
+      "type": "function",
+      "name": "PrintSummary",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        177,
+        253
+      ],
+      "summary": "打印测试运行统计摘要，包括每个步骤的判定、耗时和嵌套层级，77 行。",
+      "tags": [
+        "summary",
+        "logging",
+        "verdict",
+        "performance"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:getMaxVerdictLength",
+      "type": "function",
+      "name": "getMaxVerdictLength",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        255,
+        268
+      ],
+      "summary": "getMaxVerdictLength 计算所有步骤判定字符串的最大长度，用于列对齐。",
+      "tags": [
+        "formatting",
+        "verdict",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestPlanRunSummaryListener.cs:OnArtifactPublished",
+      "type": "function",
+      "name": "OnArtifactPublished",
+      "filePath": "Engine/TestPlanRunSummaryListener.cs",
+      "lineRange": [
+        276,
+        300
+      ],
+      "summary": "OnArtifactPublished Artifact 发布回调，收集发布的产物信息供摘要输出。",
+      "tags": [
+        "callback",
+        "artifact",
+        "listener"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/TestStep.cs:TestStep",
+      "type": "class",
+      "name": "TestStep",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        30,
+        575
+      ],
+      "summary": "TestStep 测试步骤基类（partial），定义步骤的基本行为：PrePlanRun/Run/PostPlanRun 生命周期、子步骤导航、参数化成员和默认名称生成。",
+      "tags": [
+        "test-step",
+        "base-class",
+        "lifecycle",
+        "data-model"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/TestStep.cs:TestStepExtensions",
+      "type": "class",
+      "name": "TestStepExtensions",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        580,
+        1456
+      ],
+      "summary": "TestStepExtensions 为 TestStep 提供扩展方法，封装复杂的子步骤执行逻辑（DoRun）、设置查找、版本升级和断点处理。",
+      "tags": [
+        "extensions",
+        "test-step",
+        "execution",
+        "utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RecursivelyGetChildSteps:206",
+      "type": "function",
+      "name": "RecursivelyGetChildSteps (line 206)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        206,
+        209
+      ],
+      "summary": "方法 RecursivelyGetChildSteps (line 206)，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetChildSteps:216",
+      "type": "function",
+      "name": "GetChildSteps (line 216)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        216,
+        219
+      ],
+      "summary": "方法 GetChildSteps (line 216)，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GenerateDefaultNames:232",
+      "type": "function",
+      "name": "GenerateDefaultNames (line 232)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        232,
+        238
+      ],
+      "summary": "方法 GenerateDefaultNames (line 232)，7 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GenerateDefaultNames:243",
+      "type": "function",
+      "name": "GenerateDefaultNames (line 243)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        243,
+        244
+      ],
+      "summary": "方法 GenerateDefaultNames (line 243)，2 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:TestStep",
+      "type": "function",
+      "name": "TestStep",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        251,
+        264
+      ],
+      "summary": "TestStep 构造函数，初始化步骤的名称、ID 和默认子步骤。",
+      "tags": [
+        "constructor",
+        "test-step",
+        "initialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:loadDefaultResources",
+      "type": "function",
+      "name": "loadDefaultResources",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        268,
+        345
+      ],
+      "summary": "loadDefaultResources 延迟加载步骤的默认资源和设置，使用缓存避免重复反射开销。",
+      "tags": [
+        "resource",
+        "lazy-loading",
+        "settings",
+        "test-step"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:preOrPostPlanRunOverridden",
+      "type": "function",
+      "name": "preOrPostPlanRunOverridden",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        349,
+        365
+      ],
+      "summary": "preOrPostPlanRunOverridden 检查派生类是否重写了 PrePlanRun 或 PostPlanRun 方法。",
+      "tags": [
+        "reflection",
+        "override-check",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetParent:401",
+      "type": "function",
+      "name": "GetParent (line 401)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        401,
+        404
+      ],
+      "summary": "方法 GetParent (line 401)，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:PrePlanRun",
+      "type": "function",
+      "name": "PrePlanRun",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        409,
+        412
+      ],
+      "summary": "方法 PrePlanRun，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        418,
+        418
+      ],
+      "summary": "方法 Run，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:PostPlanRun",
+      "type": "function",
+      "name": "PostPlanRun",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        429,
+        432
+      ],
+      "summary": "方法 PostPlanRun，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:OfferBreak:438",
+      "type": "function",
+      "name": "OfferBreak (line 438)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        438,
+        441
+      ],
+      "summary": "方法 OfferBreak (line 438)，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildSteps:447",
+      "type": "function",
+      "name": "RunChildSteps (line 447)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        447,
+        450
+      ],
+      "summary": "RunChildSteps (line 447) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，4 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildSteps:456",
+      "type": "function",
+      "name": "RunChildSteps (line 456)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        456,
+        459
+      ],
+      "summary": "RunChildSteps (line 456) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，4 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildSteps:466",
+      "type": "function",
+      "name": "RunChildSteps (line 466)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        466,
+        469
+      ],
+      "summary": "RunChildSteps (line 466) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，4 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildSteps:477",
+      "type": "function",
+      "name": "RunChildSteps (line 477)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        477,
+        480
+      ],
+      "summary": "RunChildSteps (line 477) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，4 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildStep:487",
+      "type": "function",
+      "name": "RunChildStep (line 487)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        487,
+        490
+      ],
+      "summary": "RunChildStep (line 487) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，4 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildStep:498",
+      "type": "function",
+      "name": "RunChildStep (line 498)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        498,
+        501
+      ],
+      "summary": "RunChildStep (line 498) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，4 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:SetValue",
+      "type": "function",
+      "name": "SetValue",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        565,
+        574
+      ],
+      "summary": "方法 SetValue，10 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetParent:591",
+      "type": "function",
+      "name": "GetParent (line 591)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        591,
+        591
+      ],
+      "summary": "方法 GetParent (line 591)，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetParent:598",
+      "type": "function",
+      "name": "GetParent (line 598)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        598,
+        608
+      ],
+      "summary": "方法 GetParent (line 598)，11 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:OfferBreak:614",
+      "type": "function",
+      "name": "OfferBreak (line 614)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        614,
+        618
+      ],
+      "summary": "方法 OfferBreak (line 614)，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:OfferBreak:623",
+      "type": "function",
+      "name": "OfferBreak (line 623)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        623,
+        636
+      ],
+      "summary": "方法 OfferBreak (line 623)，14 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetEnabledChildSteps",
+      "type": "function",
+      "name": "GetEnabledChildSteps",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        640,
+        643
+      ],
+      "summary": "GetEnabledChildSteps 获取步骤的所有已启用子步骤。",
+      "tags": [
+        "utility",
+        "filter",
+        "child-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetChildSteps:650",
+      "type": "function",
+      "name": "GetChildSteps (line 650)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        650,
+        654
+      ],
+      "summary": "方法 GetChildSteps (line 650)，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RecursivelyGetChildSteps:661",
+      "type": "function",
+      "name": "RecursivelyGetChildSteps (line 661)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        661,
+        667
+      ],
+      "summary": "方法 RecursivelyGetChildSteps (line 661)，7 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildSteps:676",
+      "type": "function",
+      "name": "RunChildSteps (line 676)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        676,
+        679
+      ],
+      "summary": "RunChildSteps (line 676) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，4 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildSteps:689",
+      "type": "function",
+      "name": "RunChildSteps (line 689)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        689,
+        694
+      ],
+      "summary": "RunChildSteps (line 689) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，6 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildSteps:706",
+      "type": "function",
+      "name": "RunChildSteps (line 706)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        706,
+        809
+      ],
+      "summary": "RunChildSteps (line 706) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，104 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildStep:819",
+      "type": "function",
+      "name": "RunChildStep (line 819)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        819,
+        824
+      ],
+      "summary": "RunChildStep (line 819) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，6 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:RunChildStep:836",
+      "type": "function",
+      "name": "RunChildStep (line 836)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        836,
+        874
+      ],
+      "summary": "RunChildStep (line 836) 执行子步骤的运行逻辑，支持附加参数、取消令牌和断点异常处理，39 行。",
+      "tags": [
+        "execution",
+        "child-step",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetStepPath",
+      "type": "function",
+      "name": "GetStepPath",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        881,
+        902
+      ],
+      "summary": "GetStepPath 获取步骤在测试计划树中的完整路径。",
+      "tags": [
+        "utility",
+        "path",
+        "hierarchy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:UpgradeVerdict:905",
+      "type": "function",
+      "name": "UpgradeVerdict (line 905)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        905,
+        917
+      ],
+      "summary": "UpgradeVerdict (line 905) 版本计算或判定升级逻辑。",
+      "tags": [
+        "version",
+        "verdict",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:DoRun",
+      "type": "function",
+      "name": "DoRun",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        923,
+        1139
+      ],
+      "summary": "DoRun 单个步骤的核心运行逻辑，管理 Init、PrePlanRun、Run 和 PostPlanRun 生命周期，217 行。",
+      "tags": [
+        "execution",
+        "core",
+        "test-step",
+        "lifecycle"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:CheckResources",
+      "type": "function",
+      "name": "CheckResources",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        1144,
+        1158
+      ],
+      "summary": "CheckResources 检查步骤所需的所有资源（仪器、DUT 等）是否可用。",
+      "tags": [
+        "resource",
+        "validation",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetSettingsLookupNoCache",
+      "type": "function",
+      "name": "GetSettingsLookupNoCache",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        1161,
+        1191
+      ],
+      "summary": "GetSettingsLookupNoCache 构建设置查找表，映射目标类型和源类型的设置注入关系。",
+      "tags": [
+        "settings",
+        "lookup",
+        "reflection",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetSettingsLookup",
+      "type": "function",
+      "name": "GetSettingsLookup",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        1199,
+        1218
+      ],
+      "summary": "GetSettingsLookup 构建设置查找表，映射目标类型和源类型的设置注入关系。",
+      "tags": [
+        "settings",
+        "lookup",
+        "reflection",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetObjectSettings:1230",
+      "type": "function",
+      "name": "GetObjectSettings (line 1230)",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        1230,
+        1311
+      ],
+      "summary": "GetObjectSettings 获取对象的设置属性列表，82 行。",
+      "tags": [
+        "settings",
+        "reflection",
+        "utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestStep.cs:GetFormattedName",
+      "type": "function",
+      "name": "GetFormattedName",
+      "filePath": "Engine/TestStep.cs",
+      "lineRange": [
+        1343,
+        1455
+      ],
+      "summary": "GetFormattedName 生成测试步骤的格式化显示名称，结合 Display 属性和类型信息。",
+      "tags": [
+        "formatting",
+        "display",
+        "test-step",
+        "naming"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "class:Engine/TestPlan.cs:TestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "class:Engine/TestPlan.cs:TestPlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "class:Engine/TestPlan.cs:BreakOfferedEventArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "class:Engine/TestPlan.cs:BreakOfferedEventArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:OnBreakOffered",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:TestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:TestPlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:FlushXmlCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:FlushXmlCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:GetCachedXml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:GetCachedXml",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Save:206",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Save:206",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Save:234",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Save:234",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Save:240",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Save:240",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Load:272",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Load:272",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Load:278",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Load:278",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Load:327",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Load:327",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Load:335",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Load:335",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Load:340",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Load:340",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Reload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:Reload",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:GetPluginsRequiredToLoad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:GetPluginsRequiredToLoad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:BreakOfferedEventArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "function:Engine/TestPlan.cs:BreakOfferedEventArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "class:Engine/TestPlanExecution.cs:TestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:RunPrePlanRunMethods",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:PrintWaitingMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:ExecTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:finishTestPlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:StartResourcePromptAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Execute:455",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Execute:455",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:ExecuteAsync:462",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:ExecuteAsync:462",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:ExecuteAsync:472",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:ExecuteAsync:472",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:ExecuteAsync:486",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:ExecuteAsync:486",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Execute:514",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Execute:514",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:DoExecute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Execute:730",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Execute:730",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Open:745",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Open:745",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Open:755",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Open:755",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Open:766",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Open:766",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Open:778",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Open:778",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:OpenInternal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanExecution.cs",
+      "target": "function:Engine/TestPlanExecution.cs:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "class:Engine/TestPlanRun.cs:TestPlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "class:Engine/TestPlanRun.cs:TestPlanRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:AddResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:AddResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:RemoveResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:RemoveResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:ThrottleResultPropagation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:WaitForResults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:WaitForResults",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:AddTestPlanCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:ScheduleInResultProcessingThread:304",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:ScheduleInResultProcessingThread:336",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:AddTestStepRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:AddTestStepStateUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:AddTestStepRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:RemoveFaultyResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:WaitForResourcesOpened",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:WaitForResourcesOpened",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:TestPlanRun:464",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:TestPlanRun:464",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:TestPlanRun:489",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:TestPlanRun:489",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:Start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:TestPlanRun:607",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:TestPlanRun:607",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:TestPlanRun:628",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:TestPlanRun:628",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:PublishArtifactWithRunAsync:675",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:PublishArtifact:746",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:PublishArtifact:746",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:PublishArtifactAsync:751",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:PublishArtifactAsync:751",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:PublishArtifact:754",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:PublishArtifact:754",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:PublishArtifactAsync:757",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRun.cs",
+      "target": "function:Engine/TestPlanRun.cs:PublishArtifactAsync:757",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "class:Engine/TestPlanRunSummaryListener.cs:TestPlanRunSummaryListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "class:Engine/TestPlanRunSummaryListener.cs:TestPlanRunSummaryListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:TestPlanRunSummaryListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:TestPlanRunSummaryListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:OnTestPlanRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:OnTestPlanRunStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:OnTestStepRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:OnTestStepRunStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:OnTestStepRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:OnTestStepRunCompleted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:stepRunIndent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:printSummary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:FormatSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:PrintArtifactsSummary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:PrintArtifactsSummary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:PrintSummary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:PrintSummary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:getMaxVerdictLength",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:OnArtifactPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlanRunSummaryListener.cs",
+      "target": "function:Engine/TestPlanRunSummaryListener.cs:OnArtifactPublished",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "class:Engine/TestStep.cs:TestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "class:Engine/TestStep.cs:TestStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "class:Engine/TestStep.cs:TestStepExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "class:Engine/TestStep.cs:TestStepExtensions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RecursivelyGetChildSteps:206",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RecursivelyGetChildSteps:206",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetChildSteps:216",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetChildSteps:216",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GenerateDefaultNames:232",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GenerateDefaultNames:232",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GenerateDefaultNames:243",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GenerateDefaultNames:243",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:TestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:TestStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:loadDefaultResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:preOrPostPlanRunOverridden",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetParent:401",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetParent:401",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:PrePlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:PrePlanRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:PostPlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:PostPlanRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:OfferBreak:438",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:OfferBreak:438",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:447",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:447",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:456",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:456",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:466",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:466",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:477",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:477",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildStep:487",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildStep:487",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildStep:498",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildStep:498",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:SetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetParent:591",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetParent:591",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetParent:598",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetParent:598",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:OfferBreak:614",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:OfferBreak:614",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:OfferBreak:623",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:OfferBreak:623",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetEnabledChildSteps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetEnabledChildSteps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetChildSteps:650",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetChildSteps:650",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RecursivelyGetChildSteps:661",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RecursivelyGetChildSteps:661",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:676",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:676",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:689",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:689",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:706",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildSteps:706",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildStep:819",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildStep:819",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildStep:836",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:RunChildStep:836",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetStepPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:UpgradeVerdict:905",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:DoRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:CheckResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetSettingsLookupNoCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetSettingsLookup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetObjectSettings:1230",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetFormattedName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStep.cs",
+      "target": "function:Engine/TestStep.cs:GetFormattedName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

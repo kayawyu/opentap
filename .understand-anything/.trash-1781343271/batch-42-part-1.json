@@ -1,0 +1,575 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/InterfaceBasedInstrument.cs",
+      "type": "file",
+      "name": "InterfaceBasedInstrument.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/InterfaceBasedInstrument.cs",
+      "summary": "演示如何基于接口构建仪器的示例，实现 IInstrument 接口以展示 OpenTAP 仪器生命周期模式（Open/Close），含 Name 属性、连接状态管理和 Activity 事件触发。",
+      "tags": ["example", "instrument", "interface", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs",
+      "type": "file",
+      "name": "MeasureUsingConnectionsStep.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs",
+      "summary": "演示如何使用 Connection 连接仪器与被测设备的测试步骤示例，通过选择射频连接路径计算电缆损耗并执行测量，展示了 OpenTAP 资源连接拓扑模式。",
+      "tags": ["example", "test-step", "connection", "measurement", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "type": "file",
+      "name": "ResourceTopology.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "summary": "演示 OpenTAP 资源拓扑和仪器发现机制，展示如何通过 IResource 接口开放仪器、使用 IIdInstrument 接口定义自定义标识，以及如何处理 IgnoredInstrument 属性来排除特定资源。",
+      "tags": ["example", "resource", "topology", "interface", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs",
+      "type": "file",
+      "name": "ScpiInstrumentExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs",
+      "summary": "演示如何基于 ScpiInstrument 基类构建 SCPI 仪器的示例，展示 Open/Close 生命周期、Configure 配置方法、SweepMeasurement 扫频测量以及 SCPI 命令和查询的使用模式。",
+      "tags": ["example", "scpi", "instrument", "measurement", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs",
+      "type": "file",
+      "name": "SetSwitchMatrixStep.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs",
+      "summary": "演示如何控制开关矩阵的测试步骤，通过 AvailableChannels 属性展示可用通道列表，调用 SwitchMatrix.SetMatrixChannel 设置特定通道，并包含错误处理的 Run 方法。",
+      "tags": ["example", "test-step", "switch-matrix", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchStep.cs",
+      "type": "file",
+      "name": "SetSwitchStep.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchStep.cs",
+      "summary": "演示如何控制双位置开关的测试步骤，通过 AvailablePositions 属性展示可选位置列表，调用 Switch.SetPosition 设置目标位置的最简示例。",
+      "tags": ["example", "test-step", "switch", "sdk-plugin-development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleDut.cs",
+      "type": "file",
+      "name": "SimpleDut.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleDut.cs",
+      "summary": "演示如何实现被测设备（DUT）的最简示例，继承 Dut 基类并实现 Open/Close 生命周期方法以及 DoNothing 操作，展示元数据属性设置。",
+      "tags": ["example", "dut", "instrument", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs",
+      "type": "file",
+      "name": "SimpleInstrument.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs",
+      "summary": "演示如何实现最简仪器的示例，继承 Instrument 基类并实现 Open/Close 生命周期方法，展示 VisaAddress 属性和 DoNothing 操作模式。",
+      "tags": ["example", "instrument", "sdk-plugin-development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs",
+      "type": "file",
+      "name": "SwitchMatrixInstrument.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs",
+      "summary": "演示如何实现开关矩阵仪器的示例，管理多通道矩阵切换，包含 SetMatrixChannel(row, col) 核心方法、通道集合管理和内部连接重置逻辑。",
+      "tags": ["example", "switch-matrix", "instrument", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPortInstrument.cs",
+      "type": "file",
+      "name": "TwoPortInstrument.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPortInstrument.cs",
+      "summary": "演示如何实现双端口仪器的示例，定义 PortA 和 PortB 两个 Port 对象，实现开放/关闭生命周期以及 SetupInstrument 配置功率的方法。",
+      "tags": ["example", "instrument", "port", "sdk-plugin-development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPositionSwitchInstrument.cs",
+      "type": "file",
+      "name": "TwoPositionSwitchInstrument.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPositionSwitchInstrument.cs",
+      "summary": "演示如何实现双位置切换开关仪器的示例，定义 Position1 和 Position2 并追踪 CurrentPosition，提供 SetPosition 方法切换开关状态。",
+      "tags": ["example", "switch", "instrument", "sdk-plugin-development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs",
+      "type": "file",
+      "name": "UsingDutAndInstStep.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs",
+      "summary": "演示如何在测试步骤中同时使用仪器和被测设备的示例，展示 ExampleInstrument 和 ExampleDut 两种资源的协同调用模式，并在 Run 方法中打印日志和升级判定结果。",
+      "tags": ["example", "test-step", "dut", "instrument", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:sdk/Examples/PluginDevelopment/PluginDevelopment.csproj",
+      "type": "config",
+      "name": "PluginDevelopment.csproj",
+      "filePath": "sdk/Examples/PluginDevelopment/PluginDevelopment.csproj",
+      "summary": "PluginDevelopment 示例项目的 C# 项目文件，输出类型为 Library，支持 Debug/Release/Debug CE 多配置构建，引用 OpenTAP SDK 作为包依赖，并指定 package.xml 为包定义文件。",
+      "tags": ["configuration", "build-system", "csharp", "sdk-plugin-development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/InterfaceBasedInstrument.cs:InterfaceBasedInstrument",
+      "type": "class",
+      "name": "InterfaceBasedInstrument",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/InterfaceBasedInstrument.cs",
+      "lineRange": [28, 121],
+      "summary": "基于接口实现的仪器类，继承 Instrument 基类并实现 IInstrument 接口，管理仪器名称、连接状态和 Activity 事件，展示完整的 Open/Close 生命周期模式。",
+      "tags": ["instrument", "interface", "lifecycle", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs:MeasureUsingConnectionsStep",
+      "type": "class",
+      "name": "MeasureUsingConnectionsStep",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs",
+      "lineRange": [28, 107],
+      "summary": "使用 Connection 机制执行射频测量的测试步骤类，包含 Generator 和 DUT 资源、SelectedConnection 连接选择、Power/Frequency 设置，Run 方法执行电缆损耗计算并调用仪器测量。",
+      "tags": ["test-step", "connection", "measurement", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:InstrumentTopology",
+      "type": "class",
+      "name": "InstrumentTopology",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "lineRange": [23, 67],
+      "summary": "资源拓扑配置类，管理多个仪器资源的发现和使用，包含 SCPI 仪器、ID 仪器和 IgnoredInstrument 排除项，通过 GetId 方法委托获取仪器标识。",
+      "tags": ["resource", "topology", "instrument", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:TopologyInstrumentStep",
+      "type": "class",
+      "name": "TopologyInstrumentStep",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "lineRange": [69, 80],
+      "summary": "测试步骤类，从拓扑中选取仪器并调用 GetId 获取标识，将结果输出到日志。",
+      "tags": ["test-step", "topology", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:IIdInstrument",
+      "type": "class",
+      "name": "IIdInstrument",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "lineRange": [83, 86],
+      "summary": "自定义接口，定义 IResource 仪器必须实现的 GetId 方法，用于通过资源拓扑获取仪器唯一标识。",
+      "tags": ["interface", "resource", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:SimpleIdInstrument",
+      "type": "class",
+      "name": "SimpleIdInstrument",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "lineRange": [88, 103],
+      "summary": "实现 IIdInstrument 接口的简单仪器类，包含 Id 属性，GetId 方法未被覆盖时抛出异常，用作资源拓扑中的示例标识仪器。",
+      "tags": ["instrument", "resource", "interface", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs:ScpiInstrumentExample",
+      "type": "class",
+      "name": "ScpiInstrumentExample",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs",
+      "lineRange": [22, 75],
+      "summary": "基于 ScpiInstrument 基类的 SCPI 仪器示例，在 Open 中验证仪器身份，通过 Configure 方法发送 SCPI 命令设置频率参数，SweepMeasurement 方法执行 SCPI 查询并返回测量结果。",
+      "tags": ["scpi", "instrument", "measurement", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs:SetSwitchMatrixStep",
+      "type": "class",
+      "name": "SetSwitchMatrixStep",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs",
+      "lineRange": [23, 57],
+      "summary": "控制开关矩阵的测试步骤类，包含 SwitchMatrix 仪器引用、AvailableChannels 可用通道列表和 SelectedChannel 选择属性，Run 方法执行矩阵通道设置并处理异常。",
+      "tags": ["test-step", "switch-matrix", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchStep.cs:SetTwoPositionSwitchStep",
+      "type": "class",
+      "name": "SetTwoPositionSwitchStep",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchStep.cs",
+      "lineRange": [22, 41],
+      "summary": "控制双位置开关的测试步骤类，包含 Switch 仪器引用、AvailablePositions 可选位置列表和 Position 目标位置选择，Run 方法执行开关位置设置。",
+      "tags": ["test-step", "switch", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleDut.cs:SimpleDut",
+      "type": "class",
+      "name": "SimpleDut",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleDut.cs",
+      "lineRange": [19, 57],
+      "summary": "最简被测设备（DUT）实现示例，继承 Dut 基类，包含 MyMetaData 元数据属性、Open/Close 生命周期方法和 DoNothing 空操作，触发 Activity 事件。",
+      "tags": ["dut", "instrument", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs:SimpleInstrument",
+      "type": "class",
+      "name": "SimpleInstrument",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs",
+      "lineRange": [19, 54],
+      "summary": "最简仪器实现示例，继承 Instrument 基类，包含 VisaAddress 接口地址和 SomeProperty 测试属性，实现 Open/Close 生命周期和 DoNothing 操作。",
+      "tags": ["instrument", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs:SwitchMatrixInstrument",
+      "type": "class",
+      "name": "SwitchMatrixInstrument",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs",
+      "lineRange": [20, 93],
+      "summary": "开关矩阵仪器实现类，管理 _Channels 内部通道集合和 _ActiveChannel 当前活动通道，提供 Channels 公共属性、SetMatrixChannel(row, col) 矩阵切换方法，以及内部连接重置辅助方法。",
+      "tags": ["switch-matrix", "instrument", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPortInstrument.cs:TwoPortInstrument",
+      "type": "class",
+      "name": "TwoPortInstrument",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPortInstrument.cs",
+      "lineRange": [20, 53],
+      "summary": "双端口仪器实现类，定义 PortA 和 PortB 两个物理端口，实现 Open/Close 生命周期管理和 SetupInstrument 配置方法，用于双端口射频测量场景。",
+      "tags": ["instrument", "port", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPositionSwitchInstrument.cs:TwoPositionSwitchInstrument",
+      "type": "class",
+      "name": "TwoPositionSwitchInstrument",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPositionSwitchInstrument.cs",
+      "lineRange": [19, 44],
+      "summary": "双位置切换开关仪器实现类，定义 Position1 和 Position2 两个 SwitchPosition 对象，追踪 CurrentPosition 状态，提供 SetPosition 方法在位置间切换。",
+      "tags": ["switch", "instrument", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs:UsingDutAndInstExample",
+      "type": "class",
+      "name": "UsingDutAndInstExample",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs",
+      "lineRange": [22, 59],
+      "summary": "同时使用仪器和被测设备的测试步骤示例，包含 SomeSetting 配置项、ExampleInstrument 和 ExampleDut 两种资源引用，Run 方法演示协同调用和判定升级。",
+      "tags": ["test-step", "dut", "instrument", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs",
+      "lineRange": [74, 106],
+      "summary": "测试步骤主执行方法，验证连接有效性，记录日志后通过 rfConnection 计算插值电缆损耗，依次调用 Generator.SetupInstrument 和 DUT.SetupDut、PerformMeasurement，最后升级判定结果。",
+      "tags": ["test-step", "measurement", "execution"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs:Open",
+      "type": "function",
+      "name": "Open",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs",
+      "lineRange": [40, 50],
+      "summary": "仪器打开方法，调用基类 Open 建立 SCPI 连接后，通过 IdnString 验证仪器身份，若不匹配则记录错误并抛出 ArgumentException，确保连接的是正确型号的仪器。",
+      "tags": ["scpi", "instrument", "lifecycle", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs",
+      "lineRange": [44, 56],
+      "summary": "测试步骤执行方法，记录通道选择日志后调用 SwitchMatrix.SetMatrixChannel 设置指定通道，捕获异常时记录警告日志以确保步骤正常完成。",
+      "tags": ["test-step", "switch-matrix", "execution"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs:SetMatrixChannel",
+      "type": "function",
+      "name": "SetMatrixChannel",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs",
+      "lineRange": [52, 67],
+      "summary": "设置矩阵指定行列通道的核心方法，接收 row 和 col 参数，先重置当前活动通道连接，再通过索引查找并激活目标通道，更新 _ActiveChannel 状态。",
+      "tags": ["switch-matrix", "instrument", "control"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs",
+      "lineRange": [45, 58],
+      "summary": "测试步骤执行方法，打印仪器和 DUT 信息日志后依次调用 ExampleInstrument.DoNothing 和 ExampleDut.DoNothing 执行空操作，最后通过 UpgradeVerdict 升级测试判定。",
+      "tags": ["test-step", "dut", "instrument", "execution"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/InterfaceBasedInstrument.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/InterfaceBasedInstrument.cs:InterfaceBasedInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/InterfaceBasedInstrument.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/InterfaceBasedInstrument.cs:InterfaceBasedInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs:MeasureUsingConnectionsStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs:MeasureUsingConnectionsStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:InstrumentTopology",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:TopologyInstrumentStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:IIdInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:SimpleIdInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:InstrumentTopology",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:TopologyInstrumentStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:IIdInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs:SimpleIdInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs:ScpiInstrumentExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs:Open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs:ScpiInstrumentExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs:SetSwitchMatrixStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs:SetSwitchMatrixStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchStep.cs:SetTwoPositionSwitchStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchStep.cs:SetTwoPositionSwitchStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleDut.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleDut.cs:SimpleDut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleDut.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleDut.cs:SimpleDut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs:SimpleInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs:SimpleInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs:SwitchMatrixInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs:SetMatrixChannel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs:SwitchMatrixInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPortInstrument.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPortInstrument.cs:TwoPortInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPortInstrument.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPortInstrument.cs:TwoPortInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPositionSwitchInstrument.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPositionSwitchInstrument.cs:TwoPositionSwitchInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPositionSwitchInstrument.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPositionSwitchInstrument.cs:TwoPositionSwitchInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs:UsingDutAndInstExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs:UsingDutAndInstExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment/PluginDevelopment.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

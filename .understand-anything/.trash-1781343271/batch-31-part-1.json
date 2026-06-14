@@ -1,0 +1,441 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/Reflection/IReflectionData.cs",
+      "type": "file",
+      "name": "IReflectionData.cs",
+      "filePath": "Engine/Reflection/IReflectionData.cs",
+      "summary": "定义反射数据的顶层接口，提供Attributes和Name两个只读属性契约，作为所有反射数据类型的统一抽象。",
+      "tags": [
+        "interface",
+        "reflection",
+        "engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/IStackedTypeDataProvider.cs",
+      "type": "file",
+      "name": "IStackedTypeDataProvider.cs",
+      "filePath": "Engine/Reflection/IStackedTypeDataProvider.cs",
+      "summary": "定义支持堆叠优先级（Priority）的多层类型数据提供者接口，允许按优先级顺序组合多个ITypeDataProvider。",
+      "tags": [
+        "type-system",
+        "interface",
+        "reflection",
+        "chain-of-responsibility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/ITypeData.cs",
+      "type": "file",
+      "name": "ITypeData.cs",
+      "filePath": "Engine/Reflection/ITypeData.cs",
+      "summary": "定义核心类型元数据接口，含成员查询（GetMembers/GetMember）、实例创建（CreateInstance）及基类型层级访问能力。",
+      "tags": [
+        "type-system",
+        "interface",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/ITypeDataFactories.cs",
+      "type": "file",
+      "name": "ITypeDataFactories.cs",
+      "filePath": "Engine/Reflection/ITypeDataFactories.cs",
+      "summary": "定义缓存优化器接口（ICacheOptimizer），提供LoadCache和UnloadCache方法用于类型数据缓存的生命周期管理。",
+      "tags": [
+        "type-system",
+        "interface",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/ITypeDataProvider.cs",
+      "type": "file",
+      "name": "ITypeDataProvider.cs",
+      "filePath": "Engine/Reflection/ITypeDataProvider.cs",
+      "summary": "定义类型数据提供者接口，按对象或标识符获取ITypeData，Priority属性决定在堆叠结构中的优先级顺序。",
+      "tags": [
+        "type-system",
+        "interface",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/ITypeDataSearcher.cs",
+      "type": "file",
+      "name": "ITypeDataSearcher.cs",
+      "filePath": "Engine/Reflection/ITypeDataSearcher.cs",
+      "summary": "定义类型数据搜索器接口、缓存失效事件参数（TypeDataCacheInvalidatedEventArgs）及缓存失效处理器接口。",
+      "tags": [
+        "type-system",
+        "interface",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/ITypeDataSource.cs",
+      "type": "file",
+      "name": "ITypeDataSource.cs",
+      "filePath": "Engine/Reflection/ITypeDataSource.cs",
+      "summary": "定义类型数据源接口，描述类型来源的名称、位置、类型列表、属性、引用及版本等元信息。",
+      "tags": [
+        "type-system",
+        "interface",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/ITypeDataSourceProvider.cs",
+      "type": "file",
+      "name": "ITypeDataSourceProvider.cs",
+      "filePath": "Engine/Reflection/ITypeDataSourceProvider.cs",
+      "summary": "定义类型数据源提供者接口，通过GetSource方法生成ITypeDataSource实例。",
+      "tags": [
+        "type-system",
+        "interface",
+        "reflection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/NullTypeData.cs",
+      "type": "file",
+      "name": "NullTypeData.cs",
+      "filePath": "Engine/Reflection/NullTypeData.cs",
+      "summary": "实现空类型数据（Null Object Pattern），为未注册或未知类型提供ITypeData的默认空实现。",
+      "tags": [
+        "type-system",
+        "reflection",
+        "null-object-pattern"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/IReflectionData.cs:IReflectionData",
+      "type": "class",
+      "name": "IReflectionData",
+      "filePath": "Engine/Reflection/IReflectionData.cs",
+      "lineRange": [
+        12,
+        20
+      ],
+      "summary": "反射数据顶层接口，定义Attributes属性和Name属性作为所有反射类型的统一契约。",
+      "tags": [
+        "interface",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/IStackedTypeDataProvider.cs:IStackedTypeDataProvider",
+      "type": "class",
+      "name": "IStackedTypeDataProvider",
+      "filePath": "Engine/Reflection/IStackedTypeDataProvider.cs",
+      "lineRange": [
+        9,
+        26
+      ],
+      "summary": "堆叠类型数据提供者接口，继承ITypeDataProvider并添加Priority属性用于优先级排序。",
+      "tags": [
+        "interface",
+        "provider",
+        "chain-of-responsibility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/ITypeData.cs:ITypeData",
+      "type": "class",
+      "name": "ITypeData",
+      "filePath": "Engine/Reflection/ITypeData.cs",
+      "lineRange": [
+        10,
+        31
+      ],
+      "summary": "核心类型元数据接口，提供成员查询方法、实例创建能力和基类型访问，是反射系统的基石。",
+      "tags": [
+        "interface",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/ITypeDataFactories.cs:ICacheOptimizer",
+      "type": "class",
+      "name": "ICacheOptimizer",
+      "filePath": "Engine/Reflection/ITypeDataFactories.cs",
+      "lineRange": [
+        10,
+        16
+      ],
+      "summary": "缓存优化器接口，提供LoadCache和UnloadCache方法用于类型数据缓存的生命周期管理。",
+      "tags": [
+        "interface",
+        "optimization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/ITypeDataProvider.cs:ITypeDataProvider",
+      "type": "class",
+      "name": "ITypeDataProvider",
+      "filePath": "Engine/Reflection/ITypeDataProvider.cs",
+      "lineRange": [
+        9,
+        24
+      ],
+      "summary": "类型数据提供者接口，声明GetTypeData重载和Priority属性，支持按对象或标识符检索类型数据。",
+      "tags": [
+        "interface",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/ITypeDataSearcher.cs:ITypeDataSearcher",
+      "type": "class",
+      "name": "ITypeDataSearcher",
+      "filePath": "Engine/Reflection/ITypeDataSearcher.cs",
+      "lineRange": [
+        14,
+        25
+      ],
+      "summary": "类型数据搜索器接口，GetTypes返回已知类型列表，Search方法执行自定义类型搜索并触发缓存失效事件。",
+      "tags": [
+        "interface",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/ITypeDataSearcher.cs:TypeDataCacheInvalidatedEventArgs",
+      "type": "class",
+      "name": "TypeDataCacheInvalidatedEventArgs",
+      "filePath": "Engine/Reflection/ITypeDataSearcher.cs",
+      "lineRange": [
+        28,
+        31
+      ],
+      "summary": "类型数据缓存失效事件参数类，用于通知搜索器缓存已失效。",
+      "tags": [
+        "event",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/ITypeDataSearcher.cs:ITypeDataSearcherCacheInvalidated",
+      "type": "class",
+      "name": "ITypeDataSearcherCacheInvalidated",
+      "filePath": "Engine/Reflection/ITypeDataSearcher.cs",
+      "lineRange": [
+        37,
+        41
+      ],
+      "summary": "类型数据搜索器缓存失效处理器接口，允许外部订阅缓存失效事件。",
+      "tags": [
+        "interface",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/ITypeDataSource.cs:ITypeDataSource",
+      "type": "class",
+      "name": "ITypeDataSource",
+      "filePath": "Engine/Reflection/ITypeDataSource.cs",
+      "lineRange": [
+        6,
+        25
+      ],
+      "summary": "类型数据源接口，描述类型来源的名称、位置、类型集合、属性、引用关系和版本号。",
+      "tags": [
+        "interface",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/ITypeDataSourceProvider.cs:ITypeDataSourceProvider",
+      "type": "class",
+      "name": "ITypeDataSourceProvider",
+      "filePath": "Engine/Reflection/ITypeDataSourceProvider.cs",
+      "lineRange": [
+        4,
+        12
+      ],
+      "summary": "类型数据源提供者接口，通过GetSource方法生成ITypeDataSource实例。",
+      "tags": [
+        "interface",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/NullTypeData.cs:NullTypeData",
+      "type": "class",
+      "name": "NullTypeData",
+      "filePath": "Engine/Reflection/NullTypeData.cs",
+      "lineRange": [
+        7,
+        18
+      ],
+      "summary": "空类型数据实现（Null Object Pattern），为未注册类型提供所有ITypeData成员的默认空实现。",
+      "tags": [
+        "null-object-pattern",
+        "core"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/Reflection/IReflectionData.cs",
+      "target": "class:Engine/Reflection/IReflectionData.cs:IReflectionData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/IReflectionData.cs",
+      "target": "class:Engine/Reflection/IReflectionData.cs:IReflectionData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/IStackedTypeDataProvider.cs",
+      "target": "class:Engine/Reflection/IStackedTypeDataProvider.cs:IStackedTypeDataProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/IStackedTypeDataProvider.cs",
+      "target": "class:Engine/Reflection/IStackedTypeDataProvider.cs:IStackedTypeDataProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeData.cs",
+      "target": "class:Engine/Reflection/ITypeData.cs:ITypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeData.cs",
+      "target": "class:Engine/Reflection/ITypeData.cs:ITypeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataFactories.cs",
+      "target": "class:Engine/Reflection/ITypeDataFactories.cs:ICacheOptimizer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataProvider.cs",
+      "target": "class:Engine/Reflection/ITypeDataProvider.cs:ITypeDataProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataProvider.cs",
+      "target": "class:Engine/Reflection/ITypeDataProvider.cs:ITypeDataProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataSearcher.cs",
+      "target": "class:Engine/Reflection/ITypeDataSearcher.cs:ITypeDataSearcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataSearcher.cs",
+      "target": "class:Engine/Reflection/ITypeDataSearcher.cs:ITypeDataSearcher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataSearcher.cs",
+      "target": "class:Engine/Reflection/ITypeDataSearcher.cs:TypeDataCacheInvalidatedEventArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataSearcher.cs",
+      "target": "class:Engine/Reflection/ITypeDataSearcher.cs:TypeDataCacheInvalidatedEventArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataSearcher.cs",
+      "target": "class:Engine/Reflection/ITypeDataSearcher.cs:ITypeDataSearcherCacheInvalidated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataSearcher.cs",
+      "target": "class:Engine/Reflection/ITypeDataSearcher.cs:ITypeDataSearcherCacheInvalidated",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataSource.cs",
+      "target": "class:Engine/Reflection/ITypeDataSource.cs:ITypeDataSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataSource.cs",
+      "target": "class:Engine/Reflection/ITypeDataSource.cs:ITypeDataSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataSourceProvider.cs",
+      "target": "class:Engine/Reflection/ITypeDataSourceProvider.cs:ITypeDataSourceProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ITypeDataSourceProvider.cs",
+      "target": "class:Engine/Reflection/ITypeDataSourceProvider.cs:ITypeDataSourceProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/NullTypeData.cs",
+      "target": "class:Engine/Reflection/NullTypeData.cs:NullTypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

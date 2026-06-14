@@ -1,0 +1,6754 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "Engine/SerializerPlugins/CollectionSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 373,
+      "nonEmptyLines": 340,
+      "functions": [
+        {
+          "name": "Deserialize",
+          "startLine": 24,
+          "endLine": 302,
+          "params": [
+            "element",
+            "_t",
+            "setResult"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 308,
+          "endLine": 366,
+          "params": [
+            "elem",
+            "sourceObj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CollectionSerializer",
+          "startLine": 15,
+          "endLine": 371,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Order",
+            "CurrentElementType",
+            "Element",
+            "ComponentSettingsSerializing",
+            "Object",
+            "CurrentMember"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "CurrentElementType",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 308,
+          "isDefault": false
+        },
+        {
+          "name": "Object",
+          "line": 368,
+          "isDefault": false
+        },
+        {
+          "name": "CurrentMember",
+          "line": 370,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 31
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.GetEnumerableElementType",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.HasInterface<IList>",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.GetConstructor",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new List<object>",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "prevSetResult",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "deserializedHandler.OnDeserialized",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Log.Warning",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Log.Debug",
+          "lineNumber": 62
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack\n                        .OfType<ObjectSerializer>()\n                        .FirstOrDefault",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack\n                        .OfType<ObjectSerializer>",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "member.GetAttribute<FactoryAttribute>",
+          "lineNumber": 74
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "member.TypeDescriptor.DescendsTo",
+          "lineNumber": 75
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "FactoryAttribute.Create",
+          "lineNumber": 79
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "FactoryAttribute.TryCreateFromMember",
+          "lineNumber": 87
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new Exception",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new Exception",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "tryGetFactory",
+          "lineNumber": 108
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 110
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "f",
+          "lineNumber": 110
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 114
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Array.CreateInstance",
+          "lineNumber": 114
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.GetElementType",
+          "lineNumber": 114
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 118
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 122
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 122
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "genericType.IsNumeric",
+          "lineNumber": 138
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new NumberFormatter",
+          "lineNumber": 141
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "parser.Parse",
+          "lineNumber": 142
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "values2.CastTo",
+          "lineNumber": 143
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "typeof(IEnumerable<>).MakeGenericType",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "finalValues.GetType",
+          "lineNumber": 145
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 147
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.OfType<ObjectSerializer>().FirstOrDefault",
+          "lineNumber": 155
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.OfType<ObjectSerializer>",
+          "lineNumber": 155
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new Exception",
+          "lineNumber": 157
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "tryGetFactory",
+          "lineNumber": 159
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "f",
+          "lineNumber": 161
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "((IEnumerable)mem.GetValue(os.Object)).Cast<object>",
+          "lineNumber": 167
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "mem.GetValue",
+          "lineNumber": 167
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "element.Elements",
+          "lineNumber": 168
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elems.Count",
+          "lineNumber": 169
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "val.Count",
+          "lineNumber": 169
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Log.Warning",
+          "lineNumber": 171
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elems.Pairwise",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "os.TryDeserializeObject",
+          "lineNumber": 176
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 176
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "seq.Cast<object>().ToArray",
+          "lineNumber": 187
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "seq.Cast<object>",
+          "lineNumber": 187
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "element.Elements",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "vals.Add",
+          "lineNumber": 194
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 197
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "vals.RemoveAt",
+          "lineNumber": 199
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "vals.RemoveAt",
+          "lineNumber": 204
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Log.Error",
+          "lineNumber": 205
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Log.Debug",
+          "lineNumber": 206
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "finalValues.Cast<object>().Count",
+          "lineNumber": 215
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "finalValues.Cast<object>",
+          "lineNumber": 215
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 216
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 217
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 224
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "tryGetFactory",
+          "lineNumber": 227
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "lst.Add",
+          "lineNumber": 231
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 234
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 236
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "typeof(List<>).MakeGenericType",
+          "lineNumber": 236
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "lst.Add",
+          "lineNumber": 238
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 239
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.HasInterface<IList>",
+          "lineNumber": 241
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "finalValues.GetType",
+          "lineNumber": 243
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 249
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "((IList)values).Add",
+          "lineNumber": 251
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new List<object>",
+          "lineNumber": 260
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "en.Cast<object>",
+          "lineNumber": 261
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "lst2.Add",
+          "lineNumber": 262
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new Exception",
+          "lineNumber": 267
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "values.GetType().DescendsTo",
+          "lineNumber": 270
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "values.GetType",
+          "lineNumber": 270
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 274
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "newvalues.Add",
+          "lineNumber": 278
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "newvalues.Add",
+          "lineNumber": 283
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Log.Warning",
+          "lineNumber": 290
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 294
+        },
+        {
+          "caller": "Serialize",
+          "callee": "sourceObj.GetType",
+          "lineNumber": 312
+        },
+        {
+          "caller": "Serialize",
+          "callee": "type.GetEnumerableElementType",
+          "lineNumber": 313
+        },
+        {
+          "caller": "Serialize",
+          "callee": "genericTypeArg.IsNumeric",
+          "lineNumber": 316
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new NumberFormatter",
+          "lineNumber": 318
+        },
+        {
+          "caller": "Serialize",
+          "callee": "parser.FormatRange",
+          "lineNumber": 319
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 330
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Add",
+          "lineNumber": 333
+        },
+        {
+          "caller": "Serialize",
+          "callee": "obj.GetType",
+          "lineNumber": 337
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TapSerializer.TypeToXmlString",
+          "lineNumber": 338
+        },
+        {
+          "caller": "Serialize",
+          "callee": "ComponentSettingsSerializing.Add",
+          "lineNumber": 340
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 343
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TypeData.FromType",
+          "lineNumber": 343
+        },
+        {
+          "caller": "Serialize",
+          "callee": "step.Remove",
+          "lineNumber": 348
+        },
+        {
+          "caller": "Serialize",
+          "callee": "ComponentSettingsSerializing.Remove",
+          "lineNumber": 354
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/ConstResourceSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 104,
+      "nonEmptyLines": 93,
+      "functions": [
+        {
+          "name": "Deserialize",
+          "startLine": 20,
+          "endLine": 59,
+          "params": [
+            "element",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 65,
+          "endLine": 102,
+          "params": [
+            "elem",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ConstResourceSerializer",
+          "startLine": 14,
+          "endLine": 103,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Order",
+            "checkRentry"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 65,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TypeData.FromType",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "element.Attribute",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "element.Element",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "ComponentSettings.GetCurrent",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "obj.GetType",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "element.Element",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "int.TryParse",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "resource.GetConstProperties",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TypeData.GetTypeData(resProp).DescendsTo",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Serialize",
+          "callee": "checkRentry.Add",
+          "lineNumber": 68
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.SerializerStack\n                        .OfType<ObjectSerializer>().FirstOrDefault",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.SerializerStack\n                        .OfType<ObjectSerializer>",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.SetAttributeValue",
+          "lineNumber": 82
+        },
+        {
+          "caller": "Serialize",
+          "callee": "ComponentSettingsList.GetContainer",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Serialize",
+          "callee": "port.Device.GetType",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 87
+        },
+        {
+          "caller": "Serialize",
+          "callee": "device.SetAttributeValue",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Serialize",
+          "callee": "settings.GetType",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 89
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TypeData.FromType",
+          "lineNumber": 89
+        },
+        {
+          "caller": "Serialize",
+          "callee": "port.GetType",
+          "lineNumber": 89
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Add",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Add",
+          "lineNumber": 95
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 95
+        },
+        {
+          "caller": "Serialize",
+          "callee": "checkRentry.Remove",
+          "lineNumber": 100
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/DefaultValueSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 80,
+      "nonEmptyLines": 69,
+      "functions": [
+        {
+          "name": "RegisterDefaultValue",
+          "startLine": 28,
+          "endLine": 31,
+          "params": [
+            "elem",
+            "value"
+          ]
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 34,
+          "endLine": 37,
+          "params": [
+            "element",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 40,
+          "endLine": 78,
+          "params": [
+            "elem",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DefaultValueSerializer",
+          "startLine": 14,
+          "endLine": 79,
+          "methods": [
+            "RegisterDefaultValue",
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Order",
+            "elems",
+            "defaultValueLookup"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "RegisterDefaultValue",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "DefaultValueSerializer",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Serialize",
+          "callee": "elems.Contains",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elems.Add",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Serialize",
+          "callee": "defaultValueLookup.TryGetValue",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Serialize",
+          "callee": "e.Cast<object>().SequenceEqual",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Serialize",
+          "callee": "e.Cast<object>",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Remove",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Serialize",
+          "callee": "object.Equals",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Remove",
+          "lineNumber": 68
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elems.Remove",
+          "lineNumber": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/DynamicStepSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "Serialize",
+          "startLine": 27,
+          "endLine": 43,
+          "params": [
+            "elem",
+            "obj",
+            "expectedType"
+          ]
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 46,
+          "endLine": 74,
+          "params": [
+            "elem",
+            "t",
+            "setter"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DynamicStepSerializer",
+          "startLine": 14,
+          "endLine": 77,
+          "methods": [
+            "Serialize",
+            "Deserialize"
+          ],
+          "properties": [
+            "Order",
+            "serializing"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 46,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Serialize",
+          "callee": "serializing.Contains",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Serialize",
+          "callee": "serializing.Add",
+          "lineNumber": 35
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Serialize",
+          "callee": "serializing.Remove",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.SetAttributeValue",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Serialize",
+          "callee": "step.GetStepFactoryType",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.CreateInstance",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Array.Empty<object>",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Register",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TryDeserializeObject",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "step.GetStep",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TryDeserializeObject",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 63
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.GetSerializer<TestStepSerializer>().FixupStep",
+          "lineNumber": 64
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.GetSerializer<TestStepSerializer>",
+          "lineNumber": 64
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Log.Error",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Log.Debug",
+          "lineNumber": 71
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/EventsSerializerPlugin.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "Deserialize",
+          "startLine": 11,
+          "endLine": 20,
+          "params": [
+            "node",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 23,
+          "endLine": 32,
+          "params": [
+            "node",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EventsSerializerPlugin",
+          "startLine": 8,
+          "endLine": 33,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Deserialize",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Element",
+          "lineNumber": 14
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Element",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "nameof",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "long.TryParse",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Element",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "nameof",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "int.TryParse",
+          "lineNumber": 17
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Element",
+          "lineNumber": 17
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "nameof",
+          "lineNumber": 17
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 18
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new Event",
+          "lineNumber": 18
+        },
+        {
+          "caller": "Serialize",
+          "callee": "node.SetElementValue",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Serialize",
+          "callee": "nameof",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Serialize",
+          "callee": "node.SetElementValue",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Serialize",
+          "callee": "nameof",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Serialize",
+          "callee": "node.SetElementValue",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Serialize",
+          "callee": "nameof",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Serialize",
+          "callee": "node.SetElementValue",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Serialize",
+          "callee": "nameof",
+          "lineNumber": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 278,
+      "nonEmptyLines": 240,
+      "functions": [
+        {
+          "name": "loadScopeParameter",
+          "startLine": 53,
+          "endLine": 86,
+          "params": [
+            "scope",
+            "step",
+            "member",
+            "parameter"
+          ]
+        },
+        {
+          "name": "loadPreloadedvalues",
+          "startLine": 88,
+          "endLine": 109,
+          "params": [
+            "plan"
+          ]
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 113,
+          "endLine": 199,
+          "params": [
+            "elem",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 210,
+          "endLine": 276,
+          "params": [
+            "elem",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExternalParameterSerializer",
+          "startLine": 13,
+          "endLine": 277,
+          "methods": [
+            "loadScopeParameter",
+            "loadPreloadedvalues",
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Order",
+            "currentNode",
+            "UnusedExternalParamData",
+            "PreloadedValues",
+            "External",
+            "Scope",
+            "Parameter",
+            "rootNode",
+            "parameterReverseLookup",
+            "reversedParents"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "UnusedExternalParamData",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "PreloadedValues",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 210,
+          "isDefault": false
+        },
+        {
+          "name": "ExternalParameterSerializer",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "loadScopeParameter",
+          "callee": "step.GetParent<TestPlan>",
+          "lineNumber": 58
+        },
+        {
+          "caller": "loadScopeParameter",
+          "callee": "member.Parameterize",
+          "lineNumber": 74
+        },
+        {
+          "caller": "loadScopeParameter",
+          "callee": "newParameter.ParameterizedMembers.Skip(1).Any",
+          "lineNumber": 75
+        },
+        {
+          "caller": "loadScopeParameter",
+          "callee": "newParameter.ParameterizedMembers.Skip",
+          "lineNumber": 75
+        },
+        {
+          "caller": "loadScopeParameter",
+          "callee": "ParameterManager.UnmergableListType",
+          "lineNumber": 78
+        },
+        {
+          "caller": "loadScopeParameter",
+          "callee": "member.Unparameterize",
+          "lineNumber": 80
+        },
+        {
+          "caller": "loadScopeParameter",
+          "callee": "Log.Warning",
+          "lineNumber": 81
+        },
+        {
+          "caller": "loadPreloadedvalues",
+          "callee": "plan.ExternalParameters.Get",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 115
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 120
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 123
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 128
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "loadPreloadedvalues",
+          "lineNumber": 130
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "currentNode.Contains",
+          "lineNumber": 135
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Attribute",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Attribute",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 138
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.OfType<ObjectSerializer>().FirstOrDefault",
+          "lineNumber": 139
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.OfType<ObjectSerializer>",
+          "lineNumber": 139
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Guid.TryParse",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Attribute",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "loadScopeParameter",
+          "lineNumber": 145
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "loadScopeParameter",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "member.HasAttribute<OutputAttribute>",
+          "lineNumber": 151
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.OfType<TestPlanSerializer>().FirstOrDefault",
+          "lineNumber": 155
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.OfType<TestPlanSerializer>",
+          "lineNumber": 155
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "currentNode.Add",
+          "lineNumber": 158
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "UnusedExternalParamData.Add",
+          "lineNumber": 161
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new ExternalParamData",
+          "lineNumber": 161
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 166
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "currentNode.Remove",
+          "lineNumber": 170
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "currentNode.Add",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 178
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "plan.ExternalParameters.Get",
+          "lineNumber": 179
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 181
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "plan.ExternalParameters.Get",
+          "lineNumber": 183
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "PreloadedValues.ContainsKey",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "PreloadedValues.ContainsKey",
+          "lineNumber": 190
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "currentNode.Remove",
+          "lineNumber": 197
+        },
+        {
+          "caller": "Serialize",
+          "callee": "currentNode.Contains",
+          "lineNumber": 212
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.SerializerStack.OfType<IConstructingSerializer>().FirstOrDefault",
+          "lineNumber": 215
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.SerializerStack.OfType<IConstructingSerializer>",
+          "lineNumber": 215
+        },
+        {
+          "caller": "Serialize",
+          "callee": "reversedParents.Add",
+          "lineNumber": 231
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TypeData.GetTypeData(parameterParent)\n                            .GetMembers()\n                            .OfType<ParameterMemberData>",
+          "lineNumber": 233
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TypeData.GetTypeData(parameterParent)\n                            .GetMembers",
+          "lineNumber": 233
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 233
+        },
+        {
+          "caller": "Serialize",
+          "callee": "parameterReverseLookup.Add",
+          "lineNumber": 240
+        },
+        {
+          "caller": "Serialize",
+          "callee": "parameterReverseLookup.TryGetValue",
+          "lineNumber": 252
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.SetAttributeValue",
+          "lineNumber": 254
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.SetAttributeValue",
+          "lineNumber": 256
+        },
+        {
+          "caller": "Serialize",
+          "callee": "parentStep.Id.ToString",
+          "lineNumber": 256
+        },
+        {
+          "caller": "Serialize",
+          "callee": "member.HasAttribute<OutputAttribute>",
+          "lineNumber": 263
+        },
+        {
+          "caller": "Serialize",
+          "callee": "currentNode.Add",
+          "lineNumber": 269
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 270
+        },
+        {
+          "caller": "Serialize",
+          "callee": "currentNode.Remove",
+          "lineNumber": 274
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/InputOutputRelationSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 132,
+      "nonEmptyLines": 119,
+      "functions": [
+        {
+          "name": "Deserialize",
+          "startLine": 53,
+          "endLine": 101,
+          "params": [
+            "node",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 104,
+          "endLine": 130,
+          "params": [
+            "node",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "InputOutputRelationSerializer",
+          "startLine": 14,
+          "endLine": 131,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "stepInputsName",
+            "activeElements",
+            "unusedInputs"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Deserialize",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 104,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Bind",
+          "callee": "step.GetParent<TestPlan>",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Bind",
+          "callee": "getStep",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Bind",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Bind",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Bind",
+          "callee": "sourceType.GetMember",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Bind",
+          "callee": "targetType.GetMember",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Bind",
+          "callee": "InputOutputRelation.Assign",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Element",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "activeElements.Contains",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.GetSerializer<TestPlanSerializer>",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "prevsetter",
+          "lineNumber": 62
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 65
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TypeData.FromType",
+          "lineNumber": 65
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "activeElements.Add",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 72
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "activeElements.Remove",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.GetSerializer<TestStepSerializer>",
+          "lineNumber": 85
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Bind",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 95
+        },
+        {
+          "caller": "Serialize",
+          "callee": "activeElements.Contains",
+          "lineNumber": 107
+        },
+        {
+          "caller": "Serialize",
+          "callee": "activeElements.Add",
+          "lineNumber": 109
+        },
+        {
+          "caller": "Serialize",
+          "callee": "InputOutputRelation.GetRelations(step).Where(x => x.InputObject == step).ToArray",
+          "lineNumber": 112
+        },
+        {
+          "caller": "Serialize",
+          "callee": "InputOutputRelation.GetRelations(step).Where",
+          "lineNumber": 112
+        },
+        {
+          "caller": "Serialize",
+          "callee": "InputOutputRelation.GetRelations",
+          "lineNumber": 112
+        },
+        {
+          "caller": "Serialize",
+          "callee": "inputs.Select(x => new InputOutputMember\n                        {Id = (x.OutputObject as ITestStep)?.Id ?? Guid.Empty, Member = x.OutputMember.Name, TargetMember = x.InputMember.Name}).ToArray",
+          "lineNumber": 114
+        },
+        {
+          "caller": "Serialize",
+          "callee": "inputs.Select",
+          "lineNumber": 114
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new InputOutputMember",
+          "lineNumber": 114
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 116
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 117
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 117
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 118
+        },
+        {
+          "caller": "Serialize",
+          "callee": "node.Add",
+          "lineNumber": 120
+        },
+        {
+          "caller": "Serialize",
+          "callee": "activeElements.Remove",
+          "lineNumber": 125
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/ITapSerializerPlugin.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 37,
+      "classes": [
+        {
+          "name": "ITapSerializerPlugin",
+          "startLine": 13,
+          "endLine": 39,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Order"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ITapSerializerPlugin",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/ITapSerializerPluginDependencyMarker.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "ITapSerializerPluginDependencyMarker",
+          "startLine": 8,
+          "endLine": 13,
+          "methods": [],
+          "properties": [
+            "NeededForDeserialization"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ITapSerializerPluginDependencyMarker",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/KeyValuePairSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "Serialize",
+          "startLine": 16,
+          "endLine": 37,
+          "params": [
+            "node",
+            "obj",
+            "_expectedType"
+          ]
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 40,
+          "endLine": 73,
+          "params": [
+            "node",
+            "_t",
+            "setter"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "KeyValuePairSerializer",
+          "startLine": 13,
+          "endLine": 74,
+          "methods": [
+            "Serialize",
+            "Deserialize"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Serialize",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 40,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Serialize",
+          "callee": "obj.GetType().DescendsTo",
+          "lineNumber": 18
+        },
+        {
+          "caller": "Serialize",
+          "callee": "obj.GetType",
+          "lineNumber": 18
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Serialize",
+          "callee": "_expectedType.GetMember(\"Key\").GetValue",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Serialize",
+          "callee": "_expectedType.GetMember",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TypeData.FromType",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Serialize",
+          "callee": "expectedType.GetGenericArguments",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Serialize",
+          "callee": "_expectedType.GetMember(\"Value\").GetValue",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Serialize",
+          "callee": "_expectedType.GetMember",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TypeData.FromType",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Serialize",
+          "callee": "expectedType.GetGenericArguments",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Serialize",
+          "callee": "node.Add",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Serialize",
+          "callee": "node.Add",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Element",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Element",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 60
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 60
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.GetGenericArguments",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 64
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.GetGenericArguments",
+          "lineNumber": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/MacroStringSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "Deserialize",
+          "startLine": 15,
+          "endLine": 30,
+          "params": [
+            "node",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 33,
+          "endLine": 38,
+          "params": [
+            "node",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MacroStringSerializer",
+          "startLine": 12,
+          "endLine": 39,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Deserialize",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 33,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Deserialize",
+          "callee": "t.IsA",
+          "lineNumber": 17
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.OfType<ObjectSerializer>().FirstOrDefault",
+          "lineNumber": 19
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.OfType<ObjectSerializer>",
+          "lineNumber": 19
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new MacroString",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new MacroString",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Serialize",
+          "callee": "node.SetValue",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/MixinSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 75,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "Deserialize",
+          "startLine": 13,
+          "endLine": 36,
+          "params": [
+            "node",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 38,
+          "endLine": 73,
+          "params": [
+            "node",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MixinSerializer",
+          "startLine": 6,
+          "endLine": 74,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "rootElemName",
+            "mixinElemName",
+            "Order"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 38,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Deserialize",
+          "callee": "node.Element",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "rootElem.Elements",
+          "lineNumber": 18
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "MixinFactory.LoadMixin",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TypeData.FromType",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "rootElem.Remove",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Serialize",
+          "callee": "DynamicMember.GetDynamicMembers",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Serialize",
+          "callee": "node.Element",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Serialize",
+          "callee": "node.Add",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.PropertyXmlName",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Serialize",
+          "callee": "mixins.Element",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 63
+        },
+        {
+          "caller": "Serialize",
+          "callee": "mixins.Add",
+          "lineNumber": 64
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/ObjectSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 937,
+      "nonEmptyLines": 862,
+      "functions": [
+        {
+          "name": "TryDeserializeObject",
+          "startLine": 62,
+          "endLine": 419,
+          "params": [
+            "element",
+            "t",
+            "setter",
+            "newobj",
+            "logWarnings"
+          ]
+        },
+        {
+          "name": "readContentInternal",
+          "startLine": 421,
+          "endLine": 516,
+          "params": [
+            "propType",
+            "ignoreComponentSettings",
+            "getvalueString",
+            "elem",
+            "outvalue"
+          ]
+        },
+        {
+          "name": "tryConvertNumber",
+          "startLine": 518,
+          "endLine": 602,
+          "params": [
+            "type",
+            "valueString",
+            "value"
+          ]
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 618,
+          "endLine": 638,
+          "params": [
+            "element",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "containsOnlyReversibleTapXmlChars",
+          "startLine": 645,
+          "endLine": 667,
+          "params": [
+            "str"
+          ]
+        },
+        {
+          "name": "GetUsedFiles",
+          "startLine": 669,
+          "endLine": 699,
+          "params": [
+            "obj"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 712,
+          "endLine": 923,
+          "params": [
+            "elem",
+            "obj",
+            "expectedType"
+          ]
+        },
+        {
+          "name": "SetHasDefaultValueAttribute",
+          "startLine": 925,
+          "endLine": 935,
+          "params": [
+            "subProp",
+            "val",
+            "elem2"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IConstructingSerializer",
+          "startLine": 22,
+          "endLine": 28,
+          "methods": [],
+          "properties": [
+            "Object",
+            "CurrentMember"
+          ]
+        },
+        {
+          "name": "ObjectSerializer",
+          "startLine": 32,
+          "endLine": 936,
+          "methods": [
+            "TryDeserializeObject",
+            "readContentInternal",
+            "tryConvertNumber",
+            "Deserialize",
+            "containsOnlyReversibleTapXmlChars",
+            "GetUsedFiles",
+            "Serialize",
+            "SetHasDefaultValueAttribute"
+          ],
+          "properties": [
+            "CurrentMember",
+            "IgnoreMemberXName",
+            "Order",
+            "Object",
+            "serializableMembers",
+            "cycleDetetionSet",
+            "AlwaysG17DoubleFormat",
+            "DefaultValue",
+            "enumTable"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IConstructingSerializer",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "CurrentMember",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "IgnoreMemberXName",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "Order",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "Object",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "TryDeserializeObject",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 618,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 712,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "setter",
+          "lineNumber": 67
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.SerializerStack.OfType<ObjectSerializer>().FirstOrDefault",
+          "lineNumber": 76
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.SerializerStack.OfType<ObjectSerializer>",
+          "lineNumber": 76
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "new Exception",
+          "lineNumber": 81
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "ownerMember.HasAttribute<IFactoryAttribute>",
+          "lineNumber": 83
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "ownerMember.TypeDescriptor.DescendsTo",
+          "lineNumber": 87
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "ownerMember.GetAttribute<FactoryAttribute>",
+          "lineNumber": 87
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "FactoryAttribute.Create",
+          "lineNumber": 89
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "ownerMember.GetAttribute<ElementFactoryAttribute>",
+          "lineNumber": 91
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "FactoryAttribute.Create",
+          "lineNumber": 93
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "ownerMember.GetValue",
+          "lineNumber": 99
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "new Exception",
+          "lineNumber": 101
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "t.CreateInstance",
+          "lineNumber": 106
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Array.Empty<object>",
+          "lineNumber": 106
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 114
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "nameof",
+          "lineNumber": 114
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 115
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "serializableMembers.GetOrCreateValue",
+          "lineNumber": 117
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "t3.GetMembers()\n                .Where(x => x.HasAttribute<XmlIgnoreAttribute>() == false)\n                .ToArray",
+          "lineNumber": 117
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "t3.GetMembers()\n                .Where",
+          "lineNumber": 117
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "t3.GetMembers",
+          "lineNumber": 117
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "x.HasAttribute<XmlIgnoreAttribute>",
+          "lineNumber": 118
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "prop.GetAttribute<XmlAttributeAttribute>",
+          "lineNumber": 126
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 128
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "element.Attribute",
+          "lineNumber": 129
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.PropertyXmlName",
+          "lineNumber": 129
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "prop.TypeDescriptor.AsTypeData",
+          "lineNumber": 136
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "readContentInternal",
+          "lineNumber": 137
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "prop.SetValue",
+          "lineNumber": 139
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Log.Warning",
+          "lineNumber": 146
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Log.Debug",
+          "lineNumber": 147
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "properties.FirstOrDefault",
+          "lineNumber": 153
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "x.HasAttribute<XmlTextAttribute>",
+          "lineNumber": 153
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "readContentInternal",
+          "lineNumber": 157
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "td.Load",
+          "lineNumber": 157
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "StringConvertProvider.FromString",
+          "lineNumber": 160
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "mem2.SetValue",
+          "lineNumber": 161
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "properties.ToLookup",
+          "lineNumber": 165
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "x.GetAttributes<XmlElementAttribute>().FirstOrDefault",
+          "lineNumber": 165
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "x.GetAttributes<XmlElementAttribute>",
+          "lineNumber": 165
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "element.Elements().ToArray",
+          "lineNumber": 166
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "element.Elements",
+          "lineNumber": 166
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "visited.Count",
+          "lineNumber": 177
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "element2.Attribute",
+          "lineNumber": 182
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "XmlConvert.DecodeName",
+          "lineNumber": 188
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "p.HasAttribute<OutputAttribute>",
+          "lineNumber": 199
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "element2.Attribute",
+          "lineNumber": 200
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "element2.Attribute",
+          "lineNumber": 201
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "p.HasAttribute<XmlIgnoreAttribute>",
+          "lineNumber": 202
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Log.Warning",
+          "lineNumber": 216
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "t.GetDisplayAttribute",
+          "lineNumber": 216
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "property.GetAttribute<DeserializeOrderAttribute>",
+          "lineNumber": 219
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "CurrentMember.HasAttribute<XmlIgnoreAttribute>",
+          "lineNumber": 240
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "CurrentMember.HasAttribute<BrowsableAttribute>",
+          "lineNumber": 241
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Property.PropertyType.HasInterface<IList>",
+          "lineNumber": 244
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Property.HasAttribute<XmlElementAttribute>",
+          "lineNumber": 244
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Property.GetValue",
+          "lineNumber": 247
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "list.Add",
+          "lineNumber": 248
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 249
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Property.PropertyType.GetGenericArguments().First",
+          "lineNumber": 249
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Property.PropertyType.GetGenericArguments",
+          "lineNumber": 249
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "property.SetValue",
+          "lineNumber": 255
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "property.HasAttribute<DeserializeInPlaceAttribute>",
+          "lineNumber": 258
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "property.GetValue",
+          "lineNumber": 260
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "new Exception",
+          "lineNumber": 262
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "this.TryDeserializeObject",
+          "lineNumber": 263
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 263
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 268
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Log.Warning",
+          "lineNumber": 276
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Log.Warning",
+          "lineNumber": 277
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Log.Debug",
+          "lineNumber": 278
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "visited.Count",
+          "lineNumber": 287
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 291
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Equals",
+          "lineNumber": 292
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 309
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "XmlConvert.DecodeName",
+          "lineNumber": 315
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "t2.GetMember",
+          "lineNumber": 318
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "t2.GetMembers().FirstOrDefault",
+          "lineNumber": 320
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "t2.GetMembers",
+          "lineNumber": 320
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "property.HasAttribute<OutputAttribute>",
+          "lineNumber": 328
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "propertyElement.Attribute",
+          "lineNumber": 329
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "propertyElement.Attribute",
+          "lineNumber": 330
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 346
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "property.SetValue",
+          "lineNumber": 346
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.PushActiveSerializer",
+          "lineNumber": 355
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 358
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.PopActiveSerializer",
+          "lineNumber": 363
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "XmlConvert.DecodeName",
+          "lineNumber": 375
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "elementName.Contains",
+          "lineNumber": 376
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.PushError",
+          "lineNumber": 384
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 388
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "setter",
+          "lineNumber": 395
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 404
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "((IDeserializedCallback)newobj).OnDeserialized",
+          "lineNumber": 408
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Log.Warning",
+          "lineNumber": 412
+        },
+        {
+          "caller": "TryDeserializeObject",
+          "callee": "Log.Debug",
+          "lineNumber": 413
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "getvalueString()?.Trim",
+          "lineNumber": 430
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "getvalueString",
+          "lineNumber": 430
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 434
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "valueString.Contains",
+          "lineNumber": 437
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "valueString.Split",
+          "lineNumber": 439
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "Enum.Parse",
+          "lineNumber": 440
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "string.Join",
+          "lineNumber": 440
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "Enum.Parse",
+          "lineNumber": 443
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "elem.GetDefaultNamespace",
+          "lineNumber": 455
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "elem.Element",
+          "lineNumber": 456
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "ns.GetName",
+          "lineNumber": 456
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "System.Text.Encoding.UTF8.GetString",
+          "lineNumber": 461
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "Convert.FromBase64String",
+          "lineNumber": 461
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "TimeSpan.Parse",
+          "lineNumber": 476
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "Guid.Parse",
+          "lineNumber": 480
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "PluginManager.LocateType",
+          "lineNumber": 484
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "valueString.Split(',').First",
+          "lineNumber": 484
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "valueString.Split",
+          "lineNumber": 484
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "tryConvertNumber",
+          "lineNumber": 486
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "propType.HasInterface<IConvertible>",
+          "lineNumber": 490
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "Convert.ChangeType",
+          "lineNumber": 492
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "propType.GetGenericTypeDefinition",
+          "lineNumber": 493
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "readContentInternal",
+          "lineNumber": 502
+        },
+        {
+          "caller": "readContentInternal",
+          "callee": "Nullable.GetUnderlyingType",
+          "lineNumber": 502
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "Type.GetTypeCode",
+          "lineNumber": 520
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "byte.TryParse",
+          "lineNumber": 525
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "SByte.TryParse",
+          "lineNumber": 532
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "UInt16.TryParse",
+          "lineNumber": 539
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "UInt32.TryParse",
+          "lineNumber": 546
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "UInt64.TryParse",
+          "lineNumber": 553
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "Int16.TryParse",
+          "lineNumber": 561
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "Int32.TryParse",
+          "lineNumber": 568
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "Int64.TryParse",
+          "lineNumber": 575
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "BigFloat.Convert(valueString, CultureInfo.InvariantCulture).ConvertTo",
+          "lineNumber": 581
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "BigFloat.Convert",
+          "lineNumber": 581
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "Double.TryParse",
+          "lineNumber": 587
+        },
+        {
+          "caller": "tryConvertNumber",
+          "callee": "Single.TryParse",
+          "lineNumber": 594
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "readContentInternal",
+          "lineNumber": 624
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 626
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TryDeserializeObject",
+          "lineNumber": 630
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.HandleError",
+          "lineNumber": 635
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.GetDisplayAttribute().GetFullName",
+          "lineNumber": 635
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.GetDisplayAttribute",
+          "lineNumber": 635
+        },
+        {
+          "caller": "containsOnlyReversibleTapXmlChars",
+          "callee": "char.IsLetter",
+          "lineNumber": 653
+        },
+        {
+          "caller": "containsOnlyReversibleTapXmlChars",
+          "callee": "XmlConvert.IsXmlChar",
+          "lineNumber": 655
+        },
+        {
+          "caller": "containsOnlyReversibleTapXmlChars",
+          "callee": "XmlConvert.IsXmlSurrogatePair",
+          "lineNumber": 660
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "new List<string>",
+          "lineNumber": 671
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "prop.HasAttribute<XmlIgnoreAttribute>",
+          "lineNumber": 675
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "prop.GetValue",
+          "lineNumber": 677
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "m.ToString",
+          "lineNumber": 682
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 687
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "td.GetMembers().Where",
+          "lineNumber": 689
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "td.GetMembers",
+          "lineNumber": 689
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "m.HasAttribute<FileDependencyAttribute>",
+          "lineNumber": 689
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "GetStringOrMacroString",
+          "lineNumber": 692
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 694
+        },
+        {
+          "caller": "GetUsedFiles",
+          "callee": "result.Add",
+          "lineNumber": 695
+        },
+        {
+          "caller": "Serialize",
+          "callee": "cycleDetetionSet.Add",
+          "lineNumber": 720
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new Exception",
+          "lineNumber": 721
+        },
+        {
+          "caller": "Serialize",
+          "callee": "GetUsedFiles",
+          "lineNumber": 723
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.NotifyFileUsed",
+          "lineNumber": 724
+        },
+        {
+          "caller": "Serialize",
+          "callee": "d.ToString",
+          "lineNumber": 736
+        },
+        {
+          "caller": "Serialize",
+          "callee": "d.ToString",
+          "lineNumber": 747
+        },
+        {
+          "caller": "Serialize",
+          "callee": "double.Parse",
+          "lineNumber": 748
+        },
+        {
+          "caller": "Serialize",
+          "callee": "d.ToString",
+          "lineNumber": 751
+        },
+        {
+          "caller": "Serialize",
+          "callee": "f.ToString",
+          "lineNumber": 757
+        },
+        {
+          "caller": "Serialize",
+          "callee": "BigFloat.Convert(d).ToString",
+          "lineNumber": 760
+        },
+        {
+          "caller": "Serialize",
+          "callee": "BigFloat.Convert",
+          "lineNumber": 760
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Convert.ToString",
+          "lineNumber": 764
+        },
+        {
+          "caller": "Serialize",
+          "callee": "containsOnlyReversibleTapXmlChars",
+          "lineNumber": 771
+        },
+        {
+          "caller": "Serialize",
+          "callee": "str.Trim",
+          "lineNumber": 771
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 777
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Convert.ToBase64String",
+          "lineNumber": 777
+        },
+        {
+          "caller": "Serialize",
+          "callee": "System.Text.Encoding.UTF8.GetBytes",
+          "lineNumber": 777
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Add",
+          "lineNumber": 778
+        },
+        {
+          "caller": "Serialize",
+          "callee": "enumTable.TryGetValue",
+          "lineNumber": 794
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Convert.ToString",
+          "lineNumber": 799
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 807
+        },
+        {
+          "caller": "Serialize",
+          "callee": "_type.GetMembers",
+          "lineNumber": 808
+        },
+        {
+          "caller": "Serialize",
+          "callee": "prop.HasAttribute<XmlIgnoreAttribute>",
+          "lineNumber": 811
+        },
+        {
+          "caller": "Serialize",
+          "callee": "prop.HasAttribute<XmlTextAttribute>",
+          "lineNumber": 812
+        },
+        {
+          "caller": "Serialize",
+          "callee": "prop.GetAttribute<XmlAttributeAttribute>",
+          "lineNumber": 814
+        },
+        {
+          "caller": "Serialize",
+          "callee": "prop.GetValue",
+          "lineNumber": 817
+        },
+        {
+          "caller": "Serialize",
+          "callee": "prop.GetAttribute<DefaultValueAttribute>",
+          "lineNumber": 818
+        },
+        {
+          "caller": "Serialize",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 819
+        },
+        {
+          "caller": "Serialize",
+          "callee": "object.Equals",
+          "lineNumber": 820
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Convert.ToString",
+          "lineNumber": 822
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.SetAttributeValue",
+          "lineNumber": 825
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.PropertyXmlName",
+          "lineNumber": 825
+        },
+        {
+          "caller": "Serialize",
+          "callee": "xmlTextProp.GetValue",
+          "lineNumber": 831
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 833
+        },
+        {
+          "caller": "Serialize",
+          "callee": "subProp.HasAttribute<XmlIgnoreAttribute>",
+          "lineNumber": 839
+        },
+        {
+          "caller": "Serialize",
+          "callee": "subProp.HasAttribute<OutputAttribute>",
+          "lineNumber": 846
+        },
+        {
+          "caller": "Serialize",
+          "callee": "DynamicMember.IsParameterized",
+          "lineNumber": 848
+        },
+        {
+          "caller": "Serialize",
+          "callee": "subProp.GetAttribute<XmlAttributeAttribute>",
+          "lineNumber": 849
+        },
+        {
+          "caller": "Serialize",
+          "callee": "subProp.GetValue",
+          "lineNumber": 855
+        },
+        {
+          "caller": "Serialize",
+          "callee": "enu.GetEnumerator().MoveNext",
+          "lineNumber": 858
+        },
+        {
+          "caller": "Serialize",
+          "callee": "enu.GetEnumerator",
+          "lineNumber": 858
+        },
+        {
+          "caller": "Serialize",
+          "callee": "subProp.GetAttribute<DefaultValueAttribute>",
+          "lineNumber": 860
+        },
+        {
+          "caller": "Serialize",
+          "callee": "subProp.GetAttribute<XmlElementAttribute>",
+          "lineNumber": 865
+        },
+        {
+          "caller": "Serialize",
+          "callee": "cst.Type.HasInterface<IList>",
+          "lineNumber": 866
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 873
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.PropertyXmlName",
+          "lineNumber": 873
+        },
+        {
+          "caller": "Serialize",
+          "callee": "SetHasDefaultValueAttribute",
+          "lineNumber": 874
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Add",
+          "lineNumber": 875
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 876
+        },
+        {
+          "caller": "Serialize",
+          "callee": "TypeData.FromType",
+          "lineNumber": 876
+        },
+        {
+          "caller": "Serialize",
+          "callee": "cst.Type.GetGenericArguments().First",
+          "lineNumber": 876
+        },
+        {
+          "caller": "Serialize",
+          "callee": "cst.Type.GetGenericArguments",
+          "lineNumber": 876
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 881
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.PropertyXmlName",
+          "lineNumber": 881
+        },
+        {
+          "caller": "Serialize",
+          "callee": "subProp.GetAttribute<MetaDataAttribute>",
+          "lineNumber": 884
+        },
+        {
+          "caller": "Serialize",
+          "callee": "subProp.GetDisplayAttribute",
+          "lineNumber": 887
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem2.SetAttributeValue",
+          "lineNumber": 888
+        },
+        {
+          "caller": "Serialize",
+          "callee": "SetHasDefaultValueAttribute",
+          "lineNumber": 894
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Add",
+          "lineNumber": 896
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 898
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.PushError",
+          "lineNumber": 903
+        },
+        {
+          "caller": "Serialize",
+          "callee": "cycleDetetionSet.Remove",
+          "lineNumber": 920
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 921
+        },
+        {
+          "caller": "SetHasDefaultValueAttribute",
+          "callee": "subProp.GetAttribute<DefaultValueAttribute>",
+          "lineNumber": 928
+        },
+        {
+          "caller": "SetHasDefaultValueAttribute",
+          "callee": "Serializer.GetSerializer<DefaultValueSerializer>().RegisterDefaultValue",
+          "lineNumber": 931
+        },
+        {
+          "caller": "SetHasDefaultValueAttribute",
+          "callee": "Serializer.GetSerializer<DefaultValueSerializer>",
+          "lineNumber": 931
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/ResourceSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 239,
+      "nonEmptyLines": 211,
+      "functions": [
+        {
+          "name": "Deserialize",
+          "startLine": 27,
+          "endLine": 122,
+          "params": [
+            "elem",
+            "_t",
+            "setter"
+          ]
+        },
+        {
+          "name": "fetchObject",
+          "startLine": 124,
+          "endLine": 171,
+          "params": [
+            "exactType",
+            "compatibleType",
+            "test",
+            "src"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 176,
+          "endLine": 236,
+          "params": [
+            "elem",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ResourceSerializer",
+          "startLine": 14,
+          "endLine": 237,
+          "methods": [
+            "Deserialize",
+            "fetchObject",
+            "Serialize"
+          ],
+          "properties": [
+            "TestPlanChanged",
+            "Order",
+            "sourceName",
+            "checkRentry"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 176,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Deserialize",
+          "callee": "_t.AsTypeData",
+          "lineNumber": 31
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Attribute",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "ComponentSettingsList.HasContainer",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Value.Trim",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "(Serializer.SerializerStack.Skip(1).FirstOrDefault() as ObjectSerializer)\n                    ?.CurrentMember?.TypeDescriptor?.AsTypeData",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.Skip(1).FirstOrDefault",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.Skip",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.Skip(1).FirstOrDefault",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.SerializerStack.Skip",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 63
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 67
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "fetchObject",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "getName(o).Trim",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "getName",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "getName(obj).Trim",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "getName",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Parent.Element",
+          "lineNumber": 96
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Parent.Element",
+          "lineNumber": 98
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.PushError",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "obj.GetType().DescendsTo",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "obj.GetType",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.PushMessage",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "getName",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "obj.GetType().GetDisplayAttribute().GetFullName",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "obj.GetType().GetDisplayAttribute",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "obj.GetType",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.GetDisplayAttribute().GetFullName",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.GetDisplayAttribute",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 106
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Parent.Element",
+          "lineNumber": 112
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Parent.Element",
+          "lineNumber": 114
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.PushError",
+          "lineNumber": 115
+        },
+        {
+          "caller": "fetchObject",
+          "callee": "PluginManager.LocateType",
+          "lineNumber": 129
+        },
+        {
+          "caller": "fetchObject",
+          "callee": "ComponentSettings.GetCurrent",
+          "lineNumber": 132
+        },
+        {
+          "caller": "fetchObject",
+          "callee": "ComponentSettingsList.GetContainer",
+          "lineNumber": 137
+        },
+        {
+          "caller": "fetchObject",
+          "callee": "test",
+          "lineNumber": 146
+        },
+        {
+          "caller": "fetchObject",
+          "callee": "obj.GetType().DescendsTo",
+          "lineNumber": 147
+        },
+        {
+          "caller": "fetchObject",
+          "callee": "obj.GetType",
+          "lineNumber": 147
+        },
+        {
+          "caller": "fetchObject",
+          "callee": "obj.GetType().DescendsTo",
+          "lineNumber": 155
+        },
+        {
+          "caller": "fetchObject",
+          "callee": "obj.GetType",
+          "lineNumber": 155
+        },
+        {
+          "caller": "Serialize",
+          "callee": "obj.GetType",
+          "lineNumber": 180
+        },
+        {
+          "caller": "Serialize",
+          "callee": "ComponentSettingsList.HasContainer",
+          "lineNumber": 181
+        },
+        {
+          "caller": "Serialize",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 184
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Attribute",
+          "lineNumber": 184
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.SerializerStack.FirstOrDefault",
+          "lineNumber": 188
+        },
+        {
+          "caller": "Serialize",
+          "callee": "collectionSerializer.ComponentSettingsSerializing.Contains",
+          "lineNumber": 190
+        },
+        {
+          "caller": "Serialize",
+          "callee": "checkRentry.Contains",
+          "lineNumber": 192
+        },
+        {
+          "caller": "Serialize",
+          "callee": "checkRentry.Add",
+          "lineNumber": 193
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 196
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.SetAttributeValue",
+          "lineNumber": 198
+        },
+        {
+          "caller": "Serialize",
+          "callee": "checkRentry.Remove",
+          "lineNumber": 203
+        },
+        {
+          "caller": "Serialize",
+          "callee": "ComponentSettingsList.GetContainer",
+          "lineNumber": 207
+        },
+        {
+          "caller": "Serialize",
+          "callee": "container.IndexOf",
+          "lineNumber": 208
+        },
+        {
+          "caller": "Serialize",
+          "callee": "lst.GetRemovedAliveResources().Contains",
+          "lineNumber": 213
+        },
+        {
+          "caller": "Serialize",
+          "callee": "lst.GetRemovedAliveResources",
+          "lineNumber": 213
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Remove",
+          "lineNumber": 215
+        },
+        {
+          "caller": "Serialize",
+          "callee": "index.ToString",
+          "lineNumber": 226
+        },
+        {
+          "caller": "Serialize",
+          "callee": "index.ToString",
+          "lineNumber": 228
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.SetAttributeValue",
+          "lineNumber": 230
+        },
+        {
+          "caller": "Serialize",
+          "callee": "container.GetType",
+          "lineNumber": 230
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/SecureStringSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 132,
+      "nonEmptyLines": 120,
+      "functions": [
+        {
+          "name": "Encrypt",
+          "startLine": 21,
+          "endLine": 45,
+          "params": [
+            "input",
+            "password"
+          ]
+        },
+        {
+          "name": "Decrypt",
+          "startLine": 47,
+          "endLine": 81,
+          "params": [
+            "input",
+            "password"
+          ]
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 94,
+          "endLine": 112,
+          "params": [
+            "node",
+            "targetType",
+            "setResult"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 120,
+          "endLine": 129,
+          "params": [
+            "elem",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CryptographyHelper",
+          "startLine": 13,
+          "endLine": 83,
+          "methods": [
+            "Encrypt",
+            "Decrypt"
+          ],
+          "properties": [
+            "iterations",
+            "nofKeyBytes",
+            "hashMethod",
+            "iv",
+            "salt"
+          ]
+        },
+        {
+          "name": "SecureStringSerializer",
+          "startLine": 85,
+          "endLine": 130,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "password"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Deserialize",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 120,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Encrypt",
+          "callee": "UTF8Encoding.UTF8.GetBytes",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "Aes.Create",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "new PasswordDeriveBytes(password, salt, hashMethod, iterations).GetBytes",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "new PasswordDeriveBytes",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "new MemoryStream",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "aesAlgo.CreateEncryptor",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "new CryptoStream",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "writer.Write",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "writer.FlushFinalBlock",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "memoryStreamDestination.ToArray",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "aesAlgo.Clear",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Encrypt",
+          "callee": "Convert.ToBase64String",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Decrypt",
+          "callee": "Convert.FromBase64String",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Decrypt",
+          "callee": "Aes.Create",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Decrypt",
+          "callee": "new PasswordDeriveBytes(password, salt, hashMethod, iterations).GetBytes",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Decrypt",
+          "callee": "new PasswordDeriveBytes",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Decrypt",
+          "callee": "new MemoryStream",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Decrypt",
+          "callee": "aesAlgo.CreateDecryptor",
+          "lineNumber": 63
+        },
+        {
+          "caller": "Decrypt",
+          "callee": "new CryptoStream",
+          "lineNumber": 65
+        },
+        {
+          "caller": "Decrypt",
+          "callee": "reader.Read",
+          "lineNumber": 68
+        },
+        {
+          "caller": "Decrypt",
+          "callee": "Encoding.UTF8.GetString",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Decrypt",
+          "callee": "aesAlgo.Clear",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "targetType.IsA",
+          "lineNumber": 96
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "CryptographyHelper.Decrypt",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "result.AppendChar",
+          "lineNumber": 104
+        },
+        {
+          "caller": "Serialize",
+          "callee": "sec.ConvertToUnsecureString",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Serialize",
+          "callee": "CryptographyHelper.Encrypt",
+          "lineNumber": 126
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/TapSerializerPlugin.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 70,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "TapSerializerPlugin",
+          "startLine": 23,
+          "endLine": 26,
+          "params": []
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 39,
+          "endLine": 39,
+          "params": [
+            "node",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 48,
+          "endLine": 48,
+          "params": [
+            "node",
+            "obj",
+            "expectedType"
+          ]
+        },
+        {
+          "name": "Warning",
+          "startLine": 63,
+          "endLine": 67,
+          "params": [
+            "log",
+            "node",
+            "message"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TapSerializerPlugin",
+          "startLine": 13,
+          "endLine": 49,
+          "methods": [
+            "TapSerializerPlugin",
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Log",
+            "Serializer",
+            "Order"
+          ]
+        },
+        {
+          "name": "LogExtension",
+          "startLine": 54,
+          "endLine": 68,
+          "methods": [
+            "Warning"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TapSerializerPlugin",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "Order",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "TapSerializerPlugin",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "Warning",
+          "line": 63,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TapSerializerPlugin",
+          "callee": "TapSerializer.GetCurrentSerializer",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Warning",
+          "callee": "log.Warning",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Warning",
+          "callee": "string.Format",
+          "lineNumber": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 4,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/TestPlanSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 71,
+      "nonEmptyLines": 66,
+      "functions": [
+        {
+          "name": "Deserialize",
+          "startLine": 28,
+          "endLine": 43,
+          "params": [
+            "element",
+            "_t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 52,
+          "endLine": 68,
+          "params": [
+            "element",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestPlanSerializer",
+          "startLine": 12,
+          "endLine": 69,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Order",
+            "currentNode",
+            "Plan",
+            "testPlanType"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 52,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Deserialize",
+          "callee": "_t.DirectInheritsFrom",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "_t.CreateInstance",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TryDeserializeObject",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Serialize",
+          "callee": "currentNode.Contains",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Serialize",
+          "callee": "currentNode.Add",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Serialize",
+          "callee": "currentNode.Remove",
+          "lineNumber": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/TestStepListSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 69,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "Deserialize",
+          "startLine": 21,
+          "endLine": 47,
+          "params": [
+            "elem",
+            "t",
+            "setResult"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 51,
+          "endLine": 66,
+          "params": [
+            "elem",
+            "target",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestStepListSerializer",
+          "startLine": 11,
+          "endLine": 67,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Order",
+            "testStepName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 51,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Deserialize",
+          "callee": "t.IsA",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "new TestStepList",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "elem.Elements",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.PushError",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.PushError",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "steps.Add",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Serialize",
+          "callee": "new XElement",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.Serialize",
+          "lineNumber": 60
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Add",
+          "lineNumber": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SerializerPlugins/TestStepSerializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 176,
+      "nonEmptyLines": 159,
+      "functions": [
+        {
+          "name": "FindStep",
+          "startLine": 21,
+          "endLine": 25,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "AddKnownStepHeirarchy",
+          "startLine": 36,
+          "endLine": 48,
+          "params": [
+            "stepParent"
+          ]
+        },
+        {
+          "name": "FixupStep",
+          "startLine": 55,
+          "endLine": 87,
+          "params": [
+            "step",
+            "recurse"
+          ]
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 90,
+          "endLine": 140,
+          "params": [
+            "elem",
+            "t",
+            "setResult"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 144,
+          "endLine": 173,
+          "params": [
+            "elem",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestStepSerializer",
+          "startLine": 13,
+          "endLine": 174,
+          "methods": [
+            "FindStep",
+            "AddKnownStepHeirarchy",
+            "FixupStep",
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Order",
+            "stepLookup",
+            "ignoredGuids",
+            "currentNode"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "AddKnownStepHeirarchy",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "FixupStep",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "TestStepSerializer",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FindStep",
+          "callee": "stepLookup.TryGetValue",
+          "lineNumber": 23
+        },
+        {
+          "caller": "AddKnownStepHeirarchy",
+          "callee": "ignoredGuids.Add",
+          "lineNumber": 43
+        },
+        {
+          "caller": "AddKnownStepHeirarchy",
+          "callee": "AddKnownStepHeirarchy",
+          "lineNumber": 47
+        },
+        {
+          "caller": "FixupStep",
+          "callee": "stepLookup.TryGetValue",
+          "lineNumber": 57
+        },
+        {
+          "caller": "FixupStep",
+          "callee": "ignoredGuids.Contains",
+          "lineNumber": 57
+        },
+        {
+          "caller": "FixupStep",
+          "callee": "s.GetParents().Any",
+          "lineNumber": 59
+        },
+        {
+          "caller": "FixupStep",
+          "callee": "s.GetParents",
+          "lineNumber": 59
+        },
+        {
+          "caller": "FixupStep",
+          "callee": "Guid.NewGuid",
+          "lineNumber": 60
+        },
+        {
+          "caller": "FixupStep",
+          "callee": "anyParentReadonly",
+          "lineNumber": 64
+        },
+        {
+          "caller": "FixupStep",
+          "callee": "Log.Debug",
+          "lineNumber": 69
+        },
+        {
+          "caller": "FixupStep",
+          "callee": "Log.Warning",
+          "lineNumber": 75
+        },
+        {
+          "caller": "FixupStep",
+          "callee": "FixupStep",
+          "lineNumber": 85
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Guid.TryParse",
+          "lineNumber": 98
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.DeferLoad",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "stepLookup.ContainsKey",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 104
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Log.Warning",
+          "lineNumber": 109
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "currentNode.Contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "currentNode.Add",
+          "lineNumber": 120
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 123
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setResult",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "FixupStep",
+          "lineNumber": 126
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "currentNode.Remove",
+          "lineNumber": 135
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.SerializerStack.OfType<ObjectSerializer>().FirstOrDefault",
+          "lineNumber": 151
+        },
+        {
+          "caller": "Serialize",
+          "callee": "Serializer.SerializerStack.OfType<ObjectSerializer>",
+          "lineNumber": 151
+        },
+        {
+          "caller": "Serialize",
+          "callee": "currentlySerializing.CurrentMember.TypeDescriptor.DescendsTo",
+          "lineNumber": 155
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Attributes(\"type\")?.Remove",
+          "lineNumber": 157
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Attributes",
+          "lineNumber": 157
+        },
+        {
+          "caller": "Serialize",
+          "callee": "((ITestStep)obj).Id.ToString",
+          "lineNumber": 158
+        },
+        {
+          "caller": "Serialize",
+          "callee": "tp.ElementType?.DescendsTo",
+          "lineNumber": 164
+        },
+        {
+          "caller": "Serialize",
+          "callee": "currentlySerializing.CurrentMember.DeclaringType.DescendsTo",
+          "lineNumber": 164
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Attributes(\"type\")?.Remove",
+          "lineNumber": 166
+        },
+        {
+          "caller": "Serialize",
+          "callee": "elem.Attributes",
+          "lineNumber": 166
+        },
+        {
+          "caller": "Serialize",
+          "callee": "((ITestStep)obj).Id.ToString",
+          "lineNumber": 167
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Session/TapSession.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 249,
+      "nonEmptyLines": 222,
+      "functions": [
+        {
+          "name": "SessionLocal",
+          "startLine": 71,
+          "endLine": 75,
+          "params": [
+            "rootValue",
+            "autoDispose"
+          ]
+        },
+        {
+          "name": "SessionLocal",
+          "startLine": 82,
+          "endLine": 85,
+          "params": [
+            "autoDispose"
+          ]
+        },
+        {
+          "name": "Session",
+          "startLine": 108,
+          "endLine": 113,
+          "params": []
+        },
+        {
+          "name": "DisposeSessionLocals",
+          "startLine": 115,
+          "endLine": 125,
+          "params": []
+        },
+        {
+          "name": "Session",
+          "startLine": 142,
+          "endLine": 151,
+          "params": [
+            "id",
+            "options",
+            "rootSession"
+          ]
+        },
+        {
+          "name": "Dispose",
+          "startLine": 160,
+          "endLine": 181,
+          "params": []
+        },
+        {
+          "name": "Create",
+          "startLine": 187,
+          "endLine": 193,
+          "params": [
+            "options",
+            "id"
+          ]
+        },
+        {
+          "name": "Create",
+          "startLine": 198,
+          "endLine": 198,
+          "params": [
+            "options"
+          ]
+        },
+        {
+          "name": "Start",
+          "startLine": 204,
+          "endLine": 220,
+          "params": [
+            "action",
+            "options"
+          ]
+        },
+        {
+          "name": "RunInSession",
+          "startLine": 227,
+          "endLine": 230,
+          "params": [
+            "action"
+          ]
+        },
+        {
+          "name": "Activate",
+          "startLine": 232,
+          "endLine": 247,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ISessionLocal",
+          "startLine": 32,
+          "endLine": 35,
+          "methods": [],
+          "properties": [
+            "AutoDispose"
+          ]
+        },
+        {
+          "name": "SessionLocal",
+          "startLine": 40,
+          "endLine": 86,
+          "methods": [
+            "SessionLocal",
+            "SessionLocal"
+          ],
+          "properties": [
+            "AutoDispose",
+            "Value"
+          ]
+        },
+        {
+          "name": "Session",
+          "startLine": 95,
+          "endLine": 248,
+          "methods": [
+            "Session",
+            "DisposeSessionLocals",
+            "Session",
+            "Dispose",
+            "Create",
+            "Create",
+            "Start",
+            "RunInSession",
+            "Activate"
+          ],
+          "properties": [
+            "sessionTField",
+            "RootSession",
+            "threadContext",
+            "sessionLocals",
+            "Parent",
+            "Current",
+            "Id",
+            "Options",
+            "_log",
+            "log",
+            "disposables"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AutoDispose",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "Value",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "SessionLocal",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "SessionLocal",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "SessionLocal",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "RootSession",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "Parent",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "Current",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "Id",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "Options",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "Create",
+          "line": 187,
+          "isDefault": false
+        },
+        {
+          "name": "Create",
+          "line": 198,
+          "isDefault": false
+        },
+        {
+          "name": "Start",
+          "line": 204,
+          "isDefault": false
+        },
+        {
+          "name": "RunInSession",
+          "line": 227,
+          "isDefault": false
+        },
+        {
+          "name": "Session",
+          "line": 95,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SessionLocal",
+          "callee": "Equals",
+          "lineNumber": 73
+        },
+        {
+          "caller": "Session",
+          "callee": "new Session",
+          "lineNumber": 111
+        },
+        {
+          "caller": "Session",
+          "callee": "Guid.NewGuid",
+          "lineNumber": 111
+        },
+        {
+          "caller": "DisposeSessionLocals",
+          "callee": "disp.Dispose",
+          "lineNumber": 121
+        },
+        {
+          "caller": "DisposeSessionLocals",
+          "callee": "sessionLocals.Clear",
+          "lineNumber": 124
+        },
+        {
+          "caller": "Dispose",
+          "callee": "new List<Exception>",
+          "lineNumber": 162
+        },
+        {
+          "caller": "Dispose",
+          "callee": "disposables.Pop",
+          "lineNumber": 167
+        },
+        {
+          "caller": "Dispose",
+          "callee": "item.Dispose",
+          "lineNumber": 168
+        },
+        {
+          "caller": "Dispose",
+          "callee": "exceptions.Add",
+          "lineNumber": 172
+        },
+        {
+          "caller": "Dispose",
+          "callee": "log.Error",
+          "lineNumber": 178
+        },
+        {
+          "caller": "Dispose",
+          "callee": "log.Debug",
+          "lineNumber": 179
+        },
+        {
+          "caller": "Create",
+          "callee": "new Session",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Create",
+          "callee": "Guid.NewGuid",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Create",
+          "callee": "session.disposables.Push",
+          "lineNumber": 190
+        },
+        {
+          "caller": "Create",
+          "callee": "TapThread.UsingThreadContext",
+          "lineNumber": 190
+        },
+        {
+          "caller": "Create",
+          "callee": "session.Activate",
+          "lineNumber": 191
+        },
+        {
+          "caller": "Create",
+          "callee": "Create",
+          "lineNumber": 198
+        },
+        {
+          "caller": "Start",
+          "callee": "new Session",
+          "lineNumber": 206
+        },
+        {
+          "caller": "Start",
+          "callee": "Guid.NewGuid",
+          "lineNumber": 206
+        },
+        {
+          "caller": "Start",
+          "callee": "TapThread.Start",
+          "lineNumber": 207
+        },
+        {
+          "caller": "Start",
+          "callee": "session.Activate",
+          "lineNumber": 211
+        },
+        {
+          "caller": "Start",
+          "callee": "action",
+          "lineNumber": 213
+        },
+        {
+          "caller": "Start",
+          "callee": "session.Dispose",
+          "lineNumber": 217
+        },
+        {
+          "caller": "RunInSession",
+          "callee": "TapThread.WithNewContext",
+          "lineNumber": 229
+        },
+        {
+          "caller": "Activate",
+          "callee": "Options.HasFlag",
+          "lineNumber": 237
+        },
+        {
+          "caller": "Activate",
+          "callee": "ComponentSettings.BeginSession",
+          "lineNumber": 238
+        },
+        {
+          "caller": "Activate",
+          "callee": "Options.HasFlag",
+          "lineNumber": 239
+        },
+        {
+          "caller": "Activate",
+          "callee": "Log.WithNewContext",
+          "lineNumber": 240
+        },
+        {
+          "caller": "Activate",
+          "callee": "Dispose",
+          "lineNumber": 244
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 16,
+        "functionCount": 11,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "Engine/SessionLogs.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 596,
+      "nonEmptyLines": 534,
+      "functions": [
+        {
+          "name": "CreateHardLinkWin",
+          "startLine": 25,
+          "endLine": 30,
+          "params": [
+            "lpFileName",
+            "lpExistingFileName",
+            "lpSecurityAttributes"
+          ]
+        },
+        {
+          "name": "CreateHardLinkUnix",
+          "startLine": 32,
+          "endLine": 33,
+          "params": [
+            "target",
+            "linkpath"
+          ]
+        },
+        {
+          "name": "CreateHardLink",
+          "startLine": 35,
+          "endLine": 53,
+          "params": [
+            "targetFile",
+            "linkName"
+          ]
+        },
+        {
+          "name": "GetSessionLogFilePath",
+          "startLine": 77,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "Initialize",
+          "startLine": 90,
+          "endLine": 107,
+          "params": []
+        },
+        {
+          "name": "Initialize",
+          "startLine": 112,
+          "endLine": 119,
+          "params": [
+            "logFileName"
+          ]
+        },
+        {
+          "name": "Initialize",
+          "startLine": 130,
+          "endLine": 160,
+          "params": [
+            "logFileName",
+            "noExclusiveWriteLock"
+          ]
+        },
+        {
+          "name": "FlushOnExit",
+          "startLine": 162,
+          "endLine": 174,
+          "params": [
+            "sender",
+            "e"
+          ]
+        },
+        {
+          "name": "getLogRecentFilesName",
+          "startLine": 335,
+          "endLine": 363,
+          "params": []
+        },
+        {
+          "name": "RemoveOldLogFiles",
+          "startLine": 367,
+          "endLine": 407,
+          "params": []
+        },
+        {
+          "name": "rename",
+          "startLine": 412,
+          "endLine": 471,
+          "params": [
+            "path",
+            "newLogFile"
+          ]
+        },
+        {
+          "name": "MakeLatest",
+          "startLine": 473,
+          "endLine": 487,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "TraceListener_FileSizeLimitReached",
+          "startLine": 491,
+          "endLine": 506,
+          "params": [
+            "sender",
+            "e"
+          ]
+        },
+        {
+          "name": "addLogRotateNumber",
+          "startLine": 508,
+          "endLine": 522,
+          "params": [
+            "fullname",
+            "cnt"
+          ]
+        },
+        {
+          "name": "Rename",
+          "startLine": 527,
+          "endLine": 527,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "Rename",
+          "startLine": 534,
+          "endLine": 550,
+          "params": [
+            "path",
+            "newLogFile"
+          ]
+        },
+        {
+          "name": "LogStartupInfo",
+          "startLine": 553,
+          "endLine": 585,
+          "params": []
+        },
+        {
+          "name": "Flush",
+          "startLine": 590,
+          "endLine": 594,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SessionLogs",
+          "startLine": 23,
+          "endLine": 595,
+          "methods": [
+            "CreateHardLinkWin",
+            "CreateHardLinkUnix",
+            "CreateHardLink",
+            "GetSessionLogFilePath",
+            "Initialize",
+            "Initialize",
+            "Initialize",
+            "FlushOnExit",
+            "getLogRecentFilesName",
+            "RemoveOldLogFiles",
+            "rename",
+            "MakeLatest",
+            "TraceListener_FileSizeLimitReached",
+            "addLogRotateNumber",
+            "Rename",
+            "Rename",
+            "LogStartupInfo",
+            "Flush"
+          ],
+          "properties": [
+            "log",
+            "MaxNumberOfTraceFiles",
+            "MaxTotalSizeOfSessionLogFiles",
+            "LogFileMaxSize",
+            "maxNumberOfConcurrentSessions",
+            "traceListener",
+            "currentLogFile",
+            "NoExclusiveWriteLock",
+            "SkipStartupInfo",
+            "RecentFilesName",
+            "recentSystemLogs",
+            "sessionLogCount",
+            "sessionLogRotateLock",
+            "SystemInfoTask"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GetSessionLogFilePath",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "Initialize",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "Initialize",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "Initialize",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "Rename",
+          "line": 527,
+          "isDefault": false
+        },
+        {
+          "name": "Flush",
+          "line": 590,
+          "isDefault": false
+        },
+        {
+          "name": "SessionLogs",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CreateHardLink",
+          "callee": "CreateHardLinkWin",
+          "lineNumber": 39
+        },
+        {
+          "caller": "CreateHardLink",
+          "callee": "Marshal.StringToCoTaskMemAnsi",
+          "lineNumber": 43
+        },
+        {
+          "caller": "CreateHardLink",
+          "callee": "Marshal.StringToCoTaskMemAnsi",
+          "lineNumber": 44
+        },
+        {
+          "caller": "CreateHardLink",
+          "callee": "CreateHardLinkUnix",
+          "lineNumber": 45
+        },
+        {
+          "caller": "CreateHardLink",
+          "callee": "Marshal.FreeCoTaskMem",
+          "lineNumber": 46
+        },
+        {
+          "caller": "CreateHardLink",
+          "callee": "Marshal.FreeCoTaskMem",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Initialize",
+          "callee": "System.Diagnostics.Process.GetCurrentProcess().StartTime.ToString",
+          "lineNumber": 94
+        },
+        {
+          "caller": "Initialize",
+          "callee": "System.Diagnostics.Process.GetCurrentProcess",
+          "lineNumber": 94
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Assembly.GetEntryAssembly",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Initialize",
+          "callee": "String.IsNullOrWhiteSpace",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Assembly.GetEntryAssembly",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Path.GetFileNameWithoutExtension",
+          "lineNumber": 101
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Assembly.GetEntryAssembly",
+          "lineNumber": 101
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Initialize",
+          "lineNumber": 106
+        },
+        {
+          "caller": "Initialize",
+          "callee": "FileSystemHelper.GetCurrentInstallationDirectory",
+          "lineNumber": 106
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Initialize",
+          "lineNumber": 118
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Rename",
+          "lineNumber": 135
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Task.Factory\n                    // Ensure that the plugin manager is loaded before running SystemInfo.\n                    // this ensures that System.Runtime.InteropServices.RuntimeInformation.dll is loaded. (issue #4000).\n                    .StartNew(PluginManager.Load)\n                    // then get the system info on a separate thread (it takes ~1s)\n                    .ContinueWith",
+          "lineNumber": 136
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Task.Factory\n                    // Ensure that the plugin manager is loaded before running SystemInfo.\n                    // this ensures that System.Runtime.InteropServices.RuntimeInformation.dll is loaded. (issue #4000).\n                    .StartNew",
+          "lineNumber": 136
+        },
+        {
+          "caller": "Initialize",
+          "callee": "LogStartupInfo",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Rename",
+          "lineNumber": 153
+        },
+        {
+          "caller": "Initialize",
+          "callee": "log.Debug",
+          "lineNumber": 159
+        },
+        {
+          "caller": "Initialize",
+          "callee": "Directory.GetCurrentDirectory",
+          "lineNumber": 159
+        },
+        {
+          "caller": "FlushOnExit",
+          "callee": "SystemInfoTask.Wait",
+          "lineNumber": 166
+        },
+        {
+          "caller": "FlushOnExit",
+          "callee": "log.Debug",
+          "lineNumber": 171
+        },
+        {
+          "caller": "FlushOnExit",
+          "callee": "Flush",
+          "lineNumber": 173
+        },
+        {
+          "caller": "readLinesSafe",
+          "callee": "File.ReadAllLines",
+          "lineNumber": 193
+        },
+        {
+          "caller": "readLinesSafe",
+          "callee": "Thread.Sleep",
+          "lineNumber": 197
+        },
+        {
+          "caller": "setHidden",
+          "callee": "File.SetAttributes",
+          "lineNumber": 207
+        },
+        {
+          "caller": "ensureFileExistsAndReadLines",
+          "callee": "File.Exists",
+          "lineNumber": 219
+        },
+        {
+          "caller": "ensureFileExistsAndReadLines",
+          "callee": "File.Create(name).Close",
+          "lineNumber": 221
+        },
+        {
+          "caller": "ensureFileExistsAndReadLines",
+          "callee": "File.Create",
+          "lineNumber": 221
+        },
+        {
+          "caller": "ensureFileExistsAndReadLines",
+          "callee": "setHidden",
+          "lineNumber": 225
+        },
+        {
+          "caller": "ensureFileExistsAndReadLines",
+          "callee": "Array.Empty<string>",
+          "lineNumber": 232
+        },
+        {
+          "caller": "ensureFileExistsAndReadLines",
+          "callee": "readLinesSafe",
+          "lineNumber": 234
+        },
+        {
+          "caller": "ensureFileExistsAndReadLines",
+          "callee": "Array.Empty<string>",
+          "lineNumber": 245
+        },
+        {
+          "caller": "RecentFilesList",
+          "callee": "new Mutex",
+          "lineNumber": 258
+        },
+        {
+          "caller": "RecentFilesList",
+          "callee": "Thread.Sleep",
+          "lineNumber": 264
+        },
+        {
+          "caller": "RecentFilesList",
+          "callee": "log.Debug",
+          "lineNumber": 269
+        },
+        {
+          "caller": "GetRecent",
+          "callee": "Array.Empty<string>",
+          "lineNumber": 278
+        },
+        {
+          "caller": "GetRecent",
+          "callee": "recentLock.WaitOne",
+          "lineNumber": 282
+        },
+        {
+          "caller": "GetRecent",
+          "callee": "ensureFileExistsAndReadLines",
+          "lineNumber": 290
+        },
+        {
+          "caller": "GetRecent",
+          "callee": "recentLock.ReleaseMutex",
+          "lineNumber": 294
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "recentLock.WaitOne",
+          "lineNumber": 308
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "ensureFileExistsAndReadLines().Append(newname).DistinctLast",
+          "lineNumber": 316
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "ensureFileExistsAndReadLines().Append",
+          "lineNumber": 316
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "ensureFileExistsAndReadLines",
+          "lineNumber": 316
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "currentFiles.RemoveIf",
+          "lineNumber": 317
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "File.Exists",
+          "lineNumber": 317
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "File.Open",
+          "lineNumber": 318
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "f.SetLength",
+          "lineNumber": 320
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "new StreamWriter",
+          "lineNumber": 321
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "currentFiles.ForEach",
+          "lineNumber": 323
+        },
+        {
+          "caller": "AddRecent",
+          "callee": "recentLock.ReleaseMutex",
+          "lineNumber": 329
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "new List<string>",
+          "lineNumber": 339
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "f",
+          "lineNumber": 345
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "options.Add",
+          "lineNumber": 347
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "addOption",
+          "lineNumber": 356
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "Path.Combine",
+          "lineNumber": 356
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "addOption",
+          "lineNumber": 358
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "Path.Combine",
+          "lineNumber": 358
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 358
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "addOption",
+          "lineNumber": 359
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "Path.Combine",
+          "lineNumber": 359
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "Environment.GetFolderPath",
+          "lineNumber": 359
+        },
+        {
+          "caller": "getLogRecentFilesName",
+          "callee": "addOption",
+          "lineNumber": 360
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "recentSystemLogs.GetRecent().Where(File.Exists).ToList",
+          "lineNumber": 369
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "recentSystemLogs.GetRecent().Where",
+          "lineNumber": 369
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "recentSystemLogs.GetRecent",
+          "lineNumber": 369
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "recentFiles.Select(x => new FileInfo(x).Length).Sum",
+          "lineNumber": 373
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "recentFiles.Select",
+          "lineNumber": 373
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "new FileInfo",
+          "lineNumber": 373
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "CalcTotalSize",
+          "lineNumber": 383
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "ConditionViolated",
+          "lineNumber": 391
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "File.Exists",
+          "lineNumber": 395
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "log.Debug",
+          "lineNumber": 397
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "File.Delete",
+          "lineNumber": 398
+        },
+        {
+          "caller": "RemoveOldLogFiles",
+          "callee": "recentFiles.RemoveAt",
+          "lineNumber": 400
+        },
+        {
+          "caller": "rename",
+          "callee": "System.Diagnostics.Stopwatch.StartNew",
+          "lineNumber": 414
+        },
+        {
+          "caller": "rename",
+          "callee": "Path.GetFileNameWithoutExtension",
+          "lineNumber": 417
+        },
+        {
+          "caller": "rename",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 418
+        },
+        {
+          "caller": "rename",
+          "callee": "Path.GetExtension",
+          "lineNumber": 419
+        },
+        {
+          "caller": "rename",
+          "callee": "Path.Combine",
+          "lineNumber": 425
+        },
+        {
+          "caller": "rename",
+          "callee": "idx.ToString",
+          "lineNumber": 425
+        },
+        {
+          "caller": "rename",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 428
+        },
+        {
+          "caller": "rename",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 429
+        },
+        {
+          "caller": "rename",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 429
+        },
+        {
+          "caller": "rename",
+          "callee": "new FileStream",
+          "lineNumber": 433
+        },
+        {
+          "caller": "rename",
+          "callee": "new FileTraceListener",
+          "lineNumber": 434
+        },
+        {
+          "caller": "rename",
+          "callee": "new FileTraceListener",
+          "lineNumber": 438
+        },
+        {
+          "caller": "rename",
+          "callee": "Log.AddListener",
+          "lineNumber": 443
+        },
+        {
+          "caller": "rename",
+          "callee": "traceListener.ChangeFileName",
+          "lineNumber": 447
+        },
+        {
+          "caller": "rename",
+          "callee": "log.Debug",
+          "lineNumber": 460
+        },
+        {
+          "caller": "rename",
+          "callee": "log.Debug",
+          "lineNumber": 465
+        },
+        {
+          "caller": "rename",
+          "callee": "recentSystemLogs.AddRecent",
+          "lineNumber": 466
+        },
+        {
+          "caller": "rename",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 466
+        },
+        {
+          "caller": "rename",
+          "callee": "MakeLatest",
+          "lineNumber": 469
+        },
+        {
+          "caller": "rename",
+          "callee": "RemoveOldLogFiles",
+          "lineNumber": 470
+        },
+        {
+          "caller": "MakeLatest",
+          "callee": "Path.Combine",
+          "lineNumber": 478
+        },
+        {
+          "caller": "MakeLatest",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 478
+        },
+        {
+          "caller": "MakeLatest",
+          "callee": "File.Exists",
+          "lineNumber": 479
+        },
+        {
+          "caller": "MakeLatest",
+          "callee": "File.Delete",
+          "lineNumber": 480
+        },
+        {
+          "caller": "MakeLatest",
+          "callee": "CreateHardLink",
+          "lineNumber": 481
+        },
+        {
+          "caller": "TraceListener_FileSizeLimitReached",
+          "callee": "currentLogFile.Replace",
+          "lineNumber": 495
+        },
+        {
+          "caller": "TraceListener_FileSizeLimitReached",
+          "callee": "addLogRotateNumber",
+          "lineNumber": 497
+        },
+        {
+          "caller": "TraceListener_FileSizeLimitReached",
+          "callee": "((FileTraceListener)sender).ChangeFileName",
+          "lineNumber": 498
+        },
+        {
+          "caller": "TraceListener_FileSizeLimitReached",
+          "callee": "log.Info",
+          "lineNumber": 500
+        },
+        {
+          "caller": "TraceListener_FileSizeLimitReached",
+          "callee": "recentSystemLogs.AddRecent",
+          "lineNumber": 501
+        },
+        {
+          "caller": "TraceListener_FileSizeLimitReached",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 501
+        },
+        {
+          "caller": "TraceListener_FileSizeLimitReached",
+          "callee": "MakeLatest",
+          "lineNumber": 502
+        },
+        {
+          "caller": "TraceListener_FileSizeLimitReached",
+          "callee": "RemoveOldLogFiles",
+          "lineNumber": 503
+        },
+        {
+          "caller": "addLogRotateNumber",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 511
+        },
+        {
+          "caller": "addLogRotateNumber",
+          "callee": "Path.GetFileNameWithoutExtension",
+          "lineNumber": 512
+        },
+        {
+          "caller": "addLogRotateNumber",
+          "callee": "Path.HasExtension",
+          "lineNumber": 513
+        },
+        {
+          "caller": "addLogRotateNumber",
+          "callee": "Path.GetExtension",
+          "lineNumber": 515
+        },
+        {
+          "caller": "addLogRotateNumber",
+          "callee": "Path.Combine",
+          "lineNumber": 516
+        },
+        {
+          "caller": "addLogRotateNumber",
+          "callee": "cnt.ToString",
+          "lineNumber": 516
+        },
+        {
+          "caller": "addLogRotateNumber",
+          "callee": "Path.Combine",
+          "lineNumber": 520
+        },
+        {
+          "caller": "addLogRotateNumber",
+          "callee": "cnt.ToString",
+          "lineNumber": 520
+        },
+        {
+          "caller": "Rename",
+          "callee": "Rename",
+          "lineNumber": 527
+        },
+        {
+          "caller": "Rename",
+          "callee": "rename",
+          "lineNumber": 538
+        },
+        {
+          "caller": "Rename",
+          "callee": "log.Warning",
+          "lineNumber": 542
+        },
+        {
+          "caller": "Rename",
+          "callee": "log.Debug",
+          "lineNumber": 543
+        },
+        {
+          "caller": "Rename",
+          "callee": "log.Warning",
+          "lineNumber": 547
+        },
+        {
+          "caller": "Rename",
+          "callee": "log.Debug",
+          "lineNumber": 548
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 555
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "TypeData.GetDerivedTypes<IStartupInfo>().Where",
+          "lineNumber": 556
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "TypeData.GetDerivedTypes<IStartupInfo>",
+          "lineNumber": 556
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "td.CreateInstance",
+          "lineNumber": 561
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "log.Debug",
+          "lineNumber": 564
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "log.Debug",
+          "lineNumber": 570
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "log.Debug",
+          "lineNumber": 571
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "si.LogStartupInfo",
+          "lineNumber": 577
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "log.Debug",
+          "lineNumber": 581
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "nameof",
+          "lineNumber": 581
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "log.Debug",
+          "lineNumber": 582
+        },
+        {
+          "caller": "Flush",
+          "callee": "traceListener.Flush",
+          "lineNumber": 593
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 18,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/ShortTimeSpan.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 211,
+      "nonEmptyLines": 185,
+      "callGraph": [
+        {
+          "caller": "FromSeconds",
+          "callee": "new ShortTimeSpan",
+          "lineNumber": 59
+        },
+        {
+          "caller": "FromSeconds",
+          "callee": "Math.Round",
+          "lineNumber": 59
+        },
+        {
+          "caller": "LongTimeSpanFormat",
+          "callee": "FromSeconds(timeSpan.TotalSeconds).ToStringParts",
+          "lineNumber": 72
+        },
+        {
+          "caller": "LongTimeSpanFormat",
+          "callee": "FromSeconds",
+          "lineNumber": 72
+        },
+        {
+          "caller": "LongTimeSpanFormat",
+          "callee": "FormatTimeStringParts",
+          "lineNumber": 74
+        },
+        {
+          "caller": "LongTimeSpanFormat",
+          "callee": "result.Trim",
+          "lineNumber": 96
+        },
+        {
+          "caller": "FromString",
+          "callee": "str.Trim",
+          "lineNumber": 107
+        },
+        {
+          "caller": "FromString",
+          "callee": "str.EndsWith",
+          "lineNumber": 109
+        },
+        {
+          "caller": "FromString",
+          "callee": "str.EndsWith",
+          "lineNumber": 113
+        },
+        {
+          "caller": "FromString",
+          "callee": "str.EndsWith",
+          "lineNumber": 113
+        },
+        {
+          "caller": "FromString",
+          "callee": "str.EndsWith",
+          "lineNumber": 117
+        },
+        {
+          "caller": "FromString",
+          "callee": "str.EndsWith",
+          "lineNumber": 121
+        },
+        {
+          "caller": "FromString",
+          "callee": "char.IsNumber",
+          "lineNumber": 129
+        },
+        {
+          "caller": "FromString",
+          "callee": "str.Substring",
+          "lineNumber": 134
+        },
+        {
+          "caller": "FromString",
+          "callee": "double.Parse",
+          "lineNumber": 135
+        },
+        {
+          "caller": "FromString",
+          "callee": "new ShortTimeSpan",
+          "lineNumber": 136
+        },
+        {
+          "caller": "ToString",
+          "callee": "string.Format",
+          "lineNumber": 175
+        },
+        {
+          "caller": "ToString",
+          "callee": "Math.Floor",
+          "lineNumber": 175
+        },
+        {
+          "caller": "ToString",
+          "callee": "getUnitString",
+          "lineNumber": 175
+        },
+        {
+          "caller": "ToString",
+          "callee": "string.Format",
+          "lineNumber": 177
+        },
+        {
+          "caller": "ToString",
+          "callee": "Math.Round",
+          "lineNumber": 177
+        },
+        {
+          "caller": "ToString",
+          "callee": "getUnitString",
+          "lineNumber": 177
+        },
+        {
+          "caller": "ToString",
+          "callee": "string.Format",
+          "lineNumber": 179
+        },
+        {
+          "caller": "ToString",
+          "callee": "Math.Floor",
+          "lineNumber": 179
+        },
+        {
+          "caller": "ToString",
+          "callee": "getUnitString",
+          "lineNumber": 179
+        },
+        {
+          "caller": "ToString",
+          "callee": "output.Append",
+          "lineNumber": 188
+        },
+        {
+          "caller": "ToString",
+          "callee": "output.Append",
+          "lineNumber": 192
+        },
+        {
+          "caller": "ToString",
+          "callee": "(Math.Floor(Value * 100) * 0.01).ToString",
+          "lineNumber": 192
+        },
+        {
+          "caller": "ToString",
+          "callee": "Math.Floor",
+          "lineNumber": 192
+        },
+        {
+          "caller": "ToString",
+          "callee": "output.Append",
+          "lineNumber": 194
+        },
+        {
+          "caller": "ToString",
+          "callee": "(Math.Floor(Value * 10) * 0.1).ToString",
+          "lineNumber": 194
+        },
+        {
+          "caller": "ToString",
+          "callee": "Math.Floor",
+          "lineNumber": 194
+        },
+        {
+          "caller": "ToString",
+          "callee": "output.Append",
+          "lineNumber": 196
+        },
+        {
+          "caller": "ToString",
+          "callee": "Math.Floor(Value).ToString",
+          "lineNumber": 196
+        },
+        {
+          "caller": "ToString",
+          "callee": "Math.Floor",
+          "lineNumber": 196
+        },
+        {
+          "caller": "ToString",
+          "callee": "output.Append",
+          "lineNumber": 197
+        },
+        {
+          "caller": "ToString",
+          "callee": "output.Append",
+          "lineNumber": 198
+        },
+        {
+          "caller": "ToString",
+          "callee": "getUnitString",
+          "lineNumber": 198
+        },
+        {
+          "caller": "ToStringParts",
+          "callee": "string.Format",
+          "lineNumber": 204
+        },
+        {
+          "caller": "ToStringParts",
+          "callee": "Math.Floor",
+          "lineNumber": 204
+        },
+        {
+          "caller": "ToStringParts",
+          "callee": "getUnitString",
+          "lineNumber": 204
+        },
+        {
+          "caller": "ToStringParts",
+          "callee": "string.Format",
+          "lineNumber": 206
+        },
+        {
+          "caller": "ToStringParts",
+          "callee": "Math.Floor",
+          "lineNumber": 206
+        },
+        {
+          "caller": "ToStringParts",
+          "callee": "getUnitString",
+          "lineNumber": 206
+        },
+        {
+          "caller": "ToStringParts",
+          "callee": "string.Format",
+          "lineNumber": 208
+        },
+        {
+          "caller": "ToStringParts",
+          "callee": "Math.Floor",
+          "lineNumber": 208
+        },
+        {
+          "caller": "ToStringParts",
+          "callee": "getUnitString",
+          "lineNumber": 208
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "Engine/SiblingStepAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 41,
+      "functions": [
+        {
+          "name": "StepSelectorAttribute",
+          "startLine": 33,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "StepSelectorAttribute",
+          "startLine": 40,
+          "endLine": 43,
+          "params": [
+            "filter"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "StepSelectorAttribute",
+          "startLine": 13,
+          "endLine": 44,
+          "methods": [
+            "StepSelectorAttribute",
+            "StepSelectorAttribute"
+          ],
+          "properties": [
+            "Filter"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Filter",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "StepSelectorAttribute",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "StepSelectorAttribute",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "StepSelectorAttribute",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SupportedModelsAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "SupportedModelsAttribute",
+          "startLine": 25,
+          "endLine": 29,
+          "params": [
+            "manufacturer"
+          ]
+        },
+        {
+          "name": "SupportedModelsAttribute",
+          "startLine": 34,
+          "endLine": 37,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SupportedModelsAttribute",
+          "startLine": 9,
+          "endLine": 38,
+          "methods": [
+            "SupportedModelsAttribute",
+            "SupportedModelsAttribute"
+          ],
+          "properties": [
+            "Manufacturer",
+            "Models"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Manufacturer",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "Models",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "SupportedModelsAttribute",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "SupportedModelsAttribute",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "SupportedModelsAttribute",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/SystemStartupInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "LogStartupInfo",
+          "startLine": 9,
+          "endLine": 19,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SystemStartupInfo",
+          "startLine": 7,
+          "endLine": 20,
+          "methods": [
+            "LogStartupInfo"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LogStartupInfo",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LogStartupInfo",
+          "callee": "Log.CreateSource",
+          "lineNumber": 11
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "String.IsNullOrEmpty",
+          "lineNumber": 12
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "log.Debug",
+          "lineNumber": 13
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "String.IsNullOrEmpty",
+          "lineNumber": 15
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "log.Debug",
+          "lineNumber": 16
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "SemanticVersion.Parse",
+          "lineNumber": 17
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>",
+          "lineNumber": 17
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "Assembly.GetExecutingAssembly",
+          "lineNumber": 17
+        },
+        {
+          "caller": "LogStartupInfo",
+          "callee": "log.Debug",
+          "lineNumber": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    }
+  ]
+}

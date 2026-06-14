@@ -1,0 +1,432 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/Reflection/PluginOrderAttribute.cs",
+      "type": "file",
+      "name": "PluginOrderAttribute.cs",
+      "filePath": "Engine/Reflection/PluginOrderAttribute.cs",
+      "summary": "定义插件排序属性（PluginOrderAttribute），通过Before/After/Order参数控制测试步骤间的依赖执行顺序。",
+      "tags": [
+        "reflection",
+        "attribute",
+        "engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "type": "file",
+      "name": "ReflectionDataExtensions.cs",
+      "filePath": "Engine/Reflection/ReflectionDataExtensions.cs",
+      "summary": "提供ITypeData和IMemberData的扩展方法集，含类型继承判断（DescendsTo）、属性查询、DisplayAttribute翻译和帮助链接获取。",
+      "tags": [
+        "reflection",
+        "extension-methods",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/Reflection/TypeDataProviderStack.cs",
+      "type": "file",
+      "name": "TypeDataProviderStack.cs",
+      "filePath": "Engine/Reflection/TypeDataProviderStack.cs",
+      "summary": "实现多层类型数据提供者堆栈，按优先级遍历多个ITypeDataProvider获取类型数据，支持容错和日志记录。",
+      "tags": [
+        "type-system",
+        "reflection",
+        "chain-of-responsibility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Reflection/PluginOrderAttribute.cs:PluginOrderAttribute",
+      "type": "class",
+      "name": "PluginOrderAttribute",
+      "filePath": "Engine/Reflection/PluginOrderAttribute.cs",
+      "lineRange": [
+        9,
+        60
+      ],
+      "summary": "插件排序属性类，通过Before/After/Order字段控制测试步骤间的执行顺序依赖关系。",
+      "tags": [
+        "attribute",
+        "core"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Reflection/ReflectionDataExtensions.cs:ReflectionDataExtensions",
+      "type": "class",
+      "name": "ReflectionDataExtensions",
+      "filePath": "Engine/Reflection/ReflectionDataExtensions.cs",
+      "lineRange": [
+        15,
+        237
+      ],
+      "summary": "类型反射扩展方法静态类，提供DescendsTo继承判断、属性查询、显示名称获取和帮助链接共12个扩展方法。",
+      "tags": [
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Reflection/TypeDataProviderStack.cs:TypeDataProviderStack",
+      "type": "class",
+      "name": "TypeDataProviderStack",
+      "filePath": "Engine/Reflection/TypeDataProviderStack.cs",
+      "lineRange": [
+        16,
+        187
+      ],
+      "summary": "类型数据提供者堆栈类，按优先级顺序组合多个ITypeDataProvider，逐层尝试获取类型数据。",
+      "tags": [
+        "provider",
+        "chain-of-responsibility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Reflection/PluginOrderAttribute.cs:PluginOrderAttribute",
+      "type": "function",
+      "name": "PluginOrderAttribute",
+      "filePath": "Engine/Reflection/PluginOrderAttribute.cs",
+      "lineRange": [
+        25,
+        30
+      ],
+      "summary": "函数 PluginOrderAttribute，6 行，参数: before, after, order。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Reflection/ReflectionDataExtensions.cs:DescendsTo",
+      "type": "function",
+      "name": "DescendsTo",
+      "filePath": "Engine/Reflection/ReflectionDataExtensions.cs",
+      "lineRange": [
+        29,
+        42
+      ],
+      "summary": "判断类型是否继承自指定基类型，通过ITypeData递归向上遍历类型层级链。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Reflection/ReflectionDataExtensions.cs:DescendsTo#47",
+      "type": "function",
+      "name": "DescendsTo",
+      "filePath": "Engine/Reflection/ReflectionDataExtensions.cs",
+      "lineRange": [
+        47,
+        59
+      ],
+      "summary": "函数 DescendsTo，13 行，参数: type, basetype。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Reflection/ReflectionDataExtensions.cs:HasAttributeInherited",
+      "type": "function",
+      "name": "HasAttributeInherited",
+      "filePath": "Engine/Reflection/ReflectionDataExtensions.cs",
+      "lineRange": [
+        61,
+        75
+      ],
+      "summary": "判断类型或其基类型是否包含指定继承属性，沿类型层级链向上搜索。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetAttributesInherited",
+      "type": "function",
+      "name": "GetAttributesInherited",
+      "filePath": "Engine/Reflection/ReflectionDataExtensions.cs",
+      "lineRange": [
+        77,
+        99
+      ],
+      "summary": "获取类型的所有继承属性实例，沿类型层级向上遍历收集指定泛型类型的属性。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetAttribute",
+      "type": "function",
+      "name": "GetAttribute",
+      "filePath": "Engine/Reflection/ReflectionDataExtensions.cs",
+      "lineRange": [
+        116,
+        146
+      ],
+      "summary": "获取指定类型的属性实例，优先匹配精确类型后沿继承链向上查找。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetAttributes",
+      "type": "function",
+      "name": "GetAttributes",
+      "filePath": "Engine/Reflection/ReflectionDataExtensions.cs",
+      "lineRange": [
+        164,
+        199
+      ],
+      "summary": "获取指定类型的所有属性实例，先收集直接属性再沿类型层级链追加继承属性。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetDisplayAttribute",
+      "type": "function",
+      "name": "GetDisplayAttribute",
+      "filePath": "Engine/Reflection/ReflectionDataExtensions.cs",
+      "lineRange": [
+        213,
+        223
+      ],
+      "summary": "获取成员的DisplayAttribute，支持翻译属性缓存，未找到时回退到DefaultDisplayAttribute。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Reflection/TypeDataProviderStack.cs:GetTypeData",
+      "type": "function",
+      "name": "GetTypeData",
+      "filePath": "Engine/Reflection/TypeDataProviderStack.cs",
+      "lineRange": [
+        36,
+        71
+      ],
+      "summary": "按对象获取类型数据，遍历提供者堆栈逐层尝试，遇到错误时自动创建子堆栈重试并记录警告。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Reflection/TypeDataProviderStack.cs:GetTypeData#86",
+      "type": "function",
+      "name": "GetTypeData",
+      "filePath": "Engine/Reflection/TypeDataProviderStack.cs",
+      "lineRange": [
+        86,
+        114
+      ],
+      "summary": "按对象获取类型数据，遍历提供者堆栈逐层尝试，遇到错误时自动创建子堆栈重试并记录警告。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Reflection/TypeDataProviderStack.cs:GetProviders",
+      "type": "function",
+      "name": "GetProviders",
+      "filePath": "Engine/Reflection/TypeDataProviderStack.cs",
+      "lineRange": [
+        120,
+        186
+      ],
+      "summary": "获取并排序所有ITypeDataProvider实例，合并全局和类型级提供者，按优先级降序排列并过滤不可用类型。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/Reflection/PluginOrderAttribute.cs",
+      "target": "class:Engine/Reflection/PluginOrderAttribute.cs:PluginOrderAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/PluginOrderAttribute.cs",
+      "target": "class:Engine/Reflection/PluginOrderAttribute.cs:PluginOrderAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/PluginOrderAttribute.cs",
+      "target": "function:Engine/Reflection/PluginOrderAttribute.cs:PluginOrderAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/PluginOrderAttribute.cs",
+      "target": "function:Engine/Reflection/PluginOrderAttribute.cs:PluginOrderAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "class:Engine/Reflection/ReflectionDataExtensions.cs:ReflectionDataExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "class:Engine/Reflection/ReflectionDataExtensions.cs:ReflectionDataExtensions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:DescendsTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:DescendsTo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:DescendsTo#47",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:DescendsTo#47",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:HasAttributeInherited",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetAttributesInherited",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetAttributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetAttributes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetDisplayAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/ReflectionDataExtensions.cs",
+      "target": "function:Engine/Reflection/ReflectionDataExtensions.cs:GetDisplayAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/TypeDataProviderStack.cs",
+      "target": "class:Engine/Reflection/TypeDataProviderStack.cs:TypeDataProviderStack",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/TypeDataProviderStack.cs",
+      "target": "class:Engine/Reflection/TypeDataProviderStack.cs:TypeDataProviderStack",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/TypeDataProviderStack.cs",
+      "target": "function:Engine/Reflection/TypeDataProviderStack.cs:GetTypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/TypeDataProviderStack.cs",
+      "target": "function:Engine/Reflection/TypeDataProviderStack.cs:GetTypeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/TypeDataProviderStack.cs",
+      "target": "function:Engine/Reflection/TypeDataProviderStack.cs:GetTypeData#86",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/TypeDataProviderStack.cs",
+      "target": "function:Engine/Reflection/TypeDataProviderStack.cs:GetTypeData#86",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/TypeDataProviderStack.cs",
+      "target": "function:Engine/Reflection/TypeDataProviderStack.cs:GetProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

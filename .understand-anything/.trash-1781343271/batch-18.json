@@ -1,0 +1,385 @@
+{
+  "nodes": [
+    {
+      "id": "file:doc/API Documentation/namespaces.cs",
+      "type": "file",
+      "name": "namespaces.cs",
+      "filePath": "doc/API Documentation/namespaces.cs",
+      "summary": "包含 OpenTap.dll 中所有命名空间的 XML 文档注释。C# 本身不支持命名空间级别的文档注释，但 Doxygen 需要，因此在此文件中集中定义。涵盖 OpenTap、Cli、Diagnostic、Plugins 和 Package 等命名空间。",
+      "tags": ["documentation", "api-docs", "namespace-definition", "doxygen"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Developer Guide/Annotations/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Annotations/Readme.md",
+      "summary": "介绍 OpenTAP 中的自定义控件和注解（Annotations）机制，说明如何通过注解扩展测试步骤的用户界面表现。",
+      "tags": ["documentation", "api-docs", "annotations", "custom-controls"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Developer Guide/Appendix/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Appendix/Readme.md",
+      "summary": "附录文档，涵盖测试步骤中的宏字符串（Macro Strings）、结果监听器、线程与并行处理、TapThread 的启动/结果获取/休眠/中止，以及 .NET 线程和任务的使用。",
+      "tags": ["documentation", "appendix", "macro-strings", "threading", "parallel-processing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Developer Guide/Attributes/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Attributes/Readme.md",
+      "summary": "详细列出 OpenTAP 使用的所有 Attribute（特性），包括 Display、Embed Properties、EnabledIf、Flags、FilePath 和 DirectoryPath 等，说明其用途和配置方式。",
+      "tags": ["documentation", "attributes", "metadata", "plugin-development"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/Developer Guide/Component Setting/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Component Setting/Readme.md",
+      "summary": "讲解 OpenTAP 的全局与分组组件设置（Component Setting）机制，包括创建设置对话框、读写设置以及连接管理。",
+      "tags": ["documentation", "component-settings", "configuration", "connection-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Developer Guide/Continuous Integration/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Continuous Integration/Readme.md",
+      "summary": "介绍 OpenTAP 插件开发的持续集成/持续部署（CI/CD）流程，以 GitHub Actions 为例说明自动化构建与测试的配置。",
+      "tags": ["documentation", "ci-cd", "github-actions", "build-automation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Developer Guide/Development Essentials/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Development Essentials/Readme.md",
+      "summary": "OpenTAP 插件开发核心要点，涵盖插件对象层次结构、基于接口的开发方式、用户输入处理、插件设置及其 Attribute 配置，以及插件开发最佳实践。",
+      "tags": ["documentation", "plugin-development", "best-practices", "object-hierarchy"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:doc/Developer Guide/Frontpage.html",
+      "type": "file",
+      "name": "Frontpage.html",
+      "filePath": "doc/Developer Guide/Frontpage.html",
+      "summary": "开发者指南 PDF 输出的 CSS 样式表，定义字体（Segoe UI、Consola）、标题颜色（Keysight 红色）、边距、表格布局和分页控制等打印样式。",
+      "tags": ["stylesheet", "pdf-styling", "print-css", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Developer Guide/Getting Started in Visual Studio/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Getting Started in Visual Studio/Readme.md",
+      "summary": "Visual Studio 中 OpenTAP 开发快速入门指南，涵盖 NuGet 包的安装与使用、SDK 模板与示例项目、程序集版本管理以及离线开发环境的配置。",
+      "tags": ["documentation", "visual-studio", "nuget", "sdk-templates", "getting-started"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Developer Guide/Introduction/Notices.md",
+      "type": "document",
+      "name": "Notices.md",
+      "filePath": "doc/Developer Guide/Introduction/Notices.md",
+      "summary": "法律声明文件，包括 DFARS/受限权利声明、Keysight 担保免责声明和技术许可条款，以及文档修订历史。",
+      "tags": ["documentation", "legal-notices", "warranty", "license"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Developer Guide/Introduction/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Introduction/Readme.md",
+      "summary": "开发者指南的引言章节，说明目标受众和推荐的先修资源，包括 PathWave Test Automation 平台的相关知识。",
+      "tags": ["documentation", "introduction", "audience", "prerequisites"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Developer Guide/Known Issues/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Known Issues/Readme.md",
+      "summary": "记录 OpenTAP 的已知问题，包括 WinForms 插件在编辑器中导致界面冻结或无响应的现象。",
+      "tags": ["documentation", "known-issues", "troubleshooting", "winforms"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Developer Guide/Migrating to .NET 9/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Migrating to .NET 9/Readme.md",
+      "summary": "从 .NET Framework 迁移到 .NET 9 的完整指南，涵盖运行时选择机制、缺失 API（System.IO.Ports、BinaryFormatter、Remoting 等）、AppDomain 变更、GAC 废除、CET 安全特性及 HttpClient 迁移等重要变更。",
+      "tags": ["documentation", "migration", "dotnet-9", "breaking-changes", "compatibility"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/Developer Guide/Package Publishing/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Package Publishing/Readme.md",
+      "summary": "插件发布检查清单，指导开发者更新 package.xml、验证依赖关系，以及通过 CLI 或 Package Manager 上传发布包。",
+      "tags": ["documentation", "package-publishing", "cli", "deployment"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Developer Guide/Plugin Packaging and Versioning/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Plugin Packaging and Versioning/Readme.md",
+      "summary": "OpenTAP 插件打包与版本管理的完整参考文档，涵盖 package.xml 配置文件的所有元素（Description、Owner、Dependency、File 等）、图标与通配符、命令行使用方式以及基于 Git 的语义化版本控制（GitVersion）。",
+      "tags": ["documentation", "packaging", "versioning", "package-xml", "gitversion"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/Developer Guide/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Readme.md",
+      "summary": "开发者指南的目录（Table of Contents），整合并链接到所有开发指南子章节，涵盖从入门、插件开发、资源管理到迁移 .NET 9 的完整知识体系。",
+      "tags": ["documentation", "table-of-contents", "entry-point", "developer-guide"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Developer Guide/Resources/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Resources/Readme.md",
+      "summary": "讲解 OpenTAP 中的资源模型，包括 DUT（被测设备）、Instrument（仪器）、SCPI 仪器、原始 I/O 通信以及资源管理策略（Open、Parallel、Ignore）。",
+      "tags": ["documentation", "resources", "dut", "instrument", "resource-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Developer Guide/Result Listener/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Result Listener/Readme.md",
+      "summary": "介绍 OpenTAP 的自定义结果监听器（Result Listener）机制，以及如何将测试结果发布到 SQL 数据库进行存储和分析。",
+      "tags": ["documentation", "result-listener", "sql-database", "test-results"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Developer Guide/Test Step/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Test Step/Readme.md",
+      "summary": "Test Step 开发的核心参考文档，涵盖默认实现、步骤层次结构、判定（Verdict）、日志消息、时间戳分析、验证、结果发布（Result Tables/Artifacts）、子步骤、序列化、输入输出（Input<T>）、参数化设置、表达式引擎、异常处理以及 Mixin 机制。",
+      "tags": ["documentation", "test-step", "verdict", "result-publishing", "expressions", "mixins"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/Developer Guide/Translating/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/Translating/Readme.md",
+      "summary": "OpenTAP 插件本地化翻译指南，涵盖静态与动态字符串处理、类型手动添加、UserInput 翻译、翻译文件分发以及翻译工作流最佳实践。",
+      "tags": ["documentation", "localization", "translation", "i18n", "userinput"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/Developer Guide/What is OpenTAP/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Developer Guide/What is OpenTAP/Readme.md",
+      "summary": "OpenTAP 概述文档，介绍其架构组成：OpenTAP Assembly、图形用户界面、命令行接口、API、插件系统、包管理和测试计划（含控制流、外部参数和多 DUT 测试）。",
+      "tags": ["documentation", "architecture", "overview", "test-plans", "plugins"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/FAQ/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/FAQ/Readme.md",
+      "summary": "OpenTAP 常见问题解答，涵盖项目定义、使用者范围、维护主体、开源许可、源码位置、CLA 协议、技术支持、平台支持、插件机制、开发工具和部署场景。",
+      "tags": ["documentation", "faq", "licensing", "support", "community"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:doc/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "doc/package.json",
+      "summary": "VitePress 文档站点构建配置，定义开发依赖和 dev/build/preview 脚本，用于生成 OpenTAP 在线文档站点。",
+      "tags": ["configuration", "vitepress", "documentation", "build-system"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc/public/CNAME",
+      "type": "file",
+      "name": "CNAME",
+      "filePath": "doc/public/CNAME",
+      "summary": "DNS CNAME 记录文件，将 doc.opentap.io 域名指向文档站点托管服务。",
+      "tags": ["configuration", "dns", "domain", "web-hosting"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Readme.md",
+      "type": "document",
+      "name": "Readme.md",
+      "filePath": "doc/Readme.md",
+      "summary": "OpenTAP 项目顶级文档，提供入门指南，包括 OpenTAP 简介以及 Windows、Linux（Ubuntu 24.04 等发行版）、MacOS 和 Docker 平台的安装说明。",
+      "tags": ["documentation", "entry-point", "getting-started", "installation", "overview"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:doc/package.json",
+      "target": "document:doc/Readme.md",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:doc/public/CNAME",
+      "target": "document:doc/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:doc/Developer Guide/Frontpage.html",
+      "target": "document:doc/Developer Guide/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Introduction/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/What is OpenTAP/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Getting Started in Visual Studio/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Development Essentials/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Test Step/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Resources/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Result Listener/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Component Setting/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Annotations/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Plugin Packaging and Versioning/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Attributes/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Migrating to .NET 9/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Appendix/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Translating/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Readme.md",
+      "target": "document:doc/Developer Guide/Package Publishing/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Developer Guide/Introduction/Readme.md",
+      "target": "document:doc/Developer Guide/Introduction/Notices.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Readme.md",
+      "target": "document:doc/Developer Guide/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Readme.md",
+      "target": "document:doc/FAQ/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Readme.md",
+      "target": "file:doc/API Documentation/namespaces.cs",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

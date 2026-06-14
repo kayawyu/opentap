@@ -1,0 +1,1072 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/Annotations/ISettingReferenceIconAnnotation.cs",
+      "type": "file",
+      "name": "ISettingReferenceIconAnnotation.cs",
+      "filePath": "Engine/Annotations/ISettingReferenceIconAnnotation.cs",
+      "summary": "设置引用图标注解接口，将图标链接到特定的测试步骤引用和成员名称。",
+      "tags": [
+        "annotation",
+        "icon",
+        "reference",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/ISettingReferenceIconAnnotation.cs:ISettingReferenceIconAnnotation",
+      "type": "class",
+      "name": "ISettingReferenceIconAnnotation",
+      "filePath": "Engine/Annotations/ISettingReferenceIconAnnotation.cs",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "设置引用图标注解接口，通过 TestStepReference 和 MemberName 将图标关联到特定设置。",
+      "tags": [
+        "annotation",
+        "icon",
+        "reference",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Annotations/IStringOverlayAnnotation.cs",
+      "type": "file",
+      "name": "IStringOverlayAnnotation.cs",
+      "filePath": "Engine/Annotations/IStringOverlayAnnotation.cs",
+      "summary": "字符串叠加注解接口，提供附加显示字符串和错误状态，用于 UI 中的叠加文本展示。",
+      "tags": [
+        "annotation",
+        "overlay",
+        "interface",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/IStringOverlayAnnotation.cs:IStringOverlayAnnotation",
+      "type": "class",
+      "name": "IStringOverlayAnnotation",
+      "filePath": "Engine/Annotations/IStringOverlayAnnotation.cs",
+      "lineRange": [
+        4,
+        11
+      ],
+      "summary": "字符串叠加注解接口，提供覆盖显示的字符串和错误指示。",
+      "tags": [
+        "annotation",
+        "overlay",
+        "interface",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "type": "file",
+      "name": "ParameterizedIconAnnotation.cs",
+      "filePath": "Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "summary": "参数化图标注解系统，定义输入/输出参数图标和图标参数辅助方法，支持测试步骤的交互式参数赋值。",
+      "tags": [
+        "annotation",
+        "icon",
+        "parameter",
+        "input-output"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/ParameterizedIconAnnotation.cs:ParameterIconAnnotation",
+      "type": "class",
+      "name": "ParameterIconAnnotation",
+      "filePath": "Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "lineRange": [
+        17,
+        25
+      ],
+      "summary": "参数图标注解实现（Attribute），将图标关联到指定的执行动作。",
+      "tags": [
+        "annotation",
+        "icon",
+        "parameter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/ParameterizedIconAnnotation.cs:IconAnnotationHelper",
+      "type": "class",
+      "name": "IconAnnotationHelper",
+      "filePath": "Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "lineRange": [
+        53,
+        116
+      ],
+      "summary": "图标注解辅助类，提供 AddParameter 方法为注解添加参数处理逻辑。",
+      "tags": [
+        "annotation",
+        "icon",
+        "parameter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Annotations/ParameterizedIconAnnotation.cs:ParameterIconAnnotation",
+      "type": "function",
+      "name": "ParameterIconAnnotation",
+      "filePath": "Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "lineRange": [
+        22,
+        22
+      ],
+      "summary": "参数化图标注解构造函数，关联图标名称和执行动作。",
+      "tags": [
+        "annotation",
+        "icon",
+        "parameter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Annotations/ParameterizedIconAnnotation.cs:AddParameter",
+      "type": "function",
+      "name": "AddParameter",
+      "filePath": "Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "lineRange": [
+        55,
+        115
+      ],
+      "summary": "向注解添加参数处理，根据数据类型创建输入/输出控件绑定。",
+      "tags": [
+        "annotation",
+        "icon",
+        "parameter"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/AssemblyData.cs",
+      "type": "file",
+      "name": "AssemblyData.cs",
+      "filePath": "Engine/AssemblyData.cs",
+      "summary": "程序集数据管理类，封装程序集的加载、类型发现、版本信息（含语义版本）和插件类型注册。",
+      "tags": [
+        "assembly",
+        "plugin",
+        "reflection",
+        "versioning"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/AssemblyData.cs:AssemblyData",
+      "type": "class",
+      "name": "AssemblyData",
+      "filePath": "Engine/AssemblyData.cs",
+      "lineRange": [
+        15,
+        236
+      ],
+      "summary": "程序集数据管理器，负责加载 .NET 程序集、提取类型信息、管理插件类型和版本。",
+      "tags": [
+        "assembly",
+        "plugin",
+        "reflection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/AssemblyData.cs:AssemblyData",
+      "type": "function",
+      "name": "AssemblyData",
+      "filePath": "Engine/AssemblyData.cs",
+      "lineRange": [
+        101,
+        105
+      ],
+      "summary": "构造函数，设置程序集位置和预加载程序集引用。",
+      "tags": [
+        "assembly",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/AssemblyData.cs:Load",
+      "type": "function",
+      "name": "Load",
+      "filePath": "Engine/AssemblyData.cs",
+      "lineRange": [
+        123,
+        232
+      ],
+      "summary": "加载程序集（约110行），扫描类型、验证插件属性、提取依赖引用和版本信息。",
+      "tags": [
+        "assembly",
+        "plugin"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/AssemblyData.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Engine/AssemblyData.cs",
+      "lineRange": [
+        235,
+        235
+      ],
+      "summary": "返回程序集名称和位置的字符串表示。",
+      "tags": [
+        "assembly",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/AssemblyFinder.cs",
+      "type": "file",
+      "name": "AssemblyFinder.cs",
+      "filePath": "Engine/AssemblyFinder.cs",
+      "summary": "程序集发现器，在指定的目录中搜索 OpenTAP 插件程序集，支持依赖包含、静默模式和增量搜索。",
+      "tags": [
+        "assembly",
+        "plugin",
+        "discovery",
+        "filesystem"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/AssemblyFinder.cs:AssemblyFinder",
+      "type": "class",
+      "name": "AssemblyFinder",
+      "filePath": "Engine/AssemblyFinder.cs",
+      "lineRange": [
+        14,
+        145
+      ],
+      "summary": "程序集发现器，在配置的目录中扫描 .dll 文件，匹配合适的 OpenTAP 插件程序集。",
+      "tags": [
+        "assembly",
+        "plugin",
+        "discovery"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/AssemblyFinder.cs:Invalidate",
+      "type": "function",
+      "name": "Invalidate",
+      "filePath": "Engine/AssemblyFinder.cs",
+      "lineRange": [
+        17,
+        20
+      ],
+      "summary": "使缓存的搜索结果失效，强制下次搜索时重新扫描。",
+      "tags": [
+        "assembly",
+        "discovery"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/AssemblyFinder.cs:AssemblyFinder",
+      "type": "function",
+      "name": "AssemblyFinder",
+      "filePath": "Engine/AssemblyFinder.cs",
+      "lineRange": [
+        25,
+        28
+      ],
+      "summary": "构造函数，初始化日志和依赖处理标志。",
+      "tags": [
+        "assembly",
+        "discovery"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/AssemblyFinder.cs:FindAssemblies",
+      "type": "function",
+      "name": "FindAssemblies",
+      "filePath": "Engine/AssemblyFinder.cs",
+      "lineRange": [
+        37,
+        41
+      ],
+      "summary": "按文件名查找指定程序集的版本和路径信息。",
+      "tags": [
+        "assembly",
+        "discovery"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/AssemblyFinder.cs:AllAssemblies",
+      "type": "function",
+      "name": "AllAssemblies",
+      "filePath": "Engine/AssemblyFinder.cs",
+      "lineRange": [
+        45,
+        49
+      ],
+      "summary": "返回所有发现的程序集数据。",
+      "tags": [
+        "assembly",
+        "discovery"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/AssemblyFinder.cs:SyncFiles",
+      "type": "function",
+      "name": "SyncFiles",
+      "filePath": "Engine/AssemblyFinder.cs",
+      "lineRange": [
+        71,
+        144
+      ],
+      "summary": "同步文件系统（约75行），递归扫描目录中的 DLL 文件并匹配插件程序集。",
+      "tags": [
+        "assembly",
+        "discovery"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/AssignOutputDialog.cs",
+      "type": "file",
+      "name": "AssignOutputDialog.cs",
+      "filePath": "Engine/AssignOutputDialog.cs",
+      "summary": "输出分配对话框类，提供测试步骤间输出-输入参数分配的用户交互界面逻辑。",
+      "tags": [
+        "ui",
+        "dialog",
+        "output-assignment",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/AssignOutputDialog.cs:AssignOutputDialog",
+      "type": "class",
+      "name": "AssignOutputDialog",
+      "filePath": "Engine/AssignOutputDialog.cs",
+      "lineRange": [
+        5,
+        111
+      ],
+      "summary": "输出分配对话框，管理可用作用域和输出的选择，支持测试步骤间的参数绑定。",
+      "tags": [
+        "ui",
+        "dialog",
+        "output-assignment"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/AssignOutputDialog.cs:GetAvailableOutputs",
+      "type": "function",
+      "name": "GetAvailableOutputs",
+      "filePath": "Engine/AssignOutputDialog.cs",
+      "lineRange": [
+        65,
+        84
+      ],
+      "summary": "获取指定作用域内符合条件的可用输出列表。包含重载无参版本。",
+      "tags": [
+        "ui",
+        "dialog"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/AssignOutputDialog.cs:GetAvailableOutputs_2",
+      "type": "function",
+      "name": "GetAvailableOutputs",
+      "filePath": "Engine/AssignOutputDialog.cs",
+      "lineRange": [
+        86,
+        86
+      ],
+      "summary": "获取指定作用域内符合条件的可用输出列表。包含重载无参版本。",
+      "tags": [
+        "ui",
+        "dialog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/AssignOutputDialog.cs:AssignOutputDialog",
+      "type": "function",
+      "name": "AssignOutputDialog",
+      "filePath": "Engine/AssignOutputDialog.cs",
+      "lineRange": [
+        102,
+        110
+      ],
+      "summary": "对话框构造函数，初始化成员信息、作用域范围和测试步骤列表。",
+      "tags": [
+        "ui",
+        "dialog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Authentication/AuthenticationSettings.cs",
+      "type": "file",
+      "name": "AuthenticationSettings.cs",
+      "filePath": "Engine/Authentication/AuthenticationSettings.cs",
+      "summary": "认证设置类，管理 API 身份验证令牌、HTTP 请求准备和认证客户端的创建。",
+      "tags": [
+        "authentication",
+        "http",
+        "security",
+        "settings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Authentication/AuthenticationSettings.cs:AuthenticationSettings",
+      "type": "class",
+      "name": "AuthenticationSettings",
+      "filePath": "Engine/Authentication/AuthenticationSettings.cs",
+      "lineRange": [
+        14,
+        169
+      ],
+      "summary": "认证设置管理器，维护认证令牌集合，提供 PrepareRequest 和 GetClient 方法。",
+      "tags": [
+        "authentication",
+        "http",
+        "settings"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/Authentication/AuthenticationSettings.cs:PrepareRequest",
+      "type": "function",
+      "name": "PrepareRequest",
+      "filePath": "Engine/Authentication/AuthenticationSettings.cs",
+      "lineRange": [
+        89,
+        100
+      ],
+      "summary": "为 HTTP 请求添加认证头，从令牌存储中匹配对应域名的令牌。",
+      "tags": [
+        "authentication",
+        "http"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Authentication/AuthenticationSettings.cs:GetClient",
+      "type": "function",
+      "name": "GetClient",
+      "filePath": "Engine/Authentication/AuthenticationSettings.cs",
+      "lineRange": [
+        112,
+        168
+      ],
+      "summary": "创建已认证的 HttpClient（约57行），支持重试策略和 BaseAddress 配置。",
+      "tags": [
+        "authentication",
+        "http"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/Authentication/TokenInfo.cs",
+      "type": "file",
+      "name": "TokenInfo.cs",
+      "filePath": "Engine/Authentication/TokenInfo.cs",
+      "summary": "令牌信息类，封装 JWT/OAuth 访问令牌的解析、验证、过期检测和存储。",
+      "tags": [
+        "authentication",
+        "token",
+        "jwt",
+        "oauth"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Authentication/TokenInfo.cs:TokenInfo",
+      "type": "class",
+      "name": "TokenInfo",
+      "filePath": "Engine/Authentication/TokenInfo.cs",
+      "lineRange": [
+        13,
+        153
+      ],
+      "summary": "令牌信息管理器，支持 JWT 令牌解析（Claims）、Base64Url 解码和过期时间计算。",
+      "tags": [
+        "authentication",
+        "token",
+        "jwt"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/Authentication/TokenInfo.cs:Base64UrlDecode",
+      "type": "function",
+      "name": "Base64UrlDecode",
+      "filePath": "Engine/Authentication/TokenInfo.cs",
+      "lineRange": [
+        105,
+        115
+      ],
+      "summary": "Base64Url 解码方法，处理填充字符并转换为 UTF8 字符串。",
+      "tags": [
+        "authentication",
+        "token"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Authentication/TokenInfo.cs:TokenInfo",
+      "type": "function",
+      "name": "TokenInfo",
+      "filePath": "Engine/Authentication/TokenInfo.cs",
+      "lineRange": [
+        120,
+        124
+      ],
+      "summary": "构造函数（无参版本），用于 JSON 反序列化。",
+      "tags": [
+        "authentication",
+        "token"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Authentication/TokenInfo.cs:TokenInfo_2",
+      "type": "function",
+      "name": "TokenInfo",
+      "filePath": "Engine/Authentication/TokenInfo.cs",
+      "lineRange": [
+        132,
+        137
+      ],
+      "summary": "构造函数（无参版本），用于 JSON 反序列化。",
+      "tags": [
+        "authentication",
+        "token"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Authentication/TokenInfo.cs:FromResponse",
+      "type": "function",
+      "name": "FromResponse",
+      "filePath": "Engine/Authentication/TokenInfo.cs",
+      "lineRange": [
+        140,
+        152
+      ],
+      "summary": "从 HTTP 响应中解析 JSON 创建 TokenInfo 对象。",
+      "tags": [
+        "authentication",
+        "token"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/AvailableValuesAttribute.cs",
+      "type": "file",
+      "name": "AvailableValuesAttribute.cs",
+      "filePath": "Engine/AvailableValuesAttribute.cs",
+      "summary": "可用值和推荐值属性定义，通过 Attribute 方式声明属性的可用值来源属性名。",
+      "tags": [
+        "attribute",
+        "available-values",
+        "dropdown",
+        "suggested-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/AvailableValuesAttribute.cs:AvailableValuesAttribute",
+      "type": "class",
+      "name": "AvailableValuesAttribute",
+      "filePath": "Engine/AvailableValuesAttribute.cs",
+      "lineRange": [
+        13,
+        27
+      ],
+      "summary": "可用值属性，指定提供可选值列表的属性名称，用于生成下拉选择控件。",
+      "tags": [
+        "attribute",
+        "available-values",
+        "dropdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/AvailableValuesAttribute.cs:SuggestedValuesAttribute",
+      "type": "class",
+      "name": "SuggestedValuesAttribute",
+      "filePath": "Engine/AvailableValuesAttribute.cs",
+      "lineRange": [
+        32,
+        45
+      ],
+      "summary": "推荐值属性，指定提供推荐值列表的属性名称，用于生成自动完成控件。",
+      "tags": [
+        "attribute",
+        "available-values",
+        "dropdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/AvailableValuesAttribute.cs:AvailableValuesAttribute",
+      "type": "function",
+      "name": "AvailableValuesAttribute",
+      "filePath": "Engine/AvailableValuesAttribute.cs",
+      "lineRange": [
+        23,
+        26
+      ],
+      "summary": "属性构造函数，指定可用值来源的属性名称。",
+      "tags": [
+        "attribute",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/AvailableValuesAttribute.cs:SuggestedValuesAttribute",
+      "type": "function",
+      "name": "SuggestedValuesAttribute",
+      "filePath": "Engine/AvailableValuesAttribute.cs",
+      "lineRange": [
+        41,
+        44
+      ],
+      "summary": "属性构造函数，指定可用值来源的属性名称。",
+      "tags": [
+        "attribute",
+        "constructor"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/Annotations/ISettingReferenceIconAnnotation.cs",
+      "target": "class:Engine/Annotations/ISettingReferenceIconAnnotation.cs:ISettingReferenceIconAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/ISettingReferenceIconAnnotation.cs",
+      "target": "class:Engine/Annotations/ISettingReferenceIconAnnotation.cs:ISettingReferenceIconAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/IStringOverlayAnnotation.cs",
+      "target": "class:Engine/Annotations/IStringOverlayAnnotation.cs:IStringOverlayAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/IStringOverlayAnnotation.cs",
+      "target": "class:Engine/Annotations/IStringOverlayAnnotation.cs:IStringOverlayAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "target": "class:Engine/Annotations/ParameterizedIconAnnotation.cs:ParameterIconAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "target": "class:Engine/Annotations/ParameterizedIconAnnotation.cs:ParameterIconAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "target": "class:Engine/Annotations/ParameterizedIconAnnotation.cs:IconAnnotationHelper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "target": "class:Engine/Annotations/ParameterizedIconAnnotation.cs:IconAnnotationHelper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "target": "function:Engine/Annotations/ParameterizedIconAnnotation.cs:ParameterIconAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "target": "function:Engine/Annotations/ParameterizedIconAnnotation.cs:ParameterIconAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "target": "function:Engine/Annotations/ParameterizedIconAnnotation.cs:AddParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/ParameterizedIconAnnotation.cs",
+      "target": "function:Engine/Annotations/ParameterizedIconAnnotation.cs:AddParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssemblyData.cs",
+      "target": "class:Engine/AssemblyData.cs:AssemblyData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssemblyData.cs",
+      "target": "function:Engine/AssemblyData.cs:AssemblyData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssemblyData.cs",
+      "target": "function:Engine/AssemblyData.cs:AssemblyData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssemblyData.cs",
+      "target": "function:Engine/AssemblyData.cs:Load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssemblyData.cs",
+      "target": "function:Engine/AssemblyData.cs:Load",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssemblyData.cs",
+      "target": "function:Engine/AssemblyData.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssemblyData.cs",
+      "target": "function:Engine/AssemblyData.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "class:Engine/AssemblyFinder.cs:AssemblyFinder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "function:Engine/AssemblyFinder.cs:Invalidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "function:Engine/AssemblyFinder.cs:Invalidate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "function:Engine/AssemblyFinder.cs:AssemblyFinder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "function:Engine/AssemblyFinder.cs:AssemblyFinder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "function:Engine/AssemblyFinder.cs:FindAssemblies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "function:Engine/AssemblyFinder.cs:FindAssemblies",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "function:Engine/AssemblyFinder.cs:AllAssemblies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "function:Engine/AssemblyFinder.cs:AllAssemblies",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "function:Engine/AssemblyFinder.cs:SyncFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssemblyFinder.cs",
+      "target": "function:Engine/AssemblyFinder.cs:SyncFiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssignOutputDialog.cs",
+      "target": "class:Engine/AssignOutputDialog.cs:AssignOutputDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssignOutputDialog.cs",
+      "target": "function:Engine/AssignOutputDialog.cs:GetAvailableOutputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssignOutputDialog.cs",
+      "target": "function:Engine/AssignOutputDialog.cs:GetAvailableOutputs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssignOutputDialog.cs",
+      "target": "function:Engine/AssignOutputDialog.cs:GetAvailableOutputs_2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssignOutputDialog.cs",
+      "target": "function:Engine/AssignOutputDialog.cs:GetAvailableOutputs_2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AssignOutputDialog.cs",
+      "target": "function:Engine/AssignOutputDialog.cs:AssignOutputDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AssignOutputDialog.cs",
+      "target": "function:Engine/AssignOutputDialog.cs:AssignOutputDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Authentication/AuthenticationSettings.cs",
+      "target": "class:Engine/Authentication/AuthenticationSettings.cs:AuthenticationSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Authentication/AuthenticationSettings.cs",
+      "target": "function:Engine/Authentication/AuthenticationSettings.cs:PrepareRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Authentication/AuthenticationSettings.cs",
+      "target": "function:Engine/Authentication/AuthenticationSettings.cs:PrepareRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Authentication/AuthenticationSettings.cs",
+      "target": "function:Engine/Authentication/AuthenticationSettings.cs:GetClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Authentication/AuthenticationSettings.cs",
+      "target": "function:Engine/Authentication/AuthenticationSettings.cs:GetClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Authentication/TokenInfo.cs",
+      "target": "class:Engine/Authentication/TokenInfo.cs:TokenInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Authentication/TokenInfo.cs",
+      "target": "function:Engine/Authentication/TokenInfo.cs:Base64UrlDecode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Authentication/TokenInfo.cs",
+      "target": "function:Engine/Authentication/TokenInfo.cs:Base64UrlDecode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Authentication/TokenInfo.cs",
+      "target": "function:Engine/Authentication/TokenInfo.cs:TokenInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Authentication/TokenInfo.cs",
+      "target": "function:Engine/Authentication/TokenInfo.cs:TokenInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Authentication/TokenInfo.cs",
+      "target": "function:Engine/Authentication/TokenInfo.cs:TokenInfo_2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Authentication/TokenInfo.cs",
+      "target": "function:Engine/Authentication/TokenInfo.cs:TokenInfo_2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Authentication/TokenInfo.cs",
+      "target": "function:Engine/Authentication/TokenInfo.cs:FromResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Authentication/TokenInfo.cs",
+      "target": "function:Engine/Authentication/TokenInfo.cs:FromResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AvailableValuesAttribute.cs",
+      "target": "class:Engine/AvailableValuesAttribute.cs:AvailableValuesAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AvailableValuesAttribute.cs",
+      "target": "class:Engine/AvailableValuesAttribute.cs:AvailableValuesAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AvailableValuesAttribute.cs",
+      "target": "class:Engine/AvailableValuesAttribute.cs:SuggestedValuesAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AvailableValuesAttribute.cs",
+      "target": "class:Engine/AvailableValuesAttribute.cs:SuggestedValuesAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AvailableValuesAttribute.cs",
+      "target": "function:Engine/AvailableValuesAttribute.cs:AvailableValuesAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AvailableValuesAttribute.cs",
+      "target": "function:Engine/AvailableValuesAttribute.cs:AvailableValuesAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AvailableValuesAttribute.cs",
+      "target": "function:Engine/AvailableValuesAttribute.cs:SuggestedValuesAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AvailableValuesAttribute.cs",
+      "target": "function:Engine/AvailableValuesAttribute.cs:SuggestedValuesAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

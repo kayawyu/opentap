@@ -1,0 +1,1014 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/IStringConvertProvider.cs",
+      "type": "file",
+      "name": "IStringConvertProvider.cs",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "summary": "定义字符串转换提供者的完整体系。包含 IStringConvertProvider 接口和 10 余种具体转换器实现（枚举、列表、资源、宏、安全字符串、测试步骤、输入、布尔等），是 OpenTAP 类型系统的核心基础设施。",
+      "tags": [
+        "string-conversion",
+        "type-system",
+        "provider-pattern",
+        "serialization",
+        "infrastructure"
+      ],
+      "complexity": "complex",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:IStringConvertProvider",
+      "type": "class",
+      "name": "IStringConvertProvider",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        22,
+        45
+      ],
+      "summary": "字符串转换提供者接口，定义 GetString（对象到字符串）和 FromString（字符串到对象）双向转换方法。",
+      "tags": [
+        "interface",
+        "string-conversion",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:StringConvertProvider",
+      "type": "class",
+      "name": "StringConvertProvider",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        46,
+        335
+      ],
+      "summary": "字符串转换提供者的静态注册中心，管理 Providers 列表，提供 GetString/TryGetString/FromString/TryFromString 核心方法。",
+      "tags": [
+        "registry",
+        "conversion-hub",
+        "static",
+        "provider-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:ConvertibleStringConvertProvider",
+      "type": "class",
+      "name": "ConvertibleStringConvertProvider",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        337,
+        392
+      ],
+      "summary": "支持 IConvertible 接口类型的转换器，处理基础类型（int、double 等）的字符串转换。",
+      "tags": [
+        "converter",
+        "iconvertible",
+        "primitive-types"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:EnumStringConvertProvider",
+      "type": "class",
+      "name": "EnumStringConvertProvider",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        436,
+        600
+      ],
+      "summary": "枚举类型的字符串转换器，支持 Flags 组合枚举的解析和格式化，包含枚举值缓存优化。",
+      "tags": [
+        "converter",
+        "enum",
+        "flags",
+        "caching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:ListStringConvertProvider",
+      "type": "class",
+      "name": "ListStringConvertProvider",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        601,
+        720
+      ],
+      "summary": "列表类型的字符串转换器，支持集合类型的序列化和反序列化，使用自定义格式化器。",
+      "tags": [
+        "converter",
+        "list",
+        "collection",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:ResourceStringConvertProvider",
+      "type": "class",
+      "name": "ResourceStringConvertProvider",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        721,
+        800
+      ],
+      "summary": "资源类型的字符串转换器，通过资源名称查找和创建资源实例，缓存所有可用资源以提升性能。",
+      "tags": [
+        "converter",
+        "resource",
+        "name-lookup",
+        "caching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:MacroStringConvertProvider",
+      "type": "class",
+      "name": "MacroStringConvertProvider",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        803,
+        830
+      ],
+      "summary": "宏（MacroString）类型的字符串转换器，处理 OpenTAP 宏字符串的序列化。",
+      "tags": [
+        "converter",
+        "macro",
+        "macro-string"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:SecureStringConvertProvider",
+      "type": "class",
+      "name": "SecureStringConvertProvider",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        831,
+        840
+      ],
+      "summary": "安全字符串类型的转换器，处理敏感信息的字符串表示。",
+      "tags": [
+        "converter",
+        "secure-string",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:TestStepConvertProvider",
+      "type": "class",
+      "name": "TestStepConvertProvider",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        841,
+        882
+      ],
+      "summary": "测试步骤类型的字符串转换器，通过步骤名称在上下文中查找对应的测试步骤实例。",
+      "tags": [
+        "converter",
+        "test-step",
+        "context-lookup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:InputStringConvertProvider",
+      "type": "class",
+      "name": "InputStringConvertProvider",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        883,
+        930
+      ],
+      "summary": "输入参数类型的字符串转换器，支持从字符串创建 IInput 实例，处理属性和步骤的绑定。",
+      "tags": [
+        "converter",
+        "input",
+        "property-binding"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/IStringConvertProvider.cs:BoolConverter",
+      "type": "class",
+      "name": "BoolConverter",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        931,
+        965
+      ],
+      "summary": "布尔类型的字符串转换器，将字符串 'true'/'false' 与布尔值互转。",
+      "tags": [
+        "converter",
+        "boolean",
+        "simple-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/IStringConvertProvider.cs:TryFromString",
+      "type": "function",
+      "name": "TryFromString",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        301,
+        327
+      ],
+      "summary": "尝试将字符串转换为指定类型，遍历所有注册的提供者，返回转换是否成功。",
+      "tags": [
+        "string-conversion",
+        "try-pattern",
+        "provider-chain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/IStringConvertProvider.cs:ConvertibleStringConvertProvider.FromString",
+      "type": "function",
+      "name": "ConvertibleStringConvertProvider.FromString",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        338,
+        376
+      ],
+      "summary": "ConvertibleStringConvertProvider 的转换实现，使用 TypeDescriptor 和 IConvertible 接口进行类型转换。",
+      "tags": [
+        "type-conversion",
+        "iconvertible",
+        "type-descriptor"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/IStringConvertProvider.cs:tryParseEnumString",
+      "type": "function",
+      "name": "tryParseEnumString",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        454,
+        528
+      ],
+      "summary": "枚举字符串解析核心方法，支持单值和 Flags 组合枚举的解析，处理数字值和名称匹配。",
+      "tags": [
+        "enum-parsing",
+        "flags",
+        "string-matching",
+        "caching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/IStringConvertProvider.cs:ListStringConvertProvider.FromString",
+      "type": "function",
+      "name": "ListStringConvertProvider.FromString",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        602,
+        699
+      ],
+      "summary": "ListStringConvertProvider 的列表反序列化，解析逗号分隔的字符串为列表对象，递归处理嵌套元素。",
+      "tags": [
+        "list-deserialization",
+        "parsing",
+        "recursive"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/IStringConvertProvider.cs:ResourceStringConvertProvider.GetString",
+      "type": "function",
+      "name": "ResourceStringConvertProvider.GetString",
+      "filePath": "Engine/IStringConvertProvider.cs",
+      "lineRange": [
+        704,
+        762
+      ],
+      "summary": "ResourceStringConvertProvider 的资源序列化，将资源对象转换为其名称字符串，包含资源缓存管理。",
+      "tags": [
+        "resource-serialization",
+        "name-resolution",
+        "caching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/ITapPlugin.cs",
+      "type": "file",
+      "name": "ITapPlugin.cs",
+      "filePath": "Engine/ITapPlugin.cs",
+      "summary": "OpenTAP 插件体系的根接口。ITapPlugin 是所有插件类型的标记基接口，TapPluginExtensions 提供插件类型层次结构的递归发现功能。",
+      "tags": [
+        "plugin-system",
+        "root-interface",
+        "marker-interface",
+        "type-discovery"
+      ],
+      "complexity": "moderate",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/ITapPlugin.cs:ITapPlugin",
+      "type": "class",
+      "name": "ITapPlugin",
+      "filePath": "Engine/ITapPlugin.cs",
+      "lineRange": [
+        14,
+        14
+      ],
+      "summary": "OpenTAP 所有插件类型的根基接口（标记接口），不包含任何成员，仅用于类型识别。",
+      "tags": [
+        "interface",
+        "marker-interface",
+        "plugin-root"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ITapPlugin.cs:TapPluginExtensions",
+      "type": "class",
+      "name": "TapPluginExtensions",
+      "filePath": "Engine/ITapPlugin.cs",
+      "lineRange": [
+        19,
+        59
+      ],
+      "summary": "插件类型扩展静态类，通过递归分析接口层级和基类，查找类型所实现的所有 ITapPlugin 派生接口。",
+      "tags": [
+        "extension-methods",
+        "type-discovery",
+        "plugin-hierarchy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ITapPlugin.cs:_getPluginType",
+      "type": "function",
+      "name": "_getPluginType",
+      "filePath": "Engine/ITapPlugin.cs",
+      "lineRange": [
+        22,
+        44
+      ],
+      "summary": "递归遍历类型的接口和基类层次结构，收集所有直接实现的 ITapPlugin 派生类型，避免重复收集。",
+      "tags": [
+        "recursive-discovery",
+        "plugin-hierarchy",
+        "interface-analysis"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/ITestPlanFormat.cs",
+      "type": "file",
+      "name": "ITestPlanFormat.cs",
+      "filePath": "Engine/ITestPlanFormat.cs",
+      "summary": "定义测试计划的导入导出接口体系。ITestPlanImport/Export 提供基本的文件格式支持，CustomDialog 变体允许通过自定义对话框进行交互式导入导出。",
+      "tags": [
+        "test-plan",
+        "import-export",
+        "file-format",
+        "interface"
+      ],
+      "complexity": "moderate",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/ITestPlanFormat.cs:ITestPlanImport",
+      "type": "class",
+      "name": "ITestPlanImport",
+      "filePath": "Engine/ITestPlanFormat.cs",
+      "lineRange": [
+        15,
+        44
+      ],
+      "summary": "测试计划导入接口，定义 Extension（文件扩展名）、Name（显示名称）和 ImportTestPlan 方法。",
+      "tags": [
+        "interface",
+        "import",
+        "test-plan",
+        "file-format"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ITestPlanFormat.cs:ITestPlanExport",
+      "type": "class",
+      "name": "ITestPlanExport",
+      "filePath": "Engine/ITestPlanFormat.cs",
+      "lineRange": [
+        45,
+        73
+      ],
+      "summary": "测试计划导出接口，定义 Extension、Name 和 ExportTestPlan 方法，支持将测试计划序列化为文件。",
+      "tags": [
+        "interface",
+        "export",
+        "test-plan",
+        "file-format"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ITestPlanFormat.cs:ITestPlanImportCustomDialog",
+      "type": "class",
+      "name": "ITestPlanImportCustomDialog",
+      "filePath": "Engine/ITestPlanFormat.cs",
+      "lineRange": [
+        74,
+        90
+      ],
+      "summary": "带自定义对话框的测试计划导入接口，允许用户在导入前通过 UI 进行配置选择。",
+      "tags": [
+        "interface",
+        "import",
+        "custom-dialog",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ITestPlanFormat.cs:ITestPlanExportCustomDialog",
+      "type": "class",
+      "name": "ITestPlanExportCustomDialog",
+      "filePath": "Engine/ITestPlanFormat.cs",
+      "lineRange": [
+        91,
+        99
+      ],
+      "summary": "带自定义对话框的测试计划导出接口，允许用户在导出前通过 UI 进行配置选择。",
+      "tags": [
+        "interface",
+        "export",
+        "custom-dialog",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ITestPlanRunMonitor.cs",
+      "type": "file",
+      "name": "ITestPlanRunMonitor.cs",
+      "filePath": "Engine/ITestPlanRunMonitor.cs",
+      "summary": "定义测试计划运行监视器接口。ITestPlanRunMonitor 提供 EnterTestPlanRun/ExitTestPlanRun 生命周期钩子，TestPlanRunMonitors 静态类管理当前监视器实例。",
+      "tags": [
+        "monitor",
+        "test-plan-run",
+        "lifecycle",
+        "observer"
+      ],
+      "complexity": "moderate",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/ITestPlanRunMonitor.cs:ITestPlanRunMonitor",
+      "type": "class",
+      "name": "ITestPlanRunMonitor",
+      "filePath": "Engine/ITestPlanRunMonitor.cs",
+      "lineRange": [
+        11,
+        30
+      ],
+      "summary": "测试计划运行监视器接口，提供 EnterTestPlanRun 和 ExitTestPlanRun 方法用于介入测试执行流程。",
+      "tags": [
+        "interface",
+        "monitor",
+        "test-execution",
+        "lifecycle-hook"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ITestPlanRunMonitor.cs:TestPlanRunMonitors",
+      "type": "class",
+      "name": "TestPlanRunMonitors",
+      "filePath": "Engine/ITestPlanRunMonitor.cs",
+      "lineRange": [
+        31,
+        39
+      ],
+      "summary": "测试计划运行监视器的静态管理类，提供 GetCurrent 方法获取当前的监视器实例。",
+      "tags": [
+        "static-manager",
+        "monitor-access"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ITestStep.cs",
+      "type": "file",
+      "name": "ITestStep.cs",
+      "filePath": "Engine/ITestStep.cs",
+      "summary": "定义测试步骤的核心接口体系。ITestStepParent 管理步骤的父子层级，ITestStep 定义 Run/PrePlanRun/PostPlanRun 执行契约和判决属性，ITestStepParentExtensions 提供层级遍历扩展。",
+      "tags": [
+        "test-step",
+        "interface",
+        "execution-lifecycle",
+        "hierarchy"
+      ],
+      "complexity": "complex",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/ITestStep.cs:ITestStepParent",
+      "type": "class",
+      "name": "ITestStepParent",
+      "filePath": "Engine/ITestStep.cs",
+      "lineRange": [
+        15,
+        50
+      ],
+      "summary": "测试步骤父级接口，定义 Parent 和 ChildTestSteps 属性，构成测试计划的树形层级结构。",
+      "tags": [
+        "interface",
+        "test-step",
+        "parent-child",
+        "hierarchy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ITestStep.cs:ITestStep",
+      "type": "class",
+      "name": "ITestStep",
+      "filePath": "Engine/ITestStep.cs",
+      "lineRange": [
+        51,
+        156
+      ],
+      "summary": "测试步骤核心接口，定义 PrePlanRun/Run/PostPlanRun 执行生命周期、Verdict（判决）、Name、Id 等属性。",
+      "tags": [
+        "interface",
+        "test-step",
+        "execution",
+        "verdict",
+        "lifecycle"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ITestStep.cs:ITestStepParentExtensions",
+      "type": "class",
+      "name": "ITestStepParentExtensions",
+      "filePath": "Engine/ITestStep.cs",
+      "lineRange": [
+        157,
+        164
+      ],
+      "summary": "测试步骤父级的静态扩展类，提供 GetStepHierarchy 获取完整层级路径和 GetParents 获取所有父级步骤。",
+      "tags": [
+        "extension-methods",
+        "hierarchy-traversal",
+        "static-utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/IValidatingObject.cs",
+      "type": "file",
+      "name": "IValidatingObject.cs",
+      "filePath": "Engine/IValidatingObject.cs",
+      "summary": "定义可验证对象接口。组合 IDataErrorInfo 和 INotifyPropertyChanged，提供 Rules 验证规则集合和 OnPropertyChanged 方法。",
+      "tags": [
+        "validation",
+        "interface",
+        "data-error",
+        "property-change"
+      ],
+      "complexity": "simple",
+      "languageNotes": null
+    },
+    {
+      "id": "file:Engine/IVisa.cs",
+      "type": "file",
+      "name": "IVisa.cs",
+      "filePath": "Engine/IVisa.cs",
+      "summary": "定义 VISA（虚拟仪器软件架构）互操作接口。封装 viOpen/viClose/viRead/viWrite 等 23 个底层 VISA 函数，用于仪器通信。",
+      "tags": [
+        "visa",
+        "instrument-communication",
+        "interop",
+        "interface"
+      ],
+      "complexity": "moderate",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/IVisa.cs:IVisa",
+      "type": "class",
+      "name": "IVisa",
+      "filePath": "Engine/IVisa.cs",
+      "lineRange": [
+        14,
+        66
+      ],
+      "summary": "VISA 互操作接口，封装 23 个底层 VISA API 函数（viOpenDefaultRM、viFindRsrc、viRead、viWrite 等），为仪器通信提供统一入口。",
+      "tags": [
+        "interface",
+        "visa",
+        "instrument-communication",
+        "interop"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/IVisaFunctionLoader.cs",
+      "type": "file",
+      "name": "IVisaFunctionLoader.cs",
+      "filePath": "Engine/IVisaFunctionLoader.cs",
+      "summary": "定义 VISA 函数加载器接口。通过 Order 优先级和 Functions 集合支持从不同来源加载 VISA 函数实现。",
+      "tags": [
+        "visa",
+        "function-loader",
+        "plugin",
+        "interface"
+      ],
+      "complexity": "simple",
+      "languageNotes": null
+    },
+    {
+      "id": "file:Engine/IVisaProvider.cs",
+      "type": "file",
+      "name": "IVisaProvider.cs",
+      "filePath": "Engine/IVisaProvider.cs",
+      "summary": "定义 VISA 提供者接口。通过 Order 优先级和 Visa 属性选择最合适的 VISA 实现，支持多个 VISA 库共存。",
+      "tags": [
+        "visa",
+        "provider",
+        "plugin",
+        "interface"
+      ],
+      "complexity": "simple",
+      "languageNotes": null
+    },
+    {
+      "id": "file:Engine/LibDl.cs",
+      "type": "file",
+      "name": "LibDl.cs",
+      "filePath": "Engine/LibDl.cs",
+      "summary": "Unix/Linux 动态库加载的互操作封装。通过 P/Invoke 调用 libdl 的 dlopen/dlsym/dlclose，提供跨平台的 Load/Unload/Sym 方法。",
+      "tags": [
+        "native-interop",
+        "dynamic-library",
+        "pinvoke",
+        "cross-platform"
+      ],
+      "complexity": "complex",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/LibDl.cs:LibDl",
+      "type": "class",
+      "name": "LibDl",
+      "filePath": "Engine/LibDl.cs",
+      "lineRange": [
+        20,
+        134
+      ],
+      "summary": "Unix/Linux 动态库加载类，封装 dlopen/dlsym/dlclose 等 libdl 函数，提供 Load（加载库）、Unload（卸载库）、Sym（获取函数指针）和 GetError（错误信息）方法。",
+      "tags": [
+        "native-interop",
+        "dynamic-library",
+        "pinvoke",
+        "dlopen"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/LibDl.cs:LibDl",
+      "type": "function",
+      "name": "LibDl",
+      "filePath": "Engine/LibDl.cs",
+      "lineRange": [
+        99,
+        118
+      ],
+      "summary": "LibDl 构造函数，通过 dlopen 加载指定的动态库文件，处理 RTLD_NOW 标志和错误检查。",
+      "tags": [
+        "constructor",
+        "dlopen",
+        "library-loading",
+        "error-handling"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:IStringConvertProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:StringConvertProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:ConvertibleStringConvertProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:EnumStringConvertProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:ListStringConvertProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:ResourceStringConvertProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:MacroStringConvertProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:SecureStringConvertProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:TestStepConvertProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:InputStringConvertProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:BoolConverter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "function:Engine/IStringConvertProvider.cs:TryFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "function:Engine/IStringConvertProvider.cs:ConvertibleStringConvertProvider.FromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "function:Engine/IStringConvertProvider.cs:tryParseEnumString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "function:Engine/IStringConvertProvider.cs:ListStringConvertProvider.FromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "function:Engine/IStringConvertProvider.cs:ResourceStringConvertProvider.GetString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:IStringConvertProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IStringConvertProvider.cs",
+      "target": "class:Engine/IStringConvertProvider.cs:StringConvertProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ITapPlugin.cs",
+      "target": "class:Engine/ITapPlugin.cs:ITapPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITapPlugin.cs",
+      "target": "class:Engine/ITapPlugin.cs:TapPluginExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITapPlugin.cs",
+      "target": "function:Engine/ITapPlugin.cs:_getPluginType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITapPlugin.cs",
+      "target": "class:Engine/ITapPlugin.cs:ITapPlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ITapPlugin.cs",
+      "target": "class:Engine/ITapPlugin.cs:TapPluginExtensions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ITestPlanFormat.cs",
+      "target": "class:Engine/ITestPlanFormat.cs:ITestPlanImport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITestPlanFormat.cs",
+      "target": "class:Engine/ITestPlanFormat.cs:ITestPlanImport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ITestPlanFormat.cs",
+      "target": "class:Engine/ITestPlanFormat.cs:ITestPlanExport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITestPlanFormat.cs",
+      "target": "class:Engine/ITestPlanFormat.cs:ITestPlanExport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ITestPlanFormat.cs",
+      "target": "class:Engine/ITestPlanFormat.cs:ITestPlanImportCustomDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITestPlanFormat.cs",
+      "target": "class:Engine/ITestPlanFormat.cs:ITestPlanImportCustomDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ITestPlanFormat.cs",
+      "target": "class:Engine/ITestPlanFormat.cs:ITestPlanExportCustomDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITestPlanFormat.cs",
+      "target": "class:Engine/ITestPlanFormat.cs:ITestPlanExportCustomDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ITestPlanRunMonitor.cs",
+      "target": "class:Engine/ITestPlanRunMonitor.cs:ITestPlanRunMonitor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITestPlanRunMonitor.cs",
+      "target": "class:Engine/ITestPlanRunMonitor.cs:TestPlanRunMonitors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITestPlanRunMonitor.cs",
+      "target": "class:Engine/ITestPlanRunMonitor.cs:ITestPlanRunMonitor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ITestStep.cs",
+      "target": "class:Engine/ITestStep.cs:ITestStepParent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITestStep.cs",
+      "target": "class:Engine/ITestStep.cs:ITestStepParent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ITestStep.cs",
+      "target": "class:Engine/ITestStep.cs:ITestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITestStep.cs",
+      "target": "class:Engine/ITestStep.cs:ITestStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ITestStep.cs",
+      "target": "class:Engine/ITestStep.cs:ITestStepParentExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ITestStep.cs",
+      "target": "class:Engine/ITestStep.cs:ITestStepParentExtensions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IVisa.cs",
+      "target": "class:Engine/IVisa.cs:IVisa",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IVisa.cs",
+      "target": "class:Engine/IVisa.cs:IVisa",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/LibDl.cs",
+      "target": "class:Engine/LibDl.cs:LibDl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/LibDl.cs",
+      "target": "function:Engine/LibDl.cs:LibDl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/LibDl.cs",
+      "target": "class:Engine/LibDl.cs:LibDl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

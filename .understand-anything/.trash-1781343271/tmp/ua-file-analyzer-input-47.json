@@ -1,0 +1,19 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": "tests/test-cli-environment-variables.TapPlan", "language": "tapplan", "sizeLines": 132, "fileCategory": "config"},
+    {"path": "tests/test-cli-load-plan-with-error.TapPlan", "language": "tapplan", "sizeLines": 18, "fileCategory": "config"},
+    {"path": "tests/test-install-package.TapPlan", "language": "tapplan", "sizeLines": 64, "fileCategory": "config"},
+    {"path": "tests/test-piped-input.TapPlan", "language": "tapplan", "sizeLines": 124, "fileCategory": "config"},
+    {"path": "tests/test-sdk-templates.TapPlan", "language": "tapplan", "sizeLines": 176, "fileCategory": "config"},
+    {"path": "tests/verdictPlan.TapPlan", "language": "tapplan", "sizeLines": 15, "fileCategory": "config"}
+  ],
+  "batchImportData": {
+    "tests/test-cli-environment-variables.TapPlan": [],
+    "tests/test-cli-load-plan-with-error.TapPlan": [],
+    "tests/test-install-package.TapPlan": [],
+    "tests/test-piped-input.TapPlan": [],
+    "tests/test-sdk-templates.TapPlan": [],
+    "tests/verdictPlan.TapPlan": []
+  }
+}

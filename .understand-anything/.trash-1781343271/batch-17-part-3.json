@@ -1,0 +1,151 @@
+{
+  "nodes": [
+    {
+      "id": "file:Directory.Build.props",
+      "type": "file",
+      "name": "Directory.Build.props",
+      "filePath": "Directory.Build.props",
+      "summary": "MSBuild 目录级构建属性文件，为整个解决方案设置统一的编译选项（LangVersion=13）、目标框架（netstandard2.0）、输出路径配置（Debug/Release）和卫星程序集清理目标。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "msbuild"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc/.vitepress/config.mts",
+      "type": "file",
+      "name": "config.mts",
+      "filePath": "doc/.vitepress/config.mts",
+      "summary": "VitePress 站点配置文件，定义 OpenTAP 文档站的导航栏、侧边栏结构（入门指南、用户指南、开发者指南、API 文档、社区章节）、搜索和 GitHub 编辑链接。",
+      "tags": [
+        "configuration",
+        "documentation",
+        "vitepress",
+        "site-config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:doc/.vitepress/theme/custom.css",
+      "type": "file",
+      "name": "custom.css",
+      "filePath": "doc/.vitepress/theme/custom.css",
+      "summary": "VitePress 自定义主题样式，设置 OpenTAP 品牌主色（红色 #e61e33）和辅助色（深灰 #333433）。",
+      "tags": [
+        "styling",
+        "theme",
+        "vitepress"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc/.vitepress/theme/index.js",
+      "type": "file",
+      "name": "index.js",
+      "filePath": "doc/.vitepress/theme/index.js",
+      "summary": "VitePress 主题入口文件，扩展默认主题并注册自定义 NotFound 布局组件，同时引入 custom.css 样式。",
+      "tags": [
+        "entry-point",
+        "theme",
+        "vitepress",
+        "layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc/.vitepress/theme/NotFound.vue",
+      "type": "file",
+      "name": "NotFound.vue",
+      "filePath": "doc/.vitepress/theme/NotFound.vue",
+      "summary": "VitePress 自定义 404 页面 Vue 组件，对于不以 .html 结尾的路径自动重定向到 Readme.html 以确保正确的页面解析。",
+      "tags": [
+        "component",
+        "vue",
+        "vitepress",
+        "404"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc/API Documentation/Doxyfile",
+      "type": "file",
+      "name": "Doxyfile",
+      "filePath": "doc/API Documentation/Doxyfile",
+      "summary": "Doxygen API 文档生成配置文件，包含约 2500 行的 Doxygen 配置选项，用于从源代码注释自动生成 API 参考文档。",
+      "tags": [
+        "configuration",
+        "documentation",
+        "doxygen",
+        "api-docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:doc/API Documentation/Doxyfile_HHC",
+      "type": "file",
+      "name": "Doxyfile_HHC",
+      "filePath": "doc/API Documentation/Doxyfile_HHC",
+      "summary": "Doxygen HTML Help Compiler 配置文件，用于编译生成 CHM 格式的 API 文档。与主 Doxyfile 类似但针对 HTML Help 输出格式进行配置。",
+      "tags": [
+        "configuration",
+        "documentation",
+        "doxygen",
+        "chm"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Directory.Build.props",
+      "target": "config:BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Directory.Build.props",
+      "target": "config:Cli/Tap.Cli.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:doc/.vitepress/theme/index.js",
+      "target": "file:doc/.vitepress/theme/custom.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:doc/.vitepress/theme/index.js",
+      "target": "file:doc/.vitepress/theme/NotFound.vue",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:doc/.vitepress/config.mts",
+      "target": "file:doc/.vitepress/theme/index.js",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:doc/API Documentation/Doxyfile",
+      "target": "file:BasicSteps/SweepLoop.cs",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:doc/API Documentation/Doxyfile_HHC",
+      "target": "file:BasicSteps/SweepLoop.cs",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,1398 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/MultiTestPlanRun.cs",
+      "type": "file",
+      "name": "MultiTestPlanRun.cs",
+      "filePath": "Engine.UnitTests/MultiTestPlanRun.cs",
+      "summary": "多测试计划并行运行的集成测试，验证多个 TestPlan 同时执行时的日志隔离、嵌套启动以及资源独立性。",
+      "tags": [
+        "test",
+        "test-plan",
+        "parallel-execution",
+        "logging"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/MultiTestPlanRun.cs:MultiTestPlanRun",
+      "type": "class",
+      "name": "MultiTestPlanRun",
+      "filePath": "Engine.UnitTests/MultiTestPlanRun.cs",
+      "lineRange": [
+        10,
+        210
+      ],
+      "summary": "MultiTestPlanRun 测试辅助类，用于单元测试中的类型模拟和功能验证。",
+      "tags": [
+        "test-helper",
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/MultiTestPlanRun.cs:SeparateLogs",
+      "type": "function",
+      "name": "SeparateLogs",
+      "filePath": "Engine.UnitTests/MultiTestPlanRun.cs",
+      "lineRange": [
+        13,
+        70
+      ],
+      "summary": "SeparateLogs 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/MultiTestPlanRun.cs:Start",
+      "type": "function",
+      "name": "Start",
+      "filePath": "Engine.UnitTests/MultiTestPlanRun.cs",
+      "lineRange": [
+        72,
+        98
+      ],
+      "summary": "Start 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MultiTestPlanRun.cs:NestedStart",
+      "type": "function",
+      "name": "NestedStart",
+      "filePath": "Engine.UnitTests/MultiTestPlanRun.cs",
+      "lineRange": [
+        124,
+        209
+      ],
+      "summary": "NestedStart 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/PictureAnnotationTest.cs",
+      "type": "file",
+      "name": "PictureAnnotationTest.cs",
+      "filePath": "Engine.UnitTests/PictureAnnotationTest.cs",
+      "summary": "测试 Picture 注解的读写功能，验证图片数据在 TestStep 属性上的序列化和反序列化是否正确。",
+      "tags": [
+        "test",
+        "picture-annotation",
+        "serialization",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/PictureAnnotationTest.cs:PictureAnnotationTest",
+      "type": "class",
+      "name": "PictureAnnotationTest",
+      "filePath": "Engine.UnitTests/PictureAnnotationTest.cs",
+      "lineRange": [
+        17,
+        57
+      ],
+      "summary": "PictureAnnotationTest NUnit 测试类，包含 1 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PictureAnnotationTest.cs:PictureReadWriteTest",
+      "type": "function",
+      "name": "PictureReadWriteTest",
+      "filePath": "Engine.UnitTests/PictureAnnotationTest.cs",
+      "lineRange": [
+        20,
+        56
+      ],
+      "summary": "PictureReadWriteTest 单元测试方法，验证 PictureReadWrite 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "type": "file",
+      "name": "PluginSearcherTests.cs",
+      "filePath": "Engine.UnitTests/PluginSearcherTests.cs",
+      "summary": "PluginSearcher 的基础功能测试，验证插件搜索、同一程序集重复处理以及 System.Net.IPAddress 等系统类型的定位能力。",
+      "tags": [
+        "test",
+        "plugin-searcher",
+        "assembly"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/PluginSearcherTests.cs:PluginSearcherTests",
+      "type": "class",
+      "name": "PluginSearcherTests",
+      "filePath": "Engine.UnitTests/PluginSearcherTests.cs",
+      "lineRange": [
+        12,
+        107
+      ],
+      "summary": "PluginSearcherTests NUnit 测试类，包含 4 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginSearcherTests.cs:PluginSearcherBasics",
+      "type": "function",
+      "name": "PluginSearcherBasics",
+      "filePath": "Engine.UnitTests/PluginSearcherTests.cs",
+      "lineRange": [
+        15,
+        54
+      ],
+      "summary": "PluginSearcherBasics 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginSearcherTests.cs:SameAssemblyTwice",
+      "type": "function",
+      "name": "SameAssemblyTwice",
+      "filePath": "Engine.UnitTests/PluginSearcherTests.cs",
+      "lineRange": [
+        56,
+        71
+      ],
+      "summary": "SameAssemblyTwice 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginSearcherTests.cs:SearchTwice",
+      "type": "function",
+      "name": "SearchTwice",
+      "filePath": "Engine.UnitTests/PluginSearcherTests.cs",
+      "lineRange": [
+        73,
+        90
+      ],
+      "summary": "SearchTwice 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginSearcherTests.cs:LocateSystemNetIPAddressTest",
+      "type": "function",
+      "name": "LocateSystemNetIPAddressTest",
+      "filePath": "Engine.UnitTests/PluginSearcherTests.cs",
+      "lineRange": [
+        92,
+        106
+      ],
+      "summary": "LocateSystemNetIPAddressTest 单元测试方法，验证 LocateSystemNetIPAddress 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "type": "file",
+      "name": "PluginSearcherThreadSafeTest.cs",
+      "filePath": "Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "summary": "PluginSearcher 的线程安全测试，通过并行搜索验证同步和异步搜索方法在并发环境下的安全性。",
+      "tags": [
+        "test",
+        "plugin-searcher",
+        "thread-safety",
+        "concurrency"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:PluginSearcherThreadSafeTest",
+      "type": "class",
+      "name": "PluginSearcherThreadSafeTest",
+      "filePath": "Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "lineRange": [
+        9,
+        54
+      ],
+      "summary": "PluginSearcherThreadSafeTest NUnit 测试类，包含 3 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:TestSearchAsync",
+      "type": "function",
+      "name": "TestSearchAsync",
+      "filePath": "Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "lineRange": [
+        12,
+        24
+      ],
+      "summary": "TestSearchAsync 单元测试方法，验证 SearchAsync 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:TestSearchSync",
+      "type": "function",
+      "name": "TestSearchSync",
+      "filePath": "Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "lineRange": [
+        26,
+        38
+      ],
+      "summary": "TestSearchSync 单元测试方法，验证 SearchSync 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:TestSearchMixed",
+      "type": "function",
+      "name": "TestSearchMixed",
+      "filePath": "Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "lineRange": [
+        40,
+        53
+      ],
+      "summary": "TestSearchMixed 单元测试方法，验证 SearchMixed 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/PortTest.cs",
+      "type": "file",
+      "name": "PortTest.cs",
+      "filePath": "Engine.UnitTests/PortTest.cs",
+      "summary": "测试 Port 连接系统的序列化功能，验证仪器端口（Port）在 TestStep 中的属性序列化和反序列化行为。",
+      "tags": [
+        "test",
+        "port",
+        "serialization",
+        "instrument"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/PortTest.cs:PortTest",
+      "type": "class",
+      "name": "PortTest",
+      "filePath": "Engine.UnitTests/PortTest.cs",
+      "lineRange": [
+        53,
+        106
+      ],
+      "summary": "PortTest NUnit 测试类，包含 1 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PortTest.cs:TestPort",
+      "type": "function",
+      "name": "TestPort",
+      "filePath": "Engine.UnitTests/PortTest.cs",
+      "lineRange": [
+        17,
+        20
+      ],
+      "summary": "TestPort 单元测试方法，验证 Port 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PortTest.cs:TestPortInstrument",
+      "type": "function",
+      "name": "TestPortInstrument",
+      "filePath": "Engine.UnitTests/PortTest.cs",
+      "lineRange": [
+        29,
+        33
+      ],
+      "summary": "TestPortInstrument 单元测试方法，验证 PortInstrument 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PortTest.cs:TestPortSerialization",
+      "type": "function",
+      "name": "TestPortSerialization",
+      "filePath": "Engine.UnitTests/PortTest.cs",
+      "lineRange": [
+        56,
+        104
+      ],
+      "summary": "TestPortSerialization 单元测试方法，验证 PortSerialization 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/ProfileAction.cs",
+      "type": "file",
+      "name": "ProfileAction.cs",
+      "filePath": "Engine.UnitTests/ProfileAction.cs",
+      "summary": "性能分析辅助工具类（非测试类），提供对 TestPlan 执行、TypeData 属性访问和长计划序列化等操作的性能剖析功能。",
+      "tags": [
+        "utility",
+        "profiling",
+        "performance",
+        "benchmark"
+      ],
+      "complexity": "complex",
+      "languageNotes": "不是 NUnit 测试类，而是一个可执行的性能剖析操作步骤。"
+    },
+    {
+      "id": "class:Engine.UnitTests/ProfileAction.cs:ProfileAction",
+      "type": "class",
+      "name": "ProfileAction",
+      "filePath": "Engine.UnitTests/ProfileAction.cs",
+      "lineRange": [
+        16,
+        417
+      ],
+      "summary": "ProfileAction 测试操作辅助类，用于模拟具体的引擎操作行为。",
+      "tags": [
+        "action",
+        "test-helper"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ProfileAction.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Engine.UnitTests/ProfileAction.cs",
+      "lineRange": [
+        66,
+        416
+      ],
+      "summary": "Execute 执行方法，实现操作或步骤的具体行为。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/ProgressBarTest.cs",
+      "type": "file",
+      "name": "ProgressBarTest.cs",
+      "filePath": "Engine.UnitTests/ProgressBarTest.cs",
+      "summary": "ProgressBar 组件的简单测试，验证进度条的更新逻辑和显示文本格式化功能。",
+      "tags": [
+        "test",
+        "progress-bar",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/ProgressBarTest.cs:ProgressBarTest",
+      "type": "class",
+      "name": "ProgressBarTest",
+      "filePath": "Engine.UnitTests/ProgressBarTest.cs",
+      "lineRange": [
+        9,
+        38
+      ],
+      "summary": "ProgressBarTest NUnit 测试类，包含 2 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ProgressBarTest.cs:ProgressBarTest",
+      "type": "function",
+      "name": "ProgressBarTest",
+      "filePath": "Engine.UnitTests/ProgressBarTest.cs",
+      "lineRange": [
+        16,
+        23
+      ],
+      "summary": "ProgressBarTest 单元测试方法，验证 ProgressBar 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ProgressBarTest.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "Engine.UnitTests/ProgressBarTest.cs",
+      "lineRange": [
+        24,
+        37
+      ],
+      "summary": "Run 步骤执行方法，执行测试步骤的核心逻辑。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ReflectionTest.cs",
+      "type": "file",
+      "name": "ReflectionTest.cs",
+      "filePath": "Engine.UnitTests/ReflectionTest.cs",
+      "summary": "Reflection 系统的测试，验证 DisplayAttribute 注解的创建与相等性比较，以及整数类型的元数据编码行为。",
+      "tags": [
+        "test",
+        "reflection",
+        "display-attribute",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/ReflectionTest.cs:ReflectionTest",
+      "type": "class",
+      "name": "ReflectionTest",
+      "filePath": "Engine.UnitTests/ReflectionTest.cs",
+      "lineRange": [
+        6,
+        59
+      ],
+      "summary": "ReflectionTest NUnit 测试类，包含 3 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionTest.cs:TestDisplayAttribute",
+      "type": "function",
+      "name": "TestDisplayAttribute",
+      "filePath": "Engine.UnitTests/ReflectionTest.cs",
+      "lineRange": [
+        11,
+        31
+      ],
+      "summary": "TestDisplayAttribute 单元测试方法，验证 DisplayAttribute 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionTest.cs:DisplayAttributeEqualityCheck",
+      "type": "function",
+      "name": "DisplayAttributeEqualityCheck",
+      "filePath": "Engine.UnitTests/ReflectionTest.cs",
+      "lineRange": [
+        33,
+        44
+      ],
+      "summary": "DisplayAttributeEqualityCheck 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionTest.cs:IntTriviaTest",
+      "type": "function",
+      "name": "IntTriviaTest",
+      "filePath": "Engine.UnitTests/ReflectionTest.cs",
+      "lineRange": [
+        46,
+        58
+      ],
+      "summary": "IntTriviaTest 单元测试方法，验证 IntTrivia 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ResourceReference.cs",
+      "type": "file",
+      "name": "ResourceReference.cs",
+      "filePath": "Engine.UnitTests/ResourceReference.cs",
+      "summary": "资源引用序列化的测试，验证资源内部引用其他资源的序列化和反序列化，以及插件资源的跳过序列化行为。",
+      "tags": [
+        "test",
+        "resource-reference",
+        "serialization",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/ResourceReference.cs:ResourceReference",
+      "type": "class",
+      "name": "ResourceReference",
+      "filePath": "Engine.UnitTests/ResourceReference.cs",
+      "lineRange": [
+        7,
+        98
+      ],
+      "summary": "ResourceReference 测试辅助类，用于单元测试中的类型模拟和功能验证。",
+      "tags": [
+        "test-helper",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceReference.cs:SerializeResourceRefInResource",
+      "type": "function",
+      "name": "SerializeResourceRefInResource",
+      "filePath": "Engine.UnitTests/ResourceReference.cs",
+      "lineRange": [
+        15,
+        56
+      ],
+      "summary": "SerializeResourceRefInResource 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceReference.cs:SkipSerializePluginResourceTest",
+      "type": "function",
+      "name": "SkipSerializePluginResourceTest",
+      "filePath": "Engine.UnitTests/ResourceReference.cs",
+      "lineRange": [
+        78,
+        96
+      ],
+      "summary": "SkipSerializePluginResourceTest 单元测试方法，验证 SkipSerializePluginResource 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/Resources.cs",
+      "type": "file",
+      "name": "Resources.cs",
+      "filePath": "Engine.UnitTests/Resources.cs",
+      "summary": "嵌入式资源访问工具类，提供从程序集嵌入资源中获取 Stream 和字符串内容的辅助方法。",
+      "tags": [
+        "utility",
+        "embedded-resource",
+        "helper"
+      ],
+      "complexity": "simple",
+      "languageNotes": "不是测试类，而是测试辅助工具，用于读取嵌入式资源文件。"
+    },
+    {
+      "id": "class:Engine.UnitTests/Resources.cs:Resources",
+      "type": "class",
+      "name": "Resources",
+      "filePath": "Engine.UnitTests/Resources.cs",
+      "lineRange": [
+        11,
+        32
+      ],
+      "summary": "Resources 测试辅助类，用于单元测试中的类型模拟和功能验证。",
+      "tags": [
+        "test-helper",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/Resources.cs:GetEmbeddedStream",
+      "type": "function",
+      "name": "GetEmbeddedStream",
+      "filePath": "Engine.UnitTests/Resources.cs",
+      "lineRange": [
+        13,
+        19
+      ],
+      "summary": "GetEmbeddedStream 取值方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/Resources.cs:GetEmbedded",
+      "type": "function",
+      "name": "GetEmbedded",
+      "filePath": "Engine.UnitTests/Resources.cs",
+      "lineRange": [
+        21,
+        30
+      ],
+      "summary": "GetEmbedded 取值方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "type": "file",
+      "name": "RecordAllResultListener.cs",
+      "filePath": "Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "summary": "测试辅助 ResultListener，记录所有测试步骤运行和结果发布事件，用于在测试中捕获和验证结果监听器的行为。",
+      "tags": [
+        "utility",
+        "result-listener",
+        "test-helper",
+        "listener"
+      ],
+      "complexity": "simple",
+      "languageNotes": "不是测试类，而是测试辅助 Listener。"
+    },
+    {
+      "id": "class:Engine.UnitTests/Resources/RecordAllResultListener.cs:RecordAllResultListener",
+      "type": "class",
+      "name": "RecordAllResultListener",
+      "filePath": "Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "lineRange": [
+        9,
+        53
+      ],
+      "summary": "RecordAllResultListener 结果监听器，用于在测试中收集和验证测试运行事件。",
+      "tags": [
+        "listener",
+        "result-listener",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnTestStepRunStart",
+      "type": "function",
+      "name": "OnTestStepRunStart",
+      "filePath": "Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "lineRange": [
+        21,
+        29
+      ],
+      "summary": "OnTestStepRunStart 单元测试方法，验证 OnStepRunStart 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnTestStepRunCompleted",
+      "type": "function",
+      "name": "OnTestStepRunCompleted",
+      "filePath": "Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "lineRange": [
+        31,
+        36
+      ],
+      "summary": "OnTestStepRunCompleted 单元测试方法，验证 OnStepRunCompleted 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnTestPlanRunCompleted",
+      "type": "function",
+      "name": "OnTestPlanRunCompleted",
+      "filePath": "Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "lineRange": [
+        38,
+        43
+      ],
+      "summary": "OnTestPlanRunCompleted 单元测试方法，验证 OnPlanRunCompleted 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnResultPublished",
+      "type": "function",
+      "name": "OnResultPublished",
+      "filePath": "Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "lineRange": [
+        45,
+        52
+      ],
+      "summary": "OnResultPublished 事件处理方法，响应 ResultPublished 事件。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ResultListenerApiTest.cs",
+      "type": "file",
+      "name": "ResultListenerApiTest.cs",
+      "filePath": "Engine.UnitTests/ResultListenerApiTest.cs",
+      "summary": "ResultListener API 的简单测试，验证 TestRun 的日志读取功能和结果监听器接口的基本行为。",
+      "tags": [
+        "test",
+        "result-listener",
+        "api",
+        "logging"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/ResultListenerApiTest.cs:ResultListenerApiTest",
+      "type": "class",
+      "name": "ResultListenerApiTest",
+      "filePath": "Engine.UnitTests/ResultListenerApiTest.cs",
+      "lineRange": [
+        7,
+        39
+      ],
+      "summary": "ResultListenerApiTest NUnit 测试类，包含 1 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListenerApiTest.cs:TestReadLog",
+      "type": "function",
+      "name": "TestReadLog",
+      "filePath": "Engine.UnitTests/ResultListenerApiTest.cs",
+      "lineRange": [
+        9,
+        38
+      ],
+      "summary": "TestReadLog 单元测试方法，验证 ReadLog 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/MultiTestPlanRun.cs",
+      "target": "class:Engine.UnitTests/MultiTestPlanRun.cs:MultiTestPlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MultiTestPlanRun.cs",
+      "target": "function:Engine.UnitTests/MultiTestPlanRun.cs:SeparateLogs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MultiTestPlanRun.cs",
+      "target": "function:Engine.UnitTests/MultiTestPlanRun.cs:SeparateLogs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MultiTestPlanRun.cs",
+      "target": "function:Engine.UnitTests/MultiTestPlanRun.cs:Start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MultiTestPlanRun.cs",
+      "target": "function:Engine.UnitTests/MultiTestPlanRun.cs:Start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MultiTestPlanRun.cs",
+      "target": "function:Engine.UnitTests/MultiTestPlanRun.cs:NestedStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MultiTestPlanRun.cs",
+      "target": "function:Engine.UnitTests/MultiTestPlanRun.cs:NestedStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PictureAnnotationTest.cs",
+      "target": "class:Engine.UnitTests/PictureAnnotationTest.cs:PictureAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PictureAnnotationTest.cs",
+      "target": "class:Engine.UnitTests/PictureAnnotationTest.cs:PictureAnnotationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PictureAnnotationTest.cs",
+      "target": "function:Engine.UnitTests/PictureAnnotationTest.cs:PictureReadWriteTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PictureAnnotationTest.cs",
+      "target": "function:Engine.UnitTests/PictureAnnotationTest.cs:PictureReadWriteTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "target": "class:Engine.UnitTests/PluginSearcherTests.cs:PluginSearcherTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "target": "class:Engine.UnitTests/PluginSearcherTests.cs:PluginSearcherTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherTests.cs:PluginSearcherBasics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherTests.cs:PluginSearcherBasics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherTests.cs:SameAssemblyTwice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherTests.cs:SameAssemblyTwice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherTests.cs:SearchTwice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherTests.cs:SearchTwice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherTests.cs:LocateSystemNetIPAddressTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherTests.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherTests.cs:LocateSystemNetIPAddressTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "target": "class:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:PluginSearcherThreadSafeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "target": "class:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:PluginSearcherThreadSafeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:TestSearchAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:TestSearchAsync",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:TestSearchSync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:TestSearchSync",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:TestSearchMixed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginSearcherThreadSafeTest.cs",
+      "target": "function:Engine.UnitTests/PluginSearcherThreadSafeTest.cs:TestSearchMixed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PortTest.cs",
+      "target": "class:Engine.UnitTests/PortTest.cs:PortTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PortTest.cs",
+      "target": "class:Engine.UnitTests/PortTest.cs:PortTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PortTest.cs",
+      "target": "function:Engine.UnitTests/PortTest.cs:TestPort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PortTest.cs",
+      "target": "function:Engine.UnitTests/PortTest.cs:TestPort",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PortTest.cs",
+      "target": "function:Engine.UnitTests/PortTest.cs:TestPortInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PortTest.cs",
+      "target": "function:Engine.UnitTests/PortTest.cs:TestPortInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PortTest.cs",
+      "target": "function:Engine.UnitTests/PortTest.cs:TestPortSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PortTest.cs",
+      "target": "function:Engine.UnitTests/PortTest.cs:TestPortSerialization",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProfileAction.cs",
+      "target": "class:Engine.UnitTests/ProfileAction.cs:ProfileAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProfileAction.cs",
+      "target": "class:Engine.UnitTests/ProfileAction.cs:ProfileAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProfileAction.cs",
+      "target": "function:Engine.UnitTests/ProfileAction.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProfileAction.cs",
+      "target": "function:Engine.UnitTests/ProfileAction.cs:Execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProgressBarTest.cs",
+      "target": "class:Engine.UnitTests/ProgressBarTest.cs:ProgressBarTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProgressBarTest.cs",
+      "target": "class:Engine.UnitTests/ProgressBarTest.cs:ProgressBarTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProgressBarTest.cs",
+      "target": "function:Engine.UnitTests/ProgressBarTest.cs:ProgressBarTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProgressBarTest.cs",
+      "target": "function:Engine.UnitTests/ProgressBarTest.cs:ProgressBarTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProgressBarTest.cs",
+      "target": "function:Engine.UnitTests/ProgressBarTest.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProgressBarTest.cs",
+      "target": "function:Engine.UnitTests/ProgressBarTest.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionTest.cs",
+      "target": "class:Engine.UnitTests/ReflectionTest.cs:ReflectionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionTest.cs",
+      "target": "class:Engine.UnitTests/ReflectionTest.cs:ReflectionTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionTest.cs:TestDisplayAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionTest.cs:TestDisplayAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionTest.cs:DisplayAttributeEqualityCheck",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionTest.cs:DisplayAttributeEqualityCheck",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionTest.cs:IntTriviaTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionTest.cs:IntTriviaTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceReference.cs",
+      "target": "class:Engine.UnitTests/ResourceReference.cs:ResourceReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceReference.cs",
+      "target": "class:Engine.UnitTests/ResourceReference.cs:ResourceReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceReference.cs",
+      "target": "function:Engine.UnitTests/ResourceReference.cs:SerializeResourceRefInResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceReference.cs",
+      "target": "function:Engine.UnitTests/ResourceReference.cs:SerializeResourceRefInResource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceReference.cs",
+      "target": "function:Engine.UnitTests/ResourceReference.cs:SkipSerializePluginResourceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceReference.cs",
+      "target": "function:Engine.UnitTests/ResourceReference.cs:SkipSerializePluginResourceTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources.cs",
+      "target": "class:Engine.UnitTests/Resources.cs:Resources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources.cs",
+      "target": "function:Engine.UnitTests/Resources.cs:GetEmbeddedStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources.cs",
+      "target": "function:Engine.UnitTests/Resources.cs:GetEmbeddedStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources.cs",
+      "target": "function:Engine.UnitTests/Resources.cs:GetEmbedded",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources.cs",
+      "target": "function:Engine.UnitTests/Resources.cs:GetEmbedded",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "target": "class:Engine.UnitTests/Resources/RecordAllResultListener.cs:RecordAllResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "target": "class:Engine.UnitTests/Resources/RecordAllResultListener.cs:RecordAllResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "target": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnTestStepRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "target": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnTestStepRunStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "target": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnTestStepRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "target": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnTestStepRunCompleted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "target": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnTestPlanRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "target": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnTestPlanRunCompleted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "target": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnResultPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Resources/RecordAllResultListener.cs",
+      "target": "function:Engine.UnitTests/Resources/RecordAllResultListener.cs:OnResultPublished",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerApiTest.cs",
+      "target": "class:Engine.UnitTests/ResultListenerApiTest.cs:ResultListenerApiTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerApiTest.cs",
+      "target": "class:Engine.UnitTests/ResultListenerApiTest.cs:ResultListenerApiTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerApiTest.cs",
+      "target": "function:Engine.UnitTests/ResultListenerApiTest.cs:TestReadLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerApiTest.cs",
+      "target": "function:Engine.UnitTests/ResultListenerApiTest.cs:TestReadLog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

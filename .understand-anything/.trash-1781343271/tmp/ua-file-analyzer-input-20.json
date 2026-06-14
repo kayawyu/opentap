@@ -1,0 +1,31 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": "Engine.UnitTests/CodeGen.cs", "language": "csharp", "sizeLines": 124, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/ComponentSettingsTest.cs", "language": "csharp", "sizeLines": 294, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/ConnectionTest.cs", "language": "csharp", "sizeLines": 299, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/DefaultPictureDataProviderTest.cs", "language": "csharp", "sizeLines": 142, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/DisplayNameTest.cs", "language": "csharp", "sizeLines": 28, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/DuplicateTestStep.cs", "language": "csharp", "sizeLines": 25, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/DutInstrumentInheritanceTest.cs", "language": "csharp", "sizeLines": 87, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/DynamicStepTest.cs", "language": "csharp", "sizeLines": 39, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/ElementFactoryTest.cs", "language": "csharp", "sizeLines": 285, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/EmbeddedPropertyTests.cs", "language": "csharp", "sizeLines": 437, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/ExternalTestPlanParameterTest.cs", "language": "csharp", "sizeLines": 518, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/FilePathTest.cs", "language": "csharp", "sizeLines": 39, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/FlagsAttributeTests.cs", "language": "csharp", "sizeLines": 214, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/FormatterTests.cs", "language": "csharp", "sizeLines": 28, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/HttpArtifactStep.cs", "language": "csharp", "sizeLines": 19, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/HybridStreamTest.cs", "language": "csharp", "sizeLines": 22, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/ILockManagerTests.cs", "language": "csharp", "sizeLines": 430, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/InputOutputRelationTest.cs", "language": "csharp", "sizeLines": 663, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/InputTest.cs", "language": "csharp", "sizeLines": 327, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/IResultSinkTests.cs", "language": "csharp", "sizeLines": 140, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/LazyResourceManagerTest.cs", "language": "csharp", "sizeLines": 73, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/ListSerialization.cs", "language": "csharp", "sizeLines": 519, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/LoggingProfilingTest.cs", "language": "csharp", "sizeLines": 28, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/LoggingTest.cs", "language": "csharp", "sizeLines": 268, "fileCategory": "code"},
+    {"path": "Engine.UnitTests/LogResultListenerTest.cs", "language": "csharp", "sizeLines": 139, "fileCategory": "code"}
+  ],
+  "batchImportData": {"Engine.UnitTests/CodeGen.cs":[],"Engine.UnitTests/ComponentSettingsTest.cs":[],"Engine.UnitTests/ConnectionTest.cs":[],"Engine.UnitTests/DefaultPictureDataProviderTest.cs":[],"Engine.UnitTests/DisplayNameTest.cs":[],"Engine.UnitTests/DuplicateTestStep.cs":[],"Engine.UnitTests/DutInstrumentInheritanceTest.cs":[],"Engine.UnitTests/DynamicStepTest.cs":[],"Engine.UnitTests/ElementFactoryTest.cs":[],"Engine.UnitTests/EmbeddedPropertyTests.cs":[],"Engine.UnitTests/ExternalTestPlanParameterTest.cs":[],"Engine.UnitTests/FilePathTest.cs":[],"Engine.UnitTests/FlagsAttributeTests.cs":[],"Engine.UnitTests/FormatterTests.cs":[],"Engine.UnitTests/HttpArtifactStep.cs":[],"Engine.UnitTests/HybridStreamTest.cs":[],"Engine.UnitTests/ILockManagerTests.cs":[],"Engine.UnitTests/InputOutputRelationTest.cs":[],"Engine.UnitTests/InputTest.cs":[],"Engine.UnitTests/IResultSinkTests.cs":[],"Engine.UnitTests/LazyResourceManagerTest.cs":[],"Engine.UnitTests/ListSerialization.cs":[],"Engine.UnitTests/LoggingProfilingTest.cs":[],"Engine.UnitTests/LoggingTest.cs":[],"Engine.UnitTests/LogResultListenerTest.cs":[]}
+}

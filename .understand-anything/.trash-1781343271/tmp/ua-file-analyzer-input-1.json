@@ -1,0 +1,7 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": "docker/Linux/Dockerfile", "language": "dockerfile", "sizeLines": 66, "fileCategory": "infra"}
+  ],
+  "batchImportData": {"docker/Linux/Dockerfile":[]}
+}

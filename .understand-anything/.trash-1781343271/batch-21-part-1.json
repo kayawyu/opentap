@@ -1,0 +1,1774 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "type": "file",
+      "name": "MemberDataProviderTests.cs",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "summary": "测试 TypeData、MemberData 和注解系统的综合单元测试，覆盖派生类型检索、成员数据序列化、SweepLoop 提供者、嵌入式属性反射和注解行为等核心引擎功能。",
+      "tags": [
+        "test",
+        "type-data",
+        "member-data",
+        "annotation",
+        "sweep-loop"
+      ],
+      "complexity": "complex",
+      "languageNotes": "包含 7 个内部类和 48 个方法的大型测试文件，使用 NUnit 框架。内部定义了 IExpandedObject、ExpandedMemberData 等辅助类型用于扩展类型数据测试。"
+    },
+    {
+      "id": "class:Engine.UnitTests/MemberDataProviderTests.cs:TypeDataTest",
+      "type": "class",
+      "name": "TypeDataTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        18,
+        327
+      ],
+      "summary": "TypeDataTest NUnit 测试类，包含 7 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/MemberDataProviderTests.cs:IExpandedObject",
+      "type": "class",
+      "name": "IExpandedObject",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        329,
+        334
+      ],
+      "summary": "IExpandedObject 测试辅助类型，用于验证 OpenTAP 接口实现 的行为。",
+      "tags": [
+        "test-helper",
+        "interface-implementation",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/MemberDataProviderTests.cs:ExpandedMemberData",
+      "type": "class",
+      "name": "ExpandedMemberData",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        336,
+        368
+      ],
+      "summary": "ExpandedMemberData 测试辅助类，用于单元测试中的类型模拟和功能验证。",
+      "tags": [
+        "test-helper",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/MemberDataProviderTests.cs:ExpandedTypeInfo",
+      "type": "class",
+      "name": "ExpandedTypeInfo",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        370,
+        405
+      ],
+      "summary": "ExpandedTypeInfo 测试辅助类，用于单元测试中的类型模拟和功能验证。",
+      "tags": [
+        "test-helper",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/MemberDataProviderTests.cs:ExpandMemberDataProvider",
+      "type": "class",
+      "name": "ExpandMemberDataProvider",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        407,
+        443
+      ],
+      "summary": "ExpandMemberDataProvider 数据提供者实现，用于扩展类型数据系统的测试。",
+      "tags": [
+        "data-provider",
+        "type-data",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/MemberDataProviderTests.cs:MyExpandedObject",
+      "type": "class",
+      "name": "MyExpandedObject",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        446,
+        464
+      ],
+      "summary": "MyExpandedObject 测试辅助类型，用于验证 OpenTAP 扩展对象 的行为。",
+      "tags": [
+        "test-helper",
+        "interface-implementation",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/MemberDataProviderTests.cs:MemberDataProviderTests",
+      "type": "class",
+      "name": "MemberDataProviderTests",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        466,
+        2021
+      ],
+      "summary": "MemberDataProviderTests NUnit 测试类，包含 32 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:ClassPropertyWithoutGetter",
+      "type": "function",
+      "name": "ClassPropertyWithoutGetter",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        26,
+        32
+      ],
+      "summary": "ClassPropertyWithoutGetter 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:SimpleDerivedTypesTest",
+      "type": "function",
+      "name": "SimpleDerivedTypesTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        34,
+        43
+      ],
+      "summary": "SimpleDerivedTypesTest 单元测试方法，验证 SimpleDerivedTypes 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSearcherTest",
+      "type": "function",
+      "name": "ITypeDataSearcherTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        216,
+        229
+      ],
+      "summary": "ITypeDataSearcherTest 单元测试方法，验证 ITypeDataSearcher 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSearcherTest3",
+      "type": "function",
+      "name": "ITypeDataSearcherTest3",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        231,
+        264
+      ],
+      "summary": "ITypeDataSearcherTest3 单元测试方法，验证 ITypeDataSearcher3 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSearcherTest2",
+      "type": "function",
+      "name": "ITypeDataSearcherTest2",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        281,
+        303
+      ],
+      "summary": "ITypeDataSearcherTest2 单元测试方法，验证 ITypeDataSearcher2 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSourceTest2",
+      "type": "function",
+      "name": "ITypeDataSourceTest2",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        305,
+        326
+      ],
+      "summary": "ITypeDataSourceTest2 单元测试方法，验证 ITypeDataSource2 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetMembers",
+      "type": "function",
+      "name": "GetMembers",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        394,
+        404
+      ],
+      "summary": "GetMembers 取值方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetTypeData_L411",
+      "type": "function",
+      "name": "GetTypeData",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        411,
+        422
+      ],
+      "summary": "GetTypeData 取值方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetTypeData_L425",
+      "type": "function",
+      "name": "GetTypeData",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        425,
+        442
+      ],
+      "summary": "GetTypeData 取值方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetValue",
+      "type": "function",
+      "name": "GetValue",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        453,
+        458
+      ],
+      "summary": "GetValue 取值方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotationsTest",
+      "type": "function",
+      "name": "AnnotationsTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        469,
+        491
+      ],
+      "summary": "AnnotationsTest 单元测试方法，验证 Annotations 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:MemberDataTest",
+      "type": "function",
+      "name": "MemberDataTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        493,
+        510
+      ],
+      "summary": "MemberDataTest 单元测试方法，验证 MemberData 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:DerivedTypesTest",
+      "type": "function",
+      "name": "DerivedTypesTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        512,
+        522
+      ],
+      "summary": "DerivedTypesTest 单元测试方法，验证 DerivedTypes 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:MemberData2Test",
+      "type": "function",
+      "name": "MemberData2Test",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        524,
+        538
+      ],
+      "summary": "MemberData2Test 单元测试方法，验证 MemberData2 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:TypeDataBehaviors",
+      "type": "function",
+      "name": "TypeDataBehaviors",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        548,
+        564
+      ],
+      "summary": "TypeDataBehaviors 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:MemberDataSerializeTest",
+      "type": "function",
+      "name": "MemberDataSerializeTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        567,
+        586
+      ],
+      "summary": "MemberDataSerializeTest 单元测试方法，验证 MemberDataSerialize 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:DataInterfaceProviderTest2",
+      "type": "function",
+      "name": "DataInterfaceProviderTest2",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        762,
+        990
+      ],
+      "summary": "DataInterfaceProviderTest2 单元测试方法，验证 DataInterfaceProvider2 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:SweepLoopProviderTest",
+      "type": "function",
+      "name": "SweepLoopProviderTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1038,
+        1177
+      ],
+      "summary": "SweepLoopProviderTest 单元测试方法，验证 SweepLoopProvider 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:SweepLoopRangeCheck",
+      "type": "function",
+      "name": "SweepLoopRangeCheck",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1178,
+        1204
+      ],
+      "summary": "SweepLoopRangeCheck 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:DataInterfaceProviderTest",
+      "type": "function",
+      "name": "DataInterfaceProviderTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1206,
+        1211
+      ],
+      "summary": "DataInterfaceProviderTest 单元测试方法，验证 DataInterfaceProvider 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:dataInterfaceProviderInnerTest",
+      "type": "function",
+      "name": "dataInterfaceProviderInnerTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1213,
+        1299
+      ],
+      "summary": "dataInterfaceProviderInnerTest 单元测试方法，验证 dataInterfaceProviderInner 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:ExpandedDataInterfaceProviderTest",
+      "type": "function",
+      "name": "ExpandedDataInterfaceProviderTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1301,
+        1316
+      ],
+      "summary": "ExpandedDataInterfaceProviderTest 单元测试方法，验证 ExpandedDataInterfaceProvider 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:MultiSelectAnnotationsInterfaceTest",
+      "type": "function",
+      "name": "MultiSelectAnnotationsInterfaceTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1318,
+        1371
+      ],
+      "summary": "MultiSelectAnnotationsInterfaceTest 单元测试方法，验证 MultiSelectAnnotationsInterface 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:TestDisplayAnnotationForDialogStep",
+      "type": "function",
+      "name": "TestDisplayAnnotationForDialogStep",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1384,
+        1401
+      ],
+      "summary": "TestDisplayAnnotationForDialogStep 单元测试方法，验证 DisplayAnnotationForDialogStep 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:TestDisplayDialog",
+      "type": "function",
+      "name": "TestDisplayDialog",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1421,
+        1439
+      ],
+      "summary": "TestDisplayDialog 单元测试方法，验证 DisplayDialog 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:MultiSelectAnnotationsInterfaceTest3",
+      "type": "function",
+      "name": "MultiSelectAnnotationsInterfaceTest3",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1441,
+        1466
+      ],
+      "summary": "MultiSelectAnnotationsInterfaceTest3 单元测试方法，验证 MultiSelectAnnotationsInterface3 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:MultiSelectAnnotationsInterfaceTest2",
+      "type": "function",
+      "name": "MultiSelectAnnotationsInterfaceTest2",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1468,
+        1498
+      ],
+      "summary": "MultiSelectAnnotationsInterfaceTest2 单元测试方法，验证 MultiSelectAnnotationsInterface2 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:DisallowParentInput",
+      "type": "function",
+      "name": "DisallowParentInput",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1500,
+        1530
+      ],
+      "summary": "DisallowParentInput 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:SweepLoopAnnotation",
+      "type": "function",
+      "name": "SweepLoopAnnotation",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1532,
+        1600
+      ],
+      "summary": "SweepLoopAnnotation 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotationVirtualEnabledProperty",
+      "type": "function",
+      "name": "AnnotationVirtualEnabledProperty",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1620,
+        1637
+      ],
+      "summary": "AnnotationVirtualEnabledProperty 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotatedInputTest",
+      "type": "function",
+      "name": "AnnotatedInputTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1643,
+        1658
+      ],
+      "summary": "AnnotatedInputTest 单元测试方法，验证 AnnotatedInput 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:IfVerdictReadError",
+      "type": "function",
+      "name": "IfVerdictReadError",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1660,
+        1677
+      ],
+      "summary": "IfVerdictReadError 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:ReferencedStepAnnotation",
+      "type": "function",
+      "name": "ReferencedStepAnnotation",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1706,
+        1723
+      ],
+      "summary": "ReferencedStepAnnotation 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:StepListMultiSelect",
+      "type": "function",
+      "name": "StepListMultiSelect",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1735,
+        1759
+      ],
+      "summary": "StepListMultiSelect 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbeddedPropertiesReflectionAndAnnotation2",
+      "type": "function",
+      "name": "EmbeddedPropertiesReflectionAndAnnotation2",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1780,
+        1801
+      ],
+      "summary": "EmbeddedPropertiesReflectionAndAnnotation2 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbeddedValidatingObjectTest",
+      "type": "function",
+      "name": "EmbeddedValidatingObjectTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1833,
+        1854
+      ],
+      "summary": "EmbeddedValidatingObjectTest 单元测试方法，验证 EmbeddedValidatingObject 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbeddedExternalTestPlanParameter",
+      "type": "function",
+      "name": "EmbeddedExternalTestPlanParameter",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1856,
+        1868
+      ],
+      "summary": "EmbeddedExternalTestPlanParameter 单元测试方法，验证 EmbeddedExternalPlanParameter 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotateBlankStep",
+      "type": "function",
+      "name": "AnnotateBlankStep",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1878,
+        1887
+      ],
+      "summary": "AnnotateBlankStep 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbedWithInstrumentTest",
+      "type": "function",
+      "name": "EmbedWithInstrumentTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1910,
+        1936
+      ],
+      "summary": "EmbedWithInstrumentTest 单元测试方法，验证 EmbedWithInstrument 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:StepDescriptionTest",
+      "type": "function",
+      "name": "StepDescriptionTest",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1938,
+        1961
+      ],
+      "summary": "StepDescriptionTest 单元测试方法，验证 StepDescription 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MemberDataProviderTests.cs:TestSweepSameNamedAvailableValues",
+      "type": "function",
+      "name": "TestSweepSameNamedAvailableValues",
+      "filePath": "Engine.UnitTests/MemberDataProviderTests.cs",
+      "lineRange": [
+        1995,
+        2020
+      ],
+      "summary": "TestSweepSameNamedAvailableValues 单元测试方法，验证 SweepSameNamedAvailableValues 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/MenuAnnotationTest.cs",
+      "type": "file",
+      "name": "MenuAnnotationTest.cs",
+      "filePath": "Engine.UnitTests/MenuAnnotationTest.cs",
+      "summary": "测试自定义菜单注解（MenuAnnotation）的模型创建功能，验证菜单项的显示文本和快捷键绑定设置是否正确。",
+      "tags": [
+        "test",
+        "menu-annotation",
+        "gui",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/MenuAnnotationTest.cs:MenuAnnotationTest",
+      "type": "class",
+      "name": "MenuAnnotationTest",
+      "filePath": "Engine.UnitTests/MenuAnnotationTest.cs",
+      "lineRange": [
+        7,
+        59
+      ],
+      "summary": "MenuAnnotationTest NUnit 测试类，包含 1 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MenuAnnotationTest.cs:CustomMenuModelTest",
+      "type": "function",
+      "name": "CustomMenuModelTest",
+      "filePath": "Engine.UnitTests/MenuAnnotationTest.cs",
+      "lineRange": [
+        42,
+        58
+      ],
+      "summary": "CustomMenuModelTest 单元测试方法，验证 CustomMenuModel 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "type": "file",
+      "name": "ProcessStepTest.cs",
+      "filePath": "Engine.UnitTests/ProcessStepTest.cs",
+      "summary": "ProcessStep 的单元测试，验证环境变量设置、输出捕获、超时处理以及进程执行的成功路径。",
+      "tags": [
+        "test",
+        "process-step",
+        "environment-variables",
+        "timeout"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/ProcessStepTest.cs:ProcessStepTest",
+      "type": "class",
+      "name": "ProcessStepTest",
+      "filePath": "Engine.UnitTests/ProcessStepTest.cs",
+      "lineRange": [
+        44,
+        139
+      ],
+      "summary": "ProcessStepTest NUnit 测试类，包含 4 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ProcessStepTest.cs:Execute_L16",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Engine.UnitTests/ProcessStepTest.cs",
+      "lineRange": [
+        16,
+        27
+      ],
+      "summary": "Execute 执行方法，实现操作或步骤的具体行为。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ProcessStepTest.cs:Execute_L35",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Engine.UnitTests/ProcessStepTest.cs",
+      "lineRange": [
+        35,
+        41
+      ],
+      "summary": "Execute 执行方法，实现操作或步骤的具体行为。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepSetEnvironmentVariables",
+      "type": "function",
+      "name": "ProcessStepSetEnvironmentVariables",
+      "filePath": "Engine.UnitTests/ProcessStepTest.cs",
+      "lineRange": [
+        48,
+        79
+      ],
+      "summary": "ProcessStepSetEnvironmentVariables 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepOutputs",
+      "type": "function",
+      "name": "ProcessStepOutputs",
+      "filePath": "Engine.UnitTests/ProcessStepTest.cs",
+      "lineRange": [
+        81,
+        96
+      ],
+      "summary": "ProcessStepOutputs 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepTimeoutTest",
+      "type": "function",
+      "name": "ProcessStepTimeoutTest",
+      "filePath": "Engine.UnitTests/ProcessStepTest.cs",
+      "lineRange": [
+        99,
+        120
+      ],
+      "summary": "ProcessStepTimeoutTest 单元测试方法，验证 ProcessStepTimeout 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepPass",
+      "type": "function",
+      "name": "ProcessStepPass",
+      "filePath": "Engine.UnitTests/ProcessStepTest.cs",
+      "lineRange": [
+        122,
+        138
+      ],
+      "summary": "ProcessStepPass 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:TypeDataTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:TypeDataTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:IExpandedObject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:IExpandedObject",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:ExpandedMemberData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:ExpandedMemberData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:ExpandedTypeInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:ExpandedTypeInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:ExpandMemberDataProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:ExpandMemberDataProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:MyExpandedObject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:MyExpandedObject",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:MemberDataProviderTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:MemberDataProviderTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ClassPropertyWithoutGetter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ClassPropertyWithoutGetter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:SimpleDerivedTypesTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:SimpleDerivedTypesTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSearcherTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSearcherTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSearcherTest3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSearcherTest3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSearcherTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSearcherTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSourceTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ITypeDataSourceTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetMembers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetTypeData_L425",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetTypeData_L425",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetTypeData_L425",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetTypeData_L425",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:GetValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotationsTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotationsTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MemberDataTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MemberDataTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:DerivedTypesTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:DerivedTypesTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MemberData2Test",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MemberData2Test",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:TypeDataBehaviors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:TypeDataBehaviors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MemberDataSerializeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MemberDataSerializeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:DataInterfaceProviderTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:DataInterfaceProviderTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:SweepLoopProviderTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:SweepLoopProviderTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:SweepLoopRangeCheck",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:SweepLoopRangeCheck",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:DataInterfaceProviderTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:DataInterfaceProviderTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:dataInterfaceProviderInnerTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ExpandedDataInterfaceProviderTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ExpandedDataInterfaceProviderTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MultiSelectAnnotationsInterfaceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MultiSelectAnnotationsInterfaceTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:TestDisplayAnnotationForDialogStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:TestDisplayAnnotationForDialogStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:TestDisplayDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:TestDisplayDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MultiSelectAnnotationsInterfaceTest3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MultiSelectAnnotationsInterfaceTest3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MultiSelectAnnotationsInterfaceTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:MultiSelectAnnotationsInterfaceTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:DisallowParentInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:DisallowParentInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:SweepLoopAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:SweepLoopAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotationVirtualEnabledProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotationVirtualEnabledProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotatedInputTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotatedInputTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:IfVerdictReadError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:IfVerdictReadError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ReferencedStepAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:ReferencedStepAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:StepListMultiSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:StepListMultiSelect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbeddedPropertiesReflectionAndAnnotation2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbeddedPropertiesReflectionAndAnnotation2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbeddedValidatingObjectTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbeddedValidatingObjectTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbeddedExternalTestPlanParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbeddedExternalTestPlanParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotateBlankStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:AnnotateBlankStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbedWithInstrumentTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:EmbedWithInstrumentTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:StepDescriptionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:StepDescriptionTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:TestSweepSameNamedAvailableValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MemberDataProviderTests.cs",
+      "target": "function:Engine.UnitTests/MemberDataProviderTests.cs:TestSweepSameNamedAvailableValues",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MenuAnnotationTest.cs",
+      "target": "class:Engine.UnitTests/MenuAnnotationTest.cs:MenuAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MenuAnnotationTest.cs",
+      "target": "class:Engine.UnitTests/MenuAnnotationTest.cs:MenuAnnotationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MenuAnnotationTest.cs",
+      "target": "function:Engine.UnitTests/MenuAnnotationTest.cs:CustomMenuModelTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MenuAnnotationTest.cs",
+      "target": "function:Engine.UnitTests/MenuAnnotationTest.cs:CustomMenuModelTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/MemberDataProviderTests.cs:ExpandedMemberData",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:IExpandedObject",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:Engine.UnitTests/MemberDataProviderTests.cs:MyExpandedObject",
+      "target": "class:Engine.UnitTests/MemberDataProviderTests.cs:IExpandedObject",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "class:Engine.UnitTests/ProcessStepTest.cs:ProcessStepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "class:Engine.UnitTests/ProcessStepTest.cs:ProcessStepTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:Execute_L35",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:Execute_L35",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:Execute_L35",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:Execute_L35",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepSetEnvironmentVariables",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepSetEnvironmentVariables",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepOutputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepOutputs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepTimeoutTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepTimeoutTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepPass",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ProcessStepTest.cs",
+      "target": "function:Engine.UnitTests/ProcessStepTest.cs:ProcessStepPass",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

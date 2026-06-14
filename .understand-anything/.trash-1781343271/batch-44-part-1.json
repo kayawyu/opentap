@@ -1,0 +1,1351 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "type": "file",
+      "name": "ReadOnlyListExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "summary": "OpenTAP 插件开发示例：演示如何在 TestStep 中使用只读列表（IReadOnlyList），列表大小固定但元素属性可编辑。包含自定义 Equals/GetHashCode 以支持多编辑场景。",
+      "tags": [
+        "example",
+        "test-step",
+        "readonly-list",
+        "plugin-development",
+        "equality-override"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:ReadOnlyListElement",
+      "type": "class",
+      "name": "ReadOnlyListElement",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "lineRange": [
+        23,
+        45
+      ],
+      "summary": "只读列表元素类，展示如何使用 BrowsableAttribute 控制属性可见性，并重写 Equals 和 GetHashCode 以支持列表元素的多编辑一致性检查。",
+      "tags": [
+        "data-model",
+        "list-element",
+        "equality",
+        "browsable"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:Equals",
+      "type": "function",
+      "name": "Equals",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "lineRange": [
+        34,
+        39
+      ],
+      "summary": "重写的 Equals 方法，基于 Message 和 Note 属性进行值相等比较，消除多编辑时 OpenTAP 的引用不等警告。",
+      "tags": [
+        "equality",
+        "override",
+        "value-comparison"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:GetHashCode",
+      "type": "function",
+      "name": "GetHashCode",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "lineRange": [
+        41,
+        44
+      ],
+      "summary": "重写的 GetHashCode 方法，基于 Message 和 Note 属性计算哈希值。",
+      "tags": [
+        "hash-code",
+        "override"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:ReadOnlyListExample",
+      "type": "class",
+      "name": "ReadOnlyListExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "lineRange": [
+        47,
+        69
+      ],
+      "summary": "只读列表示例 TestStep，扩展 TestStep 展示如何通过 IReadOnlyList 接口暴露列表属性，禁止添加/删除项但允许修改元素内容。",
+      "tags": [
+        "test-step",
+        "example",
+        "iReadonlyList",
+        "display-attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "lineRange": [
+        65,
+        68
+      ],
+      "summary": "TestStep 的 Run 入口方法，此示例中为空实现。",
+      "tags": [
+        "test-step",
+        "entry-point",
+        "override"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs",
+      "type": "file",
+      "name": "RuleValidation.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs",
+      "summary": "OpenTAP 插件开发示例：演示 TestStep 中的规则验证机制（Rules.Add），包括函数校验、匿名函数校验以及动态错误消息生成，最后在 Run 中调用 ThrowOnValidationError 阻止无效步骤执行。",
+      "tags": [
+        "example",
+        "test-step",
+        "validation",
+        "rules",
+        "plugin-development"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs:RuleValidation",
+      "type": "class",
+      "name": "RuleValidation",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs",
+      "lineRange": [
+        17,
+        71
+      ],
+      "summary": "规则校验示例 TestStep 类，展示三种验证规则注册方式（具名函数、Lambda 表达式、Lambda 动态消息），并在构造函数中预设所有规则失败以展示验证行为。",
+      "tags": [
+        "test-step",
+        "validation",
+        "validating-object",
+        "rules"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs:RuleValidation",
+      "type": "function",
+      "name": "RuleValidation",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs",
+      "lineRange": [
+        30,
+        51
+      ],
+      "summary": "RuleValidation 构造函数，通过 Rules.Add 注册三条验证规则，演示具名函数、固定消息 Lambda 和动态消息 Lambda 三种校验模式。",
+      "tags": [
+        "constructor",
+        "validation",
+        "rules-setup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs",
+      "lineRange": [
+        66,
+        70
+      ],
+      "summary": "Run 方法，调用 ThrowOnValidationError(true) 在当前值验证失败时阻止步骤执行。",
+      "tags": [
+        "test-step",
+        "validation",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/BuildTestPlan.Api.csproj",
+      "type": "config",
+      "name": "BuildTestPlan.Api.csproj",
+      "filePath": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/BuildTestPlan.Api.csproj",
+      "summary": "BuildTestPlan 示例的 C# 项目配置文件，输出类型为 Exe，使用 OpenTAP 包引用（PackageReference 和 OpenTapPackageReference），支持 Debug/Release/Debug CE 配置。",
+      "tags": [
+        "configuration",
+        "csproj",
+        "build-system",
+        "example"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs",
+      "type": "file",
+      "name": "Program.cs",
+      "filePath": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs",
+      "summary": "BuildTestPlan 示例入口 Program：通过 OpenTAP API 以编程方式构建 TestPlan（添加 DelayStep、SequenceStep、LogStep），设置 ResultListener 并执行、保存 TestPlan。",
+      "tags": [
+        "example",
+        "entry-point",
+        "test-plan",
+        "api-usage",
+        "programmatic-build"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs:Program",
+      "type": "class",
+      "name": "Program",
+      "filePath": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs",
+      "lineRange": [
+        25,
+        92
+      ],
+      "summary": "BuildTestPlan 示例程序主类，包含 Main 入口点和 AssemblyDirectory 静态属性。",
+      "tags": [
+        "entry-point",
+        "example"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs:Main",
+      "type": "function",
+      "name": "Main",
+      "filePath": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs",
+      "lineRange": [
+        27,
+        80
+      ],
+      "summary": "主入口方法：演示通过 API 搜索插件、初始化日志、构建 TestPlan（包含 DelayStep、SequenceStep、LogStep）、添加 ResultListener、执行 TestPlan 并重命名会话日志的完整流程。",
+      "tags": [
+        "entry-point",
+        "test-plan",
+        "api-usage",
+        "orchestration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Properties/AssemblyInfo.cs",
+      "summary": "BuildTestPlan.Api 的程序集信息文件，定义 AssemblyTitle、AssemblyVersion（1.0.0.0）、GUID 和 COM 可见性等标准元数据。",
+      "tags": [
+        "assembly-info",
+        "metadata",
+        "boilerplate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs",
+      "type": "file",
+      "name": "Program.cs",
+      "filePath": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs",
+      "summary": "RunTestPlan 示例入口 Program：通过 OpenTAP API 加载已有的 .TapPlan 文件并执行，展示 TestPlan.Load 和执行流程，以及如何使用 Verdict 属性获取测试结果判定。",
+      "tags": [
+        "example",
+        "entry-point",
+        "test-plan",
+        "api-usage",
+        "load-and-run"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs:Program",
+      "type": "class",
+      "name": "Program",
+      "filePath": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs",
+      "lineRange": [
+        20,
+        82
+      ],
+      "summary": "RunTestPlan 示例程序主类，包含 Main 入口方法。",
+      "tags": [
+        "entry-point",
+        "example"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs:Main",
+      "type": "function",
+      "name": "Main",
+      "filePath": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs",
+      "lineRange": [
+        26,
+        81
+      ],
+      "summary": "主入口方法：通过命令行参数获取 .TapPlan 文件路径，执行 PluginManager.SearchAsync、SessionLogs.Initialize 初始化，调用 TestPlan.Load 加载并执行 TestPlan，输出测试判定结果。",
+      "tags": [
+        "entry-point",
+        "test-plan",
+        "api-usage",
+        "load-execute"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/Properties/AssemblyInfo.cs",
+      "summary": "RunTestPlan.Api 的程序集信息文件，定义 AssemblyTitle、AssemblyVersion（1.0.0.0）、GUID 和 COM 可见性等标准元数据。",
+      "tags": [
+        "assembly-info",
+        "metadata",
+        "boilerplate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/Examples/TestPlanExecution/RunTestPlan.Api/RunTestPlan.Api.csproj",
+      "type": "config",
+      "name": "RunTestPlan.Api.csproj",
+      "filePath": "sdk/Examples/TestPlanExecution/RunTestPlan.Api/RunTestPlan.Api.csproj",
+      "summary": "RunTestPlan 示例的 C# 项目配置文件，输出类型为 Exe，引用 OpenTAP NuGet 包，支持 Debug/Release/Debug CE 配置。",
+      "tags": [
+        "configuration",
+        "csproj",
+        "build-system",
+        "example"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "type": "file",
+      "name": "AddAssemblyReferencesFromPackageTask.cs",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "summary": "MSBuild Custom Task：从 OpenTAP Package 定义中提取程序集引用并添加到项目文件中。核心逻辑包括 Glob 模式匹配、Package 定义文件解析、.NET 程序集验证以及输出目标的 XML 生成。",
+      "tags": [
+        "msbuild-task",
+        "package-reference",
+        "glob-pattern",
+        "assembly-resolution",
+        "build-system"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobWrapper",
+      "type": "class",
+      "name": "GlobWrapper",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        22,
+        65
+      ],
+      "summary": "Glob 包装器类，封装文件匹配模式并实现 IComparable，支持按照字面量和通配符规则对 Glob 进行排序。",
+      "tags": [
+        "glob",
+        "pattern-matching",
+        "icomparable",
+        "wrapper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:CompareTo",
+      "type": "function",
+      "name": "CompareTo",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        37,
+        64
+      ],
+      "summary": "GlobWrapper 的排序比较方法，按字面量优先、特殊模式次序、Token 长度和 Include 标志进行多级排序。",
+      "tags": [
+        "icomparable",
+        "sorting",
+        "comparison",
+        "glob"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobTask",
+      "type": "class",
+      "name": "GlobTask",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        67,
+        147
+      ],
+      "summary": "Glob 任务类，管理单个 Package 的程序集引用 Glob 匹配规则集合，支持 Include/Exclude 模式解析和文件包含判断。",
+      "tags": [
+        "glob",
+        "pattern-matching",
+        "task-item",
+        "msbuild"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Parse",
+      "type": "function",
+      "name": "Parse",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        75,
+        97
+      ],
+      "summary": "从 MSBuild TaskItem 数组解析 GlobTask 列表，提取 Include/Exclude 子模式并创建 GlobTask 实例。",
+      "tags": [
+        "parsing",
+        "msbuild",
+        "task-item",
+        "glob-pattern"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobTask",
+      "type": "function",
+      "name": "GlobTask",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        108,
+        122
+      ],
+      "summary": "GlobTask 构造函数，从 MSBuild 元数据中提取 Package 名称、Glob 模式等配置并初始化 GlobWrapper 列表和排序。",
+      "tags": [
+        "constructor",
+        "glob",
+        "msbuild",
+        "pattern-initialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Includes",
+      "type": "function",
+      "name": "Includes",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        124,
+        146
+      ],
+      "summary": "判断给定文件是否匹配当前 GlobTask 的 Include/Exclude 模式，并在出现歧义匹配时记录错误日志。",
+      "tags": [
+        "glob-matching",
+        "pattern-filter",
+        "error-logging"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:AddAssemblyReferencesFromPackage",
+      "type": "class",
+      "name": "AddAssemblyReferencesFromPackage",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        152,
+        445
+      ],
+      "summary": "MSBuild Custom Task 主类：通过 Glob 模式从 Package 安装目录中匹配 DLL 文件，解析 .NET 程序集引用并生成 MSBuild ItemGroup XML 输出。包含 Execute、HandlePackage、IsDotNetAssembly 等核心方法。",
+      "tags": [
+        "msbuild-task",
+        "package-resolution",
+        "assembly-reference",
+        "custom-task"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GetLineNumber",
+      "type": "function",
+      "name": "GetLineNumber",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        178,
+        222
+      ],
+      "summary": "从 MSBuild ItemGroup 元数据或 XML 源文件中提取指定 TaskItem 的行号，用于日志和错误定位。",
+      "tags": [
+        "line-number",
+        "xml-parsing",
+        "metadata"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Write",
+      "type": "function",
+      "name": "Write",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        242,
+        252
+      ],
+      "summary": "将生成的 MSBuild ItemGroup XML 结果写入目标项目文件（在现有根元素开始标签后插入）。",
+      "tags": [
+        "xml-writing",
+        "msbuild",
+        "file-output"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:WriteItemGroup",
+      "type": "function",
+      "name": "WriteItemGroup",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        261,
+        286
+      ],
+      "summary": "为匹配到的程序集列表生成 MSBuild Reference ItemGroup XML 片段，可设置为私有引用（Private=false）。",
+      "tags": [
+        "xml-generation",
+        "msbuild",
+        "itemgroup",
+        "assembly-reference"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        288,
+        367
+      ],
+      "summary": "MSBuild Task 的主执行入口：初始化 BuildVariableExpander，解析 GlobTask 列表，对每个 GlobTask 调用 HandlePackage 处理匹配的程序集，去重后输出最终引用到写入文件。",
+      "tags": [
+        "msbuild-task",
+        "execute",
+        "orchestration",
+        "build-system"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:HandlePackage",
+      "type": "function",
+      "name": "HandlePackage",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        369,
+        430
+      ],
+      "summary": "处理单个 Package：从 package.xml 中提取 DLL 文件列表，通过 Glob 模式过滤匹配的程序集，验证 .NET 程序集身份后将合格的引用添加到结果中。",
+      "tags": [
+        "package-handling",
+        "xml-parsing",
+        "assembly-resolution",
+        "glob-filtering"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:IsDotNetAssembly",
+      "type": "function",
+      "name": "IsDotNetAssembly",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "lineRange": [
+        432,
+        444
+      ],
+      "summary": "使用 AssemblyName.GetAssemblyName 验证给定文件是否为有效的 .NET 程序集，异常时记录调试日志。",
+      "tags": [
+        "validation",
+        "dotnet-assembly",
+        "assembly-name"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs",
+      "type": "file",
+      "name": "BuildVariableExpander.cs",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs",
+      "summary": "MSBuild 构建变量展开器：解析 $(VarName) 模式变量，优先从 MSBuild ProjectInstance 属性中展开，其次从环境变量中取值。同时提供 XElement 扩展方法用于解析 Package 引用元素。",
+      "tags": [
+        "msbuild",
+        "variable-expansion",
+        "extension-methods",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs:BuildVariableExpander",
+      "type": "class",
+      "name": "BuildVariableExpander",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs",
+      "lineRange": [
+        35,
+        63
+      ],
+      "summary": "构建变量展开器，通过正则匹配 $(Var) 模式从 MSBuild 项目属性和环境变量中展开变量值。",
+      "tags": [
+        "msbuild",
+        "variable-expansion",
+        "regex"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs:ExpandBuildVariables",
+      "type": "function",
+      "name": "ExpandBuildVariables",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs",
+      "lineRange": [
+        46,
+        62
+      ],
+      "summary": "核心展开方法：通过正则匹配 $(...) 模式，先查 ProjectInstance 属性再查环境变量，逐个替换变量占位符。",
+      "tags": [
+        "variable-expansion",
+        "regex",
+        "msbuild-property",
+        "environment-variable"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "type": "file",
+      "name": "CalculateVersion.cs",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "summary": "MSBuild Custom Task：自动计算项目版本号。支持 git describe 版本计算、csproj/sln 变更检测、手动版本输入回退，输出短版本（SemVer）和长版本（含 git commit 信息/时间戳）。",
+      "tags": [
+        "msbuild-task",
+        "versioning",
+        "git-describe",
+        "semver",
+        "build-system"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:CalculateVersion",
+      "type": "class",
+      "name": "CalculateVersion",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "lineRange": [
+        16,
+        268
+      ],
+      "summary": "版本计算 MSBuild Task 类，综合 git describe、XML 解析、文件时间戳和正则匹配多种策略自动推导 SemVer 版本号。",
+      "tags": [
+        "msbuild-task",
+        "versioning",
+        "git",
+        "semver"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:tryParseVersion",
+      "type": "function",
+      "name": "tryParseVersion",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "lineRange": [
+        132,
+        145
+      ],
+      "summary": "尝试从字符串解析语义化版本号（SemVer），匹配 major.minor.patch[-prerelease] 格式。",
+      "tags": [
+        "version-parsing",
+        "semver",
+        "regex"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:tryCalculateGitversion",
+      "type": "function",
+      "name": "tryCalculateGitversion",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "lineRange": [
+        147,
+        204
+      ],
+      "summary": "核心版本计算逻辑：使用 git describe 获取 Git 版本标签，结合项目文件变更检测决定是否增加版本号并生成预发布标识。",
+      "tags": [
+        "git-describe",
+        "version-calculation",
+        "semver",
+        "core-logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "lineRange": [
+        206,
+        262
+      ],
+      "summary": "MSBuild Task 执行入口：优先使用 InputVersion，若无则调用 git describe 计算，最后的回退方案使用文件修改时间生成时间戳版本。",
+      "tags": [
+        "msbuild-task",
+        "execute",
+        "versioning",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "type": "file",
+      "name": "InstallOpenTapPackages.cs",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "summary": "MSBuild Custom Task：在构建过程中安装 OpenTAP 包。处理认证令牌、解析存储库、调用 ImageInstaller 安装包、更新标记文件以跟踪已安装版本。",
+      "tags": [
+        "msbuild-task",
+        "package-installation",
+        "nuget",
+        "image-deployment",
+        "build-system"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:InstallOpenTapPackages",
+      "type": "class",
+      "name": "InstallOpenTapPackages",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "lineRange": [
+        18,
+        317
+      ],
+      "summary": "OpenTAP 包安装 MSBuild Task 类，协调认证令牌处理、包安装和标记文件更新，支持 NuGet 源和本地存储库。",
+      "tags": [
+        "msbuild-task",
+        "package-installation",
+        "image-deployment"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:GetLineNum",
+      "type": "function",
+      "name": "GetLineNum",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "lineRange": [
+        70,
+        108
+      ],
+      "summary": "从 MSBuild 项目 XML 中提取给定 PackageReference 元素的行号，支持多级回退策略（元数据、csproj 解析、ParentPackageReference 逻辑）。",
+      "tags": [
+        "line-number",
+        "xml-parsing",
+        "package-reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "lineRange": [
+        114,
+        121
+      ],
+      "summary": "MSBuild Task 执行入口：实例化 OpenTapImageInstaller 并委托 InstallImage 完成包安装。",
+      "tags": [
+        "msbuild-task",
+        "execute",
+        "orchestration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:ProcessAuthTokens",
+      "type": "function",
+      "name": "ProcessAuthTokens",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "lineRange": [
+        132,
+        210
+      ],
+      "summary": "处理认证令牌：解析 Repository 元素中的 URL 和 Token 信息，将认证凭据注入 ImageSpecifier 的 Repositories 字典中，支持拼接 Token URL。",
+      "tags": [
+        "authentication",
+        "token-processing",
+        "repository",
+        "nuget"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:InstallPackages",
+      "type": "function",
+      "name": "InstallPackages",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "lineRange": [
+        247,
+        279
+      ],
+      "summary": "实际执行包安装：构造 ImageSpecifier 数组，处理认证令牌，调用 ImageDeployer.Install 安装所有指定的包。",
+      "tags": [
+        "package-installation",
+        "image-specifier",
+        "deployment"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:OnInstallerLogMessage",
+      "type": "function",
+      "name": "OnInstallerLogMessage",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "lineRange": [
+        281,
+        316
+      ],
+      "summary": "安装器日志回调处理：将安装过程中的日志消息按级别分类转发到 MSBuild 日志系统，支持 Debug/Information/Warning/Error 四级映射。",
+      "tags": [
+        "logging",
+        "callback",
+        "msbuild-log",
+        "event-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.MSBuild/OpenTap.Sdk.MSBuild.csproj",
+      "type": "config",
+      "name": "OpenTap.Sdk.MSBuild.csproj",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/OpenTap.Sdk.MSBuild.csproj",
+      "summary": "OpenTAP SDK MSBuild 工具的 C# 项目配置文件，目标框架 netstandard2.0，引用 Microsoft.Build.Utilities.Core、DotNet.Glob 等 NuGet 包，并包含 Tap.Engine 和 Tap.Package 的项目引用。",
+      "tags": [
+        "configuration",
+        "csproj",
+        "build-system",
+        "msbuild",
+        "netstandard"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:ReadOnlyListElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:GetHashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:ReadOnlyListExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:ReadOnlyListElement",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:ReadOnlyListElement",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:GetHashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:ReadOnlyListExample",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/ReadOnlyListExample.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs:RuleValidation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs:RuleValidation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs:RuleValidation",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs:RuleValidation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs:RuleValidation",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Step Settings/RuleValidation.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "config:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/BuildTestPlan.Api.csproj",
+      "target": "file:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs",
+      "target": "class:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs:Program",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs",
+      "target": "function:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs:Main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs:Program",
+      "target": "function:sdk/Examples/TestPlanExecution/BuildTestPlan.Api/Program.cs:Main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs",
+      "target": "class:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs:Program",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs",
+      "target": "function:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs:Main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs:Program",
+      "target": "function:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs:Main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "config:sdk/Examples/TestPlanExecution/RunTestPlan.Api/RunTestPlan.Api.csproj",
+      "target": "file:sdk/Examples/TestPlanExecution/RunTestPlan.Api/Program.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobWrapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:CompareTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Includes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:AddAssemblyReferencesFromPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GetLineNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:WriteItemGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:HandlePackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:IsDotNetAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobWrapper",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:CompareTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobTask",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobTask",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GlobTask",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Includes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:AddAssemblyReferencesFromPackage",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:GetLineNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:AddAssemblyReferencesFromPackage",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:AddAssemblyReferencesFromPackage",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:WriteItemGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:AddAssemblyReferencesFromPackage",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:AddAssemblyReferencesFromPackage",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:HandlePackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:AddAssemblyReferencesFromPackage",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:IsDotNetAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs:BuildVariableExpander",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs:ExpandBuildVariables",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs:BuildVariableExpander",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs:ExpandBuildVariables",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:CalculateVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:tryParseVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:tryCalculateGitversion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:CalculateVersion",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:tryParseVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:CalculateVersion",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:tryCalculateGitversion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:CalculateVersion",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:InstallOpenTapPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:GetLineNum",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:ProcessAuthTokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:InstallPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:OnInstallerLogMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:InstallOpenTapPackages",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:GetLineNum",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:InstallOpenTapPackages",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:InstallOpenTapPackages",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:ProcessAuthTokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:InstallOpenTapPackages",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:InstallPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:InstallOpenTapPackages",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:OnInstallerLogMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "config:sdk/OpenTap.Sdk.MSBuild/OpenTap.Sdk.MSBuild.csproj",
+      "target": "file:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/OpenTap.Sdk.MSBuild/OpenTap.Sdk.MSBuild.csproj",
+      "target": "file:sdk/OpenTap.Sdk.MSBuild/CalculateVersion.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/OpenTap.Sdk.MSBuild/OpenTap.Sdk.MSBuild.csproj",
+      "target": "file:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/OpenTap.Sdk.MSBuild/OpenTap.Sdk.MSBuild.csproj",
+      "target": "file:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Execute",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/BuildVariableExpander.cs:BuildVariableExpander",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Execute",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:HandlePackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Execute",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/AddAssemblyReferencesFromPackageTask.cs:Write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:sdk/OpenTap.Sdk.MSBuild/InstallOpenTapPackages.cs:Execute",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:OpenTapImageInstaller",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

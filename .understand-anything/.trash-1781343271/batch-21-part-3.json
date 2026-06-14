@@ -1,0 +1,1680 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/ParameterTests.cs",
+      "type": "file",
+      "name": "ParameterTests.cs",
+      "filePath": "Engine.UnitTests/ParameterTests.cs",
+      "summary": "测试参数系统的单元测试，覆盖多层参数合并、MemberData 缓存一致性、重叠参数写入及参数移除后的错误处理。",
+      "tags": [
+        "test",
+        "parameter",
+        "member-data",
+        "cache"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/ParameterTests.cs:ParameterTests",
+      "type": "class",
+      "name": "ParameterTests",
+      "filePath": "Engine.UnitTests/ParameterTests.cs",
+      "lineRange": [
+        7,
+        231
+      ],
+      "summary": "ParameterTests NUnit 测试类，包含 5 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ParameterTests.cs:TestMultiLevelParameters",
+      "type": "function",
+      "name": "TestMultiLevelParameters",
+      "filePath": "Engine.UnitTests/ParameterTests.cs",
+      "lineRange": [
+        10,
+        31
+      ],
+      "summary": "TestMultiLevelParameters 单元测试方法，验证 MultiLevelParameters 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ParameterTests.cs:TestMemberDataCacheConsistency",
+      "type": "function",
+      "name": "TestMemberDataCacheConsistency",
+      "filePath": "Engine.UnitTests/ParameterTests.cs",
+      "lineRange": [
+        33,
+        64
+      ],
+      "summary": "TestMemberDataCacheConsistency 单元测试方法，验证 MemberDataCacheConsistency 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ParameterTests.cs:TestOverlappingMergedParameterWriting",
+      "type": "function",
+      "name": "TestOverlappingMergedParameterWriting",
+      "filePath": "Engine.UnitTests/ParameterTests.cs",
+      "lineRange": [
+        67,
+        165
+      ],
+      "summary": "TestOverlappingMergedParameterWriting 单元测试方法，验证 OverlappingMergedParameterWriting 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ParameterTests.cs:TestRemoveParameter",
+      "type": "function",
+      "name": "TestRemoveParameter",
+      "filePath": "Engine.UnitTests/ParameterTests.cs",
+      "lineRange": [
+        167,
+        183
+      ],
+      "summary": "TestRemoveParameter 单元测试方法，验证 RemoveParameter 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ParameterTests.cs:TestErrorsAfterRemovingParameter",
+      "type": "function",
+      "name": "TestErrorsAfterRemovingParameter",
+      "filePath": "Engine.UnitTests/ParameterTests.cs",
+      "lineRange": [
+        197,
+        230
+      ],
+      "summary": "TestErrorsAfterRemovingParameter 单元测试方法，验证 ErrorsAfterRemovingParameter 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "type": "file",
+      "name": "PlanRunMonitorTests.cs",
+      "filePath": "Engine.UnitTests/PlanRunMonitorTests.cs",
+      "summary": "测试 PlanRunMonitor 的单元测试，验证在监控器中添加 ResultListener、资源管理异常处理以及计划运行监控的通用行为。",
+      "tags": [
+        "test",
+        "plan-run-monitor",
+        "result-listener",
+        "resource"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/PlanRunMonitorTests.cs:PlanRunMonitorTests",
+      "type": "class",
+      "name": "PlanRunMonitorTests",
+      "filePath": "Engine.UnitTests/PlanRunMonitorTests.cs",
+      "lineRange": [
+        10,
+        169
+      ],
+      "summary": "PlanRunMonitorTests NUnit 测试类，包含 4 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/PlanRunMonitorTests.cs:TestAddResultListenerInPlanRunMonitor",
+      "type": "function",
+      "name": "TestAddResultListenerInPlanRunMonitor",
+      "filePath": "Engine.UnitTests/PlanRunMonitorTests.cs",
+      "lineRange": [
+        41,
+        59
+      ],
+      "summary": "TestAddResultListenerInPlanRunMonitor 单元测试方法，验证 AddResultListenerInPlanRunMonitor 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PlanRunMonitorTests.cs:TestNoResourcesOpenedOnRunMonitorThrow",
+      "type": "function",
+      "name": "TestNoResourcesOpenedOnRunMonitorThrow",
+      "filePath": "Engine.UnitTests/PlanRunMonitorTests.cs",
+      "lineRange": [
+        80,
+        106
+      ],
+      "summary": "TestNoResourcesOpenedOnRunMonitorThrow 单元测试方法，验证 NoResourcesOpenedOnRunMonitorThrow 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PlanRunMonitorTests.cs:PlanRunMonitorGeneralTest",
+      "type": "function",
+      "name": "PlanRunMonitorGeneralTest",
+      "filePath": "Engine.UnitTests/PlanRunMonitorTests.cs",
+      "lineRange": [
+        108,
+        135
+      ],
+      "summary": "PlanRunMonitorGeneralTest 单元测试方法，验证 PlanRunMonitorGeneral 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PlanRunMonitorTests.cs:PlanRunMonitorOpenTestTest",
+      "type": "function",
+      "name": "PlanRunMonitorOpenTestTest",
+      "filePath": "Engine.UnitTests/PlanRunMonitorTests.cs",
+      "lineRange": [
+        137,
+        168
+      ],
+      "summary": "PlanRunMonitorOpenTestTest 单元测试方法，验证 PlanRunMonitorOpen 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "type": "file",
+      "name": "PluginManagerTest.cs",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "summary": "PluginManager 的综合测试，覆盖插件搜索、动态加载、程序集版本解析、同程序集多次加载、插件初始化以及线程安全的 Memorizer 缓存测试。",
+      "tags": [
+        "test",
+        "plugin-manager",
+        "assembly-loading",
+        "caching",
+        "thread-safety"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/PluginManagerTest.cs:PluginManagerTest",
+      "type": "class",
+      "name": "PluginManagerTest",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        28,
+        490
+      ],
+      "summary": "PluginManagerTest NUnit 测试类，包含 19 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:SearchAsyncTest",
+      "type": "function",
+      "name": "SearchAsyncTest",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        34,
+        40
+      ],
+      "summary": "SearchAsyncTest 单元测试方法，验证 SearchAsync 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:DeleteFile",
+      "type": "function",
+      "name": "DeleteFile",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        42,
+        58
+      ],
+      "summary": "DeleteFile 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:GeneratePluginAssembly",
+      "type": "function",
+      "name": "GeneratePluginAssembly",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        59,
+        86
+      ],
+      "summary": "GeneratePluginAssembly 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:ExtensionTest",
+      "type": "function",
+      "name": "ExtensionTest",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        125,
+        136
+      ],
+      "summary": "ExtensionTest 单元测试方法，验证 Extension 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:SameAssemblyTwiceLoaded",
+      "type": "function",
+      "name": "SameAssemblyTwiceLoaded",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        141,
+        171
+      ],
+      "summary": "SameAssemblyTwiceLoaded 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:GenerateAssemblyWithVersion",
+      "type": "function",
+      "name": "GenerateAssemblyWithVersion",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        173,
+        186
+      ],
+      "summary": "GenerateAssemblyWithVersion 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:SameAssemblyDifferentVersions",
+      "type": "function",
+      "name": "SameAssemblyDifferentVersions",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        188,
+        201
+      ],
+      "summary": "SameAssemblyDifferentVersions 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:SameAssemblyDifferentVersions3",
+      "type": "function",
+      "name": "SameAssemblyDifferentVersions3",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        203,
+        217
+      ],
+      "summary": "SameAssemblyDifferentVersions3 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:ReflectionTest",
+      "type": "function",
+      "name": "ReflectionTest",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        228,
+        240
+      ],
+      "summary": "ReflectionTest 单元测试方法，验证 Reflection 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:DynamicLoading",
+      "type": "function",
+      "name": "DynamicLoading",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        245,
+        281
+      ],
+      "summary": "DynamicLoading 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:MemorizerThreadTest",
+      "type": "function",
+      "name": "MemorizerThreadTest",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        283,
+        312
+      ],
+      "summary": "MemorizerThreadTest 单元测试方法，验证 MemorizerThread 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:MemorizerTest",
+      "type": "function",
+      "name": "MemorizerTest",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        320,
+        345
+      ],
+      "summary": "MemorizerTest 单元测试方法，验证 Memorizer 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:TestLoadSequence",
+      "type": "function",
+      "name": "TestLoadSequence",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        369,
+        380
+      ],
+      "summary": "TestLoadSequence 单元测试方法，验证 LoadSequence 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:TestTapPluginTypeAttribute",
+      "type": "function",
+      "name": "TestTapPluginTypeAttribute",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        382,
+        387
+      ],
+      "summary": "TestTapPluginTypeAttribute 单元测试方法，验证 TapPluginTypeAttribute 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:SameNamedTypes",
+      "type": "function",
+      "name": "SameNamedTypes",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        394,
+        399
+      ],
+      "summary": "SameNamedTypes 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:RfConnectionDisplayAttributeTest",
+      "type": "function",
+      "name": "RfConnectionDisplayAttributeTest",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        401,
+        412
+      ],
+      "summary": "RfConnectionDisplayAttributeTest 单元测试方法，验证 RfConnectionDisplayAttribute 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:ResolveAssemblyVersions",
+      "type": "function",
+      "name": "ResolveAssemblyVersions",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        414,
+        458
+      ],
+      "summary": "ResolveAssemblyVersions 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/PluginManagerTest.cs:PluginInitializerTest",
+      "type": "function",
+      "name": "PluginInitializerTest",
+      "filePath": "Engine.UnitTests/PluginManagerTest.cs",
+      "lineRange": [
+        460,
+        489
+      ],
+      "summary": "PluginInitializerTest 单元测试方法，验证 PluginInitializer 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "Engine.UnitTests/Properties/AssemblyInfo.cs",
+      "summary": "Engine.UnitTests 程序集的元数据信息文件，定义程序集标题和版本信息。",
+      "tags": [
+        "assembly-info",
+        "metadata",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "type": "file",
+      "name": "ResourceDependencyTests.cs",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "summary": "资源依赖关系的综合测试，覆盖循环引用检测、丢失引用处理、被忽略资源的 null 引用、EnabledIf 条件依赖以及自隐藏循环资源场景。",
+      "tags": [
+        "test",
+        "resource",
+        "dependency",
+        "circular-reference"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ResourceDependencyTests.cs:ResourceDependencyTests",
+      "type": "class",
+      "name": "ResourceDependencyTests",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        12,
+        424
+      ],
+      "summary": "ResourceDependencyTests NUnit 测试类，包含 10 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceDependencyTests.cs:CircularResourceReference",
+      "type": "function",
+      "name": "CircularResourceReference",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        101,
+        132
+      ],
+      "summary": "CircularResourceReference 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceDependencyTests.cs:LostReferenceStep",
+      "type": "function",
+      "name": "LostReferenceStep",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        134,
+        164
+      ],
+      "summary": "LostReferenceStep 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceDependencyTests.cs:CircularResource2Reference",
+      "type": "function",
+      "name": "CircularResource2Reference",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        166,
+        189
+      ],
+      "summary": "CircularResource2Reference 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceDependencyTests.cs:DependentResourceNull",
+      "type": "function",
+      "name": "DependentResourceNull",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        191,
+        217
+      ],
+      "summary": "DependentResourceNull 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceDependencyTests.cs:DependentEnabledTest",
+      "type": "function",
+      "name": "DependentEnabledTest",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        219,
+        261
+      ],
+      "summary": "DependentEnabledTest 单元测试方法，验证 DependentEnabled 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceDependencyTests.cs:ResourceStepTest",
+      "type": "function",
+      "name": "ResourceStepTest",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        290,
+        305
+      ],
+      "summary": "ResourceStepTest 单元测试方法，验证 ResourceStep 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceDependencyTests.cs:ResourceStepRefTest",
+      "type": "function",
+      "name": "ResourceStepRefTest",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        307,
+        326
+      ],
+      "summary": "ResourceStepRefTest 单元测试方法，验证 ResourceStepRef 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceDependencyTests.cs:IgnoredResource",
+      "type": "function",
+      "name": "IgnoredResource",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        339,
+        357
+      ],
+      "summary": "IgnoredResource 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceDependencyTests.cs:TestMethodResourceSettingNullReference",
+      "type": "function",
+      "name": "TestMethodResourceSettingNullReference",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        359,
+        386
+      ],
+      "summary": "TestMethodResourceSettingNullReference 单元测试方法，验证 MethodResourceSettingNullReference 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceDependencyTests.cs:SelfHiddenCyclicResourceTest",
+      "type": "function",
+      "name": "SelfHiddenCyclicResourceTest",
+      "filePath": "Engine.UnitTests/ResourceDependencyTests.cs",
+      "lineRange": [
+        413,
+        422
+      ],
+      "summary": "SelfHiddenCyclicResourceTest 单元测试方法，验证 SelfHiddenCyclicResource 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ResourceTest.cs",
+      "type": "file",
+      "name": "ResourceTest.cs",
+      "filePath": "Engine.UnitTests/ResourceTest.cs",
+      "summary": "资源（Resource）系统的单元测试，验证资源打开/关闭生命周期、慢速仪器打开超时处理、资源参数暴露以及 EnabledIf 条件下的资源警告。",
+      "tags": [
+        "test",
+        "resource",
+        "instrument",
+        "lifecycle"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ResourceTest.cs:TestResource",
+      "type": "class",
+      "name": "TestResource",
+      "filePath": "Engine.UnitTests/ResourceTest.cs",
+      "lineRange": [
+        13,
+        35
+      ],
+      "summary": "TestResource 测试辅助类，用于单元测试中的类型模拟和功能验证。",
+      "tags": [
+        "test-helper",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/ResourceTest.cs:ResourceTest",
+      "type": "class",
+      "name": "ResourceTest",
+      "filePath": "Engine.UnitTests/ResourceTest.cs",
+      "lineRange": [
+        36,
+        389
+      ],
+      "summary": "ResourceTest NUnit 测试类，包含 4 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceTest.cs:TestNoConnectResource",
+      "type": "function",
+      "name": "TestNoConnectResource",
+      "filePath": "Engine.UnitTests/ResourceTest.cs",
+      "lineRange": [
+        57,
+        73
+      ],
+      "summary": "TestNoConnectResource 单元测试方法，验证 NoConnectResource 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceTest.cs:SlowOpenInstrumentTest",
+      "type": "function",
+      "name": "SlowOpenInstrumentTest",
+      "filePath": "Engine.UnitTests/ResourceTest.cs",
+      "lineRange": [
+        122,
+        143
+      ],
+      "summary": "SlowOpenInstrumentTest 单元测试方法，验证 SlowOpenInstrument 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceTest.cs:ResourceParameterOpenTest",
+      "type": "function",
+      "name": "ResourceParameterOpenTest",
+      "filePath": "Engine.UnitTests/ResourceTest.cs",
+      "lineRange": [
+        146,
+        176
+      ],
+      "summary": "ResourceParameterOpenTest 单元测试方法，验证 ResourceParameterOpen 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResourceTest.cs:EnabledIfResourceWarningTest",
+      "type": "function",
+      "name": "EnabledIfResourceWarningTest",
+      "filePath": "Engine.UnitTests/ResourceTest.cs",
+      "lineRange": [
+        239,
+        388
+      ],
+      "summary": "EnabledIfResourceWarningTest 单元测试方法，验证 EnabledIfResourceWarning 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "type": "file",
+      "name": "PlanRunCollectorListener.cs",
+      "filePath": "Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "summary": "测试辅助 PlanRunCollectorListener，收集并存储 TestPlanRun 和 TestStepRun 事件，用于在测试中验证计划运行的事件序列和状态。",
+      "tags": [
+        "utility",
+        "result-listener",
+        "test-helper",
+        "event-collector"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "不是测试类，而是测试辅助 Listener，用于记录计划运行中的所有事件以便断言。"
+    },
+    {
+      "id": "class:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:PlanRunCollectorListener",
+      "type": "class",
+      "name": "PlanRunCollectorListener",
+      "filePath": "Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "lineRange": [
+        8,
+        77
+      ],
+      "summary": "PlanRunCollectorListener 结果监听器，用于在测试中收集和验证测试运行事件。",
+      "tags": [
+        "listener",
+        "result-listener",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestPlanRunStart",
+      "type": "function",
+      "name": "OnTestPlanRunStart",
+      "filePath": "Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "lineRange": [
+        21,
+        25
+      ],
+      "summary": "OnTestPlanRunStart 单元测试方法，验证 OnPlanRunStart 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestPlanRunCompleted",
+      "type": "function",
+      "name": "OnTestPlanRunCompleted",
+      "filePath": "Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "lineRange": [
+        27,
+        31
+      ],
+      "summary": "OnTestPlanRunCompleted 单元测试方法，验证 OnPlanRunCompleted 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestStepRunStart",
+      "type": "function",
+      "name": "OnTestStepRunStart",
+      "filePath": "Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "lineRange": [
+        33,
+        37
+      ],
+      "summary": "OnTestStepRunStart 单元测试方法，验证 OnStepRunStart 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestStepRunCompleted",
+      "type": "function",
+      "name": "OnTestStepRunCompleted",
+      "filePath": "Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "lineRange": [
+        39,
+        42
+      ],
+      "summary": "OnTestStepRunCompleted 单元测试方法，验证 OnStepRunCompleted 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnResultPublished",
+      "type": "function",
+      "name": "OnResultPublished",
+      "filePath": "Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "lineRange": [
+        68,
+        76
+      ],
+      "summary": "OnResultPublished 事件处理方法，响应 ResultPublished 事件。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "class:Engine.UnitTests/ParameterTests.cs:ParameterTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "class:Engine.UnitTests/ParameterTests.cs:ParameterTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "function:Engine.UnitTests/ParameterTests.cs:TestMultiLevelParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "function:Engine.UnitTests/ParameterTests.cs:TestMultiLevelParameters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "function:Engine.UnitTests/ParameterTests.cs:TestMemberDataCacheConsistency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "function:Engine.UnitTests/ParameterTests.cs:TestMemberDataCacheConsistency",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "function:Engine.UnitTests/ParameterTests.cs:TestOverlappingMergedParameterWriting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "function:Engine.UnitTests/ParameterTests.cs:TestOverlappingMergedParameterWriting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "function:Engine.UnitTests/ParameterTests.cs:TestRemoveParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "function:Engine.UnitTests/ParameterTests.cs:TestRemoveParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "function:Engine.UnitTests/ParameterTests.cs:TestErrorsAfterRemovingParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ParameterTests.cs",
+      "target": "function:Engine.UnitTests/ParameterTests.cs:TestErrorsAfterRemovingParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "target": "class:Engine.UnitTests/PlanRunMonitorTests.cs:PlanRunMonitorTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "target": "class:Engine.UnitTests/PlanRunMonitorTests.cs:PlanRunMonitorTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "target": "function:Engine.UnitTests/PlanRunMonitorTests.cs:TestAddResultListenerInPlanRunMonitor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "target": "function:Engine.UnitTests/PlanRunMonitorTests.cs:TestAddResultListenerInPlanRunMonitor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "target": "function:Engine.UnitTests/PlanRunMonitorTests.cs:TestNoResourcesOpenedOnRunMonitorThrow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "target": "function:Engine.UnitTests/PlanRunMonitorTests.cs:TestNoResourcesOpenedOnRunMonitorThrow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "target": "function:Engine.UnitTests/PlanRunMonitorTests.cs:PlanRunMonitorGeneralTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "target": "function:Engine.UnitTests/PlanRunMonitorTests.cs:PlanRunMonitorGeneralTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "target": "function:Engine.UnitTests/PlanRunMonitorTests.cs:PlanRunMonitorOpenTestTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PlanRunMonitorTests.cs",
+      "target": "function:Engine.UnitTests/PlanRunMonitorTests.cs:PlanRunMonitorOpenTestTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "class:Engine.UnitTests/PluginManagerTest.cs:PluginManagerTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "class:Engine.UnitTests/PluginManagerTest.cs:PluginManagerTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:SearchAsyncTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:SearchAsyncTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:DeleteFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:GeneratePluginAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:ExtensionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:ExtensionTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:SameAssemblyTwiceLoaded",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:SameAssemblyTwiceLoaded",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:GenerateAssemblyWithVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:SameAssemblyDifferentVersions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:SameAssemblyDifferentVersions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:SameAssemblyDifferentVersions3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:SameAssemblyDifferentVersions3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:ReflectionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:ReflectionTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:DynamicLoading",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:DynamicLoading",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:MemorizerThreadTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:MemorizerThreadTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:MemorizerTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:MemorizerTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:TestLoadSequence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:TestLoadSequence",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:TestTapPluginTypeAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:TestTapPluginTypeAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:SameNamedTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:SameNamedTypes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:RfConnectionDisplayAttributeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:RfConnectionDisplayAttributeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:ResolveAssemblyVersions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:ResolveAssemblyVersions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:PluginInitializerTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/PluginManagerTest.cs",
+      "target": "function:Engine.UnitTests/PluginManagerTest.cs:PluginInitializerTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "class:Engine.UnitTests/ResourceDependencyTests.cs:ResourceDependencyTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "class:Engine.UnitTests/ResourceDependencyTests.cs:ResourceDependencyTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:CircularResourceReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:CircularResourceReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:LostReferenceStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:LostReferenceStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:CircularResource2Reference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:CircularResource2Reference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:DependentResourceNull",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:DependentResourceNull",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:DependentEnabledTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:DependentEnabledTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:ResourceStepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:ResourceStepTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:ResourceStepRefTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:ResourceStepRefTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:IgnoredResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:IgnoredResource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:TestMethodResourceSettingNullReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:TestMethodResourceSettingNullReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:SelfHiddenCyclicResourceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceDependencyTests.cs",
+      "target": "function:Engine.UnitTests/ResourceDependencyTests.cs:SelfHiddenCyclicResourceTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "class:Engine.UnitTests/ResourceTest.cs:TestResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "class:Engine.UnitTests/ResourceTest.cs:TestResource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "class:Engine.UnitTests/ResourceTest.cs:ResourceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "class:Engine.UnitTests/ResourceTest.cs:ResourceTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "function:Engine.UnitTests/ResourceTest.cs:TestNoConnectResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "function:Engine.UnitTests/ResourceTest.cs:TestNoConnectResource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "function:Engine.UnitTests/ResourceTest.cs:SlowOpenInstrumentTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "function:Engine.UnitTests/ResourceTest.cs:SlowOpenInstrumentTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "function:Engine.UnitTests/ResourceTest.cs:ResourceParameterOpenTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "function:Engine.UnitTests/ResourceTest.cs:ResourceParameterOpenTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "function:Engine.UnitTests/ResourceTest.cs:EnabledIfResourceWarningTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResourceTest.cs",
+      "target": "function:Engine.UnitTests/ResourceTest.cs:EnabledIfResourceWarningTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "class:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:PlanRunCollectorListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "class:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:PlanRunCollectorListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestPlanRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestPlanRunStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestPlanRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestPlanRunCompleted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestStepRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestStepRunStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestStepRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnTestStepRunCompleted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnResultPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs",
+      "target": "function:Engine.UnitTests/ResultListeners/PlanRunCollectorListener.cs:OnResultPublished",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

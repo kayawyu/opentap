@@ -1,0 +1,1127 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/IResource.cs",
+      "type": "file",
+      "name": "IResource.cs",
+      "filePath": "Engine/IResource.cs",
+      "summary": "定义资源的基础接口。IResource 提供 Open/Close 生命周期管理和 Name/IsConnected 属性；IEnabledResource 扩展了启用/禁用控制。",
+      "tags": [
+        "resource",
+        "interface",
+        "lifecycle-management"
+      ],
+      "complexity": "simple",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/IResource.cs:IResource",
+      "type": "class",
+      "name": "IResource",
+      "filePath": "Engine/IResource.cs",
+      "lineRange": [
+        13,
+        38
+      ],
+      "summary": "资源基础接口，定义 Open/Close 连接生命周期和 Name/IsConnected 状态属性，是 DUT、Instrument、ResultListener 等的根接口。",
+      "tags": [
+        "resource",
+        "interface",
+        "connection-lifecycle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResource.cs:IEnabledResource",
+      "type": "class",
+      "name": "IEnabledResource",
+      "filePath": "Engine/IResource.cs",
+      "lineRange": [
+        43,
+        49
+      ],
+      "summary": "可启用/禁用的资源接口，扩展 IResource 增加 IsEnabled 属性，目前主要用于 ResultListener。",
+      "tags": [
+        "resource",
+        "interface",
+        "enable-disable"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/IResultListener.cs",
+      "type": "file",
+      "name": "IResultListener.cs",
+      "filePath": "Engine/IResultListener.cs",
+      "summary": "定义测试结果监听接口。IResultListener 提供测试计划/步骤执行的完整生命周期回调；IExecutionListener 在此基础上增加执行变更通知。",
+      "tags": [
+        "result-listener",
+        "interface",
+        "test-execution",
+        "observer-pattern"
+      ],
+      "complexity": "moderate",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/IResultListener.cs:IResultListener",
+      "type": "class",
+      "name": "IResultListener",
+      "filePath": "Engine/IResultListener.cs",
+      "lineRange": [
+        12,
+        79
+      ],
+      "summary": "测试结果监听器接口，定义 OnTestPlanRunStart/Completed、OnTestStepRunStart/Completed、OnResultPublished 五个核心回调方法。",
+      "tags": [
+        "interface",
+        "result-listener",
+        "lifecycle-callback",
+        "test-execution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/IResultListener.cs:IExecutionListener",
+      "type": "class",
+      "name": "IExecutionListener",
+      "filePath": "Engine/IResultListener.cs",
+      "lineRange": [
+        80,
+        91
+      ],
+      "summary": "测试执行监听器接口，在 IResultListener 基础上增加 OnTestStepExecutionChanged 回调，用于监听步骤执行状态变更。",
+      "tags": [
+        "interface",
+        "execution-listener",
+        "state-change"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/IResultSink.cs",
+      "type": "file",
+      "name": "IResultSink.cs",
+      "filePath": "Engine/IResultSink.cs",
+      "summary": "定义结果汇集（Result Sink）机制。IResultSink 接口支持监听测试执行并收集结果；ResultSinkListener 管理多个 Sink 的分发；ScalarResultSink 提供标量结果的存储和查询。",
+      "tags": [
+        "result-sink",
+        "data-collection",
+        "test-execution",
+        "observer-pattern"
+      ],
+      "complexity": "complex",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/IResultSink.cs:IResultSink",
+      "type": "class",
+      "name": "IResultSink",
+      "filePath": "Engine/IResultSink.cs",
+      "lineRange": [
+        19,
+        51
+      ],
+      "summary": "结果汇集器接口，定义与 IResultListener 相同的五个生命周期回调，用于接收并存储测试执行产生的结果数据。",
+      "tags": [
+        "interface",
+        "result-sink",
+        "data-collection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultSink.cs:ResultSinkListener",
+      "type": "class",
+      "name": "ResultSinkListener",
+      "filePath": "Engine/IResultSink.cs",
+      "lineRange": [
+        53,
+        144
+      ],
+      "summary": "管理多个 IResultSink 实例的分发器，将测试生命周期事件转发给所有注册的 Sink，并维护当前步骤执行的上下文。",
+      "tags": [
+        "dispatcher",
+        "multicast",
+        "sink-management",
+        "test-execution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/IResultSink.cs:ScalarResultSink",
+      "type": "class",
+      "name": "ScalarResultSink",
+      "filePath": "Engine/IResultSink.cs",
+      "lineRange": [
+        145,
+        277
+      ],
+      "summary": "标量结果汇集器，收集特定步骤和列的结果数据到字典队列中，支持 GetResult 和 TryGetResult 查询，以及监听步骤的动态匹配。",
+      "tags": [
+        "scalar-result",
+        "data-storage",
+        "result-query",
+        "queue"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/IResultSink.cs:OnTestPlanRunStart",
+      "type": "function",
+      "name": "OnTestPlanRunStart",
+      "filePath": "Engine/IResultSink.cs",
+      "lineRange": [
+        58,
+        72
+      ],
+      "summary": "测试计划运行开始时，初始化所有已连接的 IResultSink 并分发事件。",
+      "tags": [
+        "lifecycle-event",
+        "initialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/IResultSink.cs:ResultSinkListener.OnResultPublished",
+      "type": "function",
+      "name": "ResultSinkListener.OnResultPublished",
+      "filePath": "Engine/IResultSink.cs",
+      "lineRange": [
+        124,
+        138
+      ],
+      "summary": "ResultSinkListener 的结果发布处理，遍历当前步骤的所有注册 Sink 并调用其 OnResultPublished 方法。",
+      "tags": [
+        "result-dispatch",
+        "event-propagation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/IResultSink.cs:GetResult",
+      "type": "function",
+      "name": "GetResult",
+      "filePath": "Engine/IResultSink.cs",
+      "lineRange": [
+        194,
+        205
+      ],
+      "summary": "以阻塞方式获取标量结果，持续等待直到指定列的结果可用或超时。",
+      "tags": [
+        "result-query",
+        "blocking-wait",
+        "scalar"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/IResultSink.cs:TryGetResult",
+      "type": "function",
+      "name": "TryGetResult",
+      "filePath": "Engine/IResultSink.cs",
+      "lineRange": [
+        210,
+        224
+      ],
+      "summary": "以非阻塞方式尝试获取标量结果，返回当前已收集的数据而不等待。",
+      "tags": [
+        "result-query",
+        "non-blocking",
+        "scalar"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/IResultSink.cs:OnTestStepRunStart",
+      "type": "function",
+      "name": "OnTestStepRunStart",
+      "filePath": "Engine/IResultSink.cs",
+      "lineRange": [
+        229,
+        239
+      ],
+      "summary": "ScalarResultSink 的步骤开始时检查是否匹配 SourceTestStep，匹配则设置监听标志。",
+      "tags": [
+        "step-matching",
+        "event-filter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/IResultSink.cs:ScalarResultSink.OnResultPublished",
+      "type": "function",
+      "name": "ScalarResultSink.OnResultPublished",
+      "filePath": "Engine/IResultSink.cs",
+      "lineRange": [
+        249,
+        263
+      ],
+      "summary": "ScalarResultSink 的结果发布处理，根据 ResultColumnName 匹配后将结果值和元数据入队。",
+      "tags": [
+        "result-collection",
+        "column-matching",
+        "enqueue"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/IResultStore.cs",
+      "type": "file",
+      "name": "IResultStore.cs",
+      "filePath": "Engine/IResultStore.cs",
+      "summary": "定义结果存储系统的完整数据模型和查询API。包含结果参数、表格、列的接口定义，以及搜索条件、限制集、附件管理等类型，IResultStore 是核心存储接口。",
+      "tags": [
+        "result-store",
+        "data-model",
+        "query-api",
+        "search",
+        "limit-set"
+      ],
+      "complexity": "complex",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:IAttributedObject",
+      "type": "class",
+      "name": "IAttributedObject",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        16,
+        30
+      ],
+      "summary": "带属性对象接口，定义 Name 和 ObjectType 属性，是结果数据模型的基础类型。",
+      "tags": [
+        "interface",
+        "data-model",
+        "base-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:IData",
+      "type": "class",
+      "name": "IData",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        59,
+        78
+      ],
+      "summary": "结果数据接口，包含 Parent 引用、Parameters 集合和 GetID 方法，描述单个测试结果数据点。",
+      "tags": [
+        "interface",
+        "result-data",
+        "parameters"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:IResultTable",
+      "type": "class",
+      "name": "IResultTable",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        80,
+        90
+      ],
+      "summary": "结果表接口，包含 Columns 集合，表示一个结果表由多个列组成。",
+      "tags": [
+        "interface",
+        "result-table",
+        "columns"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:IResultColumn",
+      "type": "class",
+      "name": "IResultColumn",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        91,
+        101
+      ],
+      "summary": "结果列接口，包含 Data 数组，表示结果表中的一列数据。",
+      "tags": [
+        "interface",
+        "result-column",
+        "data-array"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:AttachmentType",
+      "type": "class",
+      "name": "AttachmentType",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        102,
+        200
+      ],
+      "summary": "附件类型枚举类，定义 LogFile 和 TestPlan 等附件类型，支持类型名称匹配和相等性比较。",
+      "tags": [
+        "attachment-type",
+        "enumeration",
+        "type-safety"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:SearchChildrenOf",
+      "type": "class",
+      "name": "SearchChildrenOf",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        206,
+        222
+      ],
+      "summary": "搜索条件：查找指定父级下的所有子结果，Parents 属性指定父级 ID 集合。",
+      "tags": [
+        "search-condition",
+        "hierarchy-query",
+        "parent-child"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:SearchLastRun",
+      "type": "class",
+      "name": "SearchLastRun",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        224,
+        239
+      ],
+      "summary": "搜索条件：限制返回最近的 N 次运行结果，Count 属性指定返回数量。",
+      "tags": [
+        "search-condition",
+        "top-n",
+        "recent-runs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:SearchCombinator",
+      "type": "class",
+      "name": "SearchCombinator",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        241,
+        269
+      ],
+      "summary": "搜索条件组合器，通过 Operator（And/Or）将两个搜索条件 A 和 B 组合成复合查询。",
+      "tags": [
+        "search-condition",
+        "logical-combinator",
+        "and-or"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:SearchParameterValue",
+      "type": "class",
+      "name": "SearchParameterValue",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        270,
+        313
+      ],
+      "summary": "搜索条件：按参数值过滤结果，支持 Scope、Group、Parameter、CompareOperator 和 Value 精确匹配。",
+      "tags": [
+        "search-condition",
+        "parameter-filter",
+        "value-matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:SearchRange",
+      "type": "class",
+      "name": "SearchRange",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        315,
+        334
+      ],
+      "summary": "搜索条件：按参数范围过滤结果，通过 Scope、Parameter、Value 指定查询范围。",
+      "tags": [
+        "search-condition",
+        "range-filter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:SearchCondition",
+      "type": "class",
+      "name": "SearchCondition",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        336,
+        383
+      ],
+      "summary": "搜索条件的静态工厂类，提供 All()、ChildrenOf()、LastRun() 等便捷构造方法。",
+      "tags": [
+        "search-condition",
+        "static-factory",
+        "query-builder"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:LimitSet",
+      "type": "class",
+      "name": "LimitSet",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        385,
+        410
+      ],
+      "summary": "限制集定义，包含 Name 和 Limits 集合，用于定义测试的上下限约束。",
+      "tags": [
+        "limit-set",
+        "specification",
+        "threshold"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:Limit",
+      "type": "class",
+      "name": "Limit",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        411,
+        454
+      ],
+      "summary": "限制定义，包含 ResultName、ColumnName、LowerLimit、UpperLimit 和 Conditions 集合。",
+      "tags": [
+        "limit",
+        "threshold",
+        "upper-lower-bound"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:LimitCondition",
+      "type": "class",
+      "name": "LimitCondition",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        456,
+        494
+      ],
+      "summary": "限制条件，包含 ColumnName、LowerLimit、UpperLimit，支持字符串格式化输出。",
+      "tags": [
+        "limit-condition",
+        "threshold",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:IResultStore",
+      "type": "class",
+      "name": "IResultStore",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        495,
+        564
+      ],
+      "summary": "核心结果存储接口，提供结果查询（GetEntries）、删除（DeleteEntries）、限制集管理（GetLimitSets/AddLimitSet）、附件访问（GetAttachment）等功能。",
+      "tags": [
+        "interface",
+        "result-store",
+        "query",
+        "attachment",
+        "limit-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:IAttachmentStream",
+      "type": "class",
+      "name": "IAttachmentStream",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        565,
+        578
+      ],
+      "summary": "附件流接口，提供 GetAttachmentStream 方法用于获取附件的可读流。",
+      "tags": [
+        "interface",
+        "attachment",
+        "stream"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IResultStore.cs:IFileResultStore",
+      "type": "class",
+      "name": "IFileResultStore",
+      "filePath": "Engine/IResultStore.cs",
+      "lineRange": [
+        632,
+        643
+      ],
+      "summary": "基于文件的结果存储接口，定义 FilePath 和 DefaultExtension 属性，适用于文件序列化存储。",
+      "tags": [
+        "interface",
+        "file-storage",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/IScpiInstrument.cs",
+      "type": "file",
+      "name": "IScpiInstrument.cs",
+      "filePath": "Engine/IScpiInstrument.cs",
+      "summary": "定义 SCPI（可编程仪器标准命令）仪器接口体系。IScpiIO/IO2/IO3 分三层定义 I/O 操作，IScpiInstrument 是组合接口，提供高层 SCPI 命令方法。",
+      "tags": [
+        "scpi",
+        "instrument",
+        "interface",
+        "io-layer"
+      ],
+      "complexity": "complex",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/IScpiInstrument.cs:IScpiIO",
+      "type": "class",
+      "name": "IScpiIO",
+      "filePath": "Engine/IScpiInstrument.cs",
+      "lineRange": [
+        67,
+        137
+      ],
+      "summary": "SCPI 基础 I/O 接口，定义 DeviceClear、ReadSTB、Read、Write、Lock、Unlock 等核心操作，以及 SendEnd、IOTimeoutMS 等配置属性。",
+      "tags": [
+        "scpi",
+        "io-interface",
+        "gpib",
+        "visa"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/IScpiInstrument.cs:IScpiIO2",
+      "type": "class",
+      "name": "IScpiIO2",
+      "filePath": "Engine/IScpiInstrument.cs",
+      "lineRange": [
+        139,
+        209
+      ],
+      "summary": "SCPI I/O 第二层接口，扩展 Open/Close 连接管理和 SRQ（服务请求）功能，增加 ID 属性用于标识。",
+      "tags": [
+        "scpi",
+        "io-interface",
+        "connection-management",
+        "srq"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/IScpiInstrument.cs:IScpiIO3",
+      "type": "class",
+      "name": "IScpiIO3",
+      "filePath": "Engine/IScpiInstrument.cs",
+      "lineRange": [
+        211,
+        235
+      ],
+      "summary": "SCPI I/O 第三层接口，增加事件机制（EnableEvent/DisableEvent/WaitOnEvent），支持异步事件处理。",
+      "tags": [
+        "scpi",
+        "io-interface",
+        "event-handling",
+        "async"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IScpiInstrument.cs:IScpiInstrument",
+      "type": "class",
+      "name": "IScpiInstrument",
+      "filePath": "Engine/IScpiInstrument.cs",
+      "lineRange": [
+        236,
+        268
+      ],
+      "summary": "SCPI 仪器组合接口，继承 IScpiIO/IO2/IO3 和 IInstrument，提供 ScpiCommand、ScpiQuery、ScpiIEEEBlockCommand 等高层 SCPI 操作方法。",
+      "tags": [
+        "scpi",
+        "instrument",
+        "command-interface",
+        "composite"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/IStartupInfo.cs",
+      "type": "file",
+      "name": "IStartupInfo.cs",
+      "filePath": "Engine/IStartupInfo.cs",
+      "summary": "定义启动信息记录接口。实现类在会话日志初始化后被调用一次，用于记录当前安装的特定信息。",
+      "tags": [
+        "startup",
+        "logging",
+        "interface",
+        "diagnostics"
+      ],
+      "complexity": "simple",
+      "languageNotes": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/IResource.cs",
+      "target": "class:Engine/IResource.cs:IResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResource.cs",
+      "target": "class:Engine/IResource.cs:IEnabledResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResource.cs",
+      "target": "class:Engine/IResource.cs:IResource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResource.cs",
+      "target": "class:Engine/IResource.cs:IEnabledResource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultListener.cs",
+      "target": "class:Engine/IResultListener.cs:IResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultListener.cs",
+      "target": "class:Engine/IResultListener.cs:IExecutionListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultListener.cs",
+      "target": "class:Engine/IResultListener.cs:IResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultListener.cs",
+      "target": "class:Engine/IResultListener.cs:IExecutionListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "class:Engine/IResultSink.cs:IResultSink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "class:Engine/IResultSink.cs:ResultSinkListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "class:Engine/IResultSink.cs:ScalarResultSink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "function:Engine/IResultSink.cs:OnTestPlanRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "function:Engine/IResultSink.cs:ResultSinkListener.OnResultPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "function:Engine/IResultSink.cs:GetResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "function:Engine/IResultSink.cs:TryGetResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "function:Engine/IResultSink.cs:OnTestStepRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "function:Engine/IResultSink.cs:ScalarResultSink.OnResultPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "class:Engine/IResultSink.cs:IResultSink",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "class:Engine/IResultSink.cs:ResultSinkListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "class:Engine/IResultSink.cs:ScalarResultSink",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "function:Engine/IResultSink.cs:GetResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultSink.cs",
+      "target": "function:Engine/IResultSink.cs:TryGetResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IAttributedObject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IResultTable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IResultColumn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:AttachmentType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchChildrenOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchLastRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchCombinator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchParameterValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:LimitSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:Limit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:LimitCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IResultStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IAttachmentStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IFileResultStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IAttributedObject",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IResultTable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IResultColumn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:AttachmentType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchChildrenOf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchLastRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchCombinator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchParameterValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:SearchCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:LimitSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:Limit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:LimitCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IResultStore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IAttachmentStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IResultStore.cs",
+      "target": "class:Engine/IResultStore.cs:IFileResultStore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IScpiInstrument.cs",
+      "target": "class:Engine/IScpiInstrument.cs:IScpiIO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IScpiInstrument.cs",
+      "target": "class:Engine/IScpiInstrument.cs:IScpiIO",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IScpiInstrument.cs",
+      "target": "class:Engine/IScpiInstrument.cs:IScpiIO2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IScpiInstrument.cs",
+      "target": "class:Engine/IScpiInstrument.cs:IScpiIO2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IScpiInstrument.cs",
+      "target": "class:Engine/IScpiInstrument.cs:IScpiIO3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IScpiInstrument.cs",
+      "target": "class:Engine/IScpiInstrument.cs:IScpiIO3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IScpiInstrument.cs",
+      "target": "class:Engine/IScpiInstrument.cs:IScpiInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IScpiInstrument.cs",
+      "target": "class:Engine/IScpiInstrument.cs:IScpiInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

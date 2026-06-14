@@ -1,0 +1,865 @@
+{
+  "nodes": [
+    {
+      "id": "config:Package.UnitTests/Packages/test2/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "Package.UnitTests/Packages/test2/package.xml",
+      "summary": "测试包系列中的第二个包清单（Test2 v1.2.3+4），包含 BasicSteps.dll 和 Package.UnitTests.dll 两个 DLL。",
+      "tags": [
+        "package-manifest",
+        "test-fixture",
+        "xml",
+        "test-series"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/Packages/test3/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "Package.UnitTests/Packages/test3/package.xml",
+      "summary": "测试包系列中的第三个包清单（Test3），仅包含 Package.UnitTests.dll 且未指定版本号。",
+      "tags": [
+        "package-manifest",
+        "test-fixture",
+        "xml",
+        "test-series"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/PdbFixupTest.cs",
+      "type": "file",
+      "name": "PdbFixupTest.cs",
+      "filePath": "Package.UnitTests/PdbFixupTest.cs",
+      "summary": "测试 OpenTAP 包创建后 PDB 符号修复功能的单元测试，验证嵌入符号在包打包后仍然有效（标记为不稳定的测试）。",
+      "tags": [
+        "test",
+        "pdb-fixup",
+        "symbol-fixup",
+        "package-creation",
+        "unstable"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "type": "file",
+      "name": "PluginInstallerTests.cs",
+      "filePath": "Package.UnitTests/PluginInstallerTests.cs",
+      "summary": "测试 PluginInstaller 插件安装/卸载/文件解包功能的单元测试类，包含覆盖写入检测和依赖检查的 Mock 场景。",
+      "tags": [
+        "test",
+        "plugin-installer",
+        "install-uninstall",
+        "dependency-check",
+        "overwrite-detection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package.UnitTests/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "Package.UnitTests/Properties/AssemblyInfo.cs",
+      "summary": "OpenTAP 包单元测试程序集的元数据定义，包含版本号、版权信息和 COM 互操作设置。",
+      "tags": [
+        "assembly-info",
+        "metadata",
+        "versioning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/Resources.cs",
+      "type": "file",
+      "name": "Resources.cs",
+      "filePath": "Package.UnitTests/Resources.cs",
+      "summary": "提供从嵌入资源中读取测试数据流的工具类，支持路径转换和文本内容读取。",
+      "tags": [
+        "utility",
+        "embedded-resources",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/SerializerDependencyTest.cs",
+      "type": "file",
+      "name": "SerializerDependencyTest.cs",
+      "filePath": "Package.UnitTests/SerializerDependencyTest.cs",
+      "summary": "验证序列化器能正确检测和输出包依赖信息的单元测试，确保序列化结果包含 Package.Dependencies 元素。",
+      "tags": [
+        "test",
+        "serializer",
+        "dependency-detection",
+        "package-dependencies"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/SubProcessTest.cs",
+      "type": "file",
+      "name": "SubProcessTest.cs",
+      "filePath": "Package.UnitTests/SubProcessTest.cs",
+      "summary": "测试子进程执行（SubProcessHost）的单元测试类，涵盖进程 I/O、取消令牌、命名管道通信等场景。",
+      "tags": [
+        "test",
+        "subprocess",
+        "named-pipes",
+        "cancellation",
+        "process-io"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package.UnitTests/SupportedModelsTest.cs",
+      "type": "file",
+      "name": "SupportedModelsTest.cs",
+      "filePath": "Package.UnitTests/SupportedModelsTest.cs",
+      "summary": "验证 SupportedModels 属性正确写入包 XML 的测试类，测试多个模型注解的 Instrument 子类。",
+      "tags": [
+        "test",
+        "supported-models",
+        "package-xml",
+        "attribute-processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package.UnitTests/TapPackages/MyPlugin1.TapPackage",
+      "type": "file",
+      "name": "MyPlugin1.TapPackage",
+      "filePath": "Package.UnitTests/TapPackages/MyPlugin1.TapPackage",
+      "summary": "用于插件安装/卸载测试的 TapPackage 二进制测试夹具文件（MyPlugin1 包）。",
+      "tags": [
+        "tappackage",
+        "test-fixture",
+        "plugin-package",
+        "binary"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/TapPackages/MyPlugin2.1.2.3+Build-something.TapPackage",
+      "type": "file",
+      "name": "MyPlugin2.1.2.3+Build-something.TapPackage",
+      "filePath": "Package.UnitTests/TapPackages/MyPlugin2.1.2.3+Build-something.TapPackage",
+      "summary": "带有构建元数据版本号的 TapPackage 测试夹具文件（MyPlugin2 v1.2.3+Build-something），用于测试语义版本解析。",
+      "tags": [
+        "tappackage",
+        "test-fixture",
+        "semver",
+        "build-metadata",
+        "binary"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/TapPackages/MyPlugin2.1.2.37-alpha.715+164e6f81.TapPackage",
+      "type": "file",
+      "name": "MyPlugin2.1.2.37-alpha.715+164e6f81.TapPackage",
+      "filePath": "Package.UnitTests/TapPackages/MyPlugin2.1.2.37-alpha.715+164e6f81.TapPackage",
+      "summary": "带有预发布标签和构建哈希的复杂语义版本 TapPackage 测试夹具文件（v1.2.37-alpha.715+164e6f81），用于测试完整语义版本号支持。",
+      "tags": [
+        "tappackage",
+        "test-fixture",
+        "semver",
+        "prerelease",
+        "binary"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package.UnitTests/PdbFixupTest.cs:PdbFixupTest",
+      "type": "class",
+      "name": "PdbFixupTest",
+      "filePath": "Package.UnitTests/PdbFixupTest.cs",
+      "lineRange": [
+        10,
+        107
+      ],
+      "summary": "验证包创建后 PDB 符号文件是否保持有效的 NUnit 测试夹具类（标记为不稳定测试）。",
+      "tags": [
+        "test-class",
+        "pdb-fixup",
+        "symbol-validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package.UnitTests/PluginInstallerTests.cs:PluginInstallerTests",
+      "type": "class",
+      "name": "PluginInstallerTests",
+      "filePath": "Package.UnitTests/PluginInstallerTests.cs",
+      "lineRange": [
+        12,
+        179
+      ],
+      "summary": "测试插件安装/卸载、文件解包、覆盖检测和依赖检查的 NUnit 测试夹具类，包含内部 MockInstallation 模拟。",
+      "tags": [
+        "test-class",
+        "plugin-installer",
+        "dependency-management"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package.UnitTests/Resources.cs:Resources",
+      "type": "class",
+      "name": "Resources",
+      "filePath": "Package.UnitTests/Resources.cs",
+      "lineRange": [
+        11,
+        32
+      ],
+      "summary": "提供从嵌入程序集资源中读取测试数据流的静态工具类。",
+      "tags": [
+        "utility-class",
+        "embedded-resources",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package.UnitTests/SerializerDependencyTest.cs:SerializerDependencyTest",
+      "type": "class",
+      "name": "SerializerDependencyTest",
+      "filePath": "Package.UnitTests/SerializerDependencyTest.cs",
+      "lineRange": [
+        7,
+        21
+      ],
+      "summary": "验证序列化过程中包依赖关系正确输出的 NUnit 测试夹具类。",
+      "tags": [
+        "test-class",
+        "serializer",
+        "dependency-validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package.UnitTests/SubProcessTest.cs:SubProcessTest",
+      "type": "class",
+      "name": "SubProcessTest",
+      "filePath": "Package.UnitTests/SubProcessTest.cs",
+      "lineRange": [
+        14,
+        111
+      ],
+      "summary": "测试子进程执行、取消管道和进程 I/O 的 NUnit 测试夹具类。",
+      "tags": [
+        "test-class",
+        "subprocess",
+        "process-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package.UnitTests/SupportedModelsTest.cs:SupportedModelsTest",
+      "type": "class",
+      "name": "SupportedModelsTest",
+      "filePath": "Package.UnitTests/SupportedModelsTest.cs",
+      "lineRange": [
+        8,
+        92
+      ],
+      "summary": "验证 SupportedModels 属性正确序列化到包 XML 的 NUnit 测试夹具类，包含带多模型注解的 Instrument 子类。",
+      "tags": [
+        "test-class",
+        "supported-models",
+        "attribute-processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PdbFixupTest.cs:OpenTapSymbolsFixed",
+      "type": "function",
+      "name": "OpenTapSymbolsFixed",
+      "filePath": "Package.UnitTests/PdbFixupTest.cs",
+      "lineRange": [
+        13,
+        106
+      ],
+      "summary": "核心 PDB 符号修复测试方法，创建包、解压、读取程序集和符号，验证嵌入符号的完整性（标记为不稳定测试）。",
+      "tags": [
+        "test",
+        "pdb-fixup",
+        "symbol-validation",
+        "unstable"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package.UnitTests/PluginInstallerTests.cs:FilesInPackageTest",
+      "type": "function",
+      "name": "FilesInPackageTest",
+      "filePath": "Package.UnitTests/PluginInstallerTests.cs",
+      "lineRange": [
+        15,
+        23
+      ],
+      "summary": "验证 FilesInPackage 能正确列出 TapPackage 中的文件，确认所有项非空、唯一且包含 package.xml 和 DLL。",
+      "tags": [
+        "test",
+        "package-files",
+        "listing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PluginInstallerTests.cs:UnpackageFileTest",
+      "type": "function",
+      "name": "UnpackageFileTest",
+      "filePath": "Package.UnitTests/PluginInstallerTests.cs",
+      "lineRange": [
+        25,
+        34
+      ],
+      "summary": "验证 UnpackageFile 能将包中的单个文件解包到内存流中。",
+      "tags": [
+        "test",
+        "unpackage",
+        "file-extraction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PluginInstallerTests.cs:InstallUninstallTest",
+      "type": "function",
+      "name": "InstallUninstallTest",
+      "filePath": "Package.UnitTests/PluginInstallerTests.cs",
+      "lineRange": [
+        36,
+        43
+      ],
+      "summary": "端到端安装/卸载测试：安装 MyPlugin1 包，验证文件存在，卸载后确认文件被清理。",
+      "tags": [
+        "test",
+        "install-uninstall",
+        "end-to-end"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PluginInstallerTests.cs:InstallUninstallTestSystemWide",
+      "type": "function",
+      "name": "InstallUninstallTestSystemWide",
+      "filePath": "Package.UnitTests/PluginInstallerTests.cs",
+      "lineRange": [
+        45,
+        53
+      ],
+      "summary": "系统级安装/卸载测试（仅限 Windows），验证文件安装到 SystemWideInstallationDirectory 而非当前目录。",
+      "tags": [
+        "test",
+        "system-wide",
+        "windows-only"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/PluginInstallerTests.cs:TestOverwritePackageDetection",
+      "type": "function",
+      "name": "TestOverwritePackageDetection",
+      "filePath": "Package.UnitTests/PluginInstallerTests.cs",
+      "lineRange": [
+        137,
+        162
+      ],
+      "summary": "使用 MockInstallation 模拟多种场景验证覆盖写入检测逻辑：正常覆盖、无冲突、大小写冲突及依赖冲突。",
+      "tags": [
+        "test",
+        "overwrite-detection",
+        "conflict-detection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/PluginInstallerTests.cs:TestDependencyChecker",
+      "type": "function",
+      "name": "TestDependencyChecker",
+      "filePath": "Package.UnitTests/PluginInstallerTests.cs",
+      "lineRange": [
+        164,
+        178
+      ],
+      "summary": "使用 Mock 数据测试 DependencyChecker 在不同场景下的依赖检查结果。",
+      "tags": [
+        "test",
+        "dependency-check",
+        "version-conflict"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/Resources.cs:GetEmbeddedStream",
+      "type": "function",
+      "name": "GetEmbeddedStream",
+      "filePath": "Package.UnitTests/Resources.cs",
+      "lineRange": [
+        13,
+        19
+      ],
+      "summary": "从当前执行程序集中获取指定名称的嵌入资源流，支持路径中的反斜杠替换。",
+      "tags": [
+        "utility",
+        "embedded-resource",
+        "stream"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/Resources.cs:GetEmbedded",
+      "type": "function",
+      "name": "GetEmbedded",
+      "filePath": "Package.UnitTests/Resources.cs",
+      "lineRange": [
+        21,
+        30
+      ],
+      "summary": "读取嵌入资源为字符串，内部委托 GetEmbeddedStream 获取流并用 StreamReader 读取全部内容。",
+      "tags": [
+        "utility",
+        "embedded-resource",
+        "read-all-text"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/SerializerDependencyTest.cs:VerifyPackageDependencies",
+      "type": "function",
+      "name": "VerifyPackageDependencies",
+      "filePath": "Package.UnitTests/SerializerDependencyTest.cs",
+      "lineRange": [
+        10,
+        20
+      ],
+      "summary": "创建含 DelayStep 的 TestPlan，序列化后验证输出包含 Package.Dependencies 标记且已用类型正确追溯到 DelayStep。",
+      "tags": [
+        "test",
+        "serializer",
+        "dependency-detection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/SubProcessTest.cs:TestProcessIO",
+      "type": "function",
+      "name": "TestProcessIO",
+      "filePath": "Package.UnitTests/SubProcessTest.cs",
+      "lineRange": [
+        17,
+        34
+      ],
+      "summary": "测试子进程的 I/O 日志流转发，验证 LogStep 的输出能通过 SubProcessHost 传播到父进程。",
+      "tags": [
+        "test",
+        "subprocess-io",
+        "log-forwarding"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/SubProcessTest.cs:TestSubprocessRun",
+      "type": "function",
+      "name": "TestSubprocessRun",
+      "filePath": "Package.UnitTests/SubProcessTest.cs",
+      "lineRange": [
+        36,
+        50
+      ],
+      "summary": "测试子进程正常执行，使用 VerdictStep 并验证退出码为 0。",
+      "tags": [
+        "test",
+        "subprocess-run",
+        "verdict"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/SubProcessTest.cs:TestCancel",
+      "type": "function",
+      "name": "TestCancel",
+      "filePath": "Package.UnitTests/SubProcessTest.cs",
+      "lineRange": [
+        52,
+        69
+      ],
+      "summary": "测试子进程取消令牌功能，通过 CancellationTokenSource 取消长时间运行的任务并验证超时行为。",
+      "tags": [
+        "test",
+        "cancellation",
+        "subprocess-timeout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package.UnitTests/SubProcessTest.cs:TestPipes",
+      "type": "function",
+      "name": "TestPipes",
+      "filePath": "Package.UnitTests/SubProcessTest.cs",
+      "lineRange": [
+        71,
+        110
+      ],
+      "summary": "测试命名管道双向通信，包括短消息、大消息（10KB répétition）和随机字节三种场景的读写验证。",
+      "tags": [
+        "test",
+        "named-pipes",
+        "bidirectional-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/SupportedModelsTest.cs:TestSupportedModelsAddedToPackageXml",
+      "type": "function",
+      "name": "TestSupportedModelsAddedToPackageXml",
+      "filePath": "Package.UnitTests/SupportedModelsTest.cs",
+      "lineRange": [
+        23,
+        91
+      ],
+      "summary": "验证 SupportedModels 属性正确序列化到包 XML：创建包含模型注解的 Instrument 子类包，解包后验证 XML 中的模型名称和分组。",
+      "tags": [
+        "test",
+        "supported-models",
+        "attribute-serialization",
+        "package-xml"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package.UnitTests/PdbFixupTest.cs",
+      "target": "class:Package.UnitTests/PdbFixupTest.cs:PdbFixupTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "class:Package.UnitTests/PluginInstallerTests.cs:PluginInstallerTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/Resources.cs",
+      "target": "class:Package.UnitTests/Resources.cs:Resources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/SerializerDependencyTest.cs",
+      "target": "class:Package.UnitTests/SerializerDependencyTest.cs:SerializerDependencyTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/SubProcessTest.cs",
+      "target": "class:Package.UnitTests/SubProcessTest.cs:SubProcessTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/SupportedModelsTest.cs",
+      "target": "class:Package.UnitTests/SupportedModelsTest.cs:SupportedModelsTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PdbFixupTest.cs",
+      "target": "function:Package.UnitTests/PdbFixupTest.cs:OpenTapSymbolsFixed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:FilesInPackageTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:UnpackageFileTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:InstallUninstallTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:InstallUninstallTestSystemWide",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:TestOverwritePackageDetection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:TestDependencyChecker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/Resources.cs",
+      "target": "function:Package.UnitTests/Resources.cs:GetEmbeddedStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/Resources.cs",
+      "target": "function:Package.UnitTests/Resources.cs:GetEmbedded",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/SerializerDependencyTest.cs",
+      "target": "function:Package.UnitTests/SerializerDependencyTest.cs:VerifyPackageDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/SubProcessTest.cs",
+      "target": "function:Package.UnitTests/SubProcessTest.cs:TestProcessIO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/SubProcessTest.cs",
+      "target": "function:Package.UnitTests/SubProcessTest.cs:TestSubprocessRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/SubProcessTest.cs",
+      "target": "function:Package.UnitTests/SubProcessTest.cs:TestCancel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/SubProcessTest.cs",
+      "target": "function:Package.UnitTests/SubProcessTest.cs:TestPipes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/SupportedModelsTest.cs",
+      "target": "function:Package.UnitTests/SupportedModelsTest.cs:TestSupportedModelsAddedToPackageXml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/PdbFixupTest.cs",
+      "target": "function:Package.UnitTests/PdbFixupTest.cs:OpenTapSymbolsFixed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:FilesInPackageTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:UnpackageFileTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:InstallUninstallTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:InstallUninstallTestSystemWide",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:TestOverwritePackageDetection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "function:Package.UnitTests/PluginInstallerTests.cs:TestDependencyChecker",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/Resources.cs",
+      "target": "function:Package.UnitTests/Resources.cs:GetEmbeddedStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/Resources.cs",
+      "target": "function:Package.UnitTests/Resources.cs:GetEmbedded",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/SerializerDependencyTest.cs",
+      "target": "function:Package.UnitTests/SerializerDependencyTest.cs:VerifyPackageDependencies",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/SubProcessTest.cs",
+      "target": "function:Package.UnitTests/SubProcessTest.cs:TestProcessIO",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/SubProcessTest.cs",
+      "target": "function:Package.UnitTests/SubProcessTest.cs:TestSubprocessRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/SubProcessTest.cs",
+      "target": "function:Package.UnitTests/SubProcessTest.cs:TestCancel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/SubProcessTest.cs",
+      "target": "function:Package.UnitTests/SubProcessTest.cs:TestPipes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/SupportedModelsTest.cs",
+      "target": "function:Package.UnitTests/SupportedModelsTest.cs:TestSupportedModelsAddedToPackageXml",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PdbFixupTest.cs",
+      "target": "class:Package.UnitTests/PdbFixupTest.cs:PdbFixupTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "class:Package.UnitTests/PluginInstallerTests.cs:PluginInstallerTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/SerializerDependencyTest.cs",
+      "target": "class:Package.UnitTests/SerializerDependencyTest.cs:SerializerDependencyTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/SubProcessTest.cs",
+      "target": "class:Package.UnitTests/SubProcessTest.cs:SubProcessTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/SupportedModelsTest.cs",
+      "target": "class:Package.UnitTests/SupportedModelsTest.cs:SupportedModelsTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "file:Package.UnitTests/TapPackages/MyPlugin1.TapPackage",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "file:Package.UnitTests/TapPackages/MyPlugin2.1.2.3+Build-something.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/PluginInstallerTests.cs",
+      "target": "file:Package.UnitTests/TapPackages/MyPlugin2.1.2.37-alpha.715+164e6f81.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/SupportedModelsTest.cs",
+      "target": "config:Package.UnitTests/Packages/XSeries/package.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/PdbFixupTest.cs",
+      "target": "config:Package.UnitTests/Packages/Package/package.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:Package.UnitTests/Resources.cs:GetEmbedded",
+      "target": "function:Package.UnitTests/Resources.cs:GetEmbeddedStream",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

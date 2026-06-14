@@ -1,0 +1,469 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package.UnitTests/TapPackages/MyPlugin2.1.3.3+Build-something.TapPackage",
+      "type": "file",
+      "name": "MyPlugin2.1.3.3+Build-something.TapPackage",
+      "filePath": "Package.UnitTests/TapPackages/MyPlugin2.1.3.3+Build-something.TapPackage",
+      "summary": "OpenTAP 插件包测试夹具（版本 2.1.3.3+Build），用于 Package.UnitTests 中的插件包安装/卸载测试。",
+      "tags": [
+        "test-fixture",
+        "tap-package",
+        "plugin",
+        "archive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/TapPackages/MyPlugin3.TapPackage",
+      "type": "file",
+      "name": "MyPlugin3.TapPackage",
+      "filePath": "Package.UnitTests/TapPackages/MyPlugin3.TapPackage",
+      "summary": "OpenTAP 插件包测试夹具（MyPlugin3），用于验证多插件依赖场景下的包管理行为。",
+      "tags": [
+        "test-fixture",
+        "tap-package",
+        "plugin",
+        "archive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/TapPackages/MyPlugin4.TapPackage",
+      "type": "file",
+      "name": "MyPlugin4.TapPackage",
+      "filePath": "Package.UnitTests/TapPackages/MyPlugin4.TapPackage",
+      "summary": "OpenTAP 插件包测试夹具（MyPlugin4），作为包依赖链中的测试数据。",
+      "tags": [
+        "test-fixture",
+        "tap-package",
+        "plugin",
+        "archive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/TapPackages/MyPlugin5.TapPackage",
+      "type": "file",
+      "name": "MyPlugin5.TapPackage",
+      "filePath": "Package.UnitTests/TapPackages/MyPlugin5.TapPackage",
+      "summary": "OpenTAP 插件包测试夹具（MyPlugin5），精简的测试包用于边缘场景验证。",
+      "tags": [
+        "test-fixture",
+        "tap-package",
+        "plugin",
+        "archive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/TapPackages/NoDepsPlugin.TapPackage",
+      "type": "file",
+      "name": "NoDepsPlugin.TapPackage",
+      "filePath": "Package.UnitTests/TapPackages/NoDepsPlugin.TapPackage",
+      "summary": "无依赖插件包测试夹具，用于测试独立插件的安装与卸载流程。",
+      "tags": [
+        "test-fixture",
+        "tap-package",
+        "plugin",
+        "no-dependencies"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/TapPackages/PDF.7.1.12.05d8beef.TapPackages",
+      "type": "file",
+      "name": "PDF.7.1.12.05d8beef.TapPackages",
+      "filePath": "Package.UnitTests/TapPackages/PDF.7.1.12.05d8beef.TapPackages",
+      "summary": "PDF 插件包集合测试夹具（版本 7.1.12），包含多文件依赖关系，用于测试包捆绑与依赖解析。",
+      "tags": [
+        "test-fixture",
+        "tap-packages",
+        "pdf-plugin",
+        "multi-file"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/TapPackages/REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "type": "file",
+      "name": "REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "filePath": "Package.UnitTests/TapPackages/REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "summary": "REST-API 插件包集合测试夹具（版本 1.1.180-rc），用于测试发布候选版本的包管理功能。",
+      "tags": [
+        "test-fixture",
+        "tap-packages",
+        "rest-api",
+        "release-candidate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/TapPackages/Tap.7.0.0.0.x64.exe",
+      "type": "file",
+      "name": "Tap.7.0.0.0.x64.exe",
+      "filePath": "Package.UnitTests/TapPackages/Tap.7.0.0.0.x64.exe",
+      "summary": "OpenTAP 可执行安装程序测试夹具（版本 7.0.0.0, x64），用于模拟安装场景的测试。",
+      "tags": [
+        "test-fixture",
+        "installer",
+        "executable",
+        "tap-core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "type": "file",
+      "name": "TestConcurrentTypeDataLoad.cs",
+      "filePath": "Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "summary": "并发类型数据加载测试类，验证多线程环境下动态程序集的 TypeData 加载和扫描的正确性。",
+      "tags": [
+        "test",
+        "concurrency",
+        "typedata",
+        "assembly-loading"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad",
+      "type": "class",
+      "name": "TestConcurrentTypeDataLoad",
+      "filePath": "Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "lineRange": [
+        13,
+        114
+      ],
+      "summary": "并发 TypeData 加载测试类，使用动态程序集生成验证多线程环境下类型数据并发扫描的正确性。",
+      "tags": [
+        "test-class",
+        "concurrency",
+        "assembly-generation",
+        "typedata"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad.CreateNewAssemblyWithTestStep",
+      "type": "function",
+      "name": "CreateNewAssemblyWithTestStep",
+      "filePath": "Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "lineRange": [
+        16,
+        55
+      ],
+      "summary": "动态生成包含 TestStep 派生类的 Mono.Cecil 程序集并写入磁盘后加载，用于并发类型扫描测试。",
+      "tags": [
+        "assembly-generation",
+        "mono-cecil",
+        "test-helper",
+        "dynamic-code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad.TestTypeDataLoad",
+      "type": "function",
+      "name": "TestTypeDataLoad",
+      "filePath": "Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "lineRange": [
+        57,
+        95
+      ],
+      "summary": "并发类型数据加载测试方法，生成 N 个动态程序集后从多线程并发扫描，验证 TypeData 正确性和一致性。",
+      "tags": [
+        "test-method",
+        "concurrency",
+        "typedata",
+        "plugin-scanning"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad.StartAwaitable",
+      "type": "function",
+      "name": "StartAwaitable",
+      "filePath": "Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "lineRange": [
+        97,
+        113
+      ],
+      "summary": "将指定操作放入 TapThread 异步执行并返回可等待的 Task，用于模拟并发加载场景。",
+      "tags": [
+        "async-helper",
+        "tap-thread",
+        "test-utility"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "target": "class:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad",
+      "target": "file:Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "target": "function:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad.CreateNewAssemblyWithTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad",
+      "target": "function:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad.CreateNewAssemblyWithTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "target": "function:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad.TestTypeDataLoad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad",
+      "target": "function:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad.TestTypeDataLoad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad.TestTypeDataLoad",
+      "target": "file:Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "target": "function:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad.StartAwaitable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad",
+      "target": "function:Package.UnitTests/TestConcurrentTypeDataLoad.cs:TestConcurrentTypeDataLoad.StartAwaitable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin2.1.3.3+Build-something.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/MyPlugin3.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin2.1.3.3+Build-something.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/MyPlugin4.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin2.1.3.3+Build-something.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/MyPlugin5.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin2.1.3.3+Build-something.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/NoDepsPlugin.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin2.1.3.3+Build-something.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/PDF.7.1.12.05d8beef.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin2.1.3.3+Build-something.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin2.1.3.3+Build-something.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/Tap.7.0.0.0.x64.exe",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin3.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/MyPlugin4.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin3.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/MyPlugin5.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin3.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/NoDepsPlugin.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin3.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/PDF.7.1.12.05d8beef.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin3.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin3.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/Tap.7.0.0.0.x64.exe",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin4.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/MyPlugin5.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin4.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/NoDepsPlugin.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin4.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/PDF.7.1.12.05d8beef.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin4.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin4.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/Tap.7.0.0.0.x64.exe",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin5.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/NoDepsPlugin.TapPackage",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin5.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/PDF.7.1.12.05d8beef.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin5.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/MyPlugin5.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/Tap.7.0.0.0.x64.exe",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/NoDepsPlugin.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/PDF.7.1.12.05d8beef.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/NoDepsPlugin.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/NoDepsPlugin.TapPackage",
+      "target": "file:Package.UnitTests/TapPackages/Tap.7.0.0.0.x64.exe",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/PDF.7.1.12.05d8beef.TapPackages",
+      "target": "file:Package.UnitTests/TapPackages/REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/PDF.7.1.12.05d8beef.TapPackages",
+      "target": "file:Package.UnitTests/TapPackages/Tap.7.0.0.0.x64.exe",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/TapPackages/REST-API.1.1.180-rc+cbe0b1c4.TapPackages",
+      "target": "file:Package.UnitTests/TapPackages/Tap.7.0.0.0.x64.exe",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

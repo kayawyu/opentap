@@ -1,0 +1,707 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "tap/tap.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 82,
+      "nonEmptyLines": 72,
+      "metrics": {}
+    },
+    {
+      "path": "templates/src/project/.template.config/ide.host.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 34,
+      "nonEmptyLines": 34,
+      "sections": [
+        {
+          "heading": "$schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "icon",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "symbolInfo",
+          "level": 1,
+          "line": 4
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "templates/src/project/.template.config/template.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 168,
+      "nonEmptyLines": 167,
+      "sections": [
+        {
+          "heading": "$schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "author",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "classifications",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "identity",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "shortName",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "tags",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "sources",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "sourceName",
+          "level": 1,
+          "line": 83
+        },
+        {
+          "heading": "defaultName",
+          "level": 1,
+          "line": 84
+        },
+        {
+          "heading": "preferNameDirectory",
+          "level": 1,
+          "line": 85
+        },
+        {
+          "heading": "symbols",
+          "level": 1,
+          "line": 87
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "templates/src/project/MyCliAction.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 15,
+      "functions": [
+        {
+          "name": "Execute",
+          "startLine": 11,
+          "endLine": 14,
+          "params": [
+            "cancellationToken"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MyCliAction",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "Execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Execute",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "MyCliAction",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Execute",
+          "callee": "new NotImplementedException",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "templates/src/project/MyComponentSettings.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "MyComponentSettings",
+          "startLine": 10,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "ExampleSetting"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExampleSetting",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "MyComponentSettings",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "templates/src/project/MyDUT.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "MyDUT",
+          "startLine": 21,
+          "endLine": 25,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 30,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 39,
+          "endLine": 43,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MyDUT",
+          "startLine": 10,
+          "endLine": 44,
+          "methods": [
+            "MyDUT",
+            "Open",
+            "Close"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MyDUT",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "MyDUT",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "templates/src/project/MyInstrument.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "MyInstrument",
+          "startLine": 16,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 22,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 34,
+          "endLine": 38,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MyInstrument",
+          "startLine": 10,
+          "endLine": 39,
+          "methods": [
+            "MyInstrument",
+            "Open",
+            "Close"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MyInstrument",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "MyInstrument",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "templates/src/project/MyResultListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "MyResultListener",
+          "startLine": 16,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 22,
+          "endLine": 26,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 28,
+          "endLine": 32,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MyResultListener",
+          "startLine": 10,
+          "endLine": 33,
+          "methods": [
+            "MyResultListener",
+            "Open",
+            "Close"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MyResultListener",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "MyResultListener",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "templates/src/project/MyTestStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "MyTestStep",
+          "startLine": 12,
+          "endLine": 15,
+          "params": []
+        },
+        {
+          "name": "PrePlanRun",
+          "startLine": 17,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 23,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "PostPlanRun",
+          "startLine": 30,
+          "endLine": 34,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MyTestStep",
+          "startLine": 5,
+          "endLine": 35,
+          "methods": [
+            "MyTestStep",
+            "PrePlanRun",
+            "Run",
+            "PostPlanRun"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MyTestStep",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "PrePlanRun",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "PostPlanRun",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "MyTestStep",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PrePlanRun",
+          "callee": "base.PrePlanRun",
+          "lineNumber": 19
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 27
+        },
+        {
+          "caller": "PostPlanRun",
+          "callee": "base.PostPlanRun",
+          "lineNumber": 33
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "templates/src/project/package.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 16,
+      "nonEmptyLines": 15,
+      "metrics": {}
+    },
+    {
+      "path": "templates/src/project/ProjectName.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 34,
+      "nonEmptyLines": 28,
+      "metrics": {}
+    },
+    {
+      "path": "templates/src/project/Properties/Editor.LaunchSettings.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 14,
+      "nonEmptyLines": 14,
+      "sections": [
+        {
+          "heading": "profiles",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "templates/src/project/Properties/TUI.LaunchSettings.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 16,
+      "nonEmptyLines": 16,
+      "sections": [
+        {
+          "heading": "profiles",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "templates/Templates.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 36,
+      "nonEmptyLines": 31,
+      "metrics": {}
+    },
+    {
+      "path": "tests/ILGitVersionBug.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 97,
+      "nonEmptyLines": 97,
+      "metrics": {}
+    },
+    {
+      "path": "tests/NoAssemblyInfo.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 195,
+      "nonEmptyLines": 195,
+      "metrics": {}
+    },
+    {
+      "path": "tests/package-create-error.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 247,
+      "nonEmptyLines": 247,
+      "metrics": {}
+    },
+    {
+      "path": "tests/package-create-newtonsoft.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 156,
+      "nonEmptyLines": 156,
+      "metrics": {}
+    },
+    {
+      "path": "tests/package-create-out-of-installation.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 77,
+      "nonEmptyLines": 77,
+      "metrics": {}
+    },
+    {
+      "path": "tests/planWithLoadErrors.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 10,
+      "metrics": {}
+    },
+    {
+      "path": "tests/regression.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 124,
+      "nonEmptyLines": 124,
+      "metrics": {}
+    },
+    {
+      "path": "tests/RepeatOutputCompare.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 44,
+      "metrics": {}
+    },
+    {
+      "path": "tests/run-parse-test.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 112,
+      "nonEmptyLines": 112,
+      "metrics": {}
+    },
+    {
+      "path": "tests/show-tags.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 76,
+      "metrics": {}
+    },
+    {
+      "path": "tests/test-cli-args.TapPlan",
+      "language": "tapplan",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 37,
+      "metrics": {}
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": "config:Engine.UnitTests/LegacyPlatformSettings.xml",
+      "type": "config",
+      "name": "LegacyPlatformSettings.xml",
+      "filePath": "Engine.UnitTests/LegacyPlatformSettings.xml",
+      "summary": "旧版 PlatformSettings 序列化 XML 测试数据，包含日志缓冲模式、远程测试台地址端口、操作员名称等配置，用于验证平台设置的反序列化向后兼容性。",
+      "tags": ["test-data", "serialization", "backward-compatibility", "platform-settings"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Engine.UnitTests/LegacyResultSettings.xml",
+      "type": "config",
+      "name": "LegacyResultSettings.xml",
+      "filePath": "Engine.UnitTests/LegacyResultSettings.xml",
+      "summary": "旧版 ResultSettings 序列化 XML 测试数据，包含一个 LogResultListener 配置及其文件路径和过滤选项，用于验证结果监听器反序列化的向后兼容性。",
+      "tags": ["test-data", "serialization", "backward-compatibility", "result-listener"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Engine.UnitTests/Tap.Engine.UnitTests.csproj",
+      "type": "config",
+      "name": "Tap.Engine.UnitTests.csproj",
+      "filePath": "Engine.UnitTests/Tap.Engine.UnitTests.csproj",
+      "summary": "OpenTAP Engine 单元测试项目的构建配置文件，基于 NUnit 测试框架，以嵌入式资源方式引用旧版 XML 测试数据，并依赖于 Engine、Package 和 BasicSteps 三个核心项目。",
+      "tags": ["configuration", "test", "build-system", "nunit", "unit-test"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:Engine.UnitTests/Tap.Engine.UnitTests.csproj",
+      "target": "config:Engine.UnitTests/LegacyPlatformSettings.xml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Engine.UnitTests/Tap.Engine.UnitTests.csproj",
+      "target": "config:Engine.UnitTests/LegacyResultSettings.xml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Engine.UnitTests/Tap.Engine.UnitTests.csproj",
+      "target": "config:Engine/Tap.Engine.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Engine.UnitTests/Tap.Engine.UnitTests.csproj",
+      "target": "config:Package/Tap.Package.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Engine.UnitTests/Tap.Engine.UnitTests.csproj",
+      "target": "config:BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

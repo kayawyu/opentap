@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": "config:sdk/Examples/ExamplePlugin/ExamplePlugin.csproj",
+      "type": "config",
+      "name": "ExamplePlugin.csproj",
+      "filePath": "sdk/Examples/ExamplePlugin/ExamplePlugin.csproj",
+      "summary": "OpenTAP 示例插件的 .NET 项目配置文件，定义输出为 Library、目标框架为 netstandard2.0 以支持跨平台，并通过 OpenTAP NuGet 包引用构建插件 DLL，同时将 package.xml 指定为包定义文件。",
+      "tags": ["configuration", "build-system", "dotnet", "plugin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/ExamplePlugin/SomeSampleData.txt",
+      "type": "file",
+      "name": "SomeSampleData.txt",
+      "filePath": "sdk/Examples/ExamplePlugin/SomeSampleData.txt",
+      "summary": "示例数据文件，说明 TAP 包中除了 C# DLL 之外还可以包含其他类型的文件（如文本文件），用于演示 package.xml 中文件打包机制。",
+      "tags": ["example", "data", "sample"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/Examples/ExamplePlugin/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "sdk/Examples/ExamplePlugin/package.xml",
+      "summary": "OpenTAP 包定义文件，声明示例插件的元数据（名称、版本 0.1.0-alpha、标签 SDK example），并列出打包的 DLL 和示例数据文件路径。",
+      "tags": ["configuration", "package-definition", "plugin", "metadata"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:sdk/Examples/ExamplePlugin/ExamplePlugin.csproj",
+      "target": "config:sdk/Examples/ExamplePlugin/package.xml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/ExamplePlugin/ExamplePlugin.csproj",
+      "target": "file:sdk/Examples/ExamplePlugin/SomeSampleData.txt",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/ExamplePlugin/package.xml",
+      "target": "file:sdk/Examples/ExamplePlugin/SomeSampleData.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

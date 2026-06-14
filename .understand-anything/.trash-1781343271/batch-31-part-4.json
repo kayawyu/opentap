@@ -1,0 +1,765 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/ResultListener.cs",
+      "type": "file",
+      "name": "ResultListener.cs",
+      "filePath": "Engine/ResultListener.cs",
+      "summary": "定义结果监听器框架，含ResultListener基类、ResultParameter参数定义、SafeArray安全数组及ResultParameters参数集合。",
+      "tags": [
+        "result-processing",
+        "engine",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/ResultObjectTypes.cs",
+      "type": "file",
+      "name": "ResultObjectTypes.cs",
+      "filePath": "Engine/ResultObjectTypes.cs",
+      "summary": "定义ResultObjectTypes静态类，暴露ResultVector和ResultColumn两种核心结果类型的TypeData引用。",
+      "tags": [
+        "result-processing",
+        "engine",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ResultSettings.cs",
+      "type": "file",
+      "name": "ResultSettings.cs",
+      "filePath": "Engine/ResultSettings.cs",
+      "summary": "定义ResultSettings组件设置基类，作为结果相关ComponentSettings的抽象基类。",
+      "tags": [
+        "result-processing",
+        "engine",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ResultListener.cs:ResultListener",
+      "type": "class",
+      "name": "ResultListener",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        19,
+        99
+      ],
+      "summary": "结果监听器抽象基类，定义测试运行各阶段的虚拟回调方法：OnTestPlanRunStart、OnTestStepRunStart、OnResultPublished等。",
+      "tags": [
+        "result-processing",
+        "observer-pattern"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ResultListener.cs:ResultListenerIgnoreAttribute",
+      "type": "class",
+      "name": "ResultListenerIgnoreAttribute",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        105,
+        110
+      ],
+      "summary": "结果监听器忽略属性，标记不应被注册的结果监听器类型。",
+      "tags": [
+        "attribute",
+        "result-processing",
+        "observer-pattern"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ResultListener.cs:ResultParameter",
+      "type": "class",
+      "name": "ResultParameter",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        115,
+        233
+      ],
+      "summary": "结果参数定义类，封装参数名称（Name）、分组（Group）、值（Value）、父级层级（ParentLevel）和宏名称（MacroName）。",
+      "tags": [
+        "result-processing",
+        "core"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ResultListener.cs:SafeArray",
+      "type": "class",
+      "name": "SafeArray",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        236,
+        299
+      ],
+      "summary": "线程安全的固定大小数组封装，支持安全的并发Resize操作和多子数组的枚举遍历。",
+      "tags": [
+        "data-structure",
+        "core"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ResultListener.cs:ResultParameters",
+      "type": "class",
+      "name": "ResultParameters",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        304,
+        873
+      ],
+      "summary": "结果参数集合类，实现IList<ResultParameter>，提供按名称/分组查找、从对象反射提取参数和增量更新。",
+      "tags": [
+        "result-processing",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ResultObjectTypes.cs:ResultObjectTypes",
+      "type": "class",
+      "name": "ResultObjectTypes",
+      "filePath": "Engine/ResultObjectTypes.cs",
+      "lineRange": [
+        4,
+        10
+      ],
+      "summary": "结果对象类型静态容器，暴露ResultVector和ResultColumn的TypeData引用供全局使用。",
+      "tags": [
+        "result-processing",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ResultSettings.cs:ResultSettings",
+      "type": "class",
+      "name": "ResultSettings",
+      "filePath": "Engine/ResultSettings.cs",
+      "lineRange": [
+        11,
+        14
+      ],
+      "summary": "结果设置类，作为结果相关ComponentSettings的配置基类。",
+      "tags": [
+        "result-processing",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:ResultParameter",
+      "type": "function",
+      "name": "ResultParameter",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        156,
+        162
+      ],
+      "summary": "函数 ResultParameter，7 行，参数: name, value。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:ResultParameter#166",
+      "type": "function",
+      "name": "ResultParameter",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        166,
+        181
+      ],
+      "summary": "函数 ResultParameter，16 行，参数: group, name, value, metadata, parentLevel。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:ResultParameter#188",
+      "type": "function",
+      "name": "ResultParameter",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        188,
+        201
+      ],
+      "summary": "函数 ResultParameter，14 行，参数: group, name, value, macroName。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:Equals",
+      "type": "function",
+      "name": "Equals",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        208,
+        217
+      ],
+      "summary": "函数 Equals，10 行，参数: obj。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:GetHashCode",
+      "type": "function",
+      "name": "GetHashCode",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        223,
+        232
+      ],
+      "summary": "函数 GetHashCode，10 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:SafeArray",
+      "type": "function",
+      "name": "SafeArray",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        249,
+        259
+      ],
+      "summary": "函数 SafeArray，11 行，参数: original。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:Resize",
+      "type": "function",
+      "name": "Resize",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        268,
+        279
+      ],
+      "summary": "函数 Resize，12 行，参数: newSize。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:Find",
+      "type": "function",
+      "name": "Find",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        336,
+        341
+      ],
+      "summary": "函数 Find，6 行，参数: name, group。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:Find#344",
+      "type": "function",
+      "name": "Find",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        344,
+        349
+      ],
+      "summary": "函数 Find，6 行，参数: key。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:GetMetadataFromObject",
+      "type": "function",
+      "name": "GetMetadataFromObject",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        385,
+        392
+      ],
+      "summary": "函数 GetMetadataFromObject，8 行，参数: res。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:GetComponentSettingsMetadata",
+      "type": "function",
+      "name": "GetComponentSettingsMetadata",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        398,
+        423
+      ],
+      "summary": "获取所有ComponentSettings派生类型的元数据，遍历设置实例并通过反射提取元数据参数。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:GetComponentSettingsMetadataLazy",
+      "type": "function",
+      "name": "GetComponentSettingsMetadataLazy",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        431,
+        476
+      ],
+      "summary": "惰性获取ComponentSettings元数据，按优先级排序派生类型，批量加载并支持可枚举设置集合的展开提取。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:GetParams",
+      "type": "function",
+      "name": "GetParams",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        482,
+        504
+      ],
+      "summary": "收集结果参数，将对象属性值按名称、分组和元数据封装为ResultParameter列表。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:GetPropertiesFromObject",
+      "type": "function",
+      "name": "GetPropertiesFromObject",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        589,
+        613
+      ],
+      "summary": "从对象通过反射提取属性值，为每个公开可读属性调用GetParams生成结果参数条目。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:UpdateParams",
+      "type": "function",
+      "name": "UpdateParams",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        615,
+        653
+      ],
+      "summary": "更新结果参数集，从对象反射提取属性值并覆盖已有参数条目。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:ToDictionary",
+      "type": "function",
+      "name": "ToDictionary",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        702,
+        711
+      ],
+      "summary": "函数 ToDictionary，10 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:addRangeUnsafe",
+      "type": "function",
+      "name": "addRangeUnsafe",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        723,
+        799
+      ],
+      "summary": "线程安全地向结果参数集批量添加参数，内部处理索引映射更新和数据数组的扩容操作。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:AddRange",
+      "type": "function",
+      "name": "AddRange",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        809,
+        815
+      ],
+      "summary": "函数 AddRange，7 行，参数: parameters。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultListener.cs:SetIndexed",
+      "type": "function",
+      "name": "SetIndexed",
+      "filePath": "Engine/ResultListener.cs",
+      "lineRange": [
+        843,
+        859
+      ],
+      "summary": "函数 SetIndexed，17 行，参数: key, index, value。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "class:Engine/ResultListener.cs:ResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "class:Engine/ResultListener.cs:ResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "class:Engine/ResultListener.cs:ResultListenerIgnoreAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "class:Engine/ResultListener.cs:ResultListenerIgnoreAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "class:Engine/ResultListener.cs:ResultParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "class:Engine/ResultListener.cs:ResultParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "class:Engine/ResultListener.cs:SafeArray",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "class:Engine/ResultListener.cs:SafeArray",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "class:Engine/ResultListener.cs:ResultParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "class:Engine/ResultListener.cs:ResultParameters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:ResultParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:ResultParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:ResultParameter#166",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:ResultParameter#166",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:ResultParameter#188",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:ResultParameter#188",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:Equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:GetHashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:GetHashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:SafeArray",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:SafeArray",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:Resize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:Resize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:Find",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:Find",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:Find#344",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:Find#344",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:GetMetadataFromObject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:GetMetadataFromObject",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:GetComponentSettingsMetadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:GetComponentSettingsMetadata",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:GetComponentSettingsMetadataLazy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:GetParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:GetPropertiesFromObject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:UpdateParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:ToDictionary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:ToDictionary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:addRangeUnsafe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:AddRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:AddRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultListener.cs",
+      "target": "function:Engine/ResultListener.cs:SetIndexed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultObjectTypes.cs",
+      "target": "class:Engine/ResultObjectTypes.cs:ResultObjectTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultObjectTypes.cs",
+      "target": "class:Engine/ResultObjectTypes.cs:ResultObjectTypes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultSettings.cs",
+      "target": "class:Engine/ResultSettings.cs:ResultSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultSettings.cs",
+      "target": "class:Engine/ResultSettings.cs:ResultSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

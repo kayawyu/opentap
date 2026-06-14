@@ -1,0 +1,1382 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/ScpiInstrumentTest.cs",
+      "type": "file",
+      "name": "ScpiInstrumentTest.cs",
+      "filePath": "Engine.UnitTests/ScpiInstrumentTest.cs",
+      "summary": "SCPI 仪器功能的单元测试，使用模拟 IScpiIO2 接口验证 ScpiInstrument Open/Close 操作不再因 STB 读取错误而异常。",
+      "tags": [
+        "scpi",
+        "instrument",
+        "open-close",
+        "test",
+        "unit-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/ScpiInstrumentTest.cs:ScpiInstrumentTest",
+      "type": "class",
+      "name": "ScpiInstrumentTest",
+      "filePath": "Engine.UnitTests/ScpiInstrumentTest.cs",
+      "lineRange": [
+        9,
+        154
+      ],
+      "summary": "ScpiInstrumentTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScpiInstrumentTest.cs:ScpiInstrumentOpenCloseNoStbError",
+      "type": "function",
+      "name": "ScpiInstrumentOpenCloseNoStbError",
+      "filePath": "Engine.UnitTests/ScpiInstrumentTest.cs",
+      "lineRange": [
+        138,
+        153
+      ],
+      "summary": "回归测试：验证 ScpiInstrument Open/Close 过程中 STB（Status Byte）读取错误不再导致异常。",
+      "tags": [
+        "test",
+        "scpi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/SecureStringSerializerTest.cs",
+      "type": "file",
+      "name": "SecureStringSerializerTest.cs",
+      "filePath": "Engine.UnitTests/SecureStringSerializerTest.cs",
+      "summary": "SecureString 序列化与反序列化的单元测试，验证 TapSerializer 能正确序列化并还原 System.Security.SecureString 类型的密码等敏感数据。",
+      "tags": [
+        "serialization",
+        "secure-string",
+        "security",
+        "test",
+        "unit-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/SecureStringSerializerTest.cs:SecureStringSerializerTest",
+      "type": "class",
+      "name": "SecureStringSerializerTest",
+      "filePath": "Engine.UnitTests/SecureStringSerializerTest.cs",
+      "lineRange": [
+        5,
+        26
+      ],
+      "summary": "SecureStringSerializerTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SecureStringSerializerTest.cs:SerializationTest",
+      "type": "function",
+      "name": "SerializationTest",
+      "filePath": "Engine.UnitTests/SecureStringSerializerTest.cs",
+      "lineRange": [
+        14,
+        25
+      ],
+      "summary": "测试 SecureString 的完整序列化/反序列化往返，验证密码字符在 XML 序列化后正确保留。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/SemanticVersionTests.cs",
+      "type": "file",
+      "name": "SemanticVersionTests.cs",
+      "filePath": "Engine.UnitTests/SemanticVersionTests.cs",
+      "summary": "语义化版本（SemanticVersion）的完整单元测试，覆盖解析、排序、相等运算符、版本优先级比较、说明符兼容性判断（兼容/精确等）、说明符字符串化等场景。",
+      "tags": [
+        "semantic-version",
+        "parsing",
+        "sorting",
+        "specifier",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/SemanticVersionTests.cs:SemanticVersionTests",
+      "type": "class",
+      "name": "SemanticVersionTests",
+      "filePath": "Engine.UnitTests/SemanticVersionTests.cs",
+      "lineRange": [
+        11,
+        190
+      ],
+      "summary": "SemanticVersionTests 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SemanticVersionTests.cs:ParseTest",
+      "type": "function",
+      "name": "ParseTest",
+      "filePath": "Engine.UnitTests/SemanticVersionTests.cs",
+      "lineRange": [
+        14,
+        36
+      ],
+      "summary": "测试 SemanticVersion 的解析功能，验证多种格式（major.minor.patch-prerelease+build）的正确解析。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SemanticVersionTests.cs:Parse",
+      "type": "function",
+      "name": "Parse",
+      "filePath": "Engine.UnitTests/SemanticVersionTests.cs",
+      "lineRange": [
+        38,
+        52
+      ],
+      "summary": "参数化测试：根据给定版本字符串和期望的各字段值验证解析结果。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SemanticVersionTests.cs:VersionSortTest",
+      "type": "function",
+      "name": "VersionSortTest",
+      "filePath": "Engine.UnitTests/SemanticVersionTests.cs",
+      "lineRange": [
+        54,
+        65
+      ],
+      "summary": "测试语义版本的排序功能，验证版本号集合的正确排序。",
+      "tags": [
+        "test",
+        "versioning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SemanticVersionTests.cs:VersionSortTest2",
+      "type": "function",
+      "name": "VersionSortTest2",
+      "filePath": "Engine.UnitTests/SemanticVersionTests.cs",
+      "lineRange": [
+        67,
+        93
+      ],
+      "summary": "扩展版本排序测试，验证包含预发布标签的版本排序正确性。",
+      "tags": [
+        "test",
+        "versioning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SemanticVersionTests.cs:EqualOperatorTests",
+      "type": "function",
+      "name": "EqualOperatorTests",
+      "filePath": "Engine.UnitTests/SemanticVersionTests.cs",
+      "lineRange": [
+        95,
+        106
+      ],
+      "summary": "测试 SemanticVersion 的 == 和 != 操作符，验证相等性比较。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SemanticVersionTests.cs:VersionPrecedenceTest",
+      "type": "function",
+      "name": "VersionPrecedenceTest",
+      "filePath": "Engine.UnitTests/SemanticVersionTests.cs",
+      "lineRange": [
+        112,
+        135
+      ],
+      "summary": "参数化测试：验证语义版本优先级规则（lower < higher），包括预发布标签的优先级。",
+      "tags": [
+        "test",
+        "versioning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SemanticVersionTests.cs:SpecifierCompatibilityTest",
+      "type": "function",
+      "name": "SpecifierCompatibilityTest",
+      "filePath": "Engine.UnitTests/SemanticVersionTests.cs",
+      "lineRange": [
+        137,
+        160
+      ],
+      "summary": "参数化测试：验证语义版本说明符（^、~ 等）的兼容性匹配逻辑。",
+      "tags": [
+        "test",
+        "versioning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SemanticVersionTests.cs:SpecifierToStringTest",
+      "type": "function",
+      "name": "SpecifierToStringTest",
+      "filePath": "Engine.UnitTests/SemanticVersionTests.cs",
+      "lineRange": [
+        174,
+        189
+      ],
+      "summary": "参数化测试：验证版本说明符（如 ^1.2.3）到字符串的正确转换和字段计数。",
+      "tags": [
+        "test",
+        "versioning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/SerializeEnumTest.cs",
+      "type": "file",
+      "name": "SerializeEnumTest.cs",
+      "filePath": "Engine.UnitTests/SerializeEnumTest.cs",
+      "summary": "测试计划序列化中包含枚举、资源引用、Switch 步骤、平台设置时的正确性验证，同时覆盖旧版平台设置、结果设置、测试计划的反序列化兼容性。",
+      "tags": [
+        "serialization",
+        "enum",
+        "test-plan",
+        "backward-compatibility",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/SerializeEnumTest.cs:SerializeEnumTest",
+      "type": "class",
+      "name": "SerializeEnumTest",
+      "filePath": "Engine.UnitTests/SerializeEnumTest.cs",
+      "lineRange": [
+        13,
+        316
+      ],
+      "summary": "SerializeEnumTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializeEnumTest.cs:TestSerializePlan",
+      "type": "function",
+      "name": "TestSerializePlan",
+      "filePath": "Engine.UnitTests/SerializeEnumTest.cs",
+      "lineRange": [
+        85,
+        113
+      ],
+      "summary": "测试包含枚举类型属性的 TestPlan 序列化，验证枚举值正确保留。",
+      "tags": [
+        "test",
+        "unit-test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeAndRunSimplePlan",
+      "type": "function",
+      "name": "SerializeAndRunSimplePlan",
+      "filePath": "Engine.UnitTests/SerializeEnumTest.cs",
+      "lineRange": [
+        115,
+        132
+      ],
+      "summary": "测试序列化含枚举的简单 TestPlan 然后反序列化并运行。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeResourcesWithResources",
+      "type": "function",
+      "name": "SerializeResourcesWithResources",
+      "filePath": "Engine.UnitTests/SerializeEnumTest.cs",
+      "lineRange": [
+        142,
+        179
+      ],
+      "summary": "测试带 Instrument 资源的 TestPlan 序列化，验证 Resource 引用正确。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeSwitch",
+      "type": "function",
+      "name": "SerializeSwitch",
+      "filePath": "Engine.UnitTests/SerializeEnumTest.cs",
+      "lineRange": [
+        181,
+        219
+      ],
+      "summary": "测试含 Switch 步骤的 TestPlan 序列化，验证分支结构正确保留。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeResourcesWithResourcesTough",
+      "type": "function",
+      "name": "SerializeResourcesWithResourcesTough",
+      "filePath": "Engine.UnitTests/SerializeEnumTest.cs",
+      "lineRange": [
+        221,
+        250
+      ],
+      "summary": "复杂资源引用场景的序列化测试（多重 Instrument 和 Dut 交叉引用）。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializePlatformSettings",
+      "type": "function",
+      "name": "SerializePlatformSettings",
+      "filePath": "Engine.UnitTests/SerializeEnumTest.cs",
+      "lineRange": [
+        252,
+        270
+      ],
+      "summary": "测试 PlatformSettings 的序列化与反序列化。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializeEnumTest.cs:DeserializeLegacyResultSettings",
+      "type": "function",
+      "name": "DeserializeLegacyResultSettings",
+      "filePath": "Engine.UnitTests/SerializeEnumTest.cs",
+      "lineRange": [
+        279,
+        290
+      ],
+      "summary": "测试旧版 ResultSettings XML 的反序列化兼容性。",
+      "tags": [
+        "test",
+        "serialization",
+        "result-table"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializeEnumTest.cs:LoadLegacyTestPlanReference",
+      "type": "function",
+      "name": "LoadLegacyTestPlanReference",
+      "filePath": "Engine.UnitTests/SerializeEnumTest.cs",
+      "lineRange": [
+        302,
+        314
+      ],
+      "summary": "测试旧版 <TestPlanReference> XML 格式的加载与反序列化。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/SerializerTests.cs",
+      "type": "file",
+      "name": "SerializerTests.cs",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "summary": "TapSerializer 的综合性单元测试，覆盖 TestPlan 元数据、仪器名称尾随空格、PackageVersion 许可证、Input 序列化、PackageDependency、资源引用、已授权步骤、嵌套对象、MaybeUsedType 及 Nullable 属性序列化/反序列化等场景。",
+      "tags": [
+        "serialization",
+        "deserialization",
+        "test-plan",
+        "package",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "type": "class",
+      "name": "SerializerTests",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        15,
+        612
+      ],
+      "summary": "SerializerTests 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:TestSerializeTestPlanMetaData",
+      "type": "function",
+      "name": "TestSerializeTestPlanMetaData",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        26,
+        34
+      ],
+      "summary": "测试 TestPlan 级别的 MetaData 属性序列化与反序列化。",
+      "tags": [
+        "test",
+        "unit-test",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:TestSerializeInstrumentsWithTrailingSpaceInName",
+      "type": "function",
+      "name": "TestSerializeInstrumentsWithTrailingSpaceInName",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        44,
+        67
+      ],
+      "summary": "测试仪器名称包含尾随空格时的序列化，验证空格正确处理不丢失。",
+      "tags": [
+        "test",
+        "unit-test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:TestPackageVersionLicenseSerializer",
+      "type": "function",
+      "name": "TestPackageVersionLicenseSerializer",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        69,
+        84
+      ],
+      "summary": "测试 PackageVersion 许可证信息的序列化与反序列化。",
+      "tags": [
+        "test",
+        "unit-test",
+        "serialization",
+        "versioning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:SerializeInputInTestPlanReferenceTest",
+      "type": "function",
+      "name": "SerializeInputInTestPlanReferenceTest",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        86,
+        138
+      ],
+      "summary": "测试在 TestPlanReference（子计划）中序列化 Input 属性的功能。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:TestPackageDependencySerializer",
+      "type": "function",
+      "name": "TestPackageDependencySerializer",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        140,
+        214
+      ],
+      "summary": "测试 PackageDependency（包依赖）的序列化，验证 Name、Version、架构等属性。",
+      "tags": [
+        "test",
+        "unit-test",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:TestSerializingResourceReferences",
+      "type": "function",
+      "name": "TestSerializingResourceReferences",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        238,
+        268
+      ],
+      "summary": "测试 Resource 引用的序列化，验证 Instrument 和 Dut 引用正确处理。",
+      "tags": [
+        "test",
+        "unit-test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:DeserializeLicensedTest",
+      "type": "function",
+      "name": "DeserializeLicensedTest",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        282,
+        309
+      ],
+      "summary": "测试需要许可证的步骤从 XML 反序列化，验证许可证需求正确表达。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:TestDeserializeStep",
+      "type": "function",
+      "name": "TestDeserializeStep",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        326,
+        363
+      ],
+      "summary": "测试从 XML 反序列化 TestStep，验证属性和子步骤正确还原。",
+      "tags": [
+        "test",
+        "unit-test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:TestSerializeNestedObject",
+      "type": "function",
+      "name": "TestSerializeNestedObject",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        407,
+        429
+      ],
+      "summary": "测试嵌套对象属性的序列化，验证深层结构正确保留。",
+      "tags": [
+        "test",
+        "unit-test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:SerializerMaybeUsedType",
+      "type": "function",
+      "name": "SerializerMaybeUsedType",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        431,
+        449
+      ],
+      "summary": "测试 MaybeUsedType 在添加序列化插件依赖后的正确序列化。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:TestSerializerDeferOrder",
+      "type": "function",
+      "name": "TestSerializerDeferOrder",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        458,
+        497
+      ],
+      "summary": "测试序列化器的延迟顺序（DeferOrder），验证多插件序列化器按正确优先级执行。",
+      "tags": [
+        "test",
+        "unit-test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:DuplicatedAttachedPropertySerializerNullBug",
+      "type": "function",
+      "name": "DuplicatedAttachedPropertySerializerNullBug",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        570,
+        586
+      ],
+      "summary": "回归测试：验证重复 AttachedProperty 序列化器在 null 值时不抛出异常的修复。",
+      "tags": [
+        "test",
+        "serialization",
+        "regression-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SerializerTests.cs:SerializeDeserializePropertyWithNullable",
+      "type": "function",
+      "name": "SerializeDeserializePropertyWithNullable",
+      "filePath": "Engine.UnitTests/SerializerTests.cs",
+      "lineRange": [
+        588,
+        611
+      ],
+      "summary": "测试带有 Nullable 属性的序列化与反序列化，验证 null 值正确处理。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/SessionLogTest.cs",
+      "type": "file",
+      "name": "SessionLogTest.cs",
+      "filePath": "Engine.UnitTests/SessionLogTest.cs",
+      "summary": "SessionLog（会话日志）的单元测试，验证日志文件重命名、日志滚动（Rollover）机制，确保长时间运行时日志文件正确归档。",
+      "tags": [
+        "session-log",
+        "logging",
+        "rollover",
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/SessionLogTest.cs:SessionLogTest",
+      "type": "class",
+      "name": "SessionLogTest",
+      "filePath": "Engine.UnitTests/SessionLogTest.cs",
+      "lineRange": [
+        13,
+        124
+      ],
+      "summary": "SessionLogTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SessionLogTest.cs:RenameSessionLogFile",
+      "type": "function",
+      "name": "RenameSessionLogFile",
+      "filePath": "Engine.UnitTests/SessionLogTest.cs",
+      "lineRange": [
+        17,
+        42
+      ],
+      "summary": "测试 SessionLog 文件重命名功能，验证重命名后日志正确写入新文件名。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SessionLogTest.cs:LogRolloverTest",
+      "type": "function",
+      "name": "LogRolloverTest",
+      "filePath": "Engine.UnitTests/SessionLogTest.cs",
+      "lineRange": [
+        47,
+        123
+      ],
+      "summary": "测试日志滚动（Rollover）功能，模拟大量日志写入触发滚动并验证归档文件数量和名称正确性。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/StringConvertProviderTest.cs",
+      "type": "file",
+      "name": "StringConvertProviderTest.cs",
+      "filePath": "Engine.UnitTests/StringConvertProviderTest.cs",
+      "summary": "StringConvertProvider（字符串转换提供者）的单元测试，验证复杂对象（泛型接口、匿名类型、嵌套属性）的字符串序列化/反序列化，以及反序列化丢失输入属性的边界情况。",
+      "tags": [
+        "string-convert",
+        "serialization",
+        "type-conversion",
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/StringConvertProviderTest.cs:StringConvertProviderTest",
+      "type": "class",
+      "name": "StringConvertProviderTest",
+      "filePath": "Engine.UnitTests/StringConvertProviderTest.cs",
+      "lineRange": [
+        13,
+        337
+      ],
+      "summary": "StringConvertProviderTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/StringConvertProviderTest.cs:StringConvertTest",
+      "type": "function",
+      "name": "StringConvertTest",
+      "filePath": "Engine.UnitTests/StringConvertProviderTest.cs",
+      "lineRange": [
+        52,
+        109
+      ],
+      "summary": "综合测试 StringConvertProvider 的序列化与反序列化，验证通用接口属性、匿名类型数组、嵌套对象等多场景。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/StringConvertProviderTest.cs:AnyObjectSerializeTest",
+      "type": "function",
+      "name": "AnyObjectSerializeTest",
+      "filePath": "Engine.UnitTests/StringConvertProviderTest.cs",
+      "lineRange": [
+        170,
+        183
+      ],
+      "summary": "测试 AnyObject 类型的序列化与反序列化。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/StringConvertProviderTest.cs:DeserializeLostInputProperty",
+      "type": "function",
+      "name": "DeserializeLostInputProperty",
+      "filePath": "Engine.UnitTests/StringConvertProviderTest.cs",
+      "lineRange": [
+        185,
+        210
+      ],
+      "summary": "测试当反序列化时输入属性不存在的异常处理。",
+      "tags": [
+        "test",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/StringConvertProviderTest.cs:TestBadTypeFix",
+      "type": "function",
+      "name": "TestBadTypeFix",
+      "filePath": "Engine.UnitTests/StringConvertProviderTest.cs",
+      "lineRange": [
+        310,
+        336
+      ],
+      "summary": "回归测试：验证特定坏类型修复场景下的字符串序列化正确性。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/ScpiInstrumentTest.cs",
+      "target": "class:Engine.UnitTests/ScpiInstrumentTest.cs:ScpiInstrumentTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/ScpiInstrumentTest.cs:ScpiInstrumentTest",
+      "target": "function:Engine.UnitTests/ScpiInstrumentTest.cs:ScpiInstrumentOpenCloseNoStbError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScpiInstrumentTest.cs",
+      "target": "function:Engine.UnitTests/ScpiInstrumentTest.cs:ScpiInstrumentOpenCloseNoStbError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/SecureStringSerializerTest.cs",
+      "target": "class:Engine.UnitTests/SecureStringSerializerTest.cs:SecureStringSerializerTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/SecureStringSerializerTest.cs:SecureStringSerializerTest",
+      "target": "function:Engine.UnitTests/SecureStringSerializerTest.cs:SerializationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SecureStringSerializerTest.cs",
+      "target": "function:Engine.UnitTests/SecureStringSerializerTest.cs:SerializationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/SemanticVersionTests.cs",
+      "target": "class:Engine.UnitTests/SemanticVersionTests.cs:SemanticVersionTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/SemanticVersionTests.cs:SemanticVersionTests",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:ParseTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SemanticVersionTests.cs",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:ParseTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SemanticVersionTests.cs:SemanticVersionTests",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:Parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/SemanticVersionTests.cs:SemanticVersionTests",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:VersionSortTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SemanticVersionTests.cs",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:VersionSortTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SemanticVersionTests.cs:SemanticVersionTests",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:VersionSortTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SemanticVersionTests.cs",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:VersionSortTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SemanticVersionTests.cs:SemanticVersionTests",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:EqualOperatorTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SemanticVersionTests.cs",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:EqualOperatorTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SemanticVersionTests.cs:SemanticVersionTests",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:VersionPrecedenceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SemanticVersionTests.cs",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:VersionPrecedenceTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SemanticVersionTests.cs:SemanticVersionTests",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:SpecifierCompatibilityTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SemanticVersionTests.cs",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:SpecifierCompatibilityTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SemanticVersionTests.cs:SemanticVersionTests",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:SpecifierToStringTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SemanticVersionTests.cs",
+      "target": "function:Engine.UnitTests/SemanticVersionTests.cs:SpecifierToStringTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializeEnumTest.cs",
+      "target": "class:Engine.UnitTests/SerializeEnumTest.cs:SerializeEnumTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializeEnumTest.cs:SerializeEnumTest",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:TestSerializePlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializeEnumTest.cs",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:TestSerializePlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializeEnumTest.cs:SerializeEnumTest",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeAndRunSimplePlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializeEnumTest.cs",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeAndRunSimplePlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializeEnumTest.cs:SerializeEnumTest",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeResourcesWithResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializeEnumTest.cs",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeResourcesWithResources",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializeEnumTest.cs:SerializeEnumTest",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeSwitch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializeEnumTest.cs",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeSwitch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializeEnumTest.cs:SerializeEnumTest",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeResourcesWithResourcesTough",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializeEnumTest.cs",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializeResourcesWithResourcesTough",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializeEnumTest.cs:SerializeEnumTest",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializePlatformSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializeEnumTest.cs",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:SerializePlatformSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializeEnumTest.cs:SerializeEnumTest",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:DeserializeLegacyResultSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializeEnumTest.cs",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:DeserializeLegacyResultSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializeEnumTest.cs:SerializeEnumTest",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:LoadLegacyTestPlanReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializeEnumTest.cs",
+      "target": "function:Engine.UnitTests/SerializeEnumTest.cs:LoadLegacyTestPlanReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestSerializeTestPlanMetaData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestSerializeTestPlanMetaData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestSerializeInstrumentsWithTrailingSpaceInName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestSerializeInstrumentsWithTrailingSpaceInName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestPackageVersionLicenseSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestPackageVersionLicenseSerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:SerializeInputInTestPlanReferenceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:SerializeInputInTestPlanReferenceTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestPackageDependencySerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestPackageDependencySerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestSerializingResourceReferences",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestSerializingResourceReferences",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:DeserializeLicensedTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:DeserializeLicensedTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestDeserializeStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestDeserializeStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestSerializeNestedObject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestSerializeNestedObject",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:SerializerMaybeUsedType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:SerializerMaybeUsedType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestSerializerDeferOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:TestSerializerDeferOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:DuplicatedAttachedPropertySerializerNullBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:DuplicatedAttachedPropertySerializerNullBug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SerializerTests.cs:SerializerTests",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:SerializeDeserializePropertyWithNullable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SerializerTests.cs",
+      "target": "function:Engine.UnitTests/SerializerTests.cs:SerializeDeserializePropertyWithNullable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/SessionLogTest.cs",
+      "target": "class:Engine.UnitTests/SessionLogTest.cs:SessionLogTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/SessionLogTest.cs:SessionLogTest",
+      "target": "function:Engine.UnitTests/SessionLogTest.cs:RenameSessionLogFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SessionLogTest.cs",
+      "target": "function:Engine.UnitTests/SessionLogTest.cs:RenameSessionLogFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SessionLogTest.cs:SessionLogTest",
+      "target": "function:Engine.UnitTests/SessionLogTest.cs:LogRolloverTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SessionLogTest.cs",
+      "target": "function:Engine.UnitTests/SessionLogTest.cs:LogRolloverTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/StringConvertProviderTest.cs",
+      "target": "class:Engine.UnitTests/StringConvertProviderTest.cs:StringConvertProviderTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/StringConvertProviderTest.cs:StringConvertProviderTest",
+      "target": "function:Engine.UnitTests/StringConvertProviderTest.cs:StringConvertTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/StringConvertProviderTest.cs",
+      "target": "function:Engine.UnitTests/StringConvertProviderTest.cs:StringConvertTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/StringConvertProviderTest.cs:StringConvertProviderTest",
+      "target": "function:Engine.UnitTests/StringConvertProviderTest.cs:AnyObjectSerializeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/StringConvertProviderTest.cs",
+      "target": "function:Engine.UnitTests/StringConvertProviderTest.cs:AnyObjectSerializeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/StringConvertProviderTest.cs:StringConvertProviderTest",
+      "target": "function:Engine.UnitTests/StringConvertProviderTest.cs:DeserializeLostInputProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/StringConvertProviderTest.cs",
+      "target": "function:Engine.UnitTests/StringConvertProviderTest.cs:DeserializeLostInputProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/StringConvertProviderTest.cs:StringConvertProviderTest",
+      "target": "function:Engine.UnitTests/StringConvertProviderTest.cs:TestBadTypeFix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/StringConvertProviderTest.cs",
+      "target": "function:Engine.UnitTests/StringConvertProviderTest.cs:TestBadTypeFix",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

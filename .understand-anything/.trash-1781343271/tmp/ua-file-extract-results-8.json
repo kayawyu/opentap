@@ -1,0 +1,31 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "Package.UnitTests/ExamplePackage.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 34,
+      "nonEmptyLines": 34,
+      "metrics": {}
+    },
+    {
+      "path": "Package.UnitTests/GitVersionDependency-package.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 15,
+      "nonEmptyLines": 15,
+      "metrics": {}
+    },
+    {
+      "path": "Package.UnitTests/Tap.Package.UnitTests.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 113,
+      "nonEmptyLines": 109,
+      "metrics": {}
+    }
+  ]
+}

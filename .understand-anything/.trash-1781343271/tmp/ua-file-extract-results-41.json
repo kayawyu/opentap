@@ -1,0 +1,4376 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "sdk/Examples/ExamplePlugin/MeasurePeakAmplitudeTestStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 175,
+      "nonEmptyLines": 149,
+      "functions": [
+        {
+          "name": "MeasurePeakAmplitudeTestStep",
+          "startLine": 95,
+          "endLine": 106,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 115,
+          "endLine": 160,
+          "params": []
+        },
+        {
+          "name": "SizesAreAppropriate",
+          "startLine": 170,
+          "endLine": 173,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MeasurePeakAmplitudeTestStep",
+          "startLine": 41,
+          "endLine": 174,
+          "methods": [
+            "MeasurePeakAmplitudeTestStep",
+            "Run",
+            "SizesAreAppropriate"
+          ],
+          "properties": [
+            "InputData",
+            "MyGenerator",
+            "MyFilter",
+            "WindowSize",
+            "ReadOnlyOutputData",
+            "LimitCheckEnabled",
+            "MaxAmplitude"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "InputData",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "MyGenerator",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "MyFilter",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "WindowSize",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "ReadOnlyOutputData",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "LimitCheckEnabled",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "MaxAmplitude",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "MeasurePeakAmplitudeTestStep",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "MeasurePeakAmplitudeTestStep",
+          "line": 41,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MeasurePeakAmplitudeTestStep",
+          "callee": "Rules.Add",
+          "lineNumber": 104
+        },
+        {
+          "caller": "MeasurePeakAmplitudeTestStep",
+          "callee": "Rules.Add",
+          "lineNumber": 105
+        },
+        {
+          "caller": "Run",
+          "callee": "MyGenerator.SetInputData",
+          "lineNumber": 122
+        },
+        {
+          "caller": "Run",
+          "callee": "MyFilter.CalcMovingAverage",
+          "lineNumber": 128
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 134
+        },
+        {
+          "caller": "Run",
+          "callee": "ReadOnlyOutputData.Max",
+          "lineNumber": 134
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Debug",
+          "lineNumber": 140
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 141
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 145
+        },
+        {
+          "caller": "Run",
+          "callee": "Results.PublishTable",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Run",
+          "callee": "new List<string>",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Error",
+          "lineNumber": 153
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 158
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 41,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "sdk/Examples/ExamplePlugin/Properties/launchSettings.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 18,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "profiles",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/Custom.runtimeconfig.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 18,
+      "nonEmptyLines": 16,
+      "sections": [
+        {
+          "heading": "runtimeOptions",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 158,
+      "nonEmptyLines": 140,
+      "functions": [
+        {
+          "name": "CreateControl",
+          "startLine": 51,
+          "endLine": 84,
+          "params": [
+            "annotation"
+          ]
+        },
+        {
+          "name": "ListAllControlProviders",
+          "startLine": 142,
+          "endLine": 151,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 153,
+          "endLine": 156,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PictureControlProvider",
+          "startLine": 40,
+          "endLine": 118,
+          "methods": [
+            "CreateControl"
+          ],
+          "properties": [
+            "Order"
+          ]
+        },
+        {
+          "name": "PictureAttribute",
+          "startLine": 121,
+          "endLine": 124,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "StepWithPicture",
+          "startLine": 126,
+          "endLine": 157,
+          "methods": [
+            "ListAllControlProviders",
+            "Run"
+          ],
+          "properties": [
+            "Picture",
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "CreateControl",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "PictureControlProvider",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "PictureAttribute",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "Picture",
+          "line": 129,
+          "isDefault": false
+        },
+        {
+          "name": "Path",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "ListAllControlProviders",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "StepWithPicture",
+          "line": 126,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CreateControl",
+          "callee": "annotation.Get<IMemberAnnotation>()?.Member.HasAttribute<PictureAttribute>",
+          "lineNumber": 54
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "annotation.Get<IMemberAnnotation>",
+          "lineNumber": 54
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "annotation.Get<IStringValueAnnotation>",
+          "lineNumber": 58
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "new Image",
+          "lineNumber": 62
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "BindingOperations.SetBinding",
+          "lineNumber": 63
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "new Binding",
+          "lineNumber": 64
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "nameof",
+          "lineNumber": 64
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "new FileToImageConverter",
+          "lineNumber": 67
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "annotation.Get<UpdateMonitor>",
+          "lineNumber": 76
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "update.RegisterSourceUpdated",
+          "lineNumber": 80
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "img.GetBindingExpression(Image.SourceProperty).UpdateTarget",
+          "lineNumber": 80
+        },
+        {
+          "caller": "CreateControl",
+          "callee": "img.GetBindingExpression",
+          "lineNumber": 80
+        },
+        {
+          "caller": "Convert",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Convert",
+          "callee": "File.Exists",
+          "lineNumber": 95
+        },
+        {
+          "caller": "Convert",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 95
+        },
+        {
+          "caller": "Convert",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 96
+        },
+        {
+          "caller": "Convert",
+          "callee": "new BitmapImage",
+          "lineNumber": 104
+        },
+        {
+          "caller": "Convert",
+          "callee": "new Uri",
+          "lineNumber": 104
+        },
+        {
+          "caller": "ConvertBack",
+          "callee": "new NotImplementedException",
+          "lineNumber": 114
+        },
+        {
+          "caller": "ListAllControlProviders",
+          "callee": "Log.Info",
+          "lineNumber": 146
+        },
+        {
+          "caller": "ListAllControlProviders",
+          "callee": "PluginManager.GetPlugins<IControlProvider>().Select(x => (IControlProvider)Activator.CreateInstance(x)).ToArray().OrderBy",
+          "lineNumber": 147
+        },
+        {
+          "caller": "ListAllControlProviders",
+          "callee": "PluginManager.GetPlugins<IControlProvider>().Select(x => (IControlProvider)Activator.CreateInstance(x)).ToArray",
+          "lineNumber": 147
+        },
+        {
+          "caller": "ListAllControlProviders",
+          "callee": "PluginManager.GetPlugins<IControlProvider>().Select",
+          "lineNumber": 147
+        },
+        {
+          "caller": "ListAllControlProviders",
+          "callee": "PluginManager.GetPlugins<IControlProvider>",
+          "lineNumber": 147
+        },
+        {
+          "caller": "ListAllControlProviders",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 147
+        },
+        {
+          "caller": "ListAllControlProviders",
+          "callee": "Log.Info",
+          "lineNumber": 149
+        },
+        {
+          "caller": "ListAllControlProviders",
+          "callee": "controlProvider.ToString",
+          "lineNumber": 149
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 3,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/GUI/DockablePanel.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 185,
+      "nonEmptyLines": 169,
+      "functions": [
+        {
+          "name": "CreateElement",
+          "startLine": 45,
+          "endLine": 87,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "getGuiDispatcher",
+          "startLine": 131,
+          "endLine": 136,
+          "params": []
+        },
+        {
+          "name": "GuiInvoke",
+          "startLine": 143,
+          "endLine": 183,
+          "params": [
+            "action",
+            "dispatch",
+            "priority"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DockablePanel",
+          "startLine": 29,
+          "endLine": 126,
+          "methods": [
+            "CreateElement"
+          ],
+          "properties": [
+            "DesiredWidth",
+            "DesiredHeight",
+            "listener",
+            "Log"
+          ]
+        },
+        {
+          "name": "GuiHelper",
+          "startLine": 129,
+          "endLine": 184,
+          "methods": [
+            "getGuiDispatcher",
+            "GuiInvoke"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DesiredWidth",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "DesiredHeight",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "CreateElement",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "DockablePanel",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "GuiInvoke",
+          "line": 143,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CreateElement",
+          "callee": "new Button",
+          "lineNumber": 47
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "new Button",
+          "lineNumber": 48
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "new Button",
+          "lineNumber": 49
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "new TextBlock",
+          "lineNumber": 50
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "new StackPanel",
+          "lineNumber": 57
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "panel.Children.Add",
+          "lineNumber": 59
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "panel.Children.Add",
+          "lineNumber": 60
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "panel.Children.Add",
+          "lineNumber": 61
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "panel.Children.Add",
+          "lineNumber": 62
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "context.Run",
+          "lineNumber": 66
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "planThread?.Abort",
+          "lineNumber": 67
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "new OpenFileDialog",
+          "lineNumber": 70
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "fd.ShowDialog",
+          "lineNumber": 72
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "TestPlan.Load",
+          "lineNumber": 76
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "Log.Warning",
+          "lineNumber": 80
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "context.ResultListeners.Add",
+          "lineNumber": 84
+        },
+        {
+          "caller": "CreateElement",
+          "callee": "new dockResultListener",
+          "lineNumber": 84
+        },
+        {
+          "caller": "dockResultListener",
+          "callee": "OpenTap.Log.RemoveSource",
+          "lineNumber": 101
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "GuiHelper.GuiInvoke",
+          "lineNumber": 105
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "planRun.Verdict.ToString",
+          "lineNumber": 108
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "GuiHelper.GuiInvoke",
+          "lineNumber": 119
+        },
+        {
+          "caller": "GuiInvoke",
+          "callee": "getGuiDispatcher",
+          "lineNumber": 147
+        },
+        {
+          "caller": "GuiInvoke",
+          "callee": "action",
+          "lineNumber": 152
+        },
+        {
+          "caller": "GuiInvoke",
+          "callee": "dispatch.CheckAccess",
+          "lineNumber": 161
+        },
+        {
+          "caller": "GuiInvoke",
+          "callee": "action",
+          "lineNumber": 163
+        },
+        {
+          "caller": "GuiInvoke",
+          "callee": "dispatch.Invoke",
+          "lineNumber": 167
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 3,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/GUI/ResultXYChartExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 207,
+      "nonEmptyLines": 180,
+      "functions": [
+        {
+          "name": "Clear",
+          "startLine": 67,
+          "endLine": 70,
+          "params": []
+        },
+        {
+          "name": "Invalidate",
+          "startLine": 73,
+          "endLine": 76,
+          "params": []
+        },
+        {
+          "name": "GetAxisGroups",
+          "startLine": 98,
+          "endLine": 98,
+          "params": []
+        },
+        {
+          "name": "NeedAllAxes",
+          "startLine": 103,
+          "endLine": 103,
+          "params": []
+        },
+        {
+          "name": "HasLimits",
+          "startLine": 105,
+          "endLine": 105,
+          "params": []
+        },
+        {
+          "name": "getPoints",
+          "startLine": 107,
+          "endLine": 127,
+          "params": [
+            "AxisData",
+            "PlotSeries"
+          ]
+        },
+        {
+          "name": "RedrawPlot",
+          "startLine": 134,
+          "endLine": 177,
+          "params": [
+            "Title",
+            "AxisData",
+            "LimitData",
+            "PlotSeries"
+          ]
+        },
+        {
+          "name": "ResultXYChartExample",
+          "startLine": 181,
+          "endLine": 185,
+          "params": []
+        },
+        {
+          "name": "DeserializeProperties",
+          "startLine": 190,
+          "endLine": 196,
+          "params": [
+            "Props"
+          ]
+        },
+        {
+          "name": "SerializeProperties",
+          "startLine": 198,
+          "endLine": 205,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ResultXYChartExample",
+          "startLine": 36,
+          "endLine": 206,
+          "methods": [
+            "Clear",
+            "Invalidate",
+            "GetAxisGroups",
+            "NeedAllAxes",
+            "HasLimits",
+            "getPoints",
+            "RedrawPlot",
+            "ResultXYChartExample",
+            "DeserializeProperties",
+            "SerializeProperties"
+          ],
+          "properties": [
+            "offsetX",
+            "OffsetX",
+            "offsetY",
+            "OffsetY",
+            "axisGroups",
+            "canvas",
+            "UserControl"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OffsetX",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "OffsetY",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "Clear",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "Invalidate",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "GetAxisGroups",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "NeedAllAxes",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "HasLimits",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "RedrawPlot",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "ResultXYChartExample",
+          "line": 181,
+          "isDefault": false
+        },
+        {
+          "name": "UserControl",
+          "line": 188,
+          "isDefault": false
+        },
+        {
+          "name": "DeserializeProperties",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "SerializeProperties",
+          "line": 198,
+          "isDefault": false
+        },
+        {
+          "name": "ResultXYChartExample",
+          "line": 36,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Clear",
+          "callee": "canvas.Children.Clear",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getPoints",
+          "callee": "new List<Point>",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getPoints",
+          "callee": "AxisData.Where",
+          "lineNumber": 110
+        },
+        {
+          "caller": "getPoints",
+          "callee": "AxisData.Where",
+          "lineNumber": 112
+        },
+        {
+          "caller": "getPoints",
+          "callee": "result.Add",
+          "lineNumber": 120
+        },
+        {
+          "caller": "getPoints",
+          "callee": "new Point",
+          "lineNumber": 120
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "getPoints",
+          "lineNumber": 138
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "points.Select(pt => pt.X).Min",
+          "lineNumber": 146
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "points.Select",
+          "lineNumber": 146
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "points.Select(pt => pt.X).Max",
+          "lineNumber": 147
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "points.Select",
+          "lineNumber": 147
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "points.Select(pt => pt.Y).Min",
+          "lineNumber": 148
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "points.Select",
+          "lineNumber": 148
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "points.Select(pt => pt.Y).Max",
+          "lineNumber": 149
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "points.Select",
+          "lineNumber": 149
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "new Rectangle",
+          "lineNumber": 167
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "Canvas.SetLeft",
+          "lineNumber": 173
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "Canvas.SetTop",
+          "lineNumber": 174
+        },
+        {
+          "caller": "RedrawPlot",
+          "callee": "this.canvas.Children.Add",
+          "lineNumber": 175
+        },
+        {
+          "caller": "ResultXYChartExample",
+          "callee": "PropertyNotify",
+          "lineNumber": 184
+        },
+        {
+          "caller": "DeserializeProperties",
+          "callee": "Props.TryGetValue",
+          "lineNumber": 192
+        },
+        {
+          "caller": "DeserializeProperties",
+          "callee": "double.TryParse",
+          "lineNumber": 193
+        },
+        {
+          "caller": "DeserializeProperties",
+          "callee": "Props.TryGetValue",
+          "lineNumber": 194
+        },
+        {
+          "caller": "DeserializeProperties",
+          "callee": "nameof",
+          "lineNumber": 194
+        },
+        {
+          "caller": "DeserializeProperties",
+          "callee": "double.TryParse",
+          "lineNumber": 195
+        },
+        {
+          "caller": "SerializeProperties",
+          "callee": "new Dictionary<string, string>",
+          "lineNumber": 200
+        },
+        {
+          "caller": "SerializeProperties",
+          "callee": "OffsetX.ToString",
+          "lineNumber": 202
+        },
+        {
+          "caller": "SerializeProperties",
+          "callee": "OffsetY.ToString",
+          "lineNumber": 203
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/GUI/ToolsMenu.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "Invoke",
+          "startLine": 38,
+          "endLine": 38,
+          "params": []
+        },
+        {
+          "name": "Invoke",
+          "startLine": 45,
+          "endLine": 46,
+          "params": []
+        },
+        {
+          "name": "Invoke",
+          "startLine": 53,
+          "endLine": 56,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ToolMenuA",
+          "startLine": 34,
+          "endLine": 39,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": [
+            "_log"
+          ]
+        },
+        {
+          "name": "ToolMenuB",
+          "startLine": 41,
+          "endLine": 47,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": [
+            "_log"
+          ]
+        },
+        {
+          "name": "ToolMenuC",
+          "startLine": 49,
+          "endLine": 57,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": [
+            "_log"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Invoke",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "ToolMenuA",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "Invoke",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "ToolMenuB",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "Invoke",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "ToolMenuC",
+          "line": 49,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Invoke",
+          "callee": "_log.Info",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Invoke",
+          "callee": "_log.Info",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Invoke",
+          "callee": "_log.Info",
+          "lineNumber": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 3,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 31,
+      "nonEmptyLines": 27,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 32,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment.Gui/Properties/launchSettings.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 8,
+      "nonEmptyLines": 8,
+      "sections": [
+        {
+          "heading": "profiles",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 242,
+      "nonEmptyLines": 205,
+      "functions": [
+        {
+          "name": "GetTypeData",
+          "startLine": 27,
+          "endLine": 37,
+          "params": [
+            "identifier",
+            "stack"
+          ]
+        },
+        {
+          "name": "GetTypeData",
+          "startLine": 39,
+          "endLine": 49,
+          "params": [
+            "obj",
+            "stack"
+          ]
+        },
+        {
+          "name": "PrintTypeDataProviders",
+          "startLine": 65,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "GetValue",
+          "startLine": 86,
+          "endLine": 89,
+          "params": [
+            "instrument"
+          ]
+        },
+        {
+          "name": "SetValue",
+          "startLine": 92,
+          "endLine": 95,
+          "params": [
+            "instrument",
+            "id"
+          ]
+        },
+        {
+          "name": "FromInnerType",
+          "startLine": 113,
+          "endLine": 116,
+          "params": [
+            "innerType"
+          ]
+        },
+        {
+          "name": "InstrumentIDTypeData",
+          "startLine": 118,
+          "endLine": 121,
+          "params": [
+            "innerType"
+          ]
+        },
+        {
+          "name": "GetMembers",
+          "startLine": 132,
+          "endLine": 136,
+          "params": []
+        },
+        {
+          "name": "GetMember",
+          "startLine": 138,
+          "endLine": 143,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "CreateInstance",
+          "startLine": 146,
+          "endLine": 149,
+          "params": [
+            "arguments"
+          ]
+        },
+        {
+          "name": "InstrumentIDMemberData",
+          "startLine": 161,
+          "endLine": 168,
+          "params": [
+            "type",
+            "name",
+            "defaultValue"
+          ]
+        },
+        {
+          "name": "SetValue",
+          "startLine": 177,
+          "endLine": 194,
+          "params": [
+            "owner",
+            "value"
+          ]
+        },
+        {
+          "name": "GetValue",
+          "startLine": 197,
+          "endLine": 206,
+          "params": [
+            "owner"
+          ]
+        },
+        {
+          "name": "Run",
+          "startLine": 236,
+          "endLine": 240,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "InstrumentIDTypeDataProvider",
+          "startLine": 22,
+          "endLine": 78,
+          "methods": [
+            "GetTypeData",
+            "GetTypeData",
+            "PrintTypeDataProviders"
+          ],
+          "properties": [
+            "Enabled",
+            "Priority"
+          ]
+        },
+        {
+          "name": "InstrumentIDProperty",
+          "startLine": 83,
+          "endLine": 96,
+          "methods": [
+            "GetValue",
+            "SetValue"
+          ],
+          "properties": []
+        },
+        {
+          "name": "InstrumentIDTypeData",
+          "startLine": 101,
+          "endLine": 157,
+          "methods": [
+            "FromInnerType",
+            "InstrumentIDTypeData",
+            "GetMembers",
+            "GetMember",
+            "CreateInstance"
+          ],
+          "properties": [
+            "pre",
+            "innerType",
+            "cache",
+            "InstrumentIdMember",
+            "Attributes",
+            "Name",
+            "BaseType",
+            "CanCreateInstance"
+          ]
+        },
+        {
+          "name": "InstrumentIDMemberData",
+          "startLine": 159,
+          "endLine": 227,
+          "methods": [
+            "InstrumentIDMemberData",
+            "SetValue",
+            "GetValue"
+          ],
+          "properties": [
+            "Attributes",
+            "Name",
+            "DeclaringType",
+            "TypeDescriptor",
+            "Writable",
+            "Readable",
+            "valueTable",
+            "defaultValue"
+          ]
+        },
+        {
+          "name": "InstrumentIDTestStep",
+          "startLine": 230,
+          "endLine": 241,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Instrument"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GetTypeData",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "GetTypeData",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "Priority",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentIDTypeDataProvider",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "GetValue",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "SetValue",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentIDProperty",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "FromInnerType",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentIdMember",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "Attributes",
+          "line": 129,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "GetMembers",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "GetMember",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "CreateInstance",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "BaseType",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "CanCreateInstance",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentIDMemberData",
+          "line": 161,
+          "isDefault": false
+        },
+        {
+          "name": "Attributes",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "SetValue",
+          "line": 177,
+          "isDefault": false
+        },
+        {
+          "name": "GetValue",
+          "line": 197,
+          "isDefault": false
+        },
+        {
+          "name": "DeclaringType",
+          "line": 209,
+          "isDefault": false
+        },
+        {
+          "name": "TypeDescriptor",
+          "line": 212,
+          "isDefault": false
+        },
+        {
+          "name": "Writable",
+          "line": 215,
+          "isDefault": false
+        },
+        {
+          "name": "Readable",
+          "line": 218,
+          "isDefault": false
+        },
+        {
+          "name": "Instrument",
+          "line": 234,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 236,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentIDTestStep",
+          "line": 230,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetTypeData",
+          "callee": "identifier.StartsWith",
+          "lineNumber": 30
+        },
+        {
+          "caller": "GetTypeData",
+          "callee": "stack.GetTypeData",
+          "lineNumber": 32
+        },
+        {
+          "caller": "GetTypeData",
+          "callee": "identifier.Substring",
+          "lineNumber": 32
+        },
+        {
+          "caller": "GetTypeData",
+          "callee": "InstrumentIDTypeData.FromInnerType",
+          "lineNumber": 33
+        },
+        {
+          "caller": "GetTypeData",
+          "callee": "stack.GetTypeData",
+          "lineNumber": 44
+        },
+        {
+          "caller": "GetTypeData",
+          "callee": "InstrumentIDTypeData.FromInnerType",
+          "lineNumber": 45
+        },
+        {
+          "caller": "PrintTypeDataProviders",
+          "callee": "Log.CreateSource",
+          "lineNumber": 67
+        },
+        {
+          "caller": "PrintTypeDataProviders",
+          "callee": "TypeData.GetDerivedTypes<IStackedTypeDataProvider>()\n                .Where(x => x.CanCreateInstance)\n                .Select(x => x.CreateInstance())\n                .OfType<IStackedTypeDataProvider>()\n                .ToArray",
+          "lineNumber": 68
+        },
+        {
+          "caller": "PrintTypeDataProviders",
+          "callee": "TypeData.GetDerivedTypes<IStackedTypeDataProvider>()\n                .Where(x => x.CanCreateInstance)\n                .Select(x => x.CreateInstance())\n                .OfType<IStackedTypeDataProvider>",
+          "lineNumber": 68
+        },
+        {
+          "caller": "PrintTypeDataProviders",
+          "callee": "TypeData.GetDerivedTypes<IStackedTypeDataProvider>()\n                .Where(x => x.CanCreateInstance)\n                .Select",
+          "lineNumber": 68
+        },
+        {
+          "caller": "PrintTypeDataProviders",
+          "callee": "TypeData.GetDerivedTypes<IStackedTypeDataProvider>()\n                .Where",
+          "lineNumber": 68
+        },
+        {
+          "caller": "PrintTypeDataProviders",
+          "callee": "TypeData.GetDerivedTypes<IStackedTypeDataProvider>",
+          "lineNumber": 68
+        },
+        {
+          "caller": "PrintTypeDataProviders",
+          "callee": "x.CreateInstance",
+          "lineNumber": 70
+        },
+        {
+          "caller": "PrintTypeDataProviders",
+          "callee": "log.Info",
+          "lineNumber": 75
+        },
+        {
+          "caller": "GetValue",
+          "callee": "InstrumentIDTypeData.InstrumentIdMember.GetValue",
+          "lineNumber": 88
+        },
+        {
+          "caller": "SetValue",
+          "callee": "InstrumentIDTypeData.InstrumentIdMember.SetValue",
+          "lineNumber": 94
+        },
+        {
+          "caller": "FromInnerType",
+          "callee": "cache.GetValue",
+          "lineNumber": 115
+        },
+        {
+          "caller": "FromInnerType",
+          "callee": "new InstrumentIDTypeData",
+          "lineNumber": 115
+        },
+        {
+          "caller": "GetMembers",
+          "callee": "innerType.GetMembers().Concat",
+          "lineNumber": 135
+        },
+        {
+          "caller": "GetMembers",
+          "callee": "innerType.GetMembers",
+          "lineNumber": 135
+        },
+        {
+          "caller": "GetMember",
+          "callee": "innerType.GetMember",
+          "lineNumber": 142
+        },
+        {
+          "caller": "CreateInstance",
+          "callee": "innerType.CreateInstance",
+          "lineNumber": 148
+        },
+        {
+          "caller": "InstrumentIDMemberData",
+          "callee": "TypeData.FromType",
+          "lineNumber": 165
+        },
+        {
+          "caller": "SetValue",
+          "callee": "new ArgumentException",
+          "lineNumber": 180
+        },
+        {
+          "caller": "SetValue",
+          "callee": "nameof",
+          "lineNumber": 180
+        },
+        {
+          "caller": "SetValue",
+          "callee": "valueTable.Remove",
+          "lineNumber": 186
+        },
+        {
+          "caller": "SetValue",
+          "callee": "valueTable.Add",
+          "lineNumber": 187
+        },
+        {
+          "caller": "SetValue",
+          "callee": "new ArgumentException",
+          "lineNumber": 192
+        },
+        {
+          "caller": "SetValue",
+          "callee": "nameof",
+          "lineNumber": 192
+        },
+        {
+          "caller": "GetValue",
+          "callee": "valueTable.GetValue",
+          "lineNumber": 202
+        },
+        {
+          "caller": "GetValue",
+          "callee": "new ArgumentException",
+          "lineNumber": 205
+        },
+        {
+          "caller": "Run",
+          "callee": "InstrumentIDProperty.GetValue",
+          "lineNumber": 238
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 239
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 28,
+        "functionCount": 14,
+        "classCount": 5
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 129,
+      "nonEmptyLines": 110,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 17,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 29,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "iterateAndReplaceTypesInXml",
+          "startLine": 50,
+          "endLine": 76,
+          "params": [
+            "node",
+            "testPlanNode"
+          ]
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 78,
+          "endLine": 99,
+          "params": [
+            "node",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 102,
+          "endLine": 102,
+          "params": [
+            "node",
+            "obj",
+            "expectedType"
+          ]
+        },
+        {
+          "name": "printExistingSerializerPlugins",
+          "startLine": 111,
+          "endLine": 127,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OldDelayStep",
+          "startLine": 12,
+          "endLine": 21,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "DelayMs"
+          ]
+        },
+        {
+          "name": "NewDelayStep",
+          "startLine": 23,
+          "endLine": 33,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "DelaySec"
+          ]
+        },
+        {
+          "name": "BreakingChangeFixupSerializer",
+          "startLine": 35,
+          "endLine": 128,
+          "methods": [
+            "iterateAndReplaceTypesInXml",
+            "Deserialize",
+            "Serialize",
+            "printExistingSerializerPlugins"
+          ],
+          "properties": [
+            "steps",
+            "typeattr",
+            "parameterattr",
+            "scopeAttr",
+            "delayMsElem",
+            "delaySecElem",
+            "postScaleAttr",
+            "searchType",
+            "replaceType",
+            "log",
+            "Order"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DelayMs",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "OldDelayStep",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "DelaySec",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "NewDelayStep",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "Order",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "BreakingChangeFixupSerializer",
+          "line": 35,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 19
+        },
+        {
+          "caller": "Run",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 31
+        },
+        {
+          "caller": "Run",
+          "callee": "TimeSpan.FromSeconds",
+          "lineNumber": 31
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "node.Attribute",
+          "lineNumber": 52
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "node.Element",
+          "lineNumber": 56
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "valueElem.Add",
+          "lineNumber": 58
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "new XAttribute",
+          "lineNumber": 58
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "valueElem.Attribute",
+          "lineNumber": 60
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "valueElem.Attribute",
+          "lineNumber": 61
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "testPlanNode.Element(parameterAttribute.Value)?.Remove",
+          "lineNumber": 67
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "testPlanNode.Element",
+          "lineNumber": 67
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "log.Warning",
+          "lineNumber": 69
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "node.Elements",
+          "lineNumber": 74
+        },
+        {
+          "caller": "iterateAndReplaceTypesInXml",
+          "callee": "iterateAndReplaceTypesInXml",
+          "lineNumber": 75
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "t.DescendsTo",
+          "lineNumber": 81
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "iterateAndReplaceTypesInXml",
+          "lineNumber": 82
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Attribute",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "attribute.Remove",
+          "lineNumber": 89
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "double.Parse",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "x.ToString",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "double.Parse",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TapSerializer.GetCurrentSerializer().Deserialize",
+          "lineNumber": 95
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "TapSerializer.GetCurrentSerializer",
+          "lineNumber": 95
+        },
+        {
+          "caller": "printExistingSerializerPlugins",
+          "callee": "log.Info",
+          "lineNumber": 113
+        },
+        {
+          "caller": "printExistingSerializerPlugins",
+          "callee": "TypeData.GetDerivedTypes<ITapSerializerPlugin>",
+          "lineNumber": 114
+        },
+        {
+          "caller": "printExistingSerializerPlugins",
+          "callee": "type.CreateInstance",
+          "lineNumber": 119
+        },
+        {
+          "caller": "printExistingSerializerPlugins",
+          "callee": "Array.Empty<object>",
+          "lineNumber": 119
+        },
+        {
+          "caller": "printExistingSerializerPlugins",
+          "callee": "log.Info",
+          "lineNumber": 120
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 6,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 231,
+      "nonEmptyLines": 206,
+      "functions": [
+        {
+          "name": "OnPropertyChanged",
+          "startLine": 67,
+          "endLine": 70,
+          "params": [
+            "propertyName"
+          ]
+        },
+        {
+          "name": "onElementChanged",
+          "startLine": 93,
+          "endLine": 97,
+          "params": [
+            "list",
+            "element1"
+          ]
+        },
+        {
+          "name": "elementsNotifyChanged",
+          "startLine": 99,
+          "endLine": 103,
+          "params": [
+            "list"
+          ]
+        },
+        {
+          "name": "GetEnumerator",
+          "startLine": 110,
+          "endLine": 110,
+          "params": []
+        },
+        {
+          "name": "GetEnumerator",
+          "startLine": 111,
+          "endLine": 111,
+          "params": []
+        },
+        {
+          "name": "Add",
+          "startLine": 112,
+          "endLine": 112,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 113,
+          "endLine": 117,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Contains",
+          "startLine": 119,
+          "endLine": 119,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Clear",
+          "startLine": 120,
+          "endLine": 120,
+          "params": []
+        },
+        {
+          "name": "IndexOf",
+          "startLine": 121,
+          "endLine": 121,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Insert",
+          "startLine": 122,
+          "endLine": 122,
+          "params": [
+            "index",
+            "value"
+          ]
+        },
+        {
+          "name": "Remove",
+          "startLine": 123,
+          "endLine": 123,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Contains",
+          "startLine": 124,
+          "endLine": 124,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "CopyTo",
+          "startLine": 125,
+          "endLine": 125,
+          "params": [
+            "array",
+            "arrayIndex"
+          ]
+        },
+        {
+          "name": "Remove",
+          "startLine": 127,
+          "endLine": 133,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "CopyTo",
+          "startLine": 134,
+          "endLine": 134,
+          "params": [
+            "array",
+            "index"
+          ]
+        },
+        {
+          "name": "IndexOf",
+          "startLine": 140,
+          "endLine": 140,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "Insert",
+          "startLine": 141,
+          "endLine": 141,
+          "params": [
+            "index",
+            "item"
+          ]
+        },
+        {
+          "name": "RemoveAt",
+          "startLine": 142,
+          "endLine": 142,
+          "params": [
+            "index"
+          ]
+        },
+        {
+          "name": "NotifyList",
+          "startLine": 159,
+          "endLine": 163,
+          "params": [
+            "initialElements"
+          ]
+        },
+        {
+          "name": "NotifyList",
+          "startLine": 165,
+          "endLine": 168,
+          "params": []
+        },
+        {
+          "name": "notifyOnChanged",
+          "startLine": 175,
+          "endLine": 179,
+          "params": []
+        },
+        {
+          "name": "Insert",
+          "startLine": 181,
+          "endLine": 187,
+          "params": [
+            "index",
+            "item"
+          ]
+        },
+        {
+          "name": "elementPropertyChanged",
+          "startLine": 189,
+          "endLine": 189,
+          "params": [
+            "sender",
+            "e"
+          ]
+        },
+        {
+          "name": "Clear",
+          "startLine": 210,
+          "endLine": 219,
+          "params": []
+        },
+        {
+          "name": "RemoveAt",
+          "startLine": 221,
+          "endLine": 229,
+          "params": [
+            "index"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ComplexSettingsElement1",
+          "startLine": 30,
+          "endLine": 71,
+          "methods": [
+            "OnPropertyChanged"
+          ],
+          "properties": [
+            "AvailableInts",
+            "a",
+            "A",
+            "b",
+            "B",
+            "Dut"
+          ]
+        },
+        {
+          "name": "ComplexSettingsExample1",
+          "startLine": 73,
+          "endLine": 104,
+          "methods": [
+            "onElementChanged",
+            "elementsNotifyChanged"
+          ],
+          "properties": [
+            "AvailableInts",
+            "elements",
+            "Elements"
+          ]
+        },
+        {
+          "name": "VirtualList",
+          "startLine": 107,
+          "endLine": 154,
+          "methods": [
+            "GetEnumerator",
+            "GetEnumerator",
+            "Add",
+            "Add",
+            "Contains",
+            "Clear",
+            "IndexOf",
+            "Insert",
+            "Remove",
+            "Contains",
+            "CopyTo",
+            "Remove",
+            "CopyTo",
+            "IndexOf",
+            "Insert",
+            "RemoveAt"
+          ],
+          "properties": [
+            "elements",
+            "Count",
+            "SyncRoot",
+            "IsSynchronized",
+            "IsReadOnly",
+            "IsFixedSize"
+          ]
+        },
+        {
+          "name": "NotifyList",
+          "startLine": 157,
+          "endLine": 230,
+          "methods": [
+            "NotifyList",
+            "NotifyList",
+            "notifyOnChanged",
+            "Insert",
+            "elementPropertyChanged",
+            "Clear",
+            "RemoveAt"
+          ],
+          "properties": [
+            "NotifyChanged",
+            "ElementChanged",
+            "notify"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AvailableInts",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "A",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "B",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "ComplexSettingsElement1",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "AvailableInts",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "Elements",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "ComplexSettingsExample1",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "GetEnumerator",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "Contains",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "Clear",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "IndexOf",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "Insert",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "Remove",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "Contains",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "CopyTo",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "Remove",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "CopyTo",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "Count",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "SyncRoot",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "IsSynchronized",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "IsReadOnly",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "IsFixedSize",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "IndexOf",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "Insert",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveAt",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "VirtualList",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "NotifyList",
+          "line": 159,
+          "isDefault": false
+        },
+        {
+          "name": "NotifyList",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "NotifyChanged",
+          "line": 170,
+          "isDefault": false
+        },
+        {
+          "name": "ElementChanged",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "Insert",
+          "line": 181,
+          "isDefault": false
+        },
+        {
+          "name": "Clear",
+          "line": 210,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveAt",
+          "line": 221,
+          "isDefault": false
+        },
+        {
+          "name": "NotifyList",
+          "line": 157,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OnPropertyChanged",
+          "callee": "PropertyChanged?.Invoke",
+          "lineNumber": 69
+        },
+        {
+          "caller": "OnPropertyChanged",
+          "callee": "new PropertyChangedEventArgs",
+          "lineNumber": 69
+        },
+        {
+          "caller": "onElementChanged",
+          "callee": "Log.Debug",
+          "lineNumber": 96
+        },
+        {
+          "caller": "onElementChanged",
+          "callee": "list.IndexOf",
+          "lineNumber": 96
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "elements.GetEnumerator",
+          "lineNumber": 110
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "GetEnumerator",
+          "lineNumber": 111
+        },
+        {
+          "caller": "Add",
+          "callee": "Insert",
+          "lineNumber": 112
+        },
+        {
+          "caller": "Add",
+          "callee": "Add",
+          "lineNumber": 115
+        },
+        {
+          "caller": "Contains",
+          "callee": "((IList)elements).Contains",
+          "lineNumber": 119
+        },
+        {
+          "caller": "Clear",
+          "callee": "elements.Clear",
+          "lineNumber": 120
+        },
+        {
+          "caller": "IndexOf",
+          "callee": "IndexOf",
+          "lineNumber": 121
+        },
+        {
+          "caller": "Insert",
+          "callee": "Insert",
+          "lineNumber": 122
+        },
+        {
+          "caller": "Remove",
+          "callee": "Remove",
+          "lineNumber": 123
+        },
+        {
+          "caller": "Contains",
+          "callee": "elements.Contains",
+          "lineNumber": 124
+        },
+        {
+          "caller": "CopyTo",
+          "callee": "elements.CopyTo",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Remove",
+          "callee": "IndexOf",
+          "lineNumber": 129
+        },
+        {
+          "caller": "Remove",
+          "callee": "RemoveAt",
+          "lineNumber": 131
+        },
+        {
+          "caller": "CopyTo",
+          "callee": "CopyTo",
+          "lineNumber": 134
+        },
+        {
+          "caller": "IndexOf",
+          "callee": "elements.IndexOf",
+          "lineNumber": 140
+        },
+        {
+          "caller": "Insert",
+          "callee": "elements.Insert",
+          "lineNumber": 141
+        },
+        {
+          "caller": "RemoveAt",
+          "callee": "elements.RemoveAt",
+          "lineNumber": 142
+        },
+        {
+          "caller": "NotifyList",
+          "callee": "Enumerable.Empty<T>",
+          "lineNumber": 161
+        },
+        {
+          "caller": "NotifyList",
+          "callee": "Add",
+          "lineNumber": 162
+        },
+        {
+          "caller": "notifyOnChanged",
+          "callee": "NotifyChanged?.Invoke",
+          "lineNumber": 178
+        },
+        {
+          "caller": "Insert",
+          "callee": "base.Insert",
+          "lineNumber": 183
+        },
+        {
+          "caller": "Insert",
+          "callee": "notifyOnChanged",
+          "lineNumber": 186
+        },
+        {
+          "caller": "elementPropertyChanged",
+          "callee": "ElementChanged?.Invoke",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Clear",
+          "callee": "base.Clear",
+          "lineNumber": 212
+        },
+        {
+          "caller": "Clear",
+          "callee": "notifyOnChanged",
+          "lineNumber": 218
+        },
+        {
+          "caller": "RemoveAt",
+          "callee": "base.RemoveAt",
+          "lineNumber": 227
+        },
+        {
+          "caller": "RemoveAt",
+          "callee": "notifyOnChanged",
+          "lineNumber": 228
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 36,
+        "functionCount": 26,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 118,
+      "nonEmptyLines": 102,
+      "functions": [
+        {
+          "name": "OnElementWrite",
+          "startLine": 38,
+          "endLine": 41,
+          "params": [
+            "elem"
+          ]
+        },
+        {
+          "name": "OnListWrite",
+          "startLine": 43,
+          "endLine": 46,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Annotate",
+          "startLine": 92,
+          "endLine": 114,
+          "params": [
+            "annotations"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ComplexSettingsElement2",
+          "startLine": 24,
+          "endLine": 28,
+          "methods": [],
+          "properties": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "name": "ComplexSettingsExample2",
+          "startLine": 30,
+          "endLine": 47,
+          "methods": [
+            "OnElementWrite",
+            "OnListWrite"
+          ],
+          "properties": [
+            "AvailableValuesForElements",
+            "ListOfElements"
+          ]
+        },
+        {
+          "name": "ComplexSettingsAnnotator",
+          "startLine": 49,
+          "endLine": 117,
+          "methods": [
+            "Annotate"
+          ],
+          "properties": [
+            "listmember",
+            "Priority"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "A",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "B",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "ComplexSettingsElement2",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "AvailableValuesForElements",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "ListOfElements",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "OnElementWrite",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "OnListWrite",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "ComplexSettingsExample2",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "Annotate",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "Priority",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "ComplexSettingsAnnotator",
+          "line": 49,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OnElementWrite",
+          "callee": "Log.Debug",
+          "lineNumber": 40
+        },
+        {
+          "caller": "OnElementWrite",
+          "callee": "ListOfElements.IndexOf",
+          "lineNumber": 40
+        },
+        {
+          "caller": "OnListWrite",
+          "callee": "Log.Debug",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Write",
+          "callee": "dut.OnElementWrite",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Write",
+          "callee": "annotation.Get<IObjectValueAnnotation>",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Write",
+          "callee": "dut.OnListWrite",
+          "lineNumber": 85
+        },
+        {
+          "caller": "Annotate",
+          "callee": "Equals",
+          "lineNumber": 94
+        },
+        {
+          "caller": "Annotate",
+          "callee": "annotations.Get<IMemberAnnotation>",
+          "lineNumber": 94
+        },
+        {
+          "caller": "Annotate",
+          "callee": "annotations.Add",
+          "lineNumber": 96
+        },
+        {
+          "caller": "Annotate",
+          "callee": "new ListValueChanged",
+          "lineNumber": 96
+        },
+        {
+          "caller": "Annotate",
+          "callee": "annotations.Get<IReflectionAnnotation>",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Annotate",
+          "callee": "type.DescendsTo",
+          "lineNumber": 101
+        },
+        {
+          "caller": "Annotate",
+          "callee": "listAnnotation?.Get<IReflectionAnnotation>",
+          "lineNumber": 104
+        },
+        {
+          "caller": "Annotate",
+          "callee": "dutAnnotation?.Get<IMemberAnnotation>",
+          "lineNumber": 108
+        },
+        {
+          "caller": "Annotate",
+          "callee": "annotations.Add",
+          "lineNumber": 111
+        },
+        {
+          "caller": "Annotate",
+          "callee": "new AvailableIntsAnnotation",
+          "lineNumber": 111
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 3,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 84,
+      "functions": [
+        {
+          "name": "CreateModel",
+          "startLine": 31,
+          "endLine": 40,
+          "params": [
+            "member"
+          ]
+        },
+        {
+          "name": "MenuModelExample",
+          "startLine": 52,
+          "endLine": 55,
+          "params": [
+            "member"
+          ]
+        },
+        {
+          "name": "testStepLocked",
+          "startLine": 61,
+          "endLine": 68,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "RevertToDefault",
+          "startLine": 75,
+          "endLine": 94,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MenuModelExampleFactory",
+          "startLine": 29,
+          "endLine": 41,
+          "methods": [
+            "CreateModel"
+          ],
+          "properties": []
+        },
+        {
+          "name": "MenuModelExample",
+          "startLine": 47,
+          "endLine": 95,
+          "methods": [
+            "MenuModelExample",
+            "testStepLocked",
+            "RevertToDefault"
+          ],
+          "properties": [
+            "member",
+            "Source",
+            "CanExecuteRevert",
+            "IsAlreadyDefaultValues"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateModel",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "MenuModelExampleFactory",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "MenuModelExample",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "Source",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "CanExecuteRevert",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "IsAlreadyDefaultValues",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "RevertToDefault",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "MenuModelExample",
+          "line": 47,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CreateModel",
+          "callee": "member.HasAttribute<DefaultValueAttribute>",
+          "lineNumber": 34
+        },
+        {
+          "caller": "CreateModel",
+          "callee": "new MenuModelExample",
+          "lineNumber": 36
+        },
+        {
+          "caller": "testStepLocked",
+          "callee": "testStepLocked",
+          "lineNumber": 64
+        },
+        {
+          "caller": "RevertToDefault",
+          "callee": "nameof",
+          "lineNumber": 82
+        },
+        {
+          "caller": "RevertToDefault",
+          "callee": "nameof",
+          "lineNumber": 84
+        },
+        {
+          "caller": "RevertToDefault",
+          "callee": "member.GetAttribute<DefaultValueAttribute>",
+          "lineNumber": 89
+        },
+        {
+          "caller": "RevertToDefault",
+          "callee": "member.SetValue",
+          "lineNumber": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 4,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "ButtonExample",
+          "startLine": 26,
+          "endLine": 33,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 35,
+          "endLine": 38,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ButtonSetting",
+          "startLine": 20,
+          "endLine": 39,
+          "methods": [
+            "ButtonExample",
+            "Run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ButtonExample",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "ButtonSetting",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ButtonExample",
+          "callee": "Log.Info",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/CustomBenchSettings.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 84,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "CustomBenchSettings",
+          "startLine": 47,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "ToString",
+          "startLine": 53,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "ExampleComponentA",
+          "startLine": 64,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "SimilarSettingsB",
+          "startLine": 77,
+          "endLine": 81,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CustomBenchSettingsList",
+          "startLine": 28,
+          "endLine": 34,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "CustomBenchSettings",
+          "startLine": 39,
+          "endLine": 57,
+          "methods": [
+            "CustomBenchSettings",
+            "ToString"
+          ],
+          "properties": [
+            "MyProperty",
+            "MyTime"
+          ]
+        },
+        {
+          "name": "ExampleComponentA",
+          "startLine": 61,
+          "endLine": 71,
+          "methods": [
+            "ExampleComponentA"
+          ],
+          "properties": [
+            "SomeUniqueProperty"
+          ]
+        },
+        {
+          "name": "SimilarSettingsB",
+          "startLine": 74,
+          "endLine": 83,
+          "methods": [
+            "SimilarSettingsB"
+          ],
+          "properties": [
+            "SomeOtherProperty"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CustomBenchSettingsList",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "MyProperty",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "MyTime",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "CustomBenchSettings",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "ExampleComponentA",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "SomeUniqueProperty",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "ExampleComponentA",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "SimilarSettingsB",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "SomeOtherProperty",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "SimilarSettingsB",
+          "line": 74,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ToString",
+          "callee": "MyTime.ToString",
+          "lineNumber": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 4,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/ExampleSettings.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 57,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "ExampleSettings",
+          "startLine": 45,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "ToString",
+          "startLine": 52,
+          "endLine": 55,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExampleSettings",
+          "startLine": 23,
+          "endLine": 56,
+          "methods": [
+            "ExampleSettings",
+            "ToString"
+          ],
+          "properties": [
+            "DemoTime",
+            "MyInt",
+            "MyComment",
+            "InstrumentIDPropertyEnabled"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DemoTime",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "MyInt",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "MyComment",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentIDPropertyEnabled",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "ExampleSettings",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "ExampleSettings",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ToString",
+          "callee": "DemoTime.ToShortTimeString",
+          "lineNumber": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/IPAnnotation.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 192,
+      "nonEmptyLines": 168,
+      "functions": [
+        {
+          "name": "IPAnnotation",
+          "startLine": 53,
+          "endLine": 56,
+          "params": [
+            "annotations"
+          ]
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 111,
+          "endLine": 118,
+          "params": [
+            "node",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 120,
+          "endLine": 128,
+          "params": [
+            "node",
+            "obj",
+            "expectedType"
+          ]
+        },
+        {
+          "name": "Run",
+          "startLine": 137,
+          "endLine": 158,
+          "params": []
+        },
+        {
+          "name": "ListAnnotators",
+          "startLine": 160,
+          "endLine": 168,
+          "params": []
+        },
+        {
+          "name": "Annotate",
+          "startLine": 181,
+          "endLine": 190,
+          "params": [
+            "annotations"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IPAnnotation",
+          "startLine": 49,
+          "endLine": 103,
+          "methods": [
+            "IPAnnotation"
+          ],
+          "properties": [
+            "annotations",
+            "Value",
+            "error",
+            "Errors",
+            "SuggestedValues"
+          ]
+        },
+        {
+          "name": "IpAdressSerializer",
+          "startLine": 107,
+          "endLine": 129,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Order"
+          ]
+        },
+        {
+          "name": "PingStep",
+          "startLine": 132,
+          "endLine": 170,
+          "methods": [
+            "Run",
+            "ListAnnotators"
+          ],
+          "properties": [
+            "IPAddress"
+          ]
+        },
+        {
+          "name": "IPAnnotator",
+          "startLine": 173,
+          "endLine": 191,
+          "methods": [
+            "Annotate"
+          ],
+          "properties": [
+            "Priority"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IPAnnotation",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "Value",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "error",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "Errors",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "SuggestedValues",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "IPAnnotation",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "Order",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "IpAdressSerializer",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "IPAddress",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "ListAnnotators",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "PingStep",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "Priority",
+          "line": 179,
+          "isDefault": false
+        },
+        {
+          "name": "Annotate",
+          "line": 181,
+          "isDefault": false
+        },
+        {
+          "name": "IPAnnotator",
+          "line": 173,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Deserialize",
+          "callee": "TypeData.FromType",
+          "lineNumber": 113
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "IPAddress.TryParse",
+          "lineNumber": 115
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "setter",
+          "lineNumber": 116
+        },
+        {
+          "caller": "Serialize",
+          "callee": "obj.ToString",
+          "lineNumber": 124
+        },
+        {
+          "caller": "Run",
+          "callee": "p1.Send",
+          "lineNumber": 142
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 147
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 149
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 153
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 154
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 156
+        },
+        {
+          "caller": "ListAnnotators",
+          "callee": "PluginManager.GetPlugins<IAnnotator>().Select(x => (IAnnotator)Activator.CreateInstance(x)).ToArray().OrderBy",
+          "lineNumber": 164
+        },
+        {
+          "caller": "ListAnnotators",
+          "callee": "PluginManager.GetPlugins<IAnnotator>().Select(x => (IAnnotator)Activator.CreateInstance(x)).ToArray",
+          "lineNumber": 164
+        },
+        {
+          "caller": "ListAnnotators",
+          "callee": "PluginManager.GetPlugins<IAnnotator>().Select",
+          "lineNumber": 164
+        },
+        {
+          "caller": "ListAnnotators",
+          "callee": "PluginManager.GetPlugins<IAnnotator>",
+          "lineNumber": 164
+        },
+        {
+          "caller": "ListAnnotators",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 164
+        },
+        {
+          "caller": "ListAnnotators",
+          "callee": "Log.Info",
+          "lineNumber": 166
+        },
+        {
+          "caller": "ListAnnotators",
+          "callee": "controlProvider.ToString",
+          "lineNumber": 166
+        },
+        {
+          "caller": "Annotate",
+          "callee": "annotations.Get<IMemberAnnotation>",
+          "lineNumber": 183
+        },
+        {
+          "caller": "Annotate",
+          "callee": "TypeData.FromType",
+          "lineNumber": 185
+        },
+        {
+          "caller": "Annotate",
+          "callee": "annotations.Add",
+          "lineNumber": 188
+        },
+        {
+          "caller": "Annotate",
+          "callee": "new IPAnnotation",
+          "lineNumber": 188
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 17,
+        "functionCount": 6,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/OpenTapPictureExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 97,
+      "nonEmptyLines": 84,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 43,
+          "endLine": 57,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OpenTapPictureExample",
+          "startLine": 6,
+          "endLine": 96,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Question",
+            "Picture",
+            "PictureSource",
+            "PictureDescription"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Run",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "Question",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "Picture",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "PictureSource",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "PictureDescription",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "OpenTapPictureExample",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "new PictureDialogRequest",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Run",
+          "callee": "UserInput.Request",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/TestPlanCustomImportExport.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "ExportTestPlan",
+          "startLine": 28,
+          "endLine": 37,
+          "params": [
+            "plan",
+            "filePath"
+          ]
+        },
+        {
+          "name": "ImportTestPlan",
+          "startLine": 48,
+          "endLine": 59,
+          "params": [
+            "filePath"
+          ]
+        },
+        {
+          "name": "PackageOpen",
+          "startLine": 60,
+          "endLine": 63,
+          "params": [
+            "packagePath"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CompressedFormat",
+          "startLine": 26,
+          "endLine": 64,
+          "methods": [
+            "ExportTestPlan",
+            "ImportTestPlan",
+            "PackageOpen"
+          ],
+          "properties": [
+            "Extension",
+            "Name"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExportTestPlan",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "Extension",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "ImportTestPlan",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "CompressedFormat",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ExportTestPlan",
+          "callee": "System.IO.Packaging.Package.Open",
+          "lineNumber": 30
+        },
+        {
+          "caller": "ExportTestPlan",
+          "callee": "new Uri",
+          "lineNumber": 33
+        },
+        {
+          "caller": "ExportTestPlan",
+          "callee": "zipPackage.CreatePart",
+          "lineNumber": 34
+        },
+        {
+          "caller": "ExportTestPlan",
+          "callee": "PackUriHelper.CreatePartUri",
+          "lineNumber": 34
+        },
+        {
+          "caller": "ExportTestPlan",
+          "callee": "plan.Save",
+          "lineNumber": 35
+        },
+        {
+          "caller": "ExportTestPlan",
+          "callee": "zipPart.GetStream",
+          "lineNumber": 35
+        },
+        {
+          "caller": "ImportTestPlan",
+          "callee": "PackageOpen",
+          "lineNumber": 50
+        },
+        {
+          "caller": "ImportTestPlan",
+          "callee": "zipPackage.GetParts().FirstOrDefault",
+          "lineNumber": 52
+        },
+        {
+          "caller": "ImportTestPlan",
+          "callee": "zipPackage.GetParts",
+          "lineNumber": 52
+        },
+        {
+          "caller": "ImportTestPlan",
+          "callee": "pt.Uri.OriginalString.Contains",
+          "lineNumber": 52
+        },
+        {
+          "caller": "ImportTestPlan",
+          "callee": "TestPlan.Load",
+          "lineNumber": 55
+        },
+        {
+          "caller": "ImportTestPlan",
+          "callee": "part.GetStream",
+          "lineNumber": 55
+        },
+        {
+          "caller": "ImportTestPlan",
+          "callee": "new TestPlan",
+          "lineNumber": 57
+        },
+        {
+          "caller": "PackageOpen",
+          "callee": "System.IO.Packaging.Package.Open",
+          "lineNumber": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/GUI/UserInputExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 117,
+      "nonEmptyLines": 98,
+      "functions": [
+        {
+          "name": "ResetDutDialog",
+          "startLine": 28,
+          "endLine": 31,
+          "params": [
+            "dutObj"
+          ]
+        },
+        {
+          "name": "UserInputExample",
+          "startLine": 77,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 84,
+          "endLine": 114,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ResetDutDialog",
+          "startLine": 26,
+          "endLine": 52,
+          "methods": [
+            "ResetDutDialog"
+          ],
+          "properties": [
+            "Dut",
+            "Name",
+            "Message",
+            "Response",
+            "Description",
+            "Group",
+            "Order",
+            "Collapsed"
+          ]
+        },
+        {
+          "name": "EnterSNDialog",
+          "startLine": 55,
+          "endLine": 61,
+          "methods": [],
+          "properties": [
+            "SerialNumber"
+          ]
+        },
+        {
+          "name": "UserInputExample",
+          "startLine": 65,
+          "endLine": 115,
+          "methods": [
+            "UserInputExample",
+            "Run"
+          ],
+          "properties": [
+            "UseTimeout",
+            "Timeout"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ResetDutDialog",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "Message",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "Response",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "SerialNumber",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "UseTimeout",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "Timeout",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "UserInputExample",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "UserInputExample",
+          "line": 65,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "UserInputExample",
+          "callee": "Rules.Add",
+          "lineNumber": 81
+        },
+        {
+          "caller": "Run",
+          "callee": "TimeSpan.FromSeconds",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Run",
+          "callee": "new SimpleDut",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Run",
+          "callee": "new ResetDutDialog",
+          "lineNumber": 93
+        },
+        {
+          "caller": "Run",
+          "callee": "UserInput.Request",
+          "lineNumber": 94
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Run",
+          "callee": "new EnterSNDialog",
+          "lineNumber": 104
+        },
+        {
+          "caller": "Run",
+          "callee": "UserInput.Request",
+          "lineNumber": 106
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 108
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 112
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 3,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ConnectionStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 42,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "FlattenViaPoints",
+          "startLine": 77,
+          "endLine": 87,
+          "params": [
+            "viaPoints"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ConnectionStep",
+          "startLine": 34,
+          "endLine": 88,
+          "methods": [
+            "Run",
+            "FlattenViaPoints"
+          ],
+          "properties": [
+            "SimInstrument",
+            "SimDut"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SimInstrument",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "SimDut",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "ConnectionStep",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "SimInstrument.GetConstProperties<Port>",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Run",
+          "callee": "port.GetConnectionsTo",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Run",
+          "callee": "connections.Count",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Run",
+          "callee": "String.IsNullOrEmpty",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Run",
+          "callee": "FlattenViaPoints",
+          "lineNumber": 62
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 72
+        },
+        {
+          "caller": "Run",
+          "callee": "port.ToString",
+          "lineNumber": 72
+        },
+        {
+          "caller": "FlattenViaPoints",
+          "callee": "new StringBuilder",
+          "lineNumber": 79
+        },
+        {
+          "caller": "FlattenViaPoints",
+          "callee": "sb.Append",
+          "lineNumber": 83
+        },
+        {
+          "caller": "FlattenViaPoints",
+          "callee": "String.Format",
+          "lineNumber": 83
+        },
+        {
+          "caller": "FlattenViaPoints",
+          "callee": "sb.ToString().TrimEnd",
+          "lineNumber": 86
+        },
+        {
+          "caller": "FlattenViaPoints",
+          "callee": "sb.ToString",
+          "lineNumber": 86
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/FourPortDut.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 72,
+      "nonEmptyLines": 62,
+      "functions": [
+        {
+          "name": "FourPortDut",
+          "startLine": 37,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 46,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 52,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "PerformMeasurement",
+          "startLine": 58,
+          "endLine": 63,
+          "params": []
+        },
+        {
+          "name": "SetupDut",
+          "startLine": 65,
+          "endLine": 70,
+          "params": [
+            "frequency"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FourPortDut",
+          "startLine": 21,
+          "endLine": 71,
+          "methods": [
+            "FourPortDut",
+            "Open",
+            "Close",
+            "PerformMeasurement",
+            "SetupDut"
+          ],
+          "properties": [
+            "PortA",
+            "PortB",
+            "PortC",
+            "PortD",
+            "MyString",
+            "MyDouble"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PortA",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "PortB",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "PortC",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "PortD",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "MyString",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "MyDouble",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "FourPortDut",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "FourPortDut",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FourPortDut",
+          "callee": "new Port",
+          "lineNumber": 40
+        },
+        {
+          "caller": "FourPortDut",
+          "callee": "new Port",
+          "lineNumber": 41
+        },
+        {
+          "caller": "FourPortDut",
+          "callee": "new Port",
+          "lineNumber": 42
+        },
+        {
+          "caller": "FourPortDut",
+          "callee": "new Port",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Open",
+          "callee": "Log.Info",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Close",
+          "callee": "Log.Info",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 55
+        },
+        {
+          "caller": "PerformMeasurement",
+          "callee": "Log.Info",
+          "lineNumber": 60
+        },
+        {
+          "caller": "SetupDut",
+          "callee": "Log.Info",
+          "lineNumber": 67
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    }
+  ]
+}

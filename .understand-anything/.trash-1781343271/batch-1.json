@@ -1,0 +1,78 @@
+{
+  "nodes": [
+    {
+      "id": "service:docker/Linux/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "docker/Linux/Dockerfile",
+      "summary": "多阶段 Docker 构建文件，用于生成 OpenTAP 的 Linux 容器镜像。包含开发阶段（基于 .NET SDK 9.0 解包 TapPackage）、生产阶段（基于 .NET Runtime 9.0 的精简镜像）以及安全加固的生产阶段（以非 root 用户运行）。",
+      "tags": ["containerization", "infrastructure", "deployment", "security", "linux"],
+      "complexity": "moderate",
+      "languageNotes": "多阶段构建（multi-stage build）利用 .NET SDK 与 Runtime 镜像分离，有效减小最终镜像体积。"
+    },
+    {
+      "id": "service:docker/Linux/Dockerfile:development",
+      "type": "service",
+      "name": "development",
+      "filePath": "docker/Linux/Dockerfile",
+      "summary": "基于 .NET SDK 9.0 的开发构建阶段，负责更新系统包、安装 wget/libunwind/curl/git 等依赖工具、设置 en_US.UTF-8 区域、解压 OpenTAP Linux TapPackage 到 /opt/tap 目录，并执行 tap 命令验证安装。",
+      "tags": ["build-stage", "sdk", "dependencies", "verification"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "service:docker/Linux/Dockerfile:production",
+      "type": "service",
+      "name": "production",
+      "filePath": "docker/Linux/Dockerfile",
+      "summary": "基于 .NET Runtime 9.0 的精简生产阶段，从开发阶段复制已构建的 /opt/tap 目录，仅安装 libunwind8/curl/git 运行时依赖，并清理 apt 缓存以最小化镜像体积。",
+      "tags": ["runtime", "production", "minimal"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:docker/Linux/Dockerfile:production-hardened",
+      "type": "service",
+      "name": "production-hardened",
+      "filePath": "docker/Linux/Dockerfile",
+      "summary": "继承自生产阶段的安全加固版本，创建 opentap 非 root 用户（UID=1001/GID=1001）及隔离的主目录，设置 OpenTAP 缓存目录权限和 VOLUME 挂载点，以 tap 为 ENTRYPOINT 并以非 root 用户运行。",
+      "tags": ["security", "hardened", "non-root", "volume"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:docker/Linux/Dockerfile",
+      "target": "service:docker/Linux/Dockerfile:development",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "service:docker/Linux/Dockerfile",
+      "target": "service:docker/Linux/Dockerfile:production",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "service:docker/Linux/Dockerfile",
+      "target": "service:docker/Linux/Dockerfile:production-hardened",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "service:docker/Linux/Dockerfile:production",
+      "target": "service:docker/Linux/Dockerfile:development",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:docker/Linux/Dockerfile:production-hardened",
+      "target": "service:docker/Linux/Dockerfile:production",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    }
+  ]
+}

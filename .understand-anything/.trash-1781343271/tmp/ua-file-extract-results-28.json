@@ -1,0 +1,5512 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "Engine/Input.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 255,
+      "nonEmptyLines": 225,
+      "functions": [
+        {
+          "name": "updatePropertyFromName",
+          "startLine": 50,
+          "endLine": 79,
+          "params": []
+        },
+        {
+          "name": "getTopmostParent",
+          "startLine": 94,
+          "endLine": 101,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "UpdateAllOwnedInputsInPlan",
+          "startLine": 113,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "GetValueNonBlocking",
+          "startLine": 200,
+          "endLine": 205,
+          "params": []
+        },
+        {
+          "name": "ToString",
+          "startLine": 209,
+          "endLine": 209,
+          "params": []
+        },
+        {
+          "name": "Equals",
+          "startLine": 214,
+          "endLine": 219,
+          "params": [
+            "obj"
+          ]
+        },
+        {
+          "name": "GetHashCode",
+          "startLine": 223,
+          "endLine": 226,
+          "params": []
+        },
+        {
+          "name": "Clone",
+          "startLine": 228,
+          "endLine": 232,
+          "params": []
+        },
+        {
+          "name": "SupportsType",
+          "startLine": 237,
+          "endLine": 240,
+          "params": [
+            "concreteType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IInput",
+          "startLine": 12,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "Step",
+            "Property"
+          ]
+        },
+        {
+          "name": "IInputTypeRestriction",
+          "startLine": 24,
+          "endLine": 30,
+          "methods": [
+            "SupportsType"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IOwnedInput",
+          "startLine": 32,
+          "endLine": 35,
+          "methods": [],
+          "properties": [
+            "Owner"
+          ]
+        },
+        {
+          "name": "Input",
+          "startLine": 42,
+          "endLine": 254,
+          "methods": [
+            "updatePropertyFromName",
+            "getTopmostParent",
+            "UpdateAllOwnedInputsInPlan",
+            "GetValueNonBlocking",
+            "ToString",
+            "Equals",
+            "GetHashCode",
+            "Clone",
+            "SupportsType"
+          ],
+          "properties": [
+            "Property",
+            "propertyName",
+            "PropertyName",
+            "testStepOwner",
+            "OwnerNotFound",
+            "step",
+            "Step",
+            "stepId",
+            "Value",
+            "Owner"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IInput",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "IInputTypeRestriction",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "Property",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "PropertyName",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "Step",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "Value",
+          "line": 187,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 209,
+          "isDefault": false
+        },
+        {
+          "name": "Equals",
+          "line": 214,
+          "isDefault": false
+        },
+        {
+          "name": "GetHashCode",
+          "line": 223,
+          "isDefault": false
+        },
+        {
+          "name": "SupportsType",
+          "line": 237,
+          "isDefault": false
+        },
+        {
+          "name": "Input",
+          "line": 42,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "updatePropertyFromName",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 52
+        },
+        {
+          "caller": "updatePropertyFromName",
+          "callee": "propertyName.Split",
+          "lineNumber": 56
+        },
+        {
+          "caller": "updatePropertyFromName",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 61
+        },
+        {
+          "caller": "updatePropertyFromName",
+          "callee": "stepType.GetMember",
+          "lineNumber": 62
+        },
+        {
+          "caller": "updatePropertyFromName",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 72
+        },
+        {
+          "caller": "updatePropertyFromName",
+          "callee": "stepType.GetMember",
+          "lineNumber": 73
+        },
+        {
+          "caller": "UpdateAllOwnedInputsInPlan",
+          "callee": "getTopmostParent",
+          "lineNumber": 116
+        },
+        {
+          "caller": "UpdateAllOwnedInputsInPlan",
+          "callee": "topmost.ChildTestSteps.RecursivelyGetAllTestSteps",
+          "lineNumber": 117
+        },
+        {
+          "caller": "UpdateAllOwnedInputsInPlan",
+          "callee": "TypeData.GetTypeData(step).GetMembers().Where",
+          "lineNumber": 119
+        },
+        {
+          "caller": "UpdateAllOwnedInputsInPlan",
+          "callee": "TypeData.GetTypeData(step).GetMembers",
+          "lineNumber": 119
+        },
+        {
+          "caller": "UpdateAllOwnedInputsInPlan",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 119
+        },
+        {
+          "caller": "UpdateAllOwnedInputsInPlan",
+          "callee": "member.TypeDescriptor.DescendsTo",
+          "lineNumber": 119
+        },
+        {
+          "caller": "UpdateAllOwnedInputsInPlan",
+          "callee": "inputMember.GetValue",
+          "lineNumber": 123
+        },
+        {
+          "caller": "GetValueNonBlocking",
+          "callee": "Step is ITestStep step && Property?.GetValue",
+          "lineNumber": 202
+        },
+        {
+          "caller": "ToString",
+          "callee": "StringConvertProvider.GetString",
+          "lineNumber": 209
+        },
+        {
+          "caller": "ToString",
+          "callee": "GetValueNonBlocking",
+          "lineNumber": 209
+        },
+        {
+          "caller": "GetHashCode",
+          "callee": "step?.GetHashCode",
+          "lineNumber": 225
+        },
+        {
+          "caller": "GetHashCode",
+          "callee": "Property?.GetHashCode",
+          "lineNumber": 225
+        },
+        {
+          "caller": "Clone",
+          "callee": "new Input<T>",
+          "lineNumber": 228
+        },
+        {
+          "caller": "SupportsType",
+          "callee": "concreteType.DescendsTo",
+          "lineNumber": 239
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 9,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "Engine/InputOutputRelation.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 356,
+      "nonEmptyLines": 310,
+      "functions": [
+        {
+          "name": "InputOutputRelation",
+          "startLine": 36,
+          "endLine": 43,
+          "params": [
+            "inputObject",
+            "inputMember",
+            "outputObject",
+            "outputMember"
+          ]
+        },
+        {
+          "name": "IsInput",
+          "startLine": 46,
+          "endLine": 47,
+          "params": [
+            "@object",
+            "member"
+          ]
+        },
+        {
+          "name": "IsOutput",
+          "startLine": 50,
+          "endLine": 51,
+          "params": [
+            "@object",
+            "member"
+          ]
+        },
+        {
+          "name": "Assign",
+          "startLine": 54,
+          "endLine": 93,
+          "params": [
+            "inputObject",
+            "inputMember",
+            "outputObject",
+            "outputMember"
+          ]
+        },
+        {
+          "name": "Unassign",
+          "startLine": 97,
+          "endLine": 103,
+          "params": [
+            "relation"
+          ]
+        },
+        {
+          "name": "Unassign",
+          "startLine": 106,
+          "endLine": 114,
+          "params": [
+            "target",
+            "targetMember",
+            "source",
+            "sourceMember"
+          ]
+        },
+        {
+          "name": "IsInScope",
+          "startLine": 116,
+          "endLine": 130,
+          "params": [
+            "target",
+            "otherStep"
+          ]
+        },
+        {
+          "name": "checkRelations",
+          "startLine": 132,
+          "endLine": 170,
+          "params": [
+            "target"
+          ]
+        },
+        {
+          "name": "ResolveStepRun",
+          "startLine": 172,
+          "endLine": 188,
+          "params": [
+            "step",
+            "waiterStep"
+          ]
+        },
+        {
+          "name": "GetOutput",
+          "startLine": 190,
+          "endLine": 202,
+          "params": [
+            "outputMember",
+            "outputObject",
+            "inputStepGuid"
+          ]
+        },
+        {
+          "name": "UpdateInputs",
+          "startLine": 206,
+          "endLine": 239,
+          "params": [
+            "target"
+          ]
+        },
+        {
+          "name": "CanConvert",
+          "startLine": 241,
+          "endLine": 279,
+          "params": [
+            "to",
+            "from"
+          ]
+        },
+        {
+          "name": "ConvertValue",
+          "startLine": 281,
+          "endLine": 292,
+          "params": [
+            "value",
+            "to"
+          ]
+        },
+        {
+          "name": "getOutputRelations",
+          "startLine": 319,
+          "endLine": 319,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "SetOutputRelations",
+          "startLine": 322,
+          "endLine": 323,
+          "params": [
+            "step",
+            "specs"
+          ]
+        },
+        {
+          "name": "getInputRelations",
+          "startLine": 326,
+          "endLine": 326,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "GetInputRelations",
+          "startLine": 329,
+          "endLine": 334,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "GetOutputRelations",
+          "startLine": 336,
+          "endLine": 341,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "GetRelations",
+          "startLine": 344,
+          "endLine": 350,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "SetInputRelations",
+          "startLine": 353,
+          "endLine": 354,
+          "params": [
+            "step",
+            "specs"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IInputOutputRelations",
+          "startLine": 8,
+          "endLine": 14,
+          "methods": [],
+          "properties": [
+            "Inputs",
+            "Outputs"
+          ]
+        },
+        {
+          "name": "InputOutputRelation",
+          "startLine": 17,
+          "endLine": 355,
+          "methods": [
+            "InputOutputRelation",
+            "IsInput",
+            "IsOutput",
+            "Assign",
+            "Unassign",
+            "Unassign",
+            "IsInScope",
+            "checkRelations",
+            "ResolveStepRun",
+            "GetOutput",
+            "UpdateInputs",
+            "CanConvert",
+            "ConvertValue",
+            "getOutputRelations",
+            "SetOutputRelations",
+            "getInputRelations",
+            "GetInputRelations",
+            "GetOutputRelations",
+            "GetRelations",
+            "SetInputRelations"
+          ],
+          "properties": [
+            "outputObject",
+            "inputObject",
+            "outputMember",
+            "inputMember",
+            "OutputObject",
+            "InputObject",
+            "OutputMember",
+            "InputMember",
+            "Inputs",
+            "Outputs"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OutputObject",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "InputObject",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "OutputMember",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "InputMember",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "IsInput",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "IsOutput",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "Assign",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "Unassign",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "UpdateInputs",
+          "line": 206,
+          "isDefault": false
+        },
+        {
+          "name": "GetRelations",
+          "line": 344,
+          "isDefault": false
+        },
+        {
+          "name": "InputOutputRelation",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "IsInput",
+          "callee": "GetOutputRelations(@object).Any",
+          "lineNumber": 47
+        },
+        {
+          "caller": "IsInput",
+          "callee": "GetOutputRelations",
+          "lineNumber": 47
+        },
+        {
+          "caller": "IsOutput",
+          "callee": "GetInputRelations(@object).Any",
+          "lineNumber": 51
+        },
+        {
+          "caller": "IsOutput",
+          "callee": "GetInputRelations",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Assign",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Assign",
+          "callee": "nameof",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Assign",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 60
+        },
+        {
+          "caller": "Assign",
+          "callee": "nameof",
+          "lineNumber": 60
+        },
+        {
+          "caller": "Assign",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 62
+        },
+        {
+          "caller": "Assign",
+          "callee": "nameof",
+          "lineNumber": 62
+        },
+        {
+          "caller": "Assign",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 64
+        },
+        {
+          "caller": "Assign",
+          "callee": "nameof",
+          "lineNumber": 64
+        },
+        {
+          "caller": "Assign",
+          "callee": "new ArgumentException",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Assign",
+          "callee": "new ArgumentException",
+          "lineNumber": 68
+        },
+        {
+          "caller": "Assign",
+          "callee": "nameof",
+          "lineNumber": 68
+        },
+        {
+          "caller": "Assign",
+          "callee": "nameof",
+          "lineNumber": 68
+        },
+        {
+          "caller": "Assign",
+          "callee": "new ArgumentException",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Assign",
+          "callee": "nameof",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Assign",
+          "callee": "nameof",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Assign",
+          "callee": "getOutputRelations(inputObject).ToList",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Assign",
+          "callee": "getOutputRelations",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Assign",
+          "callee": "getInputRelations(outputObject).ToList",
+          "lineNumber": 72
+        },
+        {
+          "caller": "Assign",
+          "callee": "getInputRelations",
+          "lineNumber": 72
+        },
+        {
+          "caller": "Assign",
+          "callee": "new ArgumentException",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Assign",
+          "callee": "nameof",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Assign",
+          "callee": "IsInput",
+          "lineNumber": 77
+        },
+        {
+          "caller": "Assign",
+          "callee": "new Exception",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Assign",
+          "callee": "IsInput",
+          "lineNumber": 82
+        },
+        {
+          "caller": "Assign",
+          "callee": "new Exception",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Assign",
+          "callee": "IsOutput",
+          "lineNumber": 84
+        },
+        {
+          "caller": "Assign",
+          "callee": "new Exception",
+          "lineNumber": 85
+        },
+        {
+          "caller": "Assign",
+          "callee": "new InputOutputRelation",
+          "lineNumber": 87
+        },
+        {
+          "caller": "Assign",
+          "callee": "connTo.Add",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Assign",
+          "callee": "connFrom.Add",
+          "lineNumber": 89
+        },
+        {
+          "caller": "Assign",
+          "callee": "SetOutputRelations",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Assign",
+          "callee": "connTo.ToArray",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Assign",
+          "callee": "SetInputRelations",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Assign",
+          "callee": "connFrom.ToArray",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Unassign",
+          "callee": "SetOutputRelations",
+          "lineNumber": 99
+        },
+        {
+          "caller": "Unassign",
+          "callee": "getOutputRelations(relation.InputObject).Where(x => x != relation).ToArray",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Unassign",
+          "callee": "getOutputRelations(relation.InputObject).Where",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Unassign",
+          "callee": "getOutputRelations",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Unassign",
+          "callee": "SetInputRelations",
+          "lineNumber": 101
+        },
+        {
+          "caller": "Unassign",
+          "callee": "getInputRelations(relation.OutputObject).Where(x => x != relation).ToArray",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Unassign",
+          "callee": "getInputRelations(relation.OutputObject).Where",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Unassign",
+          "callee": "getInputRelations",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Unassign",
+          "callee": "getInputRelations",
+          "lineNumber": 109
+        },
+        {
+          "caller": "Unassign",
+          "callee": "from.FirstOrDefault",
+          "lineNumber": 110
+        },
+        {
+          "caller": "Unassign",
+          "callee": "Unassign",
+          "lineNumber": 113
+        },
+        {
+          "caller": "checkRelations",
+          "callee": "getOutputRelations",
+          "lineNumber": 136
+        },
+        {
+          "caller": "checkRelations",
+          "callee": "IsInScope",
+          "lineNumber": 141
+        },
+        {
+          "caller": "checkRelations",
+          "callee": "defer.Bind",
+          "lineNumber": 143
+        },
+        {
+          "caller": "checkRelations",
+          "callee": "defer.Bind",
+          "lineNumber": 149
+        },
+        {
+          "caller": "checkRelations",
+          "callee": "defer.Bind",
+          "lineNumber": 153
+        },
+        {
+          "caller": "checkRelations",
+          "callee": "getInputRelations",
+          "lineNumber": 157
+        },
+        {
+          "caller": "checkRelations",
+          "callee": "defer.Bind",
+          "lineNumber": 161
+        },
+        {
+          "caller": "checkRelations",
+          "callee": "defer.Bind",
+          "lineNumber": 165
+        },
+        {
+          "caller": "checkRelations",
+          "callee": "defer?.Invoke",
+          "lineNumber": 169
+        },
+        {
+          "caller": "ResolveStepRun",
+          "callee": "ResolveStepRun",
+          "lineNumber": 179
+        },
+        {
+          "caller": "ResolveStepRun",
+          "callee": "parentRun.WaitForChildStepStart",
+          "lineNumber": 183
+        },
+        {
+          "caller": "GetOutput",
+          "callee": "outputMember.GetAttribute<OutputAttribute>",
+          "lineNumber": 192
+        },
+        {
+          "caller": "GetOutput",
+          "callee": "ResolveStepRun",
+          "lineNumber": 196
+        },
+        {
+          "caller": "GetOutput",
+          "callee": "run.WaitForOutput",
+          "lineNumber": 198
+        },
+        {
+          "caller": "GetOutput",
+          "callee": "outputMember.GetValue",
+          "lineNumber": 201
+        },
+        {
+          "caller": "UpdateInputs",
+          "callee": "checkRelations",
+          "lineNumber": 208
+        },
+        {
+          "caller": "UpdateInputs",
+          "callee": "getOutputRelations",
+          "lineNumber": 209
+        },
+        {
+          "caller": "UpdateInputs",
+          "callee": "defer.Bind",
+          "lineNumber": 221
+        },
+        {
+          "caller": "UpdateInputs",
+          "callee": "GetOutput",
+          "lineNumber": 225
+        },
+        {
+          "caller": "UpdateInputs",
+          "callee": "Guid.NewGuid",
+          "lineNumber": 225
+        },
+        {
+          "caller": "UpdateInputs",
+          "callee": "ConvertValue",
+          "lineNumber": 228
+        },
+        {
+          "caller": "UpdateInputs",
+          "callee": "new Exception",
+          "lineNumber": 232
+        },
+        {
+          "caller": "UpdateInputs",
+          "callee": "AssignOutputEvent.Invoke",
+          "lineNumber": 234
+        },
+        {
+          "caller": "UpdateInputs",
+          "callee": "connection.InputMember.SetValue",
+          "lineNumber": 235
+        },
+        {
+          "caller": "UpdateInputs",
+          "callee": "defer",
+          "lineNumber": 238
+        },
+        {
+          "caller": "CanConvert",
+          "callee": "from.DescendsTo",
+          "lineNumber": 243
+        },
+        {
+          "caller": "ConvertValue",
+          "callee": "value.GetType",
+          "lineNumber": 287
+        },
+        {
+          "caller": "ConvertValue",
+          "callee": "Convert.ChangeType",
+          "lineNumber": 288
+        },
+        {
+          "caller": "getOutputRelations",
+          "callee": "Inputs.GetValue",
+          "lineNumber": 319
+        },
+        {
+          "caller": "getOutputRelations",
+          "callee": "Array.Empty<InputOutputRelation>",
+          "lineNumber": 319
+        },
+        {
+          "caller": "SetOutputRelations",
+          "callee": "Inputs.SetValue",
+          "lineNumber": 323
+        },
+        {
+          "caller": "SetOutputRelations",
+          "callee": "Array.Empty<InputOutputRelation>",
+          "lineNumber": 323
+        },
+        {
+          "caller": "getInputRelations",
+          "callee": "Outputs.GetValue",
+          "lineNumber": 326
+        },
+        {
+          "caller": "getInputRelations",
+          "callee": "Array.Empty<InputOutputRelation>",
+          "lineNumber": 326
+        },
+        {
+          "caller": "GetInputRelations",
+          "callee": "Outputs.GetValue",
+          "lineNumber": 331
+        },
+        {
+          "caller": "GetInputRelations",
+          "callee": "Array.Empty<InputOutputRelation>",
+          "lineNumber": 331
+        },
+        {
+          "caller": "GetInputRelations",
+          "callee": "checkRelations",
+          "lineNumber": 332
+        },
+        {
+          "caller": "GetInputRelations",
+          "callee": "getInputRelations",
+          "lineNumber": 333
+        },
+        {
+          "caller": "GetOutputRelations",
+          "callee": "Inputs.GetValue",
+          "lineNumber": 338
+        },
+        {
+          "caller": "GetOutputRelations",
+          "callee": "Array.Empty<InputOutputRelation>",
+          "lineNumber": 338
+        },
+        {
+          "caller": "GetOutputRelations",
+          "callee": "checkRelations",
+          "lineNumber": 339
+        },
+        {
+          "caller": "GetOutputRelations",
+          "callee": "getOutputRelations",
+          "lineNumber": 340
+        },
+        {
+          "caller": "GetRelations",
+          "callee": "Inputs.GetValue",
+          "lineNumber": 346
+        },
+        {
+          "caller": "GetRelations",
+          "callee": "Outputs.GetValue",
+          "lineNumber": 346
+        },
+        {
+          "caller": "GetRelations",
+          "callee": "Array.Empty<InputOutputRelation>",
+          "lineNumber": 347
+        },
+        {
+          "caller": "GetRelations",
+          "callee": "checkRelations",
+          "lineNumber": 348
+        },
+        {
+          "caller": "GetRelations",
+          "callee": "getOutputRelations(step).Concat",
+          "lineNumber": 349
+        },
+        {
+          "caller": "GetRelations",
+          "callee": "getOutputRelations",
+          "lineNumber": 349
+        },
+        {
+          "caller": "GetRelations",
+          "callee": "getInputRelations",
+          "lineNumber": 349
+        },
+        {
+          "caller": "SetInputRelations",
+          "callee": "Outputs.SetValue",
+          "lineNumber": 354
+        },
+        {
+          "caller": "SetInputRelations",
+          "callee": "Array.Empty<InputOutputRelation>",
+          "lineNumber": 354
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 20,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/Instrument.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 21,
+      "functions": [
+        {
+          "name": "Instrument",
+          "startLine": 17,
+          "endLine": 20,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Instrument",
+          "startLine": 12,
+          "endLine": 21,
+          "methods": [
+            "Instrument"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Instrument",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "Instrument",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/InstrumentSettings.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 28,
+      "functions": [
+        {
+          "name": "OnCollectionChanged",
+          "startLine": 19,
+          "endLine": 29,
+          "params": [
+            "sender",
+            "e"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "InstrumentSettings",
+          "startLine": 11,
+          "endLine": 30,
+          "methods": [
+            "OnCollectionChanged"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "InstrumentSettings",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OnCollectionChanged",
+          "callee": "base.OnCollectionChanged",
+          "lineNumber": 21
+        },
+        {
+          "caller": "OnCollectionChanged",
+          "callee": "con?.UpdateConnectionPorts",
+          "lineNumber": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Invokable/IInvokable.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "IInvokable",
+          "startLine": 4,
+          "endLine": 7,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IInvokable",
+          "startLine": 10,
+          "endLine": 13,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IInvokable",
+          "startLine": 16,
+          "endLine": 19,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": []
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "Engine/Invokable/Invokable.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 29,
+      "nonEmptyLines": 24,
+      "callGraph": [
+        {
+          "caller": "Invoke",
+          "callee": "action",
+          "lineNumber": 11
+        },
+        {
+          "caller": "AddArg",
+          "callee": "new Invokable<T, T2>",
+          "lineNumber": 17
+        },
+        {
+          "caller": "AddArg",
+          "callee": "act",
+          "lineNumber": 17
+        },
+        {
+          "caller": "Invoke",
+          "callee": "action",
+          "lineNumber": 27
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "Engine/Invokable/ISkippableInvokable.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "ISkippableInvokable",
+          "startLine": 6,
+          "endLine": 9,
+          "methods": [
+            "Skip"
+          ],
+          "properties": []
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IParameterizedMembersCache.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "GetParameterFor",
+          "startLine": 18,
+          "endLine": 32,
+          "params": [
+            "step",
+            "member"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IParameterizedMembersCache",
+          "startLine": 6,
+          "endLine": 11,
+          "methods": [
+            "RegisterParameterizedMember",
+            "UnregisterParameterizedMember",
+            "GetParameterFor"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ParameterizedMembersCache",
+          "startLine": 16,
+          "endLine": 33,
+          "methods": [
+            "GetParameterFor"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GetParameterFor",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetParameterFor",
+          "callee": "cache.GetParameterFor",
+          "lineNumber": 20
+        },
+        {
+          "caller": "GetParameterFor",
+          "callee": "member.GetParameter",
+          "lineNumber": 27
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/IPictureDataProvider.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 155,
+      "nonEmptyLines": 137,
+      "functions": [
+        {
+          "name": "normalizeSource",
+          "startLine": 47,
+          "endLine": 60,
+          "params": [
+            "source"
+          ]
+        },
+        {
+          "name": "GetStream",
+          "startLine": 62,
+          "endLine": 76,
+          "params": [
+            "picture"
+          ]
+        },
+        {
+          "name": "GetFormat",
+          "startLine": 78,
+          "endLine": 92,
+          "params": [
+            "picture"
+          ]
+        },
+        {
+          "name": "GetProviders",
+          "startLine": 104,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "GetFirst",
+          "startLine": 121,
+          "endLine": 139,
+          "params": [
+            "picture",
+            "func"
+          ]
+        },
+        {
+          "name": "GetStream",
+          "startLine": 146,
+          "endLine": 147,
+          "params": [
+            "picture"
+          ]
+        },
+        {
+          "name": "GetFormat",
+          "startLine": 153,
+          "endLine": 153,
+          "params": [
+            "picture"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IPictureDataProvider",
+          "startLine": 15,
+          "endLine": 33,
+          "methods": [
+            "GetStream",
+            "GetFormat"
+          ],
+          "properties": [
+            "Order"
+          ]
+        },
+        {
+          "name": "DefaultPictureDataProvider",
+          "startLine": 38,
+          "endLine": 93,
+          "methods": [
+            "normalizeSource",
+            "GetStream",
+            "GetFormat"
+          ],
+          "properties": [
+            "Order"
+          ]
+        },
+        {
+          "name": "PictureDataExtensions",
+          "startLine": 99,
+          "endLine": 154,
+          "methods": [
+            "GetProviders",
+            "GetFirst",
+            "GetStream",
+            "GetFormat"
+          ],
+          "properties": [
+            "cache",
+            "cacheKey",
+            "log"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Order",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "GetStream",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "GetFormat",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "GetStream",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "GetFormat",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "PictureDataExtensions",
+          "line": 99,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "normalizeSource",
+          "callee": "File.Exists",
+          "lineNumber": 51
+        },
+        {
+          "caller": "normalizeSource",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 52
+        },
+        {
+          "caller": "GetStream",
+          "callee": "GetFormat",
+          "lineNumber": 64
+        },
+        {
+          "caller": "GetStream",
+          "callee": "normalizeSource",
+          "lineNumber": 65
+        },
+        {
+          "caller": "GetStream",
+          "callee": "Uri.TryCreate",
+          "lineNumber": 66
+        },
+        {
+          "caller": "GetStream",
+          "callee": "WebRequest.Create",
+          "lineNumber": 69
+        },
+        {
+          "caller": "GetStream",
+          "callee": "req.GetResponseAsync",
+          "lineNumber": 71
+        },
+        {
+          "caller": "GetStream",
+          "callee": "response.GetResponseStream",
+          "lineNumber": 72
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "normalizeSource",
+          "lineNumber": 80
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "Uri.TryCreate",
+          "lineNumber": 81
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "uri.Segments.LastOrDefault",
+          "lineNumber": 83
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 84
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "Path.GetExtension",
+          "lineNumber": 86
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "ext.StartsWith",
+          "lineNumber": 87
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "Task.FromResult",
+          "lineNumber": 87
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "ext.Substring",
+          "lineNumber": 87
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "Task.FromResult<string>",
+          "lineNumber": 91
+        },
+        {
+          "caller": "GetProviders",
+          "callee": "TypeData.GetDerivedTypes<IPictureDataProvider>()\n                .Where(td => td.CanCreateInstance).ToImmutableHashSet",
+          "lineNumber": 106
+        },
+        {
+          "caller": "GetProviders",
+          "callee": "TypeData.GetDerivedTypes<IPictureDataProvider>()\n                .Where",
+          "lineNumber": 106
+        },
+        {
+          "caller": "GetProviders",
+          "callee": "TypeData.GetDerivedTypes<IPictureDataProvider>",
+          "lineNumber": 106
+        },
+        {
+          "caller": "GetProviders",
+          "callee": "types.SetEquals",
+          "lineNumber": 109
+        },
+        {
+          "caller": "GetProviders",
+          "callee": "types.TrySelect(td => td.CreateInstance(), ex => log.Debug(\"Unable to load IPictureDataProvider: {0}\", ex.Message))\n                    .OfType<IPictureDataProvider>().OrderBy(p => p.Order)\n                    .ToArray",
+          "lineNumber": 111
+        },
+        {
+          "caller": "GetProviders",
+          "callee": "types.TrySelect(td => td.CreateInstance(), ex => log.Debug(\"Unable to load IPictureDataProvider: {0}\", ex.Message))\n                    .OfType<IPictureDataProvider>().OrderBy",
+          "lineNumber": 111
+        },
+        {
+          "caller": "GetProviders",
+          "callee": "types.TrySelect(td => td.CreateInstance(), ex => log.Debug(\"Unable to load IPictureDataProvider: {0}\", ex.Message))\n                    .OfType<IPictureDataProvider>",
+          "lineNumber": 111
+        },
+        {
+          "caller": "GetProviders",
+          "callee": "types.TrySelect",
+          "lineNumber": 111
+        },
+        {
+          "caller": "GetProviders",
+          "callee": "td.CreateInstance",
+          "lineNumber": 111
+        },
+        {
+          "caller": "GetProviders",
+          "callee": "log.Debug",
+          "lineNumber": 111
+        },
+        {
+          "caller": "GetFirst",
+          "callee": "GetProviders",
+          "lineNumber": 123
+        },
+        {
+          "caller": "GetFirst",
+          "callee": "func",
+          "lineNumber": 127
+        },
+        {
+          "caller": "GetFirst",
+          "callee": "log.Debug",
+          "lineNumber": 133
+        },
+        {
+          "caller": "GetFirst",
+          "callee": "nameof",
+          "lineNumber": 133
+        },
+        {
+          "caller": "GetFirst",
+          "callee": "TypeData.GetTypeData(provider).AsTypeData().GetBestName",
+          "lineNumber": 133
+        },
+        {
+          "caller": "GetFirst",
+          "callee": "TypeData.GetTypeData(provider).AsTypeData",
+          "lineNumber": 133
+        },
+        {
+          "caller": "GetFirst",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 133
+        },
+        {
+          "caller": "GetFirst",
+          "callee": "log.Debug",
+          "lineNumber": 134
+        },
+        {
+          "caller": "GetStream",
+          "callee": "GetFirst",
+          "lineNumber": 147
+        },
+        {
+          "caller": "GetStream",
+          "callee": "provider.GetStream",
+          "lineNumber": 147
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "GetFirst",
+          "lineNumber": 153
+        },
+        {
+          "caller": "GetFormat",
+          "callee": "provider.GetFormat",
+          "lineNumber": 153
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 7,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "Engine/IResource.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 45,
+      "classes": [
+        {
+          "name": "IResource",
+          "startLine": 13,
+          "endLine": 38,
+          "methods": [
+            "Open",
+            "Close"
+          ],
+          "properties": [
+            "Name",
+            "IsConnected"
+          ]
+        },
+        {
+          "name": "IEnabledResource",
+          "startLine": 43,
+          "endLine": 49,
+          "methods": [],
+          "properties": [
+            "IsEnabled"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IResource",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "IEnabledResource",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/IResultListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 92,
+      "nonEmptyLines": 85,
+      "classes": [
+        {
+          "name": "IResultListener",
+          "startLine": 12,
+          "endLine": 48,
+          "methods": [
+            "OnTestPlanRunStart",
+            "OnTestPlanRunCompleted",
+            "OnTestStepRunStart",
+            "OnTestStepRunCompleted",
+            "OnResultPublished"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IExecutionListener",
+          "startLine": 80,
+          "endLine": 91,
+          "methods": [
+            "OnTestStepExecutionChanged"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IResultListener",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "IExecutionListener",
+          "line": 80,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/IResultSink.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 277,
+      "nonEmptyLines": 253,
+      "functions": [
+        {
+          "name": "ResultSinkListener",
+          "startLine": 53,
+          "endLine": 56,
+          "params": [
+            "sinks"
+          ]
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "startLine": 58,
+          "endLine": 72,
+          "params": [
+            "planRun"
+          ]
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "startLine": 74,
+          "endLine": 88,
+          "params": [
+            "planRun",
+            "log"
+          ]
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "startLine": 90,
+          "endLine": 105,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "startLine": 107,
+          "endLine": 122,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "OnResultPublished",
+          "startLine": 124,
+          "endLine": 138,
+          "params": [
+            "stepRunId",
+            "result"
+          ]
+        },
+        {
+          "name": "ScalarResultSink",
+          "startLine": 185,
+          "endLine": 189,
+          "params": [
+            "listeningStep"
+          ]
+        },
+        {
+          "name": "GetResult",
+          "startLine": 194,
+          "endLine": 205,
+          "params": [
+            "ct"
+          ]
+        },
+        {
+          "name": "TryGetResult",
+          "startLine": 210,
+          "endLine": 224,
+          "params": [
+            "result"
+          ]
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "startLine": 229,
+          "endLine": 239,
+          "params": [
+            "run"
+          ]
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "startLine": 244,
+          "endLine": 244,
+          "params": [
+            "run"
+          ]
+        },
+        {
+          "name": "OnResultPublished",
+          "startLine": 249,
+          "endLine": 263,
+          "params": [
+            "stepRun",
+            "result"
+          ]
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "startLine": 266,
+          "endLine": 269,
+          "params": [
+            "run"
+          ]
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "startLine": 272,
+          "endLine": 275,
+          "params": [
+            "run"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IResultSink",
+          "startLine": 19,
+          "endLine": 45,
+          "methods": [
+            "OnResultPublished",
+            "OnTestStepRunStart",
+            "OnTestStepRunCompleted",
+            "OnTestPlanRunStart",
+            "OnTestPlanRunCompleted"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ResultSinkListener",
+          "startLine": 47,
+          "endLine": 139,
+          "methods": [
+            "ResultSinkListener",
+            "OnTestPlanRunStart",
+            "OnTestPlanRunCompleted",
+            "OnTestStepRunStart",
+            "OnTestStepRunCompleted",
+            "OnResultPublished"
+          ],
+          "properties": [
+            "currentSinks",
+            "currentStepRuns"
+          ]
+        },
+        {
+          "name": "ScalarResultSink",
+          "startLine": 145,
+          "endLine": 276,
+          "methods": [
+            "ScalarResultSink",
+            "GetResult",
+            "TryGetResult",
+            "OnTestStepRunStart",
+            "OnTestStepRunCompleted",
+            "OnResultPublished",
+            "OnTestPlanRunStart",
+            "OnTestPlanRunCompleted"
+          ],
+          "properties": [
+            "Result",
+            "ItemsInQueue",
+            "SourceTestStep",
+            "ResultColumnName",
+            "ListeningStep"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IResultSink",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "ResultSinkListener",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "OnResultPublished",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "SourceTestStep",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "ResultColumnName",
+          "line": 158,
+          "isDefault": false
+        },
+        {
+          "name": "ScalarResultSink",
+          "line": 185,
+          "isDefault": false
+        },
+        {
+          "name": "GetResult",
+          "line": 194,
+          "isDefault": false
+        },
+        {
+          "name": "TryGetResult",
+          "line": 210,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "line": 229,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "line": 244,
+          "isDefault": false
+        },
+        {
+          "name": "OnResultPublished",
+          "line": 249,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "line": 266,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "line": 272,
+          "isDefault": false
+        },
+        {
+          "name": "ScalarResultSink",
+          "line": 145,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "sink.OnTestPlanRunStart",
+          "lineNumber": 64
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "Log.Error",
+          "lineNumber": 68
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 68
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "Log.Debug",
+          "lineNumber": 69
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "sink.OnTestPlanRunCompleted",
+          "lineNumber": 80
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Log.Error",
+          "lineNumber": 84
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 84
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Log.Debug",
+          "lineNumber": 85
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "currentStepRuns.Add",
+          "lineNumber": 92
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "sink.OnTestStepRunStart",
+          "lineNumber": 97
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "Log.Error",
+          "lineNumber": 101
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 101
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "Log.Debug",
+          "lineNumber": 102
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "currentStepRuns.Remove",
+          "lineNumber": 109
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "sink.OnTestStepRunCompleted",
+          "lineNumber": 114
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "Log.Error",
+          "lineNumber": 118
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 118
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "Log.Debug",
+          "lineNumber": 119
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "sink.OnResultPublished",
+          "lineNumber": 130
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "Log.Error",
+          "lineNumber": 134
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 134
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "Log.Debug",
+          "lineNumber": 135
+        },
+        {
+          "caller": "ScalarResultSink",
+          "callee": "new Queue<T>",
+          "lineNumber": 187
+        },
+        {
+          "caller": "GetResult",
+          "callee": "WaitHandle.WaitAny",
+          "lineNumber": 196
+        },
+        {
+          "caller": "GetResult",
+          "callee": "ct.ThrowIfCancellationRequested",
+          "lineNumber": 197
+        },
+        {
+          "caller": "GetResult",
+          "callee": "Result.Dequeue",
+          "lineNumber": 200
+        },
+        {
+          "caller": "GetResult",
+          "callee": "Result.Any",
+          "lineNumber": 201
+        },
+        {
+          "caller": "GetResult",
+          "callee": "ItemsInQueue.Reset",
+          "lineNumber": 202
+        },
+        {
+          "caller": "TryGetResult",
+          "callee": "Result.Any",
+          "lineNumber": 214
+        },
+        {
+          "caller": "TryGetResult",
+          "callee": "Result.Dequeue",
+          "lineNumber": 216
+        },
+        {
+          "caller": "TryGetResult",
+          "callee": "Result.Any",
+          "lineNumber": 217
+        },
+        {
+          "caller": "TryGetResult",
+          "callee": "ItemsInQueue.Reset",
+          "lineNumber": 218
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "ItemsInQueue.Reset",
+          "lineNumber": 235
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "Result.Clear",
+          "lineNumber": 236
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "result.Columns.FirstOrDefault",
+          "lineNumber": 253
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "Result.Enqueue",
+          "lineNumber": 258
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "column.GetValue<T>",
+          "lineNumber": 258
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "ItemsInQueue.Set",
+          "lineNumber": 259
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "new ManualResetEvent",
+          "lineNumber": 268
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "ItemsInQueue.Dispose",
+          "lineNumber": 274
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 18,
+        "functionCount": 14,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "Engine/IResultStore.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 644,
+      "nonEmptyLines": 576,
+      "functions": [
+        {
+          "name": "AttachmentType",
+          "startLine": 110,
+          "endLine": 113,
+          "params": [
+            "TypeName"
+          ]
+        },
+        {
+          "name": "Equals",
+          "startLine": 118,
+          "endLine": 121,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "Equals",
+          "startLine": 126,
+          "endLine": 132,
+          "params": [
+            "obj"
+          ]
+        },
+        {
+          "name": "GetHashCode",
+          "startLine": 137,
+          "endLine": 140,
+          "params": []
+        },
+        {
+          "name": "SearchChildrenOf",
+          "startLine": 215,
+          "endLine": 218,
+          "params": [
+            "parents"
+          ]
+        },
+        {
+          "name": "SearchLastRun",
+          "startLine": 234,
+          "endLine": 237,
+          "params": [
+            "count"
+          ]
+        },
+        {
+          "name": "SearchCombinator",
+          "startLine": 259,
+          "endLine": 264,
+          "params": [
+            "a",
+            "logicalOperator",
+            "b"
+          ]
+        },
+        {
+          "name": "SearchParameterValue",
+          "startLine": 302,
+          "endLine": 309,
+          "params": [
+            "parameter",
+            "compareOperator",
+            "value",
+            "group",
+            "scope"
+          ]
+        },
+        {
+          "name": "All",
+          "startLine": 357,
+          "endLine": 360,
+          "params": []
+        },
+        {
+          "name": "ChildrenOf",
+          "startLine": 366,
+          "endLine": 369,
+          "params": [
+            "testPlanRunIds"
+          ]
+        },
+        {
+          "name": "LastRun",
+          "startLine": 375,
+          "endLine": 378,
+          "params": []
+        },
+        {
+          "name": "LimitSet",
+          "startLine": 401,
+          "endLine": 405,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "Limit",
+          "startLine": 442,
+          "endLine": 450,
+          "params": []
+        },
+        {
+          "name": "ToString",
+          "startLine": 478,
+          "endLine": 481,
+          "params": []
+        },
+        {
+          "name": "LimitCondition",
+          "startLine": 486,
+          "endLine": 489,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "IAttributedObject",
+          "startLine": 16,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "Name",
+            "ObjectType"
+          ]
+        },
+        {
+          "name": "IParameter",
+          "startLine": 31,
+          "endLine": 42,
+          "methods": [],
+          "properties": [
+            "Group",
+            "Value"
+          ]
+        },
+        {
+          "name": "IParameters",
+          "startLine": 47,
+          "endLine": 54,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "IData",
+          "startLine": 59,
+          "endLine": 75,
+          "methods": [
+            "GetID"
+          ],
+          "properties": [
+            "Parent",
+            "Parameters"
+          ]
+        },
+        {
+          "name": "IResultTable",
+          "startLine": 80,
+          "endLine": 86,
+          "methods": [],
+          "properties": [
+            "Columns"
+          ]
+        },
+        {
+          "name": "IResultColumn",
+          "startLine": 91,
+          "endLine": 97,
+          "methods": [],
+          "properties": [
+            "Data"
+          ]
+        },
+        {
+          "name": "AttachmentType",
+          "startLine": 102,
+          "endLine": 151,
+          "methods": [
+            "AttachmentType",
+            "Equals",
+            "Equals",
+            "GetHashCode"
+          ],
+          "properties": [
+            "_TypeName",
+            "LogFile",
+            "TestPlan"
+          ]
+        },
+        {
+          "name": "SearchOperand",
+          "startLine": 201,
+          "endLine": 203,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "SearchChildrenOf",
+          "startLine": 206,
+          "endLine": 219,
+          "methods": [
+            "SearchChildrenOf"
+          ],
+          "properties": [
+            "Parents"
+          ]
+        },
+        {
+          "name": "SearchLastRun",
+          "startLine": 224,
+          "endLine": 238,
+          "methods": [
+            "SearchLastRun"
+          ],
+          "properties": [
+            "Count"
+          ]
+        },
+        {
+          "name": "SearchCombinator",
+          "startLine": 241,
+          "endLine": 265,
+          "methods": [
+            "SearchCombinator"
+          ],
+          "properties": [
+            "A",
+            "Operator",
+            "B"
+          ]
+        },
+        {
+          "name": "SearchParameterValue",
+          "startLine": 270,
+          "endLine": 310,
+          "methods": [
+            "SearchParameterValue"
+          ],
+          "properties": [
+            "Scope",
+            "Group",
+            "Parameter",
+            "CompareOperator",
+            "Value"
+          ]
+        },
+        {
+          "name": "SearchRange",
+          "startLine": 315,
+          "endLine": 331,
+          "methods": [],
+          "properties": [
+            "Scope",
+            "Parameter",
+            "Value"
+          ]
+        },
+        {
+          "name": "SearchCondition",
+          "startLine": 336,
+          "endLine": 379,
+          "methods": [
+            "All",
+            "ChildrenOf",
+            "LastRun"
+          ],
+          "properties": [
+            "GetParents",
+            "GetChildren",
+            "Operation"
+          ]
+        },
+        {
+          "name": "LimitSet",
+          "startLine": 385,
+          "endLine": 406,
+          "methods": [
+            "LimitSet"
+          ],
+          "properties": [
+            "Name",
+            "Limits"
+          ]
+        },
+        {
+          "name": "Limit",
+          "startLine": 411,
+          "endLine": 451,
+          "methods": [
+            "Limit"
+          ],
+          "properties": [
+            "ResultName",
+            "ColumnName",
+            "LowerLimit",
+            "UpperLimit",
+            "Conditions"
+          ]
+        },
+        {
+          "name": "LimitCondition",
+          "startLine": 456,
+          "endLine": 490,
+          "methods": [
+            "ToString",
+            "LimitCondition"
+          ],
+          "properties": [
+            "ColumnName",
+            "LowerLimit",
+            "UpperLimit"
+          ]
+        },
+        {
+          "name": "IResultStore",
+          "startLine": 495,
+          "endLine": 560,
+          "methods": [
+            "GetProperties",
+            "GetEntries",
+            "DeleteEntries",
+            "GetLimitSets",
+            "AddLimitSet",
+            "DeleteLimitSet",
+            "GetAttachment",
+            "GetValidAttachments",
+            "GetAverageDuration",
+            "GetAverageDuration"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IAttachmentStream",
+          "startLine": 565,
+          "endLine": 574,
+          "methods": [
+            "GetAttachmentStream"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IResultTagging",
+          "startLine": 579,
+          "endLine": 595,
+          "methods": [
+            "AddTestPlanRunParameter",
+            "DeleteTestPlanRunParameter",
+            "GetTestPlanRunParameterValues"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IResultStoreNotification",
+          "startLine": 605,
+          "endLine": 626,
+          "methods": [
+            "EnableUpdateEvents",
+            "DisableUpdateEvents"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IFileResultStore",
+          "startLine": 632,
+          "endLine": 643,
+          "methods": [],
+          "properties": [
+            "FilePath",
+            "DefaultExtension"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IAttributedObject",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "IParameter",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "IParameters",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "IData",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "IResultTable",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "IResultColumn",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "AttachmentType",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "Equals",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "GetHashCode",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "LogFile",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlan",
+          "line": 150,
+          "isDefault": false
+        },
+        {
+          "name": "AttachmentType",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "SearchOperand",
+          "line": 201,
+          "isDefault": false
+        },
+        {
+          "name": "Parents",
+          "line": 211,
+          "isDefault": false
+        },
+        {
+          "name": "SearchChildrenOf",
+          "line": 215,
+          "isDefault": false
+        },
+        {
+          "name": "SearchChildrenOf",
+          "line": 206,
+          "isDefault": false
+        },
+        {
+          "name": "Count",
+          "line": 229,
+          "isDefault": false
+        },
+        {
+          "name": "SearchLastRun",
+          "line": 234,
+          "isDefault": false
+        },
+        {
+          "name": "SearchLastRun",
+          "line": 224,
+          "isDefault": false
+        },
+        {
+          "name": "A",
+          "line": 246,
+          "isDefault": false
+        },
+        {
+          "name": "Operator",
+          "line": 251,
+          "isDefault": false
+        },
+        {
+          "name": "B",
+          "line": 256,
+          "isDefault": false
+        },
+        {
+          "name": "SearchCombinator",
+          "line": 259,
+          "isDefault": false
+        },
+        {
+          "name": "SearchCombinator",
+          "line": 241,
+          "isDefault": false
+        },
+        {
+          "name": "Scope",
+          "line": 275,
+          "isDefault": false
+        },
+        {
+          "name": "Group",
+          "line": 280,
+          "isDefault": false
+        },
+        {
+          "name": "Parameter",
+          "line": 285,
+          "isDefault": false
+        },
+        {
+          "name": "CompareOperator",
+          "line": 290,
+          "isDefault": false
+        },
+        {
+          "name": "Value",
+          "line": 295,
+          "isDefault": false
+        },
+        {
+          "name": "SearchParameterValue",
+          "line": 302,
+          "isDefault": false
+        },
+        {
+          "name": "SearchParameterValue",
+          "line": 270,
+          "isDefault": false
+        },
+        {
+          "name": "Scope",
+          "line": 320,
+          "isDefault": false
+        },
+        {
+          "name": "Parameter",
+          "line": 325,
+          "isDefault": false
+        },
+        {
+          "name": "Value",
+          "line": 330,
+          "isDefault": false
+        },
+        {
+          "name": "SearchRange",
+          "line": 315,
+          "isDefault": false
+        },
+        {
+          "name": "GetParents",
+          "line": 341,
+          "isDefault": false
+        },
+        {
+          "name": "GetChildren",
+          "line": 346,
+          "isDefault": false
+        },
+        {
+          "name": "Operation",
+          "line": 351,
+          "isDefault": false
+        },
+        {
+          "name": "All",
+          "line": 357,
+          "isDefault": false
+        },
+        {
+          "name": "ChildrenOf",
+          "line": 366,
+          "isDefault": false
+        },
+        {
+          "name": "LastRun",
+          "line": 375,
+          "isDefault": false
+        },
+        {
+          "name": "SearchCondition",
+          "line": 336,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 390,
+          "isDefault": false
+        },
+        {
+          "name": "Limits",
+          "line": 395,
+          "isDefault": false
+        },
+        {
+          "name": "LimitSet",
+          "line": 401,
+          "isDefault": false
+        },
+        {
+          "name": "LimitSet",
+          "line": 385,
+          "isDefault": false
+        },
+        {
+          "name": "ResultName",
+          "line": 416,
+          "isDefault": false
+        },
+        {
+          "name": "ColumnName",
+          "line": 421,
+          "isDefault": false
+        },
+        {
+          "name": "LowerLimit",
+          "line": 426,
+          "isDefault": false
+        },
+        {
+          "name": "UpperLimit",
+          "line": 431,
+          "isDefault": false
+        },
+        {
+          "name": "Conditions",
+          "line": 436,
+          "isDefault": false
+        },
+        {
+          "name": "Limit",
+          "line": 442,
+          "isDefault": false
+        },
+        {
+          "name": "Limit",
+          "line": 411,
+          "isDefault": false
+        },
+        {
+          "name": "ColumnName",
+          "line": 461,
+          "isDefault": false
+        },
+        {
+          "name": "LowerLimit",
+          "line": 466,
+          "isDefault": false
+        },
+        {
+          "name": "UpperLimit",
+          "line": 471,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 478,
+          "isDefault": false
+        },
+        {
+          "name": "LimitCondition",
+          "line": 486,
+          "isDefault": false
+        },
+        {
+          "name": "LimitCondition",
+          "line": 456,
+          "isDefault": false
+        },
+        {
+          "name": "IResultStore",
+          "line": 495,
+          "isDefault": false
+        },
+        {
+          "name": "IAttachmentStream",
+          "line": 565,
+          "isDefault": false
+        },
+        {
+          "name": "IResultTagging",
+          "line": 579,
+          "isDefault": false
+        },
+        {
+          "name": "IResultStoreNotification",
+          "line": 605,
+          "isDefault": false
+        },
+        {
+          "name": "IFileResultStore",
+          "line": 632,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetHashCode",
+          "callee": "_TypeName.GetHashCode",
+          "lineNumber": 139
+        },
+        {
+          "caller": "All",
+          "callee": "new SearchCondition",
+          "lineNumber": 359
+        },
+        {
+          "caller": "ChildrenOf",
+          "callee": "new SearchCondition",
+          "lineNumber": 368
+        },
+        {
+          "caller": "ChildrenOf",
+          "callee": "new SearchChildrenOf",
+          "lineNumber": 368
+        },
+        {
+          "caller": "ChildrenOf",
+          "callee": "testPlanRunIds.ToList",
+          "lineNumber": 368
+        },
+        {
+          "caller": "LastRun",
+          "callee": "new SearchCondition",
+          "lineNumber": 377
+        },
+        {
+          "caller": "LastRun",
+          "callee": "new SearchLastRun",
+          "lineNumber": 377
+        },
+        {
+          "caller": "LimitSet",
+          "callee": "new List<Limit>",
+          "lineNumber": 404
+        },
+        {
+          "caller": "Limit",
+          "callee": "Rules.Add",
+          "lineNumber": 444
+        },
+        {
+          "caller": "Limit",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 444
+        },
+        {
+          "caller": "Limit",
+          "callee": "Rules.Add",
+          "lineNumber": 445
+        },
+        {
+          "caller": "Limit",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 445
+        },
+        {
+          "caller": "Limit",
+          "callee": "new List<LimitCondition>",
+          "lineNumber": 447
+        },
+        {
+          "caller": "ToString",
+          "callee": "String.Format",
+          "lineNumber": 480
+        },
+        {
+          "caller": "LimitCondition",
+          "callee": "Rules.Add",
+          "lineNumber": 488
+        },
+        {
+          "caller": "LimitCondition",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 488
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 64,
+        "functionCount": 15,
+        "classCount": 22
+      }
+    },
+    {
+      "path": "Engine/IScpiInstrument.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 269,
+      "nonEmptyLines": 244,
+      "classes": [
+        {
+          "name": "IScpiIO",
+          "startLine": 67,
+          "endLine": 134,
+          "methods": [
+            "DeviceClear",
+            "ReadSTB",
+            "Read",
+            "Write",
+            "Lock",
+            "Unlock"
+          ],
+          "properties": [
+            "SendEnd",
+            "IOTimeoutMS",
+            "LockTimeoutMS",
+            "TerminationCharacter",
+            "UseTerminationCharacter",
+            "ResourceClass"
+          ]
+        },
+        {
+          "name": "IScpiIO2",
+          "startLine": 139,
+          "endLine": 161,
+          "methods": [
+            "Open",
+            "Close",
+            "OpenSRQ",
+            "CloseSRQ"
+          ],
+          "properties": [
+            "ID"
+          ]
+        },
+        {
+          "name": "IScpiIO3",
+          "startLine": 211,
+          "endLine": 227,
+          "methods": [
+            "EnableEvent",
+            "DisableEvent",
+            "WaitOnEvent"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IScpiInstrument",
+          "startLine": 236,
+          "endLine": 268,
+          "methods": [
+            "ScpiCommand",
+            "ScpiQuery",
+            "ScpiIEEEBlockCommand",
+            "ScpiQueryBlock"
+          ],
+          "properties": [
+            "IO"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IScpiIO",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "IScpiIO2",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "IScpiIO3",
+          "line": 211,
+          "isDefault": false
+        },
+        {
+          "name": "IScpiInstrument",
+          "line": 236,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 0,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "Engine/IStartupInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "IStartupInfo",
+          "startLine": 6,
+          "endLine": 12,
+          "methods": [
+            "LogStartupInfo"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IStartupInfo",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IStringConvertProvider.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 966,
+      "nonEmptyLines": 872,
+      "functions": [
+        {
+          "name": "GetString",
+          "startLine": 215,
+          "endLine": 232,
+          "params": [
+            "value",
+            "culture"
+          ]
+        },
+        {
+          "name": "TryGetString",
+          "startLine": 240,
+          "endLine": 260,
+          "params": [
+            "value",
+            "str",
+            "culture"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 270,
+          "endLine": 290,
+          "params": [
+            "stringdata",
+            "type",
+            "contextObject",
+            "culture"
+          ]
+        },
+        {
+          "name": "TryFromString",
+          "startLine": 301,
+          "endLine": 327,
+          "params": [
+            "stringdata",
+            "type",
+            "contextObject",
+            "result",
+            "culture"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 338,
+          "endLine": 376,
+          "params": [
+            "stringData",
+            "_type",
+            "contextObject",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetString",
+          "startLine": 379,
+          "endLine": 389,
+          "params": [
+            "value",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetEnabledElementType",
+          "startLine": 395,
+          "endLine": 405,
+          "params": [
+            "enumType"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 408,
+          "endLine": 434,
+          "params": [
+            "stringData",
+            "_type",
+            "contextObject",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetString",
+          "startLine": 437,
+          "endLine": 448,
+          "params": [
+            "value",
+            "culture"
+          ]
+        },
+        {
+          "name": "tryParseEnumString",
+          "startLine": 454,
+          "endLine": 528,
+          "params": [
+            "str",
+            "type",
+            "result"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 531,
+          "endLine": 542,
+          "params": [
+            "stringData",
+            "type",
+            "contextObject",
+            "culture"
+          ]
+        },
+        {
+          "name": "getFlagsValues",
+          "startLine": 545,
+          "endLine": 556,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "GetString",
+          "startLine": 560,
+          "endLine": 572,
+          "params": [
+            "value",
+            "culture"
+          ]
+        },
+        {
+          "name": "getString",
+          "startLine": 575,
+          "endLine": 595,
+          "params": [
+            "val"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 602,
+          "endLine": 699,
+          "params": [
+            "stringData",
+            "_type",
+            "contextObject",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetString",
+          "startLine": 704,
+          "endLine": 762,
+          "params": [
+            "value",
+            "culture"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 786,
+          "endLine": 792,
+          "params": [
+            "stringData",
+            "type",
+            "contextObject",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetString",
+          "startLine": 795,
+          "endLine": 800,
+          "params": [
+            "value",
+            "culture"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 807,
+          "endLine": 811,
+          "params": [
+            "stringData",
+            "type",
+            "contextObject",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetString",
+          "startLine": 813,
+          "endLine": 817,
+          "params": [
+            "value",
+            "culture"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 824,
+          "endLine": 828,
+          "params": [
+            "stringData",
+            "targetType",
+            "contextObject",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetString",
+          "startLine": 830,
+          "endLine": 835,
+          "params": [
+            "obj",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetStepFromContext",
+          "startLine": 841,
+          "endLine": 848,
+          "params": [
+            "context",
+            "id"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 857,
+          "endLine": 867,
+          "params": [
+            "stringData",
+            "type",
+            "contextObject",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetString",
+          "startLine": 875,
+          "endLine": 878,
+          "params": [
+            "value",
+            "culture"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 890,
+          "endLine": 915,
+          "params": [
+            "stringData",
+            "type",
+            "contextObject",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetString",
+          "startLine": 921,
+          "endLine": 926,
+          "params": [
+            "value",
+            "culture"
+          ]
+        },
+        {
+          "name": "FromString",
+          "startLine": 933,
+          "endLine": 953,
+          "params": [
+            "stringData",
+            "type",
+            "ctx",
+            "culture"
+          ]
+        },
+        {
+          "name": "GetString",
+          "startLine": 956,
+          "endLine": 962,
+          "params": [
+            "value",
+            "culture"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IStringConvertProvider",
+          "startLine": 22,
+          "endLine": 41,
+          "methods": [
+            "GetString",
+            "FromString"
+          ],
+          "properties": []
+        },
+        {
+          "name": "StringConvertProvider",
+          "startLine": 46,
+          "endLine": 329,
+          "methods": [
+            "GetString",
+            "TryGetString",
+            "FromString",
+            "TryFromString"
+          ],
+          "properties": [
+            "Providers"
+          ]
+        },
+        {
+          "name": "ConvertibleStringConvertProvider",
+          "startLine": 335,
+          "endLine": 390,
+          "methods": [
+            "FromString",
+            "GetString"
+          ],
+          "properties": []
+        },
+        {
+          "name": "EnabledStringConvertProvider",
+          "startLine": 393,
+          "endLine": 449,
+          "methods": [
+            "GetEnabledElementType",
+            "FromString",
+            "GetString"
+          ],
+          "properties": []
+        },
+        {
+          "name": "EnumStringConvertProvider",
+          "startLine": 452,
+          "endLine": 596,
+          "methods": [
+            "tryParseEnumString",
+            "FromString",
+            "getFlagsValues",
+            "GetString",
+            "getString"
+          ],
+          "properties": [
+            "isFlagsAttribute",
+            "enumToStringCache"
+          ]
+        },
+        {
+          "name": "ListStringConvertProvider",
+          "startLine": 599,
+          "endLine": 763,
+          "methods": [
+            "FromString",
+            "GetString"
+          ],
+          "properties": [
+            "fmt"
+          ]
+        },
+        {
+          "name": "ResourceStringConvertProvider",
+          "startLine": 768,
+          "endLine": 801,
+          "methods": [
+            "FromString",
+            "GetString"
+          ],
+          "properties": [
+            "_allResources",
+            "allResources"
+          ]
+        },
+        {
+          "name": "MacroStringConvertProvider",
+          "startLine": 804,
+          "endLine": 818,
+          "methods": [
+            "FromString",
+            "GetString"
+          ],
+          "properties": []
+        },
+        {
+          "name": "SecureStringConvertProvider",
+          "startLine": 821,
+          "endLine": 836,
+          "methods": [
+            "FromString",
+            "GetString"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestStepConvertProvider",
+          "startLine": 839,
+          "endLine": 879,
+          "methods": [
+            "GetStepFromContext",
+            "FromString",
+            "GetString"
+          ],
+          "properties": []
+        },
+        {
+          "name": "InputStringConvertProvider",
+          "startLine": 882,
+          "endLine": 927,
+          "methods": [
+            "FromString",
+            "GetString"
+          ],
+          "properties": []
+        },
+        {
+          "name": "BoolConverter",
+          "startLine": 930,
+          "endLine": 964,
+          "methods": [
+            "FromString",
+            "GetString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IStringConvertProvider",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 215,
+          "isDefault": false
+        },
+        {
+          "name": "TryGetString",
+          "line": 240,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 270,
+          "isDefault": false
+        },
+        {
+          "name": "TryFromString",
+          "line": 301,
+          "isDefault": false
+        },
+        {
+          "name": "StringConvertProvider",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 338,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 379,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 408,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 437,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 531,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 560,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 602,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 704,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 786,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 795,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 807,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 813,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 824,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 830,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 857,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 875,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 890,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 921,
+          "isDefault": false
+        },
+        {
+          "name": "FromString",
+          "line": 933,
+          "isDefault": false
+        },
+        {
+          "name": "GetString",
+          "line": 956,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetPlugins",
+          "callee": "TypeData.GetDerivedTypes<T>",
+          "lineNumber": 54
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "derivedTypes.Count",
+          "lineNumber": 56
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "things.ToList",
+          "lineNumber": 64
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "new Dictionary<T, BeforeAttribute[]>",
+          "lineNumber": 65
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "saveTypes.ContainsKey",
+          "lineNumber": 71
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "type.CreateInstance",
+          "lineNumber": 75
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "saveTypes.Add",
+          "lineNumber": 76
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "type.GetAttributes<BeforeAttribute>().ToArray",
+          "lineNumber": 81
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "type.GetAttributes<BeforeAttribute>",
+          "lineNumber": 81
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "builder.IndexWhen",
+          "lineNumber": 85
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "before.Before",
+          "lineNumber": 85
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 85
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "builder.Insert",
+          "lineNumber": 90
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "new HashSet<(T, T)>",
+          "lineNumber": 102
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "builder.IndexWhen",
+          "lineNumber": 110
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "before.Before",
+          "lineNumber": 110
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 110
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "swapPairs.Add",
+          "lineNumber": 116
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "new Exception",
+          "lineNumber": 117
+        },
+        {
+          "caller": "GetPlugins",
+          "callee": "builder.ToArray",
+          "lineNumber": 125
+        },
+        {
+          "caller": "GetString",
+          "callee": "inner.GetString",
+          "lineNumber": 148
+        },
+        {
+          "caller": "FromString",
+          "callee": "inner.FromString",
+          "lineNumber": 156
+        },
+        {
+          "caller": "CachePopularity",
+          "callee": "elements.Select(x => new Wrap(x)).ToArray",
+          "lineNumber": 168
+        },
+        {
+          "caller": "CachePopularity",
+          "callee": "elements.Select",
+          "lineNumber": 168
+        },
+        {
+          "caller": "CachePopularity",
+          "callee": "new Wrap",
+          "lineNumber": 168
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "popularity.ToArray",
+          "lineNumber": 184
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "Utils.Swap",
+          "lineNumber": 185
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "GetEnumerator",
+          "lineNumber": 194
+        },
+        {
+          "caller": "LoadCache",
+          "callee": "new CachePopularity",
+          "lineNumber": 201
+        },
+        {
+          "caller": "LoadCache",
+          "callee": "PluginTypeFetcher<IStringConvertProvider>.GetPlugins",
+          "lineNumber": 201
+        },
+        {
+          "caller": "GetValue",
+          "callee": "PluginTypeFetcher<IStringConvertProvider>.GetPlugins",
+          "lineNumber": 203
+        },
+        {
+          "caller": "GetString",
+          "callee": "provider.GetString",
+          "lineNumber": 223
+        },
+        {
+          "caller": "GetString",
+          "callee": "value.ToString",
+          "lineNumber": 231
+        },
+        {
+          "caller": "TryGetString",
+          "callee": "provider.GetString",
+          "lineNumber": 254
+        },
+        {
+          "caller": "FromString",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 275
+        },
+        {
+          "caller": "FromString",
+          "callee": "provider.FromString",
+          "lineNumber": 281
+        },
+        {
+          "caller": "FromString",
+          "callee": "new FormatException",
+          "lineNumber": 289
+        },
+        {
+          "caller": "FromString",
+          "callee": "string.Format",
+          "lineNumber": 289
+        },
+        {
+          "caller": "TryFromString",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 304
+        },
+        {
+          "caller": "TryFromString",
+          "callee": "provider.FromString",
+          "lineNumber": 315
+        },
+        {
+          "caller": "FromString",
+          "callee": "DateTime.ParseExact",
+          "lineNumber": 344
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.IsNumeric",
+          "lineNumber": 346
+        },
+        {
+          "caller": "FromString",
+          "callee": "new NumberFormatter(culture).TryParseNumber",
+          "lineNumber": 348
+        },
+        {
+          "caller": "FromString",
+          "callee": "new NumberFormatter",
+          "lineNumber": 348
+        },
+        {
+          "caller": "FromString",
+          "callee": "bool.TryParse",
+          "lineNumber": 358
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.DescendsTo",
+          "lineNumber": 363
+        },
+        {
+          "caller": "FromString",
+          "callee": "Convert.ChangeType",
+          "lineNumber": 367
+        },
+        {
+          "caller": "GetString",
+          "callee": "((DateTime)value).ToString",
+          "lineNumber": 384
+        },
+        {
+          "caller": "GetString",
+          "callee": "Convert.ChangeType",
+          "lineNumber": 386
+        },
+        {
+          "caller": "GetEnabledElementType",
+          "callee": "enumType.GetElementType",
+          "lineNumber": 398
+        },
+        {
+          "caller": "GetEnabledElementType",
+          "callee": "enumType.GetInterface",
+          "lineNumber": 400
+        },
+        {
+          "caller": "GetEnabledElementType",
+          "callee": "ienumInterface.GetGenericArguments().FirstOrDefault",
+          "lineNumber": 402
+        },
+        {
+          "caller": "GetEnabledElementType",
+          "callee": "ienumInterface.GetGenericArguments",
+          "lineNumber": 402
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.DescendsTo",
+          "lineNumber": 412
+        },
+        {
+          "caller": "FromString",
+          "callee": "stringData.Trim",
+          "lineNumber": 414
+        },
+        {
+          "caller": "FromString",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 416
+        },
+        {
+          "caller": "FromString",
+          "callee": "GetEnabledElementType",
+          "lineNumber": 417
+        },
+        {
+          "caller": "FromString",
+          "callee": "stringData.StartsWith",
+          "lineNumber": 418
+        },
+        {
+          "caller": "FromString",
+          "callee": "StringConvertProvider.TryFromString",
+          "lineNumber": 420
+        },
+        {
+          "caller": "FromString",
+          "callee": "stringData.Substring(disabled.Length).Trim",
+          "lineNumber": 420
+        },
+        {
+          "caller": "FromString",
+          "callee": "stringData.Substring",
+          "lineNumber": 420
+        },
+        {
+          "caller": "FromString",
+          "callee": "TypeData.FromType",
+          "lineNumber": 420
+        },
+        {
+          "caller": "FromString",
+          "callee": "StringConvertProvider.TryFromString",
+          "lineNumber": 427
+        },
+        {
+          "caller": "FromString",
+          "callee": "TypeData.FromType",
+          "lineNumber": 427
+        },
+        {
+          "caller": "GetString",
+          "callee": "StringConvertProvider.GetString",
+          "lineNumber": 441
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.ToObject",
+          "lineNumber": 459
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "str.Contains",
+          "lineNumber": 462
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "str.Split",
+          "lineNumber": 464
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "tryParseEnumString",
+          "lineNumber": 468
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Convert.ChangeType",
+          "lineNumber": 469
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.ToObject",
+          "lineNumber": 471
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.GetNames",
+          "lineNumber": 475
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.GetValues(type).GetValue",
+          "lineNumber": 483
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.GetValues",
+          "lineNumber": 483
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "type.GetMember(names[i]).Select(x => x.GetDisplayAttribute()).FirstOrDefault",
+          "lineNumber": 491
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "type.GetMember(names[i]).Select",
+          "lineNumber": 491
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "type.GetMember",
+          "lineNumber": 491
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "x.GetDisplayAttribute",
+          "lineNumber": 491
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "StringComparer.OrdinalIgnoreCase.Equals",
+          "lineNumber": 492
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.GetValues(type).GetValue",
+          "lineNumber": 494
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.GetValues",
+          "lineNumber": 494
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "str.Trim().ToLower",
+          "lineNumber": 503
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "str.Trim",
+          "lineNumber": 503
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "names.Select(name => name.Trim().ToLower()).ToArray",
+          "lineNumber": 504
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "names.Select",
+          "lineNumber": 504
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "name.Trim().ToLower",
+          "lineNumber": 504
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "name.Trim",
+          "lineNumber": 504
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "fixedNames[i].Replace",
+          "lineNumber": 507
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.GetValues(type).GetValue",
+          "lineNumber": 509
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.GetValues",
+          "lineNumber": 509
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "type.GetMember(names[i]).Select(x => x.GetDisplayAttribute()).FirstOrDefault",
+          "lineNumber": 516
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "type.GetMember(names[i]).Select",
+          "lineNumber": 516
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "type.GetMember",
+          "lineNumber": 516
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "x.GetDisplayAttribute",
+          "lineNumber": 516
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "display.Name.ToLower().Trim",
+          "lineNumber": 517
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "display.Name.ToLower",
+          "lineNumber": 517
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "StringComparer.OrdinalIgnoreCase.Equals",
+          "lineNumber": 518
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "StringComparer.OrdinalIgnoreCase.Equals",
+          "lineNumber": 519
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "name.Replace",
+          "lineNumber": 519
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.GetValues(type).GetValue",
+          "lineNumber": 521
+        },
+        {
+          "caller": "tryParseEnumString",
+          "callee": "Enum.GetValues",
+          "lineNumber": 521
+        },
+        {
+          "caller": "FromString",
+          "callee": "tryParseEnumString",
+          "lineNumber": 537
+        },
+        {
+          "caller": "getFlagsValues",
+          "callee": "isFlagsAttribute.TryGetValue",
+          "lineNumber": 549
+        },
+        {
+          "caller": "getFlagsValues",
+          "callee": "t.HasAttribute<FlagsAttribute>",
+          "lineNumber": 552
+        },
+        {
+          "caller": "getFlagsValues",
+          "callee": "Enum.GetValues",
+          "lineNumber": 552
+        },
+        {
+          "caller": "GetString",
+          "callee": "enumToStringCache.TryGetValue",
+          "lineNumber": 564
+        },
+        {
+          "caller": "GetString",
+          "callee": "getString",
+          "lineNumber": 566
+        },
+        {
+          "caller": "getString",
+          "callee": "getFlagsValues",
+          "lineNumber": 577
+        },
+        {
+          "caller": "getString",
+          "callee": "val.GetType",
+          "lineNumber": 577
+        },
+        {
+          "caller": "getString",
+          "callee": "new StringBuilder",
+          "lineNumber": 579
+        },
+        {
+          "caller": "getString",
+          "callee": "val.HasFlag",
+          "lineNumber": 583
+        },
+        {
+          "caller": "getString",
+          "callee": "sb.Append",
+          "lineNumber": 588
+        },
+        {
+          "caller": "getString",
+          "callee": "sb.Append",
+          "lineNumber": 589
+        },
+        {
+          "caller": "getString",
+          "callee": "sb.ToString",
+          "lineNumber": 592
+        },
+        {
+          "caller": "getString",
+          "callee": "val.ToString",
+          "lineNumber": 594
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.DescendsTo",
+          "lineNumber": 605
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.DescendsTo",
+          "lineNumber": 606
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.GetEnumerableElementType",
+          "lineNumber": 608
+        },
+        {
+          "caller": "FromString",
+          "callee": "elemType.IsNumeric",
+          "lineNumber": 612
+        },
+        {
+          "caller": "FromString",
+          "callee": "new NumberFormatter",
+          "lineNumber": 614
+        },
+        {
+          "caller": "FromString",
+          "callee": "fmt.Parse",
+          "lineNumber": 615
+        },
+        {
+          "caller": "FromString",
+          "callee": "data.GetType().DescendsTo",
+          "lineNumber": 616
+        },
+        {
+          "caller": "FromString",
+          "callee": "data.GetType",
+          "lineNumber": 616
+        },
+        {
+          "caller": "FromString",
+          "callee": "data.CastTo(elemType).Cast<object>().ToArray",
+          "lineNumber": 618
+        },
+        {
+          "caller": "FromString",
+          "callee": "data.CastTo(elemType).Cast<object>",
+          "lineNumber": 618
+        },
+        {
+          "caller": "FromString",
+          "callee": "data.CastTo",
+          "lineNumber": 618
+        },
+        {
+          "caller": "FromString",
+          "callee": "new List<string>",
+          "lineNumber": 624
+        },
+        {
+          "caller": "FromString",
+          "callee": "new StringBuilder",
+          "lineNumber": 627
+        },
+        {
+          "caller": "FromString",
+          "callee": "parsedStrings.Add",
+          "lineNumber": 633
+        },
+        {
+          "caller": "FromString",
+          "callee": "buffer.ToString",
+          "lineNumber": 633
+        },
+        {
+          "caller": "FromString",
+          "callee": "buffer.Clear",
+          "lineNumber": 634
+        },
+        {
+          "caller": "FromString",
+          "callee": "buffer.Append",
+          "lineNumber": 650
+        },
+        {
+          "caller": "FromString",
+          "callee": "buffer.Append",
+          "lineNumber": 655
+        },
+        {
+          "caller": "FromString",
+          "callee": "parsedStrings.Add",
+          "lineNumber": 659
+        },
+        {
+          "caller": "FromString",
+          "callee": "buffer.ToString",
+          "lineNumber": 659
+        },
+        {
+          "caller": "FromString",
+          "callee": "new List<object>",
+          "lineNumber": 662
+        },
+        {
+          "caller": "FromString",
+          "callee": "StringConvertProvider.TryFromString",
+          "lineNumber": 665
+        },
+        {
+          "caller": "FromString",
+          "callee": "str.Trim",
+          "lineNumber": 665
+        },
+        {
+          "caller": "FromString",
+          "callee": "TypeData.FromType",
+          "lineNumber": 665
+        },
+        {
+          "caller": "FromString",
+          "callee": "values.Add",
+          "lineNumber": 667
+        },
+        {
+          "caller": "FromString",
+          "callee": "values.ToArray",
+          "lineNumber": 675
+        },
+        {
+          "caller": "FromString",
+          "callee": "Array.CreateInstance",
+          "lineNumber": 680
+        },
+        {
+          "caller": "FromString",
+          "callee": "array.SetValue",
+          "lineNumber": 683
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.GetConstructor",
+          "lineNumber": 686
+        },
+        {
+          "caller": "FromString",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 688
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.GetMethodsTap().First",
+          "lineNumber": 689
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.GetMethodsTap",
+          "lineNumber": 689
+        },
+        {
+          "caller": "FromString",
+          "callee": "add.Invoke",
+          "lineNumber": 691
+        },
+        {
+          "caller": "GetString",
+          "callee": "value?.GetType",
+          "lineNumber": 710
+        },
+        {
+          "caller": "GetString",
+          "callee": "type.DescendsTo",
+          "lineNumber": 712
+        },
+        {
+          "caller": "GetString",
+          "callee": "type.GetConstructor",
+          "lineNumber": 713
+        },
+        {
+          "caller": "GetString",
+          "callee": "Utils.IsNumeric",
+          "lineNumber": 721
+        },
+        {
+          "caller": "GetString",
+          "callee": "fmt.FormatRange",
+          "lineNumber": 729
+        },
+        {
+          "caller": "GetString",
+          "callee": "str.Contains",
+          "lineNumber": 733
+        },
+        {
+          "caller": "GetString",
+          "callee": "str.Contains",
+          "lineNumber": 733
+        },
+        {
+          "caller": "GetString",
+          "callee": "str.Replace",
+          "lineNumber": 734
+        },
+        {
+          "caller": "GetString",
+          "callee": "new StringBuilder",
+          "lineNumber": 738
+        },
+        {
+          "caller": "GetString",
+          "callee": "StringConvertProvider.TryGetString",
+          "lineNumber": 743
+        },
+        {
+          "caller": "GetString",
+          "callee": "sb.Append",
+          "lineNumber": 748
+        },
+        {
+          "caller": "GetString",
+          "callee": "sb.Append",
+          "lineNumber": 749
+        },
+        {
+          "caller": "GetString",
+          "callee": "escapeString",
+          "lineNumber": 749
+        },
+        {
+          "caller": "GetString",
+          "callee": "sb.ToString",
+          "lineNumber": 758
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.DescendsTo",
+          "lineNumber": 788
+        },
+        {
+          "caller": "FromString",
+          "callee": "allResources.FirstOrDefault",
+          "lineNumber": 790
+        },
+        {
+          "caller": "FromString",
+          "callee": "TypeData.GetTypeData(x).DescendsTo",
+          "lineNumber": 790
+        },
+        {
+          "caller": "FromString",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 790
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.DescendsTo",
+          "lineNumber": 809
+        },
+        {
+          "caller": "FromString",
+          "callee": "new MacroString",
+          "lineNumber": 810
+        },
+        {
+          "caller": "FromString",
+          "callee": "targetType.IsA",
+          "lineNumber": 826
+        },
+        {
+          "caller": "FromString",
+          "callee": "stringData.ToSecureString",
+          "lineNumber": 827
+        },
+        {
+          "caller": "GetString",
+          "callee": "((SecureString)obj).ConvertToUnsecureString",
+          "lineNumber": 833
+        },
+        {
+          "caller": "GetStepFromContext",
+          "callee": "Utils.FlattenHeirarchy(plan.ChildTestSteps, x => x.ChildTestSteps)\n                    .FirstOrDefault",
+          "lineNumber": 846
+        },
+        {
+          "caller": "GetStepFromContext",
+          "callee": "Utils.FlattenHeirarchy",
+          "lineNumber": 846
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.DescendsTo",
+          "lineNumber": 859
+        },
+        {
+          "caller": "FromString",
+          "callee": "Guid.TryParse",
+          "lineNumber": 861
+        },
+        {
+          "caller": "FromString",
+          "callee": "GetStepFromContext",
+          "lineNumber": 863
+        },
+        {
+          "caller": "GetString",
+          "callee": "(value as ITestStep)?.Id.ToString",
+          "lineNumber": 877
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.DescendsTo",
+          "lineNumber": 892
+        },
+        {
+          "caller": "FromString",
+          "callee": "stringData.Split",
+          "lineNumber": 894
+        },
+        {
+          "caller": "FromString",
+          "callee": "Guid.TryParse",
+          "lineNumber": 899
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.CreateInstance",
+          "lineNumber": 903
+        },
+        {
+          "caller": "FromString",
+          "callee": "Array.Empty<object>",
+          "lineNumber": 903
+        },
+        {
+          "caller": "FromString",
+          "callee": "TestStepConvertProvider.GetStepFromContext",
+          "lineNumber": 907
+        },
+        {
+          "caller": "FromString",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 911
+        },
+        {
+          "caller": "FromString",
+          "callee": "TypeData.GetTypeData(step2).GetMember",
+          "lineNumber": 912
+        },
+        {
+          "caller": "FromString",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 912
+        },
+        {
+          "caller": "FromString",
+          "callee": "type.IsA",
+          "lineNumber": 935
+        },
+        {
+          "caller": "FromString",
+          "callee": "stringData.ToLower",
+          "lineNumber": 937
+        },
+        {
+          "caller": "GetString",
+          "callee": "value.ToString",
+          "lineNumber": 959
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 26,
+        "functionCount": 29,
+        "classCount": 12
+      }
+    },
+    {
+      "path": "Engine/ITapPlugin.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "_getPluginType",
+          "startLine": 22,
+          "endLine": 44,
+          "params": [
+            "foundPluginTypes",
+            "typeToCheck"
+          ]
+        },
+        {
+          "name": "GetPluginType",
+          "startLine": 51,
+          "endLine": 58,
+          "params": [
+            "type"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ITapPlugin",
+          "startLine": 14,
+          "endLine": 14,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "TapPluginExtensions",
+          "startLine": 19,
+          "endLine": 59,
+          "methods": [
+            "_getPluginType",
+            "GetPluginType"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ITapPlugin",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "GetPluginType",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "TapPluginExtensions",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_getPluginType",
+          "callee": "foundPluginTypes.Contains",
+          "lineNumber": 24
+        },
+        {
+          "caller": "_getPluginType",
+          "callee": "typeToCheck.GetInterfaces",
+          "lineNumber": 26
+        },
+        {
+          "caller": "_getPluginType",
+          "callee": "other.Contains",
+          "lineNumber": 27
+        },
+        {
+          "caller": "_getPluginType",
+          "callee": "other.Append",
+          "lineNumber": 30
+        },
+        {
+          "caller": "_getPluginType",
+          "callee": "other.Where",
+          "lineNumber": 32
+        },
+        {
+          "caller": "_getPluginType",
+          "callee": "x.HasInterface<ITapPlugin>",
+          "lineNumber": 32
+        },
+        {
+          "caller": "_getPluginType",
+          "callee": "otherType.Any",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_getPluginType",
+          "callee": "foundPluginTypes.Add",
+          "lineNumber": 35
+        },
+        {
+          "caller": "_getPluginType",
+          "callee": "_getPluginType",
+          "lineNumber": 41
+        },
+        {
+          "caller": "GetPluginType",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 54
+        },
+        {
+          "caller": "GetPluginType",
+          "callee": "new HashSet<Type>",
+          "lineNumber": 55
+        },
+        {
+          "caller": "GetPluginType",
+          "callee": "_getPluginType",
+          "lineNumber": 56
+        },
+        {
+          "caller": "GetPluginType",
+          "callee": "outTypes.ToArray",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/ITestPlanFormat.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 100,
+      "nonEmptyLines": 93,
+      "classes": [
+        {
+          "name": "ITestPlanImport",
+          "startLine": 15,
+          "endLine": 35,
+          "methods": [
+            "ImportTestPlan"
+          ],
+          "properties": [
+            "Extension",
+            "Name"
+          ]
+        },
+        {
+          "name": "ITestPlanExport",
+          "startLine": 45,
+          "endLine": 65,
+          "methods": [
+            "ExportTestPlan"
+          ],
+          "properties": [
+            "Extension",
+            "Name"
+          ]
+        },
+        {
+          "name": "ITestPlanImportCustomDialog",
+          "startLine": 74,
+          "endLine": 82,
+          "methods": [
+            "ImportTestPlan"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ITestPlanExportCustomDialog",
+          "startLine": 91,
+          "endLine": 99,
+          "methods": [
+            "ExportTestPlan"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ITestPlanImport",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "ITestPlanExport",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "ITestPlanImportCustomDialog",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "ITestPlanExportCustomDialog",
+          "line": 91,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 0,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "Engine/ITestPlanRunMonitor.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 38,
+      "functions": [
+        {
+          "name": "GetCurrent",
+          "startLine": 32,
+          "endLine": 38,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ITestPlanRunMonitor",
+          "startLine": 11,
+          "endLine": 23,
+          "methods": [
+            "EnterTestPlanRun",
+            "ExitTestPlanRun"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestPlanRunMonitors",
+          "startLine": 25,
+          "endLine": 39,
+          "methods": [
+            "GetCurrent"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ITestPlanRunMonitor",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "GetCurrent",
+          "line": 32,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetCurrent",
+          "callee": "TypeData.GetDerivedTypes<ITestPlanRunMonitor>()\n                .Select(ComponentSettings.GetCurrent)\n                .OfType<ITestPlanRunMonitor>()\n                .ToArray",
+          "lineNumber": 34
+        },
+        {
+          "caller": "GetCurrent",
+          "callee": "TypeData.GetDerivedTypes<ITestPlanRunMonitor>()\n                .Select(ComponentSettings.GetCurrent)\n                .OfType<ITestPlanRunMonitor>",
+          "lineNumber": 34
+        },
+        {
+          "caller": "GetCurrent",
+          "callee": "TypeData.GetDerivedTypes<ITestPlanRunMonitor>()\n                .Select",
+          "lineNumber": 34
+        },
+        {
+          "caller": "GetCurrent",
+          "callee": "TypeData.GetDerivedTypes<ITestPlanRunMonitor>",
+          "lineNumber": 34
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/ITestStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 166,
+      "nonEmptyLines": 150,
+      "functions": [
+        {
+          "name": "GetStepHierarchy",
+          "startLine": 158,
+          "endLine": 162,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "GetParents",
+          "startLine": 163,
+          "endLine": 164,
+          "params": [
+            "step"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ITestStepParent",
+          "startLine": 15,
+          "endLine": 29,
+          "methods": [],
+          "properties": [
+            "Parent",
+            "ChildTestSteps"
+          ]
+        },
+        {
+          "name": "ITestStep",
+          "startLine": 51,
+          "endLine": 133,
+          "methods": [
+            "PrePlanRun",
+            "Run",
+            "PostPlanRun"
+          ],
+          "properties": [
+            "Verdict",
+            "Name",
+            "Enabled",
+            "PlanRun",
+            "StepRun",
+            "IsReadOnly",
+            "TypeName",
+            "Id"
+          ]
+        },
+        {
+          "name": "ITestStepParentExtensions",
+          "startLine": 154,
+          "endLine": 165,
+          "methods": [
+            "GetStepHierarchy",
+            "GetParents"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ITestStepParent",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "ITestStep",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "GetStepHierarchy",
+          "line": 158,
+          "isDefault": false
+        },
+        {
+          "name": "GetParents",
+          "line": 163,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetParents",
+          "callee": "GetStepHierarchy",
+          "lineNumber": 164
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "Engine/IValidatingObject.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 23,
+      "classes": [
+        {
+          "name": "IValidatingObject",
+          "startLine": 12,
+          "endLine": 23,
+          "methods": [
+            "OnPropertyChanged"
+          ],
+          "properties": [
+            "Rules"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IValidatingObject",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IVisa.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 64,
+      "classes": [
+        {
+          "name": "IVisa",
+          "startLine": 14,
+          "endLine": 66,
+          "methods": [
+            "viOpenDefaultRM",
+            "viFindRsrc",
+            "viFindNext",
+            "viParseRsrc",
+            "viParseRsrcEx",
+            "viOpen",
+            "viClose",
+            "viGetAttribute1",
+            "viGetAttribute2",
+            "viGetAttribute3",
+            "viSetAttribute1",
+            "viSetAttribute2",
+            "viStatusDesc",
+            "viEnableEvent",
+            "viDisableEvent",
+            "viInstallHandler",
+            "viUninstallHandler",
+            "viRead",
+            "viWrite",
+            "viReadSTB",
+            "viClear",
+            "viLock",
+            "viUnlock"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IVisa",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IVisaFunctionLoader.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "IVisaFunctionLoader",
+          "startLine": 5,
+          "endLine": 14,
+          "methods": [],
+          "properties": [
+            "Order",
+            "Functions"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IVisaFunctionLoader",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IVisaProvider.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 24,
+      "classes": [
+        {
+          "name": "IVisaProvider",
+          "startLine": 13,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "Order",
+            "Visa"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IVisaProvider",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/LibDl.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 134,
+      "nonEmptyLines": 117,
+      "functions": [
+        {
+          "name": "load",
+          "startLine": 9,
+          "endLine": 9,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "close",
+          "startLine": 10,
+          "endLine": 10,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "GetError",
+          "startLine": 13,
+          "endLine": 18,
+          "params": []
+        },
+        {
+          "name": "clearError",
+          "startLine": 20,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "LibDl",
+          "startLine": 99,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "Sym",
+          "startLine": 120,
+          "endLine": 120,
+          "params": [
+            "lib",
+            "name"
+          ]
+        },
+        {
+          "name": "Load",
+          "startLine": 122,
+          "endLine": 126,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "Unload",
+          "startLine": 128,
+          "endLine": 133,
+          "params": [
+            "lib"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LibDl",
+          "startLine": 7,
+          "endLine": 134,
+          "methods": [
+            "load",
+            "close",
+            "GetError",
+            "clearError",
+            "LibDl",
+            "Sym",
+            "Load",
+            "Unload"
+          ],
+          "properties": [
+            "rtld_now",
+            "libDl"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GetError",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "Sym",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "Load",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "Unload",
+          "line": 128,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "load",
+          "callee": "libDl.dlopen",
+          "lineNumber": 9
+        },
+        {
+          "caller": "close",
+          "callee": "libDl.dlclose",
+          "lineNumber": 10
+        },
+        {
+          "caller": "GetError",
+          "callee": "libDl.dlerror",
+          "lineNumber": 15
+        },
+        {
+          "caller": "GetError",
+          "callee": "Marshal.PtrToStringAuto",
+          "lineNumber": 17
+        },
+        {
+          "caller": "clearError",
+          "callee": "libDl.dlerror",
+          "lineNumber": 20
+        },
+        {
+          "caller": "dlopen",
+          "callee": "dlopen",
+          "lineNumber": 48
+        },
+        {
+          "caller": "dlclose",
+          "callee": "dlclose",
+          "lineNumber": 49
+        },
+        {
+          "caller": "dlerror",
+          "callee": "dlerror",
+          "lineNumber": 50
+        },
+        {
+          "caller": "dlsym",
+          "callee": "dlsym",
+          "lineNumber": 51
+        },
+        {
+          "caller": "dlopen",
+          "callee": "dlopen",
+          "lineNumber": 70
+        },
+        {
+          "caller": "dlclose",
+          "callee": "dlclose",
+          "lineNumber": 71
+        },
+        {
+          "caller": "dlerror",
+          "callee": "dlerror",
+          "lineNumber": 72
+        },
+        {
+          "caller": "dlsym",
+          "callee": "dlsym",
+          "lineNumber": 73
+        },
+        {
+          "caller": "dlopen",
+          "callee": "dlopen",
+          "lineNumber": 91
+        },
+        {
+          "caller": "dlclose",
+          "callee": "dlclose",
+          "lineNumber": 92
+        },
+        {
+          "caller": "dlerror",
+          "callee": "dlerror",
+          "lineNumber": 93
+        },
+        {
+          "caller": "dlsym",
+          "callee": "dlsym",
+          "lineNumber": 94
+        },
+        {
+          "caller": "LibDl",
+          "callee": "new libdlMac",
+          "lineNumber": 103
+        },
+        {
+          "caller": "LibDl",
+          "callee": "new libdl2",
+          "lineNumber": 109
+        },
+        {
+          "caller": "LibDl",
+          "callee": "libDl.dlerror",
+          "lineNumber": 111
+        },
+        {
+          "caller": "LibDl",
+          "callee": "new libdl1",
+          "lineNumber": 115
+        },
+        {
+          "caller": "Sym",
+          "callee": "libDl.dlsym",
+          "lineNumber": 120
+        },
+        {
+          "caller": "Load",
+          "callee": "clearError",
+          "lineNumber": 124
+        },
+        {
+          "caller": "Load",
+          "callee": "load",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Unload",
+          "callee": "new NullReferenceException",
+          "lineNumber": 131
+        },
+        {
+          "caller": "Unload",
+          "callee": "close",
+          "lineNumber": 132
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    }
+  ]
+}

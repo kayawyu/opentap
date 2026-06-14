@@ -1,0 +1,1760 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/MixinTests.cs",
+      "type": "file",
+      "name": "MixinTests.cs",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "summary": "Mixin 构建器系统的综合测试，验证 Mixin 的加载、运行事件、参数化、验证规则、序列化、异常处理以及嵌入式参数与 Mixin 的交互行为。",
+      "tags": [
+        "test",
+        "mixin",
+        "test-plan",
+        "serialization",
+        "exception-handling"
+      ],
+      "complexity": "complex",
+      "languageNotes": "包含 9 个内部类（包括 MixinTest、MixinTestBuilder、ExceptionMixin 等辅助构建器），模拟 Mixin 的完整生命周期。"
+    },
+    {
+      "id": "class:Engine.UnitTests/MixinTests.cs:MixinTests",
+      "type": "class",
+      "name": "MixinTests",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        11,
+        808
+      ],
+      "summary": "MixinTests NUnit 测试类，包含 20 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/MixinTests.cs:MixinTest",
+      "type": "class",
+      "name": "MixinTest",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        810,
+        855
+      ],
+      "summary": "MixinTest NUnit 测试类，包含 6 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/MixinTests.cs:MixinTestBuilder",
+      "type": "class",
+      "name": "MixinTestBuilder",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        857,
+        900
+      ],
+      "summary": "MixinTestBuilder Mixin 构建器辅助类，用于在测试中动态创建和配置 Mixin 实例。",
+      "tags": [
+        "builder",
+        "mixin",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/MixinTests.cs:TestNumberMixinBuilder",
+      "type": "class",
+      "name": "TestNumberMixinBuilder",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        902,
+        936
+      ],
+      "summary": "TestNumberMixinBuilder Mixin 构建器辅助类，用于在测试中动态创建和配置 Mixin 实例。",
+      "tags": [
+        "builder",
+        "mixin",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/MixinTests.cs:HandleExceptionDialog",
+      "type": "class",
+      "name": "HandleExceptionDialog",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        938,
+        967
+      ],
+      "summary": "HandleExceptionDialog 对话框处理类，用于测试中的用户交互模拟。",
+      "tags": [
+        "dialog",
+        "test-helper",
+        "user-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/MixinTests.cs:TestUnhandledExceptionMixinBuilder",
+      "type": "class",
+      "name": "TestUnhandledExceptionMixinBuilder",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        983,
+        1004
+      ],
+      "summary": "TestUnhandledExceptionMixinBuilder Mixin 构建器辅助类，用于在测试中动态创建和配置 Mixin 实例。",
+      "tags": [
+        "builder",
+        "mixin",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/MixinTests.cs:ExceptionMixin",
+      "type": "class",
+      "name": "ExceptionMixin",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        1017,
+        1051
+      ],
+      "summary": "ExceptionMixin 测试辅助类，用于单元测试中的类型模拟和功能验证。",
+      "tags": [
+        "test-helper",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestLoadAndRunMixinEvents",
+      "type": "function",
+      "name": "TestLoadAndRunMixinEvents",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        14,
+        49
+      ],
+      "summary": "TestLoadAndRunMixinEvents 单元测试方法，验证 LoadAndRunMixinEvents 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestMixinWithValidationRule",
+      "type": "function",
+      "name": "TestMixinWithValidationRule",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        51,
+        89
+      ],
+      "summary": "TestMixinWithValidationRule 单元测试方法，验证 MixinWithValidationRule 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:DynamicResultsFromMixinTest",
+      "type": "function",
+      "name": "DynamicResultsFromMixinTest",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        126,
+        150
+      ],
+      "summary": "DynamicResultsFromMixinTest 单元测试方法，验证 DynamicResultsFromMixin 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestAddMixinRestrictions",
+      "type": "function",
+      "name": "TestAddMixinRestrictions",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        152,
+        168
+      ],
+      "summary": "TestAddMixinRestrictions 单元测试方法，验证 AddMixinRestrictions 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestMixinFromReferencedTestPlan",
+      "type": "function",
+      "name": "TestMixinFromReferencedTestPlan",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        170,
+        210
+      ],
+      "summary": "TestMixinFromReferencedTestPlan 单元测试方法，验证 MixinFromReferencedPlan 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestMixinOnTestPlanDirect",
+      "type": "function",
+      "name": "TestMixinOnTestPlanDirect",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        212,
+        239
+      ],
+      "summary": "TestMixinOnTestPlanDirect 单元测试方法，验证 MixinOnPlanDirect 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestMixinOnTestPlanError",
+      "type": "function",
+      "name": "TestMixinOnTestPlanError",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        241,
+        254
+      ],
+      "summary": "TestMixinOnTestPlanError 单元测试方法，验证 MixinOnPlanError 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestMixinOrder",
+      "type": "function",
+      "name": "TestMixinOrder",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        320,
+        330
+      ],
+      "summary": "TestMixinOrder 单元测试方法，验证 MixinOrder 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestParameterizeAndRemoveMixin",
+      "type": "function",
+      "name": "TestParameterizeAndRemoveMixin",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        332,
+        368
+      ],
+      "summary": "TestParameterizeAndRemoveMixin 单元测试方法，验证 ParameterizeAndRemoveMixin 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:CannotAddMixinWhilePlanRunning",
+      "type": "function",
+      "name": "CannotAddMixinWhilePlanRunning",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        384,
+        413
+      ],
+      "summary": "CannotAddMixinWhilePlanRunning 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:PrerunMixinModifyParametersTest",
+      "type": "function",
+      "name": "PrerunMixinModifyParametersTest",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        453,
+        475
+      ],
+      "summary": "PrerunMixinModifyParametersTest 单元测试方法，验证 PrerunMixinModifyParameters 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:CanAddMixinToTestPlanReference",
+      "type": "function",
+      "name": "CanAddMixinToTestPlanReference",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        477,
+        506
+      ],
+      "summary": "CanAddMixinToTestPlanReference 单元测试方法，验证 CanAddMixinToPlanReference 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:CannotModifyMixinTest",
+      "type": "function",
+      "name": "CannotModifyMixinTest",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        510,
+        526
+      ],
+      "summary": "CannotModifyMixinTest 单元测试方法，验证 CannotModifyMixin 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:ModifyMixinTest",
+      "type": "function",
+      "name": "ModifyMixinTest",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        536,
+        559
+      ],
+      "summary": "ModifyMixinTest 单元测试方法，验证 ModifyMixin 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:MixinAsInput",
+      "type": "function",
+      "name": "MixinAsInput",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        571,
+        593
+      ],
+      "summary": "MixinAsInput 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestUnhandledExceptionMixin",
+      "type": "function",
+      "name": "TestUnhandledExceptionMixin",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        595,
+        610
+      ],
+      "summary": "TestUnhandledExceptionMixin 单元测试方法，验证 UnhandledExceptionMixin 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestMixinPreJumpToStep",
+      "type": "function",
+      "name": "TestMixinPreJumpToStep",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        651,
+        666
+      ],
+      "summary": "TestMixinPreJumpToStep 单元测试方法，验证 MixinPreJumpToStep 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestMixinExceptionPreStep",
+      "type": "function",
+      "name": "TestMixinExceptionPreStep",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        668,
+        681
+      ],
+      "summary": "TestMixinExceptionPreStep 单元测试方法，验证 MixinExceptionPreStep 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:EmbeddedParameterPlusMixinSerializerTest",
+      "type": "function",
+      "name": "EmbeddedParameterPlusMixinSerializerTest",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        710,
+        754
+      ],
+      "summary": "EmbeddedParameterPlusMixinSerializerTest 单元测试方法，验证 EmbeddedParameterPlusMixinSerializer 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:EmbeddedParameterPlusMixinEnabledIfTest",
+      "type": "function",
+      "name": "EmbeddedParameterPlusMixinEnabledIfTest",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        756,
+        805
+      ],
+      "summary": "EmbeddedParameterPlusMixinEnabledIfTest 单元测试方法，验证 EmbeddedParameterPlusMixinEnabledIf 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:OnPreRun",
+      "type": "function",
+      "name": "OnPreRun",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        838,
+        845
+      ],
+      "summary": "OnPreRun 事件处理方法，响应 PreRun 事件。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:MixinTestBuilder",
+      "type": "function",
+      "name": "MixinTestBuilder",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        860,
+        863
+      ],
+      "summary": "MixinTestBuilder 单元测试方法，验证 MixinBuilder 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:ToDynamicMember_L872",
+      "type": "function",
+      "name": "ToDynamicMember",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        872,
+        893
+      ],
+      "summary": "ToDynamicMember 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:TestNumberMixinBuilder",
+      "type": "function",
+      "name": "TestNumberMixinBuilder",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        907,
+        910
+      ],
+      "summary": "TestNumberMixinBuilder 单元测试方法，验证 NumberMixinBuilder 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:ToDynamicMember_L916",
+      "type": "function",
+      "name": "ToDynamicMember",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        916,
+        927
+      ],
+      "summary": "ToDynamicMember 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        973,
+        980
+      ],
+      "summary": "Run 步骤执行方法，执行测试步骤的核心逻辑。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:ToDynamicMember_L992",
+      "type": "function",
+      "name": "ToDynamicMember",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        992,
+        1003
+      ],
+      "summary": "ToDynamicMember 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:RequestUserInput",
+      "type": "function",
+      "name": "RequestUserInput",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        1008,
+        1014
+      ],
+      "summary": "RequestUserInput Mixin 构建器或用户交互方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/MixinTests.cs:OnPostRun",
+      "type": "function",
+      "name": "OnPostRun",
+      "filePath": "Engine.UnitTests/MixinTests.cs",
+      "lineRange": [
+        1022,
+        1050
+      ],
+      "summary": "OnPostRun 事件处理方法，响应 PostRun 事件。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/PerformanceTests.cs",
+      "type": "file",
+      "name": "PerformanceTests.cs",
+      "filePath": "Engine.UnitTests/PerformanceTests.cs",
+      "summary": "简单的性能测试占位文件，定义了一个带有延迟运行的 DutStep2 测试步骤类，用于性能基准测试。",
+      "tags": [
+        "test",
+        "performance",
+        "benchmark"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "type": "file",
+      "name": "ReflectionHelperTest.cs",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "summary": "ReflectionHelper 工具类的综合测试，覆盖枚举转换、字节可读格式化、超时操作、Murmur3 哈希、扁平化层次结构以及重试工具等方法。",
+      "tags": [
+        "test",
+        "reflection-helper",
+        "utility",
+        "hash",
+        "retry"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ReflectionHelperTest.cs:ReflectionHelperTest",
+      "type": "class",
+      "name": "ReflectionHelperTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        18,
+        398
+      ],
+      "summary": "ReflectionHelperTest NUnit 测试类，包含 20 个测试方法，验证 OpenTAP 引擎相关功能。",
+      "tags": [
+        "test",
+        "nunit",
+        "test-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:EnumerableTest",
+      "type": "function",
+      "name": "EnumerableTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        22,
+        34
+      ],
+      "summary": "EnumerableTest 单元测试方法，验证 Enumerable 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:ArrayAppendTest",
+      "type": "function",
+      "name": "ArrayAppendTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        36,
+        43
+      ],
+      "summary": "ArrayAppendTest 单元测试方法，验证 ArrayAppend 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TimeoutOperationTest",
+      "type": "function",
+      "name": "TimeoutOperationTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        45,
+        83
+      ],
+      "summary": "TimeoutOperationTest 单元测试方法，验证 TimeoutOperation 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:getMurMur",
+      "type": "function",
+      "name": "getMurMur",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        85,
+        103
+      ],
+      "summary": "getMurMur 方法。",
+      "tags": [
+        "utility",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestMurmur3",
+      "type": "function",
+      "name": "TestMurmur3",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        105,
+        122
+      ],
+      "summary": "TestMurmur3 单元测试方法，验证 Murmur3 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:FlattenHeirarchyTest",
+      "type": "function",
+      "name": "FlattenHeirarchyTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        130,
+        138
+      ],
+      "summary": "FlattenHeirarchyTest 单元测试方法，验证 FlattenHeirarchy 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:OverriderTest",
+      "type": "function",
+      "name": "OverriderTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        162,
+        185
+      ],
+      "summary": "OverriderTest 单元测试方法，验证 Overrider 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:RemoveIfTest",
+      "type": "function",
+      "name": "RemoveIfTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        187,
+        195
+      ],
+      "summary": "RemoveIfTest 单元测试方法，验证 RemoveIf 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestCheckOperatingSystem",
+      "type": "function",
+      "name": "TestCheckOperatingSystem",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        197,
+        213
+      ],
+      "summary": "TestCheckOperatingSystem 单元测试方法，验证 CheckOperatingSystem 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestDirSearch",
+      "type": "function",
+      "name": "TestDirSearch",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        215,
+        223
+      ],
+      "summary": "TestDirSearch 单元测试方法，验证 DirSearch 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:MemorizerValidationTest",
+      "type": "function",
+      "name": "MemorizerValidationTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        225,
+        241
+      ],
+      "summary": "MemorizerValidationTest 单元测试方法，验证 MemorizerValidation 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestEnumToString",
+      "type": "function",
+      "name": "TestEnumToString",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        256,
+        271
+      ],
+      "summary": "TestEnumToString 单元测试方法，验证 EnumToString 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestInvalidEnumToString",
+      "type": "function",
+      "name": "TestInvalidEnumToString",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        273,
+        279
+      ],
+      "summary": "TestInvalidEnumToString 单元测试方法，验证 InvalidEnumToString 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestBytesToReadable",
+      "type": "function",
+      "name": "TestBytesToReadable",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        282,
+        299
+      ],
+      "summary": "TestBytesToReadable 单元测试方法，验证 BytesToReadable 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TrySelectUnwrapTest",
+      "type": "function",
+      "name": "TrySelectUnwrapTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        301,
+        311
+      ],
+      "summary": "TrySelectUnwrapTest 单元测试方法，验证 TrySelectUnwrap 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestTimeFromSeconds",
+      "type": "function",
+      "name": "TestTimeFromSeconds",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        313,
+        321
+      ],
+      "summary": "TestTimeFromSeconds 单元测试方法，验证 TimeFromSeconds 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:BatchingTest",
+      "type": "function",
+      "name": "BatchingTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        323,
+        328
+      ],
+      "summary": "BatchingTest 单元测试方法，验证 Batching 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:CompareAndExchangeTest",
+      "type": "function",
+      "name": "CompareAndExchangeTest",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        330,
+        363
+      ],
+      "summary": "CompareAndExchangeTest 单元测试方法，验证 CompareAndExchange 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestRetryUtil",
+      "type": "function",
+      "name": "TestRetryUtil",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        365,
+        380
+      ],
+      "summary": "TestRetryUtil 单元测试方法，验证 RetryUtil 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestRetryFailure",
+      "type": "function",
+      "name": "TestRetryFailure",
+      "filePath": "Engine.UnitTests/ReflectionHelperTest.cs",
+      "lineRange": [
+        382,
+        397
+      ],
+      "summary": "TestRetryFailure 单元测试方法，验证 RetryFailure 相关功能。",
+      "tags": [
+        "test",
+        "nunit"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:MixinTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:MixinTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:MixinTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:MixinTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:MixinTestBuilder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:MixinTestBuilder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:TestNumberMixinBuilder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:TestNumberMixinBuilder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:HandleExceptionDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:HandleExceptionDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:TestUnhandledExceptionMixinBuilder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:TestUnhandledExceptionMixinBuilder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:ExceptionMixin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "class:Engine.UnitTests/MixinTests.cs:ExceptionMixin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestLoadAndRunMixinEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestLoadAndRunMixinEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinWithValidationRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinWithValidationRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:DynamicResultsFromMixinTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:DynamicResultsFromMixinTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestAddMixinRestrictions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestAddMixinRestrictions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinFromReferencedTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinFromReferencedTestPlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinOnTestPlanDirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinOnTestPlanDirect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinOnTestPlanError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinOnTestPlanError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestParameterizeAndRemoveMixin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestParameterizeAndRemoveMixin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:CannotAddMixinWhilePlanRunning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:CannotAddMixinWhilePlanRunning",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:PrerunMixinModifyParametersTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:PrerunMixinModifyParametersTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:CanAddMixinToTestPlanReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:CanAddMixinToTestPlanReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:CannotModifyMixinTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:CannotModifyMixinTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:ModifyMixinTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:ModifyMixinTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:MixinAsInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:MixinAsInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestUnhandledExceptionMixin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestUnhandledExceptionMixin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinPreJumpToStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinPreJumpToStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinExceptionPreStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestMixinExceptionPreStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:EmbeddedParameterPlusMixinSerializerTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:EmbeddedParameterPlusMixinSerializerTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:EmbeddedParameterPlusMixinEnabledIfTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:EmbeddedParameterPlusMixinEnabledIfTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:OnPreRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:OnPreRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:MixinTestBuilder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:MixinTestBuilder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:ToDynamicMember_L992",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:ToDynamicMember_L992",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestNumberMixinBuilder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:TestNumberMixinBuilder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:ToDynamicMember_L992",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:ToDynamicMember_L992",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:ToDynamicMember_L992",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:ToDynamicMember_L992",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:RequestUserInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:RequestUserInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:OnPostRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/MixinTests.cs",
+      "target": "function:Engine.UnitTests/MixinTests.cs:OnPostRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "class:Engine.UnitTests/ReflectionHelperTest.cs:ReflectionHelperTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "class:Engine.UnitTests/ReflectionHelperTest.cs:ReflectionHelperTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:EnumerableTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:EnumerableTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:ArrayAppendTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:ArrayAppendTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TimeoutOperationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TimeoutOperationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:getMurMur",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestMurmur3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestMurmur3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:FlattenHeirarchyTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:FlattenHeirarchyTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:OverriderTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:OverriderTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:RemoveIfTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:RemoveIfTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestCheckOperatingSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestCheckOperatingSystem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestDirSearch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestDirSearch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:MemorizerValidationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:MemorizerValidationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestEnumToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestEnumToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestInvalidEnumToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestInvalidEnumToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestBytesToReadable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestBytesToReadable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TrySelectUnwrapTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TrySelectUnwrapTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestTimeFromSeconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestTimeFromSeconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:BatchingTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:BatchingTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:CompareAndExchangeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:CompareAndExchangeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestRetryUtil",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestRetryUtil",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestRetryFailure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ReflectionHelperTest.cs",
+      "target": "function:Engine.UnitTests/ReflectionHelperTest.cs:TestRetryFailure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

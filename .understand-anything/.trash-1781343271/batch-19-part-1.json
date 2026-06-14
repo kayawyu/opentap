@@ -1,0 +1,3250 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/AllowChildTest.cs",
+      "type": "file",
+      "name": "AllowChildTest.cs",
+      "filePath": "Engine.UnitTests/AllowChildTest.cs",
+      "summary": "测试 AllowAsChildIn 和 AllowChildrenOfType 特性的单元测试，验证子步骤类型限制规则和 GUID 唯一性。",
+      "tags": [
+        "test",
+        "unit-test",
+        "child-steps",
+        "attribute"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/AnnotationTest.cs",
+      "type": "file",
+      "name": "AnnotationTest.cs",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "summary": "OpenTAP 注解（Annotation）系统的综合单元测试文件，包含 58 个测试方法，覆盖参数化、Sweep Loop、菜单注解、多选、TestPlanReference、合并输入判定和序列化等核心注解功能。",
+      "tags": [
+        "test",
+        "unit-test",
+        "annotation",
+        "parameterize",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/ArtifactStep.cs",
+      "type": "file",
+      "name": "ArtifactStep.cs",
+      "filePath": "Engine.UnitTests/ArtifactStep.cs",
+      "summary": "测试辅助类 ArtifactStep（测试步骤），用于在测试中发布文件或内存流形式的 Artifact，支持重命名。",
+      "tags": [
+        "test",
+        "artifact",
+        "test-step",
+        "helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ArtifactsTest.cs",
+      "type": "file",
+      "name": "ArtifactsTest.cs",
+      "filePath": "Engine.UnitTests/ArtifactsTest.cs",
+      "summary": "Artifact 功能的单元测试，验证压缩日志文件生成、内存流式 Artifact 发布、以及并行场景下的 Artifact 压缩行为。",
+      "tags": [
+        "test",
+        "unit-test",
+        "artifact",
+        "zip"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "type": "file",
+      "name": "ArtifactZipper.cs",
+      "filePath": "Engine.UnitTests/ArtifactZipper.cs",
+      "summary": "测试辅助类 ArtifactZipper（ResultListener），实现 IArtifactListener 接口，将测试运行产生的 Artifact 自动压缩为 ZIP 文件。",
+      "tags": [
+        "test",
+        "artifact",
+        "result-listener",
+        "zip",
+        "helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/AssemblyDataTest.cs",
+      "type": "file",
+      "name": "AssemblyDataTest.cs",
+      "filePath": "Engine.UnitTests/AssemblyDataTest.cs",
+      "summary": "AssemblyData 类的单元测试，验证从程序集原始版本字符串正确解析 SemanticVersion 和 Version 的能力。",
+      "tags": [
+        "test",
+        "unit-test",
+        "version",
+        "assembly-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/AuthenticationTests.cs",
+      "type": "file",
+      "name": "AuthenticationTests.cs",
+      "filePath": "Engine.UnitTests/AuthenticationTests.cs",
+      "summary": "认证（Authentication）相关功能的单元测试，验证 JWT Token 解析、Token 过期处理以及带 URL 特殊字符的 Token 解析能力。",
+      "tags": [
+        "test",
+        "unit-test",
+        "authentication",
+        "jwt",
+        "token"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/AllowChildTest.cs:AllowChildTest",
+      "type": "class",
+      "name": "AllowChildTest",
+      "filePath": "Engine.UnitTests/AllowChildTest.cs",
+      "lineRange": [
+        6,
+        80
+      ],
+      "summary": "NUnit 测试夹具类，包含三个测试用例验证子步骤类型约束和 ID 唯一性。",
+      "tags": [
+        "test-fixture",
+        "nunit",
+        "child-steps"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestAllowChildren",
+      "type": "function",
+      "name": "AllowChildTest.TestAllowChildren",
+      "filePath": "Engine.UnitTests/AllowChildTest.cs",
+      "lineRange": [
+        28,
+        33
+      ],
+      "summary": "验证子步骤类型约束规则的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "child-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestGuid",
+      "type": "function",
+      "name": "AllowChildTest.TestGuid",
+      "filePath": "Engine.UnitTests/AllowChildTest.cs",
+      "lineRange": [
+        35,
+        41
+      ],
+      "summary": "验证子步骤类型约束规则的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "child-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestInterfaceParentStep",
+      "type": "function",
+      "name": "AllowChildTest.TestInterfaceParentStep",
+      "filePath": "Engine.UnitTests/AllowChildTest.cs",
+      "lineRange": [
+        70,
+        79
+      ],
+      "summary": "验证子步骤类型约束规则的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "child-steps"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "type": "class",
+      "name": "AnnotationTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        18,
+        2743
+      ],
+      "summary": "综合注解测试类，包含 58 个测试方法，全面验证 OpenTAP 注解系统的行为。",
+      "tags": [
+        "test-fixture",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanReferenceNameTest",
+      "type": "function",
+      "name": "AnnotationTest.TestPlanReferenceNameTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        20,
+        38
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestStepDuplicateIdWarning",
+      "type": "function",
+      "name": "AnnotationTest.TestStepDuplicateIdWarning",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        40,
+        81
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTestPlanReferenceDuplicates",
+      "type": "function",
+      "name": "AnnotationTest.TestTestPlanReferenceDuplicates",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        82,
+        133
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanReferenceAnnotationTest",
+      "type": "function",
+      "name": "AnnotationTest.TestPlanReferenceAnnotationTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        135,
+        185
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ArrayStepNameAnnotationTest",
+      "type": "function",
+      "name": "AnnotationTest.ArrayStepNameAnnotationTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        187,
+        211
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepLoopEnabledTest",
+      "type": "function",
+      "name": "AnnotationTest.SweepLoopEnabledTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        214,
+        243
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "sweep"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MetadataErrorAnnotation",
+      "type": "function",
+      "name": "AnnotationTest.MetadataErrorAnnotation",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        256,
+        285
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultiSelectIndexError",
+      "type": "function",
+      "name": "AnnotationTest.TestMultiSelectIndexError",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        295,
+        329
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "multi-select"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestClassWithMacroStringMultiSelect",
+      "type": "function",
+      "name": "AnnotationTest.TestClassWithMacroStringMultiSelect",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        336,
+        361
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "multi-select"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMacroStringContext",
+      "type": "function",
+      "name": "AnnotationTest.TestMacroStringContext",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        372,
+        385
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultiSelectCallMethodAnnotation",
+      "type": "function",
+      "name": "AnnotationTest.TestMultiSelectCallMethodAnnotation",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        394,
+        403
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "multi-select"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfObjectAnnotation",
+      "type": "function",
+      "name": "AnnotationTest.ListOfObjectAnnotation",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        429,
+        452
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotation",
+      "type": "function",
+      "name": "AnnotationTest.ListOfStringAnnotation",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        455,
+        465
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotation2",
+      "type": "function",
+      "name": "AnnotationTest.ListOfStringAnnotation2",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        467,
+        485
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotationTpr",
+      "type": "function",
+      "name": "AnnotationTest.ListOfStringAnnotationTpr",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        487,
+        512
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestReparameterize",
+      "type": "function",
+      "name": "AnnotationTest.TestReparameterize",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        613,
+        652
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest",
+      "type": "function",
+      "name": "AnnotationTest.MenuAnnotationTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        654,
+        884
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "menu-annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest4",
+      "type": "function",
+      "name": "AnnotationTest.MenuAnnotationTest4",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        886,
+        918
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "menu-annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest2",
+      "type": "function",
+      "name": "AnnotationTest.MenuAnnotationTest2",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        920,
+        965
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "menu-annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest3",
+      "type": "function",
+      "name": "AnnotationTest.MenuAnnotationTest3",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        966,
+        1058
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "menu-annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterizeTest",
+      "type": "function",
+      "name": "AnnotationTest.ParameterizeTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1090,
+        1131
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "parameterize"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergedInputVerdict",
+      "type": "function",
+      "name": "AnnotationTest.TestMergedInputVerdict",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1133,
+        1221
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "merged-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSerializeMergedInput",
+      "type": "function",
+      "name": "AnnotationTest.TestSerializeMergedInput",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1235,
+        1293
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "merged-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergedInputVerdict2",
+      "type": "function",
+      "name": "AnnotationTest.TestMergedInputVerdict2",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1295,
+        1356
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "merged-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterizeOnParentTest",
+      "type": "function",
+      "name": "AnnotationTest.ParameterizeOnParentTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1358,
+        1405
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "parameterize"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AutoRemoveParameters",
+      "type": "function",
+      "name": "AnnotationTest.AutoRemoveParameters",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1412,
+        1454
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.EnabledAnnotated",
+      "type": "function",
+      "name": "AnnotationTest.EnabledAnnotated",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1456,
+        1470
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanAnnotated",
+      "type": "function",
+      "name": "AnnotationTest.TestPlanAnnotated",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1472,
+        1551
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfEnumAnnotation",
+      "type": "function",
+      "name": "AnnotationTest.ListOfEnumAnnotation",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1563,
+        1581
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AddToFixedSizeAnnotation",
+      "type": "function",
+      "name": "AnnotationTest.AddToFixedSizeAnnotation",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1592,
+        1612
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectParameterize",
+      "type": "function",
+      "name": "AnnotationTest.MultiSelectParameterize",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1615,
+        1690
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "parameterize"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectUnparameterize",
+      "type": "function",
+      "name": "AnnotationTest.MultiSelectUnparameterize",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1708,
+        1745
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "multi-select"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectList",
+      "type": "function",
+      "name": "AnnotationTest.MultiSelectList",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1748,
+        1761
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "multi-select"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.FixNullList",
+      "type": "function",
+      "name": "AnnotationTest.FixNullList",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1763,
+        1777
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterInputsTest",
+      "type": "function",
+      "name": "AnnotationTest.ParameterInputsTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1780,
+        1804
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.RemoveFromFixedSizeAnnotation",
+      "type": "function",
+      "name": "AnnotationTest.RemoveFromFixedSizeAnnotation",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1806,
+        1828
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameteriseLists",
+      "type": "function",
+      "name": "AnnotationTest.ParameteriseLists",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1846,
+        1890
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AddExternalParameterWarning",
+      "type": "function",
+      "name": "AnnotationTest.AddExternalParameterWarning",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1892,
+        1907
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMemberWithExceptionAnnotation",
+      "type": "function",
+      "name": "AnnotationTest.TestMemberWithExceptionAnnotation",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1928,
+        1935
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepParametersAnnotation",
+      "type": "function",
+      "name": "AnnotationTest.SweepParametersAnnotation",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1937,
+        1976
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "sweep"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepParametersValidationTest",
+      "type": "function",
+      "name": "AnnotationTest.SweepParametersValidationTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        1991,
+        2086
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "sweep"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepLoopUnparameterizable",
+      "type": "function",
+      "name": "AnnotationTest.SweepLoopUnparameterizable",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2088,
+        2104
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "sweep"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergeBadParameters",
+      "type": "function",
+      "name": "AnnotationTest.TestMergeBadParameters",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2106,
+        2144
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSetBoolArrayValues",
+      "type": "function",
+      "name": "AnnotationTest.TestSetBoolArrayValues",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2157,
+        2173
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SuggestedAndAvailableValuesUpdateTest",
+      "type": "function",
+      "name": "AnnotationTest.SuggestedAndAvailableValuesUpdateTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2185,
+        2200
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "available-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSetStringResourceTest",
+      "type": "function",
+      "name": "AnnotationTest.TestSetStringResourceTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2210,
+        2231
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestNumberSequenceAnnotation",
+      "type": "function",
+      "name": "AnnotationTest.TestNumberSequenceAnnotation",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2240,
+        2254
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.WriteMergedAnnotationTest",
+      "type": "function",
+      "name": "AnnotationTest.WriteMergedAnnotationTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2256,
+        2284
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "merged-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AvailableResourcesTest",
+      "type": "function",
+      "name": "AnnotationTest.AvailableResourcesTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2299,
+        2333
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "available-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AvailableValuesUpdateTest",
+      "type": "function",
+      "name": "AnnotationTest.AvailableValuesUpdateTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2335,
+        2386
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "available-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.OverlappingEnumTest",
+      "type": "function",
+      "name": "AnnotationTest.OverlappingEnumTest",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2406,
+        2422
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultipleEnabled",
+      "type": "function",
+      "name": "AnnotationTest.TestMultipleEnabled",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2450,
+        2460
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestAddToArrayWithAvailableValues",
+      "type": "function",
+      "name": "AnnotationTest.TestAddToArrayWithAvailableValues",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2489,
+        2547
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "available-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestAddToListWithAvailableValues",
+      "type": "function",
+      "name": "AnnotationTest.TestAddToListWithAvailableValues",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2549,
+        2609
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "available-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestReadOnlyStepSettings",
+      "type": "function",
+      "name": "AnnotationTest.TestReadOnlyStepSettings",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2631,
+        2638
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTimeAnnotations",
+      "type": "function",
+      "name": "AnnotationTest.TestTimeAnnotations",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2649,
+        2681
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTimeSpanAnnotationError",
+      "type": "function",
+      "name": "AnnotationTest.TestTimeSpanAnnotationError",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2683,
+        2695
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SelectedValuesCanBeModifiedWithMultipleStepsSelected",
+      "type": "function",
+      "name": "AnnotationTest.SelectedValuesCanBeModifiedWithMultipleStepsSelected",
+      "filePath": "Engine.UnitTests/AnnotationTest.cs",
+      "lineRange": [
+        2711,
+        2742
+      ],
+      "summary": "验证注解功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/ArtifactStep.cs:ArtifactStep",
+      "type": "class",
+      "name": "ArtifactStep",
+      "filePath": "Engine.UnitTests/ArtifactStep.cs",
+      "lineRange": [
+        5,
+        32
+      ],
+      "summary": "测试辅助类，继承 TestStep，支持以文件或内存流形式发布 Artifact 并可选重命名。",
+      "tags": [
+        "test-step",
+        "artifact",
+        "helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactStep.cs:ArtifactStep.Run",
+      "type": "function",
+      "name": "ArtifactStep.Run",
+      "filePath": "Engine.UnitTests/ArtifactStep.cs",
+      "lineRange": [
+        17,
+        31
+      ],
+      "summary": "执行 Artifact 发布逻辑，根据 AsStream 标志以文件或内存流形式发布。",
+      "tags": [
+        "test",
+        "artifact",
+        "stream"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest",
+      "type": "class",
+      "name": "ArtifactsTest",
+      "filePath": "Engine.UnitTests/ArtifactsTest.cs",
+      "lineRange": [
+        8,
+        111
+      ],
+      "summary": "NUnit 测试夹具类，验证 Artifact 压缩发布、内存流 Artifact 和并行压缩行为。",
+      "tags": [
+        "test-fixture",
+        "nunit",
+        "artifact"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ZippingLogFileTest",
+      "type": "function",
+      "name": "ArtifactsTest.ZippingLogFileTest",
+      "filePath": "Engine.UnitTests/ArtifactsTest.cs",
+      "lineRange": [
+        11,
+        35
+      ],
+      "summary": "验证 Artifact 功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "artifact"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ArtifactMemoryStreamTest",
+      "type": "function",
+      "name": "ArtifactsTest.ArtifactMemoryStreamTest",
+      "filePath": "Engine.UnitTests/ArtifactsTest.cs",
+      "lineRange": [
+        61,
+        81
+      ],
+      "summary": "验证 Artifact 功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "artifact"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ZippingLogFileTestParallel",
+      "type": "function",
+      "name": "ArtifactsTest.ZippingLogFileTestParallel",
+      "filePath": "Engine.UnitTests/ArtifactsTest.cs",
+      "lineRange": [
+        83,
+        110
+      ],
+      "summary": "验证 Artifact 功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "artifact"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper",
+      "type": "class",
+      "name": "ArtifactZipper",
+      "filePath": "Engine.UnitTests/ArtifactZipper.cs",
+      "lineRange": [
+        7,
+        130
+      ],
+      "summary": "ResultListener 子类，实现 IArtifactListener，在测试计划运行期间自动将 Artifact 压缩为 ZIP 文件。",
+      "tags": [
+        "result-listener",
+        "artifact",
+        "zip"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestPlanRunStart",
+      "type": "function",
+      "name": "ArtifactZipper.OnTestPlanRunStart",
+      "filePath": "Engine.UnitTests/ArtifactZipper.cs",
+      "lineRange": [
+        22,
+        28
+      ],
+      "summary": "测试计划运行开始时创建临时 ZIP 文件。",
+      "tags": [
+        "test",
+        "artifact",
+        "zip"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestPlanRunCompleted",
+      "type": "function",
+      "name": "ArtifactZipper.OnTestPlanRunCompleted",
+      "filePath": "Engine.UnitTests/ArtifactZipper.cs",
+      "lineRange": [
+        30,
+        83
+      ],
+      "summary": "测试计划运行完成时将临时 ZIP 文件移动到最终位置。",
+      "tags": [
+        "test",
+        "artifact",
+        "zip"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestStepRunStart",
+      "type": "function",
+      "name": "ArtifactZipper.OnTestStepRunStart",
+      "filePath": "Engine.UnitTests/ArtifactZipper.cs",
+      "lineRange": [
+        87,
+        91
+      ],
+      "summary": "测试步骤运行开始时的回调。",
+      "tags": [
+        "test",
+        "artifact",
+        "zip"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestStepRunCompleted",
+      "type": "function",
+      "name": "ArtifactZipper.OnTestStepRunCompleted",
+      "filePath": "Engine.UnitTests/ArtifactZipper.cs",
+      "lineRange": [
+        93,
+        97
+      ],
+      "summary": "测试步骤运行完成时的回调。",
+      "tags": [
+        "test",
+        "artifact",
+        "zip"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.GetPlanRunId",
+      "type": "function",
+      "name": "ArtifactZipper.GetPlanRunId",
+      "filePath": "Engine.UnitTests/ArtifactZipper.cs",
+      "lineRange": [
+        99,
+        106
+      ],
+      "summary": "从 runId 解析测试计划运行 ID。",
+      "tags": [
+        "test",
+        "artifact",
+        "zip"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.GetTmpFileName",
+      "type": "function",
+      "name": "ArtifactZipper.GetTmpFileName",
+      "filePath": "Engine.UnitTests/ArtifactZipper.cs",
+      "lineRange": [
+        108,
+        113
+      ],
+      "summary": "生成临时文件名。",
+      "tags": [
+        "test",
+        "artifact",
+        "zip"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnArtifactPublished",
+      "type": "function",
+      "name": "ArtifactZipper.OnArtifactPublished",
+      "filePath": "Engine.UnitTests/ArtifactZipper.cs",
+      "lineRange": [
+        115,
+        129
+      ],
+      "summary": "Artifact 发布时将文件添加到 ZIP 压缩包中。",
+      "tags": [
+        "test",
+        "artifact",
+        "zip"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest",
+      "type": "class",
+      "name": "AssemblyDataTest",
+      "filePath": "Engine.UnitTests/AssemblyDataTest.cs",
+      "lineRange": [
+        7,
+        49
+      ],
+      "summary": "NUnit 测试夹具类，验证 AssemblyData 对 SemanticVersion 和 System.Version 的解析正确性。",
+      "tags": [
+        "test-fixture",
+        "nunit",
+        "version"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest.AssemblyDataVersionTest",
+      "type": "function",
+      "name": "AssemblyDataTest.AssemblyDataVersionTest",
+      "filePath": "Engine.UnitTests/AssemblyDataTest.cs",
+      "lineRange": [
+        30,
+        41
+      ],
+      "summary": "验证版本解析功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "version"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest.OpenTapVersionTest",
+      "type": "function",
+      "name": "AssemblyDataTest.OpenTapVersionTest",
+      "filePath": "Engine.UnitTests/AssemblyDataTest.cs",
+      "lineRange": [
+        43,
+        47
+      ],
+      "summary": "验证版本解析功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "version"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests",
+      "type": "class",
+      "name": "AuthenticationTests",
+      "filePath": "Engine.UnitTests/AuthenticationTests.cs",
+      "lineRange": [
+        7,
+        92
+      ],
+      "summary": "NUnit 测试类，验证 TokenInfo.FromResponse 对 JWT Token 响应格式的解析。",
+      "tags": [
+        "test-fixture",
+        "nunit",
+        "authentication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.ParseTokens",
+      "type": "function",
+      "name": "AuthenticationTests.ParseTokens",
+      "filePath": "Engine.UnitTests/AuthenticationTests.cs",
+      "lineRange": [
+        9,
+        50
+      ],
+      "summary": "验证 Token 解析功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "authentication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.TokenExpiration",
+      "type": "function",
+      "name": "AuthenticationTests.TokenExpiration",
+      "filePath": "Engine.UnitTests/AuthenticationTests.cs",
+      "lineRange": [
+        52,
+        81
+      ],
+      "summary": "验证 Token 解析功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "authentication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.ParseTokenWithUrlChars",
+      "type": "function",
+      "name": "AuthenticationTests.ParseTokenWithUrlChars",
+      "filePath": "Engine.UnitTests/AuthenticationTests.cs",
+      "lineRange": [
+        83,
+        91
+      ],
+      "summary": "验证 Token 解析功能的 NUnit 测试方法。",
+      "tags": [
+        "test",
+        "nunit",
+        "authentication"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/AllowChildTest.cs",
+      "target": "class:Engine.UnitTests/AllowChildTest.cs:AllowChildTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AllowChildTest.cs",
+      "target": "class:Engine.UnitTests/AllowChildTest.cs:AllowChildTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AllowChildTest.cs",
+      "target": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestAllowChildren",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AllowChildTest.cs:AllowChildTest",
+      "target": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestAllowChildren",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AllowChildTest.cs",
+      "target": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestAllowChildren",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AllowChildTest.cs",
+      "target": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestGuid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AllowChildTest.cs:AllowChildTest",
+      "target": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestGuid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AllowChildTest.cs",
+      "target": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestGuid",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AllowChildTest.cs",
+      "target": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestInterfaceParentStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AllowChildTest.cs:AllowChildTest",
+      "target": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestInterfaceParentStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AllowChildTest.cs",
+      "target": "function:Engine.UnitTests/AllowChildTest.cs:AllowChildTest.TestInterfaceParentStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanReferenceNameTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanReferenceNameTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanReferenceNameTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestStepDuplicateIdWarning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestStepDuplicateIdWarning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestStepDuplicateIdWarning",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTestPlanReferenceDuplicates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTestPlanReferenceDuplicates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTestPlanReferenceDuplicates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanReferenceAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanReferenceAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanReferenceAnnotationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ArrayStepNameAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ArrayStepNameAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ArrayStepNameAnnotationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepLoopEnabledTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepLoopEnabledTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepLoopEnabledTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MetadataErrorAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MetadataErrorAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MetadataErrorAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultiSelectIndexError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultiSelectIndexError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultiSelectIndexError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestClassWithMacroStringMultiSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestClassWithMacroStringMultiSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestClassWithMacroStringMultiSelect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMacroStringContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMacroStringContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMacroStringContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultiSelectCallMethodAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultiSelectCallMethodAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultiSelectCallMethodAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfObjectAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfObjectAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfObjectAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotation2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotation2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotation2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotationTpr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotationTpr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfStringAnnotationTpr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestReparameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestReparameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestReparameterize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest4",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest4",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest4",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MenuAnnotationTest3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterizeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterizeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterizeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergedInputVerdict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergedInputVerdict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergedInputVerdict",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSerializeMergedInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSerializeMergedInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSerializeMergedInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergedInputVerdict2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergedInputVerdict2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergedInputVerdict2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterizeOnParentTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterizeOnParentTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterizeOnParentTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AutoRemoveParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AutoRemoveParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AutoRemoveParameters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.EnabledAnnotated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.EnabledAnnotated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.EnabledAnnotated",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanAnnotated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanAnnotated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestPlanAnnotated",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfEnumAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfEnumAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ListOfEnumAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AddToFixedSizeAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AddToFixedSizeAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AddToFixedSizeAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectParameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectParameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectParameterize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectUnparameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectUnparameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectUnparameterize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.MultiSelectList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.FixNullList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.FixNullList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.FixNullList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterInputsTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterInputsTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameterInputsTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.RemoveFromFixedSizeAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.RemoveFromFixedSizeAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.RemoveFromFixedSizeAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameteriseLists",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameteriseLists",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.ParameteriseLists",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AddExternalParameterWarning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AddExternalParameterWarning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AddExternalParameterWarning",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMemberWithExceptionAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMemberWithExceptionAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMemberWithExceptionAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepParametersAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepParametersAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepParametersAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepParametersValidationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepParametersValidationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepParametersValidationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepLoopUnparameterizable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepLoopUnparameterizable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SweepLoopUnparameterizable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergeBadParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergeBadParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMergeBadParameters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSetBoolArrayValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSetBoolArrayValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSetBoolArrayValues",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SuggestedAndAvailableValuesUpdateTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SuggestedAndAvailableValuesUpdateTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SuggestedAndAvailableValuesUpdateTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSetStringResourceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSetStringResourceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestSetStringResourceTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestNumberSequenceAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestNumberSequenceAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestNumberSequenceAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.WriteMergedAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.WriteMergedAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.WriteMergedAnnotationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AvailableResourcesTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AvailableResourcesTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AvailableResourcesTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AvailableValuesUpdateTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AvailableValuesUpdateTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.AvailableValuesUpdateTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.OverlappingEnumTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.OverlappingEnumTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.OverlappingEnumTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultipleEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultipleEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestMultipleEnabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestAddToArrayWithAvailableValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestAddToArrayWithAvailableValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestAddToArrayWithAvailableValues",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestAddToListWithAvailableValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestAddToListWithAvailableValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestAddToListWithAvailableValues",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestReadOnlyStepSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestReadOnlyStepSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestReadOnlyStepSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTimeAnnotations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTimeAnnotations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTimeAnnotations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTimeSpanAnnotationError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTimeSpanAnnotationError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.TestTimeSpanAnnotationError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SelectedValuesCanBeModifiedWithMultipleStepsSelected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AnnotationTest.cs:AnnotationTest",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SelectedValuesCanBeModifiedWithMultipleStepsSelected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AnnotationTest.cs",
+      "target": "function:Engine.UnitTests/AnnotationTest.cs:AnnotationTest.SelectedValuesCanBeModifiedWithMultipleStepsSelected",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactStep.cs",
+      "target": "class:Engine.UnitTests/ArtifactStep.cs:ArtifactStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactStep.cs",
+      "target": "class:Engine.UnitTests/ArtifactStep.cs:ArtifactStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactStep.cs",
+      "target": "function:Engine.UnitTests/ArtifactStep.cs:ArtifactStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactStep.cs:ArtifactStep",
+      "target": "function:Engine.UnitTests/ArtifactStep.cs:ArtifactStep.Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactStep.cs",
+      "target": "function:Engine.UnitTests/ArtifactStep.cs:ArtifactStep.Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactsTest.cs",
+      "target": "class:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactsTest.cs",
+      "target": "class:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactsTest.cs",
+      "target": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ZippingLogFileTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest",
+      "target": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ZippingLogFileTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactsTest.cs",
+      "target": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ZippingLogFileTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactsTest.cs",
+      "target": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ArtifactMemoryStreamTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest",
+      "target": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ArtifactMemoryStreamTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactsTest.cs",
+      "target": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ArtifactMemoryStreamTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactsTest.cs",
+      "target": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ZippingLogFileTestParallel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest",
+      "target": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ZippingLogFileTestParallel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactsTest.cs",
+      "target": "function:Engine.UnitTests/ArtifactsTest.cs:ArtifactsTest.ZippingLogFileTestParallel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "class:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "class:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestPlanRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestPlanRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestPlanRunStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestPlanRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestPlanRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestPlanRunCompleted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestStepRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestStepRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestStepRunStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestStepRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestStepRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnTestStepRunCompleted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.GetPlanRunId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.GetPlanRunId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.GetPlanRunId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.GetTmpFileName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.GetTmpFileName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.GetTmpFileName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnArtifactPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnArtifactPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ArtifactZipper.cs",
+      "target": "function:Engine.UnitTests/ArtifactZipper.cs:ArtifactZipper.OnArtifactPublished",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AssemblyDataTest.cs",
+      "target": "class:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AssemblyDataTest.cs",
+      "target": "class:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AssemblyDataTest.cs",
+      "target": "function:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest.AssemblyDataVersionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest",
+      "target": "function:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest.AssemblyDataVersionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AssemblyDataTest.cs",
+      "target": "function:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest.AssemblyDataVersionTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AssemblyDataTest.cs",
+      "target": "function:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest.OpenTapVersionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest",
+      "target": "function:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest.OpenTapVersionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AssemblyDataTest.cs",
+      "target": "function:Engine.UnitTests/AssemblyDataTest.cs:AssemblyDataTest.OpenTapVersionTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AuthenticationTests.cs",
+      "target": "class:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AuthenticationTests.cs",
+      "target": "class:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AuthenticationTests.cs",
+      "target": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.ParseTokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests",
+      "target": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.ParseTokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AuthenticationTests.cs",
+      "target": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.ParseTokens",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AuthenticationTests.cs",
+      "target": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.TokenExpiration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests",
+      "target": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.TokenExpiration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AuthenticationTests.cs",
+      "target": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.TokenExpiration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/AuthenticationTests.cs",
+      "target": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.ParseTokenWithUrlChars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests",
+      "target": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.ParseTokenWithUrlChars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/AuthenticationTests.cs",
+      "target": "function:Engine.UnitTests/AuthenticationTests.cs:AuthenticationTests.ParseTokenWithUrlChars",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

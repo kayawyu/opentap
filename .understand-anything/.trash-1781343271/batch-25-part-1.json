@@ -1,0 +1,2849 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/Utilities.cs",
+      "type": "file",
+      "name": "Utilities.cs",
+      "filePath": "Engine.UnitTests/Utilities.cs",
+      "summary": "单元测试辅助工具类，提供 RunDataResultListener 测试数据收集和流转换功能。",
+      "tags": [
+        "test",
+        "utility",
+        "unit-testing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/Utilities.cs:Utilities",
+      "type": "class",
+      "name": "Utilities",
+      "filePath": "Engine.UnitTests/Utilities.cs",
+      "lineRange": [
+        6,
+        85
+      ],
+      "summary": "测试辅助类，监视测试计划执行并收集 RunData 结果和日志输出。",
+      "tags": [
+        "test",
+        "utility",
+        "data-collection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/Utilities.cs:ExecuteReturnData",
+      "type": "function",
+      "name": "ExecuteReturnData",
+      "filePath": "Engine.UnitTests/Utilities.cs",
+      "lineRange": [
+        66,
+        76
+      ],
+      "summary": "执行测试计划并返回收集到的 RunData 结果数据。",
+      "tags": [
+        "test",
+        "execution",
+        "data-collection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/Utilities.cs:GetBytes",
+      "type": "function",
+      "name": "GetBytes",
+      "filePath": "Engine.UnitTests/Utilities.cs",
+      "lineRange": [
+        78,
+        84
+      ],
+      "summary": "将流内容转换为字节数组，用于日志流读取。",
+      "tags": [
+        "utility",
+        "stream",
+        "conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ValidatingObjectTests.cs",
+      "type": "file",
+      "name": "ValidatingObjectTests.cs",
+      "filePath": "Engine.UnitTests/ValidatingObjectTests.cs",
+      "summary": "ValidatingObject 规则系统的单元测试，验证错误规则返回、继承规则传播和验证调用顺序。",
+      "tags": [
+        "test",
+        "unit-testing",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/ValidatingObjectTests.cs:ValidatingObjectTests",
+      "type": "class",
+      "name": "ValidatingObjectTests",
+      "filePath": "Engine.UnitTests/ValidatingObjectTests.cs",
+      "lineRange": [
+        9,
+        92
+      ],
+      "summary": "ValidatingObject 规则的单元测试集合，包含错误规则、继承规则和调用顺序验证。",
+      "tags": [
+        "test",
+        "validation",
+        "rules"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ValidatingObjectTests.cs:ReturnErrorTest",
+      "type": "function",
+      "name": "ReturnErrorTest",
+      "filePath": "Engine.UnitTests/ValidatingObjectTests.cs",
+      "lineRange": [
+        22,
+        28
+      ],
+      "summary": "验证带有返回错误规则的对象在验证时返回预期的错误消息。",
+      "tags": [
+        "test",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ValidatingObjectTests.cs:ReturnNoErrorTest",
+      "type": "function",
+      "name": "ReturnNoErrorTest",
+      "filePath": "Engine.UnitTests/ValidatingObjectTests.cs",
+      "lineRange": [
+        30,
+        36
+      ],
+      "summary": "验证没有错误规则的对象在验证时不返回任何错误。",
+      "tags": [
+        "test",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ValidatingObjectTests.cs:ReturnInheritErrorTest",
+      "type": "function",
+      "name": "ReturnInheritErrorTest",
+      "filePath": "Engine.UnitTests/ValidatingObjectTests.cs",
+      "lineRange": [
+        53,
+        59
+      ],
+      "summary": "验证派生类继承基类验证规则后能正确返回错误。",
+      "tags": [
+        "test",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ValidatingObjectTests.cs:CallOrderTest",
+      "type": "function",
+      "name": "CallOrderTest",
+      "filePath": "Engine.UnitTests/ValidatingObjectTests.cs",
+      "lineRange": [
+        85,
+        90
+      ],
+      "summary": "验证规则按添加顺序被调用。",
+      "tags": [
+        "test",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/VisaLoaderTest.cs",
+      "type": "file",
+      "name": "VisaLoaderTest.cs",
+      "filePath": "Engine.UnitTests/VisaLoaderTest.cs",
+      "summary": "VISA 加载器测试，验证 VISA 资源清除功能和访问错误时的异常处理。",
+      "tags": [
+        "test",
+        "visa",
+        "unit-testing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/VisaLoaderTest.cs:VisaLoaderTest",
+      "type": "class",
+      "name": "VisaLoaderTest",
+      "filePath": "Engine.UnitTests/VisaLoaderTest.cs",
+      "lineRange": [
+        6,
+        45
+      ],
+      "summary": "VISA 加载器的单元测试，测试 Dummy Visa 地址的资源清除和异常处理。",
+      "tags": [
+        "test",
+        "visa",
+        "instrumentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/VisaLoaderTest.cs:DummyVisaTest",
+      "type": "function",
+      "name": "DummyVisaTest",
+      "filePath": "Engine.UnitTests/VisaLoaderTest.cs",
+      "lineRange": [
+        9,
+        23
+      ],
+      "summary": "测试 Dummy Visa 地址的字符串表示、资源清除（viClear）和到达超时的异常抛出。",
+      "tags": [
+        "test",
+        "visa",
+        "exception-handling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "type": "file",
+      "name": "XmlTextAttributeTest.cs",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "summary": "XmlTextAttribute 序列化全面测试，涵盖简单属性序列化、Base64编解码、null值处理和继承测试计划序列化等场景。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml",
+        "unit-testing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/XmlTextAttributeTest.cs:XmlTextAttributeTest",
+      "type": "class",
+      "name": "XmlTextAttributeTest",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        15,
+        307
+      ],
+      "summary": "XmlTextAttribute 序列化行为的全面测试类，包含十种序列化场景的单元测试。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/XmlTextAttributeTest.cs:SimpleXmlTextAttributeTest",
+      "type": "function",
+      "name": "SimpleXmlTextAttributeTest",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        29,
+        42
+      ],
+      "summary": "验证基本 XmlText 属性序列化和反序列化的正确性。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/XmlTextAttributeTest.cs:SerializeComponentSettingsTest",
+      "type": "function",
+      "name": "SerializeComponentSettingsTest",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        65,
+        116
+      ],
+      "summary": "深度测试组件设置序列化，包含嵌入式资源类型和多个属性。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/XmlTextAttributeTest.cs:NullInstrumentTest",
+      "type": "function",
+      "name": "NullInstrumentTest",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        118,
+        123
+      ],
+      "summary": "验证 null 仪器引用在序列化时被正确处理（不输出元素）。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/XmlTextAttributeTest.cs:NullValueTypeTest",
+      "type": "function",
+      "name": "NullValueTypeTest",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        125,
+        131
+      ],
+      "summary": "验证 null 值类型属性在序列化时被正确处理。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestInPlaceProperty",
+      "type": "function",
+      "name": "TestInPlaceProperty",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        174,
+        184
+      ],
+      "summary": "测试 XmlText 属性在嵌入式属性场景下的序列化行为。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestBase64EncodeDecode",
+      "type": "function",
+      "name": "TestBase64EncodeDecode",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        186,
+        204
+      ],
+      "summary": "测试 Base64 编码解码的往返一致性。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestBase64DecodeWithNamespace",
+      "type": "function",
+      "name": "TestBase64DecodeWithNamespace",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        206,
+        241
+      ],
+      "summary": "测试带命名空间的 Base64 解码的正确性。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestSerializeProcessStepWithNullDefaultValue",
+      "type": "function",
+      "name": "TestSerializeProcessStepWithNullDefaultValue",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        243,
+        251
+      ],
+      "summary": "验证 ProcessStep 中 null 默认值属性的序列化。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestSerializeInheritTestPlan",
+      "type": "function",
+      "name": "TestSerializeInheritTestPlan",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        264,
+        276
+      ],
+      "summary": "验证继承测试计划中 XmlText 属性的序列化行为。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestSerializerErrors",
+      "type": "function",
+      "name": "TestSerializerErrors",
+      "filePath": "Engine.UnitTests/XmlTextAttributeTest.cs",
+      "lineRange": [
+        278,
+        306
+      ],
+      "summary": "验证序列化错误场景（如无效 Base64 字符串）的正确处理。",
+      "tags": [
+        "test",
+        "serialization",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/AnnotationCache.cs",
+      "type": "file",
+      "name": "AnnotationCache.cs",
+      "filePath": "Engine/AnnotationCache.cs",
+      "summary": "注解缓存系统，为对象存储注解数据以提高重复访问时的性能。",
+      "tags": [
+        "cache",
+        "annotation",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/AnnotationCache.cs:AnnotationCache",
+      "type": "class",
+      "name": "AnnotationCache",
+      "filePath": "Engine/AnnotationCache.cs",
+      "lineRange": [
+        5,
+        27
+      ],
+      "summary": "对象注解缓存，通过字典存储已计算的注解，避免重复计算。",
+      "tags": [
+        "cache",
+        "annotation",
+        "optimization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/AnnotationCache.cs:Annotate",
+      "type": "function",
+      "name": "Annotate",
+      "filePath": "Engine/AnnotationCache.cs",
+      "lineRange": [
+        8,
+        14
+      ],
+      "summary": "使用缓存机制为对象集合添加注解，避免重复计算。",
+      "tags": [
+        "cache",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/AnnotationCache.cs:GetCached",
+      "type": "function",
+      "name": "GetCached",
+      "filePath": "Engine/AnnotationCache.cs",
+      "lineRange": [
+        16,
+        21
+      ],
+      "summary": "从缓存中获取对象的注解数据，缓存未命中时返回 null。",
+      "tags": [
+        "cache",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/AnnotationCache.cs:Register",
+      "type": "function",
+      "name": "Register",
+      "filePath": "Engine/AnnotationCache.cs",
+      "lineRange": [
+        23,
+        26
+      ],
+      "summary": "注册自定义注解缓存获取函数。",
+      "tags": [
+        "cache",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Annotations/Annotation.cs",
+      "type": "file",
+      "name": "Annotation.cs",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "summary": "OpenTAP 注解系统的核心文件，定义了全套注解接口和实现类，包括数据注解、显示注解、值注解、集合注解、访问注解等，是整个 UI 数据绑定的基石。",
+      "tags": [
+        "annotation",
+        "core",
+        "data-binding",
+        "display",
+        "type-definition"
+      ],
+      "complexity": "complex",
+      "languageNotes": "文件包含 58 个类和接口定义，是 OpenTAP 类型系统注解/元数据机制的核心实现。"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IAnnotator",
+      "type": "class",
+      "name": "IAnnotator",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        18,
+        25
+      ],
+      "summary": "注解器接口，定义对象注解的插件扩展点，每个注解器可向对象添加注解数据。",
+      "tags": [
+        "annotation",
+        "interface",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IAnnotation",
+      "type": "class",
+      "name": "IAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        30,
+        30
+      ],
+      "summary": "标记接口，表示一个类型代表对象的注解数据。",
+      "tags": [
+        "annotation",
+        "interface",
+        "marker"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IDisplayAnnotation",
+      "type": "class",
+      "name": "IDisplayAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        33,
+        48
+      ],
+      "summary": "显示注解接口，提供名称、描述、分组、顺序和折叠状态等 UI 显示属性。",
+      "tags": [
+        "display",
+        "interface",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IObjectValueAnnotation",
+      "type": "class",
+      "name": "IObjectValueAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        51,
+        55
+      ],
+      "summary": "IObjectValueAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IMergedValueAnnotation",
+      "type": "class",
+      "name": "IMergedValueAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        60,
+        63
+      ],
+      "summary": "IMergedValueAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IAvailableValuesAnnotationProxy",
+      "type": "class",
+      "name": "IAvailableValuesAnnotationProxy",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        66,
+        72
+      ],
+      "summary": "IAvailableValuesAnnotationProxy 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ISuggestedValuesAnnotationProxy",
+      "type": "class",
+      "name": "ISuggestedValuesAnnotationProxy",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        75,
+        85
+      ],
+      "summary": "ISuggestedValuesAnnotationProxy 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IMultiSelectAnnotationProxy",
+      "type": "class",
+      "name": "IMultiSelectAnnotationProxy",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        88,
+        92
+      ],
+      "summary": "IMultiSelectAnnotationProxy 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IAvailableValuesAnnotation",
+      "type": "class",
+      "name": "IAvailableValuesAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        97,
+        101
+      ],
+      "summary": "可用值注解接口，提供属性可选择的值列表。",
+      "tags": [
+        "annotation",
+        "interface",
+        "dropdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ISuggestedValuesAnnotation",
+      "type": "class",
+      "name": "ISuggestedValuesAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        113,
+        117
+      ],
+      "summary": "ISuggestedValuesAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IStringValueAnnotation",
+      "type": "class",
+      "name": "IStringValueAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        122,
+        126
+      ],
+      "summary": "字符串值注解接口，将值转换为可显示的字符串表示。",
+      "tags": [
+        "conversion",
+        "interface",
+        "display"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IStringReadOnlyValueAnnotation",
+      "type": "class",
+      "name": "IStringReadOnlyValueAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        137,
+        141
+      ],
+      "summary": "IStringReadOnlyValueAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IStringExampleValueAnnotation",
+      "type": "class",
+      "name": "IStringExampleValueAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        144,
+        148
+      ],
+      "summary": "IStringExampleValueAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IErrorAnnotation",
+      "type": "class",
+      "name": "IErrorAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        151,
+        155
+      ],
+      "summary": "错误注解接口，提供验证错误信息集合。",
+      "tags": [
+        "validation",
+        "interface",
+        "error"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IAccessAnnotation",
+      "type": "class",
+      "name": "IAccessAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        158,
+        165
+      ],
+      "summary": "访问注解接口，控制对象的只读和可见状态。",
+      "tags": [
+        "access-control",
+        "interface",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IOwnedAnnotation",
+      "type": "class",
+      "name": "IOwnedAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        170,
+        178
+      ],
+      "summary": "可持久化注解接口，支持 Read/Write 方法实现注解数据的序列化。",
+      "tags": [
+        "serialization",
+        "interface",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IMemberAnnotation",
+      "type": "class",
+      "name": "IMemberAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        181,
+        185
+      ],
+      "summary": "IMemberAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IReflectionAnnotation",
+      "type": "class",
+      "name": "IReflectionAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        188,
+        192
+      ],
+      "summary": "IReflectionAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IMultiSelect",
+      "type": "class",
+      "name": "IMultiSelect",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        195,
+        199
+      ],
+      "summary": "IMultiSelect 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IMethodAnnotation",
+      "type": "class",
+      "name": "IMethodAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        202,
+        206
+      ],
+      "summary": "方法注解接口，通过 Invoke 方法触发关联的操作。",
+      "tags": [
+        "method",
+        "interface",
+        "action"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IMergedMethodAnnotation",
+      "type": "class",
+      "name": "IMergedMethodAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        213,
+        216
+      ],
+      "summary": "IMergedMethodAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IBasicCollectionAnnotation",
+      "type": "class",
+      "name": "IBasicCollectionAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        219,
+        223
+      ],
+      "summary": "IBasicCollectionAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IFixedSizeCollectionAnnotation",
+      "type": "class",
+      "name": "IFixedSizeCollectionAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        226,
+        230
+      ],
+      "summary": "IFixedSizeCollectionAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ICollectionAnnotation",
+      "type": "class",
+      "name": "ICollectionAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        232,
+        239
+      ],
+      "summary": "集合注解接口，提供带注解元素列表和新建元素能力。",
+      "tags": [
+        "collection",
+        "interface",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IMembersAnnotation",
+      "type": "class",
+      "name": "IMembersAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        242,
+        246
+      ],
+      "summary": "成员注解接口，暴露对象的所有成员（属性和字段）。",
+      "tags": [
+        "reflection",
+        "interface",
+        "metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:INamedMembersAnnotation",
+      "type": "class",
+      "name": "INamedMembersAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        249,
+        255
+      ],
+      "summary": "INamedMembersAnnotation 注解实现类，提供属性绑定和方法操作。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:AnnotationIgnoreAttribute",
+      "type": "class",
+      "name": "AnnotationIgnoreAttribute",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        259,
+        263
+      ],
+      "summary": "AnnotationIgnoreAttribute 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IForwardedAnnotations",
+      "type": "class",
+      "name": "IForwardedAnnotations",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        266,
+        270
+      ],
+      "summary": "IForwardedAnnotations 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IValueDescriptionAnnotation",
+      "type": "class",
+      "name": "IValueDescriptionAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        273,
+        278
+      ],
+      "summary": "IValueDescriptionAnnotation 注解实现类，提供属性绑定和方法操作。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IEnabledAnnotation",
+      "type": "class",
+      "name": "IEnabledAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        281,
+        285
+      ],
+      "summary": "启用状态注解接口，控制属性的启用/禁用状态。",
+      "tags": [
+        "annotation",
+        "interface",
+        "enable"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ReadOnlyMemberAnnotation",
+      "type": "class",
+      "name": "ReadOnlyMemberAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        290,
+        296
+      ],
+      "summary": "ReadOnlyMemberAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:MembersAnnotation",
+      "type": "class",
+      "name": "MembersAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        298,
+        369
+      ],
+      "summary": "成员注解实现类，为对象的属性和字段创建注解集合，支持 Read/Write 序列化。",
+      "tags": [
+        "annotation",
+        "metadata",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:EnabledIfAnnotation",
+      "type": "class",
+      "name": "EnabledIfAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        371,
+        424
+      ],
+      "summary": "条件启用注解，允许根据表达式结果动态控制属性的只读、可见和启用状态。",
+      "tags": [
+        "annotation",
+        "access-control",
+        "conditional"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ValidationErrorAnnotation",
+      "type": "class",
+      "name": "ValidationErrorAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        426,
+        492
+      ],
+      "summary": "验证错误注解，将验证错误信息绑定到属性以在 UI 中显示。",
+      "tags": [
+        "annotation",
+        "validation",
+        "error"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:NumberAnnotation",
+      "type": "class",
+      "name": "NumberAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        495,
+        557
+      ],
+      "summary": "数值注解，处理数值类型属性的字符串解析、验证和显示格式化。",
+      "tags": [
+        "annotation",
+        "number",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:TimeSpanAnnotation",
+      "type": "class",
+      "name": "TimeSpanAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        559,
+        595
+      ],
+      "summary": "时间跨度注解，处理 TimeSpan 类型属性的字符串解析和格式化。",
+      "tags": [
+        "annotation",
+        "timespan",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:NumberSequenceAnnotation",
+      "type": "class",
+      "name": "NumberSequenceAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        597,
+        729
+      ],
+      "summary": "数值序列注解，支持范围、步进和多值输入的高��数值解析。",
+      "tags": [
+        "annotation",
+        "number-sequence",
+        "range"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:BooleanValueAnnotation",
+      "type": "class",
+      "name": "BooleanValueAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        731,
+        753
+      ],
+      "summary": "布尔值注解，处理布尔属性的字符串解析和显示。",
+      "tags": [
+        "annotation",
+        "boolean",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:MergedValueAnnotation",
+      "type": "class",
+      "name": "MergedValueAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        755,
+        847
+      ],
+      "summary": "合并值注解，将多个子注解的值合并为加总输出，用于集合属性的聚合显示。",
+      "tags": [
+        "annotation",
+        "merge",
+        "aggregation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:IHideOnMultiSelectAnnotation",
+      "type": "class",
+      "name": "IHideOnMultiSelectAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        854,
+        854
+      ],
+      "summary": "IHideOnMultiSelectAnnotation 接口或类定义。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ManyToOneMethodAnnotation",
+      "type": "class",
+      "name": "ManyToOneMethodAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        856,
+        869
+      ],
+      "summary": "ManyToOneMethodAnnotation 注解实现类，提供属性绑定和方法操作。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ManyToOneAnnotation",
+      "type": "class",
+      "name": "ManyToOneAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        871,
+        1107
+      ],
+      "summary": "多对一注解，管理子属性到父属性的映射关系，支持一对多关系下的值编辑。",
+      "tags": [
+        "annotation",
+        "many-to-one",
+        "mapping"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ManyToOneAvailableValuesAnnotation",
+      "type": "class",
+      "name": "ManyToOneAvailableValuesAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        1109,
+        1131
+      ],
+      "summary": "ManyToOneAvailableValuesAnnotation 注解实现类，提供属性绑定和方法操作。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ManyAccessAnnotation",
+      "type": "class",
+      "name": "ManyAccessAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        1133,
+        1143
+      ],
+      "summary": "ManyAccessAnnotation 注解实现类，提供属性绑定和方法操作。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:MemberValueAnnotation",
+      "type": "class",
+      "name": "MemberValueAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        1144,
+        1226
+      ],
+      "summary": "成员值注解，包装单一成员的值、错误状态和序列化行为。",
+      "tags": [
+        "annotation",
+        "member-value",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ObjectValueAnnotation",
+      "type": "class",
+      "name": "ObjectValueAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        1227,
+        1248
+      ],
+      "summary": "对象值注解，为复杂对象提供反射信息和值访问。支持子注解递归创建。",
+      "tags": [
+        "annotation",
+        "object",
+        "reflection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:AvailableMemberAnnotation",
+      "type": "class",
+      "name": "AvailableMemberAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        1249,
+        1256
+      ],
+      "summary": "AvailableMemberAnnotation 注解实现类，提供属性绑定和方法操作。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:DefaultDataAnnotator",
+      "type": "class",
+      "name": "DefaultDataAnnotator",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        1270,
+        3121
+      ],
+      "summary": "默认数据注解器（约1850行），核心注解引擎，为任意对象动态创建最合适的注解树。",
+      "tags": [
+        "annotation",
+        "core",
+        "annotator"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:DisplayAnnotationWrapper",
+      "type": "class",
+      "name": "DisplayAnnotationWrapper",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        3130,
+        3158
+      ],
+      "summary": "DisplayAnnotationWrapper 注解实现类，提供属性绑定和方法操作。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:ProxyAnnotation",
+      "type": "class",
+      "name": "ProxyAnnotation",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        3162,
+        3525
+      ],
+      "summary": "ProxyAnnotation 注解实现类，提供属性绑定和方法操作。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:MultiObjectAnnotator",
+      "type": "class",
+      "name": "MultiObjectAnnotator",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        3530,
+        3627
+      ],
+      "summary": "MultiObjectAnnotator 注解实现类，提供属性绑定和方法操作。",
+      "tags": [
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:AnnotationResolver",
+      "type": "class",
+      "name": "AnnotationResolver",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        3632,
+        3688
+      ],
+      "summary": "注解解析器，管理所有 IAnnotator 实例，协调注解的创建和缓存。",
+      "tags": [
+        "annotation",
+        "resolver",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:AnnotationCollection",
+      "type": "class",
+      "name": "AnnotationCollection",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        3691,
+        4012
+      ],
+      "summary": "注解集合类，管理对象的所有注解，提供增删查改、序列化和递归遍历功能。",
+      "tags": [
+        "annotation",
+        "collection",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Annotations/Annotation.cs:AnnotationExtensions",
+      "type": "class",
+      "name": "AnnotationExtensions",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        4015,
+        4061
+      ],
+      "summary": "注解扩展方法，提供 GetMember、GetIcon、ExecuteIcon、SetValue 等便捷方法。",
+      "tags": [
+        "annotation",
+        "extension",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Annotations/Annotation.cs:DefaultDataAnnotator.Annotate",
+      "type": "function",
+      "name": "DefaultDataAnnotator.Annotate",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        2820,
+        3120
+      ],
+      "summary": "核心注解方法（约300行），递归分析对象的属性和类型，创建完整的注解集合树。",
+      "tags": [
+        "annotation",
+        "core",
+        "reflection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/Annotations/Annotation.cs:NumberSequenceAnnotation.DoConvertBack",
+      "type": "function",
+      "name": "NumberSequenceAnnotation.DoConvertBack",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        637,
+        721
+      ],
+      "summary": "数值序列转换方法（约85行），处理多值输入格式解析和类型转换。",
+      "tags": [
+        "annotation",
+        "number-sequence",
+        "conversion"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/Annotations/Annotation.cs:ProxyAnnotation.Annotate",
+      "type": "function",
+      "name": "ProxyAnnotation.Annotate",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        2820,
+        3120
+      ],
+      "summary": "代理注解方法，将源注解的属性透明代理到目标对象。",
+      "tags": [
+        "annotation",
+        "proxy",
+        "reflection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/Annotations/Annotation.cs:MultiObjectAnnotator.Annotate",
+      "type": "function",
+      "name": "MultiObjectAnnotator.Annotate",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        2820,
+        3120
+      ],
+      "summary": "多对象注解方法，为多选对象创建共享注解。",
+      "tags": [
+        "annotation",
+        "multi-object",
+        "proxy"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/Annotations/Annotation.cs:AnnotationResolver.AnnotationResolver",
+      "type": "function",
+      "name": "AnnotationResolver.AnnotationResolver",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        3644,
+        3671
+      ],
+      "summary": "初始化注解解析器，注册所有 IAnnotator 插件并按优先级排序。",
+      "tags": [
+        "annotation",
+        "resolver",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Annotations/Annotation.cs:AnnotationCollection.Create",
+      "type": "function",
+      "name": "AnnotationCollection.Create",
+      "filePath": "Engine/Annotations/Annotation.cs",
+      "lineRange": [
+        3890,
+        3905
+      ],
+      "summary": "为指定对象和成员创建注解，是注解系统的主要入口方法。",
+      "tags": [
+        "annotation",
+        "factory",
+        "creation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Annotations/DateTimeAnnotation.cs",
+      "type": "file",
+      "name": "DateTimeAnnotation.cs",
+      "filePath": "Engine/Annotations/DateTimeAnnotation.cs",
+      "summary": "DateTime 类型注解，处理 DateTime 属性的字符串解析、验证和显示格式化。",
+      "tags": [
+        "annotation",
+        "datetime",
+        "parsing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/DateTimeAnnotation.cs:DateTimeAnnotation",
+      "type": "class",
+      "name": "DateTimeAnnotation",
+      "filePath": "Engine/Annotations/DateTimeAnnotation.cs",
+      "lineRange": [
+        7,
+        43
+      ],
+      "summary": "DateTime 注解，支持多种日期时间格式的解析和验证。",
+      "tags": [
+        "annotation",
+        "datetime",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Annotations/DateTimeAnnotation.cs:DateTimeAnnotation",
+      "type": "function",
+      "name": "DateTimeAnnotation",
+      "filePath": "Engine/Annotations/DateTimeAnnotation.cs",
+      "lineRange": [
+        37,
+        40
+      ],
+      "summary": "创建 DateTimeAnnotation 并初始化值解析和错误收集。",
+      "tags": [
+        "annotation",
+        "datetime",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Annotations/IIconAnnotation.cs",
+      "type": "file",
+      "name": "IIconAnnotation.cs",
+      "filePath": "Engine/Annotations/IIconAnnotation.cs",
+      "summary": "图标注解接口和属性定义，允许为设置项和测试步骤关联图标名称。",
+      "tags": [
+        "annotation",
+        "icon",
+        "interface",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/IIconAnnotation.cs:IIconAnnotation",
+      "type": "class",
+      "name": "IIconAnnotation",
+      "filePath": "Engine/Annotations/IIconAnnotation.cs",
+      "lineRange": [
+        6,
+        11
+      ],
+      "summary": "图标注解接口，定义图标名称属性，用于 UI 中显示关联图标。",
+      "tags": [
+        "annotation",
+        "icon",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/IIconAnnotation.cs:IconAnnotationAttribute",
+      "type": "class",
+      "name": "IconAnnotationAttribute",
+      "filePath": "Engine/Annotations/IIconAnnotation.cs",
+      "lineRange": [
+        14,
+        22
+      ],
+      "summary": "图标注解属性，通过 Attribute 方式声明图标名称，应用于测试步骤或组件设置。",
+      "tags": [
+        "annotation",
+        "icon",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Annotations/IIconAnnotation.cs:IconAnnotationAttribute",
+      "type": "function",
+      "name": "IconAnnotationAttribute",
+      "filePath": "Engine/Annotations/IIconAnnotation.cs",
+      "lineRange": [
+        21,
+        21
+      ],
+      "summary": "图标注解属性构造函数，指定关联的图标名称。",
+      "tags": [
+        "annotation",
+        "icon",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Annotations/IInteractiveIconAnnotation.cs",
+      "type": "file",
+      "name": "IInteractiveIconAnnotation.cs",
+      "filePath": "Engine/Annotations/IInteractiveIconAnnotation.cs",
+      "summary": "交互式图标注解接口，定义可点击图标及其关联的执行动作。",
+      "tags": [
+        "annotation",
+        "icon",
+        "interactive",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Annotations/IInteractiveIconAnnotation.cs:IInteractiveIconAnnotation",
+      "type": "class",
+      "name": "IInteractiveIconAnnotation",
+      "filePath": "Engine/Annotations/IInteractiveIconAnnotation.cs",
+      "lineRange": [
+        6,
+        11
+      ],
+      "summary": "交互式图标注解接口，将图标与可执行的动作（Action）关联。",
+      "tags": [
+        "annotation",
+        "icon",
+        "interactive",
+        "interface",
+        "action"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/Utilities.cs",
+      "target": "class:Engine.UnitTests/Utilities.cs:Utilities",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Utilities.cs",
+      "target": "function:Engine.UnitTests/Utilities.cs:ExecuteReturnData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Utilities.cs",
+      "target": "function:Engine.UnitTests/Utilities.cs:ExecuteReturnData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/Utilities.cs",
+      "target": "function:Engine.UnitTests/Utilities.cs:GetBytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Utilities.cs",
+      "target": "function:Engine.UnitTests/Utilities.cs:GetBytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ValidatingObjectTests.cs",
+      "target": "class:Engine.UnitTests/ValidatingObjectTests.cs:ValidatingObjectTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ValidatingObjectTests.cs",
+      "target": "function:Engine.UnitTests/ValidatingObjectTests.cs:ReturnErrorTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ValidatingObjectTests.cs",
+      "target": "function:Engine.UnitTests/ValidatingObjectTests.cs:ReturnErrorTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ValidatingObjectTests.cs",
+      "target": "function:Engine.UnitTests/ValidatingObjectTests.cs:ReturnNoErrorTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ValidatingObjectTests.cs",
+      "target": "function:Engine.UnitTests/ValidatingObjectTests.cs:ReturnNoErrorTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ValidatingObjectTests.cs",
+      "target": "function:Engine.UnitTests/ValidatingObjectTests.cs:ReturnInheritErrorTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ValidatingObjectTests.cs",
+      "target": "function:Engine.UnitTests/ValidatingObjectTests.cs:ReturnInheritErrorTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ValidatingObjectTests.cs",
+      "target": "function:Engine.UnitTests/ValidatingObjectTests.cs:CallOrderTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ValidatingObjectTests.cs",
+      "target": "function:Engine.UnitTests/ValidatingObjectTests.cs:CallOrderTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/VisaLoaderTest.cs",
+      "target": "class:Engine.UnitTests/VisaLoaderTest.cs:VisaLoaderTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/VisaLoaderTest.cs",
+      "target": "function:Engine.UnitTests/VisaLoaderTest.cs:DummyVisaTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/VisaLoaderTest.cs",
+      "target": "function:Engine.UnitTests/VisaLoaderTest.cs:DummyVisaTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "class:Engine.UnitTests/XmlTextAttributeTest.cs:XmlTextAttributeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:SimpleXmlTextAttributeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:SimpleXmlTextAttributeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:SerializeComponentSettingsTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:SerializeComponentSettingsTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:NullInstrumentTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:NullInstrumentTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:NullValueTypeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:NullValueTypeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestInPlaceProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestInPlaceProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestBase64EncodeDecode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestBase64EncodeDecode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestBase64DecodeWithNamespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestBase64DecodeWithNamespace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestSerializeProcessStepWithNullDefaultValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestSerializeProcessStepWithNullDefaultValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestSerializeInheritTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestSerializeInheritTestPlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestSerializerErrors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/XmlTextAttributeTest.cs",
+      "target": "function:Engine.UnitTests/XmlTextAttributeTest.cs:TestSerializerErrors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AnnotationCache.cs",
+      "target": "class:Engine/AnnotationCache.cs:AnnotationCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AnnotationCache.cs",
+      "target": "function:Engine/AnnotationCache.cs:Annotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AnnotationCache.cs",
+      "target": "function:Engine/AnnotationCache.cs:Annotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AnnotationCache.cs",
+      "target": "function:Engine/AnnotationCache.cs:GetCached",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AnnotationCache.cs",
+      "target": "function:Engine/AnnotationCache.cs:GetCached",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/AnnotationCache.cs",
+      "target": "function:Engine/AnnotationCache.cs:Register",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/AnnotationCache.cs",
+      "target": "function:Engine/AnnotationCache.cs:Register",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IAnnotator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IAnnotator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IDisplayAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IDisplayAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IObjectValueAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IObjectValueAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMergedValueAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMergedValueAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IAvailableValuesAnnotationProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IAvailableValuesAnnotationProxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ISuggestedValuesAnnotationProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ISuggestedValuesAnnotationProxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMultiSelectAnnotationProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMultiSelectAnnotationProxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IAvailableValuesAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IAvailableValuesAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ISuggestedValuesAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ISuggestedValuesAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IStringValueAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IStringValueAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IStringReadOnlyValueAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IStringReadOnlyValueAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IStringExampleValueAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IStringExampleValueAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IErrorAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IErrorAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IAccessAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IAccessAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IOwnedAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IOwnedAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMemberAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMemberAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IReflectionAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IReflectionAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMultiSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMultiSelect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMethodAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMethodAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMergedMethodAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMergedMethodAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IBasicCollectionAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IBasicCollectionAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IFixedSizeCollectionAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IFixedSizeCollectionAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ICollectionAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ICollectionAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMembersAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IMembersAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:INamedMembersAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:INamedMembersAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:AnnotationIgnoreAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:AnnotationIgnoreAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IForwardedAnnotations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IForwardedAnnotations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IValueDescriptionAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IValueDescriptionAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IEnabledAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IEnabledAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ReadOnlyMemberAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ReadOnlyMemberAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:MembersAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:MembersAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:EnabledIfAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:EnabledIfAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ValidationErrorAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ValidationErrorAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:NumberAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:NumberAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:TimeSpanAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:TimeSpanAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:NumberSequenceAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:NumberSequenceAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:BooleanValueAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:BooleanValueAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:MergedValueAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:MergedValueAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IHideOnMultiSelectAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:IHideOnMultiSelectAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ManyToOneMethodAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ManyToOneMethodAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ManyToOneAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ManyToOneAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ManyToOneAvailableValuesAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ManyToOneAvailableValuesAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ManyAccessAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ManyAccessAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:MemberValueAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:MemberValueAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ObjectValueAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ObjectValueAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:AvailableMemberAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:AvailableMemberAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:DefaultDataAnnotator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:DefaultDataAnnotator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:DisplayAnnotationWrapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:DisplayAnnotationWrapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ProxyAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:ProxyAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:MultiObjectAnnotator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:MultiObjectAnnotator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:AnnotationResolver",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:AnnotationResolver",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:AnnotationCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:AnnotationCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:AnnotationExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "class:Engine/Annotations/Annotation.cs:AnnotationExtensions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:DefaultDataAnnotator.Annotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:DefaultDataAnnotator.Annotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:NumberSequenceAnnotation.DoConvertBack",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:NumberSequenceAnnotation.DoConvertBack",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:ProxyAnnotation.Annotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:ProxyAnnotation.Annotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:MultiObjectAnnotator.Annotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:MultiObjectAnnotator.Annotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:AnnotationResolver.AnnotationResolver",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:AnnotationResolver.AnnotationResolver",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:AnnotationCollection.Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/Annotation.cs",
+      "target": "function:Engine/Annotations/Annotation.cs:AnnotationCollection.Create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/DateTimeAnnotation.cs",
+      "target": "class:Engine/Annotations/DateTimeAnnotation.cs:DateTimeAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/DateTimeAnnotation.cs",
+      "target": "function:Engine/Annotations/DateTimeAnnotation.cs:DateTimeAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/DateTimeAnnotation.cs",
+      "target": "function:Engine/Annotations/DateTimeAnnotation.cs:DateTimeAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/IIconAnnotation.cs",
+      "target": "class:Engine/Annotations/IIconAnnotation.cs:IIconAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/IIconAnnotation.cs",
+      "target": "class:Engine/Annotations/IIconAnnotation.cs:IIconAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/IIconAnnotation.cs",
+      "target": "class:Engine/Annotations/IIconAnnotation.cs:IconAnnotationAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/IIconAnnotation.cs",
+      "target": "class:Engine/Annotations/IIconAnnotation.cs:IconAnnotationAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/IIconAnnotation.cs",
+      "target": "function:Engine/Annotations/IIconAnnotation.cs:IconAnnotationAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/IIconAnnotation.cs",
+      "target": "function:Engine/Annotations/IIconAnnotation.cs:IconAnnotationAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Annotations/IInteractiveIconAnnotation.cs",
+      "target": "class:Engine/Annotations/IInteractiveIconAnnotation.cs:IInteractiveIconAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Annotations/IInteractiveIconAnnotation.cs",
+      "target": "class:Engine/Annotations/IInteractiveIconAnnotation.cs:IInteractiveIconAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

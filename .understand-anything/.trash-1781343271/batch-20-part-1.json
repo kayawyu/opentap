@@ -1,0 +1,1180 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/CodeGen.cs",
+      "type": "file",
+      "name": "CodeGen.cs",
+      "filePath": "Engine.UnitTests/CodeGen.cs",
+      "summary": "动态代码编译辅助类，使用 Roslyn (Microsoft.CodeAnalysis) 在运行时构建 .NET 程序集，用于单元测试中的动态代码生成场景。",
+      "tags": [
+        "utility",
+        "code-generation",
+        "roslyn",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/CodeGen.cs:CodeGen",
+      "type": "class",
+      "name": "CodeGen",
+      "filePath": "Engine.UnitTests/CodeGen.cs",
+      "lineRange": [
+        15,
+        123
+      ],
+      "summary": "静态工具类，提供 BuildCode 方法通过 Roslyn 编译 C# 代码字符串为内存中的程序集。",
+      "tags": [
+        "code-generation",
+        "roslyn-compilation",
+        "test-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/CodeGen.cs:BuildCode",
+      "type": "function",
+      "name": "BuildCode",
+      "filePath": "Engine.UnitTests/CodeGen.cs",
+      "lineRange": [
+        33,
+        122
+      ],
+      "summary": "接收 C# 源代码字符串并动态编译为内存中的程序集，支持强名称签名。加载必要的运行时引用并返回包含字节码和状态的 Result 对象。",
+      "tags": [
+        "code-generation",
+        "compilation",
+        "roslyn"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "type": "file",
+      "name": "ComponentSettingsTest.cs",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "summary": "ComponentSettings 系统的 NUnit 测试套件，覆盖缓存失效、设置序列化/反序列化、错误处理、Session 覆盖行为及 SaveAll 持久化等场景。",
+      "tags": [
+        "test",
+        "component-settings",
+        "serialization",
+        "session-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "type": "class",
+      "name": "ComponentSettingsTest",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "lineRange": [
+        10,
+        285
+      ],
+      "summary": "ComponentSettings 功能的主测试类，包含 9 个测试方法，验证缓存失效、流式设置、Session 覆盖行为和持久化存储。",
+      "tags": [
+        "test",
+        "component-settings",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestCacheInvalidated",
+      "type": "function",
+      "name": "TestCacheInvalidated",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "lineRange": [
+        13,
+        45
+      ],
+      "summary": "验证 EngineSettings 缓存失效机制，确保 InvalidateAllSettings 正确触发 CacheInvalidated 事件。",
+      "tags": [
+        "test",
+        "component-settings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSetCurrentComponentSettings",
+      "type": "function",
+      "name": "TestSetCurrentComponentSettings",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "lineRange": [
+        48,
+        81
+      ],
+      "summary": "测试通过 XML 流设置当前 ComponentSettings 并验证序列化后值的正确性。",
+      "tags": [
+        "test",
+        "component-settings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestInvalidSetCurrentSettings",
+      "type": "function",
+      "name": "TestInvalidSetCurrentSettings",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "lineRange": [
+        83,
+        98
+      ],
+      "summary": "验证向 SetCurrent 传入无效 XML 内容时抛出包含原始内容的异常。",
+      "tags": [
+        "test",
+        "component-settings"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestErrorsSetFromStream",
+      "type": "function",
+      "name": "TestErrorsSetFromStream",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "lineRange": [
+        100,
+        157
+      ],
+      "summary": "测试 SetCurrent 的 out errors 参数：缺失包依赖错误、XML 解析错误、缺失类型属性的 ComponentSettings。",
+      "tags": [
+        "test",
+        "component-settings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSaveSettingsWithGroup",
+      "type": "function",
+      "name": "TestSaveSettingsWithGroup",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "lineRange": [
+        165,
+        180
+      ],
+      "summary": "验证带 Display Groups 属性的 ComponentSettings 子类的保存、加载和重新读取功能。",
+      "tags": [
+        "test",
+        "component-settings"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSessionCreateDoesNotThrow",
+      "type": "function",
+      "name": "TestSessionCreateDoesNotThrow",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "lineRange": [
+        192,
+        209
+      ],
+      "summary": "确保构造函数抛异常的 ComponentSettings 不会导致 Session.Create 崩溃。",
+      "tags": [
+        "test",
+        "component-settings"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSessionCreateDoesNotOverlayIncorrectInstance",
+      "type": "function",
+      "name": "TestSessionCreateDoesNotOverlayIncorrectInstance",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "lineRange": [
+        211,
+        236
+      ],
+      "summary": "验证当 ComponentSettings 构造器抛异常时，Session 仍然返回之前有效的实例而非错误实例。",
+      "tags": [
+        "test",
+        "component-settings"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestPersistenceOfSaveAll",
+      "type": "function",
+      "name": "TestPersistenceOfSaveAll",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "lineRange": [
+        238,
+        275
+      ],
+      "summary": "测试 SaveAllCurrentSettings 方法在添加 InstrumentSettings 后正确将设置持久化到文件系统。",
+      "tags": [
+        "test",
+        "component-settings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestFaultyInitializeComponentSettings",
+      "type": "function",
+      "name": "TestFaultyInitializeComponentSettings",
+      "filePath": "Engine.UnitTests/ComponentSettingsTest.cs",
+      "lineRange": [
+        277,
+        282
+      ],
+      "summary": "验证 Initialize 抛出异常的 ComponentSettings 子类在 GetCurrent 时返回 null。",
+      "tags": [
+        "test",
+        "component-settings"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ConnectionTest.cs",
+      "type": "file",
+      "name": "ConnectionTest.cs",
+      "filePath": "Engine.UnitTests/ConnectionTest.cs",
+      "summary": "RF 连接系统的 NUnit 测试套件，验证虚拟端口、电缆损耗插值、转接开关序列化及 VirtualVia 连接激活/去激活行为。",
+      "tags": [
+        "test",
+        "rf-connection",
+        "port-system",
+        "cable-loss"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ConnectionTest.cs:ConnectionTest",
+      "type": "class",
+      "name": "ConnectionTest",
+      "filePath": "Engine.UnitTests/ConnectionTest.cs",
+      "lineRange": [
+        14,
+        298
+      ],
+      "summary": "RF 连接功能的主测试类，包含虚拟端口测试、电缆损耗插值验证和 Via 连接激活逻辑测试。",
+      "tags": [
+        "test",
+        "rf-connection",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ConnectionTest.cs:VirtualPortTest",
+      "type": "function",
+      "name": "VirtualPortTest",
+      "filePath": "Engine.UnitTests/ConnectionTest.cs",
+      "lineRange": [
+        45,
+        65
+      ],
+      "summary": "验证虚拟端口（无引用相等性但逻辑等价的端口）的 RfConnection.GetOtherPort 功能。",
+      "tags": [
+        "test",
+        "rf-connection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ConnectionTest.cs:EmptyRfConnectionCableLoss",
+      "type": "function",
+      "name": "EmptyRfConnectionCableLoss",
+      "filePath": "Engine.UnitTests/ConnectionTest.cs",
+      "lineRange": [
+        67,
+        72
+      ],
+      "summary": "验证空 RfConnection 的 GetInterpolatedCableLoss 在任意频率返回 0。",
+      "tags": [
+        "test",
+        "rf-connection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ConnectionTest.cs:CableLossInterpolationTest",
+      "type": "function",
+      "name": "CableLossInterpolationTest",
+      "filePath": "Engine.UnitTests/ConnectionTest.cs",
+      "lineRange": [
+        74,
+        150
+      ],
+      "summary": "全面测试电缆损耗的线性插值、外推（零阶）、精确匹配和乱序数据的鲁棒性。",
+      "tags": [
+        "test",
+        "rf-connection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ConnectionTest.cs:TestRevolverSwitchInstrumentSerialization",
+      "type": "function",
+      "name": "TestRevolverSwitchInstrumentSerialization",
+      "filePath": "Engine.UnitTests/ConnectionTest.cs",
+      "lineRange": [
+        205,
+        216
+      ],
+      "summary": "验证含 ViaPoint 和 OutputPort 别名的仪器序列化与反序列化往返正确性。",
+      "tags": [
+        "test",
+        "rf-connection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ConnectionTest.cs:TestVirtualVias",
+      "type": "function",
+      "name": "TestVirtualVias",
+      "filePath": "Engine.UnitTests/ConnectionTest.cs",
+      "lineRange": [
+        258,
+        297
+      ],
+      "summary": "测试虚拟 Via 的 IsActive 属性对 RfConnection 激活状态的影响，以及多个 Via 之间的互斥行为。",
+      "tags": [
+        "test",
+        "rf-connection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "type": "file",
+      "name": "DefaultPictureDataProviderTest.cs",
+      "filePath": "Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "summary": "Picture 和 IPictureDataProvider 系统的 NUnit 测试套件，验证文件图片、无扩展名文件、Web 图片（HTTP）及自定义 Provider 的格式与流获取功能。",
+      "tags": [
+        "test",
+        "picture",
+        "data-provider",
+        "http"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/DefaultPictureDataProviderTest.cs:DefaultPictureDataProviderTest",
+      "type": "class",
+      "name": "DefaultPictureDataProviderTest",
+      "filePath": "Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "lineRange": [
+        12,
+        141
+      ],
+      "summary": "Picture 与 IPictureDataProvider 测试类，验证文件、Web 和自定义 Provider 的图片格式检测与流读取。",
+      "tags": [
+        "test",
+        "picture",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestFilePicture",
+      "type": "function",
+      "name": "TestFilePicture",
+      "filePath": "Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "lineRange": [
+        39,
+        62
+      ],
+      "summary": "验证从本地 PNG 文件加载 Picture 时格式检测为 'png' 且流内容与原始文件完全一致。",
+      "tags": [
+        "test",
+        "picture"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestNoFileExtension",
+      "type": "function",
+      "name": "TestNoFileExtension",
+      "filePath": "Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "lineRange": [
+        64,
+        76
+      ],
+      "summary": "验证无扩展名文件作为 Picture 源时格式和流均返回 null。",
+      "tags": [
+        "test",
+        "picture"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestWebPicture",
+      "type": "function",
+      "name": "TestWebPicture",
+      "filePath": "Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "lineRange": [
+        78,
+        127
+      ],
+      "summary": "通过临时 HTTP 服务器验证从 URL 加载 Picture 的格式检测和流数据与 HTTP 响应完全一致。",
+      "tags": [
+        "test",
+        "picture"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestOrder",
+      "type": "function",
+      "name": "TestOrder",
+      "filePath": "Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "lineRange": [
+        129,
+        140
+      ],
+      "summary": "验证自定义 IPictureDataProvider（Order=999）在 DefaultPictureDataProvider 之后正确接管非文件源 Picture。",
+      "tags": [
+        "test",
+        "picture"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/DisplayNameTest.cs",
+      "type": "file",
+      "name": "DisplayNameTest.cs",
+      "filePath": "Engine.UnitTests/DisplayNameTest.cs",
+      "summary": "验证 TypeData 和 IDisplayAnnotation 在类型继承层级中正确提取 Display 属性的测试。",
+      "tags": [
+        "test",
+        "display-name",
+        "type-metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/DisplayNameTest.cs:DisplayNameTest",
+      "type": "class",
+      "name": "DisplayNameTest",
+      "filePath": "Engine.UnitTests/DisplayNameTest.cs",
+      "lineRange": [
+        5,
+        28
+      ],
+      "summary": "DisplayName 功能测试类，验证 TypeData.FromType 和 IDisplayAnnotation 在多级继承中正确提取 Display 属性。",
+      "tags": [
+        "test",
+        "display-name",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/DisplayNameTest.cs:TestDisplayName",
+      "type": "function",
+      "name": "TestDisplayName",
+      "filePath": "Engine.UnitTests/DisplayNameTest.cs",
+      "lineRange": [
+        16,
+        27
+      ],
+      "summary": "验证从多层继承的类型中，TypeData 正确提取最具体层级的 Display Name 字符串。",
+      "tags": [
+        "test",
+        "display-name"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/DuplicateTestStep.cs",
+      "type": "file",
+      "name": "DuplicateTestStep.cs",
+      "filePath": "Engine.UnitTests/DuplicateTestStep.cs",
+      "summary": "测试辅助类文件，定义 DuplicateCliAction（实现 ICliAction）和 DuplicateTestStep（空 Run 方法），供其他测试使用。",
+      "tags": [
+        "test-helper",
+        "cli-action",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/DuplicateTestStep.cs:DuplicateCliAction",
+      "type": "class",
+      "name": "DuplicateCliAction",
+      "filePath": "Engine.UnitTests/DuplicateTestStep.cs",
+      "lineRange": [
+        10,
+        16
+      ],
+      "summary": "简单的 ICliAction 实现，Execute 方法返回 0，用于测试重复命令检测场景。",
+      "tags": [
+        "test-helper",
+        "cli-action"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/DuplicateTestStep.cs:DuplicateTestStep",
+      "type": "class",
+      "name": "DuplicateTestStep",
+      "filePath": "Engine.UnitTests/DuplicateTestStep.cs",
+      "lineRange": [
+        18,
+        24
+      ],
+      "summary": "简单的 TestStep 子类，Run 方法为空，用于测试重复步骤名称检测。",
+      "tags": [
+        "test-helper",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/DutInstrumentInheritanceTest.cs",
+      "type": "file",
+      "name": "DutInstrumentInheritanceTest.cs",
+      "filePath": "Engine.UnitTests/DutInstrumentInheritanceTest.cs",
+      "summary": "DUT/Instrument 多重继承场景的测试，验证同一基类的 DUT 和 Instrument 子类型均可分配给测试步骤的资源属性。",
+      "tags": [
+        "test",
+        "dut",
+        "instrument",
+        "resource-assignment"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/DutInstrumentInheritanceTest.cs:DutInstrumentInheritanceTest",
+      "type": "class",
+      "name": "DutInstrumentInheritanceTest",
+      "filePath": "Engine.UnitTests/DutInstrumentInheritanceTest.cs",
+      "lineRange": [
+        6,
+        88
+      ],
+      "summary": "验证实现了 IDut 和 IInstrument 接口的类在 AnnotationCollection 中的可用值和字符串赋值行为。",
+      "tags": [
+        "test",
+        "dut-instrument",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/DutInstrumentInheritanceTest.cs:TestStepResourceAssignability",
+      "type": "function",
+      "name": "TestStepResourceAssignability",
+      "filePath": "Engine.UnitTests/DutInstrumentInheritanceTest.cs",
+      "lineRange": [
+        41,
+        87
+      ],
+      "summary": "验证从共同基类派生的 DUT 和 Instrument 子类型均可作为 AvailableValues 出现在测试步骤的资源属性中，并支持通过 StringValueAnnotation 在两者间切换。",
+      "tags": [
+        "test",
+        "resource-assignment",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/DynamicStepTest.cs",
+      "type": "file",
+      "name": "DynamicStepTest.cs",
+      "filePath": "Engine.UnitTests/DynamicStepTest.cs",
+      "summary": "实现 IDynamicStep 接口的 TestStep 测试辅助类，支持基于参数构造的动态步骤工厂模式。",
+      "tags": [
+        "test-helper",
+        "dynamic-step",
+        "factory"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/DynamicStepTest.cs:DynamicStepTest",
+      "type": "class",
+      "name": "DynamicStepTest",
+      "filePath": "Engine.UnitTests/DynamicStepTest.cs",
+      "lineRange": [
+        6,
+        39
+      ],
+      "summary": "实现 IDynamicStep 的 TestStep 子类，提供 GetStepFactoryType 和 GetStep 方法以支持运行时动态步骤实例化。",
+      "tags": [
+        "test-helper",
+        "dynamic-step",
+        "idynamicstep"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ElementFactoryTest.cs",
+      "type": "file",
+      "name": "ElementFactoryTest.cs",
+      "filePath": "Engine.UnitTests/ElementFactoryTest.cs",
+      "summary": "ElementFactory 和 Factory 属性的 NUnit 测试套件，验证自定义集合元素的序列化、注解创建以及带参数化扫描的 DeepClone/序列化。",
+      "tags": [
+        "test",
+        "element-factory",
+        "serialization",
+        "parameterization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ElementFactoryTest.cs:ElementFactoryTest",
+      "type": "class",
+      "name": "ElementFactoryTest",
+      "filePath": "Engine.UnitTests/ElementFactoryTest.cs",
+      "lineRange": [
+        11,
+        284
+      ],
+      "summary": "ElementFactory 功能的主测试类，验证复杂集合元素的序列化、注解 NewElement 和参数化扫描的 DeepClone。",
+      "tags": [
+        "test",
+        "element-factory",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ElementFactoryTest.cs:SerializeWithElementFactory",
+      "type": "function",
+      "name": "SerializeWithElementFactory",
+      "filePath": "Engine.UnitTests/ElementFactoryTest.cs",
+      "lineRange": [
+        86,
+        108
+      ],
+      "summary": "验证含有 ElementFactory 和 Factory 属性的 ClassWithComplexList 对象的序列化与反序列化往返正确性。",
+      "tags": [
+        "test",
+        "element-factory"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ElementFactoryTest.cs:AnnotateWithElementFactory",
+      "type": "function",
+      "name": "AnnotateWithElementFactory",
+      "filePath": "Engine.UnitTests/ElementFactoryTest.cs",
+      "lineRange": [
+        110,
+        125
+      ],
+      "summary": "验证通过 AnnotationCollection 向 ICollectionAnnotation 调用 NewElement() 并 Write 后元素被正确添加到集合。",
+      "tags": [
+        "test",
+        "element-factory"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ElementFactoryTest.cs:TestDeserializeParameterizedElements",
+      "type": "function",
+      "name": "TestDeserializeParameterizedElements",
+      "filePath": "Engine.UnitTests/ElementFactoryTest.cs",
+      "lineRange": [
+        127,
+        283
+      ],
+      "summary": "综合测试：参数化 SweepParameterStep 的 DelaySecs，通过多级外部参数序列化/反序列化，验证 TestPlanReference 中参数化值的保真性。",
+      "tags": [
+        "test",
+        "element-factory"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/CodeGen.cs",
+      "target": "class:Engine.UnitTests/CodeGen.cs:CodeGen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/CodeGen.cs:CodeGen",
+      "target": "function:Engine.UnitTests/CodeGen.cs:BuildCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/CodeGen.cs",
+      "target": "function:Engine.UnitTests/CodeGen.cs:BuildCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestCacheInvalidated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestCacheInvalidated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSetCurrentComponentSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSetCurrentComponentSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestInvalidSetCurrentSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestInvalidSetCurrentSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestErrorsSetFromStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestErrorsSetFromStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSaveSettingsWithGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSaveSettingsWithGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSessionCreateDoesNotThrow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSessionCreateDoesNotThrow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSessionCreateDoesNotOverlayIncorrectInstance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestSessionCreateDoesNotOverlayIncorrectInstance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestPersistenceOfSaveAll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestPersistenceOfSaveAll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestFaultyInitializeComponentSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "target": "function:Engine.UnitTests/ComponentSettingsTest.cs:TestFaultyInitializeComponentSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "target": "class:Engine.UnitTests/ComponentSettingsTest.cs:ComponentSettingsTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ComponentSettings.cs",
+      "target": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/EngineSettings.cs",
+      "target": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/Session.cs",
+      "target": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/InstrumentSettings.cs",
+      "target": "file:Engine.UnitTests/ComponentSettingsTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/ConnectionTest.cs:ConnectionTest",
+      "target": "function:Engine.UnitTests/ConnectionTest.cs:VirtualPortTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ConnectionTest.cs",
+      "target": "function:Engine.UnitTests/ConnectionTest.cs:VirtualPortTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ConnectionTest.cs:ConnectionTest",
+      "target": "function:Engine.UnitTests/ConnectionTest.cs:EmptyRfConnectionCableLoss",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ConnectionTest.cs",
+      "target": "function:Engine.UnitTests/ConnectionTest.cs:EmptyRfConnectionCableLoss",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ConnectionTest.cs:ConnectionTest",
+      "target": "function:Engine.UnitTests/ConnectionTest.cs:CableLossInterpolationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ConnectionTest.cs",
+      "target": "function:Engine.UnitTests/ConnectionTest.cs:CableLossInterpolationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ConnectionTest.cs:ConnectionTest",
+      "target": "function:Engine.UnitTests/ConnectionTest.cs:TestRevolverSwitchInstrumentSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ConnectionTest.cs",
+      "target": "function:Engine.UnitTests/ConnectionTest.cs:TestRevolverSwitchInstrumentSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ConnectionTest.cs:ConnectionTest",
+      "target": "function:Engine.UnitTests/ConnectionTest.cs:TestVirtualVias",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ConnectionTest.cs",
+      "target": "function:Engine.UnitTests/ConnectionTest.cs:TestVirtualVias",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ConnectionTest.cs",
+      "target": "class:Engine.UnitTests/ConnectionTest.cs:ConnectionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/RfConnection.cs",
+      "target": "file:Engine.UnitTests/ConnectionTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/ConnectionSettings.cs",
+      "target": "file:Engine.UnitTests/ConnectionTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/DefaultPictureDataProviderTest.cs:DefaultPictureDataProviderTest",
+      "target": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestFilePicture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "target": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestFilePicture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/DefaultPictureDataProviderTest.cs:DefaultPictureDataProviderTest",
+      "target": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestNoFileExtension",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "target": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestNoFileExtension",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/DefaultPictureDataProviderTest.cs:DefaultPictureDataProviderTest",
+      "target": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestWebPicture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "target": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestWebPicture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/DefaultPictureDataProviderTest.cs:DefaultPictureDataProviderTest",
+      "target": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "target": "function:Engine.UnitTests/DefaultPictureDataProviderTest.cs:TestOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "target": "class:Engine.UnitTests/DefaultPictureDataProviderTest.cs:DefaultPictureDataProviderTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Picture.cs",
+      "target": "file:Engine.UnitTests/DefaultPictureDataProviderTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/DisplayNameTest.cs:DisplayNameTest",
+      "target": "function:Engine.UnitTests/DisplayNameTest.cs:TestDisplayName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/DisplayNameTest.cs",
+      "target": "class:Engine.UnitTests/DisplayNameTest.cs:DisplayNameTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/DisplayNameTest.cs",
+      "target": "function:Engine.UnitTests/DisplayNameTest.cs:TestDisplayName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "file:Engine.UnitTests/DisplayNameTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine.UnitTests/DuplicateTestStep.cs",
+      "target": "class:Engine.UnitTests/DuplicateTestStep.cs:DuplicateCliAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/DuplicateTestStep.cs",
+      "target": "class:Engine.UnitTests/DuplicateTestStep.cs:DuplicateTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/DutInstrumentInheritanceTest.cs:DutInstrumentInheritanceTest",
+      "target": "function:Engine.UnitTests/DutInstrumentInheritanceTest.cs:TestStepResourceAssignability",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/DutInstrumentInheritanceTest.cs",
+      "target": "class:Engine.UnitTests/DutInstrumentInheritanceTest.cs:DutInstrumentInheritanceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/DutInstrumentInheritanceTest.cs",
+      "target": "function:Engine.UnitTests/DutInstrumentInheritanceTest.cs:TestStepResourceAssignability",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/AnnotationCollection.cs",
+      "target": "file:Engine.UnitTests/DutInstrumentInheritanceTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/DutSettings.cs",
+      "target": "file:Engine.UnitTests/DutInstrumentInheritanceTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/InstrumentSettings.cs",
+      "target": "file:Engine.UnitTests/DutInstrumentInheritanceTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine.UnitTests/DynamicStepTest.cs",
+      "target": "class:Engine.UnitTests/DynamicStepTest.cs:DynamicStepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ElementFactoryTest.cs:ElementFactoryTest",
+      "target": "function:Engine.UnitTests/ElementFactoryTest.cs:SerializeWithElementFactory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ElementFactoryTest.cs",
+      "target": "function:Engine.UnitTests/ElementFactoryTest.cs:SerializeWithElementFactory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ElementFactoryTest.cs:ElementFactoryTest",
+      "target": "function:Engine.UnitTests/ElementFactoryTest.cs:AnnotateWithElementFactory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ElementFactoryTest.cs",
+      "target": "function:Engine.UnitTests/ElementFactoryTest.cs:AnnotateWithElementFactory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ElementFactoryTest.cs:ElementFactoryTest",
+      "target": "function:Engine.UnitTests/ElementFactoryTest.cs:TestDeserializeParameterizedElements",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ElementFactoryTest.cs",
+      "target": "function:Engine.UnitTests/ElementFactoryTest.cs:TestDeserializeParameterizedElements",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ElementFactoryTest.cs",
+      "target": "class:Engine.UnitTests/ElementFactoryTest.cs:ElementFactoryTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TapSerializer.cs",
+      "target": "file:Engine.UnitTests/ElementFactoryTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/AnnotationCollection.cs",
+      "target": "file:Engine.UnitTests/ElementFactoryTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

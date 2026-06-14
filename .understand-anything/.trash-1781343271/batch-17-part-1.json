@@ -1,0 +1,1716 @@
+{
+  "nodes": [
+    {
+      "id": "file:BasicSteps/SweepLoop.cs",
+      "type": "file",
+      "name": "SweepLoop.cs",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "summary": "Sweep Loop 测试步骤，循环子步骤并扫描指定的参数/设置。支持跨运行（Across Runs）和运行内（Within Run）两种扫描模式，包含参数验证、子步骤参数设置和跨运行索引管理。",
+      "tags": [
+        "api-handler",
+        "test-step",
+        "sweep",
+        "flow-control"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:BasicSteps/SweepLoopRange.cs",
+      "type": "file",
+      "name": "SweepLoopRange.cs",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "summary": "基于范围的 Sweep Loop 测试步骤，通过线性或指数增长函数在指定的数值范围内扫描单个参数。包含 LegacySweepLoader 用于向后兼容旧版序列化格式。",
+      "tags": [
+        "api-handler",
+        "test-step",
+        "sweep",
+        "flow-control",
+        "legacy"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:BasicSteps/SweepParam.cs",
+      "type": "file",
+      "name": "SweepParam.cs",
+      "filePath": "BasicSteps/SweepParam.cs",
+      "summary": "Sweep 参数定义类，封装扫描参数名称、值数组、默认值和成员元数据。提供对象克隆（cloneObject）和 Resize 功能用于调试时的动态参数值调整。",
+      "tags": [
+        "data-model",
+        "sweep",
+        "parameter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BasicSteps/SweepParameterRangeStep.cs",
+      "type": "file",
+      "name": "SweepParameterRangeStep.cs",
+      "filePath": "BasicSteps/SweepParameterRangeStep.cs",
+      "summary": "基于范围的 Sweep Parameter 步骤（继承 SweepParameterStepBase），通过选定范围内的起止值、步长/点数进行参数扫描。支持线性和指数两种扫描行为模式。",
+      "tags": [
+        "api-handler",
+        "test-step",
+        "sweep",
+        "flow-control"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BasicSteps/SweepParameterStep.cs",
+      "type": "file",
+      "name": "SweepParameterStep.cs",
+      "filePath": "BasicSteps/SweepParameterStep.cs",
+      "summary": "基于表格的 Sweep Parameter 测试步骤（继承 SweepParameterStepBase），通过 SweepRowCollection 数据表格定义扫描值。支持选中参数在多行中循环执行，并管理资源声明。",
+      "tags": [
+        "api-handler",
+        "test-step",
+        "sweep",
+        "flow-control",
+        "table"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:BasicSteps/SweepParameterStepBase.cs",
+      "type": "file",
+      "name": "SweepParameterStepBase.cs",
+      "filePath": "BasicSteps/SweepParameterStepBase.cs",
+      "summary": "Sweep Parameter 步骤的抽象基类，定义参数选中管理（updateSelected/onListChanged）、MemberDataName 键类型和 ISelectedParameters 接口。为 SweepParameterStep 和 SweepParameterRangeStep 提供共享逻辑。",
+      "tags": [
+        "data-model",
+        "base-class",
+        "sweep",
+        "parameter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BasicSteps/SweepRow.cs",
+      "type": "file",
+      "name": "SweepRow.cs",
+      "filePath": "BasicSteps/SweepRow.cs",
+      "summary": "表示 Sweep Loop 中的一行数据，存储动态属性值（Dictionary<string,object>）和启用状态。支持通过 GetIterationString 生成迭代描述字符串。",
+      "tags": [
+        "data-model",
+        "sweep",
+        "row"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BasicSteps/SweepRowCollection.cs",
+      "type": "file",
+      "name": "SweepRowCollection.cs",
+      "filePath": "BasicSteps/SweepRowCollection.cs",
+      "summary": "SweepRow 的强类型集合（继承 VirtualCollection<SweepRow>），在添加/插入元素时自动设置 Loop 属性，确保每行关联正确的 SweepParameterStep 父步骤。",
+      "tags": [
+        "data-model",
+        "collection",
+        "sweep"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BasicSteps/SweepRowMemberData.cs",
+      "type": "file",
+      "name": "SweepRowMemberData.cs",
+      "filePath": "BasicSteps/SweepRowMemberData.cs",
+      "summary": "SweepRow 的成员数据适配器（实现 IMemberData/IParameterMemberData），将 SweepRow.Values 字典映射为可扫描的成员属性。提供 CloneIfPossible 进行深层值克隆，支持 SweepRow/SweepRowCollection 递归克隆和字符串序列化克隆。",
+      "tags": [
+        "data-model",
+        "adapter",
+        "serialization",
+        "sweep"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "type": "class",
+      "name": "SweepLoop",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        16,
+        573
+      ],
+      "summary": "Sweep Loop 核心测试步骤类，继承 LoopTestStep 并实现 IDeserializedCallback。管理扫描参数列表（SweepParam）、迭代控制、跨运行索引和子步骤参数注入。核心方法包括 Run、sanitizeSweepParams 和 validateSweep。",
+      "tags": [
+        "test-step",
+        "sweep",
+        "flow-control",
+        "loop"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "type": "class",
+      "name": "SweepLoopRange",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        28,
+        359
+      ],
+      "summary": "基于范围的 Sweep Loop 测试步骤类，继承 LoopTestStep。通过起始值、结束值和步长/点数在线性或指数模式下扫描单个数值参数。",
+      "tags": [
+        "test-step",
+        "sweep",
+        "flow-control",
+        "loop",
+        "range"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BasicSteps/SweepLoopRange.cs:LegacySweepLoader",
+      "type": "class",
+      "name": "LegacySweepLoader",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        361,
+        408
+      ],
+      "summary": "遗留 Sweep Loop 的反序列化加载器，将旧版 XML 格式的 sweep 配置转换为新的 SweepLoopRange 结构。实现 Deserialize 和 Serialize 方法用于向后兼容。",
+      "tags": [
+        "legacy",
+        "deserialization",
+        "compatibility",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BasicSteps/SweepParam.cs:SweepParam",
+      "type": "class",
+      "name": "SweepParam",
+      "filePath": "BasicSteps/SweepParam.cs",
+      "lineRange": [
+        8,
+        139
+      ],
+      "summary": "扫描参数数据类，封装参数名称、值数组、默认值和 IMemberData 成员引用。提供 cloneObject 进行默认值深克隆和 Resize 用于运行时调整参数值数组大小。",
+      "tags": [
+        "data-model",
+        "sweep",
+        "parameter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BasicSteps/SweepParameterRangeStep.cs:SweepParameterRangeStep",
+      "type": "class",
+      "name": "SweepParameterRangeStep",
+      "filePath": "BasicSteps/SweepParameterRangeStep.cs",
+      "lineRange": [
+        11,
+        226
+      ],
+      "summary": "基于范围的 Sweep Parameter 步骤，继承 SweepParameterStepBase 并实现 ILoopStep。定义 Start/Stop/Step/Points 属性并通过 LinearRange/ExponentialRange 计算扫描值序列。",
+      "tags": [
+        "test-step",
+        "sweep",
+        "range",
+        "loop"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BasicSteps/SweepParameterStep.cs:SweepParameterStep",
+      "type": "class",
+      "name": "SweepParameterStep",
+      "filePath": "BasicSteps/SweepParameterStep.cs",
+      "lineRange": [
+        12,
+        324
+      ],
+      "summary": "基于表格的 Sweep Parameter 步骤，继承 SweepParameterStepBase 并实现 ILoopStep。通过 SweepRowCollection 数据表格管理参数扫描值，提供 Validate、ValidateSweepValues 和 Run 方法。",
+      "tags": [
+        "test-step",
+        "sweep",
+        "table",
+        "loop"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BasicSteps/SweepParameterStepBase.cs:MemberDataName",
+      "type": "class",
+      "name": "MemberDataName",
+      "filePath": "BasicSteps/SweepParameterStepBase.cs",
+      "lineRange": [
+        14,
+        38
+      ],
+      "summary": "成员数据名称键类型，解析带分组前缀的名称字符串（如 \"Group \\ Name\"），提供 Equals/GetHashCode 用于字典键比较。",
+      "tags": [
+        "data-model",
+        "key-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BasicSteps/SweepParameterStepBase.cs:SweepParameterStepBase",
+      "type": "class",
+      "name": "SweepParameterStepBase",
+      "filePath": "BasicSteps/SweepParameterStepBase.cs",
+      "lineRange": [
+        40,
+        128
+      ],
+      "summary": "Sweep Parameter 步骤的抽象基类，继承 LoopTestStep 并实现 ISelectedParameters。管理可用参数列表（SweepProperties/SelectedMembers）、选中状态和 NotifyChangedList 通知机制。",
+      "tags": [
+        "base-class",
+        "sweep",
+        "parameter",
+        "abstract"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BasicSteps/SweepRow.cs:SweepRow",
+      "type": "class",
+      "name": "SweepRow",
+      "filePath": "BasicSteps/SweepRow.cs",
+      "lineRange": [
+        10,
+        39
+      ],
+      "summary": "表示 Sweep 循环中的一行，存储 Enabled 状态、Loop 关联引用和动态属性值字典。提供 GetIterationString 方法格式化迭代描述。",
+      "tags": [
+        "data-model",
+        "sweep",
+        "row"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BasicSteps/SweepRowCollection.cs:SweepRowCollection",
+      "type": "class",
+      "name": "SweepRowCollection",
+      "filePath": "BasicSteps/SweepRowCollection.cs",
+      "lineRange": [
+        3,
+        44
+      ],
+      "summary": "SweepRow 的泛型集合（继承 VirtualCollection<SweepRow>），重写 Add/Insert/索引器以自动设置每行的 Loop 属性，保持与 SweepParameterStep 的关联。",
+      "tags": [
+        "collection",
+        "sweep",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BasicSteps/SweepRowMemberData.cs:SweepRowMemberData",
+      "type": "class",
+      "name": "SweepRowMemberData",
+      "filePath": "BasicSteps/SweepRowMemberData.cs",
+      "lineRange": [
+        5,
+        91
+      ],
+      "summary": "SweepRow 成员数据适配器，实现 IMemberData/IParameterMemberData 接口。将 SweepRow.Values 字典的键映射为可扫描属性，GetValue/SetValue 操作读写字典。CloneIfPossible 方法支持 SweepRow、SweepRowCollection 和一般对象的递归克隆。",
+      "tags": [
+        "data-model",
+        "adapter",
+        "serialization",
+        "sweep"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:popChanged",
+      "type": "function",
+      "name": "popChanged",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        83,
+        101
+      ],
+      "summary": "处理参数数量变化事件，从 SweepMembers 重建 sweepParameters 列表。",
+      "tags": [
+        "event-handler",
+        "parameter",
+        "sync"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:SweepLoop",
+      "type": "function",
+      "name": "SweepLoop",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        150,
+        158
+      ],
+      "summary": "SweepLoop 构造函数，初始化扫描参数列表并添加 Name 和 SweepMembers 的验证规则。",
+      "tags": [
+        "constructor",
+        "initialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:setParameterOnChildren",
+      "type": "function",
+      "name": "setParameterOnChildren",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        174,
+        225
+      ],
+      "summary": "递归将扫描参数设置到子步骤上。使用 TypeData 反射匹配成员名称和 Group 属性，深度遍历子步骤层次结构。",
+      "tags": [
+        "reflection",
+        "parameter",
+        "recursion",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:populateChildParameters",
+      "type": "function",
+      "name": "populateChildParameters",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        234,
+        254
+      ],
+      "summary": "递归收集所有子步骤的参数值，构建 step→member→value 的映射字典用于后续恢复。",
+      "tags": [
+        "reflection",
+        "parameter",
+        "recursion"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:RunForSweepParamWithIndex",
+      "type": "function",
+      "name": "RunForSweepParamWithIndex",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        256,
+        281
+      ],
+      "summary": "以指定索引运行单个扫描参数的设置，将参数值注入到对应子步骤中，捕获异常并收集到 AggregateException。",
+      "tags": [
+        "sweep",
+        "execution",
+        "error-handling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:RegisterAdditionalParams",
+      "type": "function",
+      "name": "RegisterAdditionalParams",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        283,
+        303
+      ],
+      "summary": "注册额外结果参数（ResultParameters），基于当前索引的扫描参数值创建结果参数对象。",
+      "tags": [
+        "result",
+        "parameter",
+        "registration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:validateSweep",
+      "type": "function",
+      "name": "validateSweep",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        311,
+        360
+      ],
+      "summary": "验证扫描配置：净化参数、计算参数值、执行空运行以检测错误。使用 Mutex 保护并发访问。",
+      "tags": [
+        "validation",
+        "sweep",
+        "concurrency"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:ValidateChildSteps",
+      "type": "function",
+      "name": "ValidateChildSteps",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        362,
+        389
+      ],
+      "summary": "递归验证子步骤成员是否匹配扫描参数，检查每个步骤的成员名称与 sweep member 的一致性。",
+      "tags": [
+        "validation",
+        "recursion",
+        "sweep"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:PrePlanRun",
+      "type": "function",
+      "name": "PrePlanRun",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        391,
+        404
+      ],
+      "summary": "计划执行前的准备步骤，净化扫描参数并验证 EnabledRows 数量。",
+      "tags": [
+        "pre-execution",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:acrossRunsGotoEnabledSweepIndex",
+      "type": "function",
+      "name": "acrossRunsGotoEnabledSweepIndex",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        415,
+        428
+      ],
+      "summary": "跨运行模式下跳转到下一个已启用的扫描索引位置。",
+      "tags": [
+        "sweep",
+        "iteration",
+        "cross-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        430,
+        504
+      ],
+      "summary": "SweepLoop 主执行循环。遍历已启用的扫描行，设置参数值、执行子步骤（跨运行模式并行执行）、恢复旧参数值并输出日志。",
+      "tags": [
+        "execution",
+        "sweep",
+        "loop",
+        "parallel"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:sanitizeSweepParams",
+      "type": "function",
+      "name": "sanitizeSweepParams",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        509,
+        567
+      ],
+      "summary": "净化扫描参数列表：移除重复/冗余的 SweepParam、合并相同 property 的参数、修正成员引用并输出诊断日志。",
+      "tags": [
+        "cleanup",
+        "sweep",
+        "parameter",
+        "diagnostics"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoop.cs:OnDeserialized",
+      "type": "function",
+      "name": "OnDeserialized",
+      "filePath": "BasicSteps/SweepLoop.cs",
+      "lineRange": [
+        569,
+        572
+      ],
+      "summary": "反序列化回调，设置 _CrossPlan 字段并调用 sanitizeSweepParams 进行参数净化。",
+      "tags": [
+        "deserialization",
+        "callback"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:parseInfosFromString",
+      "type": "function",
+      "name": "parseInfosFromString",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        92,
+        110
+      ],
+      "summary": "从格式化字符串解析参数信息，格式为 'Type1.Member1,Type2.Member2'。",
+      "tags": [
+        "parsing",
+        "reflection",
+        "legacy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:PrePlanRun",
+      "type": "function",
+      "name": "PrePlanRun",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        112,
+        118
+      ],
+      "summary": "执行前准备，初始化 SweepPropertyName 并调整 Step/End 属性。",
+      "tags": [
+        "pre-execution"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:validateSweep",
+      "type": "function",
+      "name": "validateSweep",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        128,
+        168
+      ],
+      "summary": "验证扫描配置：检查步骤类型兼容性、参数范围和线性/指数模式下的参数有效性。",
+      "tags": [
+        "validation",
+        "sweep"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "type": "function",
+      "name": "SweepLoopRange",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        170,
+        190
+      ],
+      "summary": "SweepLoopRange 构造函数，添加 Name、SweepProperties、SweepStop 和 SweepBehavior 的验证规则。",
+      "tags": [
+        "constructor",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:getPropertiesForItems",
+      "type": "function",
+      "name": "getPropertiesForItems",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        208,
+        224
+      ],
+      "summary": "递归收集子步骤层次结构中符合 sweep 条件（可写、可读、数值类型）的成员属性。",
+      "tags": [
+        "reflection",
+        "sweep",
+        "recursion"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:GetPropertiesForItems",
+      "type": "function",
+      "name": "GetPropertiesForItems",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        226,
+        231
+      ],
+      "summary": "获取子步骤的可 sweep 属性列表的公共入口方法。",
+      "tags": [
+        "reflection",
+        "sweep"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:GetPropertySets",
+      "type": "function",
+      "name": "GetPropertySets",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        262,
+        278
+      ],
+      "summary": "根据 SweepBehavior 模式（线性/指数）计算扫描步骤的值序列。",
+      "tags": [
+        "sweep",
+        "calculation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:LinearRange",
+      "type": "function",
+      "name": "LinearRange",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        281,
+        290
+      ],
+      "summary": "生成线性增长扫描值序列（起始到结束，固定步长）。",
+      "tags": [
+        "sweep",
+        "linear",
+        "calculation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:ExponentialRange",
+      "type": "function",
+      "name": "ExponentialRange",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        292,
+        304
+      ],
+      "summary": "生成指数增长扫描值序列，基于起始值和结束值计算指数分布。",
+      "tags": [
+        "sweep",
+        "exponential",
+        "calculation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        307,
+        358
+      ],
+      "summary": "SweepLoopRange 主执行循环。遍历索引范围、设置参数值、运行子步骤并收集返回的 Verdict。支持跨运行模式。",
+      "tags": [
+        "execution",
+        "sweep",
+        "loop"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BasicSteps/SweepLoopRange.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "BasicSteps/SweepLoopRange.cs",
+      "lineRange": [
+        369,
+        402
+      ],
+      "summary": "LegacySweepLoader 的 XML 反序列化方法，将旧版 XML 配置转换为 SweepLoopRange 属性。",
+      "tags": [
+        "deserialization",
+        "legacy",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepParam.cs:cloneObject",
+      "type": "function",
+      "name": "cloneObject",
+      "filePath": "BasicSteps/SweepParam.cs",
+      "lineRange": [
+        87,
+        116
+      ],
+      "summary": "深克隆对象值：使用 TapSerializer 序列化后再反序列化。处理 null、IXmlSerializable 和一般类型。",
+      "tags": [
+        "clone",
+        "serialization",
+        "deep-copy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepParam.cs:Resize",
+      "type": "function",
+      "name": "Resize",
+      "filePath": "BasicSteps/SweepParam.cs",
+      "lineRange": [
+        117,
+        138
+      ],
+      "summary": "调整参数值数组大小，用于调试时动态添加/删除参数值。在数组扩展时填充默认值的克隆副本。",
+      "tags": [
+        "utility",
+        "resize",
+        "debug"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepParameterRangeStep.cs:validateSweep",
+      "type": "function",
+      "name": "validateSweep",
+      "filePath": "BasicSteps/SweepParameterRangeStep.cs",
+      "lineRange": [
+        77,
+        107
+      ],
+      "summary": "验证扫描参数配置：检查 SelectedParameters 非空、步骤类型兼容、并使用 LinearRange/ExponentialRange 计算值。",
+      "tags": [
+        "validation",
+        "sweep"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepParameterRangeStep.cs:SweepParameterRangeStep",
+      "type": "function",
+      "name": "SweepParameterRangeStep",
+      "filePath": "BasicSteps/SweepParameterRangeStep.cs",
+      "lineRange": [
+        109,
+        125
+      ],
+      "summary": "SweepParameterRangeStep 构造函数，初始化默认名称并添加验证规则。",
+      "tags": [
+        "constructor",
+        "initialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepParameterRangeStep.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "BasicSteps/SweepParameterRangeStep.cs",
+      "lineRange": [
+        156,
+        217
+      ],
+      "summary": "主执行循环：遍历选中参数、为每行计算范围值、设置参数值并运行子步骤。支持跨运行迭代索引。",
+      "tags": [
+        "execution",
+        "sweep",
+        "range",
+        "loop"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BasicSteps/SweepParameterStep.cs:Validate",
+      "type": "function",
+      "name": "Validate",
+      "filePath": "BasicSteps/SweepParameterStep.cs",
+      "lineRange": [
+        59,
+        93
+      ],
+      "summary": "验证 SweepParameterStep 配置：检查 Parameters 非空、每行至少一个选中值、SweepValues 至少包含一行。",
+      "tags": [
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepParameterStep.cs:ValidateSweepValues",
+      "type": "function",
+      "name": "ValidateSweepValues",
+      "filePath": "BasicSteps/SweepParameterStep.cs",
+      "lineRange": [
+        110,
+        215
+      ],
+      "summary": "深度验证扫描值表：对每行使用 StringConvertProvider 检查值转换兼容性、SelectedParameters 匹配和成员可访问性。返回错误消息或 null。",
+      "tags": [
+        "validation",
+        "sweep",
+        "conversion"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BasicSteps/SweepParameterStep.cs:PrePlanRun",
+      "type": "function",
+      "name": "PrePlanRun",
+      "filePath": "BasicSteps/SweepParameterStep.cs",
+      "lineRange": [
+        217,
+        228
+      ],
+      "summary": "执行前准备：运行 ValidateSweepValues 验证扫描值，失败时禁止执行。",
+      "tags": [
+        "pre-execution",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/SweepParameterStep.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "BasicSteps/SweepParameterStep.cs",
+      "lineRange": [
+        236,
+        307
+      ],
+      "summary": "主执行循环：遍历已启用的 SweepValues 行，设置参数值到子步骤，执行子步骤并管理迭代信息。支持跨运行索引。",
+      "tags": [
+        "execution",
+        "sweep",
+        "table",
+        "loop"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BasicSteps/SweepParameterStepBase.cs:updateSelected",
+      "type": "function",
+      "name": "updateSelected",
+      "filePath": "BasicSteps/SweepParameterStepBase.cs",
+      "lineRange": [
+        56,
+        85
+      ],
+      "summary": "更新选中参数列表：根据 AvailableParameters 同步 Selected 字典，管理添加/移除参数并触发 onListChanged 通知。",
+      "tags": [
+        "sync",
+        "parameter",
+        "selection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BasicSteps/SweepRowMemberData.cs:CloneIfPossible",
+      "type": "function",
+      "name": "CloneIfPossible",
+      "filePath": "BasicSteps/SweepRowMemberData.cs",
+      "lineRange": [
+        41,
+        88
+      ],
+      "summary": "递归对象克隆方法，处理 SweepRow/SweepRowCollection 特殊克隆、平凡类型直传、值类型直传和使用 TapSerializer 序列化克隆非平凡类型。",
+      "tags": [
+        "clone",
+        "serialization",
+        "deep-copy"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "class:BasicSteps/SweepLoopRange.cs:LegacySweepLoader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParam.cs",
+      "target": "class:BasicSteps/SweepParam.cs:SweepParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterRangeStep.cs",
+      "target": "class:BasicSteps/SweepParameterRangeStep.cs:SweepParameterRangeStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "class:BasicSteps/SweepParameterStep.cs:SweepParameterStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStepBase.cs",
+      "target": "class:BasicSteps/SweepParameterStepBase.cs:MemberDataName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStepBase.cs",
+      "target": "class:BasicSteps/SweepParameterStepBase.cs:SweepParameterStepBase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepRow.cs",
+      "target": "class:BasicSteps/SweepRow.cs:SweepRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepRowCollection.cs",
+      "target": "class:BasicSteps/SweepRowCollection.cs:SweepRowCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepRowMemberData.cs",
+      "target": "class:BasicSteps/SweepRowMemberData.cs:SweepRowMemberData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:popChanged",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:SweepLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:setParameterOnChildren",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:populateChildParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:RunForSweepParamWithIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:RegisterAdditionalParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:validateSweep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:ValidateChildSteps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:PrePlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:acrossRunsGotoEnabledSweepIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:sanitizeSweepParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:OnDeserialized",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:parseInfosFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:PrePlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:validateSweep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:getPropertiesForItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:GetPropertiesForItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:GetPropertySets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:LinearRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:ExponentialRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParam.cs",
+      "target": "function:BasicSteps/SweepParam.cs:cloneObject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParam.cs",
+      "target": "function:BasicSteps/SweepParam.cs:Resize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterRangeStep.cs",
+      "target": "function:BasicSteps/SweepParameterRangeStep.cs:validateSweep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterRangeStep.cs",
+      "target": "function:BasicSteps/SweepParameterRangeStep.cs:SweepParameterRangeStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterRangeStep.cs",
+      "target": "function:BasicSteps/SweepParameterRangeStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "function:BasicSteps/SweepParameterStep.cs:Validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "function:BasicSteps/SweepParameterStep.cs:ValidateSweepValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "function:BasicSteps/SweepParameterStep.cs:PrePlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "function:BasicSteps/SweepParameterStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStepBase.cs",
+      "target": "function:BasicSteps/SweepParameterStepBase.cs:updateSelected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepRowMemberData.cs",
+      "target": "function:BasicSteps/SweepRowMemberData.cs:CloneIfPossible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:PrePlanRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "function:BasicSteps/SweepLoop.cs:ValidateChildSteps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "class:BasicSteps/SweepLoopRange.cs:LegacySweepLoader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:PrePlanRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:LinearRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:ExponentialRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoopRange.cs",
+      "target": "function:BasicSteps/SweepLoopRange.cs:GetPropertiesForItems",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepParam.cs",
+      "target": "class:BasicSteps/SweepParam.cs:SweepParam",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepParam.cs",
+      "target": "function:BasicSteps/SweepParam.cs:Resize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterRangeStep.cs",
+      "target": "class:BasicSteps/SweepParameterRangeStep.cs:SweepParameterRangeStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterRangeStep.cs",
+      "target": "function:BasicSteps/SweepParameterRangeStep.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "class:BasicSteps/SweepParameterStep.cs:SweepParameterStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "function:BasicSteps/SweepParameterStep.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "function:BasicSteps/SweepParameterStep.cs:PrePlanRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStepBase.cs",
+      "target": "class:BasicSteps/SweepParameterStepBase.cs:SweepParameterStepBase",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStepBase.cs",
+      "target": "class:BasicSteps/SweepParameterStepBase.cs:MemberDataName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepRow.cs",
+      "target": "class:BasicSteps/SweepRow.cs:SweepRow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepRowCollection.cs",
+      "target": "class:BasicSteps/SweepRowCollection.cs:SweepRowCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepRowMemberData.cs",
+      "target": "class:BasicSteps/SweepRowMemberData.cs:SweepRowMemberData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepLoop.cs",
+      "target": "file:BasicSteps/SweepParam.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "file:BasicSteps/SweepRow.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "file:BasicSteps/SweepRowCollection.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterStep.cs",
+      "target": "file:BasicSteps/SweepParameterStepBase.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:BasicSteps/SweepParameterRangeStep.cs",
+      "target": "file:BasicSteps/SweepParameterStepBase.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:BasicSteps/SweepRowMemberData.cs",
+      "target": "file:BasicSteps/SweepRow.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:BasicSteps/SweepRowMemberData.cs",
+      "target": "file:BasicSteps/SweepRowCollection.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:BasicSteps/SweepRowCollection.cs",
+      "target": "file:BasicSteps/VirtualCollection.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:BasicSteps/SweepParameterStep.cs:SweepParameterStep",
+      "target": "class:BasicSteps/SweepParameterStepBase.cs:SweepParameterStepBase",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:BasicSteps/SweepParameterRangeStep.cs:SweepParameterRangeStep",
+      "target": "class:BasicSteps/SweepParameterStepBase.cs:SweepParameterStepBase",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:BasicSteps/SweepRowCollection.cs:SweepRowCollection",
+      "target": "class:BasicSteps/VirtualCollection.cs:VirtualCollection",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:popChanged",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:SweepLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:setParameterOnChildren",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:populateChildParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:RunForSweepParamWithIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:RegisterAdditionalParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:validateSweep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:ValidateChildSteps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:PrePlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:acrossRunsGotoEnabledSweepIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:sanitizeSweepParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoop.cs:SweepLoop",
+      "target": "function:BasicSteps/SweepLoop.cs:OnDeserialized",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "target": "function:BasicSteps/SweepLoopRange.cs:parseInfosFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "target": "function:BasicSteps/SweepLoopRange.cs:PrePlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "target": "function:BasicSteps/SweepLoopRange.cs:validateSweep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "target": "function:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "target": "function:BasicSteps/SweepLoopRange.cs:getPropertiesForItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "target": "function:BasicSteps/SweepLoopRange.cs:GetPropertiesForItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "target": "function:BasicSteps/SweepLoopRange.cs:GetPropertySets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "target": "function:BasicSteps/SweepLoopRange.cs:LinearRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "target": "function:BasicSteps/SweepLoopRange.cs:ExponentialRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:SweepLoopRange",
+      "target": "function:BasicSteps/SweepLoopRange.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepLoopRange.cs:LegacySweepLoader",
+      "target": "function:BasicSteps/SweepLoopRange.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepParam.cs:SweepParam",
+      "target": "function:BasicSteps/SweepParam.cs:cloneObject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepParam.cs:SweepParam",
+      "target": "function:BasicSteps/SweepParam.cs:Resize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepParameterRangeStep.cs:SweepParameterRangeStep",
+      "target": "function:BasicSteps/SweepParameterRangeStep.cs:validateSweep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepParameterRangeStep.cs:SweepParameterRangeStep",
+      "target": "function:BasicSteps/SweepParameterRangeStep.cs:SweepParameterRangeStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepParameterRangeStep.cs:SweepParameterRangeStep",
+      "target": "function:BasicSteps/SweepParameterRangeStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepParameterStep.cs:SweepParameterStep",
+      "target": "function:BasicSteps/SweepParameterStep.cs:Validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepParameterStep.cs:SweepParameterStep",
+      "target": "function:BasicSteps/SweepParameterStep.cs:ValidateSweepValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepParameterStep.cs:SweepParameterStep",
+      "target": "function:BasicSteps/SweepParameterStep.cs:PrePlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepParameterStep.cs:SweepParameterStep",
+      "target": "function:BasicSteps/SweepParameterStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepParameterStepBase.cs:SweepParameterStepBase",
+      "target": "function:BasicSteps/SweepParameterStepBase.cs:updateSelected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/SweepRowMemberData.cs:SweepRowMemberData",
+      "target": "function:BasicSteps/SweepRowMemberData.cs:CloneIfPossible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

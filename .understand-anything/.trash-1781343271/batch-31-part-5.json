@@ -1,0 +1,880 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/ResultProxy.cs",
+      "type": "file",
+      "name": "ResultProxy.cs",
+      "filePath": "Engine/ResultProxy.cs",
+      "summary": "实现结果代理系统，含ResultColumn列定义、ResultTable表格、IResultSource接口和ResultSource结果发布实现。",
+      "tags": [
+        "result-processing",
+        "engine",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/ResultTableOptimizer.cs",
+      "type": "file",
+      "name": "ResultTableOptimizer.cs",
+      "filePath": "Engine/ResultTableOptimizer.cs",
+      "summary": "实现ResultTableOptimizer静态工具类，提供CanMerge判断和MergeTables合并两个结果表格优化方法。",
+      "tags": [
+        "result-processing",
+        "optimization",
+        "engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Scpi.cs",
+      "type": "file",
+      "name": "Scpi.cs",
+      "filePath": "Engine/Scpi.cs",
+      "summary": "实现SCPI命令的格式化与解析静态工具类，支持SCPI字符串转义、数组分割（SplitScpiArray）及枚举类型转换。",
+      "tags": [
+        "scpi",
+        "instrument-control",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/ScpiAttribute.cs",
+      "type": "file",
+      "name": "ScpiAttribute.cs",
+      "filePath": "Engine/ScpiAttribute.cs",
+      "summary": "定义ScpiAttribute自定义属性，存储ScpiString用于建立属性与SCPI命令字符串之间的映射关系。",
+      "tags": [
+        "attribute",
+        "scpi",
+        "instrument-control"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ResultProxy.cs:ResultColumn",
+      "type": "class",
+      "name": "ResultColumn",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        19,
+        114
+      ],
+      "summary": "结果表格列定义类，封装列名（Name）、数据数组（Data）、类型码（TypeCode）和关联参数集合。",
+      "tags": [
+        "result-processing",
+        "core"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ResultProxy.cs:ResultTable",
+      "type": "class",
+      "name": "ResultTable",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        119,
+        220
+      ],
+      "summary": "结果表格定义类，封装表名、列集合（Columns）、行数据，支持通过反射从对象自动构建表格。",
+      "tags": [
+        "result-processing",
+        "data-structure"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ResultProxy.cs:IResultSource",
+      "type": "class",
+      "name": "IResultSource",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        225,
+        265
+      ],
+      "summary": "结果源接口，定义Defer（延迟）、Publish（发布结果）、Finally（终结处理）的结果生命周期方法。",
+      "tags": [
+        "interface",
+        "result-processing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ResultProxy.cs:ResultSource",
+      "type": "class",
+      "name": "ResultSource",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        270,
+        662
+      ],
+      "summary": "结果源实现类，管理测试步骤的结果发布流程，含延迟执行、表格转换（ToResultTable）和故障监听器移除。",
+      "tags": [
+        "result-processing",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ResultTableOptimizer.cs:ResultTableOptimizer",
+      "type": "class",
+      "name": "ResultTableOptimizer",
+      "filePath": "Engine/ResultTableOptimizer.cs",
+      "lineRange": [
+        7,
+        55
+      ],
+      "summary": "结果表格优化器静态类，提供CanMerge（判断可合并性）和MergeTables（合并表格）两个优化方法。",
+      "tags": [
+        "result-processing",
+        "data-structure",
+        "optimization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Scpi.cs:Scpi",
+      "type": "class",
+      "name": "Scpi",
+      "filePath": "Engine/Scpi.cs",
+      "lineRange": [
+        19,
+        309
+      ],
+      "summary": "SCPI命令处理静态工具类，提供Format（格式化SCPI命令字符串）、Parse（解析SCPI响应）等实用方法。",
+      "tags": [
+        "scpi",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ScpiAttribute.cs:ScpiAttribute",
+      "type": "class",
+      "name": "ScpiAttribute",
+      "filePath": "Engine/ScpiAttribute.cs",
+      "lineRange": [
+        11,
+        26
+      ],
+      "summary": "SCPI属性类，存储ScpiString用于标记C#属性与SCPI命令字符串之间的映射关系。",
+      "tags": [
+        "attribute",
+        "scpi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:GetValue",
+      "type": "function",
+      "name": "GetValue",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        48,
+        59
+      ],
+      "summary": "函数 GetValue，12 行，参数: Index。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:ResultColumn",
+      "type": "function",
+      "name": "ResultColumn",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        66,
+        76
+      ],
+      "summary": "函数 ResultColumn，11 行，参数: name, data。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:ResultColumn#84",
+      "type": "function",
+      "name": "ResultColumn",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        84,
+        90
+      ],
+      "summary": "函数 ResultColumn，7 行，参数: name, data, table, parameters, ObjectType。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:ResultTable",
+      "type": "function",
+      "name": "ResultTable",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        168,
+        173
+      ],
+      "summary": "函数 ResultTable，6 行，参数: 无。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:ResultTable#180",
+      "type": "function",
+      "name": "ResultTable",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        180,
+        203
+      ],
+      "summary": "函数 ResultTable，24 行，参数: name, resultColumns。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:ResultSource",
+      "type": "function",
+      "name": "ResultSource",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        321,
+        326
+      ],
+      "summary": "函数 ResultSource，6 行，参数: stepRun, planRun。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:Defer",
+      "type": "function",
+      "name": "Defer",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        345,
+        351
+      ],
+      "summary": "函数 Defer，7 行，参数: action。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:DeferNoCheck",
+      "type": "function",
+      "name": "DeferNoCheck",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        355,
+        380
+      ],
+      "summary": "延迟执行指定操作，通过WorkQueue确保操作在执行Finally前完成，记录延迟计数和异常。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:Finally",
+      "type": "function",
+      "name": "Finally",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        388,
+        419
+      ],
+      "summary": "执行结果源的最终化操作，处理所有延迟任务、收集异常并以AggregateException抛出。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:ToResultTable",
+      "type": "function",
+      "name": "ToResultTable",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        426,
+        490
+      ],
+      "summary": "将任意对象转换为ResultTable，通过反射提取IConvertible类型的成员属性并构建列数据数组。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:Publish",
+      "type": "function",
+      "name": "Publish",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        497,
+        502
+      ],
+      "summary": "函数 Publish，6 行，参数: result。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:Publish#513",
+      "type": "function",
+      "name": "Publish",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        513,
+        520
+      ],
+      "summary": "函数 Publish，8 行，参数: name, result。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:Publish#528",
+      "type": "function",
+      "name": "Publish",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        528,
+        539
+      ],
+      "summary": "函数 Publish，12 行，参数: name, columnNames。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultProxy.cs:PublishTable",
+      "type": "function",
+      "name": "PublishTable",
+      "filePath": "Engine/ResultProxy.cs",
+      "lineRange": [
+        550,
+        560
+      ],
+      "summary": "函数 PublishTable，11 行，参数: name, columnNames。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultTableOptimizer.cs:CanMerge",
+      "type": "function",
+      "name": "CanMerge",
+      "filePath": "Engine/ResultTableOptimizer.cs",
+      "lineRange": [
+        12,
+        33
+      ],
+      "summary": "函数 CanMerge，22 行，参数: table1, table2。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ResultTableOptimizer.cs:MergeTables",
+      "type": "function",
+      "name": "MergeTables",
+      "filePath": "Engine/ResultTableOptimizer.cs",
+      "lineRange": [
+        36,
+        54
+      ],
+      "summary": "函数 MergeTables，19 行，参数: tables。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Scpi.cs:valueToScpiString",
+      "type": "function",
+      "name": "valueToScpiString",
+      "filePath": "Engine/Scpi.cs",
+      "lineRange": [
+        78,
+        106
+      ],
+      "summary": "将属性值递归转换为SCPI命令字符串格式，处理枚举、对象属性和数组的连接格式化。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Scpi.cs:Format",
+      "type": "function",
+      "name": "Format",
+      "filePath": "Engine/Scpi.cs",
+      "lineRange": [
+        115,
+        127
+      ],
+      "summary": "函数 Format，13 行，参数: command。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Scpi.cs:FindStringEnd",
+      "type": "function",
+      "name": "FindStringEnd",
+      "filePath": "Engine/Scpi.cs",
+      "lineRange": [
+        140,
+        155
+      ],
+      "summary": "函数 FindStringEnd，16 行，参数: Resp, Start。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Scpi.cs:SplitScpiArray",
+      "type": "function",
+      "name": "SplitScpiArray",
+      "filePath": "Engine/Scpi.cs",
+      "lineRange": [
+        160,
+        209
+      ],
+      "summary": "分割SCPI数组响应字符串为元素列表，处理嵌套双引号、转义字符和空白字符分隔。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Scpi.cs:Parse",
+      "type": "function",
+      "name": "Parse",
+      "filePath": "Engine/Scpi.cs",
+      "lineRange": [
+        218,
+        247
+      ],
+      "summary": "解析SCPI响应字符串为指定类型，通过泛型参数识别枚举/数组并执行相应的反序列化逻辑。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Scpi.cs:getUnescapedScpi",
+      "type": "function",
+      "name": "getUnescapedScpi",
+      "filePath": "Engine/Scpi.cs",
+      "lineRange": [
+        268,
+        296
+      ],
+      "summary": "获取未转义的SCPI命令字符串，替换属性值占位符并通过正则表达式匹配处理嵌套字符串。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Scpi.cs:GetUnescapedScpi",
+      "type": "function",
+      "name": "GetUnescapedScpi",
+      "filePath": "Engine/Scpi.cs",
+      "lineRange": [
+        302,
+        308
+      ],
+      "summary": "函数 GetUnescapedScpi，7 行，参数: src, property。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "class:Engine/ResultProxy.cs:ResultColumn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "class:Engine/ResultProxy.cs:ResultColumn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "class:Engine/ResultProxy.cs:ResultTable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "class:Engine/ResultProxy.cs:ResultTable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "class:Engine/ResultProxy.cs:IResultSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "class:Engine/ResultProxy.cs:IResultSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "class:Engine/ResultProxy.cs:ResultSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "class:Engine/ResultProxy.cs:ResultSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:GetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:GetValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ResultColumn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ResultColumn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ResultColumn#84",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ResultColumn#84",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ResultTable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ResultTable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ResultTable#180",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ResultTable#180",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ResultSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ResultSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:Defer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:Defer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:DeferNoCheck",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:Finally",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:ToResultTable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:Publish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:Publish",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:Publish#513",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:Publish#513",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:Publish#528",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:Publish#528",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:PublishTable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultProxy.cs",
+      "target": "function:Engine/ResultProxy.cs:PublishTable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultTableOptimizer.cs",
+      "target": "class:Engine/ResultTableOptimizer.cs:ResultTableOptimizer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultTableOptimizer.cs",
+      "target": "function:Engine/ResultTableOptimizer.cs:CanMerge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultTableOptimizer.cs",
+      "target": "function:Engine/ResultTableOptimizer.cs:CanMerge",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ResultTableOptimizer.cs",
+      "target": "function:Engine/ResultTableOptimizer.cs:MergeTables",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ResultTableOptimizer.cs",
+      "target": "function:Engine/ResultTableOptimizer.cs:MergeTables",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "class:Engine/Scpi.cs:Scpi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "class:Engine/Scpi.cs:Scpi",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "function:Engine/Scpi.cs:valueToScpiString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "function:Engine/Scpi.cs:Format",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "function:Engine/Scpi.cs:Format",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "function:Engine/Scpi.cs:FindStringEnd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "function:Engine/Scpi.cs:SplitScpiArray",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "function:Engine/Scpi.cs:Parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "function:Engine/Scpi.cs:Parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "function:Engine/Scpi.cs:getUnescapedScpi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "function:Engine/Scpi.cs:GetUnescapedScpi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Scpi.cs",
+      "target": "function:Engine/Scpi.cs:GetUnescapedScpi",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ScpiAttribute.cs",
+      "target": "class:Engine/ScpiAttribute.cs:ScpiAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ScpiAttribute.cs",
+      "target": "class:Engine/ScpiAttribute.cs:ScpiAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

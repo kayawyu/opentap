@@ -1,0 +1,959 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/Examples/PluginDevelopment.Gui/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/Properties/AssemblyInfo.cs",
+      "summary": "PluginDevelopment.Gui 程序集元数据信息文件，定义插件版本和标识属性。",
+      "tags": ["assembly-metadata", "configuration", "plugin-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/Examples/PluginDevelopment.Gui/Properties/launchSettings.json",
+      "type": "config",
+      "name": "launchSettings.json",
+      "filePath": "sdk/Examples/PluginDevelopment.Gui/Properties/launchSettings.json",
+      "summary": "PluginDevelopment.Gui 调试启动配置文件，定义以 OpenTAP GUI 模式运行时的启动参数。",
+      "tags": ["configuration", "debug", "launch-settings"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "type": "file",
+      "name": "AttachedPropertyExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "summary": "附加属性（Attached Property）高级示例，演示如何实现自定义 IStackedTypeDataProvider、ITypeData、IMemberData 来扩展 OpenTAP 类型系统，实现仪器 ID 属性的动态绑定。",
+      "tags": ["advanced", "type-system", "attached-property", "type-data", "example"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDTypeDataProvider",
+      "type": "class",
+      "name": "InstrumentIDTypeDataProvider",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [22, 78],
+      "summary": "实现 IStackedTypeDataProvider 接口，拦截带有特定前缀的类型标识符，返回自定义 InstrumentIDTypeData。",
+      "tags": ["type-data-provider", "type-system", "advanced", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDProperty",
+      "type": "class",
+      "name": "InstrumentIDProperty",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [83, 96],
+      "summary": "附加属性定义，提供 GetValue/SetValue 静态方法通过 InstrumentIdMember 读写属性值。",
+      "tags": ["attached-property", "type-system", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDTypeData",
+      "type": "class",
+      "name": "InstrumentIDTypeData",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [101, 157],
+      "summary": "自定义 ITypeData 实现，包装 innerType 并为其添加额外的 InstrumentIdMember 成员，支持缓存模式。",
+      "tags": ["type-data", "type-system", "advanced", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDMemberData",
+      "type": "class",
+      "name": "InstrumentIDMemberData",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [159, 227],
+      "summary": "自定义 IMemberData 实现，使用 valueTable 字典存储每个 owner 的属性值，支持读写和类型描述符。",
+      "tags": ["member-data", "type-system", "advanced", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDTestStep",
+      "type": "class",
+      "name": "InstrumentIDTestStep",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [230, 241],
+      "summary": "测试步骤，包含 Instrument 属性并使用 InstrumentIDProperty.GetValue 读取附加属性值。",
+      "tags": ["test-step", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:GetTypeData",
+      "type": "function",
+      "name": "GetTypeData (identifier)",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [27, 37],
+      "summary": "根据字符串标识符获取 TypeData：若前缀匹配则解析内部类型并返回自定义 InstrumentIDTypeData。",
+      "tags": ["type-system", "identifier-resolution", "advanced", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:PrintTypeDataProviders",
+      "type": "function",
+      "name": "PrintTypeDataProviders",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [65, 77],
+      "summary": "通过 TypeData.GetDerivedTypes 枚举所有 IStackedTypeDataProvider 并打印其实例信息。",
+      "tags": ["type-system", "plugin-discovery", "debug", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:FromInnerType",
+      "type": "function",
+      "name": "FromInnerType",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [113, 116],
+      "summary": "工厂方法，根据内部类型创建或从缓存获取 InstrumentIDTypeData 实例。",
+      "tags": ["factory", "caching", "type-system", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:GetMembers",
+      "type": "function",
+      "name": "GetMembers",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [132, 136],
+      "summary": "获取所有成员数据，将内部类型的成员与 InstrumentIdMember 合并返回。",
+      "tags": ["type-system", "member-data", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:GetMember",
+      "type": "function",
+      "name": "GetMember",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [138, 143],
+      "summary": "根据名称查找成员，InstrumentIdMember 优先于内部类型成员。",
+      "tags": ["type-system", "member-lookup", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:CreateInstance",
+      "type": "function",
+      "name": "CreateInstance",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [146, 149],
+      "summary": "委托到内部类型创建实例。",
+      "tags": ["type-system", "factory", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDMemberData",
+      "type": "function",
+      "name": "InstrumentIDMemberData",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [161, 168],
+      "summary": "构造函数，使用 TypeData.FromType 为值类型创建 TypeDescriptor。",
+      "tags": ["constructor", "type-system", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:SetValue",
+      "type": "function",
+      "name": "SetValue (IMemberData)",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [177, 194],
+      "summary": "为指定 owner 设置属性值到内部 valueTable，包含输入验证。",
+      "tags": ["member-data", "setter", "validation", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:GetValue",
+      "type": "function",
+      "name": "GetValue (IMemberData)",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [197, 206],
+      "summary": "从 valueTable 获取指定 owner 的属性值，若不存在则返回默认值。",
+      "tags": ["member-data", "getter", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "lineRange": [236, 240],
+      "summary": "运行测试步骤，通过 InstrumentIDProperty.GetValue 获取附加属性值并打印。",
+      "tags": ["test-step", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "type": "file",
+      "name": "BreakSerializerExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "summary": "序列化器兼容性示例，演示如何处理因插件重命名导致的 XML 反序列化破坏性变更，实现旧类型到新类型的转换。",
+      "tags": ["advanced", "serialization", "compatibility", "migration", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:OldDelayStep",
+      "type": "class",
+      "name": "OldDelayStep",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "lineRange": [12, 21],
+      "summary": "旧版本延迟步骤类（毫秒为单位），用于演示向后兼容的反序列化。",
+      "tags": ["test-step", "legacy", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:NewDelayStep",
+      "type": "class",
+      "name": "NewDelayStep",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "lineRange": [23, 33],
+      "summary": "新版本延迟步骤类（秒为单位），取代旧版本的 DelayMs 为 DelaySec。",
+      "tags": ["test-step", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:BreakingChangeFixupSerializer",
+      "type": "class",
+      "name": "BreakingChangeFixupSerializer",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "lineRange": [35, 128],
+      "summary": "实现 ITapSerializerPlugin 接口，在反序列化时检测旧类型并替换为新类型，将 DelayMs 属性值除以 1000 转换为秒。",
+      "tags": ["serializer", "compatibility", "xml", "migration", "advanced", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:iterateAndReplaceTypesInXml",
+      "type": "function",
+      "name": "iterateAndReplaceTypesInXml",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "lineRange": [50, 76],
+      "summary": "递归遍历 XML 节点树，替换旧类型名为新类型名，并移除失效的 DelayMs 元素。",
+      "tags": ["xml", "serialization", "migration", "recursive", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "lineRange": [78, 99],
+      "summary": "反序列化入口：检测是否为目标类型，执行 XML 类型替换和属性值转换（ms 到 s），然后委托给标准反序列化器。",
+      "tags": ["deserialization", "compatibility", "migration", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "lineRange": [102, 102],
+      "summary": "序列化方法（未实现自定义逻辑，返回 false 走默认路径）。",
+      "tags": ["serialization", "passthrough", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:printExistingSerializerPlugins",
+      "type": "function",
+      "name": "printExistingSerializerPlugins",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "lineRange": [111, 127],
+      "summary": "通过 TypeData 枚举所有已注册的 ITapSerializerPlugin 实例并打印日志。",
+      "tags": ["serializer", "plugin-discovery", "debug", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "type": "file",
+      "name": "ComplexSettingsExample1.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "summary": "复杂设置示例第一部分，演示自定义 VirtualList（实现 IList 的非泛型包装集合）和 NotifyList（支持变更通知的增强列表），以及动态属性可用值设定。",
+      "tags": ["advanced", "collections", "notify-list", "virtual-list", "settings", "example"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:ComplexSettingsElement1",
+      "type": "class",
+      "name": "ComplexSettingsElement1",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "lineRange": [30, 71],
+      "summary": "复杂设置元素类，包含可用整数列表、A/B 属性，以及 Dut 引用，实现 INotifyPropertyChanged。",
+      "tags": ["settings", "data-model", "property-changed", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:ComplexSettingsExample1",
+      "type": "class",
+      "name": "ComplexSettingsExample1",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "lineRange": [73, 104],
+      "summary": "复杂设置容器类，管理元素列表并监听元素的变更事件。",
+      "tags": ["settings", "container", "event-handler", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:VirtualList",
+      "type": "class",
+      "name": "VirtualList",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "lineRange": [107, 154],
+      "summary": "实现 IList 和 IList<T> 接口的通用列表包装类，将操作委托给内部 elements 列表。",
+      "tags": ["collections", "wrapper", "adapter", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:NotifyList",
+      "type": "class",
+      "name": "NotifyList",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "lineRange": [157, 230],
+      "summary": "继承 VirtualList 的增强列表，在插入/删除/清除操作时触发 NotifyChanged 和 ElementChanged 事件。",
+      "tags": ["collections", "notify-list", "event-driven", "observer", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:NotifyList",
+      "type": "function",
+      "name": "NotifyList (constructor)",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "lineRange": [159, 163],
+      "summary": "构造函数，接受初始元素集合并添加到 VirtualList。",
+      "tags": ["constructor", "collections", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:Insert",
+      "type": "function",
+      "name": "Insert (NotifyList)",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "lineRange": [181, 187],
+      "summary": "插入元素到指定位置，注册 PropertyChanged 监听并触发变更通知。",
+      "tags": ["collections", "insert", "notification", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:Clear",
+      "type": "function",
+      "name": "Clear (NotifyList)",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "lineRange": [210, 219],
+      "summary": "清除所有元素，移除所有 PropertyChanged 监听并触发变更通知。",
+      "tags": ["collections", "clear", "notification", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:RemoveAt",
+      "type": "function",
+      "name": "RemoveAt (NotifyList)",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "lineRange": [221, 229],
+      "summary": "移除指定索引的元素，移除对应的 PropertyChanged 监听并触发变更通知。",
+      "tags": ["collections", "remove", "notification", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "type": "file",
+      "name": "ComplexSettingsExample2.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "summary": "复杂设置示例第二部分，演示 IAnnotator 注解系统和 IListValueAnnotation 如何动态为列表元素提供可用的属性值选择。",
+      "tags": ["advanced", "annotation", "settings", "list-value", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:ComplexSettingsElement2",
+      "type": "class",
+      "name": "ComplexSettingsElement2",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "lineRange": [24, 28],
+      "summary": "简单设置元素类，仅包含 A 和 B 两个整数属性。",
+      "tags": ["settings", "data-model", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:ComplexSettingsExample2",
+      "type": "class",
+      "name": "ComplexSettingsExample2",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "lineRange": [30, 47],
+      "summary": "设置容器类，提供 ListOfElements 列表和对应的写入回调方法 OnElementWrite/OnListWrite。",
+      "tags": ["settings", "container", "callback", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:ComplexSettingsAnnotator",
+      "type": "class",
+      "name": "ComplexSettingsAnnotator",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "lineRange": [49, 117],
+      "summary": "实现 IAnnotator 接口，为 ComplexSettingsExample2 的列表成员动态添加 IListValueChanged 和 AvailableIntsAnnotation 注解。",
+      "tags": ["annotator", "annotation", "settings", "dynamic", "advanced", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:OnElementWrite",
+      "type": "function",
+      "name": "OnElementWrite",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "lineRange": [38, 41],
+      "summary": "元素被写入列表时的回调，输出调试日志。",
+      "tags": ["callback", "debug", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:OnListWrite",
+      "type": "function",
+      "name": "OnListWrite",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "lineRange": [43, 46],
+      "summary": "整个列表被写入时的回调，输出调试日志。",
+      "tags": ["callback", "debug", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:Annotate",
+      "type": "function",
+      "name": "Annotate",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "lineRange": [92, 114],
+      "summary": "注解方法：为列表成员添加 ListValueChanged 注解，并为列表元素类型委托添加 AvailableIntsAnnotation。",
+      "tags": ["annotation", "dynamic", "advanced", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "type": "file",
+      "name": "MenuModelExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "summary": "菜单模型高级示例，演示如何通过 IMenuModelFactory 为带有 DefaultValueAttribute 的属性创建右键菜单模型，实现恢复默认值功能。",
+      "tags": ["advanced", "menu-model", "gui", "default-value", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:MenuModelExampleFactory",
+      "type": "class",
+      "name": "MenuModelExampleFactory",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "lineRange": [29, 41],
+      "summary": "IMenuModelFactory 实现，当成员具有 DefaultValueAttribute 时创建 MenuModelExample 菜单模型。",
+      "tags": ["menu-model", "factory", "gui", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:MenuModelExample",
+      "type": "class",
+      "name": "MenuModelExample",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "lineRange": [47, 95],
+      "summary": "实现 ICustomMenuModel 的菜单模型，提供 RevertToDefault 方法将属性恢复为默认值，包含执行条件判断。",
+      "tags": ["menu-model", "gui", "default-value", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:CreateModel",
+      "type": "function",
+      "name": "CreateModel",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "lineRange": [31, 40],
+      "summary": "工厂方法，检查成员是否具有 DefaultValueAttribute，有则创建 MenuModelExample 实例。",
+      "tags": ["factory", "menu-model", "attribute-check", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:MenuModelExample",
+      "type": "function",
+      "name": "MenuModelExample",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "lineRange": [52, 55],
+      "summary": "构造函数，初始化 member 引用。",
+      "tags": ["constructor", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:RevertToDefault",
+      "type": "function",
+      "name": "RevertToDefault",
+      "filePath": "sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "lineRange": [75, 94],
+      "summary": "将属性恢复为默认值：通过 GetAttribute<DefaultValueAttribute> 读取默认值并调用 SetValue 设置。",
+      "tags": ["default-value", "revert", "menu-action", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "type": "file",
+      "name": "ButtonCreation.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "summary": "按钮创建示例，演示如何使用 ITestStep 的 ButtonSetting 在测试步骤设置面板中添加按钮，点击按钮执行自定义操作。",
+      "tags": ["gui", "button", "test-step", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs:ButtonSetting",
+      "type": "class",
+      "name": "ButtonSetting",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "lineRange": [20, 39],
+      "summary": "测试步骤类，包含一个 ButtonExample 方法（显示为设置面板中的按钮）和 Run 方法。",
+      "tags": ["test-step", "button", "gui", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs:ButtonExample",
+      "type": "function",
+      "name": "ButtonExample",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "lineRange": [26, 33],
+      "summary": "标记为 [ButtonSetting] 的方法，在 GUI 中显示为按钮，点击时输出日志。",
+      "tags": ["button", "gui", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "lineRange": [35, 38],
+      "summary": "测试步骤 Run 方法，直接升级判定为通过。",
+      "tags": ["test-step", "example"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/Properties/launchSettings.json",
+      "target": "file:sdk/Examples/PluginDevelopment.Gui/GUI/CustomControlProvider.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment.Gui/PluginDevelopment.Gui.csproj",
+      "target": "file:sdk/Examples/PluginDevelopment.Gui/Properties/AssemblyInfo.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDTypeDataProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDTypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDMemberData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:GetTypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:PrintTypeDataProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:FromInnerType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:GetMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:GetMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:CreateInstance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDMemberData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:SetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:GetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDTypeDataProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDTypeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDMemberData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:InstrumentIDTestStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/AttachedPropertyExample.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:OldDelayStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:NewDelayStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:BreakingChangeFixupSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:iterateAndReplaceTypesInXml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:Serialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:printExistingSerializerPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:BreakingChangeFixupSerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/BreakSerializerExample.cs:Deserialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:ComplexSettingsElement1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:ComplexSettingsExample1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:VirtualList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:NotifyList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:NotifyList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:Insert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:Clear",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:RemoveAt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:ComplexSettingsExample1",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample1.cs:NotifyList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:ComplexSettingsElement2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:ComplexSettingsExample2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:ComplexSettingsAnnotator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:OnElementWrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:OnListWrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:Annotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:ComplexSettingsExample2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:ComplexSettingsAnnotator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/ComplexSettingsExample2.cs:Annotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:MenuModelExampleFactory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:MenuModelExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:CreateModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:MenuModelExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:RevertToDefault",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:MenuModelExampleFactory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:MenuModelExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/Advanced Examples/MenuModelExample.cs:RevertToDefault",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs:ButtonSetting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs:ButtonExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/GUI/ButtonCreation.cs:ButtonSetting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

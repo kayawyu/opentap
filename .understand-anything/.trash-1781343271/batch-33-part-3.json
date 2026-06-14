@@ -1,0 +1,2338 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/TestStepList.cs",
+      "type": "file",
+      "name": "TestStepList.cs",
+      "filePath": "Engine/TestStepList.cs",
+      "summary": "测试步骤集合类，实现 ObservableCollection 语义的步骤列表管理，支持嵌套规则校验（AllowChild/AllowAsChildIn）、插入/删除/移动和 ID 查找。",
+      "tags": [
+        "collection",
+        "test-step",
+        "nesting",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/TestStepRun.cs",
+      "type": "file",
+      "name": "TestStepRun.cs",
+      "filePath": "Engine/TestStepRun.cs",
+      "summary": "测试步骤运行实例，封装步骤执行的完整生命周期：参数绑定、异步等待、子步骤启动、断点判定、延迟执行和 Artifact 发布。",
+      "tags": [
+        "step-run",
+        "execution",
+        "async",
+        "break-condition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/ThreadManager.cs",
+      "type": "file",
+      "name": "ThreadManager.cs",
+      "filePath": "Engine/ThreadManager.cs",
+      "summary": "线程管理与上下文传播基础设施，提供 TapThread（层次化线程）、ThreadManager（工作线程池）、ThreadField（线程局部存储）和 ThreadHierarchyLocal。",
+      "tags": [
+        "threading",
+        "context-propagation",
+        "thread-pool",
+        "tls"
+      ],
+      "complexity": "complex",
+      "languageNotes": "实现了类似 AsyncLocal 的层次化线程上下文传播机制，支持线程池和工作队列。"
+    },
+    {
+      "id": "file:Engine/TimeSpan/FormatVerbosities.cs",
+      "type": "file",
+      "name": "FormatVerbosities.cs",
+      "filePath": "Engine/TimeSpan/FormatVerbosities.cs",
+      "summary": "时间跨度格式化属性定义，通过 TimeSpanFormatAttribute 标注控制时间显示详细程度（Verbosity）、负值支持和零值允许等格式选项。",
+      "tags": [
+        "attribute",
+        "formatting",
+        "time-span",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/TimeSpan/NumberUnitSplitter.cs",
+      "type": "file",
+      "name": "NumberUnitSplitter.cs",
+      "filePath": "Engine/TimeSpan/NumberUnitSplitter.cs",
+      "summary": "数值与单位分离器，从时间字符串中提取数字部分和单位部分，支持多种数字解析风格和区域性格式。",
+      "tags": [
+        "parsing",
+        "time-span",
+        "utility",
+        "number-format"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/TestStepList.cs:AllowAnyChildAttribute",
+      "type": "class",
+      "name": "AllowAnyChildAttribute",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        16,
+        20
+      ],
+      "summary": "AllowAnyChildAttribute 允许任意子步骤属性，标记父步骤类型可接受任何类型的子步骤。",
+      "tags": [
+        "attribute",
+        "nesting",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TestStepList.cs:AllowAsChildInAttribute",
+      "type": "class",
+      "name": "AllowAsChildInAttribute",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        26,
+        43
+      ],
+      "summary": "AllowAsChildInAttribute 子步骤允许属性，指定当前步骤类型可作为哪些父步骤的子步骤。",
+      "tags": [
+        "attribute",
+        "nesting",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TestStepList.cs:AllowChildrenOfTypeAttribute",
+      "type": "class",
+      "name": "AllowChildrenOfTypeAttribute",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        48,
+        63
+      ],
+      "summary": "AllowChildrenOfTypeAttribute 子类型限制属性，指定当前步骤只允许特定接口类型的子步骤。",
+      "tags": [
+        "attribute",
+        "nesting",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TestStepList.cs:TestStepList",
+      "type": "class",
+      "name": "TestStepList",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        70,
+        564
+      ],
+      "summary": "TestStepList 步骤集合类，提供基于 GUID 的步骤管理、嵌套规则校验、批量删除和递归步骤搜索。",
+      "tags": [
+        "collection",
+        "test-step",
+        "nesting",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:AllowAsChildInAttribute",
+      "type": "function",
+      "name": "AllowAsChildInAttribute",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        38,
+        41
+      ],
+      "summary": "方法 AllowAsChildInAttribute，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:AllowChildrenOfTypeAttribute",
+      "type": "function",
+      "name": "AllowChildrenOfTypeAttribute",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        59,
+        62
+      ],
+      "summary": "方法 AllowChildrenOfTypeAttribute，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:ClearItems",
+      "type": "function",
+      "name": "ClearItems",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        114,
+        124
+      ],
+      "summary": "ClearItems 清空步骤列表中的所有项并重建 ID 查找表。",
+      "tags": [
+        "collection",
+        "clear",
+        "test-step-list"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:TestStepList",
+      "type": "function",
+      "name": "TestStepList",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        127,
+        130
+      ],
+      "summary": "方法 TestStepList，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:rebuildIdLookup",
+      "type": "function",
+      "name": "rebuildIdLookup",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        132,
+        143
+      ],
+      "summary": "方法 rebuildIdLookup，12 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:TestStepList_ChildStepsChanged",
+      "type": "function",
+      "name": "TestStepList_ChildStepsChanged",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        146,
+        178
+      ],
+      "summary": "TestStepList_ChildStepsChanged 子步骤变更事件处理，监听嵌套步骤列表的增删改并传播事件。",
+      "tags": [
+        "event-handler",
+        "collection",
+        "child-steps"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:AllowChild:183",
+      "type": "function",
+      "name": "AllowChild (line 183)",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        183,
+        190
+      ],
+      "summary": "AllowChild 检查某个父步骤类型是否允许特定类型的子步骤插入。",
+      "tags": [
+        "validation",
+        "nesting",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:AllowChild:195",
+      "type": "function",
+      "name": "AllowChild (line 195)",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        195,
+        233
+      ],
+      "summary": "AllowChild 检查某个父步骤类型是否允许特定类型的子步骤插入。",
+      "tags": [
+        "validation",
+        "nesting",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:findStepWithGuid",
+      "type": "function",
+      "name": "findStepWithGuid",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        235,
+        250
+      ],
+      "summary": "findStepWithGuid 在步骤树中按 GUID 查找目标步骤。",
+      "tags": [
+        "lookup",
+        "search",
+        "guid"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:InsertItem",
+      "type": "function",
+      "name": "InsertItem",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        258,
+        297
+      ],
+      "summary": "InsertItem 在指定索引位置插入测试步骤，执行嵌套规则校验并更新 ID 查找。",
+      "tags": [
+        "collection",
+        "insert",
+        "validation",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:SetItem",
+      "type": "function",
+      "name": "SetItem",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        306,
+        328
+      ],
+      "summary": "SetItem 替换指定索引位置的测试步骤。",
+      "tags": [
+        "collection",
+        "replace",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:CanInsertType",
+      "type": "function",
+      "name": "CanInsertType",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        346,
+        358
+      ],
+      "summary": "CanInsertType 检查给定步骤类型是否可被插入到当前列表中。",
+      "tags": [
+        "validation",
+        "insert",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:onContentChanged",
+      "type": "function",
+      "name": "onContentChanged",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        406,
+        417
+      ],
+      "summary": "方法 onContentChanged，12 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:RemoveItems",
+      "type": "function",
+      "name": "RemoveItems",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        450,
+        502
+      ],
+      "summary": "RemoveItems 批量移除指定测试步骤及其子步骤树。",
+      "tags": [
+        "collection",
+        "remove",
+        "batch",
+        "test-step"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:RecursivelyGetAllTestSteps",
+      "type": "function",
+      "name": "RecursivelyGetAllTestSteps",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        510,
+        513
+      ],
+      "summary": "RecursivelyGetAllTestSteps 递归获取所有测试步骤（扁平化树结构）。",
+      "tags": [
+        "recursion",
+        "flatten",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:GetSteps",
+      "type": "function",
+      "name": "GetSteps",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        520,
+        524
+      ],
+      "summary": "方法 GetSteps，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepList.cs:GetStep",
+      "type": "function",
+      "name": "GetStep",
+      "filePath": "Engine/TestStepList.cs",
+      "lineRange": [
+        531,
+        557
+      ],
+      "summary": "GetStep 通过 GUID ID 递归查找测试步骤。",
+      "tags": [
+        "lookup",
+        "search",
+        "test-step"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/TestStepRun.cs:TestRun",
+      "type": "class",
+      "name": "TestRun",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        21,
+        151
+      ],
+      "summary": "TestRun 结果数据类，存储单次运行的判定（Verdict）、耗时、异常和参数信息。",
+      "tags": [
+        "result",
+        "verdict",
+        "data-model",
+        "duration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/TestStepRun.cs:TestStepRun",
+      "type": "class",
+      "name": "TestStepRun",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        158,
+        578
+      ],
+      "summary": "TestStepRun 步骤运行实例类，封装单个测试步骤的完整执行：参数绑定、异步等待、断点判定、子步骤启动和延迟执行。",
+      "tags": [
+        "step-run",
+        "execution",
+        "async",
+        "break-condition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/TestStepRun.cs:TestStepBreakException",
+      "type": "class",
+      "name": "TestStepBreakException",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        580,
+        595
+      ],
+      "summary": "TestStepBreakException 断点异常类，在测试步骤命中断点时抛出，携带步骤名称和判定信息。",
+      "tags": [
+        "exception",
+        "breakpoint",
+        "test-step",
+        "error"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:TestRun",
+      "type": "function",
+      "name": "TestRun",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        34,
+        38
+      ],
+      "summary": "方法 TestRun，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:UpgradeVerdict",
+      "type": "function",
+      "name": "UpgradeVerdict",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        126,
+        138
+      ],
+      "summary": "UpgradeVerdict 版本计算或判定升级逻辑。",
+      "tags": [
+        "version",
+        "verdict",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:WaitForCompletion:216",
+      "type": "function",
+      "name": "WaitForCompletion (line 216)",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        216,
+        219
+      ],
+      "summary": "WaitForCompletion WaitForCompletion (line 216) 等待步骤运行完成，支持取消令牌，4 行。",
+      "tags": [
+        "synchronization",
+        "wait",
+        "step-run",
+        "async"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:WaitForCompletion:222",
+      "type": "function",
+      "name": "WaitForCompletion (line 222)",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        222,
+        239
+      ],
+      "summary": "WaitForCompletion WaitForCompletion (line 222) 等待步骤运行完成，支持取消令牌，18 行。",
+      "tags": [
+        "synchronization",
+        "wait",
+        "step-run",
+        "async"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:CompleteStepRun",
+      "type": "function",
+      "name": "CompleteStepRun",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        258,
+        270
+      ],
+      "summary": "CompleteStepRun 完成步骤运行，设置完成信号并记录运行耗时。",
+      "tags": [
+        "completion",
+        "step-run",
+        "lifecycle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:TestStepRun:281",
+      "type": "function",
+      "name": "TestStepRun (line 281)",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        281,
+        292
+      ],
+      "summary": "方法 TestStepRun (line 281)，12 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:TestStepRun:305",
+      "type": "function",
+      "name": "TestStepRun (line 305)",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        305,
+        309
+      ],
+      "summary": "方法 TestStepRun (line 305)，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:TestStepRun:311",
+      "type": "function",
+      "name": "TestStepRun (line 311)",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        311,
+        317
+      ],
+      "summary": "方法 TestStepRun (line 311)，7 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:BreakConditionsSatisfied",
+      "type": "function",
+      "name": "BreakConditionsSatisfied",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        339,
+        351
+      ],
+      "summary": "BreakConditionsSatisfied 检查步骤的断点条件是否满足。",
+      "tags": [
+        "breakpoint",
+        "condition",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:WaitForOutput",
+      "type": "function",
+      "name": "WaitForOutput",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        371,
+        392
+      ],
+      "summary": "WaitForOutput 等待步骤的输出参数就绪，支持值模式和完成模式。",
+      "tags": [
+        "synchronization",
+        "output",
+        "wait",
+        "parameter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:AfterRun",
+      "type": "function",
+      "name": "AfterRun",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        397,
+        489
+      ],
+      "summary": "AfterRun 步骤运行后处理，设置判定、存储结果源、处理延迟执行和子步骤等待。",
+      "tags": [
+        "post-execution",
+        "verdict",
+        "step-run",
+        "cleanup"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:SetResultSource",
+      "type": "function",
+      "name": "SetResultSource",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        493,
+        493
+      ],
+      "summary": "方法 SetResultSource，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:WaitForChildStepStart",
+      "type": "function",
+      "name": "WaitForChildStepStart",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        499,
+        546
+      ],
+      "summary": "WaitForChildStepStart 等待子步骤启动，处理子步骤间的依赖关系和暂停逻辑。",
+      "tags": [
+        "synchronization",
+        "child-step",
+        "wait",
+        "dependency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:PublishArtifact:563",
+      "type": "function",
+      "name": "PublishArtifact (line 563)",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        563,
+        564
+      ],
+      "summary": "PublishArtifact (line 563) 发布运行产物，将文件或流关联到当前测试运行。",
+      "tags": [
+        "artifact",
+        "publish",
+        "test-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:PublishArtifactAsync:569",
+      "type": "function",
+      "name": "PublishArtifactAsync (line 569)",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        569,
+        570
+      ],
+      "summary": "PublishArtifactAsync (line 569) 发布运行产物，将文件或流关联到当前测试运行。",
+      "tags": [
+        "artifact",
+        "publish",
+        "test-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:PublishArtifact:574",
+      "type": "function",
+      "name": "PublishArtifact (line 574)",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        574,
+        574
+      ],
+      "summary": "PublishArtifact (line 574) 发布运行产物，将文件或流关联到当前测试运行。",
+      "tags": [
+        "artifact",
+        "publish",
+        "test-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:PublishArtifactAsync:577",
+      "type": "function",
+      "name": "PublishArtifactAsync (line 577)",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        577,
+        577
+      ],
+      "summary": "PublishArtifactAsync (line 577) 发布运行产物，将文件或流关联到当前测试运行。",
+      "tags": [
+        "artifact",
+        "publish",
+        "test-run"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TestStepRun.cs:TestStepBreakException",
+      "type": "function",
+      "name": "TestStepBreakException",
+      "filePath": "Engine/TestStepRun.cs",
+      "lineRange": [
+        587,
+        591
+      ],
+      "summary": "方法 TestStepBreakException，5 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ThreadManager.cs:ThreadField",
+      "type": "class",
+      "name": "ThreadField",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        39,
+        76
+      ],
+      "summary": "ThreadField 线程局部存储基础类，提供静态的线程字段索引分配和值的读写机制。",
+      "tags": [
+        "threading",
+        "tls",
+        "storage",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ThreadManager.cs:ThreadField",
+      "type": "class",
+      "name": "ThreadField",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        96,
+        159
+      ],
+      "summary": "ThreadField 线程局部存储基础类，提供静态的线程字段索引分配和值的读写机制。",
+      "tags": [
+        "threading",
+        "tls",
+        "storage",
+        "infrastructure"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ThreadManager.cs:TapThread",
+      "type": "class",
+      "name": "TapThread",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        164,
+        532
+      ],
+      "summary": "TapThread 层次化线程抽象，支持线程上下文传播、层次继承、AbortToken 取消和 Abort 安全中断机制。",
+      "tags": [
+        "threading",
+        "context-propagation",
+        "cancellation",
+        "hierarchy"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ThreadManager.cs:ThreadManager",
+      "type": "class",
+      "name": "ThreadManager",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        535,
+        713
+      ],
+      "summary": "ThreadManager 工作线程池管理器，提供基于信号量的工作队列调度和空闲线程计数。",
+      "tags": [
+        "threading",
+        "thread-pool",
+        "scheduling",
+        "work-queue"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ThreadManager.cs:ThreadHierarchyLocal",
+      "type": "class",
+      "name": "ThreadHierarchyLocal",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        719,
+        757
+      ],
+      "summary": "ThreadHierarchyLocal 层次化线程局部存储，值在创建线程及其所有子线程中可见，用于实现类似 AsyncLocal 的上下文传播。",
+      "tags": [
+        "threading",
+        "tls",
+        "context-propagation",
+        "hierarchy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:SetFieldValue",
+      "type": "function",
+      "name": "SetFieldValue",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        48,
+        60
+      ],
+      "summary": "方法 SetFieldValue，13 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:TryGetFieldValue",
+      "type": "function",
+      "name": "TryGetFieldValue",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        62,
+        75
+      ],
+      "summary": "方法 TryGetFieldValue，14 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:ThreadField",
+      "type": "function",
+      "name": "ThreadField",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        102,
+        102
+      ],
+      "summary": "方法 ThreadField，1 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:GetCached",
+      "type": "function",
+      "name": "GetCached",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        114,
+        120
+      ],
+      "summary": "方法 GetCached，7 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        122,
+        156
+      ],
+      "summary": "Get 获取当前线程的 ThreadField 值，若无则创建默认值。",
+      "tags": [
+        "threading",
+        "tls",
+        "getter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:WithNewContext:231",
+      "type": "function",
+      "name": "WithNewContext (line 231)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        231,
+        247
+      ],
+      "summary": "WithNewContext 创建新的 TapThread 上下文并执行指定操作。",
+      "tags": [
+        "threading",
+        "context",
+        "hierarchy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:UsingThreadContext:250",
+      "type": "function",
+      "name": "UsingThreadContext (line 250)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        250,
+        264
+      ],
+      "summary": "UsingThreadContext 使用指定父线程上下文执行操作，控制线程层次关系。",
+      "tags": [
+        "threading",
+        "context",
+        "hierarchy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:WithNewContext:271",
+      "type": "function",
+      "name": "WithNewContext (line 271)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        271,
+        274
+      ],
+      "summary": "WithNewContext 创建新的 TapThread 上下文并执行指定操作。",
+      "tags": [
+        "threading",
+        "context",
+        "hierarchy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:TapThread",
+      "type": "function",
+      "name": "TapThread",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        299,
+        309
+      ],
+      "summary": "方法 TapThread，11 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Abort:321",
+      "type": "function",
+      "name": "Abort (line 321)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        321,
+        324
+      ],
+      "summary": "Abort Abort (line 321) 中止线程执行，设置 AbortToken 并触发取消，4 行。",
+      "tags": [
+        "threading",
+        "abort",
+        "cancellation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:AbortAfter",
+      "type": "function",
+      "name": "AbortAfter",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        328,
+        331
+      ],
+      "summary": "方法 AbortAfter，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Abort:343",
+      "type": "function",
+      "name": "Abort (line 343)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        343,
+        362
+      ],
+      "summary": "Abort Abort (line 343) 中止线程执行，设置 AbortToken 并触发取消，20 行。",
+      "tags": [
+        "threading",
+        "abort",
+        "cancellation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Start:367",
+      "type": "function",
+      "name": "Start (line 367)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        367,
+        370
+      ],
+      "summary": "Start Start (line 367) 启动运行或线程，4 行。",
+      "tags": [
+        "start",
+        "lifecycle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Start:376",
+      "type": "function",
+      "name": "Start (line 376)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        376,
+        379
+      ],
+      "summary": "Start Start (line 376) 启动运行或线程，4 行。",
+      "tags": [
+        "start",
+        "lifecycle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:StartAwaitable:386",
+      "type": "function",
+      "name": "StartAwaitable (line 386)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        386,
+        411
+      ],
+      "summary": "StartAwaitable StartAwaitable (line 386) 启动可等待线程执行，26 行。",
+      "tags": [
+        "threading",
+        "start",
+        "awaitable"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Start:420",
+      "type": "function",
+      "name": "Start (line 420)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        420,
+        428
+      ],
+      "summary": "Start Start (line 420) 启动运行或线程，9 行。",
+      "tags": [
+        "start",
+        "lifecycle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Sleep:435",
+      "type": "function",
+      "name": "Sleep (line 435)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        435,
+        438
+      ],
+      "summary": "Sleep Sleep (line 435) 可中断的休眠方法，在休眠期间检查 AbortToken，4 行。",
+      "tags": [
+        "threading",
+        "sleep",
+        "cancellation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:ThrowIfAborted",
+      "type": "function",
+      "name": "ThrowIfAborted",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        441,
+        444
+      ],
+      "summary": "方法 ThrowIfAborted，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Sleep:449",
+      "type": "function",
+      "name": "Sleep (line 449)",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        449,
+        479
+      ],
+      "summary": "Sleep Sleep (line 449) 可中断的休眠方法，在休眠期间检查 AbortToken，31 行。",
+      "tags": [
+        "threading",
+        "sleep",
+        "cancellation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Process",
+      "type": "function",
+      "name": "Process",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        485,
+        502
+      ],
+      "summary": "Process 线程处理循环，执行线程操作并通过 AbortToken 检查取消状态。",
+      "tags": [
+        "threading",
+        "process",
+        "loop"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:decrementThreadHierarchyCount",
+      "type": "function",
+      "name": "decrementThreadHierarchyCount",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        510,
+        524
+      ],
+      "summary": "decrementThreadHierarchyCount 维护线程层次引用计数。",
+      "tags": [
+        "threading",
+        "hierarchy",
+        "reference-count"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        528,
+        531
+      ],
+      "summary": "方法 ToString，4 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Enqueue",
+      "type": "function",
+      "name": "Enqueue",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        565,
+        571
+      ],
+      "summary": "Enqueue 将工作项加入队列并通知工作线程处理。",
+      "tags": [
+        "threading",
+        "enqueue",
+        "work-queue"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:threadManagerWork",
+      "type": "function",
+      "name": "threadManagerWork",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        582,
+        618
+      ],
+      "summary": "threadManagerWork 工作线程的主循环，从队列中取出工作项并执行。",
+      "tags": [
+        "threading",
+        "work-queue",
+        "worker"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:processQueue",
+      "type": "function",
+      "name": "processQueue",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        634,
+        698
+      ],
+      "summary": "processQueue 处理工作队列，调度工作项到空闲工作线程。",
+      "tags": [
+        "threading",
+        "queue",
+        "scheduling"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:Dispose",
+      "type": "function",
+      "name": "Dispose",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        707,
+        712
+      ],
+      "summary": "Dispose 释放资源，取消工作线程并清理线程池。",
+      "tags": [
+        "dispose",
+        "cleanup",
+        "threading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ThreadManager.cs:ClearLocal",
+      "type": "function",
+      "name": "ClearLocal",
+      "filePath": "Engine/ThreadManager.cs",
+      "lineRange": [
+        751,
+        756
+      ],
+      "summary": "ClearLocal 清除当前线程层次的局部存储值。",
+      "tags": [
+        "threading",
+        "tls",
+        "cleanup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TimeSpan/FormatVerbosities.cs:TimeSpanFormatAttribute",
+      "type": "class",
+      "name": "TimeSpanFormatAttribute",
+      "filePath": "Engine/TimeSpan/FormatVerbosities.cs",
+      "lineRange": [
+        33,
+        68
+      ],
+      "summary": "TimeSpanFormatAttribute 自定义属性，为属性标注时间跨度的格式化选项（Verbosity、负值支持、零值允许）。",
+      "tags": [
+        "attribute",
+        "time-span",
+        "formatting",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TimeSpan/FormatVerbosities.cs:TimeSpanFormatAttribute",
+      "type": "function",
+      "name": "TimeSpanFormatAttribute",
+      "filePath": "Engine/TimeSpan/FormatVerbosities.cs",
+      "lineRange": [
+        62,
+        67
+      ],
+      "summary": "方法 TimeSpanFormatAttribute，6 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TimeSpan/NumberUnitSplitter.cs:NumberUnitSplitter",
+      "type": "class",
+      "name": "NumberUnitSplitter",
+      "filePath": "Engine/TimeSpan/NumberUnitSplitter.cs",
+      "lineRange": [
+        24,
+        162
+      ],
+      "summary": "NumberUnitSplitter 数值单位分离工具，从字符串中分离数字和单位部分，支持多种 NumberStyles。",
+      "tags": [
+        "utility",
+        "parsing",
+        "time-span",
+        "number-format"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TimeSpan/NumberUnitSplitter.cs:Split",
+      "type": "function",
+      "name": "Split",
+      "filePath": "Engine/TimeSpan/NumberUnitSplitter.cs",
+      "lineRange": [
+        41,
+        91
+      ],
+      "summary": "Split 将时间字符串分割为数字和单位部分。",
+      "tags": [
+        "parsing",
+        "split",
+        "utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TimeSpan/NumberUnitSplitter.cs:GetLeadingDigits",
+      "type": "function",
+      "name": "GetLeadingDigits",
+      "filePath": "Engine/TimeSpan/NumberUnitSplitter.cs",
+      "lineRange": [
+        106,
+        161
+      ],
+      "summary": "GetLeadingDigits 从字符串开头提取数字部分，支持多种 NumberStyles。",
+      "tags": [
+        "parsing",
+        "number",
+        "utility"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "class:Engine/TestStepList.cs:AllowAnyChildAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "class:Engine/TestStepList.cs:AllowAnyChildAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "class:Engine/TestStepList.cs:AllowAsChildInAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "class:Engine/TestStepList.cs:AllowAsChildInAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "class:Engine/TestStepList.cs:AllowChildrenOfTypeAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "class:Engine/TestStepList.cs:AllowChildrenOfTypeAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "class:Engine/TestStepList.cs:TestStepList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "class:Engine/TestStepList.cs:TestStepList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:AllowAsChildInAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:AllowAsChildInAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:AllowChildrenOfTypeAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:AllowChildrenOfTypeAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:ClearItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:TestStepList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:TestStepList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:rebuildIdLookup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:TestStepList_ChildStepsChanged",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:AllowChild:183",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:AllowChild:183",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:AllowChild:195",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:AllowChild:195",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:findStepWithGuid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:InsertItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:SetItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:CanInsertType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:CanInsertType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:onContentChanged",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:RemoveItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:RemoveItems",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:RecursivelyGetAllTestSteps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:RecursivelyGetAllTestSteps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:GetSteps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:GetSteps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:GetStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepList.cs",
+      "target": "function:Engine/TestStepList.cs:GetStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "class:Engine/TestStepRun.cs:TestRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "class:Engine/TestStepRun.cs:TestRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "class:Engine/TestStepRun.cs:TestStepRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "class:Engine/TestStepRun.cs:TestStepRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "class:Engine/TestStepRun.cs:TestStepBreakException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "class:Engine/TestStepRun.cs:TestStepBreakException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:TestRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:TestRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:UpgradeVerdict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:UpgradeVerdict",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:WaitForCompletion:216",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:WaitForCompletion:216",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:WaitForCompletion:222",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:WaitForCompletion:222",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:CompleteStepRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:TestStepRun:281",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:TestStepRun:281",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:TestStepRun:305",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:TestStepRun:305",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:TestStepRun:311",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:TestStepRun:311",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:BreakConditionsSatisfied",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:BreakConditionsSatisfied",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:WaitForOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:AfterRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:SetResultSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:SetResultSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:WaitForChildStepStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:PublishArtifact:563",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:PublishArtifact:563",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:PublishArtifactAsync:569",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:PublishArtifactAsync:569",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:PublishArtifact:574",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:PublishArtifact:574",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:PublishArtifactAsync:577",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:PublishArtifactAsync:577",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:TestStepBreakException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestStepRun.cs",
+      "target": "function:Engine/TestStepRun.cs:TestStepBreakException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "class:Engine/ThreadManager.cs:ThreadField",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "class:Engine/ThreadManager.cs:ThreadField",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "class:Engine/ThreadManager.cs:ThreadField",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "class:Engine/ThreadManager.cs:ThreadField",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "class:Engine/ThreadManager.cs:TapThread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "class:Engine/ThreadManager.cs:TapThread",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "class:Engine/ThreadManager.cs:ThreadManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "class:Engine/ThreadManager.cs:ThreadHierarchyLocal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:SetFieldValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:TryGetFieldValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:ThreadField",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:ThreadField",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:GetCached",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:GetCached",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:WithNewContext:231",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:WithNewContext:231",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:UsingThreadContext:250",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:WithNewContext:271",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:WithNewContext:271",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:TapThread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:TapThread",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Abort:321",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Abort:321",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:AbortAfter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:AbortAfter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Abort:343",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Abort:343",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Start:367",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Start:367",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Start:376",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Start:376",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:StartAwaitable:386",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Start:420",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Start:420",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Sleep:435",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Sleep:435",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:ThrowIfAborted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:ThrowIfAborted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Sleep:449",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Sleep:449",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Process",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:decrementThreadHierarchyCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Enqueue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Enqueue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:threadManagerWork",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:processQueue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Dispose",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:Dispose",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:ClearLocal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ThreadManager.cs",
+      "target": "function:Engine/ThreadManager.cs:ClearLocal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TimeSpan/FormatVerbosities.cs",
+      "target": "class:Engine/TimeSpan/FormatVerbosities.cs:TimeSpanFormatAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpan/FormatVerbosities.cs",
+      "target": "class:Engine/TimeSpan/FormatVerbosities.cs:TimeSpanFormatAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TimeSpan/FormatVerbosities.cs",
+      "target": "function:Engine/TimeSpan/FormatVerbosities.cs:TimeSpanFormatAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpan/FormatVerbosities.cs",
+      "target": "function:Engine/TimeSpan/FormatVerbosities.cs:TimeSpanFormatAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TimeSpan/NumberUnitSplitter.cs",
+      "target": "class:Engine/TimeSpan/NumberUnitSplitter.cs:NumberUnitSplitter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpan/NumberUnitSplitter.cs",
+      "target": "class:Engine/TimeSpan/NumberUnitSplitter.cs:NumberUnitSplitter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TimeSpan/NumberUnitSplitter.cs",
+      "target": "function:Engine/TimeSpan/NumberUnitSplitter.cs:Split",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpan/NumberUnitSplitter.cs",
+      "target": "function:Engine/TimeSpan/NumberUnitSplitter.cs:Split",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TimeSpan/NumberUnitSplitter.cs",
+      "target": "function:Engine/TimeSpan/NumberUnitSplitter.cs:GetLeadingDigits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

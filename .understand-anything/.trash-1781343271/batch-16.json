@@ -1,0 +1,430 @@
+{
+  "nodes": [
+    {
+      "id": "config:.claude/settings.local.json",
+      "type": "config",
+      "name": "settings.local.json",
+      "filePath": ".claude/settings.local.json",
+      "summary": "Claude Code 本地权限配置文件，定义允许执行的 Bash 命令白名单，用于 understand-anything 分析流程的安全控制。",
+      "tags": ["configuration", "安全", "claude-code", "权限控制"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.gitattributes",
+      "type": "config",
+      "name": ".gitattributes",
+      "filePath": ".gitattributes",
+      "summary": "Git 属性配置文件，设置自动行尾转换（text=auto）、Shell 脚本文本属性，并预留 C# 文件 diff 和 Visual Studio 项目文件合并驱动配置。",
+      "tags": ["configuration", "git", "行尾转换", "合并策略"],
+      "complexity": "moderate",
+      "languageNotes": "包含大量注释掉的 Visual Studio 项目文件（.csproj、.sln 等）合并驱动配置，以及图片文件二进制标记和文档格式 diff 转换规则。"
+    },
+    {
+      "id": "document:.github/ISSUE_TEMPLATE/bug_report.md",
+      "type": "document",
+      "name": "bug_report.md",
+      "filePath": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "summary": "GitHub Issue Bug 报告模板，引导用户填写操作系统、OpenTAP 版本、复现步骤、实际行为和期望行为等结构化信息，标签预设为 bug。",
+      "tags": ["documentation", "issue-template", "bug-report", "github"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.gitversion",
+      "type": "config",
+      "name": ".gitversion",
+      "filePath": ".gitversion",
+      "summary": "OpenTAP 版本号配置文件，定义当前版本号为 9.33.1，配置 beta 分支匹配规则（^main$）和 Git 提交计数的预发布版本计算参数。",
+      "tags": ["configuration", "版本管理", "gitversion", "beta-branch"],
+      "complexity": "simple",
+      "languageNotes": "供 tap sdk gitversion 命令和 package.xml 中的 $(gitversion) 宏使用，beta/release 分支通过正则表达式匹配。"
+    },
+    {
+      "id": "config:BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "type": "config",
+      "name": "Tap.Plugins.BasicSteps.csproj",
+      "filePath": "BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "summary": "BasicSteps 插件的 MSBuild 项目文件，引用 Engine 项目和 ObjectCloner.cs 等 9 个 Shared 共享文件（以 Link 方式包含），依赖 Roslyn 代码分析器和多个系统包。",
+      "tags": ["configuration", "msbuild", "csproj", "basicsteps"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Cli/Tap.Cli.csproj",
+      "type": "config",
+      "name": "Tap.Cli.csproj",
+      "filePath": "Cli/Tap.Cli.csproj",
+      "summary": "OpenTAP CLI 命令行接口库的 MSBuild 项目文件，输出类型为 Library，引用 Engine 项目及 AnsiColorCodeFix、AssemblyInfo 等 4 个 Shared 共享文件。",
+      "tags": ["configuration", "msbuild", "csproj", "cli", "library"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Cli/app.config",
+      "type": "config",
+      "name": "app.config",
+      "filePath": "Cli/app.config",
+      "summary": ".NET Framework 应用配置文件，指定启动时支持的运行时版本为 .NET Framework 4.5.2（sku=.NETFramework,Version=v4.5.2）。",
+      "tags": ["configuration", "dotnet-framework", "运行时配置"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Directory.Build.props",
+      "type": "config",
+      "name": "Directory.Build.props",
+      "filePath": "Directory.Build.props",
+      "summary": "仓库级 MSBuild 属性文件，统一设置所有项目的 C# 语言版本（LangVersion=13）、默认目标框架（netstandard2.0）、Debug/Release 配置输出路径，并禁用程序集信息自动生成。",
+      "tags": ["configuration", "msbuild", "build-system", "monorepo"],
+      "complexity": "moderate",
+      "languageNotes": "使用 MSBuild 条件属性组（Condition）区分 Debug/Release 配置，包含 RemoveSatelliteAssemblies 构建目标以清理附属程序集引用。未使用 LangVersion 14 及以上是为了保持与 .NET Framework 的 Span 重载解析兼容性。"
+    },
+    {
+      "id": "config:Engine/Tap.Engine.csproj",
+      "type": "config",
+      "name": "Tap.Engine.csproj",
+      "filePath": "Engine/Tap.Engine.csproj",
+      "summary": "OpenTAP 核心引擎的 MSBuild 项目文件，允许不安全代码（AllowUnsafeBlocks），Release 模式下将警告视为错误并生成 XML 文档，引用 10 个 Shared 共享文件和多个 NuGet 包（含 Roslyn 代码分析器和 System.Text.Json）。",
+      "tags": ["configuration", "msbuild", "csproj", "核心引擎"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Engine/Tap.Engine.csproj.vspscc",
+      "type": "config",
+      "name": "Tap.Engine.csproj.vspscc",
+      "filePath": "Engine/Tap.Engine.csproj.vspscc",
+      "summary": "Visual Studio 源代码控制绑定文件，记录 Engine 项目的 TFS 登记选项（ENLISTMENT_CHOICE=NEVER）、排除文件数量和原始项目文件路径。",
+      "tags": ["configuration", "visual-studio", "源代码控制", "自动生成"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Engine/Tap.snk",
+      "type": "config",
+      "name": "Tap.snk",
+      "filePath": "Engine/Tap.snk",
+      "summary": ".NET 强名称密钥文件（Strong Name Key），用于对 OpenTAP 引擎程序集进行强名称签名，保证程序集唯一性和完整性。",
+      "tags": ["configuration", "签名", "强名称", "安全"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:LinuxInstall/INSTALL.sh",
+      "type": "file",
+      "name": "INSTALL.sh",
+      "filePath": "LinuxInstall/INSTALL.sh",
+      "summary": "OpenTAP Linux 自动安装脚本，检查 .NET Core 6.0 运行时是否已安装，创建 ~/.tap 安装目录和 ~/bin 快捷方式目录，解压 TapPackage 并设置可执行权限。",
+      "tags": ["shell", "linux安装", "安装脚本", "交互式"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:LinuxInstall/README",
+      "type": "document",
+      "name": "README",
+      "filePath": "LinuxInstall/README",
+      "summary": "OpenTAP Linux 发行版安装说明文档，列出前置条件（Ubuntu 16.04+、.NET 6.0），提供自动安装（sh INSTALL.sh）和手动安装两种方式及使用说明。",
+      "tags": ["documentation", "linux", "安装指南", "readme"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:LinuxInstall/tap.sh",
+      "type": "file",
+      "name": "tap.sh",
+      "filePath": "LinuxInstall/tap.sh",
+      "summary": "OpenTAP Linux 启动脚本，设置 umask 为 002 确保文件组可写，包含符号链接递归解析函数 realpath，查找 tap.dll 并通过 dotnet 运行时以 exec 方式启动 OpenTAP。",
+      "tags": ["shell", "启动脚本", "入口点", "linux"],
+      "complexity": "moderate",
+      "languageNotes": "使用 exec 替换当前进程而非创建子进程启动 dotnet，自定义 realpath 函数避免依赖 macOS coreutils。"
+    },
+    {
+      "id": "function:LinuxInstall/tap.sh:realpath",
+      "type": "function",
+      "name": "realpath",
+      "filePath": "LinuxInstall/tap.sh",
+      "lineRange": [13, 32],
+      "summary": "递归解析符号链接获取真实文件路径的 Shell 函数，支持多层链接追踪，包含无限循环检测和错误提示。",
+      "tags": ["符号链接", "路径解析", "工具函数", "shell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package/Tap.Package.csproj",
+      "type": "config",
+      "name": "Tap.Package.csproj",
+      "filePath": "Package/Tap.Package.csproj",
+      "summary": "OpenTAP 包管理模块的 MSBuild 项目文件，引用 Engine 项目和 14 个 Shared 共享文件，包含 LibGit2Sharp 各平台原生二进制文件（linux/osx/win 多架构）、NuGet 客户端和 Newtonsoft.Json 等关键依赖。",
+      "tags": ["configuration", "msbuild", "csproj", "包管理", "原生库"],
+      "complexity": "moderate",
+      "languageNotes": "使用 NuGetPackageRoot 路径引用 libgit2sharp 原生二进制，EmbeddedResource 嵌入 PackageSchema.xsd，Content Include 将许可证文件复制到输出目录。"
+    },
+    {
+      "id": "file:Shared/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "Shared/AssemblyInfo.cs",
+      "summary": "共享程序集信息文件，定义 Keysight Technologies 版权信息、OpenTAP 产品名称和 MPL-2.0 许可证版本，程序集版本号由构建流水线的 stamp 阶段自动更新。",
+      "tags": ["程序集信息", "元数据", "共享文件", "版本"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Tap.Upgrader/Tap.Upgrader.csproj",
+      "type": "config",
+      "name": "Tap.Upgrader.csproj",
+      "filePath": "Tap.Upgrader/Tap.Upgrader.csproj",
+      "summary": "OpenTAP 升级工具的 MSBuild 项目文件，输出类型为 Exe，目标框架为 $(OpenTapAppTargetFramework)，包含流水线自动版本号注入（ShortVersion/GitVersion）和本地开发回退版本配置。",
+      "tags": ["configuration", "msbuild", "csproj", "升级工具"],
+      "complexity": "simple",
+      "languageNotes": "使用 MSBuild Condition 区分 CI 流水线（ShortVersion 定义时）和本地构建的版本号策略，CI 下动态注入 GitVersion。"
+    },
+    {
+      "id": "file:Tap.Upgrader/Program.cs",
+      "type": "file",
+      "name": "Program.cs",
+      "filePath": "Tap.Upgrader/Program.cs",
+      "summary": "OpenTAP 升级工具的主入口程序，在升级时将旧的 tap.exe 和 tap.dll 移至卸载子目录（使用 GUID 防止冲突），通过重试机制复制新版本文件并清理残留的卸载文件。",
+      "tags": ["入口点", "升级工具", "文件操作", "重试机制"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Tap.Upgrader/Program.cs:Program",
+      "type": "class",
+      "name": "Program",
+      "filePath": "Tap.Upgrader/Program.cs",
+      "lineRange": [7, 75],
+      "summary": "OpenTAP 升级工具的静态入口类，包含 UninstallPath/PackageDir/Installation 三个计算属性和 Main/Retry/Uninstall 三个静态方法，封装完整的升级文件替换逻辑。",
+      "tags": ["入口点", "静态类", "升级逻辑"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Tap.Upgrader/Program.cs:Main",
+      "type": "function",
+      "name": "Main",
+      "filePath": "Tap.Upgrader/Program.cs",
+      "lineRange": [47, 74],
+      "summary": "升级流程主入口方法，清理旧的卸载目录残留文件，使用 Retry 重试机制安全卸载旧的 tap.exe/tap.dll 并复制新版本文件。",
+      "tags": ["入口点", "升级流程", "文件操作"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Tap.Upgrader/Program.cs:Retry",
+      "type": "function",
+      "name": "Retry",
+      "filePath": "Tap.Upgrader/Program.cs",
+      "lineRange": [27, 45],
+      "summary": "带重试逻辑的操作封装方法，最多尝试 10 次，每次失败后休眠 10 毫秒，最终失败时将错误信息输出到标准错误流。",
+      "tags": ["重试机制", "错误处理", "工具方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Tap.Upgrader/Program.cs:Uninstall",
+      "type": "function",
+      "name": "Uninstall",
+      "filePath": "Tap.Upgrader/Program.cs",
+      "lineRange": [16, 25],
+      "summary": "将指定文件安全移至卸载子目录（.uninstall），使用 GUID 生成唯一目标文件名避免冲突，确保源和目标位于同一卷以支持 File.Move。",
+      "tags": ["文件卸载", "安全删除", "工具方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:templates/Templates.csproj",
+      "type": "config",
+      "name": "Templates.csproj",
+      "filePath": "templates/Templates.csproj",
+      "summary": "OpenTAP 插件模板的 NuGet 包项目，配置为 dotnet new 模板类型（PackageType=Template），包含 MPL-2.0 许可证，排除构建输出仅打包 src 目录下的内容文件。",
+      "tags": ["configuration", "msbuild", "csproj", "nuget-template"],
+      "complexity": "simple",
+      "languageNotes": "禁用 NU5128 和 CS2008 警告以适应无源文件编译的模板包场景，使用 ContentTargetFolders 控制包内容目录结构。"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Tap.Upgrader/Program.cs",
+      "target": "class:Tap.Upgrader/Program.cs:Program",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Tap.Upgrader/Program.cs",
+      "target": "function:Tap.Upgrader/Program.cs:Main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Tap.Upgrader/Program.cs",
+      "target": "function:Tap.Upgrader/Program.cs:Retry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Tap.Upgrader/Program.cs",
+      "target": "function:Tap.Upgrader/Program.cs:Uninstall",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:LinuxInstall/tap.sh",
+      "target": "function:LinuxInstall/tap.sh:realpath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Tap.Upgrader/Program.cs",
+      "target": "class:Tap.Upgrader/Program.cs:Program",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Tap.Upgrader/Program.cs",
+      "target": "function:Tap.Upgrader/Program.cs:Main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "target": "config:Engine/Tap.Engine.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Cli/Tap.Cli.csproj",
+      "target": "config:Engine/Tap.Engine.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Package/Tap.Package.csproj",
+      "target": "config:Engine/Tap.Engine.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "target": "file:Shared/AssemblyInfo.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Cli/Tap.Cli.csproj",
+      "target": "file:Shared/AssemblyInfo.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Engine/Tap.Engine.csproj",
+      "target": "file:Shared/AssemblyInfo.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Package/Tap.Package.csproj",
+      "target": "file:Shared/AssemblyInfo.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Directory.Build.props",
+      "target": "config:BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Directory.Build.props",
+      "target": "config:Cli/Tap.Cli.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Directory.Build.props",
+      "target": "config:Engine/Tap.Engine.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Directory.Build.props",
+      "target": "config:Package/Tap.Package.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Directory.Build.props",
+      "target": "config:Tap.Upgrader/Tap.Upgrader.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Directory.Build.props",
+      "target": "config:templates/Templates.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Cli/app.config",
+      "target": "config:Cli/Tap.Cli.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Engine/Tap.snk",
+      "target": "config:Engine/Tap.Engine.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:.gitversion",
+      "target": "config:Package/Tap.Package.csproj",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:Tap.Upgrader/Program.cs:Main",
+      "target": "function:Tap.Upgrader/Program.cs:Uninstall",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Tap.Upgrader/Program.cs:Main",
+      "target": "function:Tap.Upgrader/Program.cs:Retry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "document:LinuxInstall/README",
+      "target": "file:LinuxInstall/INSTALL.sh",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:LinuxInstall/tap.sh",
+      "target": "config:Engine/Tap.Engine.csproj",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:LinuxInstall/INSTALL.sh",
+      "target": "file:LinuxInstall/tap.sh",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

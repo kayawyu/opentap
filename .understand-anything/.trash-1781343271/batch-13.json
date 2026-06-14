@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "config:sdk/Examples/.HiddenFile.txt",
+      "type": "config",
+      "name": ".HiddenFile.txt",
+      "filePath": "sdk/Examples/.HiddenFile.txt",
+      "summary": "SDK 示例目录中的隐藏文件示例，用于演示隐藏文件在项目中的存在方式，内容仅包含一行说明文字。",
+      "tags": ["example", "hidden-file", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/Examples/Custom.runtimeconfig.json",
+      "type": "config",
+      "name": "Custom.runtimeconfig.json",
+      "filePath": "sdk/Examples/Custom.runtimeconfig.json",
+      "summary": ".NET 运行时配置文件，指定 Microsoft.NETCore.App 和 Microsoft.WindowsDesktop.App 框架版本为 9.0.0，并配置了补丁应用和框架前滚策略。",
+      "tags": ["configuration", "dotnet-runtime", "json", "runtime-settings"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/Examples/Examples.sln",
+      "type": "config",
+      "name": "Examples.sln",
+      "filePath": "sdk/Examples/Examples.sln",
+      "summary": "Visual Studio 解决方案文件，包含 PluginDevelopment、ExamplePlugin、BuildTestPlan.Api、RunTestPlan.Api 和 PluginDevelopment.Gui 共五个项目，支持 Debug、Release、LinuxDebug、LinuxRelease 和 Debug CE 五种构建配置。",
+      "tags": ["configuration", "visual-studio-solution", "build-system", "example", "dotnet"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:sdk/Examples/Custom.runtimeconfig.json",
+      "target": "config:sdk/Examples/Examples.sln",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/.HiddenFile.txt",
+      "target": "config:sdk/Examples/Examples.sln",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

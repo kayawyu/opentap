@@ -1,0 +1,200 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package/SetAsmInfo/SetAsmInfo.cs",
+      "type": "file",
+      "name": "SetAsmInfo.cs",
+      "filePath": "Package/SetAsmInfo/SetAsmInfo.cs",
+      "summary": "用于修改 .NET 程序集版本信息的工具类，基于 Mono.Cecil 读写 PE 文件资源中的 VS_VERSION_INFO 结构（StringFileInfo 和 VS_FIXEDFILEINFO）。",
+      "tags": ["assembly", "version-info", "mono-cecil", "pe-file", "tool"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/SetAsmInfo/SetAsmInfo.cs:SetAsmInfo",
+      "type": "class",
+      "name": "SetAsmInfo",
+      "filePath": "Package/SetAsmInfo/SetAsmInfo.cs",
+      "lineRange": [18, 527],
+      "summary": "内部类：使用 Mono.Cecil 读取和写入 .NET 程序集的 VS_VERSION_INFO 资源，支持修改 AssemblyVersion、FileVersion 和 PDB 文件名。",
+      "tags": ["assembly", "version-info", "mono-cecil", "internal"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/SetAsmInfo.cs:SetInfo",
+      "type": "function",
+      "name": "SetInfo",
+      "filePath": "Package/SetAsmInfo/SetAsmInfo.cs",
+      "lineRange": [279, 437],
+      "summary": "核心方法：读取 PE 文件的版本信息资源，修改 AssemblyVersion 和 FileVersion，支持更新 PDB 文件名中的 GUID 引用。",
+      "tags": ["version-info", "pe-file", "assembly", "core"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/SetAsmInfo.cs:CopyFrom",
+      "type": "function",
+      "name": "CopyFrom",
+      "filePath": "Package/SetAsmInfo/SetAsmInfo.cs",
+      "lineRange": [439, 453],
+      "summary": "从源 PE 资源节中拷贝版本信息数据到内存缓冲区。",
+      "tags": ["copy", "pe-file", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/SetAsmInfo/SetAsmInfo.cs:CopyTo",
+      "type": "function",
+      "name": "CopyTo",
+      "filePath": "Package/SetAsmInfo/SetAsmInfo.cs",
+      "lineRange": [455, 471],
+      "summary": "将修改后的版本信息数据写回 PE 资源节，更新数据大小。",
+      "tags": ["write", "pe-file", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/SharedState.cs",
+      "type": "file",
+      "name": "SharedState.cs",
+      "filePath": "Package/SharedState.cs",
+      "summary": "基于内存映射文件（Memory-Mapped File）的跨进程共享状态机制，支持命名共享区、互斥锁同步和读写操作。",
+      "tags": ["ipc", "memory-mapped", "shared-state", "cross-process"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/SharedState.cs:SharedState",
+      "type": "class",
+      "name": "SharedState",
+      "filePath": "Package/SharedState.cs",
+      "lineRange": [17, 79],
+      "summary": "IDisposable 内部类：使用 MemoryMappedFile 和 Mutex 在进程间共享状态数据，支持按位置读写字节。",
+      "tags": ["ipc", "memory-mapped", "mutex", "disposable"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/SharedState.cs:SharedState_ctor",
+      "type": "function",
+      "name": "SharedState",
+      "filePath": "Package/SharedState.cs",
+      "lineRange": [24, 54],
+      "summary": "构造函数：创建或打开命名内存映射文件，初始化跨进程互斥锁，支持指定目录和自动清理。",
+      "tags": ["constructor", "ipc", "initialization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/SharedState.cs:Dispose",
+      "type": "function",
+      "name": "Dispose",
+      "filePath": "Package/SharedState.cs",
+      "lineRange": [56, 65],
+      "summary": "释放资源：释放互斥锁和内存映射文件视图及流。",
+      "tags": ["dispose", "cleanup", "resource-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Tap.Package.csproj",
+      "type": "config",
+      "name": "Tap.Package.csproj",
+      "filePath": "Package/Tap.Package.csproj",
+      "summary": "OpenTap.Package 程序集的 MSBuild 项目文件，定义程序集名称、目标框架、共享源文件链接及 XML 文档生成配置。",
+      "tags": ["configuration", "msbuild", "csproj", "build-system"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/TestPlanPackageDependencySerializer.cs",
+      "type": "file",
+      "name": "TestPlanPackageDependencySerializer.cs",
+      "filePath": "Package/TestPlanPackageDependencySerializer.cs",
+      "summary": "TestPlan 包依赖序列化器插件，在测试计划 XML 中嵌入和还原包依赖信息，支持交互式安装缺失的包。",
+      "tags": ["serialization", "plugin", "testplan", "package-dependency"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/TestPlanPackageDependencySerializer.cs:TestPlanPackageDependencySerializer",
+      "type": "class",
+      "name": "TestPlanPackageDependencySerializer",
+      "filePath": "Package/TestPlanPackageDependencySerializer.cs",
+      "lineRange": [16, 266],
+      "summary": "继承 TapSerializerPlugin 的内部类，将 Package.Dependencies 元素序列化到测试计划 XML 中，并提供反序列化时的交互式包安装。",
+      "tags": ["serialization", "plugin", "testplan", "package-dependency"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/TestPlanPackageDependencySerializer.cs:interactiveInstallPackage",
+      "type": "function",
+      "name": "interactiveInstallPackage",
+      "filePath": "Package/TestPlanPackageDependencySerializer.cs",
+      "lineRange": [51, 82],
+      "summary": "交互式安装缺失的包：提示用户确认后通过 HttpPackageRepository 下载并安装指定名称和版本的包。",
+      "tags": ["interactive", "installation", "package-dependency", "user-interaction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/TestPlanPackageDependencySerializer.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "Package/TestPlanPackageDependencySerializer.cs",
+      "lineRange": [84, 166],
+      "summary": "从 XML 反序列化包依赖：读取 Package.Dependencies 元素，检查依赖是否已安装，未安装时触发交互式安装。",
+      "tags": ["deserialization", "xml", "package-dependency", "testplan"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/TestPlanPackageDependencySerializer.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "Package/TestPlanPackageDependencySerializer.cs",
+      "lineRange": [170, 265],
+      "summary": "序列化包依赖到 XML：收集当前已安装包的依赖信息并写入 Package.Dependencies 元素，支持类型依赖和文件依赖两种格式。",
+      "tags": ["serialization", "xml", "package-dependency", "testplan"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/TestPlanRunPackageParameterMonitor.cs",
+      "type": "file",
+      "name": "TestPlanRunPackageParameterMonitor.cs",
+      "filePath": "Package/TestPlanRunPackageParameterMonitor.cs",
+      "summary": "测试计划运行时的包参数监控器，在测试计划开始前注入当前包版本信息作为计划参数，在结束后清理。",
+      "tags": ["monitor", "testplan", "package-dependency", "parameter-injection"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/TestPlanRunPackageParameterMonitor.cs:TestPlanRunPackageParameterMonitor",
+      "type": "class",
+      "name": "TestPlanRunPackageParameterMonitor",
+      "filePath": "Package/TestPlanRunPackageParameterMonitor.cs",
+      "lineRange": [10, 41],
+      "summary": "实现 ComponentSettings 和 ITestPlanRunMonitor 的内部类，在测试计划进入时注入包依赖参数，退出时清理。",
+      "tags": ["monitor", "testplan", "parameter-injection", "component-settings"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/TestPlanRunPackageParameterMonitor.cs:EnterTestPlanRun",
+      "type": "function",
+      "name": "EnterTestPlanRun",
+      "filePath": "Package/TestPlanRunPackageParameterMonitor.cs",
+      "lineRange": [14, 35],
+      "summary": "测试计划开始钩子：从序列化器读取包依赖信息，将包名称和版本作为测试计划参数注入。",
+      "tags": ["hook", "testplan", "parameter-injection", "monitor"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {"source": "file:Package/SetAsmInfo/SetAsmInfo.cs", "target": "class:Package/SetAsmInfo/SetAsmInfo.cs:SetAsmInfo", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/SetAsmInfo.cs", "target": "function:Package/SetAsmInfo/SetAsmInfo.cs:SetInfo", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/SetAsmInfo.cs", "target": "function:Package/SetAsmInfo/SetAsmInfo.cs:CopyFrom", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/SetAsmInfo.cs", "target": "function:Package/SetAsmInfo/SetAsmInfo.cs:CopyTo", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SetAsmInfo/SetAsmInfo.cs", "target": "function:Package/SetAsmInfo/SetAsmInfo.cs:SetInfo", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/SharedState.cs", "target": "class:Package/SharedState.cs:SharedState", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SharedState.cs", "target": "function:Package/SharedState.cs:SharedState_ctor", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SharedState.cs", "target": "function:Package/SharedState.cs:Dispose", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/SharedState.cs", "target": "class:Package/SharedState.cs:SharedState", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/SharedState.cs", "target": "function:Package/SharedState.cs:Dispose", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/TestPlanPackageDependencySerializer.cs", "target": "class:Package/TestPlanPackageDependencySerializer.cs:TestPlanPackageDependencySerializer", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/TestPlanPackageDependencySerializer.cs", "target": "function:Package/TestPlanPackageDependencySerializer.cs:interactiveInstallPackage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/TestPlanPackageDependencySerializer.cs", "target": "function:Package/TestPlanPackageDependencySerializer.cs:Deserialize", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/TestPlanPackageDependencySerializer.cs", "target": "function:Package/TestPlanPackageDependencySerializer.cs:Serialize", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/TestPlanPackageDependencySerializer.cs", "target": "function:Package/TestPlanPackageDependencySerializer.cs:Deserialize", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/TestPlanPackageDependencySerializer.cs", "target": "function:Package/TestPlanPackageDependencySerializer.cs:Serialize", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/TestPlanRunPackageParameterMonitor.cs", "target": "class:Package/TestPlanRunPackageParameterMonitor.cs:TestPlanRunPackageParameterMonitor", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/TestPlanRunPackageParameterMonitor.cs", "target": "function:Package/TestPlanRunPackageParameterMonitor.cs:EnterTestPlanRun", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/TestPlanRunPackageParameterMonitor.cs", "target": "function:Package/TestPlanRunPackageParameterMonitor.cs:EnterTestPlanRun", "type": "exports", "direction": "forward", "weight": 0.8}
+  ]
+}

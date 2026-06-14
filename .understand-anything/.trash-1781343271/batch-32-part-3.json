@@ -1,0 +1,1106 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/SerializerPlugins/TestStepSerializer.cs",
+      "type": "file",
+      "name": "TestStepSerializer.cs",
+      "filePath": "Engine/SerializerPlugins/TestStepSerializer.cs",
+      "summary": "测试步骤序列化插件，处理 ITestStep 的序列化，管理步骤 ID 查找、层级修复和重复 GUID 检测。",
+      "tags": [
+        "serialization",
+        "test-step",
+        "guid-management",
+        "step-fixup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/SerializerPlugins/TestStepSerializer.cs:TestStepSerializer",
+      "type": "class",
+      "name": "TestStepSerializer",
+      "filePath": "Engine/SerializerPlugins/TestStepSerializer.cs",
+      "lineRange": [
+        13,
+        174
+      ],
+      "summary": "测试步骤序列化器，维护 stepLookup 字典，处理步骤层级修复（FixupStep）和重复 GUID 检测。",
+      "tags": [
+        "serialization",
+        "test-step",
+        "guid-lookup",
+        "hierarchy-fixup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/TestStepSerializer.cs:AddKnownStepHeirarchy",
+      "type": "function",
+      "name": "AddKnownStepHeirarchy",
+      "filePath": "Engine/SerializerPlugins/TestStepSerializer.cs",
+      "lineRange": [
+        36,
+        48
+      ],
+      "summary": "递归将已知步骤的 GUID 添加到 ignoredGuids 集合，防止 FixupStep 时错误重新分配 GUID。",
+      "tags": [
+        "step-hierarchy",
+        "guid-ignore",
+        "recursion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/TestStepSerializer.cs:FixupStep",
+      "type": "function",
+      "name": "FixupStep",
+      "filePath": "Engine/SerializerPlugins/TestStepSerializer.cs",
+      "lineRange": [
+        55,
+        87
+      ],
+      "summary": "修复步骤的父子层级关系，为缺失 GUID 的步骤生成新 GUID，重新建立连接。",
+      "tags": [
+        "step-fixup",
+        "guid-reassignment",
+        "hierarchy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/TestStepSerializer.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "Engine/SerializerPlugins/TestStepSerializer.cs",
+      "lineRange": [
+        90,
+        140
+      ],
+      "summary": "反序列化测试步骤，解析 GUID、处理延迟加载、注册步骤并执行 FixupStep。",
+      "tags": [
+        "deserialization",
+        "test-step",
+        "guid-registration",
+        "deferred-loading"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/TestStepSerializer.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "Engine/SerializerPlugins/TestStepSerializer.cs",
+      "lineRange": [
+        144,
+        173
+      ],
+      "summary": "序列化测试步骤，写入步骤 ID 和类型信息，处理类型派生情况的 type 属性移除。",
+      "tags": [
+        "serialization",
+        "test-step",
+        "type-attribute"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Session/TapSession.cs",
+      "type": "file",
+      "name": "TapSession.cs",
+      "filePath": "Engine/Session/TapSession.cs",
+      "summary": "TapSession 会话管理系统，提供 Session、SessionLocal<T> 机制，支持会话创建、激活、线程上下文管理和资源释放。",
+      "tags": [
+        "session",
+        "threading",
+        "lifecycle",
+        "resource-management"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用 ThreadLocal 和会话本地变量实现线程安全的会话上下文管理，支持嵌套会话和自动资源释放。"
+    },
+    {
+      "id": "class:Engine/Session/TapSession.cs:ISessionLocal",
+      "type": "class",
+      "name": "ISessionLocal",
+      "filePath": "Engine/Session/TapSession.cs",
+      "lineRange": [
+        32,
+        35
+      ],
+      "summary": "会话本地变量接口，标记可与会话关联并自动释放的资源。",
+      "tags": [
+        "interface",
+        "session",
+        "auto-dispose"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Session/TapSession.cs:SessionLocal",
+      "type": "class",
+      "name": "SessionLocal",
+      "filePath": "Engine/Session/TapSession.cs",
+      "lineRange": [
+        40,
+        86
+      ],
+      "summary": "泛型会话本地变量，通过 ThreadLocal 存储与当前 Session 关联的值。",
+      "tags": [
+        "session-local",
+        "thread-local",
+        "generic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Session/TapSession.cs:Session",
+      "type": "class",
+      "name": "Session",
+      "filePath": "Engine/Session/TapSession.cs",
+      "lineRange": [
+        95,
+        248
+      ],
+      "summary": "会话对象，管理会话生命周期、嵌套会话关系和日志上下文。",
+      "tags": [
+        "session",
+        "lifecycle",
+        "context-management",
+        "threading"
+      ],
+      "complexity": "complex",
+      "languageNotes": "支持嵌套会话堆栈，与 TapThread、ComponentSettings、Log 紧密集成。"
+    },
+    {
+      "id": "function:Engine/Session/TapSession.cs:DisposeSessionLocals",
+      "type": "function",
+      "name": "DisposeSessionLocals",
+      "filePath": "Engine/Session/TapSession.cs",
+      "lineRange": [
+        115,
+        125
+      ],
+      "summary": "释放当前会话关联的所有 SessionLocal 变量。",
+      "tags": [
+        "dispose",
+        "session-local",
+        "cleanup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Session/TapSession.cs:Session",
+      "type": "function",
+      "name": "Session",
+      "filePath": "Engine/Session/TapSession.cs",
+      "lineRange": [
+        142,
+        151
+      ],
+      "summary": "会话构造函数（含参数），接受会话 ID、选项和根会话。",
+      "tags": [
+        "constructor",
+        "session",
+        "initialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Session/TapSession.cs:Dispose",
+      "type": "function",
+      "name": "Dispose",
+      "filePath": "Engine/Session/TapSession.cs",
+      "lineRange": [
+        160,
+        181
+      ],
+      "summary": "释放会话资源，逆序释放 disposables 堆栈中的所有对象并收集异常。",
+      "tags": [
+        "dispose",
+        "resource-cleanup",
+        "exception-handling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Session/TapSession.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Engine/Session/TapSession.cs",
+      "lineRange": [
+        187,
+        193
+      ],
+      "summary": "创建子会话（指定 ID），初始化线程上下文并激活会话。",
+      "tags": [
+        "factory",
+        "session-creation",
+        "thread-context"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Session/TapSession.cs:Start",
+      "type": "function",
+      "name": "Start",
+      "filePath": "Engine/Session/TapSession.cs",
+      "lineRange": [
+        204,
+        220
+      ],
+      "summary": "在新线程中启动会话，创建 TapThread、激活会话、执行操作后释放。",
+      "tags": [
+        "session-start",
+        "threading",
+        "lifecycle"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Session/TapSession.cs:Activate",
+      "type": "function",
+      "name": "Activate",
+      "filePath": "Engine/Session/TapSession.cs",
+      "lineRange": [
+        232,
+        247
+      ],
+      "summary": "激活当前会话，设置 ComponentSettings 和日志上下文。",
+      "tags": [
+        "session-activation",
+        "context-switch",
+        "logging"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/SessionLogs.cs",
+      "type": "file",
+      "name": "SessionLogs.cs",
+      "filePath": "Engine/SessionLogs.cs",
+      "summary": "会话日志系统，管理文件日志的创建、轮转、压缩和历史清理，支持 Windows/Linux 硬链接。",
+      "tags": [
+        "logging",
+        "session",
+        "file-management",
+        "log-rotation"
+      ],
+      "complexity": "complex",
+      "languageNotes": "596 行代码实现完整的日志生命周期管理，包括跨平台硬链接、日志轮转、文件大小限制和历史清理。"
+    },
+    {
+      "id": "class:Engine/SessionLogs.cs:SessionLogs",
+      "type": "class",
+      "name": "SessionLogs",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        23,
+        595
+      ],
+      "summary": "会话日志管理器，负责日志文件初始化、轮转、最新链接和启动信息记录。",
+      "tags": [
+        "logging",
+        "session",
+        "file-rotation",
+        "cross-platform"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:CreateHardLink",
+      "type": "function",
+      "name": "CreateHardLink",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        35,
+        53
+      ],
+      "summary": "跨平台硬链接创建，Windows 使用 kernel32，Unix 使用 libc link。",
+      "tags": [
+        "hard-link",
+        "cross-platform",
+        "windows-api",
+        "unix-api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:Initialize",
+      "type": "function",
+      "name": "Initialize",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        130,
+        160
+      ],
+      "summary": "完整参数初始化日志系统，创建日志文件、启动 SystemInfoTask、执行 LogStartupInfo。",
+      "tags": [
+        "initialization",
+        "logging",
+        "file-setup",
+        "async"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:FlushOnExit",
+      "type": "function",
+      "name": "FlushOnExit",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        162,
+        174
+      ],
+      "summary": "进程退出时刷新日志，等待 SystemInfoTask 完成，执行最终 Flush。",
+      "tags": [
+        "flush",
+        "exit-handler",
+        "async-wait"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:getLogRecentFilesName",
+      "type": "function",
+      "name": "getLogRecentFilesName",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        335,
+        363
+      ],
+      "summary": "获取最近日志文件路径候选项列表，检查安装目录、工作目录和用户数据目录。",
+      "tags": [
+        "log-discovery",
+        "file-system",
+        "path-resolution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:RemoveOldLogFiles",
+      "type": "function",
+      "name": "RemoveOldLogFiles",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        367,
+        407
+      ],
+      "summary": "清理旧日志文件，根据文件数量和总大小限制删除最早的日志。",
+      "tags": [
+        "log-cleanup",
+        "quota-management",
+        "file-deletion"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:rename",
+      "type": "function",
+      "name": "rename",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        412,
+        471
+      ],
+      "summary": "重命名日志文件并设置新的 TraceListener，更新 MakeLatest 和 RecentFiles。",
+      "tags": [
+        "log-rename",
+        "trace-listener",
+        "file-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:MakeLatest",
+      "type": "function",
+      "name": "MakeLatest",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        473,
+        487
+      ],
+      "summary": "创建 Latest 硬链接指向当前日志文件，先删后建以确保指向最新。",
+      "tags": [
+        "hard-link",
+        "latest-link",
+        "file-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:TraceListener_FileSizeLimitReached",
+      "type": "function",
+      "name": "TraceListener_FileSizeLimitReached",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        491,
+        506
+      ],
+      "summary": "当日志文件达到大小上限时触发，重命名当前文件并创建新文件。",
+      "tags": [
+        "log-rotation",
+        "file-size-limit",
+        "event-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:addLogRotateNumber",
+      "type": "function",
+      "name": "addLogRotateNumber",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        508,
+        522
+      ],
+      "summary": "为日志文件名添加轮转编号后缀（如 session.1.log）。",
+      "tags": [
+        "log-rotation",
+        "naming",
+        "file-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:Rename",
+      "type": "function",
+      "name": "Rename",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        534,
+        550
+      ],
+      "summary": "安全的日志重命名方法，捕获异常并记录警告，调用内部 rename 方法。",
+      "tags": [
+        "log-rename",
+        "error-handling",
+        "safety-wrapper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SessionLogs.cs:LogStartupInfo",
+      "type": "function",
+      "name": "LogStartupInfo",
+      "filePath": "Engine/SessionLogs.cs",
+      "lineRange": [
+        553,
+        585
+      ],
+      "summary": "记录系统启动信息，使用 TypeData.GetDerivedTypes 发现所有 IStartupInfo 实现。",
+      "tags": [
+        "startup-info",
+        "plugin-discovery",
+        "system-profiling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/ShortTimeSpan.cs",
+      "type": "file",
+      "name": "ShortTimeSpan.cs",
+      "filePath": "Engine/ShortTimeSpan.cs",
+      "summary": "短时间跨度格式化与解析工具，支持秒/毫秒/微秒/纳秒单位的格式化输出和字符串解析。",
+      "tags": [
+        "utility",
+        "time-formatting",
+        "parsing",
+        "struct"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "ShortTimeSpan 是 struct 类型（值类型），为 OpenTAP 提供轻量级时间跨度的格式化和解析功能。"
+    },
+    {
+      "id": "class:Engine/ShortTimeSpan.cs:ShortTimeSpan",
+      "type": "class",
+      "name": "ShortTimeSpan",
+      "filePath": "Engine/ShortTimeSpan.cs",
+      "lineRange": [
+        13,
+        210
+      ],
+      "summary": "短时间跨度结构体，提供 FromSeconds、FromString、ToString 等方法，支持自动单位选择。",
+      "tags": [
+        "struct",
+        "time-span",
+        "formatting",
+        "parsing"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "C# struct 类型，避免堆分配开销，适合高频调用的性能计时场景。"
+    },
+    {
+      "id": "function:Engine/ShortTimeSpan.cs:FromSeconds",
+      "type": "function",
+      "name": "FromSeconds",
+      "filePath": "Engine/ShortTimeSpan.cs",
+      "lineRange": [
+        34,
+        60
+      ],
+      "summary": "从秒数创建 ShortTimeSpan，自动选择最合适的单位（秒/毫秒/微秒/纳秒）。",
+      "tags": [
+        "factory",
+        "unit-selection",
+        "time-conversion"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ShortTimeSpan.cs:LongTimeSpanFormat",
+      "type": "function",
+      "name": "LongTimeSpanFormat",
+      "filePath": "Engine/ShortTimeSpan.cs",
+      "lineRange": [
+        67,
+        97
+      ],
+      "summary": "将 TimeSpan 格式化为长时间格式（如 \"1 d 1 h 14m\"）。",
+      "tags": [
+        "formatting",
+        "time-span",
+        "long-format"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ShortTimeSpan.cs:FromString",
+      "type": "function",
+      "name": "FromString",
+      "filePath": "Engine/ShortTimeSpan.cs",
+      "lineRange": [
+        105,
+        137
+      ],
+      "summary": "从字符串（如 \"15.3 ms\"）解析 ShortTimeSpan，支持 s/ms/us/ns 后缀单位。",
+      "tags": [
+        "parsing",
+        "string-conversion",
+        "unit-detection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ShortTimeSpan.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Engine/ShortTimeSpan.cs",
+      "lineRange": [
+        172,
+        180
+      ],
+      "summary": "将 ShortTimeSpan 格式化为带单位字符串，根据值大小选择不同精度。",
+      "tags": [
+        "formatting",
+        "tostring",
+        "precision"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ShortTimeSpan.cs:ToStringParts",
+      "type": "function",
+      "name": "ToStringParts",
+      "filePath": "Engine/ShortTimeSpan.cs",
+      "lineRange": [
+        201,
+        209
+      ],
+      "summary": "返回 Value 和 Unit 字符串的元组，用于高效拼接格式化输出。",
+      "tags": [
+        "formatting",
+        "tuple",
+        "string-builder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/SiblingStepAttribute.cs",
+      "type": "file",
+      "name": "SiblingStepAttribute.cs",
+      "filePath": "Engine/SiblingStepAttribute.cs",
+      "summary": "步骤选择器特性（StepSelectorAttribute），用于标记属性以在编辑器中提供同级步骤选择功能。",
+      "tags": [
+        "attribute",
+        "test-step",
+        "ui-selection",
+        "editor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/SiblingStepAttribute.cs:StepSelectorAttribute",
+      "type": "class",
+      "name": "StepSelectorAttribute",
+      "filePath": "Engine/SiblingStepAttribute.cs",
+      "lineRange": [
+        13,
+        44
+      ],
+      "summary": "步骤选择器 Attribute，标记属性可绑定到同级或子步骤的 ID，提供可选的步骤过滤器。",
+      "tags": [
+        "attribute",
+        "step-selection",
+        "editor-support"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/SupportedModelsAttribute.cs",
+      "type": "file",
+      "name": "SupportedModelsAttribute.cs",
+      "filePath": "Engine/SupportedModelsAttribute.cs",
+      "summary": "支持的仪器型号特性，用于标记 DUT/Instrument 插件支持的制造商和型号列表。",
+      "tags": [
+        "attribute",
+        "instrument",
+        "model-support",
+        "metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/SupportedModelsAttribute.cs:SupportedModelsAttribute",
+      "type": "class",
+      "name": "SupportedModelsAttribute",
+      "filePath": "Engine/SupportedModelsAttribute.cs",
+      "lineRange": [
+        9,
+        38
+      ],
+      "summary": "支持的型号 Attribute，标记设备插件支持的制造商名称和型号列表，用于设备发现和匹配。",
+      "tags": [
+        "attribute",
+        "instrument-model",
+        "device-discovery"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/SystemStartupInfo.cs",
+      "type": "file",
+      "name": "SystemStartupInfo.cs",
+      "filePath": "Engine/SystemStartupInfo.cs",
+      "summary": "系统启动信息记录实现，实现 IStartupInfo 接口，记录操作系统版本和 OpenTAP 版本信息。",
+      "tags": [
+        "startup-info",
+        "system-profiling",
+        "os-info"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/SystemStartupInfo.cs:SystemStartupInfo",
+      "type": "class",
+      "name": "SystemStartupInfo",
+      "filePath": "Engine/SystemStartupInfo.cs",
+      "lineRange": [
+        7,
+        20
+      ],
+      "summary": "系统启动信息类，从 Environment.OSVersion 和 Assembly 版本特性中提取版本信息。",
+      "tags": [
+        "startup-info",
+        "os-version",
+        "assembly-version"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SystemStartupInfo.cs:LogStartupInfo",
+      "type": "function",
+      "name": "LogStartupInfo",
+      "filePath": "Engine/SystemStartupInfo.cs",
+      "lineRange": [
+        9,
+        19
+      ],
+      "summary": "记录操作系统版本和 OpenTAP 版本（AssemblyInformationalVersion）到日志。",
+      "tags": [
+        "logging",
+        "startup-info",
+        "os-version",
+        "assembly-metadata"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/SerializerPlugins/TestStepSerializer.cs",
+      "target": "class:Engine/SerializerPlugins/TestStepSerializer.cs:TestStepSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/TestStepSerializer.cs:TestStepSerializer",
+      "target": "function:Engine/SerializerPlugins/TestStepSerializer.cs:AddKnownStepHeirarchy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/TestStepSerializer.cs:TestStepSerializer",
+      "target": "function:Engine/SerializerPlugins/TestStepSerializer.cs:FixupStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/TestStepSerializer.cs:TestStepSerializer",
+      "target": "function:Engine/SerializerPlugins/TestStepSerializer.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/TestStepSerializer.cs:TestStepSerializer",
+      "target": "function:Engine/SerializerPlugins/TestStepSerializer.cs:Serialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/TestStepSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/TestStepSerializer.cs:AddKnownStepHeirarchy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/TestStepSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/TestStepSerializer.cs:FixupStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/TestStepSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/TestStepSerializer.cs:Deserialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/TestStepSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/TestStepSerializer.cs:Serialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/TestStepSerializer.cs",
+      "target": "class:Engine/SerializerPlugins/TestStepSerializer.cs:TestStepSerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Session/TapSession.cs",
+      "target": "class:Engine/Session/TapSession.cs:ISessionLocal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Session/TapSession.cs",
+      "target": "class:Engine/Session/TapSession.cs:SessionLocal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Session/TapSession.cs",
+      "target": "class:Engine/Session/TapSession.cs:Session",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/Session/TapSession.cs:Session",
+      "target": "function:Engine/Session/TapSession.cs:DisposeSessionLocals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/Session/TapSession.cs:Session",
+      "target": "function:Engine/Session/TapSession.cs:Session",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/Session/TapSession.cs:Session",
+      "target": "function:Engine/Session/TapSession.cs:Dispose",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/Session/TapSession.cs:Session",
+      "target": "function:Engine/Session/TapSession.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/Session/TapSession.cs:Session",
+      "target": "function:Engine/Session/TapSession.cs:Start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/Session/TapSession.cs:Session",
+      "target": "function:Engine/Session/TapSession.cs:Activate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Session/TapSession.cs",
+      "target": "function:Engine/Session/TapSession.cs:Create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Session/TapSession.cs",
+      "target": "function:Engine/Session/TapSession.cs:Start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Session/TapSession.cs",
+      "target": "function:Engine/Session/TapSession.cs:Dispose",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Session/TapSession.cs",
+      "target": "function:Engine/Session/TapSession.cs:RunInSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Session/TapSession.cs",
+      "target": "class:Engine/Session/TapSession.cs:Session",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SessionLogs.cs",
+      "target": "class:Engine/SessionLogs.cs:SessionLogs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:CreateHardLink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:Initialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:FlushOnExit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:getLogRecentFilesName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:RemoveOldLogFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:rename",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:MakeLatest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:TraceListener_FileSizeLimitReached",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:addLogRotateNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:Rename",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SessionLogs.cs:SessionLogs",
+      "target": "function:Engine/SessionLogs.cs:LogStartupInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SessionLogs.cs",
+      "target": "function:Engine/SessionLogs.cs:Initialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SessionLogs.cs",
+      "target": "function:Engine/SessionLogs.cs:Rename",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SessionLogs.cs",
+      "target": "function:Engine/SessionLogs.cs:Flush",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SessionLogs.cs",
+      "target": "function:Engine/SessionLogs.cs:GetSessionLogFilePath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SessionLogs.cs",
+      "target": "class:Engine/SessionLogs.cs:SessionLogs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ShortTimeSpan.cs",
+      "target": "class:Engine/ShortTimeSpan.cs:ShortTimeSpan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/ShortTimeSpan.cs:ShortTimeSpan",
+      "target": "function:Engine/ShortTimeSpan.cs:FromSeconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/ShortTimeSpan.cs:ShortTimeSpan",
+      "target": "function:Engine/ShortTimeSpan.cs:LongTimeSpanFormat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/ShortTimeSpan.cs:ShortTimeSpan",
+      "target": "function:Engine/ShortTimeSpan.cs:FromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/ShortTimeSpan.cs:ShortTimeSpan",
+      "target": "function:Engine/ShortTimeSpan.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/ShortTimeSpan.cs:ShortTimeSpan",
+      "target": "function:Engine/ShortTimeSpan.cs:ToStringParts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SiblingStepAttribute.cs",
+      "target": "class:Engine/SiblingStepAttribute.cs:StepSelectorAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SiblingStepAttribute.cs",
+      "target": "class:Engine/SiblingStepAttribute.cs:StepSelectorAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SupportedModelsAttribute.cs",
+      "target": "class:Engine/SupportedModelsAttribute.cs:SupportedModelsAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SupportedModelsAttribute.cs",
+      "target": "class:Engine/SupportedModelsAttribute.cs:SupportedModelsAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SystemStartupInfo.cs",
+      "target": "class:Engine/SystemStartupInfo.cs:SystemStartupInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SystemStartupInfo.cs:SystemStartupInfo",
+      "target": "function:Engine/SystemStartupInfo.cs:LogStartupInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SystemStartupInfo.cs",
+      "target": "function:Engine/SystemStartupInfo.cs:LogStartupInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

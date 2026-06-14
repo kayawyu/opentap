@@ -1,0 +1,3023 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/InterfaceBasedInstrument.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 122,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "InterfaceBasedInstrument",
+          "startLine": 34,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 68,
+          "endLine": 73,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 76,
+          "endLine": 81,
+          "params": []
+        },
+        {
+          "name": "RaisePropertyChanged",
+          "startLine": 100,
+          "endLine": 104,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "OnActivity",
+          "startLine": 108,
+          "endLine": 114,
+          "params": []
+        },
+        {
+          "name": "ToString",
+          "startLine": 117,
+          "endLine": 120,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "InterfaceBasedInstrument",
+          "startLine": 28,
+          "endLine": 121,
+          "methods": [
+            "InterfaceBasedInstrument",
+            "Close",
+            "Open",
+            "RaisePropertyChanged",
+            "OnActivity",
+            "ToString"
+          ],
+          "properties": [
+            "Log",
+            "_name",
+            "Name",
+            "isConnected",
+            "IsConnected"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "InterfaceBasedInstrument",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "IsConnected",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "OnActivity",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "InterfaceBasedInstrument",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RaisePropertyChanged",
+          "callee": "PropertyChanged",
+          "lineNumber": 103
+        },
+        {
+          "caller": "RaisePropertyChanged",
+          "callee": "new PropertyChangedEventArgs",
+          "lineNumber": 103
+        },
+        {
+          "caller": "OnActivity",
+          "callee": "Activity.Invoke",
+          "lineNumber": 112
+        },
+        {
+          "caller": "OnActivity",
+          "callee": "new EventArgs",
+          "lineNumber": 112
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/MeasureUsingConnectionsStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 108,
+      "nonEmptyLines": 95,
+      "functions": [
+        {
+          "name": "MeasureUsingConnectionsStep",
+          "startLine": 68,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 74,
+          "endLine": 106,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MeasureUsingConnectionsStep",
+          "startLine": 28,
+          "endLine": 107,
+          "methods": [
+            "MeasureUsingConnectionsStep",
+            "Run"
+          ],
+          "properties": [
+            "Generator",
+            "DUT",
+            "SelectedConnection",
+            "AvailableConnections",
+            "Power",
+            "Frequency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Generator",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "DUT",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "SelectedConnection",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "AvailableConnections",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "Power",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "Frequency",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "MeasureUsingConnectionsStep",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "MeasureUsingConnectionsStep",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "new Exception",
+          "lineNumber": 79
+        },
+        {
+          "caller": "Run",
+          "callee": "String.Format",
+          "lineNumber": 80
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 87
+        },
+        {
+          "caller": "Run",
+          "callee": "String.Format",
+          "lineNumber": 87
+        },
+        {
+          "caller": "Run",
+          "callee": "String.IsNullOrEmpty",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Run",
+          "callee": "rfConnection.GetInterpolatedCableLoss",
+          "lineNumber": 95
+        },
+        {
+          "caller": "Run",
+          "callee": "Generator.SetupInstrument",
+          "lineNumber": 96
+        },
+        {
+          "caller": "Run",
+          "callee": "DUT.SetupDut",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Run",
+          "callee": "DUT.PerformMeasurement",
+          "lineNumber": 101
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 105
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ResourceTopology.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 104,
+      "nonEmptyLines": 91,
+      "functions": [
+        {
+          "name": "InstrumentTopology",
+          "startLine": 51,
+          "endLine": 54,
+          "params": []
+        },
+        {
+          "name": "GetId",
+          "startLine": 61,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 76,
+          "endLine": 79,
+          "params": []
+        },
+        {
+          "name": "GetId",
+          "startLine": 92,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "SimpleIdInstrument",
+          "startLine": 99,
+          "endLine": 102,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "InstrumentTopology",
+          "startLine": 23,
+          "endLine": 67,
+          "methods": [
+            "InstrumentTopology",
+            "GetId"
+          ],
+          "properties": [
+            "UseScpiInstrument",
+            "ScpiInst",
+            "IdInst",
+            "IgnoredInstrument"
+          ]
+        },
+        {
+          "name": "TopologyInstrumentStep",
+          "startLine": 69,
+          "endLine": 80,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Instrument"
+          ]
+        },
+        {
+          "name": "IIdInstrument",
+          "startLine": 83,
+          "endLine": 86,
+          "methods": [
+            "GetId"
+          ],
+          "properties": []
+        },
+        {
+          "name": "SimpleIdInstrument",
+          "startLine": 88,
+          "endLine": 103,
+          "methods": [
+            "GetId",
+            "SimpleIdInstrument"
+          ],
+          "properties": [
+            "Id"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UseScpiInstrument",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "ScpiInst",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "IdInst",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "IgnoredInstrument",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentTopology",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "GetId",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "InstrumentTopology",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "Instrument",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "TopologyInstrumentStep",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "IIdInstrument",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "Id",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "GetId",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "SimpleIdInstrument",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "SimpleIdInstrument",
+          "line": 88,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetId",
+          "callee": "IdInst.GetId",
+          "lineNumber": 65
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Run",
+          "callee": "Instrument.GetId",
+          "lineNumber": 78
+        },
+        {
+          "caller": "GetId",
+          "callee": "new Exception",
+          "lineNumber": 95
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 15,
+        "functionCount": 5,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/ScpiInstrumentExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "ScpiInstrumentExample",
+          "startLine": 29,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 40,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "Configure",
+          "startLine": 53,
+          "endLine": 59,
+          "params": [
+            "centerFrequency",
+            "frequencySpan",
+            "points"
+          ]
+        },
+        {
+          "name": "SweepMeasurement",
+          "startLine": 61,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 70,
+          "endLine": 74,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ScpiInstrumentExample",
+          "startLine": 22,
+          "endLine": 75,
+          "methods": [
+            "ScpiInstrumentExample",
+            "Open",
+            "Configure",
+            "SweepMeasurement",
+            "Close"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ScpiInstrumentExample",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "Configure",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "SweepMeasurement",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "ScpiInstrumentExample",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Open",
+          "callee": "IdnString.Contains",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Open",
+          "callee": "Log.Error",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Open",
+          "callee": "new ArgumentException",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Configure",
+          "callee": "ScpiCommand",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Configure",
+          "callee": "ScpiCommand",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Configure",
+          "callee": "ScpiCommand",
+          "lineNumber": 58
+        },
+        {
+          "caller": "SweepMeasurement",
+          "callee": "ScpiQuery<double[]>",
+          "lineNumber": 64
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchMatrixStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 44,
+          "endLine": 56,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SetSwitchMatrixStep",
+          "startLine": 23,
+          "endLine": 57,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "SwitchMatrix",
+            "AvailableChannels",
+            "SelectedChannel"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SwitchMatrix",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "AvailableChannels",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "SelectedChannel",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "SetSwitchMatrixStep",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Run",
+          "callee": "SwitchMatrix.SetMatrixChannel",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Warning",
+          "lineNumber": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SetSwitchStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 36,
+          "endLine": 40,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SetTwoPositionSwitchStep",
+          "startLine": 22,
+          "endLine": 41,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Switch",
+            "AvailablePositions",
+            "Position"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Switch",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "AvailablePositions",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "Position",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "SetTwoPositionSwitchStep",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Run",
+          "callee": "Switch.SetPosition",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleDut.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 53,
+      "functions": [
+        {
+          "name": "SimpleDut",
+          "startLine": 31,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 38,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 45,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "DoNothing",
+          "startLine": 52,
+          "endLine": 56,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SimpleDut",
+          "startLine": 19,
+          "endLine": 57,
+          "methods": [
+            "SimpleDut",
+            "Open",
+            "Close",
+            "DoNothing"
+          ],
+          "properties": [
+            "MyMetaData"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MyMetaData",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "SimpleDut",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "DoNothing",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "SimpleDut",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Open",
+          "callee": "Log.Info",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Close",
+          "callee": "Log.Info",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 48
+        },
+        {
+          "caller": "DoNothing",
+          "callee": "OnActivity",
+          "lineNumber": 54
+        },
+        {
+          "caller": "DoNothing",
+          "callee": "Log.Info",
+          "lineNumber": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SimpleInstrument.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 49,
+      "functions": [
+        {
+          "name": "SimpleInstrument",
+          "startLine": 30,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 36,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 42,
+          "endLine": 46,
+          "params": []
+        },
+        {
+          "name": "DoNothing",
+          "startLine": 49,
+          "endLine": 53,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SimpleInstrument",
+          "startLine": 19,
+          "endLine": 54,
+          "methods": [
+            "SimpleInstrument",
+            "Open",
+            "Close",
+            "DoNothing"
+          ],
+          "properties": [
+            "VisaAddress",
+            "SomeProperty"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VisaAddress",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "SomeProperty",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "SimpleInstrument",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "DoNothing",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "SimpleInstrument",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Open",
+          "callee": "Log.Info",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Close",
+          "callee": "Log.Info",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 45
+        },
+        {
+          "caller": "DoNothing",
+          "callee": "OnActivity",
+          "lineNumber": 51
+        },
+        {
+          "caller": "DoNothing",
+          "callee": "Log.Info",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/SwitchMatrixInstrument.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 81,
+      "functions": [
+        {
+          "name": "SwitchMatrixInstrument",
+          "startLine": 29,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 42,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "SetMatrixChannel",
+          "startLine": 52,
+          "endLine": 67,
+          "params": [
+            "row",
+            "col"
+          ]
+        },
+        {
+          "name": "Close",
+          "startLine": 72,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "resetSwitchConnection",
+          "startLine": 79,
+          "endLine": 86,
+          "params": [
+            "channel"
+          ]
+        },
+        {
+          "name": "resetSwitchConnections",
+          "startLine": 88,
+          "endLine": 92,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SwitchMatrixInstrument",
+          "startLine": 20,
+          "endLine": 93,
+          "methods": [
+            "SwitchMatrixInstrument",
+            "Open",
+            "SetMatrixChannel",
+            "Close",
+            "resetSwitchConnection",
+            "resetSwitchConnections"
+          ],
+          "properties": [
+            "_Channels",
+            "_ActiveChannel",
+            "Channels"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Channels",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "SwitchMatrixInstrument",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "SetMatrixChannel",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "SwitchMatrixInstrument",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SwitchMatrixInstrument",
+          "callee": "new SwitchMatrixPathCollection",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Open",
+          "callee": "resetSwitchConnections",
+          "lineNumber": 49
+        },
+        {
+          "caller": "SetMatrixChannel",
+          "callee": "resetSwitchConnection",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Close",
+          "callee": "resetSwitchConnection",
+          "lineNumber": 75
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPortInstrument.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 47,
+      "functions": [
+        {
+          "name": "TwoPortInstrument",
+          "startLine": 27,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "Open",
+          "startLine": 34,
+          "endLine": 38,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 40,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "SetupInstrument",
+          "startLine": 46,
+          "endLine": 52,
+          "params": [
+            "pow"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TwoPortInstrument",
+          "startLine": 20,
+          "endLine": 53,
+          "methods": [
+            "TwoPortInstrument",
+            "Open",
+            "Close",
+            "SetupInstrument"
+          ],
+          "properties": [
+            "PortA",
+            "PortB"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PortA",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "PortB",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "TwoPortInstrument",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "Open",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "TwoPortInstrument",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TwoPortInstrument",
+          "callee": "new Port",
+          "lineNumber": 30
+        },
+        {
+          "caller": "TwoPortInstrument",
+          "callee": "new Port",
+          "lineNumber": 31
+        },
+        {
+          "caller": "Open",
+          "callee": "base.Open",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Open",
+          "callee": "Log.Info",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Close",
+          "callee": "Log.Info",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 43
+        },
+        {
+          "caller": "SetupInstrument",
+          "callee": "Log.Info",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/TwoPositionSwitchInstrument.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "TwoPositionSwitchInstrument",
+          "startLine": 30,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "SetPosition",
+          "startLine": 38,
+          "endLine": 43,
+          "params": [
+            "newPosition"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TwoPositionSwitchInstrument",
+          "startLine": 19,
+          "endLine": 44,
+          "methods": [
+            "TwoPositionSwitchInstrument",
+            "SetPosition"
+          ],
+          "properties": [
+            "Position1",
+            "Position2",
+            "CurrentPosition"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Position1",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "Position2",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "TwoPositionSwitchInstrument",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "SetPosition",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "TwoPositionSwitchInstrument",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TwoPositionSwitchInstrument",
+          "callee": "new SwitchPosition",
+          "lineNumber": 33
+        },
+        {
+          "caller": "TwoPositionSwitchInstrument",
+          "callee": "new SwitchPosition",
+          "lineNumber": 34
+        },
+        {
+          "caller": "TwoPositionSwitchInstrument",
+          "callee": "new SwitchPosition",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/InstrumentsAndDuts/UsingDutAndInstStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "UsingDutAndInstExample",
+          "startLine": 40,
+          "endLine": 43,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 45,
+          "endLine": 58,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UsingDutAndInstExample",
+          "startLine": 22,
+          "endLine": 59,
+          "methods": [
+            "UsingDutAndInstExample",
+            "Run"
+          ],
+          "properties": [
+            "SomeSetting",
+            "ExampleInstrument",
+            "ExampleDut"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SomeSetting",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "ExampleInstrument",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "ExampleDut",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "UsingDutAndInstExample",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "UsingDutAndInstExample",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Run",
+          "callee": "ExampleInstrument.DoNothing",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Run",
+          "callee": "ExampleDut.DoNothing",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/package.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 20,
+      "nonEmptyLines": 19,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/PluginDevelopment.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 37,
+      "nonEmptyLines": 30,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 41,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/Properties/launchSettings.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 18,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "profiles",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 158,
+      "nonEmptyLines": 136,
+      "functions": [
+        {
+          "name": "EventResultListener",
+          "startLine": 25,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "startLine": 30,
+          "endLine": 34,
+          "params": [
+            "planRun"
+          ]
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "startLine": 36,
+          "endLine": 40,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "OnResultPublished",
+          "startLine": 42,
+          "endLine": 47,
+          "params": [
+            "stepRun",
+            "result"
+          ]
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "startLine": 49,
+          "endLine": 53,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "startLine": 55,
+          "endLine": 59,
+          "params": [
+            "planRun",
+            "logStream"
+          ]
+        },
+        {
+          "name": "Close",
+          "startLine": 61,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "RaiseTestPlanRunStarted",
+          "startLine": 69,
+          "endLine": 73,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "RaiseTestStepRunStarted",
+          "startLine": 76,
+          "endLine": 80,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "RaiseResultPublished",
+          "startLine": 83,
+          "endLine": 87,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "RaiseTestStepRunCompleted",
+          "startLine": 90,
+          "endLine": 94,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "RaiseTestPlanRunCompleted",
+          "startLine": 97,
+          "endLine": 101,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "TestPlanRunStartedEventArgs",
+          "startLine": 109,
+          "endLine": 112,
+          "params": [
+            "testplanRun"
+          ]
+        },
+        {
+          "name": "TestStepRunStartedEventArgs",
+          "startLine": 119,
+          "endLine": 122,
+          "params": [
+            "testStepRun"
+          ]
+        },
+        {
+          "name": "ResultPublishedEventArgs",
+          "startLine": 130,
+          "endLine": 134,
+          "params": [
+            "stepRunId",
+            "resultTable"
+          ]
+        },
+        {
+          "name": "TestStepRunCompletedEventArgs",
+          "startLine": 141,
+          "endLine": 144,
+          "params": [
+            "testStepRun"
+          ]
+        },
+        {
+          "name": "TestPlanRunCompletedEventArgs",
+          "startLine": 152,
+          "endLine": 156,
+          "params": [
+            "testPlanRun",
+            "logStream"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EventResultListener",
+          "startLine": 20,
+          "endLine": 103,
+          "methods": [
+            "EventResultListener",
+            "OnTestPlanRunStart",
+            "OnTestStepRunStart",
+            "OnResultPublished",
+            "OnTestStepRunCompleted",
+            "OnTestPlanRunCompleted",
+            "Close",
+            "RaiseTestPlanRunStarted",
+            "RaiseTestStepRunStarted",
+            "RaiseResultPublished",
+            "RaiseTestStepRunCompleted",
+            "RaiseTestPlanRunCompleted"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestPlanRunStartedEventArgs",
+          "startLine": 105,
+          "endLine": 113,
+          "methods": [
+            "TestPlanRunStartedEventArgs"
+          ],
+          "properties": [
+            "TestPlanRun"
+          ]
+        },
+        {
+          "name": "TestStepRunStartedEventArgs",
+          "startLine": 115,
+          "endLine": 123,
+          "methods": [
+            "TestStepRunStartedEventArgs"
+          ],
+          "properties": [
+            "TestStepRun"
+          ]
+        },
+        {
+          "name": "ResultPublishedEventArgs",
+          "startLine": 125,
+          "endLine": 135,
+          "methods": [
+            "ResultPublishedEventArgs"
+          ],
+          "properties": [
+            "StepRunId",
+            "ResultTable"
+          ]
+        },
+        {
+          "name": "TestStepRunCompletedEventArgs",
+          "startLine": 137,
+          "endLine": 145,
+          "methods": [
+            "TestStepRunCompletedEventArgs"
+          ],
+          "properties": [
+            "TestStepRun"
+          ]
+        },
+        {
+          "name": "TestPlanRunCompletedEventArgs",
+          "startLine": 147,
+          "endLine": 157,
+          "methods": [
+            "TestPlanRunCompletedEventArgs"
+          ],
+          "properties": [
+            "TestPlanRun",
+            "LogStream"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "EventResultListener",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "OnResultPublished",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "EventResultListener",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanRun",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanRunStartedEventArgs",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanRunStartedEventArgs",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "TestStepRun",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "TestStepRunStartedEventArgs",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "TestStepRunStartedEventArgs",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "StepRunId",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "ResultTable",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "ResultPublishedEventArgs",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "ResultPublishedEventArgs",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "TestStepRun",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "TestStepRunCompletedEventArgs",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "TestStepRunCompletedEventArgs",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanRun",
+          "line": 149,
+          "isDefault": false
+        },
+        {
+          "name": "LogStream",
+          "line": 150,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanRunCompletedEventArgs",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanRunCompletedEventArgs",
+          "line": 147,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "new TestPlanRunStartedEventArgs",
+          "lineNumber": 32
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "RaiseTestPlanRunStarted",
+          "lineNumber": 33
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "new TestStepRunStartedEventArgs",
+          "lineNumber": 38
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "RaiseTestStepRunStarted",
+          "lineNumber": 39
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "new ResultPublishedEventArgs",
+          "lineNumber": 44
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "RaiseResultPublished",
+          "lineNumber": 45
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "OnActivity",
+          "lineNumber": 46
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "new TestStepRunCompletedEventArgs",
+          "lineNumber": 51
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "RaiseTestStepRunCompleted",
+          "lineNumber": 52
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "new TestPlanRunCompletedEventArgs",
+          "lineNumber": 57
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "RaiseTestPlanRunCompleted",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 63
+        },
+        {
+          "caller": "RaiseTestPlanRunStarted",
+          "callee": "handler",
+          "lineNumber": 72
+        },
+        {
+          "caller": "RaiseTestStepRunStarted",
+          "callee": "handler",
+          "lineNumber": 79
+        },
+        {
+          "caller": "RaiseResultPublished",
+          "callee": "handler",
+          "lineNumber": 86
+        },
+        {
+          "caller": "RaiseTestStepRunCompleted",
+          "callee": "handler",
+          "lineNumber": 93
+        },
+        {
+          "caller": "RaiseTestPlanRunCompleted",
+          "callee": "handler",
+          "lineNumber": 100
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 25,
+        "functionCount": 17,
+        "classCount": 6
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 114,
+      "nonEmptyLines": 99,
+      "functions": [
+        {
+          "name": "ExampleResultListener",
+          "startLine": 30,
+          "endLine": 33,
+          "params": []
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "startLine": 35,
+          "endLine": 38,
+          "params": [
+            "planRun"
+          ]
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "startLine": 43,
+          "endLine": 49,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "OnResultPublished",
+          "startLine": 51,
+          "endLine": 93,
+          "params": [
+            "stepRunId",
+            "resultTable"
+          ]
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "startLine": 95,
+          "endLine": 106,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "startLine": 108,
+          "endLine": 112,
+          "params": [
+            "planRun",
+            "logStream"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExampleResultListener",
+          "startLine": 25,
+          "endLine": 113,
+          "methods": [
+            "ExampleResultListener",
+            "OnTestPlanRunStart",
+            "OnTestStepRunStart",
+            "OnResultPublished",
+            "OnTestStepRunCompleted",
+            "OnTestPlanRunCompleted"
+          ],
+          "properties": [
+            "activeTestStepRuns"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExampleResultListener",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "OnResultPublished",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "ExampleResultListener",
+          "line": 25,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "Log.Info",
+          "lineNumber": 37
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "Log.Info",
+          "lineNumber": 45
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "base.OnResultPublished",
+          "lineNumber": 57
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "Log.Info",
+          "lineNumber": 63
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "new StringBuilder",
+          "lineNumber": 66
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "sb.AppendFormat",
+          "lineNumber": 69
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "Log.Info",
+          "lineNumber": 71
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "sb.ToString",
+          "lineNumber": 71
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "sb.Clear",
+          "lineNumber": 76
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "sb.AppendFormat",
+          "lineNumber": 77
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "sb.AppendFormat",
+          "lineNumber": 83
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "rc.Data.GetValue",
+          "lineNumber": 83
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "sb.AppendFormat",
+          "lineNumber": 87
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "sb.Append",
+          "lineNumber": 90
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "Log.Info",
+          "lineNumber": 91
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "sb.ToString",
+          "lineNumber": 91
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "Log.Info",
+          "lineNumber": 97
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "activeTestStepRuns.Remove",
+          "lineNumber": 105
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Log.Info",
+          "lineNumber": 110
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 178,
+      "nonEmptyLines": 159,
+      "functions": [
+        {
+          "name": "ZipArtifactsResultListener",
+          "startLine": 33,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "startLine": 38,
+          "endLine": 48,
+          "params": [
+            "planRun"
+          ]
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "startLine": 50,
+          "endLine": 112,
+          "params": [
+            "planRun",
+            "logStream"
+          ]
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "startLine": 117,
+          "endLine": 121,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "startLine": 123,
+          "endLine": 127,
+          "params": [
+            "stepRun"
+          ]
+        },
+        {
+          "name": "GetPlanRunId",
+          "startLine": 129,
+          "endLine": 139,
+          "params": [
+            "runId"
+          ]
+        },
+        {
+          "name": "GetTmpFileName",
+          "startLine": 141,
+          "endLine": 146,
+          "params": [
+            "run"
+          ]
+        },
+        {
+          "name": "OnArtifactPublished",
+          "startLine": 151,
+          "endLine": 176,
+          "params": [
+            "run",
+            "artifactStream",
+            "artifactName"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ZipArtifactsResultListener",
+          "startLine": 23,
+          "endLine": 177,
+          "methods": [
+            "ZipArtifactsResultListener",
+            "OnTestPlanRunStart",
+            "OnTestPlanRunCompleted",
+            "OnTestStepRunStart",
+            "OnTestStepRunCompleted",
+            "GetPlanRunId",
+            "GetTmpFileName",
+            "OnArtifactPublished"
+          ],
+          "properties": [
+            "ZipFile",
+            "parentMap"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ZipFile",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "ZipArtifactsResultListener",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunStart",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunStart",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestStepRunCompleted",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "OnArtifactPublished",
+          "line": 151,
+          "isDefault": false
+        },
+        {
+          "name": "ZipArtifactsResultListener",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "base.OnTestPlanRunStart",
+          "lineNumber": 44
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "GetTmpFileName",
+          "lineNumber": 45
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "File.OpenWrite",
+          "lineNumber": 46
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "new ZipArchive(fstr, ZipArchiveMode.Create, false).Dispose",
+          "lineNumber": 47
+        },
+        {
+          "caller": "OnTestPlanRunStart",
+          "callee": "new ZipArchive",
+          "lineNumber": 47
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "base.OnTestPlanRunCompleted",
+          "lineNumber": 56
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "GetTmpFileName",
+          "lineNumber": 58
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "ZipFile.Expand",
+          "lineNumber": 60
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 64
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 64
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 65
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 66
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "File.Move",
+          "lineNumber": 68
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "e.Message.Contains",
+          "lineNumber": 72
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.GetExtension",
+          "lineNumber": 75
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "File.Exists",
+          "lineNumber": 81
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "File.Move",
+          "lineNumber": 83
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.ChangeExtension",
+          "lineNumber": 92
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "File.Exists",
+          "lineNumber": 93
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "File.Move",
+          "lineNumber": 95
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "this.Log.Debug",
+          "lineNumber": 107
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 107
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "planRun.PublishArtifactAsync",
+          "lineNumber": 111
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "File.OpenRead",
+          "lineNumber": 111
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.GetFileName",
+          "lineNumber": 111
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "base.OnTestStepRunStart",
+          "lineNumber": 119
+        },
+        {
+          "caller": "OnTestStepRunStart",
+          "callee": "parentMap.Add",
+          "lineNumber": 120
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "base.OnTestStepRunCompleted",
+          "lineNumber": 125
+        },
+        {
+          "caller": "OnTestStepRunCompleted",
+          "callee": "parentMap.Remove",
+          "lineNumber": 126
+        },
+        {
+          "caller": "GetPlanRunId",
+          "callee": "parentMap.TryGetValue",
+          "lineNumber": 134
+        },
+        {
+          "caller": "GetTmpFileName",
+          "callee": "GetPlanRunId",
+          "lineNumber": 143
+        },
+        {
+          "caller": "OnArtifactPublished",
+          "callee": "GetTmpFileName",
+          "lineNumber": 155
+        },
+        {
+          "caller": "OnArtifactPublished",
+          "callee": "File.Exists",
+          "lineNumber": 156
+        },
+        {
+          "caller": "OnArtifactPublished",
+          "callee": "new FileStream",
+          "lineNumber": 160
+        },
+        {
+          "caller": "OnArtifactPublished",
+          "callee": "new ZipArchive",
+          "lineNumber": 161
+        },
+        {
+          "caller": "OnArtifactPublished",
+          "callee": "archive.CreateEntry",
+          "lineNumber": 164
+        },
+        {
+          "caller": "OnArtifactPublished",
+          "callee": "entry.Open",
+          "lineNumber": 165
+        },
+        {
+          "caller": "OnArtifactPublished",
+          "callee": "artifactStream.CopyTo",
+          "lineNumber": 167
+        },
+        {
+          "caller": "OnArtifactPublished",
+          "callee": "artifactStream.Close",
+          "lineNumber": 174
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/AvailableValuesAttributeExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 78,
+      "nonEmptyLines": 69,
+      "functions": [
+        {
+          "name": "AvailableValuesAttributeExample",
+          "startLine": 67,
+          "endLine": 71,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 73,
+          "endLine": 76,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AvailableValuesAttributeExample",
+          "startLine": 20,
+          "endLine": 77,
+          "methods": [
+            "AvailableValuesAttributeExample",
+            "Run"
+          ],
+          "properties": [
+            "_listOfAvailableValues",
+            "ListOfAvailableValues",
+            "SelectedValue",
+            "SelectedValues",
+            "Duts",
+            "SelectedDut"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ListOfAvailableValues",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "SelectedValue",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "SelectedValues",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "Duts",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "SelectedDut",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "AvailableValuesAttributeExample",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "AvailableValuesAttributeExample",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AvailableValuesAttributeExample",
+          "callee": "new List<string>",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/BrowsableAttributeExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "BrowsableAttributeExample",
+          "startLine": 35,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 42,
+          "endLine": 45,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BrowsableAttributeExample",
+          "startLine": 19,
+          "endLine": 47,
+          "methods": [
+            "BrowsableAttributeExample",
+            "Run"
+          ],
+          "properties": [
+            "Editable",
+            "HiddenFromGui",
+            "ReadOnly"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Editable",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "HiddenFromGui",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "ReadOnly",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "BrowsableAttributeExample",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "BrowsableAttributeExample",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 40,
+          "endLine": 65,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ColumnDisplayAttributeExample",
+          "startLine": 29,
+          "endLine": 66,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "RandomSeed",
+            "OutBin"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OutBin",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "ColumnDisplayAttributeExample",
+          "line": 29,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "Math.Abs",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Run",
+          "callee": "Math.Sin",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Run",
+          "callee": "RandomSeed.NextDouble",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Run",
+          "callee": "v.ToString",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 63
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DefaultValueExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 29,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 24,
+          "endLine": 27,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "DefaultValueExample",
+          "startLine": 19,
+          "endLine": 28,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "Value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Value",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "DefaultValueExample",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DisplayAttributeExample.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 112,
+      "nonEmptyLines": 96,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 107,
+          "endLine": 110,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "DisplayAttributeExample",
+          "startLine": 21,
+          "endLine": 111,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "DisplayName",
+            "DisplayNameWithDescription",
+            "DisplayNameWithGroup",
+            "DisplayNameCollapsedGroup",
+            "DisplayNameOrder1",
+            "DisplayNameOrder2",
+            "SecondInGroup1",
+            "FirstInGroup1",
+            "FirstInGroup2",
+            "SecondInGroup2"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DisplayName",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "DisplayNameWithDescription",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "DisplayNameWithGroup",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "DisplayNameCollapsedGroup",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "DisplayNameOrder1",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "DisplayNameOrder2",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "SecondInGroup1",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "FirstInGroup1",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "FirstInGroup2",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "SecondInGroup2",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "DisplayAttributeExample",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DynamicNameDisplayAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "DynamicName",
+          "startLine": 35,
+          "endLine": 38,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 40,
+          "endLine": 43,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "DynamicName",
+          "startLine": 28,
+          "endLine": 44,
+          "methods": [
+            "DynamicName",
+            "Run"
+          ],
+          "properties": [
+            "MyValue"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MyValue",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "DynamicName",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "DynamicName",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    }
+  ]
+}

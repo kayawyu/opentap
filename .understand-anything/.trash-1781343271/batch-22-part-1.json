@@ -1,0 +1,2430 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/ResultListenerValidator.cs",
+      "type": "file",
+      "name": "ResultListenerValidator.cs",
+      "filePath": "Engine.UnitTests/ResultListenerValidator.cs",
+      "summary": "ResultListener 的测试辅助子类，用于校验 ResultListener 生命周期行为的正确性，包括 Open/Close 顺序、ResultPublished 事件回调以及 TestPlan/TestStep 运行事件的处理流程。",
+      "tags": [
+        "result-listener",
+        "测试辅助",
+        "validator",
+        "lifecycle",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/ResultListenerValidator.cs:ResultListenerValidator",
+      "type": "class",
+      "name": "ResultListenerValidator",
+      "filePath": "Engine.UnitTests/ResultListenerValidator.cs",
+      "lineRange": [
+        11,
+        151
+      ],
+      "summary": "ResultListener 的测试辅助子类，用于验证 ResultListener 生命周期回调的正确调用顺序和线程安全性。",
+      "tags": [
+        "result-listener",
+        "测试辅助",
+        "validator"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListenerValidator.cs:Open",
+      "type": "function",
+      "name": "Open",
+      "filePath": "Engine.UnitTests/ResultListenerValidator.cs",
+      "lineRange": [
+        43,
+        56
+      ],
+      "summary": "打开 ResultListener，调用 NeedsOpen 校验并设置 IsOpen 状态，依次调用 OnTestPlanRunStart 和 OnTestStepRunStart。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListenerValidator.cs:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "Engine.UnitTests/ResultListenerValidator.cs",
+      "lineRange": [
+        59,
+        72
+      ],
+      "summary": "关闭 ResultListener，调用 NeedsOpen 校验状态，依次调用 OnTestStepRunCompleted 和 OnTestPlanRunCompleted。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListenerValidator.cs:OnResultPublished",
+      "type": "function",
+      "name": "OnResultPublished",
+      "filePath": "Engine.UnitTests/ResultListenerValidator.cs",
+      "lineRange": [
+        75,
+        87
+      ],
+      "summary": "处理结果发布事件，校验 IsOpen 和 IsTestPlanRunning 状态后在锁内记录结果。",
+      "tags": [
+        "test",
+        "result-table"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestPlanRunStart",
+      "type": "function",
+      "name": "OnTestPlanRunStart",
+      "filePath": "Engine.UnitTests/ResultListenerValidator.cs",
+      "lineRange": [
+        90,
+        103
+      ],
+      "summary": "处理测试计划开始事件，在锁内校验并设置 IsTestPlanRunning 为 true。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestPlanRunCompleted",
+      "type": "function",
+      "name": "OnTestPlanRunCompleted",
+      "filePath": "Engine.UnitTests/ResultListenerValidator.cs",
+      "lineRange": [
+        106,
+        120
+      ],
+      "summary": "处理测试计划完成事件，在锁内设置 IsTestPlanRunning 为 false。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestStepRunStart",
+      "type": "function",
+      "name": "OnTestStepRunStart",
+      "filePath": "Engine.UnitTests/ResultListenerValidator.cs",
+      "lineRange": [
+        123,
+        135
+      ],
+      "summary": "处理测试步骤开始事件，保护性地在锁内校验运行状态。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestStepRunCompleted",
+      "type": "function",
+      "name": "OnTestStepRunCompleted",
+      "filePath": "Engine.UnitTests/ResultListenerValidator.cs",
+      "lineRange": [
+        138,
+        150
+      ],
+      "summary": "处理测试步骤完成事件，保护性地在锁内校验运行状态。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "type": "file",
+      "name": "ResultProxyTests.cs",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "summary": "ResultProxy（结果代理）功能的 NUnit 测试集合，覆盖大数值、NaN、对象结果、派生对象、匿名对象、ResultTable 命名与优化、ResultTable 合并异常等场景。",
+      "tags": [
+        "result-proxy",
+        "test",
+        "serialization",
+        "result-table",
+        "unit-test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "type": "class",
+      "name": "ResultProxyTests",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        14,
+        437
+      ],
+      "summary": "ResultProxyTests 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultProxyTests.cs:LargeValueTest",
+      "type": "function",
+      "name": "LargeValueTest",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        29,
+        40
+      ],
+      "summary": "测试发布大数值（double.MaxValue）结果并通过 ResultProxy 读取验证正确性。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultProxyTests.cs:NaNValueTest",
+      "type": "function",
+      "name": "NaNValueTest",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        42,
+        53
+      ],
+      "summary": "测试发布 NaN 结果值并通过 ResultProxy 读取，验证 NaN 正确处理。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultProxyTests.cs:ObjectResultTest",
+      "type": "function",
+      "name": "ObjectResultTest",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        76,
+        106
+      ],
+      "summary": "测试通过 ResultProxy 读取对象类型结果，验证结果列名称与值的正确映射。",
+      "tags": [
+        "test",
+        "result-table"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultProxyTests.cs:DerivedObjectResultTest",
+      "type": "function",
+      "name": "DerivedObjectResultTest",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        120,
+        144
+      ],
+      "summary": "测试派生类对象结果的 ResultProxy 读取，验证继承属性在结果列中的正确处理。",
+      "tags": [
+        "test",
+        "result-table"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultProxyTests.cs:AnonymousObjectResultTest",
+      "type": "function",
+      "name": "AnonymousObjectResultTest",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        146,
+        176
+      ],
+      "summary": "测试匿名对象结果的 ResultProxy 读取，验证动态类型结果的处理能力。",
+      "tags": [
+        "test",
+        "result-table"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultProxyTests.cs:ResultsProxyTest",
+      "type": "function",
+      "name": "ResultsProxyTest",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        204,
+        256
+      ],
+      "summary": "综合测试 ResultProxy 的结果表代理功能，验证多列、多行、组名延迟发布等复杂场景。",
+      "tags": [
+        "test",
+        "result-table"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultProxyTests.cs:ResultTableName",
+      "type": "function",
+      "name": "ResultTableName",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        269,
+        287
+      ],
+      "summary": "测试 ResultTable 的命名机制，验证 DisplayAttribute 和 Name 属性对表名的影响。",
+      "tags": [
+        "test",
+        "result-table"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultProxyTests.cs:ResultTableAndColumnParameters",
+      "type": "function",
+      "name": "ResultTableAndColumnParameters",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        353,
+        386
+      ],
+      "summary": "测试 ResultTable 和 ResultColumn 的 Parameters 属性，验证序列化与反序列化正确性。",
+      "tags": [
+        "test",
+        "result-table",
+        "parameterization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultProxyTests.cs:ResultOptimizerTest",
+      "type": "function",
+      "name": "ResultOptimizerTest",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        388,
+        419
+      ],
+      "summary": "测试 ResultOptimizer 对多列结果表（相同 Schema）的合并优化功能。",
+      "tags": [
+        "test",
+        "result-table"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultProxyTests.cs:TestResultTableMergeBug",
+      "type": "function",
+      "name": "TestResultTableMergeBug",
+      "filePath": "Engine.UnitTests/ResultProxyTests.cs",
+      "lineRange": [
+        424,
+        436
+      ],
+      "summary": "回归测试：验证特定情况下 ResultTable 合并异常的场景。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table",
+        "regression-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/Results2.cs",
+      "type": "file",
+      "name": "Results2.cs",
+      "filePath": "Engine.UnitTests/Results2.cs",
+      "summary": "多线程并发发布结果的竞态条件测试，包含 ResultRow 数据模型、PublishResultsSameValues 辅助 Step，以及大量结果发布、参数竞态、ResultListener 竞态等场景验证。",
+      "tags": [
+        "result",
+        "race-condition",
+        "multi-threading",
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/Results2.cs:PublishResultsSameValues",
+      "type": "class",
+      "name": "PublishResultsSameValues",
+      "filePath": "Engine.UnitTests/Results2.cs",
+      "lineRange": [
+        18,
+        35
+      ],
+      "summary": "用于发布多个相同随机值结果的 TestStep 辅助类，Count 属性控制发布数量。",
+      "tags": [
+        "test-step",
+        "helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/Results2.cs:PublishResultsSameValues2",
+      "type": "class",
+      "name": "PublishResultsSameValues2",
+      "filePath": "Engine.UnitTests/Results2.cs",
+      "lineRange": [
+        36,
+        49
+      ],
+      "summary": "用于发布多个相同值（使用递增计数器）结果的 TestStep 辅助类。",
+      "tags": [
+        "test-step",
+        "helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/Results2.cs:Results2",
+      "type": "class",
+      "name": "Results2",
+      "filePath": "Engine.UnitTests/Results2.cs",
+      "lineRange": [
+        51,
+        160
+      ],
+      "summary": "Results2 类。",
+      "tags": [
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/Results2.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "Engine.UnitTests/Results2.cs",
+      "lineRange": [
+        23,
+        34
+      ],
+      "summary": "发布多个相同随机值的结果行，用于测试结果发布的正确性与性能。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/Results2.cs:TestManyResults",
+      "type": "function",
+      "name": "TestManyResults",
+      "filePath": "Engine.UnitTests/Results2.cs",
+      "lineRange": [
+        54,
+        92
+      ],
+      "summary": "性能测试：发布大量结果（按 stepType 参数）并验证结果数量，检测大规模结果发布的正确性。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/Results2.cs:TestSetParameterRaceCondition",
+      "type": "function",
+      "name": "TestSetParameterRaceCondition",
+      "filePath": "Engine.UnitTests/Results2.cs",
+      "lineRange": [
+        94,
+        128
+      ],
+      "summary": "并发竞态测试：多线程同时通过 SetParameter 设置参数，验证无死锁或数据损坏。",
+      "tags": [
+        "test",
+        "unit-test",
+        "parameterization",
+        "concurrency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/Results2.cs:TestRacyResultListeners",
+      "type": "function",
+      "name": "TestRacyResultListeners",
+      "filePath": "Engine.UnitTests/Results2.cs",
+      "lineRange": [
+        143,
+        159
+      ],
+      "summary": "竞态测试：同时运行多个快速发布结果的子计划，验证 ResultListener 在并发场景下的正确性。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ResultTest.cs",
+      "type": "file",
+      "name": "ResultTest.cs",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "summary": "ResultTable、ResultParameter、ResultColumn 等核心结果类型的全面单元测试，覆盖简单结果发布、参数构造、元数据、表可变性、多组参数、WorkQueue 释放及属性 Getter 异常处理等场景。",
+      "tags": [
+        "result-table",
+        "result-parameter",
+        "test",
+        "serialization",
+        "unit-test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "type": "class",
+      "name": "ResultTest",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        13,
+        582
+      ],
+      "summary": "ResultTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults",
+      "type": "function",
+      "name": "TestSimpleResults",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        73,
+        90
+      ],
+      "summary": "测试简单的结果发布与读取，验证 ResultTable 基本列和行数据的正确性。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults4",
+      "type": "function",
+      "name": "TestSimpleResults4",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        92,
+        117
+      ],
+      "summary": "测试发布复杂对象数组结果（List<Result>），验证嵌套类型列名映射。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestResultParameters",
+      "type": "function",
+      "name": "TestResultParameters",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        119,
+        131
+      ],
+      "summary": "测试 ResultParameter 参数的正确序列化与反序列化。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table",
+        "parameterization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults2",
+      "type": "function",
+      "name": "TestSimpleResults2",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        133,
+        148
+      ],
+      "summary": "测试使用 double 类型属性的 Result 发布，验证数值结果的正确性。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults3",
+      "type": "function",
+      "name": "TestSimpleResults3",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        150,
+        183
+      ],
+      "summary": "测试 mergeResults 场景，验证两个步骤合并结果时的行列正确性。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestResultMetadataSimple",
+      "type": "function",
+      "name": "TestResultMetadataSimple",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        185,
+        194
+      ],
+      "summary": "测试 ResultTable 元数据（Metadata）的简单序列化。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestResultMetadata",
+      "type": "function",
+      "name": "TestResultMetadata",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        197,
+        211
+      ],
+      "summary": "测试 ResultTable 元数据的完整序列化与反序列化。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestResultParameterConstructorArguments",
+      "type": "function",
+      "name": "TestResultParameterConstructorArguments",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        213,
+        230
+      ],
+      "summary": "测试 ResultParameter 构造参数的序列化与反序列化。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table",
+        "parameterization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestResultTableMutability",
+      "type": "function",
+      "name": "TestResultTableMutability",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        248,
+        259
+      ],
+      "summary": "测试 ResultTable 列的可变性——添加列并修改列属性后验证序列化。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestResultParametersMultipleGroups",
+      "type": "function",
+      "name": "TestResultParametersMultipleGroups",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        318,
+        353
+      ],
+      "summary": "测试多组 ResultParameters 的序列化与参数化行为。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table",
+        "parameterization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestWorkQueueDisposed",
+      "type": "function",
+      "name": "TestWorkQueueDisposed",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        383,
+        411
+      ],
+      "summary": "测试 WorkQueue 在 Open/Close 生命周期中正确处理结果的场景。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:TestResultsOptimizeBug",
+      "type": "function",
+      "name": "TestResultsOptimizeBug",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        413,
+        443
+      ],
+      "summary": "回归测试：验证 ResultOptimizer 在特定序列化场景下的异常修复。",
+      "tags": [
+        "test",
+        "unit-test",
+        "result-table",
+        "regression-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:PropertyGetterExceptionInUpdateParamsGivesErrorVerdictAndRespectBreakConditions",
+      "type": "function",
+      "name": "PropertyGetterExceptionInUpdateParamsGivesErrorVerdictAndRespectBreakConditions",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        486,
+        527
+      ],
+      "summary": "测试在 UpdateParameters 期间属性 Getter 抛出异常时，设置 Error Verdict 并遵守 Break 条件的行为。",
+      "tags": [
+        "test",
+        "break"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:PropertyGetterExceptionInGetParamsGivesErrorVerdictWithoutRunning",
+      "type": "function",
+      "name": "PropertyGetterExceptionInGetParamsGivesErrorVerdictWithoutRunning",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        533,
+        558
+      ],
+      "summary": "测试在 GetParameters 期间属性 Getter 抛出异常时，设置 Error Verdict 且不执行 Run 的行为。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ResultTest.cs:GetParamsHandlesPropertyGetterException",
+      "type": "function",
+      "name": "GetParamsHandlesPropertyGetterException",
+      "filePath": "Engine.UnitTests/ResultTest.cs",
+      "lineRange": [
+        564,
+        581
+      ],
+      "summary": "验证 GetParameters 正确捕获并处理属性 Getter 异常。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/RunCliActionTest.cs",
+      "type": "file",
+      "name": "RunCliActionTest.cs",
+      "filePath": "Engine.UnitTests/RunCliActionTest.cs",
+      "summary": "RunCliAction（CLI 运行动作）的单元测试，验证通过 RunCliAction 列出外部参数（ListExternalParameters）的功能。",
+      "tags": [
+        "cli-action",
+        "test",
+        "external-parameters",
+        "unit-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/RunCliActionTest.cs:RunCliActionTest",
+      "type": "class",
+      "name": "RunCliActionTest",
+      "filePath": "Engine.UnitTests/RunCliActionTest.cs",
+      "lineRange": [
+        10,
+        58
+      ],
+      "summary": "RunCliActionTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/RunCliActionTest.cs:ListExternalParameters",
+      "type": "function",
+      "name": "ListExternalParameters",
+      "filePath": "Engine.UnitTests/RunCliActionTest.cs",
+      "lineRange": [
+        14,
+        57
+      ],
+      "summary": "测试 RunCliAction 的 ListExternal 模式，验证列出外部参数功能。",
+      "tags": [
+        "test",
+        "parameterization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "type": "file",
+      "name": "ScopeParametersTest.cs",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "summary": "Scope（作用域）参数的综合性单元测试，涵盖参数化检测、并行添加参数、多层作用域序列化、循环作用域、Sweep 循环（范围/禁用多选/嵌套/空值）、ScopedInput 注解、可合并作用域、嵌套属性反参数化、动态成员以及输出参数化等场景。",
+      "tags": [
+        "scope",
+        "parameterization",
+        "sweep-loop",
+        "test",
+        "unit-test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "type": "class",
+      "name": "ScopeParametersTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        11,
+        1090
+      ],
+      "summary": "ScopeParametersTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:TestIsParameterized",
+      "type": "function",
+      "name": "TestIsParameterized",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        14,
+        36
+      ],
+      "summary": "测试 IsParameterized 检测，验证作用域内步骤参数化状态的正确判断。",
+      "tags": [
+        "test",
+        "unit-test",
+        "parameterization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopeStepTest",
+      "type": "function",
+      "name": "ScopeStepTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        38,
+        86
+      ],
+      "summary": "测试作用域步骤内的参数化与值传播，验证 Scope 成员参数化后在父级与子级的可见性。",
+      "tags": [
+        "test",
+        "scope"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:ParallelAddParametersTest",
+      "type": "function",
+      "name": "ParallelAddParametersTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        88,
+        121
+      ],
+      "summary": "测试并行添加参数到 Scope 的安全性，验证无竞态条件。",
+      "tags": [
+        "test",
+        "parameterization",
+        "concurrency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:MultiLevelScopeSerialization",
+      "type": "function",
+      "name": "MultiLevelScopeSerialization",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        123,
+        143
+      ],
+      "summary": "测试多层嵌套 Scope 的序列化与反序列化正确性。",
+      "tags": [
+        "test",
+        "serialization",
+        "scope"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:CyclicScopeTest",
+      "type": "function",
+      "name": "CyclicScopeTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        145,
+        177
+      ],
+      "summary": "测试循环引用 Scope 的检测与处理，验证不会导致死循环或序列化异常。",
+      "tags": [
+        "test",
+        "scope"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopDisabledMembersOnMultiSelect",
+      "type": "function",
+      "name": "SweepLoopDisabledMembersOnMultiSelect",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        191,
+        226
+      ],
+      "summary": "测试在 MultiSelect 模式下，禁用成员在 SweepLoop 中不参与迭代。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopRange2Test",
+      "type": "function",
+      "name": "SweepLoopRange2Test",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        228,
+        278
+      ],
+      "summary": "测试 SweepLoopRange 的 2 维扫描：验证范围和点数参数化及结果正确性。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopRange3Test",
+      "type": "function",
+      "name": "SweepLoopRange3Test",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        280,
+        324
+      ],
+      "summary": "测试 SweepLoopRange 的 3 维扫描，验证多维度参数组合的正确性。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopRange4Test",
+      "type": "function",
+      "name": "SweepLoopRange4Test",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        326,
+        370
+      ],
+      "summary": "测试 SweepLoopRange 的 4 维扫描，验证高维度参数扫描的正确性。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoop2Test",
+      "type": "function",
+      "name": "SweepLoop2Test",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        372,
+        452
+      ],
+      "summary": "综合测试 SweepLoop 二维扫频（频率+功率），验证执行顺序、迭代计数、参数值、结果输出及 Verdict。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopedInputAnnotationTest",
+      "type": "function",
+      "name": "ScopedInputAnnotationTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        454,
+        478
+      ],
+      "summary": "测试 ScopedInput 注解在 Scope 参数化场景下的行为。",
+      "tags": [
+        "test",
+        "scope"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopedInputAnnotationWithSweepTest",
+      "type": "function",
+      "name": "ScopedInputAnnotationWithSweepTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        480,
+        509
+      ],
+      "summary": "测试 ScopedInput 注解与 SweepLoop 组合使用时的参数传播。",
+      "tags": [
+        "test",
+        "sweep",
+        "scope"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopedInputAnnotationWithSweepTestSerialized",
+      "type": "function",
+      "name": "ScopedInputAnnotationWithSweepTestSerialized",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        511,
+        538
+      ],
+      "summary": "测试 ScopedInput + SweepLoop 场景序列化后的参数反序列化及重新执行。",
+      "tags": [
+        "test",
+        "sweep",
+        "serialization",
+        "scope"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopNoValuesSelected",
+      "type": "function",
+      "name": "SweepLoopNoValuesSelected",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        540,
+        562
+      ],
+      "summary": "测试 SweepLoop 无选中值时的行为，验证不会抛出异常且正常跳过。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopNullValueProperty",
+      "type": "function",
+      "name": "SweepLoopNullValueProperty",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        570,
+        587
+      ],
+      "summary": "测试当 SweepLoop 属性值为 null 时的边界处理。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:MergeableScopeTest",
+      "type": "function",
+      "name": "MergeableScopeTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        605,
+        629
+      ],
+      "summary": "测试可合并 Scope 的序列化，验证合并后属性保留正确性。",
+      "tags": [
+        "test",
+        "scope"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:MergeableScopeTest2",
+      "type": "function",
+      "name": "MergeableScopeTest2",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        631,
+        662
+      ],
+      "summary": "测试可合并 Scope 的反序列化和执行，验证合并功能在运行时正确工作。",
+      "tags": [
+        "test",
+        "scope"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:NestedPropertyUnparameterize",
+      "type": "function",
+      "name": "NestedPropertyUnparameterize",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        664,
+        693
+      ],
+      "summary": "测试嵌套属性的反参数化功能，验证取消参数化的属性恢复为直接值。",
+      "tags": [
+        "test",
+        "parameterization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepParameterStepTest",
+      "type": "function",
+      "name": "SweepParameterStepTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        719,
+        735
+      ],
+      "summary": "测试 SweepParameterStep 作为 Scope 子步骤的参数化行为。",
+      "tags": [
+        "test",
+        "sweep",
+        "parameterization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepParameterErrorTest",
+      "type": "function",
+      "name": "SweepParameterErrorTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        737,
+        753
+      ],
+      "summary": "测试 SweepParameter 在参数错误情况下的处理。",
+      "tags": [
+        "test",
+        "sweep",
+        "parameterization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:MultiStepParameterize",
+      "type": "function",
+      "name": "MultiStepParameterize",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        755,
+        773
+      ],
+      "summary": "测试多个步骤同时参数化的行为，验证批量参数化正确性。",
+      "tags": [
+        "test",
+        "parameterization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepResourcesTest",
+      "type": "function",
+      "name": "SweepResourcesTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        794,
+        825
+      ],
+      "summary": "测试 Resource 在 Sweep 场景下的正确 Open/Close 管理。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:DynamicMemberNullTest",
+      "type": "function",
+      "name": "DynamicMemberNullTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        827,
+        849
+      ],
+      "summary": "测试动态成员（DynamicMember）为 null 时的正确处理。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:DynamicMemberNullTest2",
+      "type": "function",
+      "name": "DynamicMemberNullTest2",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        851,
+        874
+      ],
+      "summary": "动态成员为 null 场景的回归测试。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:DynamicTypeDataEqualityTest",
+      "type": "function",
+      "name": "DynamicTypeDataEqualityTest",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        876,
+        904
+      ],
+      "summary": "测试 DynamicMember TypeData 的相等性比较，验证参数化后类型信息的一致性。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:ParameterizeOutputOnParentScope",
+      "type": "function",
+      "name": "ParameterizeOutputOnParentScope",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        939,
+        984
+      ],
+      "summary": "测试父级 Scope 中参数化子步骤的输出属性，验证跨层级输出参数化。",
+      "tags": [
+        "test",
+        "scope",
+        "parameterization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:ParameterizedOutputSerialization",
+      "type": "function",
+      "name": "ParameterizedOutputSerialization",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        986,
+        1032
+      ],
+      "summary": "测试参数化输出属性的序列化与反序列化正确性。",
+      "tags": [
+        "test",
+        "serialization",
+        "parameterization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScopeParametersTest.cs:TestCanParameterizeOutput",
+      "type": "function",
+      "name": "TestCanParameterizeOutput",
+      "filePath": "Engine.UnitTests/ScopeParametersTest.cs",
+      "lineRange": [
+        1050,
+        1089
+      ],
+      "summary": "参数化输出的综合测试，根据 scope 参数在单步或多步场景中验证输出参数化。",
+      "tags": [
+        "test",
+        "unit-test",
+        "parameterization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/ScpiAttributeTest.cs",
+      "type": "file",
+      "name": "ScpiAttributeTest.cs",
+      "filePath": "Engine.UnitTests/ScpiAttributeTest.cs",
+      "summary": "SCPI (Standard Commands for Programmable Instruments) 属性注解的单元测试，验证 ScpiAttribute 在枚举值上的映射正确性及设备发现功能。",
+      "tags": [
+        "scpi",
+        "attribute",
+        "enum",
+        "instrument",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/ScpiAttributeTest.cs:ScpiAttributeTest",
+      "type": "class",
+      "name": "ScpiAttributeTest",
+      "filePath": "Engine.UnitTests/ScpiAttributeTest.cs",
+      "lineRange": [
+        10,
+        132
+      ],
+      "summary": "ScpiAttributeTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/ScpiAttributeTest.cs:DeviceDiscoveryTests",
+      "type": "class",
+      "name": "DeviceDiscoveryTests",
+      "filePath": "Engine.UnitTests/ScpiAttributeTest.cs",
+      "lineRange": [
+        134,
+        143
+      ],
+      "summary": "SCPI 设备发现功能的 NUnit 测试类。",
+      "tags": [
+        "scpi",
+        "device-discovery",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiAttrTest2",
+      "type": "function",
+      "name": "ScpiAttrTest2",
+      "filePath": "Engine.UnitTests/ScpiAttributeTest.cs",
+      "lineRange": [
+        51,
+        67
+      ],
+      "summary": "测试 ScpiAttribute 在属性上的映射，验证反射获取 Scpi 值正确。",
+      "tags": [
+        "test",
+        "scpi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiArrayTest1",
+      "type": "function",
+      "name": "ScpiArrayTest1",
+      "filePath": "Engine.UnitTests/ScpiAttributeTest.cs",
+      "lineRange": [
+        77,
+        88
+      ],
+      "summary": "测试 SCPI 数组属性和命令的映射。",
+      "tags": [
+        "test",
+        "scpi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiArrayTest2",
+      "type": "function",
+      "name": "ScpiArrayTest2",
+      "filePath": "Engine.UnitTests/ScpiAttributeTest.cs",
+      "lineRange": [
+        90,
+        100
+      ],
+      "summary": "测试 SCPI 嵌套结构的数组映射。",
+      "tags": [
+        "test",
+        "scpi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiArrayTest3",
+      "type": "function",
+      "name": "ScpiArrayTest3",
+      "filePath": "Engine.UnitTests/ScpiAttributeTest.cs",
+      "lineRange": [
+        102,
+        112
+      ],
+      "summary": "测试 SCPI 多维数组结构的映射。",
+      "tags": [
+        "test",
+        "scpi"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/ResultListenerValidator.cs",
+      "target": "class:Engine.UnitTests/ResultListenerValidator.cs:ResultListenerValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultListenerValidator.cs:ResultListenerValidator",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:Open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerValidator.cs",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:Open",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultListenerValidator.cs:ResultListenerValidator",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerValidator.cs",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultListenerValidator.cs:ResultListenerValidator",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:OnResultPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerValidator.cs",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:OnResultPublished",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultListenerValidator.cs:ResultListenerValidator",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestPlanRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerValidator.cs",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestPlanRunStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultListenerValidator.cs:ResultListenerValidator",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestPlanRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerValidator.cs",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestPlanRunCompleted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultListenerValidator.cs:ResultListenerValidator",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestStepRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerValidator.cs",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestStepRunStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultListenerValidator.cs:ResultListenerValidator",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestStepRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultListenerValidator.cs",
+      "target": "function:Engine.UnitTests/ResultListenerValidator.cs:OnTestStepRunCompleted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:LargeValueTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:LargeValueTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:NaNValueTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:NaNValueTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:ObjectResultTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:ObjectResultTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:DerivedObjectResultTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:DerivedObjectResultTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:AnonymousObjectResultTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:AnonymousObjectResultTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:ResultsProxyTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:ResultsProxyTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:ResultTableName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:ResultTableName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:ResultTableAndColumnParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:ResultTableAndColumnParameters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:ResultOptimizerTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:ResultOptimizerTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultProxyTests.cs:ResultProxyTests",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:TestResultTableMergeBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultProxyTests.cs",
+      "target": "function:Engine.UnitTests/ResultProxyTests.cs:TestResultTableMergeBug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/Results2.cs",
+      "target": "class:Engine.UnitTests/Results2.cs:PublishResultsSameValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Results2.cs",
+      "target": "class:Engine.UnitTests/Results2.cs:PublishResultsSameValues2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Results2.cs",
+      "target": "class:Engine.UnitTests/Results2.cs:Results2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/Results2.cs:PublishResultsSameValues",
+      "target": "function:Engine.UnitTests/Results2.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Results2.cs",
+      "target": "function:Engine.UnitTests/Results2.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/Results2.cs:Results2",
+      "target": "function:Engine.UnitTests/Results2.cs:TestManyResults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Results2.cs",
+      "target": "function:Engine.UnitTests/Results2.cs:TestManyResults",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/Results2.cs:Results2",
+      "target": "function:Engine.UnitTests/Results2.cs:TestSetParameterRaceCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Results2.cs",
+      "target": "function:Engine.UnitTests/Results2.cs:TestSetParameterRaceCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/Results2.cs:Results2",
+      "target": "function:Engine.UnitTests/Results2.cs:TestRacyResultListeners",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/Results2.cs",
+      "target": "function:Engine.UnitTests/Results2.cs:TestRacyResultListeners",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults4",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults4",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultParameters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestSimpleResults3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultMetadataSimple",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultMetadataSimple",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultMetadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultMetadata",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultParameterConstructorArguments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultParameterConstructorArguments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultTableMutability",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultTableMutability",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultParametersMultipleGroups",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultParametersMultipleGroups",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestWorkQueueDisposed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestWorkQueueDisposed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultsOptimizeBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:TestResultsOptimizeBug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:PropertyGetterExceptionInUpdateParamsGivesErrorVerdictAndRespectBreakConditions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:PropertyGetterExceptionInUpdateParamsGivesErrorVerdictAndRespectBreakConditions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:PropertyGetterExceptionInGetParamsGivesErrorVerdictWithoutRunning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:PropertyGetterExceptionInGetParamsGivesErrorVerdictWithoutRunning",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ResultTest.cs:ResultTest",
+      "target": "function:Engine.UnitTests/ResultTest.cs:GetParamsHandlesPropertyGetterException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ResultTest.cs",
+      "target": "function:Engine.UnitTests/ResultTest.cs:GetParamsHandlesPropertyGetterException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/RunCliActionTest.cs",
+      "target": "class:Engine.UnitTests/RunCliActionTest.cs:RunCliActionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/RunCliActionTest.cs:RunCliActionTest",
+      "target": "function:Engine.UnitTests/RunCliActionTest.cs:ListExternalParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/RunCliActionTest.cs",
+      "target": "function:Engine.UnitTests/RunCliActionTest.cs:ListExternalParameters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:TestIsParameterized",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:TestIsParameterized",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopeStepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopeStepTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ParallelAddParametersTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ParallelAddParametersTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:MultiLevelScopeSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:MultiLevelScopeSerialization",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:CyclicScopeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:CyclicScopeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopDisabledMembersOnMultiSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopDisabledMembersOnMultiSelect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopRange2Test",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopRange2Test",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopRange3Test",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopRange3Test",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopRange4Test",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopRange4Test",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoop2Test",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoop2Test",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopedInputAnnotationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopedInputAnnotationTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopedInputAnnotationWithSweepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopedInputAnnotationWithSweepTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopedInputAnnotationWithSweepTestSerialized",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ScopedInputAnnotationWithSweepTestSerialized",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopNoValuesSelected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopNoValuesSelected",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopNullValueProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepLoopNullValueProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:MergeableScopeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:MergeableScopeTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:MergeableScopeTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:MergeableScopeTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:NestedPropertyUnparameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:NestedPropertyUnparameterize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepParameterStepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepParameterStepTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepParameterErrorTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepParameterErrorTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:MultiStepParameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:MultiStepParameterize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepResourcesTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:SweepResourcesTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:DynamicMemberNullTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:DynamicMemberNullTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:DynamicMemberNullTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:DynamicMemberNullTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:DynamicTypeDataEqualityTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:DynamicTypeDataEqualityTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ParameterizeOutputOnParentScope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ParameterizeOutputOnParentScope",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ParameterizedOutputSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:ParameterizedOutputSerialization",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScopeParametersTest.cs:ScopeParametersTest",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:TestCanParameterizeOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScopeParametersTest.cs",
+      "target": "function:Engine.UnitTests/ScopeParametersTest.cs:TestCanParameterizeOutput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/ScpiAttributeTest.cs",
+      "target": "class:Engine.UnitTests/ScpiAttributeTest.cs:ScpiAttributeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScpiAttributeTest.cs",
+      "target": "class:Engine.UnitTests/ScpiAttributeTest.cs:DeviceDiscoveryTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/ScpiAttributeTest.cs:ScpiAttributeTest",
+      "target": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiAttrTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScpiAttributeTest.cs",
+      "target": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiAttrTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScpiAttributeTest.cs:ScpiAttributeTest",
+      "target": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiArrayTest1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScpiAttributeTest.cs",
+      "target": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiArrayTest1",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScpiAttributeTest.cs:ScpiAttributeTest",
+      "target": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiArrayTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScpiAttributeTest.cs",
+      "target": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiArrayTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/ScpiAttributeTest.cs:ScpiAttributeTest",
+      "target": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiArrayTest3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/ScpiAttributeTest.cs",
+      "target": "function:Engine.UnitTests/ScpiAttributeTest.cs:ScpiArrayTest3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

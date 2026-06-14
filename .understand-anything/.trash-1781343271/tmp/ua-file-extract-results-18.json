@@ -1,0 +1,1429 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "doc/API Documentation/namespaces.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 20,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Annotations/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 53,
+      "nonEmptyLines": 38,
+      "sections": [
+        {
+          "heading": "Custom Controls and Annotations",
+          "level": 2,
+          "line": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Appendix/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 268,
+      "nonEmptyLines": 185,
+      "sections": [
+        {
+          "heading": "Test Steps",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Result Listeners",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "Other Uses",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "Threading and Parallel Processing",
+          "level": 1,
+          "line": 61
+        },
+        {
+          "heading": "Parallel Steps",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "Deferred Processing",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "Sequential Processing",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "Deferred Processing",
+          "level": 3,
+          "line": 105
+        },
+        {
+          "heading": "Visualization in KS8400",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "Implementing Deferred Processing",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "TapThreads",
+          "level": 2,
+          "line": 150
+        },
+        {
+          "heading": "Starting a TapThread",
+          "level": 3,
+          "line": 158
+        },
+        {
+          "heading": "Obtaining Results",
+          "level": 3,
+          "line": 173
+        },
+        {
+          "heading": "Sleeping",
+          "level": 3,
+          "line": 199
+        },
+        {
+          "heading": "Aborting",
+          "level": 3,
+          "line": 213
+        },
+        {
+          "heading": "Creating New Thread Contexts",
+          "level": 3,
+          "line": 247
+        },
+        {
+          "heading": ".NET Threads and Tasks",
+          "level": 2,
+          "line": 264
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 17
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Attributes/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 293,
+      "nonEmptyLines": 205,
+      "sections": [
+        {
+          "heading": "Attributes Used by OpenTAP",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Attribute Details",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "Display",
+          "level": 3,
+          "line": 52
+        },
+        {
+          "heading": "Embed Properties Attribute",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "EnabledIf Attribute",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "Flags Attribute",
+          "level": 3,
+          "line": 141
+        },
+        {
+          "heading": "FilePath and DirectoryPath Attributes",
+          "level": 3,
+          "line": 152
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Component Setting/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 84,
+      "nonEmptyLines": 64,
+      "sections": [
+        {
+          "heading": "Global and Grouped Settings",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Creating a New Global/Grouped Settings Dialog",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "Single Instance of Multiple Different Settings",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "List of Similar Settings",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "Reading and Writing Component Settings",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Connection Management",
+          "level": 2,
+          "line": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Continuous Integration/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 116,
+      "nonEmptyLines": 97,
+      "sections": [
+        {
+          "heading": "Continuous Integration (CI/CD)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "GitHub",
+          "level": 2,
+          "line": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Development Essentials/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 126,
+      "nonEmptyLines": 90,
+      "sections": [
+        {
+          "heading": "OpenTAP Plugin Object Hierarchy",
+          "level": 2,
+          "line": 4
+        },
+        {
+          "heading": "Developing Using Interfaces",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "Working with User Input",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "Plugin Settings",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "Setting Attributes",
+          "level": 3,
+          "line": 77
+        },
+        {
+          "heading": "Best Practices For Settings",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "Best Practices for Plugin Development",
+          "level": 2,
+          "line": 111
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Frontpage.html",
+      "language": "html",
+      "fileCategory": "markup",
+      "totalLines": 130,
+      "nonEmptyLines": 128,
+      "metrics": {}
+    },
+    {
+      "path": "doc/Developer Guide/Getting Started in Visual Studio/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 221,
+      "nonEmptyLines": 157,
+      "sections": [
+        {
+          "heading": "Getting Started",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Using the NuGet Package",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "NuGet Features",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "Installation",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "Package Creation",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "Reference Other OpenTAP Packages",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "Versioning Assemblies with OpenTapSetAssemblyVersion",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "SDK Package",
+          "level": 2,
+          "line": 135
+        },
+        {
+          "heading": "SDK Templates",
+          "level": 3,
+          "line": 147
+        },
+        {
+          "heading": "SDK Examples",
+          "level": 3,
+          "line": 184
+        },
+        {
+          "heading": "Offline Development",
+          "level": 2,
+          "line": 197
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Introduction/Notices.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 25,
+      "nonEmptyLines": 17,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Introduction/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 20,
+      "nonEmptyLines": 14,
+      "sections": [
+        {
+          "heading": "Audience",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Suggested Resources",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "PathWave Test Automation",
+          "level": 3,
+          "line": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Known Issues/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 16,
+      "nonEmptyLines": 10,
+      "sections": [
+        {
+          "heading": "Known Issues",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "WinForms Plugins Causes Editor to Freeze or be Unresponsive",
+          "level": 2,
+          "line": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Migrating to .NET 9/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 394,
+      "nonEmptyLines": 260,
+      "sections": [
+        {
+          "heading": "Migrating to .NET 9",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": ".NET 9 Runtime Prerequisite",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "How the Runtime Is Selected",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "ProcessStartInfo Defaults Changed",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "Missing System.IO.Ports API",
+          "level": 3,
+          "line": 85
+        },
+        {
+          "heading": "Other Missing .NET Framework APIs",
+          "level": 3,
+          "line": 114
+        },
+        {
+          "heading": "Assembly Side-Loading Not Supported",
+          "level": 3,
+          "line": 152
+        },
+        {
+          "heading": "AppDomain Changes",
+          "level": 3,
+          "line": 173
+        },
+        {
+          "heading": "Global Assembly Cache (GAC) Not Supported",
+          "level": 3,
+          "line": 190
+        },
+        {
+          "heading": "CET Enabled by Default",
+          "level": 3,
+          "line": 215
+        },
+        {
+          "heading": "BinaryFormatter Removed",
+          "level": 3,
+          "line": 252
+        },
+        {
+          "heading": "Assembly.LoadWithPartialName Removed",
+          "level": 3,
+          "line": 264
+        },
+        {
+          "heading": "Thread.Suspend and Thread.Resume Removed",
+          "level": 3,
+          "line": 276
+        },
+        {
+          "heading": "Thread.Abort Removed",
+          "level": 3,
+          "line": 288
+        },
+        {
+          "heading": "Registry API Changes",
+          "level": 3,
+          "line": 301
+        },
+        {
+          "heading": "System.IO.FileInfo.Length Exception on Missing File",
+          "level": 3,
+          "line": 320
+        },
+        {
+          "heading": "TLS 1.0/1.1 Disabled by Default",
+          "level": 3,
+          "line": 333
+        },
+        {
+          "heading": "HttpWebRequest & WebClient Deprecated",
+          "level": 3,
+          "line": 356
+        },
+        {
+          "heading": "CodeDomProvider Removed for Dynamic Compilation",
+          "level": 3,
+          "line": 368
+        },
+        {
+          "heading": "Remoting Removed",
+          "level": 3,
+          "line": 381
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Package Publishing/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 68,
+      "nonEmptyLines": 52,
+      "sections": [
+        {
+          "heading": "Plugin Publish Checklist",
+          "level": 2,
+          "line": 4
+        },
+        {
+          "heading": "Update the Package Definition (`package.xml`) file:",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "Verify Dependencies",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "Publish the Package",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Uploading from CLI",
+          "level": 3,
+          "line": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Plugin Packaging and Versioning/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 770,
+      "nonEmptyLines": 628,
+      "sections": [
+        {
+          "heading": "Packaging",
+          "level": 2,
+          "line": 4
+        },
+        {
+          "heading": "Packaging Configuration File",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "Attributes in the Configuration File",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "Elements in the Configuration File",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "Description Element",
+          "level": 4,
+          "line": 64
+        },
+        {
+          "heading": "Owner Element",
+          "level": 4,
+          "line": 80
+        },
+        {
+          "heading": "SourceUrl Element",
+          "level": 4,
+          "line": 93
+        },
+        {
+          "heading": "SourceLicense Element",
+          "level": 4,
+          "line": 96
+        },
+        {
+          "heading": "Dependency Element",
+          "level": 4,
+          "line": 99
+        },
+        {
+          "heading": "EULA Element",
+          "level": 4,
+          "line": 114
+        },
+        {
+          "heading": "File Element",
+          "level": 4,
+          "line": 140
+        },
+        {
+          "heading": "Hidden Folders and Files",
+          "level": 5,
+          "line": 191
+        },
+        {
+          "heading": "Package Icon",
+          "level": 5,
+          "line": 194
+        },
+        {
+          "heading": "Wildcards",
+          "level": 5,
+          "line": 209
+        },
+        {
+          "heading": "This file specifies the (first part of the) version number and some options used by the",
+          "level": 1,
+          "line": 523
+        },
+        {
+          "heading": "\"OpenTAP sdk gitversion\" command and the $(gitversion) macro in package.xml",
+          "level": 1,
+          "line": 524
+        },
+        {
+          "heading": "This is the version number that will be used. Prerelease numbers are calculated by",
+          "level": 1,
+          "line": 526
+        },
+        {
+          "heading": "counting git commits since the last change in this value.",
+          "level": 1,
+          "line": 527
+        },
+        {
+          "heading": "A version is determined to be a \"beta\" prerelease if it originates from the default branch",
+          "level": 1,
+          "line": 530
+        },
+        {
+          "heading": "The default branch is the first branch that matches the following regular expession.",
+          "level": 1,
+          "line": 531
+        },
+        {
+          "heading": "Uncomment to change the default.",
+          "level": 1,
+          "line": 532
+        },
+        {
+          "heading": "When specified multiple times later specifications of \"beta branch\" will only be tried",
+          "level": 1,
+          "line": 535
+        },
+        {
+          "heading": "if earlier ones did not match any branches in the git repository",
+          "level": 1,
+          "line": 536
+        },
+        {
+          "heading": "A version is determined to be a \"rc\" prerelease if it originates from a branch that matches",
+          "level": 1,
+          "line": 541
+        },
+        {
+          "heading": "the following regular expression.",
+          "level": 1,
+          "line": 542
+        },
+        {
+          "heading": "Uncomment to change the default.",
+          "level": 1,
+          "line": 543
+        },
+        {
+          "heading": "A version is determined to be a release (no prerelease identifiers, just the version number",
+          "level": 1,
+          "line": 546
+        },
+        {
+          "heading": "specified in this file), if it originates from a commit that has an annotated tag that matches",
+          "level": 1,
+          "line": 547
+        },
+        {
+          "heading": "the following regular expression. (Note that the actual value of the tag is not used).",
+          "level": 1,
+          "line": 548
+        },
+        {
+          "heading": "Uncomment to change the default.",
+          "level": 1,
+          "line": 549
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 30
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 66,
+      "nonEmptyLines": 62,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Resources/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 145,
+      "nonEmptyLines": 97,
+      "sections": [
+        {
+          "heading": "DUT",
+          "level": 2,
+          "line": 4
+        },
+        {
+          "heading": "Instrument",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "SCPI Instruments",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "Raw IO",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "Resource Management",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "Resource Open",
+          "level": 3,
+          "line": 103
+        },
+        {
+          "heading": "Resource Parallel",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "Resource Ignore",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "Resource Strategy",
+          "level": 3,
+          "line": 116
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Result Listener/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 67,
+      "nonEmptyLines": 40,
+      "sections": [
+        {
+          "heading": "Custom Result Listeners",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "OpenTAP SQL Database",
+          "level": 2,
+          "line": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Test Step/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 859,
+      "nonEmptyLines": 636,
+      "sections": [
+        {
+          "heading": "Default Implementation",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Test Step Hierarchy",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "Defining Relationships",
+          "level": 3,
+          "line": 74
+        },
+        {
+          "heading": "Verdict",
+          "level": 2,
+          "line": 121
+        },
+        {
+          "heading": "Log Messages",
+          "level": 2,
+          "line": 180
+        },
+        {
+          "heading": "Timestamps and Timing Analysis",
+          "level": 3,
+          "line": 209
+        },
+        {
+          "heading": "Exception Logging",
+          "level": 3,
+          "line": 230
+        },
+        {
+          "heading": "TraceBar",
+          "level": 3,
+          "line": 239
+        },
+        {
+          "heading": "Validation",
+          "level": 2,
+          "line": 246
+        },
+        {
+          "heading": "Publishing Results",
+          "level": 2,
+          "line": 297
+        },
+        {
+          "heading": "Result Tables",
+          "level": 3,
+          "line": 305
+        },
+        {
+          "heading": "Result Table Details",
+          "level": 3,
+          "line": 308
+        },
+        {
+          "heading": "ResultSource Object",
+          "level": 3,
+          "line": 315
+        },
+        {
+          "heading": "Artifacts",
+          "level": 2,
+          "line": 338
+        },
+        {
+          "heading": "Publishing Artifacts",
+          "level": 3,
+          "line": 349
+        },
+        {
+          "heading": "Processing Artifacts",
+          "level": 3,
+          "line": 360
+        },
+        {
+          "heading": "Implementing An Artifact Listener",
+          "level": 3,
+          "line": 375
+        },
+        {
+          "heading": "Child Test Steps",
+          "level": 2,
+          "line": 387
+        },
+        {
+          "heading": "Serialization",
+          "level": 2,
+          "line": 423
+        },
+        {
+          "heading": "Inputs and Outputs",
+          "level": 2,
+          "line": 433
+        },
+        {
+          "heading": "Connecting Outputs to Settings",
+          "level": 3,
+          "line": 443
+        },
+        {
+          "heading": "Using the ```Input<T>``` object",
+          "level": 3,
+          "line": 474
+        },
+        {
+          "heading": "Parameterized Settings",
+          "level": 2,
+          "line": 520
+        },
+        {
+          "heading": "Sweeping Parameters",
+          "level": 3,
+          "line": 532
+        },
+        {
+          "heading": "Test Plan Parameters",
+          "level": 3,
+          "line": 539
+        },
+        {
+          "heading": "ExternalParameterAttribute",
+          "level": 3,
+          "line": 542
+        },
+        {
+          "heading": "Exceptions",
+          "level": 2,
+          "line": 546
+        },
+        {
+          "heading": "Expressions",
+          "level": 2,
+          "line": 549
+        },
+        {
+          "heading": "Basic Syntax",
+          "level": 3,
+          "line": 565
+        },
+        {
+          "heading": "Using Expressions",
+          "level": 3,
+          "line": 647
+        },
+        {
+          "heading": "Extending Expressions with Custom Functions",
+          "level": 3,
+          "line": 718
+        },
+        {
+          "heading": "Mixins",
+          "level": 2,
+          "line": 760
+        },
+        {
+          "heading": "Getting Started",
+          "level": 3,
+          "line": 766
+        },
+        {
+          "heading": "Adding Mixins as an End User",
+          "level": 3,
+          "line": 773
+        },
+        {
+          "heading": "Mixin Types",
+          "level": 3,
+          "line": 779
+        },
+        {
+          "heading": "Adding new Mixin Plugins",
+          "level": 3,
+          "line": 815
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 36
+      }
+    },
+    {
+      "path": "doc/Developer Guide/Translating/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 309,
+      "nonEmptyLines": 251,
+      "sections": [
+        {
+          "heading": "Translating Packages",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Handling non-static strings",
+          "level": 2,
+          "line": 74
+        },
+        {
+          "heading": "How does it work?",
+          "level": 3,
+          "line": 122
+        },
+        {
+          "heading": "Manually adding types",
+          "level": 2,
+          "line": 145
+        },
+        {
+          "heading": "Translating UserInput",
+          "level": 2,
+          "line": 172
+        },
+        {
+          "heading": "Distributing translations",
+          "level": 2,
+          "line": 228
+        },
+        {
+          "heading": "Translation tips",
+          "level": 2,
+          "line": 277
+        },
+        {
+          "heading": "Check in to source control",
+          "level": 3,
+          "line": 281
+        },
+        {
+          "heading": "Use tools for editing",
+          "level": 3,
+          "line": 294
+        },
+        {
+          "heading": "Do live translation with KS8400",
+          "level": 3,
+          "line": 301
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "doc/Developer Guide/What is OpenTAP/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 122,
+      "nonEmptyLines": 69,
+      "sections": [
+        {
+          "heading": "Architecture",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "OpenTAP Assembly",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "Graphical User Interface",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "OpenTAP Command Line Interface",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "OpenTAP API",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "OpenTAP Plugins",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "OpenTAP Packages",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "Test Plans",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "Test Plan Control Flow",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "External Parameters",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "Manual Resource Connection",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "Testing Multiple DUTs",
+          "level": 3,
+          "line": 105
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "doc/FAQ/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 85,
+      "nonEmptyLines": 58,
+      "sections": [
+        {
+          "heading": "OpenTAP FAQ",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "What is OpenTAP?",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Who can use OpenTAP?",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Who is responsible for maintaining OpenTAP?",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Are there restrictions on using, modifying or redistributing OpenTAP?",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "Where can I find the source code for OpenTAP?",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "What is the OpenTAP Contributor License Agreement (CLA)?",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "How can I obtain support for OpenTAP?",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "On what OS platforms does OpenTAP run?",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "What is an OpenTAP Plugin?",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "What tools are available to build new plugins?",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Can OpenTAP support a variety of test instruments with OpenTAP?",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "Can OpenTAP support other tools and programming languages?",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "Can OpenTAP be used for applications and devices outside of Test and Measurement?",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "What components and functions are installed default by the OpenTAP Installer?",
+          "level": 2,
+          "line": 79
+        },
+        {
+          "heading": "Where is OpenTAP being deployed today?",
+          "level": 2,
+          "line": 84
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "doc/package.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 10,
+      "nonEmptyLines": 10,
+      "sections": [
+        {
+          "heading": "devDependencies",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "scripts",
+          "level": 1,
+          "line": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "doc/public/CNAME",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {}
+    },
+    {
+      "path": "doc/Readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 126,
+      "nonEmptyLines": 90,
+      "sections": [
+        {
+          "heading": "Getting Started",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "What is OpenTAP",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Install OpenTAP",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "Windows",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "Linux",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "Ubuntu 24.04",
+          "level": 4,
+          "line": 25
+        },
+        {
+          "heading": "Other Linux distributions",
+          "level": 4,
+          "line": 48
+        },
+        {
+          "heading": "An example using Ubuntu 24.04",
+          "level": 5,
+          "line": 66
+        },
+        {
+          "heading": "MacOS",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "Docker",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "Where to go next",
+          "level": 3,
+          "line": 123
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "nodes": [
+    {
+      "id": "file:BasicSteps/SweepRowTypeData.cs",
+      "type": "file",
+      "name": "SweepRowTypeData.cs",
+      "filePath": "BasicSteps/SweepRowTypeData.cs",
+      "summary": "SweepRow 的类型数据描述器（实现 ITypeData），动态将 SweepParameterStep 的已选参数合并到 SweepRow 的成员列表中。通过 GetSweepMembers 将选中的参数包装为 SweepRowMemberData。",
+      "tags": [
+        "data-model",
+        "type-descriptor",
+        "sweep",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "type": "config",
+      "name": "Tap.Plugins.BasicSteps.csproj",
+      "filePath": "BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "summary": "OpenTap.Plugins.BasicSteps 程序集的项目文件，编译目标 AnyCPU，引用 Engine 项目及多个共享源文件和 NuGet 包（包括 Microsoft.CodeAnalysis.CSharp 用于运行时编译）。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "csproj",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BasicSteps/TestPlanReference.cs",
+      "type": "file",
+      "name": "TestPlanReference.cs",
+      "filePath": "BasicSteps/TestPlanReference.cs",
+      "summary": "Test Plan Reference 步骤，从外部文件引用并加载测试计划。管理 GUID 映射、步骤更新、防递归加载和路径解析，支持将加载的测试计划转换为 SequenceStep。",
+      "tags": [
+        "api-handler",
+        "test-step",
+        "reference",
+        "test-plan",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:BasicSteps/TimeGuardStep.cs",
+      "type": "file",
+      "name": "TimeGuardStep.cs",
+      "filePath": "BasicSteps/TimeGuardStep.cs",
+      "summary": "Time Guard 测试步骤，在指定超时后中止子步骤执行。通过独立线程运行子步骤并使用 SemaphoreSlim 轮询超时，支持超时判据（Verdict）设置和测试计划中止。",
+      "tags": [
+        "api-handler",
+        "test-step",
+        "timeout",
+        "threading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BasicSteps/VirtualCollection.cs",
+      "type": "file",
+      "name": "VirtualCollection.cs",
+      "filePath": "BasicSteps/VirtualCollection.cs",
+      "summary": "可继承的虚方法集合基类（泛型 IList<T>），通过 List<T> 内部存储并提供 virtual 方法供子类重写。SweepRowCollection 继承自此基类以添加自动 Loop 赋值逻辑。",
+      "tags": [
+        "data-model",
+        "collection",
+        "base-class",
+        "generic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Cli/app.config",
+      "type": "file",
+      "name": "app.config",
+      "filePath": "Cli/app.config",
+      "summary": ".NET Framework 应用程序配置文件，指定支持的运行时版本为 .NET Framework 4.5.2。",
+      "tags": [
+        "configuration",
+        "runtime",
+        "app-config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Cli/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "Cli/Properties/AssemblyInfo.cs",
+      "summary": "CLI 程序集的元数据定义文件，设置 AssemblyTitle（OpenTap.Cli）、ComVisible(false) 和 InternalsVisibleTo（tap 命令和单元测试）。",
+      "tags": [
+        "configuration",
+        "assembly-metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Cli/Tap.Cli.csproj",
+      "type": "config",
+      "name": "Tap.Cli.csproj",
+      "filePath": "Cli/Tap.Cli.csproj",
+      "summary": "OpenTap.Cli 程序集的项目文件，编译为 Library 类型，目标 AnyCPU，引用 Engine 项目和多个共享源文件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "csproj",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Cli/TapEntry.cs",
+      "type": "file",
+      "name": "TapEntry.cs",
+      "filePath": "Cli/TapEntry.cs",
+      "summary": "OpenTAP CLI 入口点类，包含 IsColor（检测颜色输出支持）和 Go（主启动方法，处理 install/uninstall/color/verbose/quiet 参数、加载插件和启动 CLI 执行器）。",
+      "tags": [
+        "entry-point",
+        "cli",
+        "bootstrap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BasicSteps/SweepRowTypeData.cs:SweepRowTypeData",
+      "type": "class",
+      "name": "SweepRowTypeData",
+      "filePath": "BasicSteps/SweepRowTypeData.cs",
+      "lineRange": [
+        7,
+        55
+      ],
+      "summary": "SweepRow 的 ITypeData 实现，动态合并 BaseType（SweepRow）静态成员与 SweepParameterStep 中已选参数的 SweepRowMemberData 包装器。不支持 CreateInstance。",
+      "tags": [
+        "data-model",
+        "type-descriptor",
+        "sweep"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BasicSteps/TestPlanReference.cs:TestPlanReference",
+      "type": "class",
+      "name": "TestPlanReference",
+      "filePath": "BasicSteps/TestPlanReference.cs",
+      "lineRange": [
+        16,
+        653
+      ],
+      "summary": "测试计划引用步骤，继承 TestStep。从外部文件加载测试计划并维护 GUID 映射、防递归加载路径缓存和步骤版本更新。核心方法包括 UpdateStep 和 ConvertToSequence。",
+      "tags": [
+        "test-step",
+        "reference",
+        "test-plan",
+        "serialization",
+        "migration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BasicSteps/TimeGuardStep.cs:TimeGuardStep",
+      "type": "class",
+      "name": "TimeGuardStep",
+      "filePath": "BasicSteps/TimeGuardStep.cs",
+      "lineRange": [
+        10,
+        83
+      ],
+      "summary": "时间守卫测试步骤，继承 TestStep。在独立线程中运行子步骤并通过 SemaphoreSlim 轮询方式监控超时。支持暂停期间计时器暂停和超时后中止主线程。",
+      "tags": [
+        "test-step",
+        "timeout",
+        "threading",
+        "guard"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BasicSteps/VirtualCollection.cs:VirtualCollection",
+      "type": "class",
+      "name": "VirtualCollection",
+      "filePath": "BasicSteps/VirtualCollection.cs",
+      "lineRange": [
+        8,
+        58
+      ],
+      "summary": "泛型虚拟集合基类，实现 IList<T> 和 IList 接口。所有方法标记为 virtual，内部委托给 List<T> 存储。设计用于子类重写特定方法以添加自定义逻辑。",
+      "tags": [
+        "data-model",
+        "collection",
+        "base-class",
+        "generic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Cli/TapEntry.cs:TapEntry",
+      "type": "class",
+      "name": "TapEntry",
+      "filePath": "Cli/TapEntry.cs",
+      "lineRange": [
+        8,
+        61
+      ],
+      "summary": "OpenTAP CLI 内部入口类，提供 IsColor（环境变量/命令行颜色检测）和 Go（CLI 主启动过程：解析参数、设置环境变量、初始化日志监听器、搜索插件并启动 CLI 执行器）。",
+      "tags": [
+        "entry-point",
+        "cli",
+        "bootstrap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/TestPlanReference.cs:PrePlanRun",
+      "type": "function",
+      "name": "PrePlanRun",
+      "filePath": "BasicSteps/TestPlanReference.cs",
+      "lineRange": [
+        128,
+        144
+      ],
+      "summary": "执行前准备：加载测试计划文件并验证子步骤。",
+      "tags": [
+        "pre-execution",
+        "loading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/TestPlanReference.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "BasicSteps/TestPlanReference.cs",
+      "lineRange": [
+        175,
+        198
+      ],
+      "summary": "主执行：在子步骤上运行 RunChildSteps，不带额外参数，不抛出 break 异常。",
+      "tags": [
+        "execution"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/TestPlanReference.cs:UpdateStep",
+      "type": "function",
+      "name": "UpdateStep",
+      "filePath": "BasicSteps/TestPlanReference.cs",
+      "lineRange": [
+        229,
+        415
+      ],
+      "summary": "更新/迁移测试计划步骤：管理 GUID 映射、版本迁移、序列化/反序列化转换和处理步骤路径解析。是测试计划版本升级的核心方法。",
+      "tags": [
+        "migration",
+        "serialization",
+        "test-plan",
+        "versioning"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BasicSteps/TestPlanReference.cs:loadTestPlan",
+      "type": "function",
+      "name": "loadTestPlan",
+      "filePath": "BasicSteps/TestPlanReference.cs",
+      "lineRange": [
+        438,
+        449
+      ],
+      "summary": "内部加载测试计划：使用 TapSerializer 反序列化 XML 文件。",
+      "tags": [
+        "loading",
+        "deserialization",
+        "xml"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/TestPlanReference.cs:GetPath",
+      "type": "function",
+      "name": "GetPath",
+      "filePath": "BasicSteps/TestPlanReference.cs",
+      "lineRange": [
+        451,
+        462
+      ],
+      "summary": "解析测试计划文件路径，支持绝对路径和相对于 PlanDir 的相对路径。",
+      "tags": [
+        "path-resolution"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BasicSteps/TestPlanReference.cs:ConvertToSequence",
+      "type": "function",
+      "name": "ConvertToSequence",
+      "filePath": "BasicSteps/TestPlanReference.cs",
+      "lineRange": [
+        506,
+        650
+      ],
+      "summary": "将 TestPlan 转换为 SequenceStep 的内部方法：递归复制子步骤、处理 GUID 重映射、资源声明和属性复制到新 SequenceStep。",
+      "tags": [
+        "conversion",
+        "test-plan",
+        "recursion",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BasicSteps/TimeGuardStep.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "BasicSteps/TimeGuardStep.cs",
+      "lineRange": [
+        34,
+        82
+      ],
+      "summary": "TimeGuardStep 的 Run 方法：启动子线程执行子步骤，主线程用 SemaphoreSlim.Wait(10ms) 轮询超时。支持暂停计时器暂停和超时后 Abort 主线程。",
+      "tags": [
+        "execution",
+        "timeout",
+        "threading"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Cli/TapEntry.cs:IsColor",
+      "type": "function",
+      "name": "IsColor",
+      "filePath": "Cli/TapEntry.cs",
+      "lineRange": [
+        10,
+        25
+      ],
+      "summary": "检测终端是否应启用彩色输出：检查 --color 参数和 OPENTAP_COLOR 环境变量（always/auto/never）。",
+      "tags": [
+        "utility",
+        "cli",
+        "color"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Cli/TapEntry.cs:Go",
+      "type": "function",
+      "name": "Go",
+      "filePath": "Cli/TapEntry.cs",
+      "lineRange": [
+        27,
+        60
+      ],
+      "summary": "OpenTAP CLI 主入口方法：解析命令行参数（install/uninstall/verbose/quiet/color）、设置环境变量、初始化日志追踪监听器、搜索插件并启动 CLI 执行器。",
+      "tags": [
+        "entry-point",
+        "cli",
+        "bootstrap"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BasicSteps/SweepRowTypeData.cs",
+      "target": "class:BasicSteps/SweepRowTypeData.cs:SweepRowTypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "class:BasicSteps/TestPlanReference.cs:TestPlanReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/TimeGuardStep.cs",
+      "target": "class:BasicSteps/TimeGuardStep.cs:TimeGuardStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/VirtualCollection.cs",
+      "target": "class:BasicSteps/VirtualCollection.cs:VirtualCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Cli/TapEntry.cs",
+      "target": "class:Cli/TapEntry.cs:TapEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "function:BasicSteps/TestPlanReference.cs:PrePlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "function:BasicSteps/TestPlanReference.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "function:BasicSteps/TestPlanReference.cs:UpdateStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "function:BasicSteps/TestPlanReference.cs:loadTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "function:BasicSteps/TestPlanReference.cs:GetPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "function:BasicSteps/TestPlanReference.cs:ConvertToSequence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/TimeGuardStep.cs",
+      "target": "function:BasicSteps/TimeGuardStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Cli/TapEntry.cs",
+      "target": "function:Cli/TapEntry.cs:IsColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Cli/TapEntry.cs",
+      "target": "function:Cli/TapEntry.cs:Go",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BasicSteps/SweepRowTypeData.cs",
+      "target": "class:BasicSteps/SweepRowTypeData.cs:SweepRowTypeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "class:BasicSteps/TestPlanReference.cs:TestPlanReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "function:BasicSteps/TestPlanReference.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "function:BasicSteps/TestPlanReference.cs:PrePlanRun",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "function:BasicSteps/TestPlanReference.cs:ConvertToSequence",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/TestPlanReference.cs",
+      "target": "function:BasicSteps/TestPlanReference.cs:loadTestPlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/TimeGuardStep.cs",
+      "target": "class:BasicSteps/TimeGuardStep.cs:TimeGuardStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/TimeGuardStep.cs",
+      "target": "function:BasicSteps/TimeGuardStep.cs:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/VirtualCollection.cs",
+      "target": "class:BasicSteps/VirtualCollection.cs:VirtualCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Cli/TapEntry.cs",
+      "target": "function:Cli/TapEntry.cs:Go",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BasicSteps/SweepRowTypeData.cs",
+      "target": "file:BasicSteps/SweepRow.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:BasicSteps/SweepRowTypeData.cs",
+      "target": "file:BasicSteps/SweepParameterStep.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "target": "file:BasicSteps/SweepLoop.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Cli/Tap.Cli.csproj",
+      "target": "file:Cli/TapEntry.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Cli/app.config",
+      "target": "file:Cli/TapEntry.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Cli/Properties/AssemblyInfo.cs",
+      "target": "file:Cli/TapEntry.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:BasicSteps/TestPlanReference.cs:TestPlanReference",
+      "target": "function:BasicSteps/TestPlanReference.cs:PrePlanRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/TestPlanReference.cs:TestPlanReference",
+      "target": "function:BasicSteps/TestPlanReference.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/TestPlanReference.cs:TestPlanReference",
+      "target": "function:BasicSteps/TestPlanReference.cs:UpdateStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/TestPlanReference.cs:TestPlanReference",
+      "target": "function:BasicSteps/TestPlanReference.cs:loadTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/TestPlanReference.cs:TestPlanReference",
+      "target": "function:BasicSteps/TestPlanReference.cs:GetPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/TestPlanReference.cs:TestPlanReference",
+      "target": "function:BasicSteps/TestPlanReference.cs:ConvertToSequence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BasicSteps/TimeGuardStep.cs:TimeGuardStep",
+      "target": "function:BasicSteps/TimeGuardStep.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Cli/TapEntry.cs:TapEntry",
+      "target": "function:Cli/TapEntry.cs:IsColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Cli/TapEntry.cs:TapEntry",
+      "target": "function:Cli/TapEntry.cs:Go",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

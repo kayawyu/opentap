@@ -1,0 +1,6218 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "BasicSteps/SweepLoop.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 574,
+      "nonEmptyLines": 512,
+      "functions": [
+        {
+          "name": "parametersChanged",
+          "startLine": 76,
+          "endLine": 79,
+          "params": []
+        },
+        {
+          "name": "popChanged",
+          "startLine": 83,
+          "endLine": 101,
+          "params": []
+        },
+        {
+          "name": "SweepLoop",
+          "startLine": 150,
+          "endLine": 158,
+          "params": []
+        },
+        {
+          "name": "SweepLoop_PropertyChanged",
+          "startLine": 160,
+          "endLine": 164,
+          "params": [
+            "sender",
+            "e"
+          ]
+        },
+        {
+          "name": "childStepsChanged",
+          "startLine": 166,
+          "endLine": 172,
+          "params": [
+            "sender",
+            "Action",
+            "Object",
+            "Index"
+          ]
+        },
+        {
+          "name": "setParameterOnChildren",
+          "startLine": 174,
+          "endLine": 225,
+          "params": [
+            "sweepParameter",
+            "val",
+            "childTestSteps"
+          ]
+        },
+        {
+          "name": "getSweepParameterValues",
+          "startLine": 227,
+          "endLine": 232,
+          "params": [
+            "sweepParameter",
+            "childTestSteps"
+          ]
+        },
+        {
+          "name": "populateChildParameters",
+          "startLine": 234,
+          "endLine": 254,
+          "params": [
+            "values",
+            "sweepParameter",
+            "childTestSteps"
+          ]
+        },
+        {
+          "name": "RunForSweepParamWithIndex",
+          "startLine": 256,
+          "endLine": 281,
+          "params": [
+            "index",
+            "logMessage"
+          ]
+        },
+        {
+          "name": "RegisterAdditionalParams",
+          "startLine": 283,
+          "endLine": 303,
+          "params": [
+            "Index"
+          ]
+        },
+        {
+          "name": "validateSweep",
+          "startLine": 311,
+          "endLine": 360,
+          "params": []
+        },
+        {
+          "name": "ValidateChildSteps",
+          "startLine": 362,
+          "endLine": 389,
+          "params": [
+            "sweepParameter",
+            "childTestSteps"
+          ]
+        },
+        {
+          "name": "PrePlanRun",
+          "startLine": 391,
+          "endLine": 404,
+          "params": []
+        },
+        {
+          "name": "printException",
+          "startLine": 406,
+          "endLine": 413,
+          "params": [
+            "ex"
+          ]
+        },
+        {
+          "name": "acrossRunsGotoEnabledSweepIndex",
+          "startLine": 415,
+          "endLine": 428,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 430,
+          "endLine": 504,
+          "params": []
+        },
+        {
+          "name": "sanitizeSweepParams",
+          "startLine": 509,
+          "endLine": 567,
+          "params": [
+            "log"
+          ]
+        },
+        {
+          "name": "OnDeserialized",
+          "startLine": 569,
+          "endLine": 572,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SweepLoop",
+          "startLine": 16,
+          "endLine": 573,
+          "methods": [
+            "parametersChanged",
+            "popChanged",
+            "SweepLoop",
+            "SweepLoop_PropertyChanged",
+            "childStepsChanged",
+            "setParameterOnChildren",
+            "getSweepParameterValues",
+            "populateChildParameters",
+            "RunForSweepParamWithIndex",
+            "RegisterAdditionalParams",
+            "validateSweep",
+            "ValidateChildSteps",
+            "PrePlanRun",
+            "printException",
+            "acrossRunsGotoEnabledSweepIndex",
+            "Run",
+            "sanitizeSweepParams",
+            "OnDeserialized"
+          ],
+          "properties": [
+            "_CrossPlan",
+            "crossPlanSweepIndex",
+            "currentIteration",
+            "IterationInfo",
+            "EnabledRows",
+            "Iteration",
+            "SweepParametersEnabled",
+            "sweepParameters",
+            "SweepParameters",
+            "changedid",
+            "SweepMembers",
+            "ReferencedResources",
+            "CrossPlan",
+            "isRunning",
+            "validateSweepMutex"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IterationInfo",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "EnabledRows",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParametersEnabled",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParameters",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "SweepMembers",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "ReferencedResources",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "CrossPlan",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "SweepLoop",
+          "line": 150,
+          "isDefault": false
+        },
+        {
+          "name": "ValidateChildSteps",
+          "line": 362,
+          "isDefault": false
+        },
+        {
+          "name": "PrePlanRun",
+          "line": 391,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 430,
+          "isDefault": false
+        },
+        {
+          "name": "OnDeserialized",
+          "line": 569,
+          "isDefault": false
+        },
+        {
+          "name": "SweepLoop",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SweepLoop",
+          "callee": "new List<SweepParam>",
+          "lineNumber": 152
+        },
+        {
+          "caller": "SweepLoop",
+          "callee": "Rules.Add",
+          "lineNumber": 153
+        },
+        {
+          "caller": "SweepLoop",
+          "callee": "SweepMembers.Count",
+          "lineNumber": 153
+        },
+        {
+          "caller": "SweepLoop",
+          "callee": "nameof",
+          "lineNumber": 153
+        },
+        {
+          "caller": "SweepLoop",
+          "callee": "Rules.Add",
+          "lineNumber": 154
+        },
+        {
+          "caller": "SweepLoop",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 154
+        },
+        {
+          "caller": "SweepLoop",
+          "callee": "validateSweep",
+          "lineNumber": 154
+        },
+        {
+          "caller": "SweepLoop",
+          "callee": "nameof",
+          "lineNumber": 154
+        },
+        {
+          "caller": "SweepLoop_PropertyChanged",
+          "callee": "nameof",
+          "lineNumber": 162
+        },
+        {
+          "caller": "childStepsChanged",
+          "callee": "sweepParameters.ToList",
+          "lineNumber": 169
+        },
+        {
+          "caller": "childStepsChanged",
+          "callee": "localSweepParameters.RemoveIf",
+          "lineNumber": 170
+        },
+        {
+          "caller": "childStepsChanged",
+          "callee": "ValidateChildSteps",
+          "lineNumber": 170
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 179
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "childType.GetMember",
+          "lineNumber": 183
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "prop.GetDisplayAttribute",
+          "lineNumber": 194
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "paramProp.GetDisplayAttribute",
+          "lineNumber": 195
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "d1.Group.SequenceEqual",
+          "lineNumber": 196
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "Equals",
+          "lineNumber": 198
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 201
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "tp.DescendsTo",
+          "lineNumber": 202
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "paramProp.SetValue",
+          "lineNumber": 203
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "new List<Exception>",
+          "lineNumber": 208
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "ex.Add",
+          "lineNumber": 209
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "childType.DescendsTo",
+          "lineNumber": 213
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "setParameterOnChildren",
+          "lineNumber": 215
+        },
+        {
+          "caller": "setParameterOnChildren",
+          "callee": "ex.AddRange",
+          "lineNumber": 219
+        },
+        {
+          "caller": "getSweepParameterValues",
+          "callee": "new Dictionary<ITestStep, List<Tuple<IMemberData, object>>>",
+          "lineNumber": 229
+        },
+        {
+          "caller": "getSweepParameterValues",
+          "callee": "populateChildParameters",
+          "lineNumber": 230
+        },
+        {
+          "caller": "populateChildParameters",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 238
+        },
+        {
+          "caller": "populateChildParameters",
+          "callee": "stepType.GetMember",
+          "lineNumber": 241
+        },
+        {
+          "caller": "populateChildParameters",
+          "callee": "object.Equals",
+          "lineNumber": 242
+        },
+        {
+          "caller": "populateChildParameters",
+          "callee": "values.TryGetValue",
+          "lineNumber": 244
+        },
+        {
+          "caller": "populateChildParameters",
+          "callee": "new List<Tuple<IMemberData, object>>",
+          "lineNumber": 245
+        },
+        {
+          "caller": "populateChildParameters",
+          "callee": "values[childTestStep].Add",
+          "lineNumber": 246
+        },
+        {
+          "caller": "populateChildParameters",
+          "callee": "new Tuple<IMemberData, object>",
+          "lineNumber": 246
+        },
+        {
+          "caller": "populateChildParameters",
+          "callee": "paramProp.GetValue",
+          "lineNumber": 246
+        },
+        {
+          "caller": "populateChildParameters",
+          "callee": "stepType.DescendsTo",
+          "lineNumber": 250
+        },
+        {
+          "caller": "populateChildParameters",
+          "callee": "populateChildParameters",
+          "lineNumber": 251
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "sweepParameter.Values.GetValue",
+          "lineNumber": 263
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "setParameterOnChildren",
+          "lineNumber": 266
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "new List<Exception>",
+          "lineNumber": 269
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "ex.AddRange",
+          "lineNumber": 270
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "logMessage.Append",
+          "lineNumber": 273
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "logMessage.Append",
+          "lineNumber": 274
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "logMessage.Append",
+          "lineNumber": 275
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "StringConvertProvider.GetString",
+          "lineNumber": 275
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "sweepParameter.Values.GetValue",
+          "lineNumber": 275
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "SweepParameters.Last",
+          "lineNumber": 276
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "logMessage.Append",
+          "lineNumber": 277
+        },
+        {
+          "caller": "RunForSweepParamWithIndex",
+          "callee": "new AggregateException",
+          "lineNumber": 280
+        },
+        {
+          "caller": "RegisterAdditionalParams",
+          "callee": "new ResultParameters",
+          "lineNumber": 285
+        },
+        {
+          "caller": "RegisterAdditionalParams",
+          "callee": "sweepParameter.Values.GetValue",
+          "lineNumber": 291
+        },
+        {
+          "caller": "RegisterAdditionalParams",
+          "callee": "ReflectionHelper.ParseDisplayname",
+          "lineNumber": 297
+        },
+        {
+          "caller": "RegisterAdditionalParams",
+          "callee": "new ResultParameter",
+          "lineNumber": 299
+        },
+        {
+          "caller": "RegisterAdditionalParams",
+          "callee": "sweepParameter.Values.GetValue",
+          "lineNumber": 299
+        },
+        {
+          "caller": "RegisterAdditionalParams",
+          "callee": "parameters.Add",
+          "lineNumber": 300
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sweepParameters.All",
+          "lineNumber": 314
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "validateSweepMutex.WaitOne",
+          "lineNumber": 316
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sanitizeSweepParams",
+          "lineNumber": 317
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "SweepParameters.Select(param => getSweepParameterValues(param, ChildTestSteps)).ToList",
+          "lineNumber": 318
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "SweepParameters.Select",
+          "lineNumber": 318
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "getSweepParameterValues",
+          "lineNumber": 318
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "oldParams.SelectMany(d => d.Keys).Distinct().ToList",
+          "lineNumber": 321
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "oldParams.SelectMany(d => d.Keys).Distinct",
+          "lineNumber": 321
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "oldParams.SelectMany",
+          "lineNumber": 321
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "new StringBuilder",
+          "lineNumber": 323
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "RunForSweepParamWithIndex",
+          "lineNumber": 328
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sb.AppendLine",
+          "lineNumber": 330
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 334
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sb.AppendLine",
+          "lineNumber": 339
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sb.AppendFormat",
+          "lineNumber": 340
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "step.GetFormattedName",
+          "lineNumber": 340
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sb.ToString",
+          "lineNumber": 344
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "string.Join",
+          "lineNumber": 348
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "e.InnerExceptions.Select",
+          "lineNumber": 348
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "i2.Item1.SetValue",
+          "lineNumber": 356
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "validateSweepMutex.ReleaseMutex",
+          "lineNumber": 358
+        },
+        {
+          "caller": "ValidateChildSteps",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 373
+        },
+        {
+          "caller": "ValidateChildSteps",
+          "callee": "stepType.GetMember",
+          "lineNumber": 376
+        },
+        {
+          "caller": "ValidateChildSteps",
+          "callee": "object.Equals",
+          "lineNumber": 377
+        },
+        {
+          "caller": "ValidateChildSteps",
+          "callee": "paramProp.ToString",
+          "lineNumber": 378
+        },
+        {
+          "caller": "ValidateChildSteps",
+          "callee": "ValidateChildSteps",
+          "lineNumber": 381
+        },
+        {
+          "caller": "ValidateChildSteps",
+          "callee": "iterate_child_steps",
+          "lineNumber": 388
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "validateSweepMutex.WaitOne",
+          "lineNumber": 393
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "validateSweepMutex.ReleaseMutex",
+          "lineNumber": 394
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "new List<SweepParam>",
+          "lineNumber": 396
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "sanitizeSweepParams",
+          "lineNumber": 398
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 401
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "EnabledRows.Count",
+          "lineNumber": 402
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 403
+        },
+        {
+          "caller": "printException",
+          "callee": "Log.Error",
+          "lineNumber": 410
+        },
+        {
+          "caller": "printException",
+          "callee": "Log.Debug",
+          "lineNumber": 411
+        },
+        {
+          "caller": "acrossRunsGotoEnabledSweepIndex",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 427
+        },
+        {
+          "caller": "Run",
+          "callee": "base.Run",
+          "lineNumber": 432
+        },
+        {
+          "caller": "Run",
+          "callee": "EnabledRows.Count",
+          "lineNumber": 434
+        },
+        {
+          "caller": "Run",
+          "callee": "RegisterAdditionalParams",
+          "lineNumber": 439
+        },
+        {
+          "caller": "Run",
+          "callee": "acrossRunsGotoEnabledSweepIndex",
+          "lineNumber": 442
+        },
+        {
+          "caller": "Run",
+          "callee": "new StringBuilder",
+          "lineNumber": 444
+        },
+        {
+          "caller": "Run",
+          "callee": "RunForSweepParamWithIndex",
+          "lineNumber": 447
+        },
+        {
+          "caller": "Run",
+          "callee": "printException",
+          "lineNumber": 451
+        },
+        {
+          "caller": "Run",
+          "callee": "logMessage.Append",
+          "lineNumber": 453
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 454
+        },
+        {
+          "caller": "Run",
+          "callee": "logMessage.ToString",
+          "lineNumber": 454
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps",
+          "lineNumber": 456
+        },
+        {
+          "caller": "Run",
+          "callee": "acrossRunsGotoEnabledSweepIndex",
+          "lineNumber": 459
+        },
+        {
+          "caller": "Run",
+          "callee": "SweepParameters.Select(param => getSweepParameterValues(param, ChildTestSteps)).ToList",
+          "lineNumber": 465
+        },
+        {
+          "caller": "Run",
+          "callee": "SweepParameters.Select",
+          "lineNumber": 465
+        },
+        {
+          "caller": "Run",
+          "callee": "getSweepParameterValues",
+          "lineNumber": 465
+        },
+        {
+          "caller": "Run",
+          "callee": "oldParams.SelectMany(d => d.Keys).Distinct().ToList",
+          "lineNumber": 466
+        },
+        {
+          "caller": "Run",
+          "callee": "oldParams.SelectMany(d => d.Keys).Distinct",
+          "lineNumber": 466
+        },
+        {
+          "caller": "Run",
+          "callee": "oldParams.SelectMany",
+          "lineNumber": 466
+        },
+        {
+          "caller": "Run",
+          "callee": "new StringBuilder",
+          "lineNumber": 473
+        },
+        {
+          "caller": "Run",
+          "callee": "RunForSweepParamWithIndex",
+          "lineNumber": 476
+        },
+        {
+          "caller": "Run",
+          "callee": "printException",
+          "lineNumber": 480
+        },
+        {
+          "caller": "Run",
+          "callee": "affectedSteps.ForEach",
+          "lineNumber": 482
+        },
+        {
+          "caller": "Run",
+          "callee": "step.OnPropertyChanged",
+          "lineNumber": 482
+        },
+        {
+          "caller": "Run",
+          "callee": "RegisterAdditionalParams",
+          "lineNumber": 483
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 484
+        },
+        {
+          "caller": "Run",
+          "callee": "logMessage.ToString",
+          "lineNumber": 484
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps(AdditionalParams, BreakLoopRequested, throwOnBreak: false).ToArray",
+          "lineNumber": 485
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps",
+          "lineNumber": 485
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.ForEach",
+          "lineNumber": 488
+        },
+        {
+          "caller": "Run",
+          "callee": "r.WaitForCompletion",
+          "lineNumber": 488
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.LastOrDefault()?.BreakConditionsSatisfied",
+          "lineNumber": 489
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.LastOrDefault",
+          "lineNumber": 489
+        },
+        {
+          "caller": "Run",
+          "callee": "i2.Item1.SetValue",
+          "lineNumber": 500
+        },
+        {
+          "caller": "Run",
+          "callee": "affectedSteps.ForEach",
+          "lineNumber": 502
+        },
+        {
+          "caller": "Run",
+          "callee": "step.OnPropertyChanged",
+          "lineNumber": 502
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "popChanged",
+          "lineNumber": 511
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "Utils.FlattenHeirarchy",
+          "lineNumber": 515
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "steps.Select(x => TypeData.GetTypeData(x)).Distinct()\n                .SelectMany(tp => tp.GetMembers()).Distinct()\n                .ToLookup",
+          "lineNumber": 516
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "steps.Select(x => TypeData.GetTypeData(x)).Distinct()\n                .SelectMany(tp => tp.GetMembers()).Distinct",
+          "lineNumber": 516
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "steps.Select(x => TypeData.GetTypeData(x)).Distinct()\n                .SelectMany",
+          "lineNumber": 516
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "steps.Select(x => TypeData.GetTypeData(x)).Distinct",
+          "lineNumber": 516
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "steps.Select",
+          "lineNumber": 516
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 516
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "tp.GetMembers",
+          "lineNumber": 517
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "SweepParam.GetMemberName",
+          "lineNumber": 518
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "new List<IMemberData>",
+          "lineNumber": 522
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "members.AddRange",
+          "lineNumber": 526
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "members.Distinct().ToArray",
+          "lineNumber": 528
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "members.Distinct",
+          "lineNumber": 528
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "param.Members.FirstOrDefault",
+          "lineNumber": 529
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "steps.FirstOrDefault",
+          "lineNumber": 532
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "TypeData.GetTypeData(x).GetMember",
+          "lineNumber": 532
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 532
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "prop.GetValue",
+          "lineNumber": 534
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "Log.Error",
+          "lineNumber": 538
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "sweepParameters.Select(x => x.Values.Length).DefaultIfEmpty(0).Max",
+          "lineNumber": 543
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "sweepParameters.Select(x => x.Values.Length).DefaultIfEmpty",
+          "lineNumber": 543
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "sweepParameters.Select",
+          "lineNumber": 543
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "sweepParam.Resize",
+          "lineNumber": 549
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "Array.Resize",
+          "lineNumber": 557
+        },
+        {
+          "caller": "sanitizeSweepParams",
+          "callee": "Log.Error",
+          "lineNumber": 565
+        },
+        {
+          "caller": "OnDeserialized",
+          "callee": "sanitizeSweepParams",
+          "lineNumber": 571
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 18,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BasicSteps/SweepLoopRange.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 409,
+      "nonEmptyLines": 354,
+      "functions": [
+        {
+          "name": "propertyInfosToString",
+          "startLine": 87,
+          "endLine": 90,
+          "params": [
+            "infos"
+          ]
+        },
+        {
+          "name": "parseInfosFromString",
+          "startLine": 92,
+          "endLine": 110,
+          "params": [
+            "str"
+          ]
+        },
+        {
+          "name": "PrePlanRun",
+          "startLine": 112,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "validateSweep",
+          "startLine": 128,
+          "endLine": 168,
+          "params": [
+            "Value"
+          ]
+        },
+        {
+          "name": "SweepLoopRange",
+          "startLine": 170,
+          "endLine": 190,
+          "params": []
+        },
+        {
+          "name": "SweepLoopRange_PropertyChanged",
+          "startLine": 192,
+          "endLine": 196,
+          "params": [
+            "sender",
+            "e"
+          ]
+        },
+        {
+          "name": "childStepsChanged",
+          "startLine": 199,
+          "endLine": 206,
+          "params": [
+            "sender",
+            "Action",
+            "Object",
+            "Index"
+          ]
+        },
+        {
+          "name": "memberCanSweep",
+          "startLine": 207,
+          "endLine": 207,
+          "params": [
+            "mem"
+          ]
+        },
+        {
+          "name": "getPropertiesForItems",
+          "startLine": 208,
+          "endLine": 224,
+          "params": [
+            "step",
+            "members"
+          ]
+        },
+        {
+          "name": "GetPropertiesForItems",
+          "startLine": 226,
+          "endLine": 231,
+          "params": [
+            "baseStep"
+          ]
+        },
+        {
+          "name": "GetPropertySets",
+          "startLine": 262,
+          "endLine": 278,
+          "params": [
+            "childTestStep"
+          ]
+        },
+        {
+          "name": "LinearRange",
+          "startLine": 281,
+          "endLine": 290,
+          "params": [
+            "start",
+            "end",
+            "points"
+          ]
+        },
+        {
+          "name": "ExponentialRange",
+          "startLine": 292,
+          "endLine": 304,
+          "params": [
+            "start",
+            "end",
+            "points"
+          ]
+        },
+        {
+          "name": "Run",
+          "startLine": 307,
+          "endLine": 358,
+          "params": []
+        },
+        {
+          "name": "Deserialize",
+          "startLine": 369,
+          "endLine": 402,
+          "params": [
+            "node",
+            "t",
+            "setter"
+          ]
+        },
+        {
+          "name": "Serialize",
+          "startLine": 404,
+          "endLine": 407,
+          "params": [
+            "node",
+            "obj",
+            "expectedType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SweepLoopRange",
+          "startLine": 28,
+          "endLine": 359,
+          "methods": [
+            "propertyInfosToString",
+            "parseInfosFromString",
+            "PrePlanRun",
+            "validateSweep",
+            "SweepLoopRange",
+            "SweepLoopRange_PropertyChanged",
+            "childStepsChanged",
+            "memberCanSweep",
+            "getPropertiesForItems",
+            "GetPropertiesForItems",
+            "GetPropertySets",
+            "LinearRange",
+            "ExponentialRange",
+            "Run"
+          ],
+          "properties": [
+            "SweepProperties",
+            "SweepStart",
+            "SweepStop",
+            "SweepEnd",
+            "SweepStep",
+            "SweepPoints",
+            "SweepBehavior",
+            "Current",
+            "SweepPropertyName",
+            "SweepType",
+            "isRunning",
+            "validateSweepMutex",
+            "membersCache"
+          ]
+        },
+        {
+          "name": "LegacySweepLoader",
+          "startLine": 361,
+          "endLine": 408,
+          "methods": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "properties": [
+            "Order",
+            "proccessingNodes",
+            "Type"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SweepProperties",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "SweepStart",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "SweepStop",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "SweepEnd",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "SweepStep",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "SweepPoints",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "SweepBehavior",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "Current",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "SweepPropertyName",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "PrePlanRun",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "SweepLoopRange",
+          "line": 170,
+          "isDefault": false
+        },
+        {
+          "name": "LinearRange",
+          "line": 281,
+          "isDefault": false
+        },
+        {
+          "name": "ExponentialRange",
+          "line": 292,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 307,
+          "isDefault": false
+        },
+        {
+          "name": "SweepLoopRange",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "Order",
+          "line": 363,
+          "isDefault": false
+        },
+        {
+          "name": "Deserialize",
+          "line": 369,
+          "isDefault": false
+        },
+        {
+          "name": "Serialize",
+          "line": 404,
+          "isDefault": false
+        },
+        {
+          "name": "LegacySweepLoader",
+          "line": 361,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "propertyInfosToString",
+          "callee": "string.Join",
+          "lineNumber": 89
+        },
+        {
+          "caller": "propertyInfosToString",
+          "callee": "infos.Select",
+          "lineNumber": 89
+        },
+        {
+          "caller": "propertyInfosToString",
+          "callee": "String.Format",
+          "lineNumber": 89
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "this.RecursivelyGetChildSteps(TestStepSearch.All).Select( x => TypeData.GetTypeData(x)).ToArray",
+          "lineNumber": 94
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "this.RecursivelyGetChildSteps(TestStepSearch.All).Select",
+          "lineNumber": 94
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "this.RecursivelyGetChildSteps",
+          "lineNumber": 94
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 94
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "cs.SelectMany",
+          "lineNumber": 95
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "x.GetMembers().ToArray",
+          "lineNumber": 95
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "x.GetMembers",
+          "lineNumber": 95
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "new Dictionary<string, IMemberData>",
+          "lineNumber": 96
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "String.Format",
+          "lineNumber": 99
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "str.Split",
+          "lineNumber": 102
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "new List<IMemberData>",
+          "lineNumber": 103
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "dict.TryGetValue",
+          "lineNumber": 106
+        },
+        {
+          "caller": "parseInfosFromString",
+          "callee": "outlist.Add",
+          "lineNumber": 107
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 115
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "validateSweepMutex.WaitOne",
+          "lineNumber": 116
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "validateSweepMutex.ReleaseMutex",
+          "lineNumber": 117
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "validateSweepMutex.WaitOne",
+          "lineNumber": 132
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "new StringBuilder",
+          "lineNumber": 133
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "GetPropertySets(ChildTestSteps).ToList",
+          "lineNumber": 135
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "GetPropertySets",
+          "lineNumber": 135
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sets.Select(set => set.GetValue()).ToArray",
+          "lineNumber": 136
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sets.Select",
+          "lineNumber": 136
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "set.GetValue",
+          "lineNumber": 136
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "set.SetValue",
+          "lineNumber": 140
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 144
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sb.AppendLine",
+          "lineNumber": 149
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sb.AppendFormat",
+          "lineNumber": 152
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sb.AppendFormat",
+          "lineNumber": 154
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sb.ToString",
+          "lineNumber": 156
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "sets[i].SetValue",
+          "lineNumber": 165
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "validateSweepMutex.ReleaseMutex",
+          "lineNumber": 166
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "new List<IMemberData>",
+          "lineNumber": 172
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "Rules.Add",
+          "lineNumber": 178
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "nameof",
+          "lineNumber": 178
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "Rules.Add",
+          "lineNumber": 179
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 179
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "validateSweep",
+          "lineNumber": 179
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "validateSweep",
+          "lineNumber": 179
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "Rules.Add",
+          "lineNumber": 180
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 180
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "validateSweep",
+          "lineNumber": 180
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "validateSweep",
+          "lineNumber": 180
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "Rules.Add",
+          "lineNumber": 182
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "Rules.Add",
+          "lineNumber": 183
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "Rules.Add",
+          "lineNumber": 184
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "Rules.Add",
+          "lineNumber": 186
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "Math.Sign",
+          "lineNumber": 186
+        },
+        {
+          "caller": "SweepLoopRange",
+          "callee": "Math.Sign",
+          "lineNumber": 186
+        },
+        {
+          "caller": "SweepLoopRange_PropertyChanged",
+          "callee": "nameof",
+          "lineNumber": 194
+        },
+        {
+          "caller": "childStepsChanged",
+          "callee": "membersCache.Clear",
+          "lineNumber": 202
+        },
+        {
+          "caller": "childStepsChanged",
+          "callee": "getPropertiesForItems",
+          "lineNumber": 203
+        },
+        {
+          "caller": "childStepsChanged",
+          "callee": "SweepProperties.RemoveIf<IMemberData>",
+          "lineNumber": 204
+        },
+        {
+          "caller": "childStepsChanged",
+          "callee": "membersCache.ContainsKey",
+          "lineNumber": 204
+        },
+        {
+          "caller": "memberCanSweep",
+          "callee": "mem.HasAttribute<UnsweepableAttribute>",
+          "lineNumber": 207
+        },
+        {
+          "caller": "getPropertiesForItems",
+          "callee": "TypeData.GetTypeData(cs).GetMembers",
+          "lineNumber": 212
+        },
+        {
+          "caller": "getPropertiesForItems",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 212
+        },
+        {
+          "caller": "getPropertiesForItems",
+          "callee": "t.Type.IsNumeric",
+          "lineNumber": 216
+        },
+        {
+          "caller": "getPropertiesForItems",
+          "callee": "members.ContainsKey",
+          "lineNumber": 216
+        },
+        {
+          "caller": "getPropertiesForItems",
+          "callee": "memberCanSweep",
+          "lineNumber": 216
+        },
+        {
+          "caller": "getPropertiesForItems",
+          "callee": "members.Add",
+          "lineNumber": 218
+        },
+        {
+          "caller": "getPropertiesForItems",
+          "callee": "member.GetValue",
+          "lineNumber": 218
+        },
+        {
+          "caller": "getPropertiesForItems",
+          "callee": "getPropertiesForItems",
+          "lineNumber": 222
+        },
+        {
+          "caller": "GetPropertiesForItems",
+          "callee": "new Dictionary<IMemberData, object>",
+          "lineNumber": 228
+        },
+        {
+          "caller": "GetPropertiesForItems",
+          "callee": "getPropertiesForItems",
+          "lineNumber": 229
+        },
+        {
+          "caller": "SetValue",
+          "callee": "Prop.TypeDescriptor.DescendsTo",
+          "lineNumber": 241
+        },
+        {
+          "caller": "SetValue",
+          "callee": "value.GetType",
+          "lineNumber": 241
+        },
+        {
+          "caller": "SetValue",
+          "callee": "Prop.SetValue",
+          "lineNumber": 243
+        },
+        {
+          "caller": "SetValue",
+          "callee": "Prop.SetValue",
+          "lineNumber": 247
+        },
+        {
+          "caller": "SetValue",
+          "callee": "Convert.ChangeType",
+          "lineNumber": 247
+        },
+        {
+          "caller": "SetValue",
+          "callee": "Obj.OnPropertyChanged",
+          "lineNumber": 254
+        },
+        {
+          "caller": "GetValue",
+          "callee": "Prop.GetValue",
+          "lineNumber": 258
+        },
+        {
+          "caller": "GetPropertySets",
+          "callee": "TypeData.GetTypeData(step).GetMember",
+          "lineNumber": 268
+        },
+        {
+          "caller": "GetPropertySets",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 268
+        },
+        {
+          "caller": "GetPropertySets",
+          "callee": "paramProp.GetDisplayAttribute().GetFullName",
+          "lineNumber": 269
+        },
+        {
+          "caller": "GetPropertySets",
+          "callee": "paramProp.GetDisplayAttribute",
+          "lineNumber": 269
+        },
+        {
+          "caller": "GetPropertySets",
+          "callee": "prop.GetDisplayAttribute().GetFullName",
+          "lineNumber": 269
+        },
+        {
+          "caller": "GetPropertySets",
+          "callee": "prop.GetDisplayAttribute",
+          "lineNumber": 269
+        },
+        {
+          "caller": "GetPropertySets",
+          "callee": "new ObjPropSet",
+          "lineNumber": 270
+        },
+        {
+          "caller": "GetPropertySets",
+          "callee": "GetPropertySets",
+          "lineNumber": 272
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "new ArgumentException",
+          "lineNumber": 295
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "new ArgumentException",
+          "lineNumber": 297
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "Math.Sign",
+          "lineNumber": 298
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "Math.Sign",
+          "lineNumber": 298
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "new ArgumentException",
+          "lineNumber": 299
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "Math.Log10",
+          "lineNumber": 301
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "Math.Log10",
+          "lineNumber": 302
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "LinearRange((decimal)logs, (decimal)loge, points).Select",
+          "lineNumber": 303
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "LinearRange",
+          "lineNumber": 303
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "Math.Pow",
+          "lineNumber": 303
+        },
+        {
+          "caller": "Run",
+          "callee": "base.Run",
+          "lineNumber": 309
+        },
+        {
+          "caller": "Run",
+          "callee": "GetPropertySets(ChildTestSteps).ToList",
+          "lineNumber": 311
+        },
+        {
+          "caller": "Run",
+          "callee": "GetPropertySets",
+          "lineNumber": 311
+        },
+        {
+          "caller": "Run",
+          "callee": "sets.Select(set => set.GetValue()).ToArray",
+          "lineNumber": 312
+        },
+        {
+          "caller": "Run",
+          "callee": "sets.Select",
+          "lineNumber": 312
+        },
+        {
+          "caller": "Run",
+          "callee": "set.GetValue",
+          "lineNumber": 312
+        },
+        {
+          "caller": "Run",
+          "callee": "LinearRange",
+          "lineNumber": 315
+        },
+        {
+          "caller": "Run",
+          "callee": "ExponentialRange",
+          "lineNumber": 318
+        },
+        {
+          "caller": "Run",
+          "callee": "SweepProperties.Select(x => x.GetDisplayAttribute()).ToList",
+          "lineNumber": 320
+        },
+        {
+          "caller": "Run",
+          "callee": "SweepProperties.Select",
+          "lineNumber": 320
+        },
+        {
+          "caller": "Run",
+          "callee": "x.GetDisplayAttribute",
+          "lineNumber": 320
+        },
+        {
+          "caller": "Run",
+          "callee": "string.Join",
+          "lineNumber": 321
+        },
+        {
+          "caller": "Run",
+          "callee": "disps.Select",
+          "lineNumber": 321
+        },
+        {
+          "caller": "Run",
+          "callee": "string.Format",
+          "lineNumber": 324
+        },
+        {
+          "caller": "Run",
+          "callee": "OnPropertyChanged",
+          "lineNumber": 329
+        },
+        {
+          "caller": "Run",
+          "callee": "set.SetValue",
+          "lineNumber": 334
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Error",
+          "lineNumber": 338
+        },
+        {
+          "caller": "Run",
+          "callee": "set.Prop.GetDisplayAttribute",
+          "lineNumber": 338
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Debug",
+          "lineNumber": 339
+        },
+        {
+          "caller": "Run",
+          "callee": "new ResultParameters",
+          "lineNumber": 343
+        },
+        {
+          "caller": "Run",
+          "callee": "AdditionalParams.Add",
+          "lineNumber": 346
+        },
+        {
+          "caller": "Run",
+          "callee": "new ResultParameter",
+          "lineNumber": 346
+        },
+        {
+          "caller": "Run",
+          "callee": "disp.Group.FirstOrDefault",
+          "lineNumber": 346
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 348
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps(AdditionalParams, BreakLoopRequested, throwOnBreak: false).ToArray",
+          "lineNumber": 350
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps",
+          "lineNumber": 350
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.ForEach",
+          "lineNumber": 352
+        },
+        {
+          "caller": "Run",
+          "callee": "r.WaitForCompletion",
+          "lineNumber": 352
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.LastOrDefault()?.BreakConditionsSatisfied",
+          "lineNumber": 353
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.LastOrDefault",
+          "lineNumber": 353
+        },
+        {
+          "caller": "Run",
+          "callee": "sets[i].SetValue",
+          "lineNumber": 357
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Attribute",
+          "lineNumber": 371
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "proccessingNodes.Add",
+          "lineNumber": 374
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "typeAttribute.SetValue",
+          "lineNumber": 378
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Element",
+          "lineNumber": 380
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "node.Element",
+          "lineNumber": 381
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "oldN.Attribute",
+          "lineNumber": 388
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "newN.Attribute",
+          "lineNumber": 388
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "newN.SetAttributeValue",
+          "lineNumber": 389
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "oldN.Attribute",
+          "lineNumber": 389
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "oldN.Remove",
+          "lineNumber": 391
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "Serializer.Deserialize",
+          "lineNumber": 394
+        },
+        {
+          "caller": "Deserialize",
+          "callee": "proccessingNodes.Remove",
+          "lineNumber": 398
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 19,
+        "functionCount": 16,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "BasicSteps/SweepParam.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 140,
+      "nonEmptyLines": 118,
+      "functions": [
+        {
+          "name": "GetMemberName",
+          "startLine": 29,
+          "endLine": 29,
+          "params": [
+            "member"
+          ]
+        },
+        {
+          "name": "SweepParam",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "SweepParam",
+          "startLine": 62,
+          "endLine": 70,
+          "params": [
+            "props"
+          ]
+        },
+        {
+          "name": "SweepParam",
+          "startLine": 72,
+          "endLine": 79,
+          "params": [
+            "members"
+          ]
+        },
+        {
+          "name": "ToString",
+          "startLine": 81,
+          "endLine": 84,
+          "params": []
+        },
+        {
+          "name": "cloneObject",
+          "startLine": 87,
+          "endLine": 116,
+          "params": [
+            "newValue"
+          ]
+        },
+        {
+          "name": "Resize",
+          "startLine": 117,
+          "endLine": 138,
+          "params": [
+            "newCount"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SweepParam",
+          "startLine": 8,
+          "endLine": 139,
+          "methods": [
+            "GetMemberName",
+            "SweepParam",
+            "SweepParam",
+            "SweepParam",
+            "ToString",
+            "cloneObject",
+            "Resize"
+          ],
+          "properties": [
+            "Step",
+            "Name",
+            "_values",
+            "Values",
+            "_defaultValue",
+            "DefaultValue",
+            "Type",
+            "MemberNames",
+            "members",
+            "Members",
+            "Member",
+            "serializer"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Name",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "Values",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "DefaultValue",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "Type",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "MemberNames",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "Members",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "Member",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParam",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParam",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParam",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "Resize",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParam",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SweepParam",
+          "callee": "props.Distinct().ToArray",
+          "lineNumber": 64
+        },
+        {
+          "caller": "SweepParam",
+          "callee": "props.Distinct",
+          "lineNumber": 64
+        },
+        {
+          "caller": "SweepParam",
+          "callee": "new ArgumentException",
+          "lineNumber": 66
+        },
+        {
+          "caller": "SweepParam",
+          "callee": "nameof",
+          "lineNumber": 66
+        },
+        {
+          "caller": "SweepParam",
+          "callee": "Members.All",
+          "lineNumber": 68
+        },
+        {
+          "caller": "SweepParam",
+          "callee": "Equals",
+          "lineNumber": 68
+        },
+        {
+          "caller": "SweepParam",
+          "callee": "new ArgumentException",
+          "lineNumber": 69
+        },
+        {
+          "caller": "SweepParam",
+          "callee": "nameof",
+          "lineNumber": 69
+        },
+        {
+          "caller": "SweepParam",
+          "callee": "Resize",
+          "lineNumber": 74
+        },
+        {
+          "caller": "ToString",
+          "callee": "string.Format",
+          "lineNumber": 83
+        },
+        {
+          "caller": "cloneObject",
+          "callee": "StringConvertProvider.TryGetString",
+          "lineNumber": 90
+        },
+        {
+          "caller": "cloneObject",
+          "callee": "StringConvertProvider.TryFromString",
+          "lineNumber": 92
+        },
+        {
+          "caller": "cloneObject",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 92
+        },
+        {
+          "caller": "cloneObject",
+          "callee": "new TapSerializer",
+          "lineNumber": 102
+        },
+        {
+          "caller": "cloneObject",
+          "callee": "serializer.SerializeToString",
+          "lineNumber": 106
+        },
+        {
+          "caller": "cloneObject",
+          "callee": "serializer.DeserializeFromString",
+          "lineNumber": 107
+        },
+        {
+          "caller": "cloneObject",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 107
+        },
+        {
+          "caller": "Resize",
+          "callee": "Array.Resize",
+          "lineNumber": 124
+        },
+        {
+          "caller": "Resize",
+          "callee": "_values.GetValue",
+          "lineNumber": 131
+        },
+        {
+          "caller": "Resize",
+          "callee": "cloneObject",
+          "lineNumber": 132
+        },
+        {
+          "caller": "Resize",
+          "callee": "_values.SetValue",
+          "lineNumber": 133
+        },
+        {
+          "caller": "Resize",
+          "callee": "Math.Min",
+          "lineNumber": 135
+        },
+        {
+          "caller": "Resize",
+          "callee": "Array.Copy",
+          "lineNumber": 136
+        },
+        {
+          "caller": "Resize",
+          "callee": "Step?.parametersChanged",
+          "lineNumber": 137
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BasicSteps/SweepParameterRangeStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 227,
+      "nonEmptyLines": 186,
+      "functions": [
+        {
+          "name": "PrePlanRun",
+          "startLine": 53,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "PostPlanRun",
+          "startLine": 60,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "validateSweep",
+          "startLine": 77,
+          "endLine": 107,
+          "params": [
+            "Value"
+          ]
+        },
+        {
+          "name": "SweepParameterRangeStep",
+          "startLine": 109,
+          "endLine": 125,
+          "params": []
+        },
+        {
+          "name": "LinearRange",
+          "startLine": 127,
+          "endLine": 135,
+          "params": [
+            "start",
+            "end",
+            "points"
+          ]
+        },
+        {
+          "name": "ExponentialRange",
+          "startLine": 137,
+          "endLine": 149,
+          "params": [
+            "start",
+            "end",
+            "points"
+          ]
+        },
+        {
+          "name": "GetRange",
+          "startLine": 152,
+          "endLine": 154,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 156,
+          "endLine": 217,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SweepParameterRangeStep",
+          "startLine": 11,
+          "endLine": 226,
+          "methods": [
+            "PrePlanRun",
+            "PostPlanRun",
+            "validateSweep",
+            "SweepParameterRangeStep",
+            "LinearRange",
+            "ExponentialRange",
+            "GetRange",
+            "Run"
+          ],
+          "properties": [
+            "SweepStart",
+            "SweepStop",
+            "SweepEnd",
+            "SweepStep",
+            "SweepPoints",
+            "_iteration",
+            "_setIteration",
+            "IterationInfo",
+            "SweepBehavior",
+            "AvailableParameters",
+            "isRunning",
+            "validateSweepMutex",
+            "CurrentIteration",
+            "MaxIterations"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SweepStart",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "SweepStop",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "SweepEnd",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "SweepStep",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "SweepPoints",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "IterationInfo",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "SweepBehavior",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "PrePlanRun",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "PostPlanRun",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "AvailableParameters",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParameterRangeStep",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "LinearRange",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "ExponentialRange",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParameterRangeStep",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PrePlanRun",
+          "callee": "base.PrePlanRun",
+          "lineNumber": 55
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "validateSweepMutex.WaitOne",
+          "lineNumber": 56
+        },
+        {
+          "caller": "PostPlanRun",
+          "callee": "validateSweepMutex.ReleaseMutex",
+          "lineNumber": 62
+        },
+        {
+          "caller": "PostPlanRun",
+          "callee": "base.PostPlanRun",
+          "lineNumber": 63
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "AvailableParameters.ToArray",
+          "lineNumber": 79
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "validateSweepMutex.WaitOne",
+          "lineNumber": 83
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "props.Select(set => set.GetValue(this)).ToArray",
+          "lineNumber": 84
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "props.Select",
+          "lineNumber": 84
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "set.GetValue",
+          "lineNumber": 84
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "StringConvertProvider.GetString",
+          "lineNumber": 87
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "StringConvertProvider.FromString",
+          "lineNumber": 91
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "set.SetValue",
+          "lineNumber": 92
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "props[i].SetValue",
+          "lineNumber": 104
+        },
+        {
+          "caller": "validateSweep",
+          "callee": "validateSweepMutex.ReleaseMutex",
+          "lineNumber": 105
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "Rules.Add",
+          "lineNumber": 117
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 117
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "validateSweep",
+          "lineNumber": 117
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "validateSweep",
+          "lineNumber": 117
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "Rules.Add",
+          "lineNumber": 118
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 118
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "validateSweep",
+          "lineNumber": 118
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "validateSweep",
+          "lineNumber": 118
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "Rules.Add",
+          "lineNumber": 120
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "Rules.Add",
+          "lineNumber": 121
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "Rules.Add",
+          "lineNumber": 122
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "Rules.Add",
+          "lineNumber": 124
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "Math.Sign",
+          "lineNumber": 124
+        },
+        {
+          "caller": "SweepParameterRangeStep",
+          "callee": "Math.Sign",
+          "lineNumber": 124
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "new ArgumentException",
+          "lineNumber": 140
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "new ArgumentException",
+          "lineNumber": 142
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "Math.Sign",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "Math.Sign",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "new ArgumentException",
+          "lineNumber": 144
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "Math.Log10",
+          "lineNumber": 146
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "Math.Log10",
+          "lineNumber": 147
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "LinearRange((decimal)logs, (decimal)loge, points).Select",
+          "lineNumber": 148
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "LinearRange",
+          "lineNumber": 148
+        },
+        {
+          "caller": "ExponentialRange",
+          "callee": "Math.Pow",
+          "lineNumber": 148
+        },
+        {
+          "caller": "GetRange",
+          "callee": "ExponentialRange",
+          "lineNumber": 153
+        },
+        {
+          "caller": "GetRange",
+          "callee": "LinearRange",
+          "lineNumber": 154
+        },
+        {
+          "caller": "Run",
+          "callee": "base.Run",
+          "lineNumber": 158
+        },
+        {
+          "caller": "Run",
+          "callee": "SelectedMembers.ToArray",
+          "lineNumber": 160
+        },
+        {
+          "caller": "Run",
+          "callee": "selected.Select(set => set.GetValue(this)).ToArray",
+          "lineNumber": 161
+        },
+        {
+          "caller": "Run",
+          "callee": "selected.Select",
+          "lineNumber": 161
+        },
+        {
+          "caller": "Run",
+          "callee": "set.GetValue",
+          "lineNumber": 161
+        },
+        {
+          "caller": "Run",
+          "callee": "GetRange",
+          "lineNumber": 164
+        },
+        {
+          "caller": "Run",
+          "callee": "selected.Select(x => x.GetDisplayAttribute()).ToList",
+          "lineNumber": 166
+        },
+        {
+          "caller": "Run",
+          "callee": "selected.Select",
+          "lineNumber": 166
+        },
+        {
+          "caller": "Run",
+          "callee": "x.GetDisplayAttribute",
+          "lineNumber": 166
+        },
+        {
+          "caller": "Run",
+          "callee": "string.Join",
+          "lineNumber": 167
+        },
+        {
+          "caller": "Run",
+          "callee": "disps.Select",
+          "lineNumber": 167
+        },
+        {
+          "caller": "Run",
+          "callee": "StringConvertProvider.GetString",
+          "lineNumber": 183
+        },
+        {
+          "caller": "Run",
+          "callee": "StringConvertProvider.FromString",
+          "lineNumber": 188
+        },
+        {
+          "caller": "Run",
+          "callee": "set.SetValue",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Error",
+          "lineNumber": 193
+        },
+        {
+          "caller": "Run",
+          "callee": "set.GetDisplayAttribute",
+          "lineNumber": 193
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Debug",
+          "lineNumber": 194
+        },
+        {
+          "caller": "Run",
+          "callee": "OnPropertyChanged",
+          "lineNumber": 198
+        },
+        {
+          "caller": "Run",
+          "callee": "new ResultParameters",
+          "lineNumber": 200
+        },
+        {
+          "caller": "Run",
+          "callee": "AdditionalParams.Add",
+          "lineNumber": 201
+        },
+        {
+          "caller": "Run",
+          "callee": "AdditionalParams.Add",
+          "lineNumber": 203
+        },
+        {
+          "caller": "Run",
+          "callee": "new ResultParameter",
+          "lineNumber": 203
+        },
+        {
+          "caller": "Run",
+          "callee": "disp.Group.FirstOrDefault",
+          "lineNumber": 203
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 205
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps(AdditionalParams, BreakLoopRequested, throwOnBreak: false).ToArray",
+          "lineNumber": 207
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps",
+          "lineNumber": 207
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.ForEach",
+          "lineNumber": 209
+        },
+        {
+          "caller": "Run",
+          "callee": "r.WaitForCompletion",
+          "lineNumber": 209
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.LastOrDefault()?.BreakConditionsSatisfied",
+          "lineNumber": 210
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.LastOrDefault",
+          "lineNumber": 210
+        },
+        {
+          "caller": "Run",
+          "callee": "selected[i].SetValue",
+          "lineNumber": 215
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 15,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BasicSteps/SweepParameterStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 325,
+      "nonEmptyLines": 269,
+      "functions": [
+        {
+          "name": "SweepParameterStep",
+          "startLine": 50,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "Validate",
+          "startLine": 59,
+          "endLine": 93,
+          "params": []
+        },
+        {
+          "name": "ValidateSweepValues",
+          "startLine": 110,
+          "endLine": 215,
+          "params": []
+        },
+        {
+          "name": "PrePlanRun",
+          "startLine": 217,
+          "endLine": 228,
+          "params": []
+        },
+        {
+          "name": "PostPlanRun",
+          "startLine": 230,
+          "endLine": 234,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 236,
+          "endLine": 307,
+          "params": []
+        },
+        {
+          "name": "NewElement",
+          "startLine": 309,
+          "endLine": 312,
+          "params": []
+        },
+        {
+          "name": "NewSweepRowCollection",
+          "startLine": 313,
+          "endLine": 316,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SweepParameterStep",
+          "startLine": 12,
+          "endLine": 324,
+          "methods": [
+            "SweepParameterStep",
+            "Validate",
+            "ValidateSweepValues",
+            "PrePlanRun",
+            "PostPlanRun",
+            "Run",
+            "NewElement",
+            "NewSweepRowCollection"
+          ],
+          "properties": [
+            "SweepValuesEnabled",
+            "SweepValues",
+            "Resources",
+            "lastError",
+            "_iteration",
+            "_setIteration",
+            "IterationInfo",
+            "isRunning",
+            "validateSweepMutex",
+            "CurrentIteration",
+            "MaxIterations"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SweepValuesEnabled",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "SweepValues",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "Resources",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParameterStep",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "IterationInfo",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "PrePlanRun",
+          "line": 217,
+          "isDefault": false
+        },
+        {
+          "name": "PostPlanRun",
+          "line": 230,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 236,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParameterStep",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SweepParameterStep",
+          "callee": "new SweepRowCollection",
+          "lineNumber": 52
+        },
+        {
+          "caller": "SweepParameterStep",
+          "callee": "Rules.Add",
+          "lineNumber": 54
+        },
+        {
+          "caller": "SweepParameterStep",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 54
+        },
+        {
+          "caller": "SweepParameterStep",
+          "callee": "Validate",
+          "lineNumber": 54
+        },
+        {
+          "caller": "SweepParameterStep",
+          "callee": "nameof",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Validate",
+          "callee": "validateSweepMutex.WaitOne",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Validate",
+          "callee": "new SweepRowCollection",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Validate",
+          "callee": "SweepValues.Select",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Validate",
+          "callee": "SelectedParameters.Select",
+          "lineNumber": 77
+        },
+        {
+          "caller": "Validate",
+          "callee": "rows.SelectMany(x => x.Keys).ToHashSet",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Validate",
+          "callee": "rows.SelectMany",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Validate",
+          "callee": "namesToRemove.ExceptWith",
+          "lineNumber": 79
+        },
+        {
+          "caller": "Validate",
+          "callee": "row.Remove",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Validate",
+          "callee": "ValidateSweepValues",
+          "lineNumber": 85
+        },
+        {
+          "caller": "Validate",
+          "callee": "validateSweepMutex.ReleaseMutex",
+          "lineNumber": 91
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "SelectedMembers.ToArray",
+          "lineNumber": 113
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "SweepValues.Select(TypeData.GetTypeData).FirstOrDefault",
+          "lineNumber": 116
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "SweepValues.Select",
+          "lineNumber": 116
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "new List<string>",
+          "lineNumber": 125
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "new List<(int row, string error)>",
+          "lineNumber": 126
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "rowType.GetMember",
+          "lineNumber": 130
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "new List<(int row, string error)>",
+          "lineNumber": 137
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "SweepValues.WithIndex",
+          "lineNumber": 139
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "new HashSet<ITestStep>",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "mem.GetValue",
+          "lineNumber": 146
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "set.SetValue",
+          "lineNumber": 150
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "set.ParameterizedMembers.ForEach",
+          "lineNumber": 152
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "stepsToValidate.Add",
+          "lineNumber": 155
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "StringConvertProvider.TryGetString",
+          "lineNumber": 165
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "value.ToString",
+          "lineNumber": 167
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "set.GetDisplayAttribute",
+          "lineNumber": 169
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "rowErrors.Add",
+          "lineNumber": 176
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 185
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "rowErrors.Add",
+          "lineNumber": 187
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "step.GetFormattedName",
+          "lineNumber": 187
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "errorTuple.Select(t => t.error).Distinct().Count",
+          "lineNumber": 198
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "errorTuple.Select(t => t.error).Distinct",
+          "lineNumber": 198
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "errorTuple.Select",
+          "lineNumber": 198
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "errorTuple.First",
+          "lineNumber": 200
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "allRowErrors.Add",
+          "lineNumber": 201
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "new StringBuilder",
+          "lineNumber": 209
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "allRowErrors.OrderBy",
+          "lineNumber": 210
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "sb.AppendLine",
+          "lineNumber": 211
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "FormatError",
+          "lineNumber": 211
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "rowErrors.OrderBy(x => x.error).ToArray().OrderBy",
+          "lineNumber": 212
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "rowErrors.OrderBy(x => x.error).ToArray",
+          "lineNumber": 212
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "rowErrors.OrderBy",
+          "lineNumber": 212
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "sb.AppendLine",
+          "lineNumber": 213
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "FormatError",
+          "lineNumber": 213
+        },
+        {
+          "caller": "ValidateSweepValues",
+          "callee": "sb.ToString",
+          "lineNumber": 214
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "validateSweepMutex.WaitOne",
+          "lineNumber": 219
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "base.PrePlanRun",
+          "lineNumber": 220
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 224
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "SweepValues.All",
+          "lineNumber": 226
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 227
+        },
+        {
+          "caller": "PostPlanRun",
+          "callee": "validateSweepMutex.ReleaseMutex",
+          "lineNumber": 232
+        },
+        {
+          "caller": "PostPlanRun",
+          "callee": "base.PostPlanRun",
+          "lineNumber": 233
+        },
+        {
+          "caller": "Run",
+          "callee": "base.Run",
+          "lineNumber": 238
+        },
+        {
+          "caller": "Run",
+          "callee": "SelectedMembers.ToArray",
+          "lineNumber": 240
+        },
+        {
+          "caller": "Run",
+          "callee": "sets.Select(set => set.GetValue(this)).ToArray",
+          "lineNumber": 241
+        },
+        {
+          "caller": "Run",
+          "callee": "sets.Select",
+          "lineNumber": 241
+        },
+        {
+          "caller": "Run",
+          "callee": "set.GetValue",
+          "lineNumber": 241
+        },
+        {
+          "caller": "Run",
+          "callee": "SweepValues.Select(TypeData.GetTypeData).FirstOrDefault",
+          "lineNumber": 243
+        },
+        {
+          "caller": "Run",
+          "callee": "SweepValues.Select",
+          "lineNumber": 243
+        },
+        {
+          "caller": "Run",
+          "callee": "new ResultParameters",
+          "lineNumber": 254
+        },
+        {
+          "caller": "Run",
+          "callee": "AdditionalParams.Add",
+          "lineNumber": 256
+        },
+        {
+          "caller": "Run",
+          "callee": "rowType.GetMember",
+          "lineNumber": 261
+        },
+        {
+          "caller": "Run",
+          "callee": "mem.GetValue",
+          "lineNumber": 262
+        },
+        {
+          "caller": "Run",
+          "callee": "StringConvertProvider.TryGetString",
+          "lineNumber": 267
+        },
+        {
+          "caller": "Run",
+          "callee": "value.ToString",
+          "lineNumber": 269
+        },
+        {
+          "caller": "Run",
+          "callee": "mem.GetDisplayAttribute",
+          "lineNumber": 271
+        },
+        {
+          "caller": "Run",
+          "callee": "AdditionalParams.Add",
+          "lineNumber": 272
+        },
+        {
+          "caller": "Run",
+          "callee": "new ResultParameter",
+          "lineNumber": 272
+        },
+        {
+          "caller": "Run",
+          "callee": "disp.Group.FirstOrDefault",
+          "lineNumber": 272
+        },
+        {
+          "caller": "Run",
+          "callee": "set.SetValue",
+          "lineNumber": 277
+        },
+        {
+          "caller": "Run",
+          "callee": "new ArgumentException",
+          "lineNumber": 281
+        },
+        {
+          "caller": "Run",
+          "callee": "set.GetDisplayAttribute",
+          "lineNumber": 281
+        },
+        {
+          "caller": "Run",
+          "callee": "OnPropertyChanged",
+          "lineNumber": 287
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Info",
+          "lineNumber": 289
+        },
+        {
+          "caller": "Run",
+          "callee": "Value.GetIterationString",
+          "lineNumber": 289
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps(AdditionalParams, BreakLoopRequested, throwOnBreak: false).ToArray",
+          "lineNumber": 291
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps",
+          "lineNumber": 291
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.ForEach",
+          "lineNumber": 293
+        },
+        {
+          "caller": "Run",
+          "callee": "r.WaitForCompletion",
+          "lineNumber": 293
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.LastOrDefault()?.BreakConditionsSatisfied",
+          "lineNumber": 294
+        },
+        {
+          "caller": "Run",
+          "callee": "runs.LastOrDefault",
+          "lineNumber": 294
+        },
+        {
+          "caller": "Run",
+          "callee": "sets[i].SetValue",
+          "lineNumber": 305
+        },
+        {
+          "caller": "NewElement",
+          "callee": "new SweepRow",
+          "lineNumber": 311
+        },
+        {
+          "caller": "NewSweepRowCollection",
+          "callee": "new SweepRowCollection",
+          "lineNumber": 315
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BasicSteps/SweepParameterStepBase.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 129,
+      "nonEmptyLines": 111,
+      "functions": [
+        {
+          "name": "MemberDataName",
+          "startLine": 19,
+          "endLine": 25,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "Equals",
+          "startLine": 27,
+          "endLine": 32,
+          "params": [
+            "obj"
+          ]
+        },
+        {
+          "name": "GetHashCode",
+          "startLine": 34,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "ToString",
+          "startLine": 37,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "updateSelected",
+          "startLine": 56,
+          "endLine": 85,
+          "params": [
+            "destructive"
+          ]
+        },
+        {
+          "name": "onListChanged",
+          "startLine": 87,
+          "endLine": 93,
+          "params": [
+            "list"
+          ]
+        },
+        {
+          "name": "SweepParameterStepBase",
+          "startLine": 124,
+          "endLine": 127,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ISelectedParameters",
+          "startLine": 9,
+          "endLine": 12,
+          "methods": [],
+          "properties": [
+            "SelectedParameters"
+          ]
+        },
+        {
+          "name": "MemberDataName",
+          "startLine": 14,
+          "endLine": 38,
+          "methods": [
+            "MemberDataName",
+            "Equals",
+            "GetHashCode",
+            "ToString"
+          ],
+          "properties": [
+            "Group",
+            "Name"
+          ]
+        },
+        {
+          "name": "SweepParameterStepBase",
+          "startLine": 40,
+          "endLine": 128,
+          "methods": [
+            "updateSelected",
+            "onListChanged",
+            "SweepParameterStepBase"
+          ],
+          "properties": [
+            "SweepProperties",
+            "SelectedMembers",
+            "AvailableParameters",
+            "selectedProperties",
+            "Selected",
+            "SelectedParameters",
+            "Parameters"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Group",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "MemberDataName",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "Equals",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "GetHashCode",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "MemberDataName",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "AvailableParameters",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "Selected",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "SelectedParameters",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "Parameters",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParameterStepBase",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParameterStepBase",
+          "line": 40,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MemberDataName",
+          "callee": "name.Split('\\\\').Select(x => x.Trim())\n                .Where(x => string.IsNullOrWhiteSpace(x) == false).ToArray",
+          "lineNumber": 21
+        },
+        {
+          "caller": "MemberDataName",
+          "callee": "name.Split('\\\\').Select(x => x.Trim())\n                .Where",
+          "lineNumber": 21
+        },
+        {
+          "caller": "MemberDataName",
+          "callee": "name.Split('\\\\').Select",
+          "lineNumber": 21
+        },
+        {
+          "caller": "MemberDataName",
+          "callee": "name.Split",
+          "lineNumber": 21
+        },
+        {
+          "caller": "MemberDataName",
+          "callee": "x.Trim",
+          "lineNumber": 21
+        },
+        {
+          "caller": "MemberDataName",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 22
+        },
+        {
+          "caller": "MemberDataName",
+          "callee": "split.LastOrDefault",
+          "lineNumber": 23
+        },
+        {
+          "caller": "MemberDataName",
+          "callee": "string.Join",
+          "lineNumber": 24
+        },
+        {
+          "caller": "MemberDataName",
+          "callee": "split.Take",
+          "lineNumber": 24
+        },
+        {
+          "caller": "GetHashCode",
+          "callee": "Group?.GetHashCode",
+          "lineNumber": 35
+        },
+        {
+          "caller": "GetHashCode",
+          "callee": "Name?.GetHashCode",
+          "lineNumber": 35
+        },
+        {
+          "caller": "updateSelected",
+          "callee": "AvailableParameters.ToHashSet",
+          "lineNumber": 58
+        },
+        {
+          "caller": "updateSelected",
+          "callee": "sweepProperties.ToDictionary",
+          "lineNumber": 59
+        },
+        {
+          "caller": "updateSelected",
+          "callee": "Selected.ContainsKey",
+          "lineNumber": 62
+        },
+        {
+          "caller": "updateSelected",
+          "callee": "Selected.ToArray",
+          "lineNumber": 65
+        },
+        {
+          "caller": "updateSelected",
+          "callee": "sweepProps2.TryGetValue",
+          "lineNumber": 68
+        },
+        {
+          "caller": "updateSelected",
+          "callee": "selectedProperties.Contains",
+          "lineNumber": 72
+        },
+        {
+          "caller": "updateSelected",
+          "callee": "selectedProperties.Add",
+          "lineNumber": 73
+        },
+        {
+          "caller": "updateSelected",
+          "callee": "selectedProperties.RemoveIf",
+          "lineNumber": 77
+        },
+        {
+          "caller": "updateSelected",
+          "callee": "Selected.Remove",
+          "lineNumber": 82
+        },
+        {
+          "caller": "onListChanged",
+          "callee": "Selected.Keys.ToArray",
+          "lineNumber": 89
+        },
+        {
+          "caller": "onListChanged",
+          "callee": "list.Any",
+          "lineNumber": 91
+        },
+        {
+          "caller": "SweepParameterStepBase",
+          "callee": "Rules.Add",
+          "lineNumber": 126
+        },
+        {
+          "caller": "SweepParameterStepBase",
+          "callee": "nameof",
+          "lineNumber": 126
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 7,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "BasicSteps/SweepRow.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "GetIterationString",
+          "startLine": 24,
+          "endLine": 26,
+          "params": []
+        },
+        {
+          "name": "SweepRow",
+          "startLine": 29,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "SweepRow",
+          "startLine": 35,
+          "endLine": 38,
+          "params": [
+            "loop"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SweepRow",
+          "startLine": 10,
+          "endLine": 39,
+          "methods": [
+            "GetIterationString",
+            "SweepRow",
+            "SweepRow"
+          ],
+          "properties": [
+            "Enabled",
+            "Loop",
+            "Values"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Enabled",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "Loop",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "Values",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "SweepRow",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "SweepRow",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "SweepRow",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetIterationString",
+          "callee": "string\n            .Join",
+          "lineNumber": 24
+        },
+        {
+          "caller": "GetIterationString",
+          "callee": "Values.OrderBy(x => x.Key).Select",
+          "lineNumber": 26
+        },
+        {
+          "caller": "GetIterationString",
+          "callee": "Values.OrderBy",
+          "lineNumber": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BasicSteps/SweepRowCollection.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "SweepRowCollection",
+          "startLine": 5,
+          "endLine": 5,
+          "params": [
+            "loop"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 21,
+          "endLine": 26,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "Insert",
+          "startLine": 28,
+          "endLine": 32,
+          "params": [
+            "index",
+            "item"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SweepRowCollection",
+          "startLine": 3,
+          "endLine": 44,
+          "methods": [
+            "SweepRowCollection",
+            "Add",
+            "Insert"
+          ],
+          "properties": [
+            "loop",
+            "Loop"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SweepRowCollection",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "Loop",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "Insert",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "SweepRowCollection",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Add",
+          "callee": "base.Add",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Insert",
+          "callee": "base.Insert",
+          "lineNumber": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BasicSteps/SweepRowMemberData.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 79,
+      "functions": [
+        {
+          "name": "SweepRowMemberData",
+          "startLine": 11,
+          "endLine": 16,
+          "params": [
+            "declaringType",
+            "innerMember"
+          ]
+        },
+        {
+          "name": "SetValue",
+          "startLine": 24,
+          "endLine": 28,
+          "params": [
+            "owner",
+            "value"
+          ]
+        },
+        {
+          "name": "GetValue",
+          "startLine": 30,
+          "endLine": 38,
+          "params": [
+            "owner"
+          ]
+        },
+        {
+          "name": "CloneIfPossible",
+          "startLine": 41,
+          "endLine": 88,
+          "params": [
+            "value",
+            "context"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SweepRowMemberData",
+          "startLine": 5,
+          "endLine": 91,
+          "methods": [
+            "SweepRowMemberData",
+            "SetValue",
+            "GetValue",
+            "CloneIfPossible"
+          ],
+          "properties": [
+            "_declaringType",
+            "_innerMember",
+            "_tapSerializer",
+            "Attributes",
+            "Name",
+            "DeclaringType",
+            "TypeDescriptor",
+            "Writable",
+            "Readable",
+            "ParameterizedMembers"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SweepRowMemberData",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "Attributes",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "DeclaringType",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "TypeDescriptor",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "Writable",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "Readable",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "SetValue",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "GetValue",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "ParameterizedMembers",
+          "line": 90,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SetValue",
+          "callee": "CloneIfPossible",
+          "lineNumber": 27
+        },
+        {
+          "caller": "GetValue",
+          "callee": "row.Values.TryGetValue",
+          "lineNumber": 33
+        },
+        {
+          "caller": "GetValue",
+          "callee": "CloneIfPossible",
+          "lineNumber": 35
+        },
+        {
+          "caller": "GetValue",
+          "callee": "_innerMember.GetValue",
+          "lineNumber": 35
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "new SweepRow",
+          "lineNumber": 48
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "sr2.Values.Add",
+          "lineNumber": 53
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "CloneIfPossible",
+          "lineNumber": 53
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "new SweepRowCollection",
+          "lineNumber": 59
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "src2.Add",
+          "lineNumber": 61
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "CloneIfPossible",
+          "lineNumber": 61
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "Utils.IsTriviallyCloneable",
+          "lineNumber": 65
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 68
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "valType.AsTypeData",
+          "lineNumber": 69
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "StringConvertProvider.TryGetString",
+          "lineNumber": 73
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "StringConvertProvider.TryFromString",
+          "lineNumber": 75
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "new TapSerializer",
+          "lineNumber": 79
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "_tapSerializer.DeserializeFromString",
+          "lineNumber": 82
+        },
+        {
+          "caller": "CloneIfPossible",
+          "callee": "_tapSerializer.SerializeToString",
+          "lineNumber": 82
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BasicSteps/SweepRowTypeData.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "GetMembers",
+          "startLine": 14,
+          "endLine": 14,
+          "params": []
+        },
+        {
+          "name": "GetSweepMembers",
+          "startLine": 16,
+          "endLine": 23,
+          "params": []
+        },
+        {
+          "name": "GetMember",
+          "startLine": 25,
+          "endLine": 28,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "SweepRowTypeData",
+          "startLine": 32,
+          "endLine": 35,
+          "params": [
+            "sweepParameterLoop"
+          ]
+        },
+        {
+          "name": "CreateInstance",
+          "startLine": 37,
+          "endLine": 40,
+          "params": [
+            "arguments"
+          ]
+        },
+        {
+          "name": "Equals",
+          "startLine": 44,
+          "endLine": 49,
+          "params": [
+            "obj"
+          ]
+        },
+        {
+          "name": "GetHashCode",
+          "startLine": 51,
+          "endLine": 54,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SweepRowTypeData",
+          "startLine": 7,
+          "endLine": 55,
+          "methods": [
+            "GetMembers",
+            "GetSweepMembers",
+            "GetMember",
+            "SweepRowTypeData",
+            "CreateInstance",
+            "Equals",
+            "GetHashCode"
+          ],
+          "properties": [
+            "Attributes",
+            "Name",
+            "BaseType",
+            "SweepParameterLoop",
+            "CanCreateInstance"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Attributes",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "BaseType",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "GetMembers",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "GetMember",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "SweepParameterLoop",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "SweepRowTypeData",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "CreateInstance",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "CanCreateInstance",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "Equals",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "GetHashCode",
+          "line": 51,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetMembers",
+          "callee": "BaseType.GetMembers().Concat",
+          "lineNumber": 14
+        },
+        {
+          "caller": "GetMembers",
+          "callee": "BaseType.GetMembers",
+          "lineNumber": 14
+        },
+        {
+          "caller": "GetMembers",
+          "callee": "GetSweepMembers",
+          "lineNumber": 14
+        },
+        {
+          "caller": "GetSweepMembers",
+          "callee": "TypeData.GetTypeData(SweepParameterLoop).GetMembers()\n            .Where(x => selected.Contains(x))\n            .OfType<IParameterMemberData>",
+          "lineNumber": 19
+        },
+        {
+          "caller": "GetSweepMembers",
+          "callee": "TypeData.GetTypeData(SweepParameterLoop).GetMembers()\n            .Where",
+          "lineNumber": 19
+        },
+        {
+          "caller": "GetSweepMembers",
+          "callee": "TypeData.GetTypeData(SweepParameterLoop).GetMembers",
+          "lineNumber": 19
+        },
+        {
+          "caller": "GetSweepMembers",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 19
+        },
+        {
+          "caller": "GetSweepMembers",
+          "callee": "selected.Contains",
+          "lineNumber": 20
+        },
+        {
+          "caller": "GetSweepMembers",
+          "callee": "loopMembers.Select",
+          "lineNumber": 22
+        },
+        {
+          "caller": "GetSweepMembers",
+          "callee": "new SweepRowMemberData",
+          "lineNumber": 22
+        },
+        {
+          "caller": "GetMember",
+          "callee": "BaseType.GetMember",
+          "lineNumber": 27
+        },
+        {
+          "caller": "GetMember",
+          "callee": "GetSweepMembers().FirstOrDefault",
+          "lineNumber": 27
+        },
+        {
+          "caller": "GetMember",
+          "callee": "GetSweepMembers",
+          "lineNumber": 27
+        },
+        {
+          "caller": "CreateInstance",
+          "callee": "new Exception",
+          "lineNumber": 39
+        },
+        {
+          "caller": "GetHashCode",
+          "callee": "SweepParameterLoop.GetHashCode",
+          "lineNumber": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 41,
+      "nonEmptyLines": 40,
+      "metrics": {}
+    },
+    {
+      "path": "BasicSteps/TestPlanReference.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 654,
+      "nonEmptyLines": 567,
+      "functions": [
+        {
+          "name": "TestPlanReference",
+          "startLine": 120,
+          "endLine": 126,
+          "params": []
+        },
+        {
+          "name": "PrePlanRun",
+          "startLine": 128,
+          "endLine": 144,
+          "params": []
+        },
+        {
+          "name": "Run",
+          "startLine": 175,
+          "endLine": 198,
+          "params": []
+        },
+        {
+          "name": "ReadCachedXmlFile",
+          "startLine": 219,
+          "endLine": 224,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "UpdateStep",
+          "startLine": 229,
+          "endLine": 415,
+          "params": []
+        },
+        {
+          "name": "LoadTestPlan",
+          "startLine": 433,
+          "endLine": 436,
+          "params": []
+        },
+        {
+          "name": "loadTestPlan",
+          "startLine": 438,
+          "endLine": 449,
+          "params": []
+        },
+        {
+          "name": "GetPath",
+          "startLine": 451,
+          "endLine": 462,
+          "params": []
+        },
+        {
+          "name": "ConvertToSequence",
+          "startLine": 494,
+          "endLine": 504,
+          "params": []
+        },
+        {
+          "name": "ConvertToSequence",
+          "startLine": 506,
+          "endLine": 650,
+          "params": [
+            "userShouldConfirm",
+            "multiSelect"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestPlanReference",
+          "startLine": 16,
+          "endLine": 653,
+          "methods": [
+            "TestPlanReference",
+            "PrePlanRun",
+            "Run",
+            "ReadCachedXmlFile",
+            "UpdateStep",
+            "LoadTestPlan",
+            "loadTestPlan",
+            "GetPath",
+            "ConvertToSequence",
+            "ConvertToSequence"
+          ],
+          "properties": [
+            "referencedPlanPaths",
+            "HideSteps",
+            "parent",
+            "Parent",
+            "filepath",
+            "currentlyLoaded",
+            "CanOpenFile",
+            "Filepath",
+            "Hash",
+            "Path",
+            "isExpandingPlanDir",
+            "PlanDir",
+            "ChildTestSteps",
+            "CurrentMappings",
+            "dict",
+            "plan",
+            "loadedPlanPath",
+            "StepIdMapping",
+            "mapping",
+            "StepMapping",
+            "anyStepsLoaded",
+            "ExternalParameters"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Parent",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "CanOpenFile",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "Filepath",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "Hash",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "Path",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "PlanDir",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "ChildTestSteps",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanReference",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "PrePlanRun",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 175,
+          "isDefault": false
+        },
+        {
+          "name": "mapping",
+          "line": 419,
+          "isDefault": false
+        },
+        {
+          "name": "StepMapping",
+          "line": 421,
+          "isDefault": false
+        },
+        {
+          "name": "LoadTestPlan",
+          "line": 433,
+          "isDefault": false
+        },
+        {
+          "name": "loadTestPlan",
+          "line": 438,
+          "isDefault": false
+        },
+        {
+          "name": "anyStepsLoaded",
+          "line": 464,
+          "isDefault": false
+        },
+        {
+          "name": "ConvertToSequence",
+          "line": 494,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanReference",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TestPlanReference",
+          "callee": "new MacroString",
+          "lineNumber": 123
+        },
+        {
+          "caller": "TestPlanReference",
+          "callee": "Rules.Add",
+          "lineNumber": 124
+        },
+        {
+          "caller": "TestPlanReference",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 124
+        },
+        {
+          "caller": "TestPlanReference",
+          "callee": "File.Exists",
+          "lineNumber": 124
+        },
+        {
+          "caller": "TestPlanReference",
+          "callee": "nameof",
+          "lineNumber": 124
+        },
+        {
+          "caller": "TestPlanReference",
+          "callee": "new List<GuidMapping>",
+          "lineNumber": 125
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "base.PrePlanRun",
+          "lineNumber": 130
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 132
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "new OperationCanceledException",
+          "lineNumber": 133
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "string.Format",
+          "lineNumber": 133
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "File.Exists",
+          "lineNumber": 138
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "LoadTestPlan",
+          "lineNumber": 140
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "new OperationCanceledException",
+          "lineNumber": 143
+        },
+        {
+          "caller": "PrePlanRun",
+          "callee": "string.Format",
+          "lineNumber": 143
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "base.OnResultPublished",
+          "lineNumber": 153
+        },
+        {
+          "caller": "OnResultPublished",
+          "callee": "proxy.PublishTable",
+          "lineNumber": 154
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "forwardTo.AddEvent",
+          "lineNumber": 169
+        },
+        {
+          "caller": "Run",
+          "callee": "plan.SerializeToString",
+          "lineNumber": 180
+        },
+        {
+          "caller": "Run",
+          "callee": "new LogForwardingTraceListener",
+          "lineNumber": 182
+        },
+        {
+          "caller": "Run",
+          "callee": "Session.Create",
+          "lineNumber": 183
+        },
+        {
+          "caller": "Run",
+          "callee": "Utils.DeserializeFromString<TestPlan>",
+          "lineNumber": 185
+        },
+        {
+          "caller": "Run",
+          "callee": "OpenTap.Log.AddListener",
+          "lineNumber": 188
+        },
+        {
+          "caller": "Run",
+          "callee": "plan2.Execute",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Run",
+          "callee": "new SubPlanResultListener",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 190
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps",
+          "lineNumber": 195
+        },
+        {
+          "caller": "Run",
+          "callee": "UpgradeVerdict",
+          "lineNumber": 196
+        },
+        {
+          "caller": "ReadCachedXmlFile",
+          "callee": "dict.Invoke",
+          "lineNumber": 221
+        },
+        {
+          "caller": "ReadCachedXmlFile",
+          "callee": "new XDocument",
+          "lineNumber": 223
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "new List<GuidMapping>",
+          "lineNumber": 232
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "new Dictionary<Guid, Guid>",
+          "lineNumber": 234
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "this.mapping.Concat(CurrentMappings).ToList",
+          "lineNumber": 235
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "this.mapping.Concat",
+          "lineNumber": 235
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TapSerializer.GetObjectDeserializer",
+          "lineNumber": 254
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "System.IO.Path.GetDirectoryName",
+          "lineNumber": 256
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "Filepath.Expand",
+          "lineNumber": 258
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "refPlanPath.Replace",
+          "lineNumber": 259
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "File.Exists",
+          "lineNumber": 260
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "Log.Warning",
+          "lineNumber": 262
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "ChildTestSteps.Clear",
+          "lineNumber": 265
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "new HashSet<string>",
+          "lineNumber": 272
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "referencedPlanPaths.Add",
+          "lineNumber": 273
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "new Exception",
+          "lineNumber": 274
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "new TapSerializer",
+          "lineNumber": 276
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "newSerializer.GetSerializer<ExternalParameterSerializer>().PreloadedValues.MergeInto",
+          "lineNumber": 278
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "newSerializer.GetSerializer<ExternalParameterSerializer>",
+          "lineNumber": 278
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "currentSerializer.GetSerializer<ExternalParameterSerializer>",
+          "lineNumber": 278
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "newSerializer.GetSerializer<ExternalParameterSerializer>",
+          "lineNumber": 279
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "StringConvertProvider.TryGetString",
+          "lineNumber": 283
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "e.GetValue",
+          "lineNumber": 283
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "ReadCachedXmlFile",
+          "lineNumber": 298
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "newSerializer.Deserialize",
+          "lineNumber": 299
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.FromType",
+          "lineNumber": 299
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "System.Security.Cryptography.SHA1.Create",
+          "lineNumber": 302
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "new MemoryStream",
+          "lineNumber": 304
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "doc.Save",
+          "lineNumber": 306
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "BitConverter.ToString(algo.ComputeHash(ms.ToArray()), 0, 8)\n                                .Replace",
+          "lineNumber": 307
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "BitConverter.ToString",
+          "lineNumber": 307
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "algo.ComputeHash",
+          "lineNumber": 307
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "ms.ToArray",
+          "lineNumber": 307
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData(tp).GetMembers().OfType<ParameterMemberData>()\n                            .ToArray",
+          "lineNumber": 313
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData(tp).GetMembers().OfType<ParameterMemberData>",
+          "lineNumber": 313
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData(tp).GetMembers",
+          "lineNumber": 313
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 313
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "par.GetValue",
+          "lineNumber": 318
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "ExternalParameters.ToLookup",
+          "lineNumber": 320
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "lookup[par.Name].FirstOrDefault",
+          "lineNumber": 321
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "par.SetValue",
+          "lineNumber": 323
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "prevParameter.GetValue",
+          "lineNumber": 323
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "Utils.FlattenHeirarchy",
+          "lineNumber": 330
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "flatSteps.ToDictionary",
+          "lineNumber": 332
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "mapping.TryGetValue",
+          "lineNumber": 337
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "ChildTestSteps.Add",
+          "lineNumber": 344
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "RecursivelyGetChildSteps",
+          "lineNumber": 346
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "step.OnPropertyChanged",
+          "lineNumber": 350
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 361
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData(tp).GetMembers",
+          "lineNumber": 363
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 363
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "thisType.GetMember",
+          "lineNumber": 367
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "mixin.ToDynamicMember",
+          "lineNumber": 369
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 372
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "Log.Error",
+          "lineNumber": 374
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "Log.Error",
+          "lineNumber": 378
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData(mixin)?.GetDisplayAttribute",
+          "lineNumber": 378
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 378
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "mixin.ToString",
+          "lineNumber": 378
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "member.GetValue",
+          "lineNumber": 383
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "DynamicMember.AddDynamicMember",
+          "lineNumber": 384
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "mem.SetValue",
+          "lineNumber": 385
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData(tp).GetMembers().Where",
+          "lineNumber": 390
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData(tp).GetMembers",
+          "lineNumber": 390
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 390
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "member.HasAttribute<XmlIgnoreAttribute>",
+          "lineNumber": 392
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "member.SetValue",
+          "lineNumber": 394
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "member.GetValue",
+          "lineNumber": 394
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "referencedPlanPaths.Remove",
+          "lineNumber": 404
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "Log.Error",
+          "lineNumber": 412
+        },
+        {
+          "caller": "UpdateStep",
+          "callee": "Log.Error",
+          "lineNumber": 413
+        },
+        {
+          "caller": "LoadTestPlan",
+          "callee": "nameof",
+          "lineNumber": 435
+        },
+        {
+          "caller": "LoadTestPlan",
+          "callee": "loadTestPlan",
+          "lineNumber": 436
+        },
+        {
+          "caller": "loadTestPlan",
+          "callee": "ChildTestSteps.Clear",
+          "lineNumber": 440
+        },
+        {
+          "caller": "loadTestPlan",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 442
+        },
+        {
+          "caller": "loadTestPlan",
+          "callee": "Array.Empty<ParameterMemberData>",
+          "lineNumber": 444
+        },
+        {
+          "caller": "loadTestPlan",
+          "callee": "UpdateStep",
+          "lineNumber": 448
+        },
+        {
+          "caller": "GetPath",
+          "callee": "TapSerializer.GetObjectDeserializer",
+          "lineNumber": 454
+        },
+        {
+          "caller": "GetPath",
+          "callee": "System.IO.Path.GetDirectoryName",
+          "lineNumber": 456
+        },
+        {
+          "caller": "GetPath",
+          "callee": "Filepath.Expand",
+          "lineNumber": 458
+        },
+        {
+          "caller": "GetPath",
+          "callee": "refPlanPath.Replace",
+          "lineNumber": 459
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "nameof",
+          "lineNumber": 496
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "ConvertToSequence",
+          "lineNumber": 503
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "new ConvertWarning",
+          "lineNumber": 510
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "UserInput.Request",
+          "lineNumber": 511
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TestPlan.Load",
+          "lineNumber": 517
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "GetPath",
+          "lineNumber": 517
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "new SequenceStep",
+          "lineNumber": 520
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "Name.StartsWith",
+          "lineNumber": 523
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "Name.Substring",
+          "lineNumber": 523
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "ChildItemVisibility.SetVisibility",
+          "lineNumber": 528
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "ChildItemVisibility.GetVisibility",
+          "lineNumber": 528
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(subPlan).GetMembers().OfType<ParameterMemberData>()\n                .Select(e => new {Name = e.Name , Members = e.ParameterizedMembers.ToArray()}).ToArray",
+          "lineNumber": 531
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(subPlan).GetMembers().OfType<ParameterMemberData>()\n                .Select",
+          "lineNumber": 531
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(subPlan).GetMembers().OfType<ParameterMemberData>",
+          "lineNumber": 531
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(subPlan).GetMembers",
+          "lineNumber": 531
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 531
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "e.ParameterizedMembers.ToArray",
+          "lineNumber": 532
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(subPlan).GetMembers().OfType<ParameterMemberData>().ToArray",
+          "lineNumber": 533
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(subPlan).GetMembers().OfType<ParameterMemberData>",
+          "lineNumber": 533
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(subPlan).GetMembers",
+          "lineNumber": 533
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 533
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "param.Remove",
+          "lineNumber": 536
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "subPlan.ChildTestSteps.ToArray",
+          "lineNumber": 540
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "subPlan.ChildTestSteps.Clear",
+          "lineNumber": 541
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "seq.ChildTestSteps.Add",
+          "lineNumber": 544
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "parent.ChildTestSteps.IndexOf",
+          "lineNumber": 548
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "member.Member.Parameterize",
+          "lineNumber": 558
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "parameterMember.SetValue",
+          "lineNumber": 560
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "ExternalParameters.First(x => x.Name == name).GetValue",
+          "lineNumber": 560
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "ExternalParameters.First",
+          "lineNumber": 560
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 564
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "new HashSet<MixinMemberData>",
+          "lineNumber": 569
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(this).GetMembers",
+          "lineNumber": 571
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 571
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "seen.Contains",
+          "lineNumber": 581
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "seen.Add",
+          "lineNumber": 583
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "mixin.ToDynamicMember",
+          "lineNumber": 585
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 588
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "Log.Error",
+          "lineNumber": 590
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "Log.Error",
+          "lineNumber": 594
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(mixin)?.GetDisplayAttribute",
+          "lineNumber": 594
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 594
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "mixin.ToString",
+          "lineNumber": 594
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "DynamicMember.AddDynamicMember",
+          "lineNumber": 598
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "mem.SetValue",
+          "lineNumber": 599
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "mixinMember.GetValue",
+          "lineNumber": 599
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(target).GetMembers().OfType<ParameterMemberData>",
+          "lineNumber": 608
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(target).GetMembers",
+          "lineNumber": 608
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 608
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "fwd.ContainsMember",
+          "lineNumber": 611
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(this).GetMembers",
+          "lineNumber": 616
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 616
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "member.IsParameterized",
+          "lineNumber": 618
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "GetParameter",
+          "lineNumber": 624
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(seq).GetMember(member.Name).Parameterize",
+          "lineNumber": 627
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(seq).GetMember",
+          "lineNumber": 627
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 627
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "member.Unparameterize",
+          "lineNumber": 628
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(this).GetMembers().Where",
+          "lineNumber": 640
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData(this).GetMembers",
+          "lineNumber": 640
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 640
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "member.HasAttribute<XmlIgnoreAttribute>",
+          "lineNumber": 642
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "member.GetValue",
+          "lineNumber": 644
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "new ObjectCloner(val).Clone",
+          "lineNumber": 645
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "new ObjectCloner",
+          "lineNumber": 645
+        },
+        {
+          "caller": "ConvertToSequence",
+          "callee": "member.SetValue",
+          "lineNumber": 646
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 17,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BasicSteps/TimeGuardStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 84,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "Run",
+          "startLine": 34,
+          "endLine": 82,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TimeGuardStep",
+          "startLine": 10,
+          "endLine": 83,
+          "methods": [
+            "Run"
+          ],
+          "properties": [
+            "timeout",
+            "Timeout",
+            "StopOnTimeout",
+            "TimeoutVerdict"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Timeout",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "StopOnTimeout",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "TimeoutVerdict",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "TimeGuardStep",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Run",
+          "callee": "System.Diagnostics.Stopwatch.StartNew",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Run",
+          "callee": "new SemaphoreSlim",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Run",
+          "callee": "new SemaphoreSlim",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Run",
+          "callee": "TapThread.Start",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Run",
+          "callee": "semStarted.Release",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Run",
+          "callee": "RunChildSteps",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Run",
+          "callee": "sem.Release",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Run",
+          "callee": "GetParent<TestPlan>",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Run",
+          "callee": "semStarted.Wait",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Run",
+          "callee": "sem.Wait",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Run",
+          "callee": "sw.Start",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Run",
+          "callee": "sw.Stop",
+          "lineNumber": 63
+        },
+        {
+          "caller": "Run",
+          "callee": "Log.Debug",
+          "lineNumber": 68
+        },
+        {
+          "caller": "Run",
+          "callee": "thread.Abort",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Run",
+          "callee": "sem.Wait",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Run",
+          "callee": "PlanRun.MainThread.Abort",
+          "lineNumber": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BasicSteps/VirtualCollection.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 49,
+      "functions": [
+        {
+          "name": "GetEnumerator",
+          "startLine": 11,
+          "endLine": 11,
+          "params": []
+        },
+        {
+          "name": "GetEnumerator",
+          "startLine": 12,
+          "endLine": 12,
+          "params": []
+        },
+        {
+          "name": "Add",
+          "startLine": 13,
+          "endLine": 13,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 15,
+          "endLine": 19,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Contains",
+          "startLine": 21,
+          "endLine": 21,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Clear",
+          "startLine": 23,
+          "endLine": 23,
+          "params": []
+        },
+        {
+          "name": "IndexOf",
+          "startLine": 24,
+          "endLine": 24,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Insert",
+          "startLine": 26,
+          "endLine": 26,
+          "params": [
+            "index",
+            "value"
+          ]
+        },
+        {
+          "name": "Remove",
+          "startLine": 28,
+          "endLine": 31,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Contains",
+          "startLine": 33,
+          "endLine": 33,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "CopyTo",
+          "startLine": 34,
+          "endLine": 34,
+          "params": [
+            "array",
+            "arrayIndex"
+          ]
+        },
+        {
+          "name": "Remove",
+          "startLine": 35,
+          "endLine": 35,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "CopyTo",
+          "startLine": 36,
+          "endLine": 36,
+          "params": [
+            "array",
+            "index"
+          ]
+        },
+        {
+          "name": "IndexOf",
+          "startLine": 44,
+          "endLine": 44,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "Insert",
+          "startLine": 45,
+          "endLine": 45,
+          "params": [
+            "index",
+            "item"
+          ]
+        },
+        {
+          "name": "RemoveAt",
+          "startLine": 46,
+          "endLine": 46,
+          "params": [
+            "index"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "VirtualCollection",
+          "startLine": 8,
+          "endLine": 58,
+          "methods": [
+            "GetEnumerator",
+            "GetEnumerator",
+            "Add",
+            "Add",
+            "Contains",
+            "Clear",
+            "IndexOf",
+            "Insert",
+            "Remove",
+            "Contains",
+            "CopyTo",
+            "Remove",
+            "CopyTo",
+            "IndexOf",
+            "Insert",
+            "RemoveAt"
+          ],
+          "properties": [
+            "list",
+            "Count",
+            "SyncRoot",
+            "IsSynchronized",
+            "IsReadOnly",
+            "IsFixedSize"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GetEnumerator",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "Clear",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "Contains",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "CopyTo",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "Remove",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "Count",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "SyncRoot",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "IsSynchronized",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "IsReadOnly",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "IsFixedSize",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "IndexOf",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "Insert",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveAt",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "VirtualCollection",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetEnumerator",
+          "callee": "list.GetEnumerator",
+          "lineNumber": 11
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "list.GetEnumerator",
+          "lineNumber": 12
+        },
+        {
+          "caller": "Add",
+          "callee": "list.Add",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Add",
+          "callee": "Add",
+          "lineNumber": 17
+        },
+        {
+          "caller": "Contains",
+          "callee": "Contains",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Clear",
+          "callee": "list.Clear",
+          "lineNumber": 23
+        },
+        {
+          "caller": "IndexOf",
+          "callee": "IndexOf",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Insert",
+          "callee": "Insert",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Remove",
+          "callee": "Remove",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Contains",
+          "callee": "list.Contains",
+          "lineNumber": 33
+        },
+        {
+          "caller": "CopyTo",
+          "callee": "list.CopyTo",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Remove",
+          "callee": "list.Remove",
+          "lineNumber": 35
+        },
+        {
+          "caller": "CopyTo",
+          "callee": "CopyTo",
+          "lineNumber": 36
+        },
+        {
+          "caller": "IndexOf",
+          "callee": "list.IndexOf",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Insert",
+          "callee": "list.Insert",
+          "lineNumber": 45
+        },
+        {
+          "caller": "RemoveAt",
+          "callee": "list.RemoveAt",
+          "lineNumber": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 15,
+        "functionCount": 16,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Cli/app.config",
+      "language": "config",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 6,
+      "metrics": {}
+    },
+    {
+      "path": "Cli/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 20,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "Cli/Tap.Cli.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 20,
+      "nonEmptyLines": 20,
+      "metrics": {}
+    },
+    {
+      "path": "Cli/TapEntry.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 61,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "IsColor",
+          "startLine": 10,
+          "endLine": 25,
+          "params": []
+        },
+        {
+          "name": "Go",
+          "startLine": 27,
+          "endLine": 60,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TapEntry",
+          "startLine": 8,
+          "endLine": 61,
+          "methods": [
+            "IsColor",
+            "Go"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Go",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "IsColor",
+          "callee": "Environment.GetCommandLineArgs",
+          "lineNumber": 12
+        },
+        {
+          "caller": "IsColor",
+          "callee": "arguments.Contains",
+          "lineNumber": 13
+        },
+        {
+          "caller": "IsColor",
+          "callee": "arguments.Contains",
+          "lineNumber": 13
+        },
+        {
+          "caller": "IsColor",
+          "callee": "Environment.GetEnvironmentVariable",
+          "lineNumber": 15
+        },
+        {
+          "caller": "IsColor",
+          "callee": "Console.WriteLine",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Go",
+          "callee": "Environment.GetCommandLineArgs",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Go",
+          "callee": "args.Contains",
+          "lineNumber": 31
+        },
+        {
+          "caller": "Go",
+          "callee": "args.Contains",
+          "lineNumber": 32
+        },
+        {
+          "caller": "Go",
+          "callee": "args.Contains",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Go",
+          "callee": "args.Contains",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Go",
+          "callee": "Environment.SetEnvironmentVariable",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Go",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Go",
+          "callee": "Assembly.GetEntryAssembly",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Go",
+          "callee": "ConsoleTraceListener.SetStartupTime",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Go",
+          "callee": "args.Contains",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Go",
+          "callee": "args.Contains",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Go",
+          "callee": "args.Contains",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Go",
+          "callee": "args.Contains",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Go",
+          "callee": "IsColor",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Go",
+          "callee": "new ConsoleTraceListener",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Go",
+          "callee": "Log.AddListener",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Go",
+          "callee": "cliTraceListener.Flush",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Go",
+          "callee": "PluginManager.Search",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Go",
+          "callee": "DebuggerAttacher.TryAttach",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Go",
+          "callee": "CliActionExecutor.Execute",
+          "lineNumber": 59
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Directory.Build.props",
+      "language": "props",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 43,
+      "metrics": {}
+    },
+    {
+      "path": "doc/.vitepress/config.mts",
+      "language": "mts",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 113,
+      "metrics": {}
+    },
+    {
+      "path": "doc/.vitepress/theme/custom.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "metrics": {}
+    },
+    {
+      "path": "doc/.vitepress/theme/index.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 13,
+      "callGraph": [
+        {
+          "caller": "Layout",
+          "callee": "h",
+          "lineNumber": 10
+        },
+        {
+          "caller": "Layout",
+          "callee": "h",
+          "lineNumber": 11
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "doc/.vitepress/theme/NotFound.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "metrics": {}
+    },
+    {
+      "path": "doc/API Documentation/Doxyfile",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 2491,
+      "nonEmptyLines": 1937,
+      "metrics": {}
+    },
+    {
+      "path": "doc/API Documentation/Doxyfile_HHC",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 2491,
+      "nonEmptyLines": 1937,
+      "metrics": {}
+    }
+  ]
+}

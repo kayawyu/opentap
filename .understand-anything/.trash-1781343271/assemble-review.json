@@ -1,0 +1,15 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 13,
+  "edgesRestored": 18,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "Fixed section 审查通过：28 个重复节点删除在 100 个 batch 文件合并中属正常范围（约 0.7% 重复率）。22 条 tested_by 边因源文件节点（如 Engine/Session.cs 等 12 个 file 节点）在磁盘上不存在而被正确丢弃 -- 这些文件路径对应的实际源代码并不存在，LLM 可能基于测试文件名反向推测了生产文件名。",
+    "18 条 dangling edges 全部恢复：9 条 exports 边和 9 条 calls 边引用了 13 个缺失的 function/class 节点。这些节点的源文件在磁盘上存在，但 LLM 分析时未生成节点描述（部分分析覆盖不完整）。已为这 13 个节点创建默认描述（summary: 'No summary available', tags: ['untagged'], complexity: 'moderate'），并恢复了全部 18 条边。",
+    "Import map 中 864 个文件无一包含 tree-sitter 可检测的 import 语句 -- 这是 C# 项目的正常现象（引用通过 csproj 管理而非文件级 import）。现存的 2 条 imports 边来自 VitePress 主题 JS 文件，已正确存在于图中。",
+    "剩余关注点：13 个恢复的节点仅有默认占位信息，建议后续对这些文件重新运行深度分析以获取真实的 summary、tags 和 complexity。尤其是 SessionsLogs.cs（Flush、GetSessionLogFilePath）和 TapSession.cs（RunInSession）是核心运行时组件。",
+    "tested_by 边虽被丢弃，但报告指出 14 个生产节点已被标记 'tested' tag，表明测试关联信息在节点级别有所保留。"
+  ]
+}

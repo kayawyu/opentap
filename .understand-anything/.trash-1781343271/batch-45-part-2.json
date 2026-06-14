@@ -1,0 +1,420 @@
+{
+  "nodes": [
+    {
+      "id": "file:Shared/ReflectionHelper.cs",
+      "type": "file",
+      "name": "ReflectionHelper.cs",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "summary": "OpenTAP 核心反射工具集，提供类型层次遍历、特性获取与缓存（Memorizer）、集合操作扩展（Sequence）、模式匹配（ProcessPattern）、重试机制、序列化及超时操作，是项目中最庞大的工具模块（1867 行）。",
+      "tags": ["reflection", "utility", "caching", "collections", "core-toolkit"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Shared/SubProcessHost.cs",
+      "type": "file",
+      "name": "SubProcessHost.cs",
+      "filePath": "Shared/SubProcessHost.cs",
+      "summary": "子进程托管模块，管理 OpenTAP 子进程的启动、标准输出截获/恢复、管理员权限检测及日志转发，支持以隔离进程执行测试计划。",
+      "tags": ["subprocess", "process-management", "stdout", "admin-detection"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Shared/SudoHelper.cs",
+      "type": "file",
+      "name": "SudoHelper.cs",
+      "filePath": "Shared/SudoHelper.cs",
+      "summary": "Linux/macOS sudo 权限认证辅助模块，通过执行 sudo -n true 检测当前用户 sudo 状态，并在需要时通过 sudo -S 交互式认证提升权限。",
+      "tags": ["sudo", "authentication", "linux", "macos", "privilege-escalation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Shared/tap.runtimeconfig.json",
+      "type": "config",
+      "name": "tap.runtimeconfig.json",
+      "filePath": "Shared/tap.runtimeconfig.json",
+      "summary": "OpenTAP tap CLI 的 .NET Core 运行时配置，指定目标框架为 Microsoft.NETCore.App 9.0.0，启用补丁应用和向前回滚。",
+      "tags": ["configuration", "runtime-config", "dotnet", "json"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Shared/tap.runtimeconfig.WindowsDesktop.json",
+      "type": "config",
+      "name": "tap.runtimeconfig.WindowsDesktop.json",
+      "filePath": "Shared/tap.runtimeconfig.WindowsDesktop.json",
+      "summary": "OpenTAP tap CLI 的 Windows Desktop 运行时配置，指定目标框架为 Microsoft.WindowsDesktop.App 9.0.0，用于 GUI 模式下的 Windows 桌面应用运行时。",
+      "tags": ["configuration", "runtime-config", "windows-desktop", "dotnet", "json"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Shared/ZipUtils.cs",
+      "type": "file",
+      "name": "ZipUtils.cs",
+      "filePath": "Shared/ZipUtils.cs",
+      "summary": "Zip 归档工具类，通过反射访问 ZipArchiveEntry.ExternalAttributes 为 Unix 系统修复 ZIP 文件权限位，设置用户读/写和组/其他读权限。",
+      "tags": ["utility", "zip", "unix-permissions", "reflection"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Tap.Upgrader/Program.cs",
+      "type": "file",
+      "name": "Program.cs",
+      "filePath": "Tap.Upgrader/Program.cs",
+      "summary": "OpenTAP 自动升级器入口，负责将新版本的 tap.exe 和 tap.dll 原子替换到安装目录，带重试机制处理文件锁定情况。",
+      "tags": ["entry-point", "upgrader", "file-replacement", "installer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Tap.Upgrader/Tap.Upgrader.csproj",
+      "type": "config",
+      "name": "Tap.Upgrader.csproj",
+      "filePath": "Tap.Upgrader/Tap.Upgrader.csproj",
+      "summary": "Tap.Upgrader 项目的 MSBuild 配置文件，定义可执行输出和 OpenTAP 目标框架，支持 CI 管道自动版本号注入。",
+      "tags": ["configuration", "build-system", "csproj", "msbuild"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tap/Program.cs",
+      "type": "file",
+      "name": "Program.cs",
+      "filePath": "tap/Program.cs",
+      "summary": "OpenTAP CLI 主入口点，设置不变文化、初始化 OPENTAP_INIT_DIRECTORY 环境变量、加载 OpenTap.Cli.dll 并委托 TapEntry.Go() 启动 CLI 引擎。",
+      "tags": ["entry-point", "cli", "bootstrap", "main"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tap/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "tap/Properties/AssemblyInfo.cs",
+      "summary": "tap CLI 程序集级别元数据，声明程序集描述为 OpenTAP 命令行接口，设置 COM 可见性为 false。",
+      "tags": ["assembly-info", "metadata", "cli"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tap/Properties/AssemblyInfo.cs.Template",
+      "type": "file",
+      "name": "AssemblyInfo.cs.Template",
+      "filePath": "tap/Properties/AssemblyInfo.cs.Template",
+      "summary": "tap 程序集信息模板文件，包含占位版本号（AssemblyVersion/AssemblyInformationalVersion），由 CI 构建流程替换为实际版本值。",
+      "tags": ["assembly-info", "template", "versioning", "build-config"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:tap/Properties/launchSettings.json",
+      "type": "config",
+      "name": "launchSettings.json",
+      "filePath": "tap/Properties/launchSettings.json",
+      "summary": "tap 项目的 Visual Studio 调试启动配置，预定义 package list、package create、sdk gitversion、run 和 profile 等常用命令行参数。",
+      "tags": ["configuration", "debugging", "launch-settings", "visual-studio"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/ReflectionHelper.cs:ReflectionHelper",
+      "type": "class",
+      "name": "ReflectionHelper",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [30, 496],
+      "summary": "OpenTAP 核心反射帮助类，提供类型继承链查询（IsA/DescendsTo/DirectInheritsFrom）、DisplayAttribute 解析、特性缓存获取（HasAttribute/GetAttribute）、属性/方法枚举及实例创建等基础反射操作。",
+      "tags": ["reflection", "type-introspection", "attributes", "class"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Shared/ReflectionHelper.cs:Memorizer",
+      "type": "class",
+      "name": "Memorizer",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [531, 780],
+      "summary": "泛型缓存记忆器（Memoizer），提供基于键的惰性求值缓存，支持大小约束检测、循环调用保护、结果失效（Invalidate）及批量失效（InvalidateWhere）功能。",
+      "tags": ["caching", "memoization", "generic", "class"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Shared/ReflectionHelper.cs:Utils",
+      "type": "class",
+      "name": "Utils",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [790, 1484],
+      "summary": "通用工具方法集，包含 Base64 URL 编码、原子交换（InterlockedSwap）、重试机制（Retry）、枚举可读字符串转换、集合操作（ToHashSet/FlattenHeirarchy/Except）及安全字符串转换等。",
+      "tags": ["utility", "collections", "retry", "enum-formatting", "class"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Shared/ReflectionHelper.cs:Sequence",
+      "type": "class",
+      "name": "Sequence",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [1486, 1754],
+      "summary": "序列操作扩展类，提供 ProcessPattern（多参数模式匹配分发）、DistinctLast、Batch（分块）、Pairwise（成对迭代）、Append 和 TrySelect 等 LINQ 风格序列操作。",
+      "tags": ["collections", "linq-extensions", "sequence", "pattern-matching", "class"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Shared/ReflectionHelper.cs:TimeoutOperation",
+      "type": "class",
+      "name": "TimeoutOperation",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [1790, 1866],
+      "summary": "超时操作控制类，通过 CancellationTokenSource 实现在指定超时时间后自动取消操作，使用 TimerQueue 调度低延迟定时回调。",
+      "tags": ["timeout", "cancellation", "timer", "async", "class"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/ReflectionHelper.cs:DescendsTo",
+      "type": "function",
+      "name": "DescendsTo",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [271, 311],
+      "summary": "判断类型是否从指定基类型派生，通过递归检查泛型类型参数的继承链和接口实现来确定完整的类型层次关系。",
+      "tags": ["reflection", "type-checking", "inheritance", "generics"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/ReflectionHelper.cs:GetEnumerableElementType",
+      "type": "function",
+      "name": "GetEnumerableElementType",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [386, 412],
+      "summary": "获取可枚举类型的元素类型，支持泛型 IEnumerable<T>、IList<T> 接口实现及非泛型 IEnumerable，递归检查基类和多接口实现。",
+      "tags": ["reflection", "type-checking", "enumerable", "generics"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/ReflectionHelper.cs:InterlockedSwap",
+      "type": "function",
+      "name": "InterlockedSwap",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [812, 825],
+      "summary": "原子交换操作，使用 Interlocked.CompareExchange 循环实现泛型引用的无锁 CAS 替换，确保多线程环境下的安全值更新。",
+      "tags": ["thread-safety", "lock-free", "atomic", "cas"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/ReflectionHelper.cs:Invoke",
+      "type": "function",
+      "name": "Invoke",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [629, 690],
+      "summary": "Memorizer 核心调用方法，实现缓存查找/计算的完整逻辑：检查约束条件、处理循环调用、惰性计算并存储结果，包含自引用检测和递归保护。",
+      "tags": ["caching", "memoization", "lazy-evaluation", "cycle-detection"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Shared/ReflectionHelper.cs:Retry",
+      "type": "function",
+      "name": "Retry",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [1368, 1404],
+      "summary": "通用重试机制，在指定异常类型发生时指数退避重试执行委托，最多重试 maxRetries 次，记录每次重试的延迟和可能抛出的异常列表。",
+      "tags": ["retry", "error-handling", "exponential-backoff", "robustness"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/ReflectionHelper.cs:CompareEnumerable",
+      "type": "function",
+      "name": "CompareEnumerable",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [1436, 1483],
+      "summary": "深度比较两个可枚举集合，逐元素进行多级比较（引用相等、可克隆比较、逐字段比较），忽略元素顺序的子集匹配。",
+      "tags": ["comparison", "enumerable", "deep-compare", "algorithm"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/ReflectionHelper.cs:EnumToReadableString",
+      "type": "function",
+      "name": "EnumToReadableString",
+      "filePath": "Shared/ReflectionHelper.cs",
+      "lineRange": [1241, 1264],
+      "summary": "将枚举值转换为可读字符串，优先使用 DisplayAttribute 标注的显示名，其次使用 PascalCase 拆分和空格分隔后的名称。",
+      "tags": ["enum", "formatting", "display-string", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/SubProcessHost.cs:SubProcessHost",
+      "type": "class",
+      "name": "SubProcessHost",
+      "filePath": "Shared/SubProcessHost.cs",
+      "lineRange": [21, 235],
+      "summary": "子进程托管类，封装子进程的完整生命周期：管理员检测、标准输出截获/恢复、命名管道连接、日志转发及进程启动/退出管理。",
+      "tags": ["subprocess", "process-management", "class"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Shared/SubProcessHost.cs:IsAdmin",
+      "type": "function",
+      "name": "IsAdmin",
+      "filePath": "Shared/SubProcessHost.cs",
+      "lineRange": [28, 59],
+      "summary": "检测当前进程是否以管理员权限运行，Windows 使用 IsUserAnAdmin API，Unix 通过 geteuid 系统调用的返回值判断。",
+      "tags": ["admin-detection", "permissions", "cross-platform", "security"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/SubProcessHost.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "Shared/SubProcessHost.cs",
+      "lineRange": [120, 234],
+      "summary": "子进程运行主方法，启动 tap.exe 子进程并通过命名管道传递 TestPlan 序列化数据，建立异步通信等待执行结果并返回退出码。",
+      "tags": ["subprocess", "testplan-execution", "process-launch", "named-pipe"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Shared/SubProcessHost.cs:ResumeStdout",
+      "type": "function",
+      "name": "ResumeStdout",
+      "filePath": "Shared/SubProcessHost.cs",
+      "lineRange": [82, 101],
+      "summary": "恢复子进程的标准输出，将之前保存的原始 stdout 文件句柄通过 dup2（Unix）或 SetStdHandle（Windows）恢复，使子进程可正常输出到控制台。",
+      "tags": ["subprocess", "stdout", "cross-platform", "file-descriptor"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/SudoHelper.cs:SudoHelper",
+      "type": "class",
+      "name": "SudoHelper",
+      "filePath": "Shared/SudoHelper.cs",
+      "lineRange": [18, 66],
+      "summary": "sudo 权限管理类，运行 sudo -n true 检测现有 sudo 票据是否有效，无效时通过 sudo -S 交互式输入密码提升权限。",
+      "tags": ["sudo", "authentication", "privilege-escalation", "class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/SudoHelper.cs:Authenticate",
+      "type": "function",
+      "name": "Authenticate",
+      "filePath": "Shared/SudoHelper.cs",
+      "lineRange": [33, 65],
+      "summary": "尝试 sudo 认证，先检测密码是否为 sudo 密码（通过 sudo -S 执行 true 验证），返回成功/失败/密码错误三种响应状态。",
+      "tags": ["sudo", "authentication", "password-validation", "process-execution"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/ZipUtils.cs:ZipUtils",
+      "type": "class",
+      "name": "ZipUtils",
+      "filePath": "Shared/ZipUtils.cs",
+      "lineRange": [7, 26],
+      "summary": "Zip 操作扩展类，为非 Windows 平台修复 ZipArchiveEntry 的 Unix 文件权限，通过反射设置 ExternalAttributes 属性为 644。",
+      "tags": ["utility", "zip", "unix-permissions", "class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/ZipUtils.cs:FixUnixPermissions",
+      "type": "function",
+      "name": "FixUnixPermissions",
+      "filePath": "Shared/ZipUtils.cs",
+      "lineRange": [10, 24],
+      "summary": "修复 Zip 条目在 Unix 系统上的文件权限，通过反射设置 ExternalAttributes 为 rw-r--r-- (644) 模式，确保非 Windows 平台可正常访问解压文件。",
+      "tags": ["utility", "zip", "unix-permissions", "reflection"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Tap.Upgrader/Program.cs:Program",
+      "type": "class",
+      "name": "Program",
+      "filePath": "Tap.Upgrader/Program.cs",
+      "lineRange": [7, 75],
+      "summary": "OpenTAP 自动升级器入口类，将新版本可执行文件从包目录原子替换到安装目录，清理旧版本残留文件，带重试处理文件锁定。",
+      "tags": ["entry-point", "upgrader", "installer", "class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Tap.Upgrader/Program.cs:Main",
+      "type": "function",
+      "name": "Main",
+      "filePath": "Tap.Upgrader/Program.cs",
+      "lineRange": [47, 74],
+      "summary": "升级器入口方法，清理上次升级残留文件，将 tap.exe.new 和 tap.dll.new 原子移动到安装目录替换旧版本，带重试机制处理文件锁定。",
+      "tags": ["entry-point", "upgrader", "file-replacement", "main"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Tap.Upgrader/Program.cs:Retry",
+      "type": "function",
+      "name": "Retry",
+      "filePath": "Tap.Upgrader/Program.cs",
+      "lineRange": [27, 45],
+      "summary": "简单重试辅助方法，在 10ms 间隔下最多重试 10 次执行操作，失败时输出错误信息到 stderr。",
+      "tags": ["retry", "error-handling", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:tap/Program.cs:Program",
+      "type": "class",
+      "name": "Program",
+      "filePath": "tap/Program.cs",
+      "lineRange": [13, 58],
+      "summary": "OpenTAP CLI 主入口类，设置全局 CultureInfo 为 InvariantCulture，定位并加载 OpenTap.Cli.dll，委托启动 CLI 引擎。",
+      "tags": ["entry-point", "cli", "bootstrap", "class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tap/Program.cs:Main",
+      "type": "function",
+      "name": "Main",
+      "filePath": "tap/Program.cs",
+      "lineRange": [15, 51],
+      "summary": "CLI 入口点，设置 OPENTAP_INIT_DIRECTORY 环境变量，在 appDir 和 Packages/OpenTAP 路径中搜索定位 OpenTap.Cli.dll 并调用 Go() 启动。",
+      "tags": ["entry-point", "cli", "bootstrap", "main"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "class:Shared/ReflectionHelper.cs:ReflectionHelper", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "class:Shared/ReflectionHelper.cs:Memorizer", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "class:Shared/ReflectionHelper.cs:Utils", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "class:Shared/ReflectionHelper.cs:Sequence", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "class:Shared/ReflectionHelper.cs:TimeoutOperation", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:DescendsTo", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:GetEnumerableElementType", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:InterlockedSwap", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:Invoke", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:Retry", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:CompareEnumerable", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:EnumToReadableString", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "class:Shared/ReflectionHelper.cs:ReflectionHelper", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "class:Shared/ReflectionHelper.cs:Memorizer", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "class:Shared/ReflectionHelper.cs:Utils", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "class:Shared/ReflectionHelper.cs:Sequence", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "class:Shared/ReflectionHelper.cs:TimeoutOperation", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:DescendsTo", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:GetEnumerableElementType", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:InterlockedSwap", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:Invoke", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:Retry", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:CompareEnumerable", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ReflectionHelper.cs", "target": "function:Shared/ReflectionHelper.cs:EnumToReadableString", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/SubProcessHost.cs", "target": "class:Shared/SubProcessHost.cs:SubProcessHost", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/SubProcessHost.cs", "target": "function:Shared/SubProcessHost.cs:IsAdmin", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/SubProcessHost.cs", "target": "function:Shared/SubProcessHost.cs:Run", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/SubProcessHost.cs", "target": "function:Shared/SubProcessHost.cs:ResumeStdout", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/SubProcessHost.cs", "target": "class:Shared/SubProcessHost.cs:SubProcessHost", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/SubProcessHost.cs", "target": "function:Shared/SubProcessHost.cs:IsAdmin", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/SubProcessHost.cs", "target": "function:Shared/SubProcessHost.cs:Run", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/SubProcessHost.cs", "target": "function:Shared/SubProcessHost.cs:ResumeStdout", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/SudoHelper.cs", "target": "class:Shared/SudoHelper.cs:SudoHelper", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/SudoHelper.cs", "target": "function:Shared/SudoHelper.cs:Authenticate", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/SudoHelper.cs", "target": "class:Shared/SudoHelper.cs:SudoHelper", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/SudoHelper.cs", "target": "function:Shared/SudoHelper.cs:Authenticate", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/ZipUtils.cs", "target": "class:Shared/ZipUtils.cs:ZipUtils", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ZipUtils.cs", "target": "function:Shared/ZipUtils.cs:FixUnixPermissions", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ZipUtils.cs", "target": "function:Shared/ZipUtils.cs:FixUnixPermissions", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Tap.Upgrader/Program.cs", "target": "class:Tap.Upgrader/Program.cs:Program", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Tap.Upgrader/Program.cs", "target": "function:Tap.Upgrader/Program.cs:Main", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Tap.Upgrader/Program.cs", "target": "function:Tap.Upgrader/Program.cs:Retry", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Tap.Upgrader/Program.cs", "target": "class:Tap.Upgrader/Program.cs:Program", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Tap.Upgrader/Program.cs", "target": "function:Tap.Upgrader/Program.cs:Main", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:tap/Program.cs", "target": "class:tap/Program.cs:Program", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:tap/Program.cs", "target": "function:tap/Program.cs:Main", "type": "contains", "direction": "forward", "weight": 1.0},
+
+    {"source": "config:Tap.Upgrader/Tap.Upgrader.csproj", "target": "file:Tap.Upgrader/Program.cs", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "config:Shared/tap.runtimeconfig.json", "target": "file:tap/Program.cs", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "config:Shared/tap.runtimeconfig.WindowsDesktop.json", "target": "file:tap/Program.cs", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "config:tap/Properties/launchSettings.json", "target": "file:tap/Program.cs", "type": "configures", "direction": "forward", "weight": 0.6}
+  ]
+}

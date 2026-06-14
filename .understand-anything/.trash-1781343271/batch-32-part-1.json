@@ -1,0 +1,766 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/SerializerPlugins/CollectionSerializer.cs",
+      "type": "file",
+      "name": "CollectionSerializer.cs",
+      "filePath": "Engine/SerializerPlugins/CollectionSerializer.cs",
+      "summary": "集合类型序列化插件，处理数组、List、IEnumerable 等集合类型的 XML 反序列化与序列化，支持数值范围压缩格式和工厂创建模式。",
+      "tags": [
+        "serialization",
+        "collection",
+        "xml",
+        "deserialization",
+        "factory-pattern"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用 XML 元素遍历和 TypeData 反射机制处理集合元素，支持紧凑数值范围格式和延迟加载。"
+    },
+    {
+      "id": "class:Engine/SerializerPlugins/CollectionSerializer.cs:CollectionSerializer",
+      "type": "class",
+      "name": "CollectionSerializer",
+      "filePath": "Engine/SerializerPlugins/CollectionSerializer.cs",
+      "lineRange": [
+        15,
+        371
+      ],
+      "summary": "集合序列化器，实现 ITapSerializerPlugin，负责将 XML 元素映射到 .NET 集合类型。",
+      "tags": [
+        "serialization",
+        "collection",
+        "xml-mapping",
+        "plugin"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/CollectionSerializer.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "Engine/SerializerPlugins/CollectionSerializer.cs",
+      "lineRange": [
+        24,
+        302
+      ],
+      "summary": "反序列化 XML 元素到集合对象，支持工厂创建、数值范围解析和延迟加载机制。",
+      "tags": [
+        "deserialization",
+        "collection",
+        "xml-parsing",
+        "deferred-loading"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/CollectionSerializer.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "Engine/SerializerPlugins/CollectionSerializer.cs",
+      "lineRange": [
+        308,
+        366
+      ],
+      "summary": "将集合对象序列化为 XML 元素，支持数值范围压缩输出。",
+      "tags": [
+        "serialization",
+        "collection",
+        "xml-generation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/SerializerPlugins/ConstResourceSerializer.cs",
+      "type": "file",
+      "name": "ConstResourceSerializer.cs",
+      "filePath": "Engine/SerializerPlugins/ConstResourceSerializer.cs",
+      "summary": "常量资源序列化插件，处理 IResource 类型中标记为 const 的属性的序列化与反序列化，通过资源配置查找具体实例。",
+      "tags": [
+        "serialization",
+        "resource",
+        "const-property",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/SerializerPlugins/ConstResourceSerializer.cs:ConstResourceSerializer",
+      "type": "class",
+      "name": "ConstResourceSerializer",
+      "filePath": "Engine/SerializerPlugins/ConstResourceSerializer.cs",
+      "lineRange": [
+        14,
+        103
+      ],
+      "summary": "常量资源序列化器，通过 ComponentSettings 容器查找已注册的资源实例。",
+      "tags": [
+        "serialization",
+        "resource-lookup",
+        "component-settings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/ConstResourceSerializer.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "Engine/SerializerPlugins/ConstResourceSerializer.cs",
+      "lineRange": [
+        20,
+        59
+      ],
+      "summary": "从 XML 元素反序列化常量资源属性，通过资源配置名查找具体 IResource 实例。",
+      "tags": [
+        "deserialization",
+        "resource-lookup",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/ConstResourceSerializer.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "Engine/SerializerPlugins/ConstResourceSerializer.cs",
+      "lineRange": [
+        65,
+        102
+      ],
+      "summary": "将常量资源属性序列化为 XML，写入资源名称和设备类型信息。",
+      "tags": [
+        "serialization",
+        "resource",
+        "xml",
+        "component-settings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/SerializerPlugins/DefaultValueSerializer.cs",
+      "type": "file",
+      "name": "DefaultValueSerializer.cs",
+      "filePath": "Engine/SerializerPlugins/DefaultValueSerializer.cs",
+      "summary": "默认值序列化插件，检测属性值是否等于其 DefaultValue，若相等则省略序列化输出以减少 XML 冗余。",
+      "tags": [
+        "serialization",
+        "default-value",
+        "optimization",
+        "xml"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/SerializerPlugins/DefaultValueSerializer.cs:DefaultValueSerializer",
+      "type": "class",
+      "name": "DefaultValueSerializer",
+      "filePath": "Engine/SerializerPlugins/DefaultValueSerializer.cs",
+      "lineRange": [
+        14,
+        79
+      ],
+      "summary": "默认值优化序列化器，维护默认值映射表，在序列化时移除与默认值相等的元素。",
+      "tags": [
+        "serialization",
+        "default-value",
+        "optimization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/DefaultValueSerializer.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "Engine/SerializerPlugins/DefaultValueSerializer.cs",
+      "lineRange": [
+        40,
+        78
+      ],
+      "summary": "序列化时检查对象是否等于已注册的默认值，若相等则移除 XML 元素。",
+      "tags": [
+        "serialization",
+        "optimization",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/SerializerPlugins/DynamicStepSerializer.cs",
+      "type": "file",
+      "name": "DynamicStepSerializer.cs",
+      "filePath": "Engine/SerializerPlugins/DynamicStepSerializer.cs",
+      "summary": "动态步骤序列化插件，处理 IDynamicStep 类型的序列化，记录步骤工厂类型信息并检测循环引用。",
+      "tags": [
+        "serialization",
+        "dynamic-step",
+        "factory",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/SerializerPlugins/DynamicStepSerializer.cs:DynamicStepSerializer",
+      "type": "class",
+      "name": "DynamicStepSerializer",
+      "filePath": "Engine/SerializerPlugins/DynamicStepSerializer.cs",
+      "lineRange": [
+        14,
+        77
+      ],
+      "summary": "动态步骤序列化器，使用 serializing 集合防止循环引用，写入/读取步骤工厂类型属性。",
+      "tags": [
+        "serialization",
+        "dynamic-step",
+        "cycle-detection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/DynamicStepSerializer.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "Engine/SerializerPlugins/DynamicStepSerializer.cs",
+      "lineRange": [
+        27,
+        43
+      ],
+      "summary": "序列化动态步骤，通过 serializing 集合检测循环引用，写入步骤工厂类型属性。",
+      "tags": [
+        "serialization",
+        "cycle-detection",
+        "xml"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/DynamicStepSerializer.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "Engine/SerializerPlugins/DynamicStepSerializer.cs",
+      "lineRange": [
+        46,
+        74
+      ],
+      "summary": "反序列化动态步骤，通过工厂类型创建实例并调用 TryDeserializeObject 和 FixupStep。",
+      "tags": [
+        "deserialization",
+        "factory",
+        "step-fixup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/SerializerPlugins/EventsSerializerPlugin.cs",
+      "type": "file",
+      "name": "EventsSerializerPlugin.cs",
+      "filePath": "Engine/SerializerPlugins/EventsSerializerPlugin.cs",
+      "summary": "Event 对象序列化插件，将 Event 类型的属性（时间、值、参数等）序列化为 XML 子元素。",
+      "tags": [
+        "serialization",
+        "event",
+        "xml"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/SerializerPlugins/EventsSerializerPlugin.cs:EventsSerializerPlugin",
+      "type": "class",
+      "name": "EventsSerializerPlugin",
+      "filePath": "Engine/SerializerPlugins/EventsSerializerPlugin.cs",
+      "lineRange": [
+        8,
+        33
+      ],
+      "summary": "Event 序列化器，将 Event 对象的 Duration、Time、Value、Parameters 属性读写为 XML 元素。",
+      "tags": [
+        "serialization",
+        "event",
+        "xml-element"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "type": "file",
+      "name": "ExternalParameterSerializer.cs",
+      "filePath": "Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "summary": "外部参数序列化插件，处理跨步骤的外部参数化引用，管理参数作用域和延迟绑定。",
+      "tags": [
+        "serialization",
+        "external-parameter",
+        "parameterization",
+        "deferred-loading"
+      ],
+      "complexity": "complex",
+      "languageNotes": "支持 ParameterManager 集成，处理参数合并类型检查、输出属性标记、预加载值缓存等复杂场景。"
+    },
+    {
+      "id": "class:Engine/SerializerPlugins/ExternalParameterSerializer.cs:ExternalParameterSerializer",
+      "type": "class",
+      "name": "ExternalParameterSerializer",
+      "filePath": "Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "lineRange": [
+        13,
+        277
+      ],
+      "summary": "外部参数序列化器，管理 ExternalParameterAttribute 标记的成员序列化，处理作用域参数化和延迟绑定。",
+      "tags": [
+        "serialization",
+        "external-parameter",
+        "scope-management",
+        "deferred-binding"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/ExternalParameterSerializer.cs:loadScopeParameter",
+      "type": "function",
+      "name": "loadScopeParameter",
+      "filePath": "Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "lineRange": [
+        53,
+        86
+      ],
+      "summary": "加载作用域参数，查找 TestPlan 父节点，执行 Parameterize/Unparameterize 操作。",
+      "tags": [
+        "parameterization",
+        "scope",
+        "parameter-manager"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/ExternalParameterSerializer.cs:loadPreloadedvalues",
+      "type": "function",
+      "name": "loadPreloadedvalues",
+      "filePath": "Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "lineRange": [
+        88,
+        109
+      ],
+      "summary": "从 TestPlan 的 ExternalParameters 中获取预加载的参数值映射。",
+      "tags": [
+        "parameterization",
+        "preloading",
+        "testplan"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/ExternalParameterSerializer.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "lineRange": [
+        113,
+        199
+      ],
+      "summary": "反序列化外部参数引用，通过 GUID 查找目标步骤，处理延迟加载和预加载值回填。",
+      "tags": [
+        "deserialization",
+        "external-parameter",
+        "guid-lookup",
+        "deferred-loading"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/ExternalParameterSerializer.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "lineRange": [
+        210,
+        276
+      ],
+      "summary": "序列化外部参数引用，构建参数反向查找表，生成 Scope 和 Parameter 属性。",
+      "tags": [
+        "serialization",
+        "external-parameter",
+        "reverse-lookup"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/SerializerPlugins/InputOutputRelationSerializer.cs",
+      "type": "file",
+      "name": "InputOutputRelationSerializer.cs",
+      "filePath": "Engine/SerializerPlugins/InputOutputRelationSerializer.cs",
+      "summary": "输入输出关系序列化插件，处理测试步骤间的 InputOutputRelation 数据绑定，支持延迟绑定。",
+      "tags": [
+        "serialization",
+        "input-output",
+        "data-binding",
+        "deferred-loading"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/SerializerPlugins/InputOutputRelationSerializer.cs:InputOutputRelationSerializer",
+      "type": "class",
+      "name": "InputOutputRelationSerializer",
+      "filePath": "Engine/SerializerPlugins/InputOutputRelationSerializer.cs",
+      "lineRange": [
+        14,
+        131
+      ],
+      "summary": "输入输出关系序列化器，管理步骤间数据流关系的 XML 序列化。",
+      "tags": [
+        "serialization",
+        "input-output",
+        "data-flow",
+        "cyclic-detection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/InputOutputRelationSerializer.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "Engine/SerializerPlugins/InputOutputRelationSerializer.cs",
+      "lineRange": [
+        53,
+        101
+      ],
+      "summary": "反序列化输入输出关系，解析 Input/Output 成员映射，支持 GUID 步骤查找和 DeferLoad。",
+      "tags": [
+        "deserialization",
+        "input-output",
+        "guid-lookup",
+        "deferred-binding"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/SerializerPlugins/InputOutputRelationSerializer.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "Engine/SerializerPlugins/InputOutputRelationSerializer.cs",
+      "lineRange": [
+        104,
+        130
+      ],
+      "summary": "序列化输入输出关系，从 InputOutputRelation.GetRelations 获取绑定并生成 XML 元素。",
+      "tags": [
+        "serialization",
+        "input-output",
+        "relation-extraction"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/SerializerPlugins/ITapSerializerPlugin.cs",
+      "type": "file",
+      "name": "ITapSerializerPlugin.cs",
+      "filePath": "Engine/SerializerPlugins/ITapSerializerPlugin.cs",
+      "summary": "序列化插件接口定义，所有序列化插件必须实现此接口，提供 Deserialize、Serialize 方法和 Order 属性。",
+      "tags": [
+        "interface",
+        "serialization",
+        "plugin-contract",
+        "architecture"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/SerializerPlugins/ITapSerializerPlugin.cs:ITapSerializerPlugin",
+      "type": "class",
+      "name": "ITapSerializerPlugin",
+      "filePath": "Engine/SerializerPlugins/ITapSerializerPlugin.cs",
+      "lineRange": [
+        13,
+        39
+      ],
+      "summary": "序列化插件基础接口，定义 Order（执行顺序）、Deserialize 和 Serialize 契约。",
+      "tags": [
+        "interface",
+        "serialization",
+        "contract",
+        "plugin-api"
+      ],
+      "complexity": "simple",
+      "languageNotes": "ITapSerializerPlugin 是 OpenTAP 序列化框架的核心接口，所有序列化插件通过 Order 属性确定执行优先级。"
+    },
+    {
+      "id": "file:Engine/SerializerPlugins/ITapSerializerPluginDependencyMarker.cs",
+      "type": "file",
+      "name": "ITapSerializerPluginDependencyMarker.cs",
+      "filePath": "Engine/SerializerPlugins/ITapSerializerPluginDependencyMarker.cs",
+      "summary": "序列化插件依赖标记接口，用于标记插件的依赖关系，确保被依赖的插件在反序列化时需要存在。",
+      "tags": [
+        "interface",
+        "serialization",
+        "dependency-marker",
+        "architecture"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/SerializerPlugins/CollectionSerializer.cs",
+      "target": "class:Engine/SerializerPlugins/CollectionSerializer.cs:CollectionSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/CollectionSerializer.cs:CollectionSerializer",
+      "target": "function:Engine/SerializerPlugins/CollectionSerializer.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/CollectionSerializer.cs:CollectionSerializer",
+      "target": "function:Engine/SerializerPlugins/CollectionSerializer.cs:Serialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/CollectionSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/CollectionSerializer.cs:Deserialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/CollectionSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/CollectionSerializer.cs:Serialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/ConstResourceSerializer.cs",
+      "target": "class:Engine/SerializerPlugins/ConstResourceSerializer.cs:ConstResourceSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/ConstResourceSerializer.cs:ConstResourceSerializer",
+      "target": "function:Engine/SerializerPlugins/ConstResourceSerializer.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/ConstResourceSerializer.cs:ConstResourceSerializer",
+      "target": "function:Engine/SerializerPlugins/ConstResourceSerializer.cs:Serialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/ConstResourceSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/ConstResourceSerializer.cs:Deserialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/ConstResourceSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/ConstResourceSerializer.cs:Serialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/DefaultValueSerializer.cs",
+      "target": "class:Engine/SerializerPlugins/DefaultValueSerializer.cs:DefaultValueSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/DefaultValueSerializer.cs:DefaultValueSerializer",
+      "target": "function:Engine/SerializerPlugins/DefaultValueSerializer.cs:Serialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/DefaultValueSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/DefaultValueSerializer.cs:Serialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/DefaultValueSerializer.cs",
+      "target": "class:Engine/SerializerPlugins/DefaultValueSerializer.cs:DefaultValueSerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/DynamicStepSerializer.cs",
+      "target": "class:Engine/SerializerPlugins/DynamicStepSerializer.cs:DynamicStepSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/DynamicStepSerializer.cs:DynamicStepSerializer",
+      "target": "function:Engine/SerializerPlugins/DynamicStepSerializer.cs:Serialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/DynamicStepSerializer.cs:DynamicStepSerializer",
+      "target": "function:Engine/SerializerPlugins/DynamicStepSerializer.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/DynamicStepSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/DynamicStepSerializer.cs:Serialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/DynamicStepSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/DynamicStepSerializer.cs:Deserialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/EventsSerializerPlugin.cs",
+      "target": "class:Engine/SerializerPlugins/EventsSerializerPlugin.cs:EventsSerializerPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/EventsSerializerPlugin.cs",
+      "target": "function:Engine/SerializerPlugins/EventsSerializerPlugin.cs:Deserialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/EventsSerializerPlugin.cs",
+      "target": "function:Engine/SerializerPlugins/EventsSerializerPlugin.cs:Serialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "target": "class:Engine/SerializerPlugins/ExternalParameterSerializer.cs:ExternalParameterSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/ExternalParameterSerializer.cs:ExternalParameterSerializer",
+      "target": "function:Engine/SerializerPlugins/ExternalParameterSerializer.cs:loadScopeParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/ExternalParameterSerializer.cs:ExternalParameterSerializer",
+      "target": "function:Engine/SerializerPlugins/ExternalParameterSerializer.cs:loadPreloadedvalues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/ExternalParameterSerializer.cs:ExternalParameterSerializer",
+      "target": "function:Engine/SerializerPlugins/ExternalParameterSerializer.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/ExternalParameterSerializer.cs:ExternalParameterSerializer",
+      "target": "function:Engine/SerializerPlugins/ExternalParameterSerializer.cs:Serialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/ExternalParameterSerializer.cs:Deserialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/ExternalParameterSerializer.cs:Serialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/ExternalParameterSerializer.cs",
+      "target": "class:Engine/SerializerPlugins/ExternalParameterSerializer.cs:ExternalParameterSerializer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/InputOutputRelationSerializer.cs",
+      "target": "class:Engine/SerializerPlugins/InputOutputRelationSerializer.cs:InputOutputRelationSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/InputOutputRelationSerializer.cs:InputOutputRelationSerializer",
+      "target": "function:Engine/SerializerPlugins/InputOutputRelationSerializer.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine/SerializerPlugins/InputOutputRelationSerializer.cs:InputOutputRelationSerializer",
+      "target": "function:Engine/SerializerPlugins/InputOutputRelationSerializer.cs:Serialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/InputOutputRelationSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/InputOutputRelationSerializer.cs:Deserialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/InputOutputRelationSerializer.cs",
+      "target": "function:Engine/SerializerPlugins/InputOutputRelationSerializer.cs:Serialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/ITapSerializerPlugin.cs",
+      "target": "class:Engine/SerializerPlugins/ITapSerializerPlugin.cs:ITapSerializerPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/ITapSerializerPlugin.cs",
+      "target": "class:Engine/SerializerPlugins/ITapSerializerPlugin.cs:ITapSerializerPlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/SerializerPlugins/ITapSerializerPluginDependencyMarker.cs",
+      "target": "class:Engine/SerializerPlugins/ITapSerializerPluginDependencyMarker.cs:ITapSerializerPluginDependencyMarker",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

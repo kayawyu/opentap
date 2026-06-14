@@ -1,0 +1,931 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/Input.cs",
+      "type": "file",
+      "name": "Input.cs",
+      "filePath": "Engine/Input.cs",
+      "summary": "定义测试步骤的输入参数绑定系统。包含 IInput 接口、Input 泛型实现类，以及输入参数与属性之间的关联逻辑，支持测试计划中的输入值更新。",
+      "tags": [
+        "input-binding",
+        "test-plan",
+        "property-mapping",
+        "data-model"
+      ],
+      "complexity": "complex",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/Input.cs:IInput",
+      "type": "class",
+      "name": "IInput",
+      "filePath": "Engine/Input.cs",
+      "lineRange": [
+        12,
+        19
+      ],
+      "summary": "定义输入参数的基本契约，包含 Step（关联测试步骤）和 Property（映射属性）两个核心属性。",
+      "tags": [
+        "interface",
+        "input-contract",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Input.cs:IInputTypeRestriction",
+      "type": "class",
+      "name": "IInputTypeRestriction",
+      "filePath": "Engine/Input.cs",
+      "lineRange": [
+        24,
+        30
+      ],
+      "summary": "定义输入类型约束接口，通过 SupportsType 方法限制可接受的类型范围。",
+      "tags": [
+        "interface",
+        "type-constraint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Input.cs:Input",
+      "type": "class",
+      "name": "Input",
+      "filePath": "Engine/Input.cs",
+      "lineRange": [
+        42,
+        254
+      ],
+      "summary": "输入绑定的核心泛型实现类，支持将测试步骤属性映射为可配置的输入参数，提供属性解析、值获取、克隆等功能。",
+      "tags": [
+        "input",
+        "property-binding",
+        "test-plan",
+        "generic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/Input.cs:updatePropertyFromName",
+      "type": "function",
+      "name": "updatePropertyFromName",
+      "filePath": "Engine/Input.cs",
+      "lineRange": [
+        50,
+        79
+      ],
+      "summary": "根据属性名字符串（支持点号分隔的嵌套路径）解析并更新关联的属性元数据信息。",
+      "tags": [
+        "property-resolution",
+        "reflection",
+        "internal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Input.cs:UpdateAllOwnedInputsInPlan",
+      "type": "function",
+      "name": "UpdateAllOwnedInputsInPlan",
+      "filePath": "Engine/Input.cs",
+      "lineRange": [
+        113,
+        134
+      ],
+      "summary": "递归遍历测试计划中的所有测试步骤，为每个步骤更新归属的输入参数绑定。",
+      "tags": [
+        "test-plan",
+        "input-update",
+        "recursive"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/InputOutputRelation.cs",
+      "type": "file",
+      "name": "InputOutputRelation.cs",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "summary": "管理测试步骤之间的输入/输出关联关系。支持在步骤间建立数据流连接，自动转换数据类型，并在测试执行时解析和更新输入值。",
+      "tags": [
+        "input-output-relation",
+        "data-flow",
+        "test-plan",
+        "step-connection"
+      ],
+      "complexity": "complex",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/InputOutputRelation.cs:IInputOutputRelations",
+      "type": "class",
+      "name": "IInputOutputRelations",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "lineRange": [
+        8,
+        14
+      ],
+      "summary": "定义测试步骤输入和输出关联的集合接口，包含 Inputs 和 Outputs 两个列表。",
+      "tags": [
+        "interface",
+        "relation-collection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/InputOutputRelation.cs:InputOutputRelation",
+      "type": "class",
+      "name": "InputOutputRelation",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "lineRange": [
+        17,
+        355
+      ],
+      "summary": "输入输出关联的核心静态类，提供 Assign/Unassign 创建和销毁关联、类型转换、步骤执行时解析输出到输入等功能。",
+      "tags": [
+        "relation-manager",
+        "data-flow",
+        "static-utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/InputOutputRelation.cs:Assign",
+      "type": "function",
+      "name": "Assign",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "lineRange": [
+        54,
+        93
+      ],
+      "summary": "在两个测试步骤成员之间建立输入输出关联，包含参数验证、重复检查、循环依赖检测等安全机制。",
+      "tags": [
+        "relation-creation",
+        "validation",
+        "step-connection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/InputOutputRelation.cs:IsInScope",
+      "type": "function",
+      "name": "IsInScope",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "lineRange": [
+        116,
+        130
+      ],
+      "summary": "检查目标步骤是否在另一个步骤的作用域内（父子层级关系），用于确保关联的有效性。",
+      "tags": [
+        "scope-check",
+        "step-hierarchy",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/InputOutputRelation.cs:checkRelations",
+      "type": "function",
+      "name": "checkRelations",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "lineRange": [
+        132,
+        170
+      ],
+      "summary": "验证目标步骤的所有输入关联是否仍然有效，当步骤移动或删除时检测孤立的关系。",
+      "tags": [
+        "relation-validation",
+        "integrity-check"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/InputOutputRelation.cs:ResolveStepRun",
+      "type": "function",
+      "name": "ResolveStepRun",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "lineRange": [
+        172,
+        188
+      ],
+      "summary": "在测试运行时解析步骤的执行实例，处理循环测试步骤中的等待和重试逻辑。",
+      "tags": [
+        "step-resolution",
+        "runtime",
+        "loop-handling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/InputOutputRelation.cs:GetOutput",
+      "type": "function",
+      "name": "GetOutput",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "lineRange": [
+        190,
+        202
+      ],
+      "summary": "获取指定输出成员的实际值，支持等待步骤完成执行后再读取输出。",
+      "tags": [
+        "output-retrieval",
+        "async-wait"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/InputOutputRelation.cs:UpdateInputs",
+      "type": "function",
+      "name": "UpdateInputs",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "lineRange": [
+        206,
+        239
+      ],
+      "summary": "将所有已连接的输出值更新到目标步骤的输入参数中，完成数据流的传递。",
+      "tags": [
+        "input-update",
+        "data-flow",
+        "execution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/InputOutputRelation.cs:CanConvert",
+      "type": "function",
+      "name": "CanConvert",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "lineRange": [
+        241,
+        279
+      ],
+      "summary": "检查两个类型之间是否可以进行自动转换，包含基本类型、字符串、枚举等多种转换策略。",
+      "tags": [
+        "type-conversion",
+        "compatibility-check"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/InputOutputRelation.cs:ConvertValue",
+      "type": "function",
+      "name": "ConvertValue",
+      "filePath": "Engine/InputOutputRelation.cs",
+      "lineRange": [
+        281,
+        292
+      ],
+      "summary": "执行实际的类型转换，将输出值转换为输入参数所需的类型。",
+      "tags": [
+        "type-conversion",
+        "value-transform"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Instrument.cs",
+      "type": "file",
+      "name": "Instrument.cs",
+      "filePath": "Engine/Instrument.cs",
+      "summary": "所有仪器资源的抽象基类。继承自 Resource 并实现 IInstrument 接口，在构造函数中设置默认仪器名称为 'INST'。",
+      "tags": [
+        "instrument",
+        "abstract-base",
+        "resource"
+      ],
+      "complexity": "simple",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/Instrument.cs:Instrument",
+      "type": "class",
+      "name": "Instrument",
+      "filePath": "Engine/Instrument.cs",
+      "lineRange": [
+        12,
+        22
+      ],
+      "summary": "仪器的抽象基类，为所有具体仪器实现提供统一的资源管理基础，默认名称为 'INST'。",
+      "tags": [
+        "instrument",
+        "abstract-base",
+        "resource"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/InstrumentSettings.cs",
+      "type": "file",
+      "name": "InstrumentSettings.cs",
+      "filePath": "Engine/InstrumentSettings.cs",
+      "summary": "管理已配置仪器的设置集合。作为 ComponentSettingsList 的子类，在仪器列表变更时自动更新连接端口。",
+      "tags": [
+        "instrument-settings",
+        "configuration",
+        "connection-management"
+      ],
+      "complexity": "moderate",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/InstrumentSettings.cs:InstrumentSettings",
+      "type": "class",
+      "name": "InstrumentSettings",
+      "filePath": "Engine/InstrumentSettings.cs",
+      "lineRange": [
+        11,
+        31
+      ],
+      "summary": "仪器设置的全局配置类，作为 ComponentSettingsList 子类提供仪器的增删管理，并在变更时维护连接端口的一致性。",
+      "tags": [
+        "settings",
+        "instrument-management",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/InstrumentSettings.cs:OnCollectionChanged",
+      "type": "function",
+      "name": "OnCollectionChanged",
+      "filePath": "Engine/InstrumentSettings.cs",
+      "lineRange": [
+        19,
+        29
+      ],
+      "summary": "当仪器设置列表发生变更时，自动移除受影响连接中的对应端口，确保连接配置的一致性。",
+      "tags": [
+        "event-handler",
+        "connection-cleanup",
+        "collection-change"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Invokable/IInvokable.cs",
+      "type": "file",
+      "name": "IInvokable.cs",
+      "filePath": "Engine/Invokable/IInvokable.cs",
+      "summary": "定义类似 Action 委托的可调用接口。提供无参、单参、双参的 IInvokable 泛型变体，供其他类实现自定义调用逻辑。",
+      "tags": [
+        "interface",
+        "delegate-like",
+        "generic",
+        "invokable"
+      ],
+      "complexity": "simple",
+      "languageNotes": null
+    },
+    {
+      "id": "file:Engine/Invokable/Invokable.cs",
+      "type": "file",
+      "name": "Invokable.cs",
+      "filePath": "Engine/Invokable/Invokable.cs",
+      "summary": "IInvokable 接口的只读结构体实现。Invokable<T> 和 Invokable<T,T2> 分别封装单参和双参 Action 委托，支持 AddArg 扩展参数。",
+      "tags": [
+        "struct",
+        "delegate-wrapper",
+        "generic",
+        "invokable"
+      ],
+      "complexity": "simple",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/Invokable/Invokable.cs:Invokable_T",
+      "type": "class",
+      "name": "Invokable_T",
+      "filePath": "Engine/Invokable/Invokable.cs",
+      "lineRange": [
+        6,
+        19
+      ],
+      "summary": "封装单参 Action<T> 委托的只读结构体，实现 IInvokable<T> 接口，支持通过 AddArg 方法添加忽略参数。",
+      "tags": [
+        "struct",
+        "delegate-wrapper",
+        "generic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Invokable/Invokable.cs:Invokable_T_T2",
+      "type": "class",
+      "name": "Invokable_T_T2",
+      "filePath": "Engine/Invokable/Invokable.cs",
+      "lineRange": [
+        22,
+        28
+      ],
+      "summary": "封装双参 Action<T,T2> 委托的只读结构体，实现 IInvokable<T,T2> 接口。",
+      "tags": [
+        "struct",
+        "delegate-wrapper",
+        "generic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Invokable/ISkippableInvokable.cs",
+      "type": "file",
+      "name": "ISkippableInvokable.cs",
+      "filePath": "Engine/Invokable/ISkippableInvokable.cs",
+      "summary": "定义可跳过的可调用接口，包含 Skip 方法用于在调用前判断是否应跳过执行。",
+      "tags": [
+        "interface",
+        "invokable",
+        "skip-logic"
+      ],
+      "complexity": "simple",
+      "languageNotes": null
+    },
+    {
+      "id": "file:Engine/IParameterizedMembersCache.cs",
+      "type": "file",
+      "name": "IParameterizedMembersCache.cs",
+      "filePath": "Engine/IParameterizedMembersCache.cs",
+      "summary": "提供参数化成员的反向缓存机制。通过 IParameterizedMembersCache 接口注册成员与参数的映射，ParameterizedMembersCache 静态类提供查找功能。",
+      "tags": [
+        "cache",
+        "parameter-resolution",
+        "member-lookup"
+      ],
+      "complexity": "moderate",
+      "languageNotes": null
+    },
+    {
+      "id": "function:Engine/IParameterizedMembersCache.cs:GetParameterFor",
+      "type": "function",
+      "name": "GetParameterFor",
+      "filePath": "Engine/IParameterizedMembersCache.cs",
+      "lineRange": [
+        18,
+        32
+      ],
+      "summary": "在步骤层级中向上遍历 Parent 链，查找指定成员的参数化数据，优先使用缓存中的直接映射。",
+      "tags": [
+        "parameter-lookup",
+        "hierarchy-traversal",
+        "cache"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/IPictureDataProvider.cs",
+      "type": "file",
+      "name": "IPictureDataProvider.cs",
+      "filePath": "Engine/IPictureDataProvider.cs",
+      "summary": "定义图片数据提供者接口和扩展方法。支持多种图片来源（文件路径、URL、流），提供图片格式检测和流获取功能，按 Order 优先级选择最佳提供者。",
+      "tags": [
+        "picture-data",
+        "provider-pattern",
+        "image-processing",
+        "plugin-extensible"
+      ],
+      "complexity": "complex",
+      "languageNotes": null
+    },
+    {
+      "id": "class:Engine/IPictureDataProvider.cs:IPictureDataProvider",
+      "type": "class",
+      "name": "IPictureDataProvider",
+      "filePath": "Engine/IPictureDataProvider.cs",
+      "lineRange": [
+        8,
+        40
+      ],
+      "summary": "图片数据提供者接口，定义 GetStream（获取图片流）和 GetFormat（获取图片格式）方法，通过 Order 属性控制优先级。",
+      "tags": [
+        "interface",
+        "provider",
+        "image-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IPictureDataProvider.cs:DefaultPictureDataProvider",
+      "type": "class",
+      "name": "DefaultPictureDataProvider",
+      "filePath": "Engine/IPictureDataProvider.cs",
+      "lineRange": [
+        44,
+        98
+      ],
+      "summary": "默认图片数据提供者，支持从文件路径和 URL 加载图片，自动检测 PNG/JPEG/SVG 等常见格式。",
+      "tags": [
+        "default-provider",
+        "image-loader",
+        "format-detection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/IPictureDataProvider.cs:PictureDataExtensions",
+      "type": "class",
+      "name": "PictureDataExtensions",
+      "filePath": "Engine/IPictureDataProvider.cs",
+      "lineRange": [
+        99,
+        155
+      ],
+      "summary": "图片数据提供者的静态扩展类，提供 GetProviders 收集所有提供者、GetFirst 选择最佳提供者、以及便捷的 GetStream/GetFormat 方法。",
+      "tags": [
+        "extension-methods",
+        "provider-selection",
+        "static-utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/IPictureDataProvider.cs:normalizeSource",
+      "type": "function",
+      "name": "normalizeSource",
+      "filePath": "Engine/IPictureDataProvider.cs",
+      "lineRange": [
+        47,
+        60
+      ],
+      "summary": "规范化图片源路径，将相对路径转换为绝对路径，确保文件路径的可访问性。",
+      "tags": [
+        "path-normalization",
+        "file-system"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/IPictureDataProvider.cs:GetStream",
+      "type": "function",
+      "name": "GetStream",
+      "filePath": "Engine/IPictureDataProvider.cs",
+      "lineRange": [
+        62,
+        76
+      ],
+      "summary": "根据图片来源（文件路径或 URL）获取图片数据流，支持 FileStream 和 WebRequest 两种方式。",
+      "tags": [
+        "stream-retrieval",
+        "file-io",
+        "web-request"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/IPictureDataProvider.cs:GetFormat",
+      "type": "function",
+      "name": "GetFormat",
+      "filePath": "Engine/IPictureDataProvider.cs",
+      "lineRange": [
+        78,
+        92
+      ],
+      "summary": "检测图片格式，通过文件扩展名或 URL 后缀判断 PNG、JPEG、SVG 等格式类型。",
+      "tags": [
+        "format-detection",
+        "image-type"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/IPictureDataProvider.cs:GetProviders",
+      "type": "function",
+      "name": "GetProviders",
+      "filePath": "Engine/IPictureDataProvider.cs",
+      "lineRange": [
+        104,
+        118
+      ],
+      "summary": "收集系统中所有 IPictureDataProvider 插件实例，按 Order 属性排序，缓存结果以提高性能。",
+      "tags": [
+        "plugin-discovery",
+        "caching",
+        "sorting"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/IPictureDataProvider.cs:GetFirst",
+      "type": "function",
+      "name": "GetFirst",
+      "filePath": "Engine/IPictureDataProvider.cs",
+      "lineRange": [
+        121,
+        139
+      ],
+      "summary": "遍历所有提供者，返回第一个能成功处理指定来源的提供者，实现优先级选择策略。",
+      "tags": [
+        "provider-selection",
+        "priority-strategy",
+        "fallback"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/Input.cs",
+      "target": "class:Engine/Input.cs:IInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Input.cs",
+      "target": "class:Engine/Input.cs:IInputTypeRestriction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Input.cs",
+      "target": "class:Engine/Input.cs:Input",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Input.cs",
+      "target": "function:Engine/Input.cs:updatePropertyFromName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Input.cs",
+      "target": "function:Engine/Input.cs:UpdateAllOwnedInputsInPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Input.cs",
+      "target": "class:Engine/Input.cs:IInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Input.cs",
+      "target": "class:Engine/Input.cs:IInputTypeRestriction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Input.cs",
+      "target": "class:Engine/Input.cs:Input",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "class:Engine/InputOutputRelation.cs:IInputOutputRelations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "class:Engine/InputOutputRelation.cs:InputOutputRelation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:Assign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:IsInScope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:checkRelations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:ResolveStepRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:GetOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:UpdateInputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:CanConvert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:ConvertValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "class:Engine/InputOutputRelation.cs:IInputOutputRelations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "class:Engine/InputOutputRelation.cs:InputOutputRelation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:Assign",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:UpdateInputs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/InputOutputRelation.cs",
+      "target": "function:Engine/InputOutputRelation.cs:GetRelations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Instrument.cs",
+      "target": "class:Engine/Instrument.cs:Instrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Instrument.cs",
+      "target": "class:Engine/Instrument.cs:Instrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/InstrumentSettings.cs",
+      "target": "class:Engine/InstrumentSettings.cs:InstrumentSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InstrumentSettings.cs",
+      "target": "function:Engine/InstrumentSettings.cs:OnCollectionChanged",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/InstrumentSettings.cs",
+      "target": "class:Engine/InstrumentSettings.cs:InstrumentSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Invokable/Invokable.cs",
+      "target": "class:Engine/Invokable/Invokable.cs:Invokable_T",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Invokable/Invokable.cs",
+      "target": "class:Engine/Invokable/Invokable.cs:Invokable_T_T2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IParameterizedMembersCache.cs",
+      "target": "function:Engine/IParameterizedMembersCache.cs:GetParameterFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IParameterizedMembersCache.cs",
+      "target": "function:Engine/IParameterizedMembersCache.cs:GetParameterFor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "class:Engine/IPictureDataProvider.cs:IPictureDataProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "class:Engine/IPictureDataProvider.cs:DefaultPictureDataProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "class:Engine/IPictureDataProvider.cs:PictureDataExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "function:Engine/IPictureDataProvider.cs:normalizeSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "function:Engine/IPictureDataProvider.cs:GetStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "function:Engine/IPictureDataProvider.cs:GetFormat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "function:Engine/IPictureDataProvider.cs:GetProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "function:Engine/IPictureDataProvider.cs:GetFirst",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "class:Engine/IPictureDataProvider.cs:IPictureDataProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "class:Engine/IPictureDataProvider.cs:PictureDataExtensions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "function:Engine/IPictureDataProvider.cs:GetStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IPictureDataProvider.cs",
+      "target": "function:Engine/IPictureDataProvider.cs:GetFormat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

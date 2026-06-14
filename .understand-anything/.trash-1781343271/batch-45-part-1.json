@@ -1,0 +1,589 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/OpenTap.Sdk.New/TranslateAction.cs",
+      "type": "file",
+      "name": "TranslateAction.cs",
+      "filePath": "sdk/OpenTap.Sdk.New/TranslateAction.cs",
+      "summary": "SDK 插件翻译动作，将 OpenTAP 类型数据和插件元信息翻译为 XML 格式的包资源文件（ResX），用于 SDK 包的国际化字符串提取与类型枚举序列化。",
+      "tags": ["sdk", "translation", "xml-serialization", "type-data", "plugin-tool"],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:sdk/sdk.package.xml",
+      "type": "config",
+      "name": "sdk.package.xml",
+      "filePath": "sdk/sdk.package.xml",
+      "summary": "OpenTAP SDK 包定义文件，声明 SDK 包的元信息、文件清单、依赖项及模板安装步骤，支持 Windows/Linux/MacOS 三平台。",
+      "tags": ["configuration", "package-definition", "sdk", "xml"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Shared/AnsiColorCodeFix.cs",
+      "type": "file",
+      "name": "AnsiColorCodeFix.cs",
+      "filePath": "Shared/AnsiColorCodeFix.cs",
+      "summary": "通过 P/Invoke 调用 Windows Kernel32 API 启用 Windows 10 控制台的虚拟终端 ANSI 颜色码支持，解决旧版 Windows 终端颜色显示问题。",
+      "tags": ["utility", "ansi-color", "windows-console", "p-invoke"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Shared/ArgumentsParser.cs",
+      "type": "file",
+      "name": "ArgumentsParser.cs",
+      "filePath": "Shared/ArgumentsParser.cs",
+      "summary": "OpenTAP CLI 命令行参数解析器，提供长短参数名映射、参数值绑定、未知选项检测及格式化帮助文本输出功能，支持可比较的参数排序和默认值。",
+      "tags": ["cli", "argument-parser", "utility", "command-line"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Shared/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "Shared/AssemblyInfo.cs",
+      "summary": "Shared 项目程序集级别元数据定义，包含公司名称、产品名、版权及版本信息，版本号由 CI 构建流程自动更新。",
+      "tags": ["assembly-info", "metadata", "versioning", "build-config"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Shared/ExecutorInterop.cs",
+      "type": "file",
+      "name": "ExecutorInterop.cs",
+      "filePath": "Shared/ExecutorInterop.cs",
+      "summary": "OpenTAP 执行器进程间通信模块，负责检测当前运行模式（独立执行/子进程执行），并定位 .NET 运行时和 OpenTAP DLL 路径。",
+      "tags": ["interop", "execution-mode", "process-detection", "dotnet-runtime"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Shared/FileSystemHelper.cs",
+      "type": "file",
+      "name": "FileSystemHelper.cs",
+      "filePath": "Shared/FileSystemHelper.cs",
+      "summary": "文件系统工具类，提供安全的目录/文件删除（含重试机制）、临时文件/目录创建、相对路径计算及程序集版本获取等文件操作辅助方法。",
+      "tags": ["utility", "file-system", "file-operations", "temp-files"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Shared/ICliActionExtensions.cs",
+      "type": "file",
+      "name": "ICliActionExtensions.cs",
+      "filePath": "Shared/ICliActionExtensions.cs",
+      "summary": "CLI 动作执行扩展方法，负责解析 ICliAction 的命令行参数（包括命名参数和匿名位置参数），将参数值绑定到对应属性，并执行动作。",
+      "tags": ["cli", "action-executor", "parameter-binding", "extension-method"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Shared/MurMurHash3.cs",
+      "type": "file",
+      "name": "MurMurHash3.cs",
+      "filePath": "Shared/MurMurHash3.cs",
+      "summary": "MurmurHash3 32 位非加密哈希算法实现，提供字节数组、字符串和流的哈希计算，用于快速数据指纹和哈希表分布。",
+      "tags": ["hash", "algorithm", "murmurhash", "utility"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Shared/OperatingSystem.cs",
+      "type": "file",
+      "name": "OperatingSystem.cs",
+      "filePath": "Shared/OperatingSystem.cs",
+      "summary": "操作系统与 CPU 架构检测模块，通过系统调用检测 Windows/Linux/macOS 平台，并提供 x64/arm/arm64 架构枚举，支持跨平台运行时判断。",
+      "tags": ["platform-detection", "os-abstraction", "architecture", "cross-platform"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Shared/PathUtils.cs",
+      "type": "file",
+      "name": "PathUtils.cs",
+      "filePath": "Shared/PathUtils.cs",
+      "summary": "路径操作工具类，提供路径规范化、比较、目录遍历（支持 .OpenTapIgnore 忽略文件）、文件内容比较及临时文件生成等功能。",
+      "tags": ["utility", "path-manipulation", "file-comparison", "normalization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Shared/PipeReader.cs",
+      "type": "file",
+      "name": "PipeReader.cs",
+      "filePath": "Shared/PipeReader.cs",
+      "summary": "命名管道消息序列化工具，提供整数和类型化消息的读写功能，用于 OpenTAP 主进程与子进程之间的二进制消息通信。",
+      "tags": ["ipc", "named-pipe", "serialization", "binary-messaging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Shared/ProcessCliAction.cs",
+      "type": "file",
+      "name": "ProcessCliAction.cs",
+      "filePath": "Shared/ProcessCliAction.cs",
+      "summary": "子进程 CLI 动作执行器，通过命名管道接收父进程发送的 TestPlan，在子进程中执行测试计划并将日志通过管道回传。",
+      "tags": ["cli", "subprocess", "testplan-execution", "named-pipe", "internal"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/TranslateAction.cs:TranslateAction",
+      "type": "class",
+      "name": "TranslateAction",
+      "filePath": "sdk/OpenTap.Sdk.New/TranslateAction.cs",
+      "lineRange": [24, 369],
+      "summary": "SDK 翻译动作主类，负责遍历已安装插件包中的类型数据，过滤并收集可翻译的插件成员、枚举值和字符串本地化资源，最终生成 XML ResX 资源文件。",
+      "tags": ["sdk", "translation", "class", "plugin-tool"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/TranslateAction.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "sdk/OpenTap.Sdk.New/TranslateAction.cs",
+      "lineRange": [37, 231],
+      "summary": "翻译动作主入口方法，扫描插件类型数据，过滤嵌套类型与引用类型，枚举 DisplayAttribute 标注的成员，为每个类型生成 XML ResX 资源文件。",
+      "tags": ["entry-point", "translation", "type-scanning", "xml-generation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/TranslateAction.cs:SkipType",
+      "type": "function",
+      "name": "SkipType",
+      "filePath": "sdk/OpenTap.Sdk.New/TranslateAction.cs",
+      "lineRange": [303, 329],
+      "summary": "判断某个类型是否应被翻译流程跳过，包括非公共类型、无 DisplayAttribute 标注的类型及未在包文件中声明的类型。",
+      "tags": ["filter", "type-checking", "validation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/TranslateAction.cs:GetMembers",
+      "type": "function",
+      "name": "GetMembers",
+      "filePath": "sdk/OpenTap.Sdk.New/TranslateAction.cs",
+      "lineRange": [331, 346],
+      "summary": "获取指定类型的可翻译成员列表，对获取过程中的异常进行日志记录并降级返回空数组。",
+      "tags": ["reflection", "member-access", "error-handling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/TranslateAction.cs:SkipMem",
+      "type": "function",
+      "name": "SkipMem",
+      "filePath": "sdk/OpenTap.Sdk.New/TranslateAction.cs",
+      "lineRange": [348, 368],
+      "summary": "判断某个成员是否应被跳过翻译，过滤 Equals/GetHashCode 等内置方法及无 Browsable 属性的不可见成员。",
+      "tags": ["filter", "member-checking", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/AnsiColorCodeFix.cs:AnsiColorCodeFix",
+      "type": "class",
+      "name": "AnsiColorCodeFix",
+      "filePath": "Shared/AnsiColorCodeFix.cs",
+      "lineRange": [6, 45],
+      "summary": "Windows 控制台 ANSI 颜色码修复类，通过 Kernel32 P/Invoke 获取和设置控制台模式以启用虚拟终端处理，解决旧版 Win10 颜色乱码问题。",
+      "tags": ["ansi-color", "windows-console", "p-invoke", "class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/AnsiColorCodeFix.cs:TryEnableForWin10",
+      "type": "function",
+      "name": "TryEnableForWin10",
+      "filePath": "Shared/AnsiColorCodeFix.cs",
+      "lineRange": [27, 44],
+      "summary": "尝试为 Windows 10 启用虚拟终端处理模式，通过 ENABLE_VIRTUAL_TERMINAL_PROCESSING 标志修复控制台 ANSI 颜色码支持。",
+      "tags": ["ansi-color", "windows-console", "enablement", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/ArgumentsParser.cs:ArgumentsParser",
+      "type": "class",
+      "name": "ArgumentsParser",
+      "filePath": "Shared/ArgumentsParser.cs",
+      "lineRange": [16, 122],
+      "summary": "OpenTAP 命令行参数解析器，维护全局选项注册表（AllOptions），将原始命令行参数解析为结构化选项值及未命名参数列表。",
+      "tags": ["cli", "argument-parser", "class"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Shared/ArgumentsParser.cs:Argument",
+      "type": "class",
+      "name": "Argument",
+      "filePath": "Shared/ArgumentsParser.cs",
+      "lineRange": [124, 199],
+      "summary": "命令行参数选项定义类，包含长/短参数名、是否需参数值、可比较排序和可克隆复制功能，实现 IComparable 接口以支持选项优先级排序。",
+      "tags": ["cli", "argument-definition", "icomparable", "data-model"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Shared/ArgumentsParser.cs:ArgumentCollection",
+      "type": "class",
+      "name": "ArgumentCollection",
+      "filePath": "Shared/ArgumentsParser.cs",
+      "lineRange": [206, 380],
+      "summary": "命令行参数集合类，继承字典存储选项映射，处理匿名参数、缺失参数和未知选项，并提供格式化的帮助文本输出。",
+      "tags": ["cli", "argument-collection", "dictionary", "help-text"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Shared/ArgumentsParser.cs:findOption",
+      "type": "function",
+      "name": "findOption",
+      "filePath": "Shared/ArgumentsParser.cs",
+      "lineRange": [27, 69],
+      "summary": "在注册选项列表中查找匹配输入字符串的参数选项，支持 -shortName 和 --longName 格式，处理等号分隔的长参数值。",
+      "tags": ["cli", "option-matching", "lookup", "utility"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/ArgumentsParser.cs:Parse",
+      "type": "function",
+      "name": "Parse",
+      "filePath": "Shared/ArgumentsParser.cs",
+      "lineRange": [71, 121],
+      "summary": "解析原始命令行参数列表，生成结构化的参数集合结果，包括已匹配选项、未命名参数、未知选项和缺失参数。",
+      "tags": ["cli", "argument-parsing", "entry-point"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/ArgumentsParser.cs:CreateDefault",
+      "type": "function",
+      "name": "CreateDefault",
+      "filePath": "Shared/ArgumentsParser.cs",
+      "lineRange": [278, 289],
+      "summary": "创建默认的 ArgumentCollection 实例，预注册 OpenTAP 标准 CLI 选项：-v/--verbose、-q/--quiet、-c/--color、--log。",
+      "tags": ["cli", "default-options", "factory", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/ArgumentsParser.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Shared/ArgumentsParser.cs",
+      "lineRange": [338, 379],
+      "summary": "生成命令行帮助文本，格式化输出所有可见选项（含短名、长名、描述）和未命名参数，按长短名对齐排列。",
+      "tags": ["cli", "help-text", "formatting", "display"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Shared/ExecutorInterop.cs:ExecutorClient",
+      "type": "class",
+      "name": "ExecutorClient",
+      "filePath": "Shared/ExecutorInterop.cs",
+      "lineRange": [25, 114],
+      "summary": "执行器客户端类，管理 OpenTAP 执行模式（独立运行/子进程），检测 .NET 运行时路径并定位 OpenTAP DLL，支持 Windows 和 Unix 平台。",
+      "tags": ["execution-mode", "dotnet-runtime", "process-detection", "class"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/ExecutorInterop.cs:mineDotnet",
+      "type": "function",
+      "name": "mineDotnet",
+      "filePath": "Shared/ExecutorInterop.cs",
+      "lineRange": [63, 110],
+      "summary": "检测并定位当前系统上的 .NET 运行时可执行文件路径，支持从当前进程路径推断、RuntimeEnvironment 查找及 Platform 目录搜索。",
+      "tags": ["dotnet-runtime", "path-detection", "process-location", "cross-platform"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Shared/FileSystemHelper.cs:FileSystemHelper",
+      "type": "class",
+      "name": "FileSystemHelper",
+      "filePath": "Shared/FileSystemHelper.cs",
+      "lineRange": [15, 152],
+      "summary": "文件系统操作工具类，提供安全的递归目录删除（带只读属性清除）、带重试的文件删除、临时文件/目录创建、相对路径计算及程序集版本获取。",
+      "tags": ["utility", "file-system", "file-operations", "class"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/FileSystemHelper.cs:DeleteDirectory",
+      "type": "function",
+      "name": "DeleteDirectory",
+      "filePath": "Shared/FileSystemHelper.cs",
+      "lineRange": [39, 53],
+      "summary": "安全删除目录，先清除所有文件的只读属性再递归删除子文件和子目录，处理参数校验异常。",
+      "tags": ["utility", "file-deletion", "directory-operations", "error-handling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/FileSystemHelper.cs:SafeDelete",
+      "type": "function",
+      "name": "SafeDelete",
+      "filePath": "Shared/FileSystemHelper.cs",
+      "lineRange": [55, 76],
+      "summary": "带重试机制的安全文件删除方法，默认重试 20 次并在文件被锁定时等待，支持自定义重试次数和错误回调。",
+      "tags": ["utility", "file-deletion", "retry", "robustness"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/FileSystemHelper.cs:GetRelativePath",
+      "type": "function",
+      "name": "GetRelativePath",
+      "filePath": "Shared/FileSystemHelper.cs",
+      "lineRange": [117, 129],
+      "summary": "计算从基准目录到目标目录的相对路径，使用路径分割与公共前缀跳跃算法实现。",
+      "tags": ["utility", "path-calculation", "relative-path", "algorithm"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/ICliActionExtensions.cs:ICliActionExtensions",
+      "type": "class",
+      "name": "ICliActionExtensions",
+      "filePath": "Shared/ICliActionExtensions.cs",
+      "lineRange": [17, 289],
+      "summary": "CLI 动作执行扩展类，将 ICliAction 接口的 Execute 调用与命令行参数解析绑定，支持命名参数、匿名位置参数、数组参数和任意类型参数转换。",
+      "tags": ["cli", "action-executor", "extension-method", "class"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Shared/ICliActionExtensions.cs:PerformExecute",
+      "type": "function",
+      "name": "PerformExecute",
+      "filePath": "Shared/ICliActionExtensions.cs",
+      "lineRange": [25, 245],
+      "summary": "CLI 动作执行核心方法，构建参数注册表、解析命令行、绑定属性值并执行 ICliAction.Execute，包含完整的参数校验、类型转换、错误报告和帮助文本输出。",
+      "tags": ["cli", "action-execution", "parameter-binding", "entry-point"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Shared/MurMurHash3.cs:MurMurHash3",
+      "type": "class",
+      "name": "MurMurHash3",
+      "filePath": "Shared/MurMurHash3.cs",
+      "lineRange": [16, 126],
+      "summary": "MurmurHash3 32 位非加密哈希算法实现，提供多重重载（字节数组、字符串、流），使用 0x9747b28c 种子值，包含 rotl32 和 fmix 辅助函数。",
+      "tags": ["hash", "algorithm", "murmurhash", "class"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/MurMurHash3.cs:Hash",
+      "type": "function",
+      "name": "Hash",
+      "filePath": "Shared/MurMurHash3.cs",
+      "lineRange": [34, 110],
+      "summary": "MurmurHash3 流式哈希主算法，按 4 字节块读取数据并进行混淆运算，处理尾部不满 4 字节的情况，最终执行 fmix 得到 32 位哈希值。",
+      "tags": ["hash", "algorithm", "murmurhash", "stream-processing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Shared/OperatingSystem.cs:OperatingSystem",
+      "type": "class",
+      "name": "OperatingSystem",
+      "filePath": "Shared/OperatingSystem.cs",
+      "lineRange": [12, 72],
+      "summary": "操作系统平台检测类，提供静态实例 Windows/Linux/MacOS/Unsupported，通过 uname 命令检测 macOS 并根据 /proc 目录检测 Linux。",
+      "tags": ["platform-detection", "os-abstraction", "class"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Shared/OperatingSystem.cs:MacOsArchitecture",
+      "type": "class",
+      "name": "MacOsArchitecture",
+      "filePath": "Shared/OperatingSystem.cs",
+      "lineRange": [74, 97],
+      "summary": "macOS CPU 架构检测类，通过 uname -m 命令获取硬件架构，支持 Intel (x86_64) 和 Apple Silicon (arm64) 识别。",
+      "tags": ["platform-detection", "macos", "architecture", "class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/OperatingSystem.cs:LinuxArchitecture",
+      "type": "class",
+      "name": "LinuxArchitecture",
+      "filePath": "Shared/OperatingSystem.cs",
+      "lineRange": [98, 129],
+      "summary": "Linux CPU 架构检测类，通过 uname -m 命令获取硬件架构，支持 x64 (x86_64)、arm (armv7l) 和 arm64 (aarch64) 识别。",
+      "tags": ["platform-detection", "linux", "architecture", "class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/OperatingSystem.cs:getCurrent",
+      "type": "function",
+      "name": "getCurrent",
+      "filePath": "Shared/OperatingSystem.cs",
+      "lineRange": [26, 49],
+      "summary": "检测当前运行时操作系统平台，顺序检查 macOS（通过 uname 命令）、Linux（/proc 目录）并默认返回 Windows。",
+      "tags": ["platform-detection", "os-detection", "runtime"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/OperatingSystem.cs:isMacOs",
+      "type": "function",
+      "name": "isMacOs",
+      "filePath": "Shared/OperatingSystem.cs",
+      "lineRange": [51, 68],
+      "summary": "通过执行 uname 命令检查输出是否包含 'DARWIN' 字符串来判断是否为 macOS 平台。",
+      "tags": ["platform-detection", "macos", "uname", "process-execution"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/OperatingSystem.cs:LinuxArchitecture",
+      "type": "function",
+      "name": "LinuxArchitecture",
+      "filePath": "Shared/OperatingSystem.cs",
+      "lineRange": [105, 127],
+      "summary": "在 Linux 系统上通过 uname -m 获取并解析当前 CPU 架构字符串，返回对应的 LinuxArchitecture 枚举值。",
+      "tags": ["platform-detection", "linux", "architecture", "uname"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/PathUtils.cs:PathUtils",
+      "type": "class",
+      "name": "PathUtils",
+      "filePath": "Shared/PathUtils.cs",
+      "lineRange": [12, 150],
+      "summary": "路径操作工具类，提供路径规范化（Windows 兼容大写转换）、递归目录遍历（支持 .OpenTapIgnore）、文件内容快速比较及临时文件生成。",
+      "tags": ["utility", "path-manipulation", "class"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/PathUtils.cs:IterateDirectories",
+      "type": "function",
+      "name": "IterateDirectories",
+      "filePath": "Shared/PathUtils.cs",
+      "lineRange": [51, 79],
+      "summary": "递归遍历目录，跳过 .OpenTapIgnore 文件标记的忽略目录和隐藏文件夹，支持文件名模式匹配和搜索选项控制。",
+      "tags": ["utility", "directory-traversal", "filtering", "recursion"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Shared/PathUtils.cs:compareFileStreams",
+      "type": "function",
+      "name": "compareFileStreams",
+      "filePath": "Shared/PathUtils.cs",
+      "lineRange": [81, 104],
+      "summary": "快速比较两个文件流内容是否相同，按 8 字节块读取并使用 BitConverter.ToInt64 进行高效比较，支持流末尾不等长检测。",
+      "tags": ["utility", "file-comparison", "binary-compare", "algorithm"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/PathUtils.cs:CompareFiles",
+      "type": "function",
+      "name": "CompareFiles",
+      "filePath": "Shared/PathUtils.cs",
+      "lineRange": [106, 120],
+      "summary": "比较两个文件路径的内容是否相同，先做路径规范化比较（忽略大小写），再打开文件流进行二进制内容比对。",
+      "tags": ["utility", "file-comparison", "content-checking"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/PipeReader.cs:PipeReader",
+      "type": "class",
+      "name": "PipeReader",
+      "filePath": "Shared/PipeReader.cs",
+      "lineRange": [8, 59],
+      "summary": "命名管道二进制消息序列化工具类，使用 BinaryReader/BinaryWriter 进行整数和类型化消息的读写，支持长度前缀协议。",
+      "tags": ["ipc", "named-pipe", "serialization", "class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/PipeReader.cs:TryReadMessage",
+      "type": "function",
+      "name": "TryReadMessage",
+      "filePath": "Shared/PipeReader.cs",
+      "lineRange": [29, 43],
+      "summary": "从管道流中尝试读取一条类型化消息，先读取 4 字节长度前缀，再读取对应长度数据并反序列化为泛型对象。",
+      "tags": ["ipc", "deserialization", "named-pipe", "binary-protocol"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/PipeReader.cs:WriteMessage",
+      "type": "function",
+      "name": "WriteMessage",
+      "filePath": "Shared/PipeReader.cs",
+      "lineRange": [45, 58],
+      "summary": "将对象序列化并写入管道流，先写入 4 字节长度前缀，后跟 XML 序列化数据，最后写入 0 作为消息终止标志。",
+      "tags": ["ipc", "serialization", "named-pipe", "binary-protocol"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Shared/ProcessCliAction.cs:ProcessCliAction",
+      "type": "class",
+      "name": "ProcessCliAction",
+      "filePath": "Shared/ProcessCliAction.cs",
+      "lineRange": [10, 42],
+      "summary": "子进程 CLI 动作执行器，通过 NamedPipeClientStream 连接父进程，接收 TestPlan 并执行，日志通过管道回传至父进程。",
+      "tags": ["cli", "subprocess", "testplan-execution", "internal", "class"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Shared/ProcessCliAction.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Shared/ProcessCliAction.cs",
+      "lineRange": [15, 41],
+      "summary": "子进程执行入口，连接命名管道、接收 TestPlan、注册 EventTraceListener 监听日志并执行测试计划，结果通过管道传输。",
+      "tags": ["subprocess", "testplan-execution", "named-pipe", "entry-point"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {"source": "file:sdk/OpenTap.Sdk.New/TranslateAction.cs", "target": "class:sdk/OpenTap.Sdk.New/TranslateAction.cs:TranslateAction", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:sdk/OpenTap.Sdk.New/TranslateAction.cs", "target": "function:sdk/OpenTap.Sdk.New/TranslateAction.cs:Execute", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:sdk/OpenTap.Sdk.New/TranslateAction.cs", "target": "function:sdk/OpenTap.Sdk.New/TranslateAction.cs:SkipType", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:sdk/OpenTap.Sdk.New/TranslateAction.cs", "target": "function:sdk/OpenTap.Sdk.New/TranslateAction.cs:GetMembers", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:sdk/OpenTap.Sdk.New/TranslateAction.cs", "target": "function:sdk/OpenTap.Sdk.New/TranslateAction.cs:SkipMem", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:sdk/OpenTap.Sdk.New/TranslateAction.cs", "target": "class:sdk/OpenTap.Sdk.New/TranslateAction.cs:TranslateAction", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:sdk/OpenTap.Sdk.New/TranslateAction.cs", "target": "function:sdk/OpenTap.Sdk.New/TranslateAction.cs:Execute", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "config:sdk/sdk.package.xml", "target": "file:sdk/OpenTap.Sdk.New/TranslateAction.cs", "type": "configures", "direction": "forward", "weight": 0.6},
+
+    {"source": "file:Shared/AnsiColorCodeFix.cs", "target": "class:Shared/AnsiColorCodeFix.cs:AnsiColorCodeFix", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/AnsiColorCodeFix.cs", "target": "function:Shared/AnsiColorCodeFix.cs:TryEnableForWin10", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/AnsiColorCodeFix.cs", "target": "function:Shared/AnsiColorCodeFix.cs:TryEnableForWin10", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "class:Shared/ArgumentsParser.cs:ArgumentsParser", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "class:Shared/ArgumentsParser.cs:Argument", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "class:Shared/ArgumentsParser.cs:ArgumentCollection", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "function:Shared/ArgumentsParser.cs:findOption", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "function:Shared/ArgumentsParser.cs:Parse", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "function:Shared/ArgumentsParser.cs:CreateDefault", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "function:Shared/ArgumentsParser.cs:ToString", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "class:Shared/ArgumentsParser.cs:ArgumentsParser", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "class:Shared/ArgumentsParser.cs:Argument", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "class:Shared/ArgumentsParser.cs:ArgumentCollection", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "function:Shared/ArgumentsParser.cs:Parse", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "function:Shared/ArgumentsParser.cs:CreateDefault", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/ArgumentsParser.cs", "target": "function:Shared/ArgumentsParser.cs:ToString", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/ExecutorInterop.cs", "target": "class:Shared/ExecutorInterop.cs:ExecutorClient", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ExecutorInterop.cs", "target": "function:Shared/ExecutorInterop.cs:mineDotnet", "type": "contains", "direction": "forward", "weight": 1.0},
+
+    {"source": "file:Shared/FileSystemHelper.cs", "target": "class:Shared/FileSystemHelper.cs:FileSystemHelper", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/FileSystemHelper.cs", "target": "function:Shared/FileSystemHelper.cs:DeleteDirectory", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/FileSystemHelper.cs", "target": "function:Shared/FileSystemHelper.cs:SafeDelete", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/FileSystemHelper.cs", "target": "function:Shared/FileSystemHelper.cs:GetRelativePath", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/FileSystemHelper.cs", "target": "function:Shared/FileSystemHelper.cs:DeleteDirectory", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/FileSystemHelper.cs", "target": "function:Shared/FileSystemHelper.cs:SafeDelete", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/ICliActionExtensions.cs", "target": "class:Shared/ICliActionExtensions.cs:ICliActionExtensions", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ICliActionExtensions.cs", "target": "function:Shared/ICliActionExtensions.cs:PerformExecute", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ICliActionExtensions.cs", "target": "function:Shared/ICliActionExtensions.cs:PerformExecute", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/MurMurHash3.cs", "target": "class:Shared/MurMurHash3.cs:MurMurHash3", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/MurMurHash3.cs", "target": "function:Shared/MurMurHash3.cs:Hash", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/MurMurHash3.cs", "target": "class:Shared/MurMurHash3.cs:MurMurHash3", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/MurMurHash3.cs", "target": "function:Shared/MurMurHash3.cs:Hash", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/OperatingSystem.cs", "target": "class:Shared/OperatingSystem.cs:OperatingSystem", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "class:Shared/OperatingSystem.cs:MacOsArchitecture", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "class:Shared/OperatingSystem.cs:LinuxArchitecture", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "function:Shared/OperatingSystem.cs:getCurrent", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "function:Shared/OperatingSystem.cs:isMacOs", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "function:Shared/OperatingSystem.cs:LinuxArchitecture", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "class:Shared/OperatingSystem.cs:OperatingSystem", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "class:Shared/OperatingSystem.cs:MacOsArchitecture", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "class:Shared/OperatingSystem.cs:LinuxArchitecture", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "function:Shared/OperatingSystem.cs:getCurrent", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "function:Shared/OperatingSystem.cs:isMacOs", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/OperatingSystem.cs", "target": "function:Shared/OperatingSystem.cs:LinuxArchitecture", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/PathUtils.cs", "target": "class:Shared/PathUtils.cs:PathUtils", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/PathUtils.cs", "target": "function:Shared/PathUtils.cs:IterateDirectories", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/PathUtils.cs", "target": "function:Shared/PathUtils.cs:compareFileStreams", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/PathUtils.cs", "target": "function:Shared/PathUtils.cs:CompareFiles", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/PathUtils.cs", "target": "function:Shared/PathUtils.cs:IterateDirectories", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/PathUtils.cs", "target": "function:Shared/PathUtils.cs:CompareFiles", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/PipeReader.cs", "target": "class:Shared/PipeReader.cs:PipeReader", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/PipeReader.cs", "target": "function:Shared/PipeReader.cs:TryReadMessage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/PipeReader.cs", "target": "function:Shared/PipeReader.cs:WriteMessage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/PipeReader.cs", "target": "function:Shared/PipeReader.cs:TryReadMessage", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Shared/PipeReader.cs", "target": "function:Shared/PipeReader.cs:WriteMessage", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:Shared/ProcessCliAction.cs", "target": "class:Shared/ProcessCliAction.cs:ProcessCliAction", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ProcessCliAction.cs", "target": "function:Shared/ProcessCliAction.cs:Execute", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Shared/ProcessCliAction.cs", "target": "function:Shared/ProcessCliAction.cs:Execute", "type": "exports", "direction": "forward", "weight": 0.8}
+  ]
+}

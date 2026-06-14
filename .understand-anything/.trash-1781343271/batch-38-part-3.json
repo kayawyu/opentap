@@ -1,0 +1,929 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package/Image/PackageDependencyQuery.cs",
+      "type": "file",
+      "name": "PackageDependencyQuery.cs",
+      "filePath": "Package/Image/PackageDependencyQuery.cs",
+      "summary": "包依赖查询入口，从多仓库加载 PackageDependencyGraph 并提供异常处理，为上层提供统一的图加载接口。",
+      "tags": [
+        "dependency-query",
+        "graph-loading",
+        "package-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/PackageDependencyQuery.cs:PackageQueryException",
+      "type": "class",
+      "name": "PackageQueryException",
+      "filePath": "Package/Image/PackageDependencyQuery.cs",
+      "lineRange": [
+        8,
+        14
+      ],
+      "summary": "包查询异常，在依赖图加载失败时抛出。",
+      "tags": [
+        "exception",
+        "package-query"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/PackageDependencyQuery.cs:PackageDependencyQuery",
+      "type": "class",
+      "name": "PackageDependencyQuery",
+      "filePath": "Package/Image/PackageDependencyQuery.cs",
+      "lineRange": [
+        19,
+        42
+      ],
+      "summary": "包依赖查询，从多个仓库加载并构建依赖图，是上层与 PackageDependencyGraph 的桥梁。",
+      "tags": [
+        "query",
+        "graph-loading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyQuery.cs:PackageQueryException",
+      "type": "function",
+      "name": "PackageQueryException",
+      "filePath": "Package/Image/PackageDependencyQuery.cs",
+      "lineRange": [
+        10,
+        13
+      ],
+      "summary": "构造函数，创建包查询异常。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/PackageDependencyQuery.cs:LoadGraph",
+      "type": "function",
+      "name": "LoadGraph",
+      "filePath": "Package/Image/PackageDependencyQuery.cs",
+      "lineRange": [
+        29,
+        41
+      ],
+      "summary": "从多仓库构建依赖图，失败时抛出 PackageQueryException。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/Serialization/JSON/ImageJsonSerializer.cs",
+      "type": "file",
+      "name": "ImageJsonSerializer.cs",
+      "filePath": "Package/Image/Serialization/JSON/ImageJsonSerializer.cs",
+      "summary": "镜像 JSON 序列化器，将 ImageSpecifier 序列化为 JSON 或从 JSON 反序列化，集成自定义包规范转换器。",
+      "tags": [
+        "json",
+        "serialization",
+        "image"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/Serialization/JSON/ImageJsonSerializer.cs:ImageJsonSerializer",
+      "type": "class",
+      "name": "ImageJsonSerializer",
+      "filePath": "Package/Image/Serialization/JSON/ImageJsonSerializer.cs",
+      "lineRange": [
+        7,
+        27
+      ],
+      "summary": "镜像 JSON 序列化器，注册自定义转换器并实现 ImageSpecifier 的 JSON 序列化/反序列化。",
+      "tags": [
+        "serialization",
+        "json",
+        "image"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "type": "file",
+      "name": "JsonPackageSpecifierConverter.cs",
+      "filePath": "Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "summary": "Newtonsoft.Json 自定义转换器，处理 PackageSpecifier 对象在 JSON 序列化/反序列化时的格式转换。",
+      "tags": [
+        "json",
+        "converter",
+        "serialization",
+        "package-specifier"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:JsonPackageSpecifierConverter",
+      "type": "class",
+      "name": "JsonPackageSpecifierConverter",
+      "filePath": "Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "lineRange": [
+        7,
+        33
+      ],
+      "summary": "PackageSpecifier 的 JsonConverter，处理 JSON 中包规范的格式转换。",
+      "tags": [
+        "json-converter",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:WriteJson",
+      "type": "function",
+      "name": "WriteJson",
+      "filePath": "Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "lineRange": [
+        9,
+        12
+      ],
+      "summary": "将 PackageSpecifier 序列化为 JSON 字符串。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:ReadJson",
+      "type": "function",
+      "name": "ReadJson",
+      "filePath": "Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "lineRange": [
+        14,
+        27
+      ],
+      "summary": "从 JSON 字符串反序列化 PackageSpecifier。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:CanConvert",
+      "type": "function",
+      "name": "CanConvert",
+      "filePath": "Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "lineRange": [
+        29,
+        32
+      ],
+      "summary": "判断类型是否为 PackageSpecifier 以启用转换器。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "type": "file",
+      "name": "SemanticVersionConverter.cs",
+      "filePath": "Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "summary": "语义版本 Newtonsoft.Json 转换器，负责 SemanticVersion 对象在 JSON 中的序列化与反序列化。",
+      "tags": [
+        "json",
+        "converter",
+        "semantic-version",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:SemanticVersionConverter",
+      "type": "class",
+      "name": "SemanticVersionConverter",
+      "filePath": "Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "lineRange": [
+        6,
+        22
+      ],
+      "summary": "SemanticVersion 的 JsonConverter，处理 JSON 中语义版本的序列化格式。",
+      "tags": [
+        "json-converter",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:CanConvert",
+      "type": "function",
+      "name": "CanConvert",
+      "filePath": "Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "lineRange": [
+        8,
+        11
+      ],
+      "summary": "判断类型是否为 SemanticVersion 以启用转换器。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:ReadJson",
+      "type": "function",
+      "name": "ReadJson",
+      "filePath": "Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "lineRange": [
+        13,
+        16
+      ],
+      "summary": "从 JSON 字符串反序列化 SemanticVersion。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:WriteJson",
+      "type": "function",
+      "name": "WriteJson",
+      "filePath": "Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "lineRange": [
+        18,
+        21
+      ],
+      "summary": "将 SemanticVersion 序列化为 JSON 字符串。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/Serialization/XML/ImageXmlSerializer.cs",
+      "type": "file",
+      "name": "ImageXmlSerializer.cs",
+      "filePath": "Package/Image/Serialization/XML/ImageXmlSerializer.cs",
+      "summary": "镜像 XML 序列化器，将 ImageSpecifier 从 XML 格式反序列化为对象。",
+      "tags": [
+        "xml",
+        "serialization",
+        "image"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "type": "file",
+      "name": "PackageSpecifierSerializerPlugin.cs",
+      "filePath": "Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "summary": "包规范 XML 序列化插件，实现 ISerializerPlugin 接口，处理 PackageSpecifier 在 OpenTAP XML 序列化流程中的转换。",
+      "tags": [
+        "xml",
+        "serialization-plugin",
+        "package-specifier"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs:PackageSpecifierSerializerPlugin",
+      "type": "class",
+      "name": "PackageSpecifierSerializerPlugin",
+      "filePath": "Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "lineRange": [
+        6,
+        50
+      ],
+      "summary": "PackageSpecifier 的 XML 序列化插件，在 OpenTAP 序列化框架中注册包规范的序列化逻辑。",
+      "tags": [
+        "serialization-plugin",
+        "xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs:Deserialize",
+      "type": "function",
+      "name": "Deserialize",
+      "filePath": "Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "lineRange": [
+        9,
+        44
+      ],
+      "summary": "从 XML 元素反序列化 PackageSpecifier 对象。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs:Serialize",
+      "type": "function",
+      "name": "Serialize",
+      "filePath": "Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "lineRange": [
+        46,
+        49
+      ],
+      "summary": "将 PackageSpecifier 序列化为 XML 元素。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Installation.cs",
+      "type": "file",
+      "name": "Installation.cs",
+      "filePath": "Package/Installation.cs",
+      "summary": "OpenTAP 安装目录抽象，管理已安装包的查找、缓存和变更监控，提供从安装目录定位包和类型的核心查询功能。",
+      "tags": [
+        "installation-management",
+        "package-query",
+        "file-monitoring",
+        "cache"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/Installation.cs:Installation",
+      "type": "class",
+      "name": "Installation",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        16,
+        456
+      ],
+      "summary": "OpenTAP 安装目录表示，管理已安装包的索引、缓存、文件-包映射和变更监控。",
+      "tags": [
+        "installation-management",
+        "cache",
+        "file-monitoring"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Installation.cs:GetMachineId",
+      "type": "function",
+      "name": "GetMachineId",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        39,
+        67
+      ],
+      "summary": "获取或生成本地机器的唯一标识符。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Installation.cs:Installation",
+      "type": "function",
+      "name": "Installation",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        74,
+        77
+      ],
+      "summary": "构造函数，初始化安装目录并启动包变更监控。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Installation.cs:Invalidate",
+      "type": "function",
+      "name": "Invalidate",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        111,
+        116
+      ],
+      "summary": "使安装缓存失效，强制下次查询重新扫描。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Installation.cs:FindPackageContainingFile",
+      "type": "function",
+      "name": "FindPackageContainingFile",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        127,
+        188
+      ],
+      "summary": "在安装中查找包含指定文件的包。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Installation.cs:FindPackageContainingType",
+      "type": "function",
+      "name": "FindPackageContainingType",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        196,
+        212
+      ],
+      "summary": "在安装中查找包含指定类型的包。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Installation.cs:GetPackages_L237",
+      "type": "function",
+      "name": "GetPackages",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        237,
+        237
+      ],
+      "summary": "获取安装中的所有包（无参数重载）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Installation.cs:GetPackages_L242",
+      "type": "function",
+      "name": "GetPackages",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        242,
+        242
+      ],
+      "summary": "获取安装中的所有包（带名称和版本参数）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Installation.cs:FindPackage",
+      "type": "function",
+      "name": "FindPackage",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        245,
+        245
+      ],
+      "summary": "按标识符查找包。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Installation.cs:GetPackagesLookup",
+      "type": "function",
+      "name": "GetPackagesLookup",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        252,
+        319
+      ],
+      "summary": "构建包名到 PackageDef 的查找字典。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/Installation.cs:GetOpenTapPackage",
+      "type": "function",
+      "name": "GetOpenTapPackage",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        328,
+        333
+      ],
+      "summary": "获取 OpenTAP 核心包的 PackageDef。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Installation.cs:loadPackageDef",
+      "type": "function",
+      "name": "loadPackageDef",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        359,
+        376
+      ],
+      "summary": "从包文件加载 PackageDef 对象。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Installation.cs:MonitorPackageChange",
+      "type": "function",
+      "name": "MonitorPackageChange",
+      "filePath": "Package/Installation.cs",
+      "lineRange": [
+        423,
+        437
+      ],
+      "summary": "监控包目录的文件变更并在变化时触发缓存失效。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package/Image/PackageDependencyQuery.cs",
+      "target": "class:Package/Image/PackageDependencyQuery.cs:PackageQueryException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyQuery.cs",
+      "target": "class:Package/Image/PackageDependencyQuery.cs:PackageQueryException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyQuery.cs",
+      "target": "class:Package/Image/PackageDependencyQuery.cs:PackageDependencyQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyQuery.cs",
+      "target": "function:Package/Image/PackageDependencyQuery.cs:PackageQueryException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyQuery.cs",
+      "target": "function:Package/Image/PackageDependencyQuery.cs:PackageQueryException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyQuery.cs",
+      "target": "function:Package/Image/PackageDependencyQuery.cs:LoadGraph",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyQuery.cs",
+      "target": "function:Package/Image/PackageDependencyQuery.cs:LoadGraph",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/ImageJsonSerializer.cs",
+      "target": "class:Package/Image/Serialization/JSON/ImageJsonSerializer.cs:ImageJsonSerializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "target": "class:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:JsonPackageSpecifierConverter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:WriteJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:WriteJson",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:ReadJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:ReadJson",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:CanConvert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs:CanConvert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "target": "class:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:SemanticVersionConverter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:CanConvert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:CanConvert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:ReadJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:ReadJson",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:WriteJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/SemanticVersionConverter.cs",
+      "target": "function:Package/Image/Serialization/JSON/SemanticVersionConverter.cs:WriteJson",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "target": "class:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs:PackageSpecifierSerializerPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "target": "function:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs:Deserialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "target": "function:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs:Deserialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "target": "function:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs:Serialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "target": "function:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs:Serialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "class:Package/Installation.cs:Installation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "class:Package/Installation.cs:Installation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:GetMachineId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:Installation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:Installation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:Invalidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:Invalidate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:FindPackageContainingFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:FindPackageContainingFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:FindPackageContainingType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:FindPackageContainingType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:GetPackages_L237",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:GetPackages_L237",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:GetPackages_L242",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:GetPackages_L242",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:FindPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:FindPackage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:GetPackagesLookup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:GetOpenTapPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:GetOpenTapPackage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:loadPackageDef",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Installation.cs",
+      "target": "function:Package/Installation.cs:MonitorPackageChange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/ImageJsonSerializer.cs",
+      "target": "file:Package/Image/ImageSpecifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/Serialization/JSON/JsonPackageSpecifierConverter.cs",
+      "target": "file:Package/Image/ImageSpecifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/Serialization/XML/ImageXmlSerializer.cs",
+      "target": "file:Package/Image/ImageSpecifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/Serialization/XML/PackageSpecifierSerializerPlugin.cs",
+      "target": "file:Package/Image/ImageSpecifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyQuery.cs",
+      "target": "file:Package/Image/PackageDependencyGraph.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/Image/PackageDependencyQuery.cs",
+      "target": "file:Package/Image/PackageDependencyCache.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

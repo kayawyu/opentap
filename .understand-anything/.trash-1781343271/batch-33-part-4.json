@@ -1,0 +1,688 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/TimeSpan/TimeSpanFormatter.cs",
+      "type": "file",
+      "name": "TimeSpanFormatter.cs",
+      "filePath": "Engine/TimeSpan/TimeSpanFormatter.cs",
+      "summary": "时间跨度格式化器，将 TimeSpan 转换为人类可读的天/时/分/秒字符串，支持详细程度控制和单位自定义。",
+      "tags": [
+        "formatting",
+        "time-span",
+        "display",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/TimeSpan/TimeSpanParser.cs",
+      "type": "file",
+      "name": "TimeSpanParser.cs",
+      "filePath": "Engine/TimeSpan/TimeSpanParser.cs",
+      "summary": "时间跨度解析器，从字符串（如 \"5s\"、\"2min\"）解析为 TimeSpan 对象，支持多种单位和区域性数字格式。",
+      "tags": [
+        "parsing",
+        "time-span",
+        "utility",
+        "text-processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/TimeSpanAverager.cs",
+      "type": "file",
+      "name": "TimeSpanAverager.cs",
+      "filePath": "Engine/TimeSpanAverager.cs",
+      "summary": "时间跨度滑动平均器，使用环形缓冲区记录最近 10 个 TimeSpan 值并计算平均值，用于执行时间估算。",
+      "tags": [
+        "averaging",
+        "time-span",
+        "statistics",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/TraceBar.cs",
+      "type": "file",
+      "name": "TraceBar.cs",
+      "filePath": "Engine/TraceBar.cs",
+      "summary": "测试结果可视化进度条，将浮点结果值映射为 ASCII 字符条，支持上下限、判定（Verdict）显示和组合判定。",
+      "tags": [
+        "visualization",
+        "trace",
+        "verdict",
+        "progress-bar"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Translation/ITranslationProvider.cs",
+      "type": "file",
+      "name": "ITranslationProvider.cs",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "summary": "翻译提供程序接口与 ResX 资源文件实现，负责从 .resx 文件中加载并缓存 Display 属性的多语言翻译映射。",
+      "tags": [
+        "translation",
+        "localization",
+        "resx",
+        "interface"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/TimeSpan/TimeSpanFormatter.cs:TimeSpanFormatter",
+      "type": "class",
+      "name": "TimeSpanFormatter",
+      "filePath": "Engine/TimeSpan/TimeSpanFormatter.cs",
+      "lineRange": [
+        21,
+        104
+      ],
+      "summary": "TimeSpanFormatter 时间跨度格式化器，将 TimeSpan 转换为可读的天/时/分/秒字符串。",
+      "tags": [
+        "formatter",
+        "time-span",
+        "display",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TimeSpan/TimeSpanFormatter.cs:Format",
+      "type": "function",
+      "name": "Format",
+      "filePath": "Engine/TimeSpan/TimeSpanFormatter.cs",
+      "lineRange": [
+        73,
+        95
+      ],
+      "summary": "Format 格式化 TimeSpan 为可读字符串，根据 Verbosity 控制详细程度。",
+      "tags": [
+        "formatting",
+        "time-span",
+        "display"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/TimeSpan/TimeSpanParser.cs:TimeSpanParser",
+      "type": "class",
+      "name": "TimeSpanParser",
+      "filePath": "Engine/TimeSpan/TimeSpanParser.cs",
+      "lineRange": [
+        26,
+        164
+      ],
+      "summary": "TimeSpanParser 时间跨度解析器，从字符串（如 \"5s\"、\"2min 30s\"）解析为 TimeSpan。",
+      "tags": [
+        "parser",
+        "time-span",
+        "utility",
+        "text-processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TimeSpan/TimeSpanParser.cs:Parse",
+      "type": "function",
+      "name": "Parse",
+      "filePath": "Engine/TimeSpan/TimeSpanParser.cs",
+      "lineRange": [
+        49,
+        163
+      ],
+      "summary": "Parse 从字符串解析 TimeSpan，支持复合单位（如 \"2min 30s\"）。",
+      "tags": [
+        "parsing",
+        "time-span",
+        "utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/TimeSpanAverager.cs:TimeSpanAverager",
+      "type": "class",
+      "name": "TimeSpanAverager",
+      "filePath": "Engine/TimeSpanAverager.cs",
+      "lineRange": [
+        5,
+        32
+      ],
+      "summary": "TimeSpanAverager 滑动平均器，用环形缓冲区维护最近 10 个 TimeSpan 值。",
+      "tags": [
+        "averaging",
+        "time-span",
+        "statistics",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TimeSpanAverager.cs:PushTimeSpan",
+      "type": "function",
+      "name": "PushTimeSpan",
+      "filePath": "Engine/TimeSpanAverager.cs",
+      "lineRange": [
+        11,
+        16
+      ],
+      "summary": "PushTimeSpan 将新 TimeSpan 值加入滑动窗口。",
+      "tags": [
+        "averaging",
+        "push",
+        "statistics"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/TimeSpanAverager.cs:GetAverage",
+      "type": "function",
+      "name": "GetAverage",
+      "filePath": "Engine/TimeSpanAverager.cs",
+      "lineRange": [
+        20,
+        31
+      ],
+      "summary": "GetAverage 计算当前滑动窗口内 TimeSpan 的平均值。",
+      "tags": [
+        "averaging",
+        "statistics",
+        "calculation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/TraceBar.cs:TraceBar",
+      "type": "class",
+      "name": "TraceBar",
+      "filePath": "Engine/TraceBar.cs",
+      "lineRange": [
+        14,
+        117
+      ],
+      "summary": "TraceBar 可视化进度条，将数值结果映射为 ASCII 字符条，支持判定叠加。",
+      "tags": [
+        "visualization",
+        "trace",
+        "verdict",
+        "progress-bar"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/TraceBar.cs:GetBar",
+      "type": "function",
+      "name": "GetBar",
+      "filePath": "Engine/TraceBar.cs",
+      "lineRange": [
+        50,
+        102
+      ],
+      "summary": "GetBar 根据数值结果生成 ASCII 可视化进度条。",
+      "tags": [
+        "visualization",
+        "trace",
+        "progress-bar"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/TraceBar.cs:TraceBar",
+      "type": "function",
+      "name": "TraceBar",
+      "filePath": "Engine/TraceBar.cs",
+      "lineRange": [
+        107,
+        115
+      ],
+      "summary": "TraceBar 构造函数，初始化进度条参数。",
+      "tags": [
+        "constructor",
+        "visualization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Translation/ITranslationProvider.cs:ITranslationProvider",
+      "type": "class",
+      "name": "ITranslationProvider",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        17,
+        22
+      ],
+      "summary": "ITranslationProvider 翻译提供程序接口，定义 GetDisplayAttribute 和 GetString 方法契约。",
+      "tags": [
+        "interface",
+        "translation",
+        "localization",
+        "contract"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Translation/ITranslationProvider.cs:ResXTranslationProvider",
+      "type": "class",
+      "name": "ResXTranslationProvider",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        24,
+        215
+      ],
+      "summary": "ResXTranslationProvider 基于 .resx 资源文件的翻译实现，后台线程监控文件变更并更新缓存映射。",
+      "tags": [
+        "translation",
+        "resx",
+        "localization",
+        "provider"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Translation/ITranslationProvider.cs:MaybeStartUpdateThread",
+      "type": "function",
+      "name": "MaybeStartUpdateThread",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        28,
+        58
+      ],
+      "summary": "MaybeStartUpdateThread 如需要则启动后台翻译缓存更新线程。",
+      "tags": [
+        "translation",
+        "threading",
+        "cache"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Translation/ITranslationProvider.cs:Dispose",
+      "type": "function",
+      "name": "Dispose",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        60,
+        63
+      ],
+      "summary": "Dispose 释放资源，取消工作线程并清理线程池。",
+      "tags": [
+        "dispose",
+        "cleanup",
+        "threading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/ITranslationProvider.cs:ResXTranslationProvider",
+      "type": "function",
+      "name": "ResXTranslationProvider",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        67,
+        75
+      ],
+      "summary": "方法 ResXTranslationProvider，9 行代码。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/ITranslationProvider.cs:ComputeDisplayAttribute:80",
+      "type": "function",
+      "name": "ComputeDisplayAttribute (line 80)",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        80,
+        114
+      ],
+      "summary": "ComputeDisplayAttribute (line 80) 计算并获取成员/元素的 Display 属性（支持多语言翻译映射），35 行。",
+      "tags": [
+        "translation",
+        "display",
+        "localization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Translation/ITranslationProvider.cs:ComputeDisplayAttribute:124",
+      "type": "function",
+      "name": "ComputeDisplayAttribute (line 124)",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        124,
+        138
+      ],
+      "summary": "ComputeDisplayAttribute (line 124) 计算并获取成员/元素的 Display 属性（支持多语言翻译映射），15 行。",
+      "tags": [
+        "translation",
+        "display",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/ITranslationProvider.cs:UpdateInvalidatedMappings",
+      "type": "function",
+      "name": "UpdateInvalidatedMappings",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        145,
+        192
+      ],
+      "summary": "UpdateInvalidatedMappings 当 .resx 文件变更时更新失效的翻译映射缓存。",
+      "tags": [
+        "translation",
+        "cache",
+        "file-watching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Translation/ITranslationProvider.cs:GetDisplayAttribute:194",
+      "type": "function",
+      "name": "GetDisplayAttribute (line 194)",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        194,
+        200
+      ],
+      "summary": "GetDisplayAttribute (line 194) 计算并获取成员/元素的 Display 属性（支持多语言翻译映射），7 行。",
+      "tags": [
+        "translation",
+        "display",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/ITranslationProvider.cs:GetDisplayAttribute:202",
+      "type": "function",
+      "name": "GetDisplayAttribute (line 202)",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        202,
+        208
+      ],
+      "summary": "GetDisplayAttribute (line 202) 计算并获取成员/元素的 Display 属性（支持多语言翻译映射），7 行。",
+      "tags": [
+        "translation",
+        "display",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Translation/ITranslationProvider.cs:GetString",
+      "type": "function",
+      "name": "GetString",
+      "filePath": "Engine/Translation/ITranslationProvider.cs",
+      "lineRange": [
+        210,
+        214
+      ],
+      "summary": "GetString 通过键获取翻译的原始字符串。",
+      "tags": [
+        "translation",
+        "lookup",
+        "localization"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/TimeSpan/TimeSpanFormatter.cs",
+      "target": "class:Engine/TimeSpan/TimeSpanFormatter.cs:TimeSpanFormatter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpan/TimeSpanFormatter.cs",
+      "target": "class:Engine/TimeSpan/TimeSpanFormatter.cs:TimeSpanFormatter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TimeSpan/TimeSpanFormatter.cs",
+      "target": "function:Engine/TimeSpan/TimeSpanFormatter.cs:Format",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpan/TimeSpanFormatter.cs",
+      "target": "function:Engine/TimeSpan/TimeSpanFormatter.cs:Format",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TimeSpan/TimeSpanParser.cs",
+      "target": "class:Engine/TimeSpan/TimeSpanParser.cs:TimeSpanParser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpan/TimeSpanParser.cs",
+      "target": "class:Engine/TimeSpan/TimeSpanParser.cs:TimeSpanParser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TimeSpan/TimeSpanParser.cs",
+      "target": "function:Engine/TimeSpan/TimeSpanParser.cs:Parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpan/TimeSpanParser.cs",
+      "target": "function:Engine/TimeSpan/TimeSpanParser.cs:Parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TimeSpanAverager.cs",
+      "target": "class:Engine/TimeSpanAverager.cs:TimeSpanAverager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpanAverager.cs",
+      "target": "function:Engine/TimeSpanAverager.cs:PushTimeSpan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpanAverager.cs",
+      "target": "function:Engine/TimeSpanAverager.cs:PushTimeSpan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TimeSpanAverager.cs",
+      "target": "function:Engine/TimeSpanAverager.cs:GetAverage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpanAverager.cs",
+      "target": "function:Engine/TimeSpanAverager.cs:GetAverage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TraceBar.cs",
+      "target": "class:Engine/TraceBar.cs:TraceBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TraceBar.cs",
+      "target": "class:Engine/TraceBar.cs:TraceBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TraceBar.cs",
+      "target": "function:Engine/TraceBar.cs:GetBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TraceBar.cs",
+      "target": "function:Engine/TraceBar.cs:GetBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/TraceBar.cs",
+      "target": "function:Engine/TraceBar.cs:TraceBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TraceBar.cs",
+      "target": "function:Engine/TraceBar.cs:TraceBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "class:Engine/Translation/ITranslationProvider.cs:ITranslationProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "class:Engine/Translation/ITranslationProvider.cs:ResXTranslationProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "class:Engine/Translation/ITranslationProvider.cs:ResXTranslationProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:MaybeStartUpdateThread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:Dispose",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:Dispose",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:ResXTranslationProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:ResXTranslationProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:ComputeDisplayAttribute:80",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:ComputeDisplayAttribute:124",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:UpdateInvalidatedMappings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:GetDisplayAttribute:194",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:GetDisplayAttribute:194",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:GetDisplayAttribute:202",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:GetDisplayAttribute:202",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:GetString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Translation/ITranslationProvider.cs",
+      "target": "function:Engine/Translation/ITranslationProvider.cs:GetString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

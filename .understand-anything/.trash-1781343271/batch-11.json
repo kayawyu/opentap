@@ -1,0 +1,319 @@
+{
+  "nodes": [
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.3.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.3.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.3.md",
+      "summary": "OpenTAP 9.3 版本的发布说明，涵盖新增功能（循环 continue、AvailableValues 多选、SDK CLI 模板工具）、可用性改进（Connection 移除通知、包列表版本/Beta 状态显示）、大量错误修复（SweepLoop、Input<T>、Annotation、序列化等）及其他改进（日志滚动、NuGet 发布、Linux SDK 迁移）。",
+      "tags": ["release-notes", "changelog", "bug-fixes", "sdk-tools"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.10.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.10.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.10.md",
+      "summary": "OpenTAP 9.10 版本的发布说明，涵盖新增功能（ValidatingObject API 增强、包解压隐藏文件、DefaultValueAttribute 序列化支持、CLI 包引用、tap package download --out、版本检查安装、文件解锁超时）、可用性改进、大量错误修复以及文档和测试改进。",
+      "tags": ["release-notes", "changelog", "package-management", "cli-improvements", "serialization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.11.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.11.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.11.md",
+      "summary": "OpenTAP 9.11 版本的发布说明，主要为小型改进版本，涵盖可用性改进（交互式安装列表去重、AnnotationCollection 性能优化、系统级包动作工作目录修正）和错误修复（连接端口、类型列显示、Test Plan Reference、资源属性取消选择、VS 后台任务、32 位依赖安装问题）。",
+      "tags": ["release-notes", "changelog", "bug-fixes", "performance"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.12.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.12.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.12.md",
+      "summary": "OpenTAP 9.12 版本的发布说明，涵盖新增功能（BreakConditionProperty 公开可见性、AnnotationCollection 属性信息扩展、列表参数化支持、包安装计数追踪）、多项可用性改进（IDisplayName 注解、FlagsEnum 零值处理、性能优化、GetParent<T> 泛型约束放宽等）和错误修复。",
+      "tags": ["release-notes", "changelog", "annotations", "parameterization", "package-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.13.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.13.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.13.md",
+      "summary": "OpenTAP 9.13 版本的发布说明，功能丰富的版本，涵盖多项新增功能（子测试计划执行、数值类型合并参数化、OPENTAP_COLOR 环境变量、Resource.Open 错误日志、OutputAttribute 改进、OnTestPlanComplete 错误判为失败、会话日志 API 禁用文本文件日志、卸载 CLI 动作 UserInput、测试步骤/计划描述）、大量可用性改进和错误修复。",
+      "tags": ["release-notes", "changelog", "test-plan-execution", "cli-enhancements", "output-attributes"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.14.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.14.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.14.md",
+      "summary": "OpenTAP 9.14 版本的发布说明，涵盖新增功能（ResultTable 和 ResultColumn 参数支持）、多项可用性改进（包动作行为修正、Sweep 参数验证、退出码改进、HttpRepository 通信性能、兼容性警告等）和错误修复（赋值输出范围问题、布尔值添加、Test Plan Reference 编辑参数、CSV 文件路径处理、Sweep 参数无效值、性能问题、NuGet 包失败等）。",
+      "tags": ["release-notes", "changelog", "result-tables", "sweep-parameters", "bug-fixes"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.15.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.15.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.15.md",
+      "summary": "OpenTAP 9.15 版本的发布说明，涵盖新增功能（Read-Only List 复制优化、端口和 Via Point 别名、UserInput 与 Session 映射、PackageDependencySerializerPlugin 自动检测依赖、包名支持斜杠）、可用性改进（子进程和 NuGet 构建更新检查禁用、描述和 Break Conditions 保存为元数据等）和错误修复（资源 Sweep、Flow Control If Verdict 卡住、卸载文本排列、ResultParameter 元数据混淆等）。",
+      "tags": ["release-notes", "changelog", "resource-management", "user-input", "dependency-detection"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.16.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.16.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.16.md",
+      "summary": "OpenTAP 9.16 版本的发布说明，涵盖多项新增功能（Sweep Parameter Range/Step Size 参数化、内置连接类型分组、测试步骤支持图片、XML 文件依赖包含、Image 功能实现、Test Plan Package 作为运行参数、Action Step 预期退出码列表）、可用性改进和大量错误修复（Sweep Parameter 类型转换、GUI 错误、PluginManager 过早加载、Mac 启动脚本等）。",
+      "tags": ["release-notes", "changelog", "image-support", "test-steps", "package-creation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.17.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.17.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.17.md",
+      "summary": "OpenTAP 9.17 版本的发布说明，重大版本升级，核心变更为升级至 .NET 6。涵盖大量新增功能（系统级包缓存、URL 添加包位置、IResultListener 动态添加、Admin Flag 包动作、动态 Package XML、CliActions 类型扩展、IfVerdict Continue 增强、Picture SDK 示例）、众多可用性改进和广泛的错误修复（涉及安装、序列化、版本解析、TypeData 兼容性等关键领域）。",
+      "tags": ["release-notes", "changelog", "dotnet-6-upgrade", "major-release", "system-wide-packages"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.18.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.18.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.18.md",
+      "summary": "OpenTAP 9.18 版本的发布说明，涵盖新增功能（CLI 命名会话日志、CLI SecureString 支持、测试步骤层级展开/折叠 API）、多项可用性改进（csproj 错误消息优化、If Verdict 绑定限制、系统级安装警告、下载重试减少等）、大量错误修复（PluginManager 程序集加载、TypeData 创建和继承、.NET Framework 安装缺失、包安装竞争条件等）及其他改进（性能优化、Newtonsoft 升级、引擎设置令牌交换）。",
+      "tags": ["release-notes", "changelog", "cli-security", "type-data", "performance"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.19.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.19.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.19.md",
+      "summary": "OpenTAP 9.19 版本的发布说明，涵盖新增功能（Process Step 环境变量设置、Resource 反序列化名称匹配回退）、可用性改进（包名斜杠强制校验、安装器错误消息优化）以及大量错误修复（传递依赖解析、TypeData.CanCreateInstance、DMM 安装、Object Reference 处理、Linux netstandard.dll 问题、PackageCache XML 删除、CLI 选项可见性、AvailableValues 覆盖、ResultTableOptimizer 时序等关键问题）。",
+      "tags": ["release-notes", "changelog", "deserialization", "cli-fixes", "package-resolution"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.20.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.20.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.20.md",
+      "summary": "OpenTAP 9.20 版本的发布说明，涵盖新增功能（PrepareUninstall 包动作动词、SweepParameterRangeStep 迭代功能、ScpiInstrument *CLS 覆盖、PyVISA-py 支持、序列化插件动态指定需求）、可用性改进（ComponentSettings 错误返回、Break Condition 重置、版本可用性提示、禁止参数化 Sweep 属性）、大量错误修复（输入损坏、Newtonsoft 缺失、内存泄漏、进程隔离挂起、Image 安装空值等）及其他杂项改进。",
+      "tags": ["release-notes", "changelog", "scpi-instrument", "process-isolation", "pyvisa-support"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.21.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.21.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.21.md",
+      "summary": "OpenTAP 9.21.0 版本的发布说明，小型版本，涵盖新增功能（Repo 4.0 API 支持、SessionLogs/Latest 功能）、多个错误修复（Sweep Values Table 编辑、Instrument Open 中止、循环依赖创建、Beta 依赖解析、系统级包安装、uninstall --ignore-missing 无效、Beta 版本提示错误）及其他改进项（管道警告修复、Mutex 超时、Obfuscation 属性移除）。",
+      "tags": ["release-notes", "changelog", "repository-api", "session-logs", "bug-fixes"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.22.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.22.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.22.md",
+      "summary": "OpenTAP 9.22.0 版本的发布说明，重大版本，亮点包括 Mixins 支持（测试步骤设置和功能扩展的新方式）、Artifacts（数据作为结果输出）、C# 项目文件认证令牌支持、Linux 全新安装体验、表达式和字符串插值、用户自定义设置、SIGTERM 信号处理等。涵盖 16 项新增功能、26 项错误修复及多项其他改进。",
+      "tags": ["release-notes", "changelog", "mixins", "artifacts", "major-release"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.23.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.23.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.23.md",
+      "summary": "OpenTAP 9.23.0 版本的发布说明，小型迭代版本，涵盖新增功能（PluginTypeSelectorAttribute 用于 Mixin 选择器、MacOS 加入 NuGet 包、IMixinBuilder 作为 ITapPlugin）和少量错误修复（Mixin 属性更新、文件引用错误、Package Create 插件遗漏）。",
+      "tags": ["release-notes", "changelog", "mixins", "macos-support", "nuget"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.24.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.24.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.24.md",
+      "summary": "OpenTAP 9.24.0 版本的发布说明，涵盖多项新增功能（Artifact 大小单位报告、Repeat Step 迭代号提供、tap package download --non-interactive、CLI 仓库令牌设置、兼容类型输出赋值、TestPlanRun/TestStepRun Status 属性、DateTime 字段 GUI 支持、无 TTY 场景处理、tap.sh Shell 独立性）、大量错误修复（ParentAnnotation 空值、ScpiInstrument IDN 可选、Defer 异常设置、日志滚动失效、离线 Image 解析等）、可用性改进和代码清理工作。",
+      "tags": ["release-notes", "changelog", "artifacts", "cli-enhancements", "cross-platform"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.25.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.25.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.25.md",
+      "summary": "OpenTAP 9.25.0 版本的发布说明，涵盖新增功能（Parallel Step 禁用建议下一步、重复类型名启动警告、Test Plan Summary 持续时间单位改进、tap image 子命令可浏览）、多项错误修复（Image 解析器罕见错误、初始化日志丢失、系统级包破坏安装、Run Program Firefox 阻塞、package install 405 错误等）、可用性改进、文档更新和代码清理（移除无用 using、删除测试模块、JSON/Newtonsoft 依赖升级）。",
+      "tags": ["release-notes", "changelog", "test-plan-summary", "image-resolution", "code-cleanup"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.26.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.26.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.26.md",
+      "summary": "OpenTAP 9.26.0 版本的发布说明，小型版本，涵盖新增功能（ViaPoint.IsActive 虚拟化、Connection.GetOtherPort 使用 Equals 替代引用比较、ScpiQuery/ScpiCommand 线程安全、PluginManager Initialize 方法、VISA 发现禁用支持）和少量错误修复（SetAssemblyInfo 添加多余依赖、Linux .TapPackage.lock 文件未删除、vscode 输出路径处理、RfConnection 无校准数据异常）及其他改进（SDK 32 位 dotnet 错误提示、NuGet 增量构建加速）。",
+      "tags": ["release-notes", "changelog", "thread-safety", "visa", "cross-platform"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.27.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.27.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.27.md",
+      "summary": "OpenTAP 9.27.0 版本的发布说明，涵盖多项新增功能（多选转换为 Sequence、TestStepList API 索引设置事件、CableLoss 插值二分搜索优化、Test Plan Reference 支持 Mixins、ResourceManager 在 TestPlan 外可用、IElementFactory 接口、Sweeps 迭代参数、TestPlan.Open 多次调用支持、TestPlanReference 转换 Sequence 按钮、构建时程序集版本设置）、大量错误修复及文档更新。",
+      "tags": ["release-notes", "changelog", "mixins", "sequence-conversion", "resource-manager"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.28.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.28.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.28.md",
+      "summary": "OpenTAP 9.28.0 版本的发布说明，涵盖多项新增功能（包自定义 EULA 支持、Nullable<T> 测试步骤支持、Mixin 使用 Display Name 而非类型名、多 HTTP 仓库 Image 解析性能优化、EmbedProperties 上 XmlIgnore 支持、Validation package.xml 元素）、多个错误修复（MemberValueAnnotation 缓存不一致、ParameterMemberData.Remove 问题、NuGet PlatformTarget、AbandonedMutex、gitversion 空引用、Mac 信号处理器挂起、兼容性检测修正）及其他改进。",
+      "tags": ["release-notes", "changelog", "nullable-types", "package-validation", "eula-support"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.3.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.10.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.10.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.11.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.11.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.12.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.12.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.13.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.13.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.14.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.14.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.15.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.15.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.16.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.16.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.17.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.17.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.18.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.18.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.19.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.19.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.20.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.20.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.21.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.21.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.22.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.22.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.23.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.23.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.24.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.24.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.25.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.25.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.26.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.26.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.27.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.27.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.28.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

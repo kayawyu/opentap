@@ -1,0 +1,39 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": "sdk/OpenTap.Sdk.New/Resources/CliActionTemplate.txt", "language": "txt", "sizeLines": 15, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/Directory.Build.props.txt", "language": "txt", "sizeLines": 14, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/DutTemplate.txt", "language": "txt", "sizeLines": 43, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/GitVersionTemplate.txt", "language": "txt", "sizeLines": 28, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/InstrumentTemplate.txt", "language": "txt", "sizeLines": 40, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/PackageXmlTemplate.txt", "language": "txt", "sizeLines": 16, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/ResultListenerTemplate.txt", "language": "txt", "sizeLines": 34, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/SettingsTemplate.txt", "language": "txt", "sizeLines": 19, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/TapPlanTemplate.txt", "language": "txt", "sizeLines": 5, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/TestStepTemplate.txt", "language": "txt", "sizeLines": 35, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/csprojTemplate.txt", "language": "txt", "sizeLines": 20, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/gitlabCiTemplate.txt", "language": "txt", "sizeLines": 25, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/launchTemplate.txt", "language": "txt", "sizeLines": 31, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/newProjectSlnTemplate.txt", "language": "txt", "sizeLines": 25, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/slnTemplate.txt", "language": "txt", "sizeLines": 25, "fileCategory": "config"},
+    {"path": "sdk/OpenTap.Sdk.New/Resources/tasksTemplate.txt", "language": "txt", "sizeLines": 20, "fileCategory": "config"}
+  ],
+  "batchImportData": {
+    "sdk/OpenTap.Sdk.New/Resources/CliActionTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/Directory.Build.props.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/DutTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/GitVersionTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/InstrumentTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/PackageXmlTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/ResultListenerTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/SettingsTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/TapPlanTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/TestStepTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/csprojTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/gitlabCiTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/launchTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/newProjectSlnTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/slnTemplate.txt": [],
+    "sdk/OpenTap.Sdk.New/Resources/tasksTemplate.txt": []
+  }
+}

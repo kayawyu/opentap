@@ -1,0 +1,12 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": "doc/Release Notes/ReleaseNote_OpenTAP9.4.md", "language": "markdown", "sizeLines": 161, "fileCategory": "docs"},
+    {"path": "doc/Release Notes/ReleaseNote_OpenTAP9.5.md", "language": "markdown", "sizeLines": 69, "fileCategory": "docs"},
+    {"path": "doc/Release Notes/ReleaseNote_OpenTAP9.6.md", "language": "markdown", "sizeLines": 65, "fileCategory": "docs"},
+    {"path": "doc/Release Notes/ReleaseNote_OpenTAP9.7.md", "language": "markdown", "sizeLines": 78, "fileCategory": "docs"},
+    {"path": "doc/Release Notes/ReleaseNote_OpenTAP9.8.md", "language": "markdown", "sizeLines": 145, "fileCategory": "docs"},
+    {"path": "doc/Release Notes/ReleaseNote_OpenTAP9.9.md", "language": "markdown", "sizeLines": 22, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

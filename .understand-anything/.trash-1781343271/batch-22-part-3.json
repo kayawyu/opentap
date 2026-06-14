@@ -1,0 +1,1408 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/SubPlanTest.cs",
+      "type": "file",
+      "name": "SubPlanTest.cs",
+      "filePath": "Engine.UnitTests/SubPlanTest.cs",
+      "summary": "子计划（SubPlan / TestPlanReference）执行的单元测试，覆盖子计划运行、日志重定向、用户输入重定向（串行/并行）、ComponentSetting 会话、子计划变更检测及嵌套引用子计划等场景。",
+      "tags": [
+        "sub-plan",
+        "test-plan-reference",
+        "log-redirect",
+        "user-input",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/SubPlanTest.cs:SubPlanTest",
+      "type": "class",
+      "name": "SubPlanTest",
+      "filePath": "Engine.UnitTests/SubPlanTest.cs",
+      "lineRange": [
+        15,
+        480
+      ],
+      "summary": "SubPlanTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SubPlanTest.cs:TestRunningSubPlan",
+      "type": "function",
+      "name": "TestRunningSubPlan",
+      "filePath": "Engine.UnitTests/SubPlanTest.cs",
+      "lineRange": [
+        71,
+        96
+      ],
+      "summary": "测试通过 TestPlanReference 运行子计划，验证子计划结果被正确代理到父计划。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedLogTest",
+      "type": "function",
+      "name": "RedirectedLogTest",
+      "filePath": "Engine.UnitTests/SubPlanTest.cs",
+      "lineRange": [
+        112,
+        171
+      ],
+      "summary": "测试子计划日志重定向功能，验证子步骤日志正确输出到父计划日志流。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedLogTest2",
+      "type": "function",
+      "name": "RedirectedLogTest2",
+      "filePath": "Engine.UnitTests/SubPlanTest.cs",
+      "lineRange": [
+        173,
+        210
+      ],
+      "summary": "日志重定向的扩展测试，验证 LogEvent 在重定向后的正确性。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedUserInputTest",
+      "type": "function",
+      "name": "RedirectedUserInputTest",
+      "filePath": "Engine.UnitTests/SubPlanTest.cs",
+      "lineRange": [
+        240,
+        286
+      ],
+      "summary": "测试子计划中用户输入请求的重定向，验证单线程下 UserInput 正确拦截。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedUserInputParallelTest",
+      "type": "function",
+      "name": "RedirectedUserInputParallelTest",
+      "filePath": "Engine.UnitTests/SubPlanTest.cs",
+      "lineRange": [
+        288,
+        356
+      ],
+      "summary": "测试多线程并行执行子计划时的用户输入重定向，验证并发安全。",
+      "tags": [
+        "test",
+        "concurrency"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SubPlanTest.cs:ComponentSettingSession",
+      "type": "function",
+      "name": "ComponentSettingSession",
+      "filePath": "Engine.UnitTests/SubPlanTest.cs",
+      "lineRange": [
+        359,
+        405
+      ],
+      "summary": "测试 ComponentSettings 在子计划中的会话隔离，验证设置不会跨子计划泄漏。",
+      "tags": [
+        "test",
+        "logging"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SubPlanTest.cs:TestPlanReferenceDetectChangesTest",
+      "type": "function",
+      "name": "TestPlanReferenceDetectChangesTest",
+      "filePath": "Engine.UnitTests/SubPlanTest.cs",
+      "lineRange": [
+        407,
+        434
+      ],
+      "summary": "测试 TestPlanReference 的变更检测功能，验证子计划修改后被正确标记为已变更。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SubPlanTest.cs:TestPlanReferenceSubPlanTest",
+      "type": "function",
+      "name": "TestPlanReferenceSubPlanTest",
+      "filePath": "Engine.UnitTests/SubPlanTest.cs",
+      "lineRange": [
+        436,
+        479
+      ],
+      "summary": "测试嵌套引用子计划（子计划引用子计划），验证参数传播和结果汇总。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/SweepStepTest.cs",
+      "type": "file",
+      "name": "SweepStepTest.cs",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "summary": "SweepStep（参数扫描步骤）的全面单元测试，覆盖资源引用、多值扫描、属性更新、序列化嵌套 SweepLoopRange、中断恢复、Repeat 循环、DecadeRange、SweepRaceBug 竞态、同名不同组、迭代参数、多层 Sweep 参数、Sweep 嵌套及禁用/死循环防护等场景。",
+      "tags": [
+        "sweep",
+        "parameter-scan",
+        "loop-range",
+        "nested-sweep",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "type": "class",
+      "name": "SweepStepTest",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        15,
+        828
+      ],
+      "summary": "SweepStepTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:TestResourceReference",
+      "type": "function",
+      "name": "TestResourceReference",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        66,
+        91
+      ],
+      "summary": "测试 SweepStep 中的 Resource 引用，验证资源在扫描中正确 Open/Close。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:RunSweep",
+      "type": "function",
+      "name": "RunSweep",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        107,
+        156
+      ],
+      "summary": "综合测试 SweepStep 扫描功能，根据 acrossRuns/allEnabled 参数控制扫描行为并验证结果。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:SweepPropertiesUpdateTest",
+      "type": "function",
+      "name": "SweepPropertiesUpdateTest",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        158,
+        204
+      ],
+      "summary": "测试 Sweep 过程中子步骤属性动态更新，验证属性正确传播到每次迭代。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:SerializeNestedSweepLoopRange",
+      "type": "function",
+      "name": "SerializeNestedSweepLoopRange",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        206,
+        234
+      ],
+      "summary": "测试嵌套 SweepLoopRange 的序列化与反序列化。",
+      "tags": [
+        "test",
+        "sweep",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:RunSweepWithInterruptions",
+      "type": "function",
+      "name": "RunSweepWithInterruptions",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        237,
+        294
+      ],
+      "summary": "测试中断恢复场景下的 SweepLoop 行为，模拟中途中断后的正确恢复（loopRange 控制）。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:RunRepeat",
+      "type": "function",
+      "name": "RunRepeat",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        296,
+        332
+      ],
+      "summary": "测试 Repeat 步骤的重复执行行为，验证迭代次数正确。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:TestDecadeRange",
+      "type": "function",
+      "name": "TestDecadeRange",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        334,
+        345
+      ],
+      "summary": "测试 DecadeRange 的数值生成，验证对数级数值序列的正确性。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:SweepRaceBug",
+      "type": "function",
+      "name": "SweepRaceBug",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        357,
+        412
+      ],
+      "summary": "回归测试：验证 Sweep 参数发布时的竞态条件修复，确保所有结果正确记录。",
+      "tags": [
+        "test",
+        "sweep",
+        "concurrency",
+        "regression-test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:SweepSameNameDifferentGroup",
+      "type": "function",
+      "name": "SweepSameNameDifferentGroup",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        459,
+        477
+      ],
+      "summary": "测试不同组中同名 Sweep 参数的隔离，验证互不干扰。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:SweepParametersWithIterations",
+      "type": "function",
+      "name": "SweepParametersWithIterations",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        479,
+        510
+      ],
+      "summary": "测试带迭代次数的 SweepParameters，验证迭代循环参数化。",
+      "tags": [
+        "test",
+        "sweep",
+        "parameterization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:MultilevelSweepParametersWithIterations",
+      "type": "function",
+      "name": "MultilevelSweepParametersWithIterations",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        512,
+        574
+      ],
+      "summary": "测试多层 SweepParameters 与迭代组合，验证嵌套参数展开正确。",
+      "tags": [
+        "test",
+        "sweep",
+        "parameterization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:SweepParameterRangeWithIterations",
+      "type": "function",
+      "name": "SweepParameterRangeWithIterations",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        584,
+        605
+      ],
+      "summary": "测试 SweepParameterRange 与迭代次数组合时的行为。",
+      "tags": [
+        "test",
+        "sweep",
+        "parameterization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:SweepOfSweepTest",
+      "type": "function",
+      "name": "SweepOfSweepTest",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        607,
+        693
+      ],
+      "summary": "测试 Sweep 嵌套（SweepStep 包含另一个 SweepStep），验证多层扫描的正确性。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:SweepSweepOfSweepTest",
+      "type": "function",
+      "name": "SweepSweepOfSweepTest",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        695,
+        759
+      ],
+      "summary": "测试三层嵌套 Sweep，验证更深层次的扫描组合正确性。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:SweepOfSweepEnabledTest",
+      "type": "function",
+      "name": "SweepOfSweepEnabledTest",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        761,
+        807
+      ],
+      "summary": "测试嵌套 Sweep 中启用/禁用的行为，验证 SweepChild 的 Enabled 状态控制。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/SweepStepTest.cs:SweepDisabledInfiniteLoop",
+      "type": "function",
+      "name": "SweepDisabledInfiniteLoop",
+      "filePath": "Engine.UnitTests/SweepStepTest.cs",
+      "lineRange": [
+        810,
+        827
+      ],
+      "summary": "回归测试：验证禁用的 Sweep 参数不会导致死循环。",
+      "tags": [
+        "test",
+        "sweep"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TapProcessContainer.cs",
+      "type": "file",
+      "name": "TapProcessContainer.cs",
+      "filePath": "Engine.UnitTests/TapProcessContainer.cs",
+      "summary": "TapProcessContainer 工具类，用于在单元测试中启动和管理外部 tap.exe 子进程，提供 StartFromArgs、WaitForEnd、WriteLine、Kill 等方法用于进程生命周期控制。",
+      "tags": [
+        "process-management",
+        "测试辅助",
+        "tap-cli",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/TapProcessContainer.cs:TapProcessContainer",
+      "type": "class",
+      "name": "TapProcessContainer",
+      "filePath": "Engine.UnitTests/TapProcessContainer.cs",
+      "lineRange": [
+        13,
+        107
+      ],
+      "summary": "管理外部 tap.exe 子进程的工具类，用于从单元测试启动、监控和终止 OpenTAP CLI 进程。",
+      "tags": [
+        "process-management",
+        "测试辅助",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapProcessContainer.cs:go",
+      "type": "function",
+      "name": "go",
+      "filePath": "Engine.UnitTests/TapProcessContainer.cs",
+      "lineRange": [
+        18,
+        45
+      ],
+      "summary": "NUnit 测试方法。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapProcessContainer.cs:StartFromArgs",
+      "type": "function",
+      "name": "StartFromArgs",
+      "filePath": "Engine.UnitTests/TapProcessContainer.cs",
+      "lineRange": [
+        47,
+        47
+      ],
+      "summary": "以命令行参数和超时时间启动 tap.exe 子进程，同步等待版本号输出后返回；注册异步输出监听和超时定时器。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapProcessContainer.cs:StartFromArgs:49",
+      "type": "function",
+      "name": "StartFromArgs",
+      "filePath": "Engine.UnitTests/TapProcessContainer.cs",
+      "lineRange": [
+        49,
+        83
+      ],
+      "summary": "NUnit 测试方法。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapProcessContainer.cs:Kill",
+      "type": "function",
+      "name": "Kill",
+      "filePath": "Engine.UnitTests/TapProcessContainer.cs",
+      "lineRange": [
+        96,
+        106
+      ],
+      "summary": "强制终止 tap.exe 子进程，带超时的 Kill 等待与 KillEntireProcessTree 后备方案。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TapTestInit.cs",
+      "type": "file",
+      "name": "TapTestInit.cs",
+      "filePath": "Engine.UnitTests/TapTestInit.cs",
+      "summary": "NUnit SetUpFixture 程序集级初始化与清理，设置 InvariantCulture、加载工作目录、启动插件搜索并初始化 SessionLog，确保整个测试程序集的一致运行环境。",
+      "tags": [
+        "setup",
+        "assembly-init",
+        "test-infrastructure",
+        "initialization",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TapTestInit.cs:TapTestInit",
+      "type": "class",
+      "name": "TapTestInit",
+      "filePath": "Engine.UnitTests/TapTestInit.cs",
+      "lineRange": [
+        11,
+        45
+      ],
+      "summary": "NUnit [SetUpFixture] 程序集级初始化类，配置 InvariantCulture 文化、加载插件、初始化 SessionLog。",
+      "tags": [
+        "setup-fixture",
+        "assembly-init",
+        "test-infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapTestInit.cs:AssemblyInit",
+      "type": "function",
+      "name": "AssemblyInit",
+      "filePath": "Engine.UnitTests/TapTestInit.cs",
+      "lineRange": [
+        14,
+        29
+      ],
+      "summary": "NUnit [OneTimeSetUp]：设置 InvariantCulture、加载工作目录和插件、禁用空闲线程、初始化 SessionLog。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapTestInit.cs:AssemblyCleanup",
+      "type": "function",
+      "name": "AssemblyCleanup",
+      "filePath": "Engine.UnitTests/TapTestInit.cs",
+      "lineRange": [
+        31,
+        44
+      ],
+      "summary": "NUnit [OneTimeTearDown]：关闭 SessionLog 并清理线程资源。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/TapThreadTest.cs",
+      "type": "file",
+      "name": "TapThreadTest.cs",
+      "filePath": "Engine.UnitTests/TapThreadTest.cs",
+      "summary": "TapThread 和 ThreadField 的单元测试，验证 ThreadField 的 hierarchical 和 flat 模式、HierarchyCompleted 事件、AwaitedThread 异常传播及多线程 Abort 处理。",
+      "tags": [
+        "tap-thread",
+        "thread-field",
+        "hierarchy",
+        "threading",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/TapThreadTest.cs:TapThreadTest",
+      "type": "class",
+      "name": "TapThreadTest",
+      "filePath": "Engine.UnitTests/TapThreadTest.cs",
+      "lineRange": [
+        9,
+        222
+      ],
+      "summary": "TapThreadTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapThreadTest.cs:TestThreadField",
+      "type": "function",
+      "name": "TestThreadField",
+      "filePath": "Engine.UnitTests/TapThreadTest.cs",
+      "lineRange": [
+        16,
+        68
+      ],
+      "summary": "测试 ThreadField 在子线程中的值隔离（Hierarchical 模式），跨线程修改后验证值不互相干扰。",
+      "tags": [
+        "test",
+        "unit-test",
+        "concurrency"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapThreadTest.cs:TestHierarchyCompleted1",
+      "type": "function",
+      "name": "TestHierarchyCompleted1",
+      "filePath": "Engine.UnitTests/TapThreadTest.cs",
+      "lineRange": [
+        73,
+        103
+      ],
+      "summary": "测试 TapThread HierarchyCompleted 事件，验证线程层次完成时的回调。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapThreadTest.cs:TestHierarchyCompleted2",
+      "type": "function",
+      "name": "TestHierarchyCompleted2",
+      "filePath": "Engine.UnitTests/TapThreadTest.cs",
+      "lineRange": [
+        108,
+        137
+      ],
+      "summary": "扩展测试 HierarchyCompleted 事件在 Async/Await 场景下的行为。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapThreadTest.cs:TestAwaitedThreadThrows",
+      "type": "function",
+      "name": "TestAwaitedThreadThrows",
+      "filePath": "Engine.UnitTests/TapThreadTest.cs",
+      "lineRange": [
+        139,
+        167
+      ],
+      "summary": "参数化测试：验证 TapThread 在异常/不异常场景下的行为（awaited thread with exceptions）。",
+      "tags": [
+        "test",
+        "unit-test",
+        "concurrency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TapThreadTest.cs:MultipleThreadAbort",
+      "type": "function",
+      "name": "MultipleThreadAbort",
+      "filePath": "Engine.UnitTests/TapThreadTest.cs",
+      "lineRange": [
+        172,
+        221
+      ],
+      "summary": "测试多线程 Abort 场景，验证批量线程取消的正确性和顺序。",
+      "tags": [
+        "test",
+        "concurrency",
+        "break"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/TeeStreamTest.cs",
+      "type": "file",
+      "name": "TeeStreamTest.cs",
+      "filePath": "Engine.UnitTests/TeeStreamTest.cs",
+      "summary": "TeeStream（分流数据流）的单元测试，验证将一个源流复制到多个客户端流时的读取/写入正确性，以及对哈希一致性的校验。",
+      "tags": [
+        "tee-stream",
+        "stream",
+        "io",
+        "test",
+        "unit-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TeeStreamTest.cs:TeeStreamTest",
+      "type": "class",
+      "name": "TeeStreamTest",
+      "filePath": "Engine.UnitTests/TeeStreamTest.cs",
+      "lineRange": [
+        8,
+        84
+      ],
+      "summary": "TeeStreamTest 类。",
+      "tags": [
+        "test-fixture",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TeeStreamTest.cs:TestReadWriteTeeStream",
+      "type": "function",
+      "name": "TestReadWriteTeeStream",
+      "filePath": "Engine.UnitTests/TeeStreamTest.cs",
+      "lineRange": [
+        11,
+        49
+      ],
+      "summary": "参数化测试：创建 TeeStream 并生成多个客户端流，验证各客户端的读写哈希一致性。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TeeStreamTest.cs:TestReadWriteTeeStream1",
+      "type": "function",
+      "name": "TestReadWriteTeeStream1",
+      "filePath": "Engine.UnitTests/TeeStreamTest.cs",
+      "lineRange": [
+        51,
+        82
+      ],
+      "summary": "参数化测试：异步读取 TeeStream 客户端流，验证并发读取的数据完整性。",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TestCliActions/TestInputs.cs",
+      "type": "file",
+      "name": "TestInputs.cs",
+      "filePath": "Engine.UnitTests/TestCliActions/TestInputs.cs",
+      "summary": "供 CLI 交互测试使用的 ICliAction 实现，提供安全密码提示和普通文本提示两种用户输入模式，用于验证 CLI 用户输入流程。",
+      "tags": [
+        "cli",
+        "icliaction",
+        "user-input",
+        "password-prompt",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/TestCliActions/TestInputs.cs:TestInputs",
+      "type": "class",
+      "name": "TestInputs",
+      "filePath": "Engine.UnitTests/TestCliActions/TestInputs.cs",
+      "lineRange": [
+        7,
+        50
+      ],
+      "summary": "测试 CLI 用户输入的 ICliAction 实现，提供密码提示和普通文本提示两种输入模式。",
+      "tags": [
+        "cli",
+        "user-input",
+        "password-prompt",
+        "test-helper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TestCliActions/TestInputs.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Engine.UnitTests/TestCliActions/TestInputs.cs",
+      "lineRange": [
+        30,
+        49
+      ],
+      "summary": "ICliAction 入口：提供密码提示（SecureString）和普通文本提示两种用户输入交互模式，用于验证 CLI 用户输入流程。",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/SubPlanTest.cs",
+      "target": "class:Engine.UnitTests/SubPlanTest.cs:SubPlanTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/SubPlanTest.cs:SubPlanTest",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:TestRunningSubPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SubPlanTest.cs",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:TestRunningSubPlan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SubPlanTest.cs:SubPlanTest",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedLogTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SubPlanTest.cs",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedLogTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SubPlanTest.cs:SubPlanTest",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedLogTest2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SubPlanTest.cs",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedLogTest2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SubPlanTest.cs:SubPlanTest",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedUserInputTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SubPlanTest.cs",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedUserInputTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SubPlanTest.cs:SubPlanTest",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedUserInputParallelTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SubPlanTest.cs",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:RedirectedUserInputParallelTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SubPlanTest.cs:SubPlanTest",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:ComponentSettingSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SubPlanTest.cs",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:ComponentSettingSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SubPlanTest.cs:SubPlanTest",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:TestPlanReferenceDetectChangesTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SubPlanTest.cs",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:TestPlanReferenceDetectChangesTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SubPlanTest.cs:SubPlanTest",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:TestPlanReferenceSubPlanTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SubPlanTest.cs",
+      "target": "function:Engine.UnitTests/SubPlanTest.cs:TestPlanReferenceSubPlanTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:TestResourceReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:TestResourceReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:RunSweep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:RunSweep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepPropertiesUpdateTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepPropertiesUpdateTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SerializeNestedSweepLoopRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SerializeNestedSweepLoopRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:RunSweepWithInterruptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:RunSweepWithInterruptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:RunRepeat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:RunRepeat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:TestDecadeRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:TestDecadeRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepRaceBug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepRaceBug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepSameNameDifferentGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepSameNameDifferentGroup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepParametersWithIterations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepParametersWithIterations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:MultilevelSweepParametersWithIterations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:MultilevelSweepParametersWithIterations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepParameterRangeWithIterations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepParameterRangeWithIterations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepOfSweepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepOfSweepTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepSweepOfSweepTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepSweepOfSweepTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepOfSweepEnabledTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepOfSweepEnabledTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/SweepStepTest.cs:SweepStepTest",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepDisabledInfiniteLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/SweepStepTest.cs",
+      "target": "function:Engine.UnitTests/SweepStepTest.cs:SweepDisabledInfiniteLoop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/TapProcessContainer.cs",
+      "target": "class:Engine.UnitTests/TapProcessContainer.cs:TapProcessContainer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TapProcessContainer.cs:TapProcessContainer",
+      "target": "function:Engine.UnitTests/TapProcessContainer.cs:go",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TapProcessContainer.cs:TapProcessContainer",
+      "target": "function:Engine.UnitTests/TapProcessContainer.cs:StartFromArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TapProcessContainer.cs",
+      "target": "function:Engine.UnitTests/TapProcessContainer.cs:StartFromArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TapProcessContainer.cs:TapProcessContainer",
+      "target": "function:Engine.UnitTests/TapProcessContainer.cs:StartFromArgs:49",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TapProcessContainer.cs",
+      "target": "function:Engine.UnitTests/TapProcessContainer.cs:StartFromArgs:49",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TapProcessContainer.cs:TapProcessContainer",
+      "target": "function:Engine.UnitTests/TapProcessContainer.cs:Kill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TapProcessContainer.cs",
+      "target": "function:Engine.UnitTests/TapProcessContainer.cs:Kill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/TapTestInit.cs",
+      "target": "class:Engine.UnitTests/TapTestInit.cs:TapTestInit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TapTestInit.cs:TapTestInit",
+      "target": "function:Engine.UnitTests/TapTestInit.cs:AssemblyInit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TapTestInit.cs",
+      "target": "function:Engine.UnitTests/TapTestInit.cs:AssemblyInit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TapTestInit.cs:TapTestInit",
+      "target": "function:Engine.UnitTests/TapTestInit.cs:AssemblyCleanup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TapTestInit.cs",
+      "target": "function:Engine.UnitTests/TapTestInit.cs:AssemblyCleanup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/TapThreadTest.cs",
+      "target": "class:Engine.UnitTests/TapThreadTest.cs:TapThreadTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TapThreadTest.cs:TapThreadTest",
+      "target": "function:Engine.UnitTests/TapThreadTest.cs:TestThreadField",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TapThreadTest.cs",
+      "target": "function:Engine.UnitTests/TapThreadTest.cs:TestThreadField",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TapThreadTest.cs:TapThreadTest",
+      "target": "function:Engine.UnitTests/TapThreadTest.cs:TestHierarchyCompleted1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TapThreadTest.cs",
+      "target": "function:Engine.UnitTests/TapThreadTest.cs:TestHierarchyCompleted1",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TapThreadTest.cs:TapThreadTest",
+      "target": "function:Engine.UnitTests/TapThreadTest.cs:TestHierarchyCompleted2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TapThreadTest.cs",
+      "target": "function:Engine.UnitTests/TapThreadTest.cs:TestHierarchyCompleted2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TapThreadTest.cs:TapThreadTest",
+      "target": "function:Engine.UnitTests/TapThreadTest.cs:TestAwaitedThreadThrows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TapThreadTest.cs",
+      "target": "function:Engine.UnitTests/TapThreadTest.cs:TestAwaitedThreadThrows",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TapThreadTest.cs:TapThreadTest",
+      "target": "function:Engine.UnitTests/TapThreadTest.cs:MultipleThreadAbort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TapThreadTest.cs",
+      "target": "function:Engine.UnitTests/TapThreadTest.cs:MultipleThreadAbort",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/TeeStreamTest.cs",
+      "target": "class:Engine.UnitTests/TeeStreamTest.cs:TeeStreamTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TeeStreamTest.cs:TeeStreamTest",
+      "target": "function:Engine.UnitTests/TeeStreamTest.cs:TestReadWriteTeeStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TeeStreamTest.cs",
+      "target": "function:Engine.UnitTests/TeeStreamTest.cs:TestReadWriteTeeStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine.UnitTests/TeeStreamTest.cs:TeeStreamTest",
+      "target": "function:Engine.UnitTests/TeeStreamTest.cs:TestReadWriteTeeStream1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TeeStreamTest.cs",
+      "target": "function:Engine.UnitTests/TeeStreamTest.cs:TestReadWriteTeeStream1",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/TestCliActions/TestInputs.cs",
+      "target": "class:Engine.UnitTests/TestCliActions/TestInputs.cs:TestInputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:Engine.UnitTests/TestCliActions/TestInputs.cs:TestInputs",
+      "target": "function:Engine.UnitTests/TestCliActions/TestInputs.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine.UnitTests/TestCliActions/TestInputs.cs",
+      "target": "function:Engine.UnitTests/TestCliActions/TestInputs.cs:Execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

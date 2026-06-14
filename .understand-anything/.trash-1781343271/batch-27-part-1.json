@@ -1,0 +1,913 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/ExceptionCustomStackTrace.cs",
+      "type": "file",
+      "name": "ExceptionCustomStackTrace.cs",
+      "filePath": "Engine/ExceptionCustomStackTrace.cs",
+      "summary": "自定义异常类，用于在重新抛出异常时添加额外信息，但避免生成大量额外的堆栈行。",
+      "tags": [
+        "exception",
+        "utility",
+        "stack-trace"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ExceptionCustomStackTrace.cs:ExceptionCustomStackTrace",
+      "type": "class",
+      "name": "ExceptionCustomStackTrace",
+      "filePath": "Engine/ExceptionCustomStackTrace.cs",
+      "summary": "继承自Exception的自定义异常类，允许传入自定义StackTrace字符串以覆盖默认的堆栈跟踪行为。",
+      "tags": [
+        "exception",
+        "override"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        8,
+        17
+      ]
+    },
+    {
+      "id": "file:Engine/ExternalParameterAttribute.cs",
+      "type": "file",
+      "name": "ExternalParameterAttribute.cs",
+      "filePath": "Engine/ExternalParameterAttribute.cs",
+      "summary": "定义ExternalParameterAttribute特性，用于标记TestStep属性在添加到Test Plan编辑器时自动成为外部参数。",
+      "tags": [
+        "attribute",
+        "test-plan",
+        "external-parameter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ExternalParameterAttribute.cs:ExternalParameterAttribute",
+      "type": "class",
+      "name": "ExternalParameterAttribute",
+      "filePath": "Engine/ExternalParameterAttribute.cs",
+      "summary": "继承自Attribute的特性类，标记TestStep属性为默认的外部参数，包含可选的Name参数。",
+      "tags": [
+        "attribute",
+        "test-plan",
+        "external-parameter"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        8,
+        24
+      ]
+    },
+    {
+      "id": "file:Engine/ExternalParameters.cs",
+      "type": "file",
+      "name": "ExternalParameters.cs",
+      "filePath": "Engine/ExternalParameters.cs",
+      "summary": "定义ExternalParameter和ExternalParameters两个核心类，用于管理TestPlan的外部参数绑定、添加和移除。",
+      "tags": [
+        "test-plan",
+        "external-parameter",
+        "parameter-binding",
+        "core"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ExternalParameters.cs:ExternalParameter",
+      "type": "class",
+      "name": "ExternalParameter",
+      "filePath": "Engine/ExternalParameters.cs",
+      "summary": "表示一个外部测试计划参数，封装参数名称、属性映射和值的获取/设置，支持按步骤绑定属性和动态解绑。",
+      "tags": [
+        "test-plan",
+        "external-parameter",
+        "parameter-binding"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        12,
+        96
+      ]
+    },
+    {
+      "id": "class:Engine/ExternalParameters.cs:ExternalParameters",
+      "type": "class",
+      "name": "ExternalParameters",
+      "filePath": "Engine/ExternalParameters.cs",
+      "summary": "管理TestPlan中所有外部参数的集合，提供参数添加、移除、清理、查找及获取功能。",
+      "tags": [
+        "test-plan",
+        "external-parameter",
+        "collection",
+        "parameter-management"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        99,
+        204
+      ]
+    },
+    {
+      "id": "function:Engine/ExternalParameters.cs:Add",
+      "type": "function",
+      "name": "Add",
+      "filePath": "Engine/ExternalParameters.cs",
+      "summary": "ExternalParameters中的Add方法，将TestStep属性绑定到外部参数，支持参数合并与类型兼容性检查。",
+      "tags": [
+        "external-parameter",
+        "binding",
+        "parameter-management"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        126,
+        150
+      ]
+    },
+    {
+      "id": "function:Engine/ExternalParameters.cs:Remove",
+      "type": "function",
+      "name": "Remove",
+      "filePath": "Engine/ExternalParameters.cs",
+      "summary": "ExternalParameters中的Remove方法，通过解参数化(unparameterize)将TestStep属性从外部参数中移除。",
+      "tags": [
+        "external-parameter",
+        "unbinding"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        156,
+        167
+      ]
+    },
+    {
+      "id": "function:Engine/ExternalParameters.cs:Find",
+      "type": "function",
+      "name": "Find",
+      "filePath": "Engine/ExternalParameters.cs",
+      "summary": "ExternalParameters中的Find方法，通过TestStep和属性信息查找已存在的外部参数。",
+      "tags": [
+        "external-parameter",
+        "lookup"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        193,
+        203
+      ]
+    },
+    {
+      "id": "file:Engine/FactoryAttribute.cs",
+      "type": "file",
+      "name": "FactoryAttribute.cs",
+      "filePath": "Engine/FactoryAttribute.cs",
+      "summary": "定义IFactoryAttribute接口、FactoryAttribute和ElementFactoryAttribute特性，用于指定工厂方法以创建属性值。",
+      "tags": [
+        "attribute",
+        "factory",
+        "dependency-injection",
+        "reflection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/FactoryAttribute.cs:FactoryAttribute",
+      "type": "class",
+      "name": "FactoryAttribute",
+      "filePath": "Engine/FactoryAttribute.cs",
+      "summary": "继承自Attribute并实现IFactoryAttribute的特性类，通过反射调用指定的工厂方法来创建对象值，支持递归查找参数源。",
+      "tags": [
+        "attribute",
+        "factory",
+        "reflection",
+        "dependency-injection"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        14,
+        65
+      ]
+    },
+    {
+      "id": "class:Engine/FactoryAttribute.cs:ElementFactoryAttribute",
+      "type": "class",
+      "name": "ElementFactoryAttribute",
+      "filePath": "Engine/FactoryAttribute.cs",
+      "summary": "继承自FactoryAttribute的特性类，用于为列表属性中的元素指定工厂方法以创建值。",
+      "tags": [
+        "attribute",
+        "factory",
+        "list-element"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        68,
+        78
+      ]
+    },
+    {
+      "id": "function:Engine/FactoryAttribute.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Engine/FactoryAttribute.cs",
+      "summary": "静态工厂方法，通过反射调用ownerObj上指定的factoryMethod来创建对象实例。",
+      "tags": [
+        "factory",
+        "reflection",
+        "object-creation"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        27,
+        37
+      ]
+    },
+    {
+      "id": "function:Engine/FactoryAttribute.cs:TryCreateFromMember",
+      "type": "function",
+      "name": "TryCreateFromMember",
+      "filePath": "Engine/FactoryAttribute.cs",
+      "summary": "递归搜索IParameterMemberData的参数源，尝试通过工厂方法从具体成员的Source对象创建值。",
+      "tags": [
+        "factory",
+        "recursive",
+        "reflection"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        40,
+        64
+      ]
+    },
+    {
+      "id": "file:Engine/FileDependencyAttribute.cs",
+      "type": "file",
+      "name": "FileDependencyAttribute.cs",
+      "filePath": "Engine/FileDependencyAttribute.cs",
+      "summary": "定义FileDependencyAttribute标记特性，指示属性指定了一个文件，该文件在序列化时将作为依赖项包含。",
+      "tags": [
+        "attribute",
+        "file-dependency",
+        "serialization",
+        "marker"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/FilePathAttribute.cs",
+      "type": "file",
+      "name": "FilePathAttribute.cs",
+      "filePath": "Engine/FilePathAttribute.cs",
+      "summary": "定义FilePathAttribute特性，用于标识字符串为文件路径，支持文件扩展名过滤验证和行为选择。",
+      "tags": [
+        "attribute",
+        "file-path",
+        "validation",
+        "file-filter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/FilePathAttribute.cs:FilePathAttribute",
+      "type": "class",
+      "name": "FilePathAttribute",
+      "filePath": "Engine/FilePathAttribute.cs",
+      "summary": "继承自FileDependencyAttribute并实现IAnnotation的特性类，提供文件路径标识、扩展名过滤验证和打开/保存行为控制。",
+      "tags": [
+        "attribute",
+        "file-path",
+        "validation",
+        "file-filter"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        14,
+        116
+      ]
+    },
+    {
+      "id": "function:Engine/FilePathAttribute.cs:validateFileFilter",
+      "type": "function",
+      "name": "validateFileFilter",
+      "filePath": "Engine/FilePathAttribute.cs",
+      "summary": "验证文件过滤器字符串格式的合法性，检查无效字符、格式和通配符规范，抛出InvalidFilterSpecification异常。",
+      "tags": [
+        "validation",
+        "file-filter",
+        "parsing"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        53,
+        89
+      ]
+    },
+    {
+      "id": "file:Engine/FileTraceListener.cs",
+      "type": "file",
+      "name": "FileTraceListener.cs",
+      "filePath": "Engine/FileTraceListener.cs",
+      "summary": "实现TextWriterTraceListener的文件追踪监听器，将追踪/日志数据写入文件，支持文件大小限制和运行时切换日志文件。",
+      "tags": [
+        "tracing",
+        "logging",
+        "file-io",
+        "diagnostics"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/FileTraceListener.cs:FileTraceListener",
+      "type": "class",
+      "name": "FileTraceListener",
+      "filePath": "Engine/FileTraceListener.cs",
+      "summary": "sealed类，继承自TextWriterTraceListener，提供文件日志写入、动态切换日志文件、文件大小限制检测和高性能事件格式化输出。",
+      "tags": [
+        "tracing",
+        "logging",
+        "file-io",
+        "event-formatting"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        18,
+        193
+      ]
+    },
+    {
+      "id": "function:Engine/FileTraceListener.cs:ChangeFileName",
+      "type": "function",
+      "name": "ChangeFileName",
+      "filePath": "Engine/FileTraceListener.cs",
+      "summary": "切换日志文件目标路径，支持排他写锁和内容迁移模式，处理目录创建和旧文件内容保留。",
+      "tags": [
+        "file-io",
+        "logging",
+        "file-switching"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        61,
+        97
+      ]
+    },
+    {
+      "id": "function:Engine/FileTraceListener.cs:TraceEvents",
+      "type": "function",
+      "name": "TraceEvents",
+      "filePath": "Engine/FileTraceListener.cs",
+      "summary": "核心追踪方法，高性能批量格式化日志事件为文本并写入文件，支持相对/绝对时间戳、日志级别对齐和文件大小限制检测。",
+      "tags": [
+        "tracing",
+        "event-formatting",
+        "high-performance",
+        "logging"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        102,
+        192
+      ]
+    },
+    {
+      "id": "config:Engine/FodyWeavers.xml",
+      "type": "config",
+      "name": "FodyWeavers.xml",
+      "filePath": "Engine/FodyWeavers.xml",
+      "summary": "Fody编织器配置文件，启用ModuleInit编织器以支持模块初始化功能。",
+      "tags": [
+        "configuration",
+        "fody",
+        "weaving",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/HelpLinkAttribute.cs",
+      "type": "file",
+      "name": "HelpLinkAttribute.cs",
+      "filePath": "Engine/HelpLinkAttribute.cs",
+      "summary": "定义HelpLinkAttribute特性，为对象指定帮助链接，支持向上搜索视觉树以查找最近的HelpLink。",
+      "tags": [
+        "attribute",
+        "help-link",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/HelpLinkAttribute.cs:HelpLinkAttribute",
+      "type": "class",
+      "name": "HelpLinkAttribute",
+      "filePath": "Engine/HelpLinkAttribute.cs",
+      "summary": "继承自Attribute并实现IAnnotation的特性类，可为对象设置帮助链接，支持无参构造函数用于继承父作用域的帮助信息。",
+      "tags": [
+        "attribute",
+        "help-link",
+        "annotation"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        12,
+        35
+      ]
+    },
+    {
+      "id": "file:Engine/HttpUtils.cs",
+      "type": "file",
+      "name": "HttpUtils.cs",
+      "filePath": "Engine/HttpUtils.cs",
+      "summary": "HTTP工具类，提供静态方法用于判断HTTP状态码是否为临时性错误（如429和5xx）。",
+      "tags": [
+        "utility",
+        "http",
+        "status-codes"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/HttpUtils.cs:HttpUtils",
+      "type": "class",
+      "name": "HttpUtils",
+      "filePath": "Engine/HttpUtils.cs",
+      "summary": "包含静态方法TransientStatusCode的HTTP工具类，判断状态码是否表示可重试的临时错误。",
+      "tags": [
+        "utility",
+        "http",
+        "status-codes"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        4,
+        15
+      ]
+    },
+    {
+      "id": "file:Engine/HybridStream.cs",
+      "type": "file",
+      "name": "HybridStream.cs",
+      "filePath": "Engine/HybridStream.cs",
+      "summary": "实现HybridStream混合流类，在内存中缓冲数据，超过阈值后自动切换到文件存储，包含只读视图MemViewStream。",
+      "tags": [
+        "stream",
+        "hybrid",
+        "memory",
+        "file-io",
+        "performance"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/HybridStream.cs:HybridStream",
+      "type": "class",
+      "name": "HybridStream",
+      "filePath": "Engine/HybridStream.cs",
+      "summary": "继承自Stream的内部类，开始时写入MemoryStream，超过MemoryThreshold阈值后自动转换为FileStream，支持线程安全操作和只读视图。",
+      "tags": [
+        "stream",
+        "hybrid",
+        "memory-file",
+        "thread-safe"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        10,
+        201
+      ]
+    },
+    {
+      "id": "class:Engine/HybridStream.cs:MemViewStream",
+      "type": "class",
+      "name": "MemViewStream",
+      "filePath": "Engine/HybridStream.cs",
+      "summary": "HybridStream的内部私有嵌套类，提供对内存缓冲区的只读流视图，支持Seek和Read操作。",
+      "tags": [
+        "stream",
+        "read-only",
+        "memory-view",
+        "nested-class"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        12,
+        97
+      ]
+    },
+    {
+      "id": "function:Engine/HybridStream.cs:ConvertToFile",
+      "type": "function",
+      "name": "ConvertToFile",
+      "filePath": "Engine/HybridStream.cs",
+      "summary": "将内存中的MemoryStream数据写入FileStream并切换底层流，使用DeleteOnClose选项以便自动清理。",
+      "tags": [
+        "stream",
+        "memory-to-file",
+        "conversion"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        167,
+        176
+      ]
+    },
+    {
+      "id": "function:Engine/HybridStream.cs:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "Engine/HybridStream.cs",
+      "summary": "安全关闭底层流，使用锁保护以确保线程安全，随后调用基类Close方法。",
+      "tags": [
+        "stream",
+        "cleanup",
+        "thread-safe"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        188,
+        200
+      ]
+    },
+    {
+      "id": "file:Engine/IArtifactListener.cs",
+      "type": "file",
+      "name": "IArtifactListener.cs",
+      "filePath": "Engine/IArtifactListener.cs",
+      "summary": "定义IArtifactListener接口，用于监听测试计划生成的工件（artifact），提供OnArtifactPublished回调。",
+      "tags": [
+        "interface",
+        "artifact",
+        "listener",
+        "test-results"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IArtifactListener.cs:IArtifactListener",
+      "type": "class",
+      "name": "IArtifactListener",
+      "filePath": "Engine/IArtifactListener.cs",
+      "summary": "工件监听器接口，当测试计划发布工件（如CSV结果文件）时触发OnArtifactPublished方法，接收artifactStream。",
+      "tags": [
+        "interface",
+        "artifact",
+        "listener",
+        "callback"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        5,
+        13
+      ]
+    },
+    {
+      "id": "file:Engine/IDeviceDiscovery.cs",
+      "type": "file",
+      "name": "IDeviceDiscovery.cs",
+      "filePath": "Engine/IDeviceDiscovery.cs",
+      "summary": "定义设备发现相关接口和特性：DeviceAddressAttribute基类、IDeviceDiscovery接口和VisaAddressAttribute。",
+      "tags": [
+        "interface",
+        "device-discovery",
+        "visa",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IDeviceDiscovery.cs:IDeviceDiscovery",
+      "type": "class",
+      "name": "IDeviceDiscovery",
+      "filePath": "Engine/IDeviceDiscovery.cs",
+      "summary": "设备发现插件接口，继承自ITapPlugin，提供CanDetect和DetectDeviceAddresses方法用于自定义设备地址发现。",
+      "tags": [
+        "interface",
+        "device-discovery",
+        "plugin"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        17,
+        29
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/ExceptionCustomStackTrace.cs",
+      "target": "class:Engine/ExceptionCustomStackTrace.cs:ExceptionCustomStackTrace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ExceptionCustomStackTrace.cs",
+      "target": "class:Engine/ExceptionCustomStackTrace.cs:ExceptionCustomStackTrace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ExternalParameterAttribute.cs",
+      "target": "class:Engine/ExternalParameterAttribute.cs:ExternalParameterAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ExternalParameterAttribute.cs",
+      "target": "class:Engine/ExternalParameterAttribute.cs:ExternalParameterAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ExternalParameters.cs",
+      "target": "class:Engine/ExternalParameters.cs:ExternalParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ExternalParameters.cs",
+      "target": "class:Engine/ExternalParameters.cs:ExternalParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ExternalParameters.cs",
+      "target": "class:Engine/ExternalParameters.cs:ExternalParameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ExternalParameters.cs",
+      "target": "class:Engine/ExternalParameters.cs:ExternalParameters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ExternalParameters.cs",
+      "target": "function:Engine/ExternalParameters.cs:Add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ExternalParameters.cs",
+      "target": "function:Engine/ExternalParameters.cs:Add",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ExternalParameters.cs",
+      "target": "function:Engine/ExternalParameters.cs:Remove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ExternalParameters.cs",
+      "target": "function:Engine/ExternalParameters.cs:Remove",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ExternalParameters.cs",
+      "target": "function:Engine/ExternalParameters.cs:Find",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ExternalParameters.cs",
+      "target": "function:Engine/ExternalParameters.cs:Find",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ExternalParameters.cs:Add",
+      "target": "function:Engine/ExternalParameters.cs:Find",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ExternalParameters.cs:Add",
+      "target": "function:Engine/ExternalParameters.cs:Get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/FactoryAttribute.cs",
+      "target": "class:Engine/FactoryAttribute.cs:FactoryAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/FactoryAttribute.cs",
+      "target": "class:Engine/FactoryAttribute.cs:ElementFactoryAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/FactoryAttribute.cs",
+      "target": "class:Engine/FactoryAttribute.cs:FactoryAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/FactoryAttribute.cs",
+      "target": "class:Engine/FactoryAttribute.cs:ElementFactoryAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine/FactoryAttribute.cs:ElementFactoryAttribute",
+      "target": "class:Engine/FactoryAttribute.cs:FactoryAttribute",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:Engine/FactoryAttribute.cs",
+      "target": "function:Engine/FactoryAttribute.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/FactoryAttribute.cs",
+      "target": "function:Engine/FactoryAttribute.cs:TryCreateFromMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:Engine/FactoryAttribute.cs:TryCreateFromMember",
+      "target": "function:Engine/FactoryAttribute.cs:Create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/FilePathAttribute.cs",
+      "target": "class:Engine/FilePathAttribute.cs:FilePathAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/FilePathAttribute.cs",
+      "target": "class:Engine/FilePathAttribute.cs:FilePathAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:Engine/FilePathAttribute.cs:FilePathAttribute",
+      "target": "file:Engine/FileDependencyAttribute.cs",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:Engine/FilePathAttribute.cs",
+      "target": "function:Engine/FilePathAttribute.cs:validateFileFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/FileTraceListener.cs",
+      "target": "class:Engine/FileTraceListener.cs:FileTraceListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/FileTraceListener.cs",
+      "target": "class:Engine/FileTraceListener.cs:FileTraceListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/FileTraceListener.cs",
+      "target": "function:Engine/FileTraceListener.cs:ChangeFileName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/FileTraceListener.cs",
+      "target": "function:Engine/FileTraceListener.cs:TraceEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/FileTraceListener.cs",
+      "target": "function:Engine/FileTraceListener.cs:TraceEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/HelpLinkAttribute.cs",
+      "target": "class:Engine/HelpLinkAttribute.cs:HelpLinkAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/HelpLinkAttribute.cs",
+      "target": "class:Engine/HelpLinkAttribute.cs:HelpLinkAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/HttpUtils.cs",
+      "target": "class:Engine/HttpUtils.cs:HttpUtils",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/HttpUtils.cs",
+      "target": "class:Engine/HttpUtils.cs:HttpUtils",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/HybridStream.cs",
+      "target": "class:Engine/HybridStream.cs:HybridStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/HybridStream.cs",
+      "target": "class:Engine/HybridStream.cs:MemViewStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/HybridStream.cs",
+      "target": "function:Engine/HybridStream.cs:ConvertToFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/HybridStream.cs",
+      "target": "function:Engine/HybridStream.cs:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IArtifactListener.cs",
+      "target": "class:Engine/IArtifactListener.cs:IArtifactListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IArtifactListener.cs",
+      "target": "class:Engine/IArtifactListener.cs:IArtifactListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IDeviceDiscovery.cs",
+      "target": "class:Engine/IDeviceDiscovery.cs:IDeviceDiscovery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IDeviceDiscovery.cs",
+      "target": "class:Engine/IDeviceDiscovery.cs:IDeviceDiscovery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

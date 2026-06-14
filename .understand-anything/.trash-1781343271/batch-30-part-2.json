@@ -1,0 +1,1156 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/PluginTypeSelector.cs",
+      "type": "file",
+      "name": "PluginTypeSelector.cs",
+      "filePath": "Engine/PluginTypeSelector.cs",
+      "summary": "定义 PluginTypeSelectorAttribute 特性，用于标记插件类型选择器的对象源属性（ObjectSourceProperty）。",
+      "tags": [
+        "utility",
+        "plugin-system",
+        "engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/PluginTypeSelector.cs:PluginTypeSelectorAttribute",
+      "type": "class",
+      "name": "PluginTypeSelectorAttribute",
+      "filePath": "Engine/PluginTypeSelector.cs",
+      "lineRange": [
+        12,
+        19
+      ],
+      "summary": "插件类型选择器特性，通过 ObjectSourceProperty 指定关联的对象源属性名称。",
+      "tags": [
+        "class",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/ComponentSettingsLayoutAttribute.cs",
+      "type": "file",
+      "name": "ComponentSettingsLayoutAttribute.cs",
+      "filePath": "Engine/Port/ComponentSettingsLayoutAttribute.cs",
+      "summary": "定义 ComponentSettingsLayoutAttribute 特性，用于指定组件设置布局模式（如 Horizontal/Vertical）。",
+      "tags": [
+        "attribute",
+        "annotation",
+        "engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/ComponentSettingsLayoutAttribute.cs:ComponentSettingsLayoutAttribute",
+      "type": "class",
+      "name": "ComponentSettingsLayoutAttribute",
+      "filePath": "Engine/Port/ComponentSettingsLayoutAttribute.cs",
+      "lineRange": [
+        13,
+        42
+      ],
+      "summary": "组件设置布局特性，通过 Mode 枚举指定组件设置面板的排列方式（如横向/纵向）。",
+      "tags": [
+        "class",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/Connection.cs",
+      "type": "file",
+      "name": "Connection.cs",
+      "filePath": "Engine/Port/Connection.cs",
+      "summary": "定义端口连接（Connection）类型，表示两个 Port 之间的连接关系，支持 Via 中间节点和活动状态判断。",
+      "tags": [
+        "connection",
+        "port",
+        "engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Port/Connection.cs:Connection",
+      "type": "class",
+      "name": "Connection",
+      "filePath": "Engine/Port/Connection.cs",
+      "lineRange": [
+        14,
+        95
+      ],
+      "summary": "端口连接类，表示两个 Port 对象之间的连接关系，支持 Via 中间节点路径和 IsActive 活动状态标记。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Port/Connection.cs:GetOtherPort",
+      "type": "function",
+      "name": "GetOtherPort",
+      "filePath": "Engine/Port/Connection.cs",
+      "lineRange": [
+        73,
+        81
+      ],
+      "summary": "获取连接中与指定端口相对的另一端端口，若给定端口不在连接中则抛出 ArgumentException。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/Connection.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Engine/Port/Connection.cs",
+      "lineRange": [
+        88,
+        94
+      ],
+      "summary": "返回连接的字符串表示，格式为 \"Name(Port1 -> Port2)\" 或 \"Port1 -> Port2\"。",
+      "tags": [
+        "method",
+        "override"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/ConnectionSettings.cs",
+      "type": "file",
+      "name": "ConnectionSettings.cs",
+      "filePath": "Engine/Port/ConnectionSettings.cs",
+      "summary": "端口连接设置的组件设置实现，提供 UpdateConnectionPorts 方法用于在端口项变更时更新连接端口引用。",
+      "tags": [
+        "connection",
+        "port",
+        "engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/ConnectionSettings.cs:ConnectionSettings",
+      "type": "class",
+      "name": "ConnectionSettings",
+      "filePath": "Engine/Port/ConnectionSettings.cs",
+      "lineRange": [
+        12,
+        30
+      ],
+      "summary": "端口连接设置组件，在端口列表变更时通过 UpdateConnectionPorts 自动更新连接中的端口引用。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/ConnectionSettings.cs:UpdateConnectionPorts",
+      "type": "function",
+      "name": "UpdateConnectionPorts",
+      "filePath": "Engine/Port/ConnectionSettings.cs",
+      "lineRange": [
+        20,
+        29
+      ],
+      "summary": "在端口列表变更时更新连接中的端口引用，通过 Contains 检查旧端口项是否需要替换。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/DirectionalRfConnection.cs",
+      "type": "file",
+      "name": "DirectionalRfConnection.cs",
+      "filePath": "Engine/Port/DirectionalRfConnection.cs",
+      "summary": "定向 RF 连接类型，继承自 RfConnection，新增端口方向（PortDirection）属性以支持定向射频信号路径。",
+      "tags": [
+        "connection",
+        "port",
+        "engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/DirectionalRfConnection.cs:DirectionalRfConnection",
+      "type": "class",
+      "name": "DirectionalRfConnection",
+      "filePath": "Engine/Port/DirectionalRfConnection.cs",
+      "lineRange": [
+        12,
+        51
+      ],
+      "summary": "定向 RF 连接，继承 RfConnection 并增加 PortDirection 枚举属性以支持输入/输出方向的射频路径建模。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/DirectionalRfConnection.cs:DirectionalRfConnection",
+      "type": "function",
+      "name": "DirectionalRfConnection",
+      "filePath": "Engine/Port/DirectionalRfConnection.cs",
+      "lineRange": [
+        41,
+        50
+      ],
+      "summary": "定向 RF 连接的构造函数，初始化 CableLoss 列表和端口方向的验证规则。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/IConstResourceProperty.cs",
+      "type": "file",
+      "name": "IConstResourceProperty.cs",
+      "filePath": "Engine/Port/IConstResourceProperty.cs",
+      "summary": "定义 IConstResourceProperty 接口及其辅助类，用于获取资源（Resource）上的常量属性值，支持泛型和类型过滤。",
+      "tags": [
+        "interface",
+        "type-definition",
+        "engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Port/IConstResourceProperty.cs:IConstResourceProperty",
+      "type": "class",
+      "name": "IConstResourceProperty",
+      "filePath": "Engine/Port/IConstResourceProperty.cs",
+      "lineRange": [
+        15,
+        29
+      ],
+      "summary": "常量资源属性接口，定义 Device 和 Name 属性，表示由资源设备提供的只读常量属性。",
+      "tags": [
+        "class",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/IConstResourceProperty.cs:IConstResourcePropertyHelpers",
+      "type": "class",
+      "name": "IConstResourcePropertyHelpers",
+      "filePath": "Engine/Port/IConstResourceProperty.cs",
+      "lineRange": [
+        34,
+        79
+      ],
+      "summary": "常量资源属性辅助类，提供 GetConstProperties 扩展方法，通过 TypeData 反射获取资源对象上所有 IConstResourceProperty 实现。",
+      "tags": [
+        "class",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/IConstResourceProperty.cs:GetConstProperties",
+      "type": "function",
+      "name": "GetConstProperties",
+      "filePath": "Engine/Port/IConstResourceProperty.cs",
+      "lineRange": [
+        39,
+        44
+      ],
+      "summary": "泛型扩展方法，从资源对象获取所有指定类型的 IConstResourceProperty 常量属性并进行类型过滤。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/IConstResourceProperty.cs:GetConstProperties",
+      "type": "function",
+      "name": "GetConstProperties",
+      "filePath": "Engine/Port/IConstResourceProperty.cs",
+      "lineRange": [
+        51,
+        52
+      ],
+      "summary": "泛型扩展方法，从资源对象获取所有指定类型的 IConstResourceProperty 常量属性并进行类型过滤。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/IConstResourceProperty.cs:GetConstPropertiesImpl",
+      "type": "function",
+      "name": "GetConstPropertiesImpl",
+      "filePath": "Engine/Port/IConstResourceProperty.cs",
+      "lineRange": [
+        54,
+        78
+      ],
+      "summary": "常量属性获取的核心实现，通过 TypeData.GetTypeData 反射获取成员，筛选实现了 IConstResourceProperty 的属性并返回其实例。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Port/Port.cs",
+      "type": "file",
+      "name": "Port.cs",
+      "filePath": "Engine/Port/Port.cs",
+      "summary": "定义端口（Port）基类及其 InputPort/OutputPort 子类，提供连接查询、活动连接获取和与其他设备端口的关系查询功能。",
+      "tags": [
+        "port",
+        "data-model",
+        "engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Port/Port.cs:Port",
+      "type": "class",
+      "name": "Port",
+      "filePath": "Engine/Port/Port.cs",
+      "lineRange": [
+        15,
+        90
+      ],
+      "summary": "端口基类，封装 Device 归属和 Connections 连接列表，提供 GetConnectedPorts、GetConnectionsTo 等拓扑查询方法。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Port/Port.cs:InputPort",
+      "type": "class",
+      "name": "InputPort",
+      "filePath": "Engine/Port/Port.cs",
+      "lineRange": [
+        95,
+        103
+      ],
+      "summary": "输入端口子类，继承自 Port，语义上表示信号/数据的接收端。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/Port.cs:OutputPort",
+      "type": "class",
+      "name": "OutputPort",
+      "filePath": "Engine/Port/Port.cs",
+      "lineRange": [
+        108,
+        116
+      ],
+      "summary": "输出端口子类，继承自 Port，语义上表示信号/数据的发送端。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/Port.cs:GetConnectedPorts",
+      "type": "function",
+      "name": "GetConnectedPorts",
+      "filePath": "Engine/Port/Port.cs",
+      "lineRange": [
+        48,
+        51
+      ],
+      "summary": "获取所有已连接（包括非活动连接）的对端端口列表。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/Port.cs:GetActiveConnectedPorts",
+      "type": "function",
+      "name": "GetActiveConnectedPorts",
+      "filePath": "Engine/Port/Port.cs",
+      "lineRange": [
+        56,
+        61
+      ],
+      "summary": "获取仅活动连接中的对端端口列表，过滤掉 IsActive 为 false 的连接。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/Port.cs:GetConnectionsTo",
+      "type": "function",
+      "name": "GetConnectionsTo",
+      "filePath": "Engine/Port/Port.cs",
+      "lineRange": [
+        66,
+        72
+      ],
+      "summary": "获取连接到指定设备的所有连接，支持 Via 路径匹配。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/Port.cs:GetConnectionsTo",
+      "type": "function",
+      "name": "GetConnectionsTo",
+      "filePath": "Engine/Port/Port.cs",
+      "lineRange": [
+        77,
+        80
+      ],
+      "summary": "获取连接到指定设备的所有连接，支持 Via 路径匹配。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/Port.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Engine/Port/Port.cs",
+      "lineRange": [
+        86,
+        89
+      ],
+      "summary": "ToString 方法。",
+      "tags": [
+        "method",
+        "override"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/RfConnection.cs",
+      "type": "file",
+      "name": "RfConnection.cs",
+      "filePath": "Engine/Port/RfConnection.cs",
+      "summary": "RF 射频连接类型，继承自 Connection，增加电缆损耗（CableLoss）属性及频率插值方法 GetInterpolatedCableLoss。",
+      "tags": [
+        "connection",
+        "port",
+        "engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Port/RfConnection.cs:RfConnection",
+      "type": "class",
+      "name": "RfConnection",
+      "filePath": "Engine/Port/RfConnection.cs",
+      "lineRange": [
+        15,
+        157
+      ],
+      "summary": "RF 射频连接类，继承自 Connection，增加 CableLoss 电缆损耗数据，提供 GetInterpolatedCableLoss 频率插值方法。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Port/RfConnection.cs:RfConnection",
+      "type": "function",
+      "name": "RfConnection",
+      "filePath": "Engine/Port/RfConnection.cs",
+      "lineRange": [
+        89,
+        98
+      ],
+      "summary": "RF 连接的构造函数，初始化 CableLoss 列表并添加电缆损耗数据的唯一性、端口方向验证规则。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/RfConnection.cs:GetInterpolatedCableLoss",
+      "type": "function",
+      "name": "GetInterpolatedCableLoss",
+      "filePath": "Engine/Port/RfConnection.cs",
+      "lineRange": [
+        109,
+        156
+      ],
+      "summary": "根据频率插值计算电缆损耗值，按频率排序后进行二分搜索查找相邻数据点进行线性插值。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Port/SwitchPosition.cs",
+      "type": "file",
+      "name": "SwitchPosition.cs",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "summary": "定义开关矩阵相关的端口类型，包括 SwitchPosition、ViaPoint、SwitchMatrixPath 和 SwitchMatrixPathCollection，支持矩阵式端口路径管理。",
+      "tags": [
+        "port",
+        "switch",
+        "data-model"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Port/SwitchPosition.cs:SwitchPosition",
+      "type": "class",
+      "name": "SwitchPosition",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        15,
+        25
+      ],
+      "summary": "开关位置类，继承自 ViaPoint，表示开关矩阵中的特定位置。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/SwitchPosition.cs:ViaPoint",
+      "type": "class",
+      "name": "ViaPoint",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        31,
+        91
+      ],
+      "summary": "路径中间节点类，包含 Name、IsActive 和 Device 属性，支持 Equals/GetHashCode 比较。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Port/SwitchPosition.cs:SwitchMatrixPath",
+      "type": "class",
+      "name": "SwitchMatrixPath",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        97,
+        121
+      ],
+      "summary": "开关矩阵路径类，由 Row（行）和 Column（列）索引唯一定位矩阵中的一个交叉点。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/SwitchPosition.cs:SwitchMatrixPathCollection",
+      "type": "class",
+      "name": "SwitchMatrixPathCollection",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        127,
+        258
+      ],
+      "summary": "开关矩阵路径集合，实现 IEnumerable<SwitchMatrixPath>，支持按 (row, column) 索引动态创建和缓存路径对象。",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Port/SwitchPosition.cs:ToString",
+      "type": "function",
+      "name": "ToString",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        54,
+        59
+      ],
+      "summary": "返回 ViaPoint 的字符串表示，若 Name 非空则格式为 \"Name (Device)\"，否则仅为 Device 名称。",
+      "tags": [
+        "method",
+        "override"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/SwitchPosition.cs:GetHashCode",
+      "type": "function",
+      "name": "GetHashCode",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        64,
+        67
+      ],
+      "summary": "基于 Name 和 Device 的哈希码组合计算 ViaPoint 的哈希码，用于集合去重。",
+      "tags": [
+        "method",
+        "override"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/SwitchPosition.cs:Equals",
+      "type": "function",
+      "name": "Equals",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        72,
+        80
+      ],
+      "summary": "比较两个 ViaPoint 是否相等，基于 Name 和 Device 的递归相等比较。",
+      "tags": [
+        "method",
+        "override"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/SwitchPosition.cs:Equals",
+      "type": "function",
+      "name": "Equals",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        85,
+        90
+      ],
+      "summary": "比较两个 ViaPoint 是否相等，基于 Name 和 Device 的递归相等比较。",
+      "tags": [
+        "method",
+        "override"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/SwitchPosition.cs:GetEnumerator",
+      "type": "function",
+      "name": "GetEnumerator",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        230,
+        233
+      ],
+      "summary": "返回 SwitchMatrixPathCollectionEnumerator 枚举器，支持 foreach 遍历矩阵中的所有路径。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/SwitchPosition.cs:GetEnumerator",
+      "type": "function",
+      "name": "GetEnumerator",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        235,
+        238
+      ],
+      "summary": "返回 SwitchMatrixPathCollectionEnumerator 枚举器，支持 foreach 遍历矩阵中的所有路径。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/SwitchPosition.cs:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        243,
+        257
+      ],
+      "summary": "按行和列索引获取或创建 SwitchMatrixPath 路径对象，带边界检查并缓存已创建的路径。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/PluginTypeSelector.cs",
+      "target": "class:Engine/PluginTypeSelector.cs:PluginTypeSelectorAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginTypeSelector.cs",
+      "target": "class:Engine/PluginTypeSelector.cs:PluginTypeSelectorAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/ComponentSettingsLayoutAttribute.cs",
+      "target": "class:Engine/Port/ComponentSettingsLayoutAttribute.cs:ComponentSettingsLayoutAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/ComponentSettingsLayoutAttribute.cs",
+      "target": "class:Engine/Port/ComponentSettingsLayoutAttribute.cs:ComponentSettingsLayoutAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Connection.cs",
+      "target": "class:Engine/Port/Connection.cs:Connection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Connection.cs",
+      "target": "class:Engine/Port/Connection.cs:Connection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Connection.cs",
+      "target": "function:Engine/Port/Connection.cs:GetOtherPort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Connection.cs",
+      "target": "function:Engine/Port/Connection.cs:GetOtherPort",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Connection.cs",
+      "target": "function:Engine/Port/Connection.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Connection.cs",
+      "target": "function:Engine/Port/Connection.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/ConnectionSettings.cs",
+      "target": "class:Engine/Port/ConnectionSettings.cs:ConnectionSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/ConnectionSettings.cs",
+      "target": "class:Engine/Port/ConnectionSettings.cs:ConnectionSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/ConnectionSettings.cs",
+      "target": "function:Engine/Port/ConnectionSettings.cs:UpdateConnectionPorts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/DirectionalRfConnection.cs",
+      "target": "class:Engine/Port/DirectionalRfConnection.cs:DirectionalRfConnection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/DirectionalRfConnection.cs",
+      "target": "class:Engine/Port/DirectionalRfConnection.cs:DirectionalRfConnection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/DirectionalRfConnection.cs",
+      "target": "function:Engine/Port/DirectionalRfConnection.cs:DirectionalRfConnection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "class:Engine/Port/IConstResourceProperty.cs:IConstResourceProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "class:Engine/Port/IConstResourceProperty.cs:IConstResourceProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "class:Engine/Port/IConstResourceProperty.cs:IConstResourcePropertyHelpers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "class:Engine/Port/IConstResourceProperty.cs:IConstResourcePropertyHelpers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "function:Engine/Port/IConstResourceProperty.cs:GetConstProperties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "function:Engine/Port/IConstResourceProperty.cs:GetConstProperties",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "function:Engine/Port/IConstResourceProperty.cs:GetConstProperties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "function:Engine/Port/IConstResourceProperty.cs:GetConstProperties",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "function:Engine/Port/IConstResourceProperty.cs:GetConstPropertiesImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/Port/IConstResourceProperty.cs:GetConstProperties",
+      "target": "function:Engine/Port/IConstResourceProperty.cs:GetConstPropertiesImpl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/Port/IConstResourceProperty.cs:GetConstProperties",
+      "target": "function:Engine/Port/IConstResourceProperty.cs:GetConstPropertiesImpl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "class:Engine/Port/Port.cs:Port",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "class:Engine/Port/Port.cs:Port",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "class:Engine/Port/Port.cs:InputPort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "class:Engine/Port/Port.cs:InputPort",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "class:Engine/Port/Port.cs:OutputPort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "class:Engine/Port/Port.cs:OutputPort",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "function:Engine/Port/Port.cs:GetConnectedPorts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "function:Engine/Port/Port.cs:GetConnectedPorts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "function:Engine/Port/Port.cs:GetActiveConnectedPorts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "function:Engine/Port/Port.cs:GetActiveConnectedPorts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "function:Engine/Port/Port.cs:GetConnectionsTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "function:Engine/Port/Port.cs:GetConnectionsTo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "function:Engine/Port/Port.cs:GetConnectionsTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "function:Engine/Port/Port.cs:GetConnectionsTo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "function:Engine/Port/Port.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "function:Engine/Port/Port.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/RfConnection.cs",
+      "target": "class:Engine/Port/RfConnection.cs:RfConnection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/RfConnection.cs",
+      "target": "class:Engine/Port/RfConnection.cs:RfConnection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/RfConnection.cs",
+      "target": "function:Engine/Port/RfConnection.cs:RfConnection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/RfConnection.cs",
+      "target": "function:Engine/Port/RfConnection.cs:GetInterpolatedCableLoss",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/RfConnection.cs",
+      "target": "function:Engine/Port/RfConnection.cs:GetInterpolatedCableLoss",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:SwitchPosition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:SwitchPosition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:ViaPoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:ViaPoint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:SwitchMatrixPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:SwitchMatrixPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:SwitchMatrixPathCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:SwitchMatrixPathCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:ToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:ToString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:GetHashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:GetHashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:Equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:Equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:GetEnumerator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:GetEnumerator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:GetEnumerator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:GetEnumerator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

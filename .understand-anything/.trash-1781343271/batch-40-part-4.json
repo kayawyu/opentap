@@ -1,0 +1,289 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package/UninstallContext.cs",
+      "type": "file",
+      "name": "UninstallContext.cs",
+      "filePath": "Package/UninstallContext.cs",
+      "summary": "卸载上下文管理器：将待删除文件移动到临时目录，支持卸载过程中回滚（撤销所有删除操作）。",
+      "tags": ["uninstallation", "file-management", "rollback", "temporary"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/UninstallContext.cs:UninstallContext",
+      "type": "class",
+      "name": "UninstallContext",
+      "filePath": "Package/UninstallContext.cs",
+      "lineRange": [8, 107],
+      "summary": "内部类：管理卸载过程中文件的移动和回滚，通过 Move 结构记录原始路径到临时路径的映射。",
+      "tags": ["uninstallation", "rollback", "file-management", "internal"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/UninstallContext.cs:UninstallContext_ctor",
+      "type": "function",
+      "name": "UninstallContext",
+      "filePath": "Package/UninstallContext.cs",
+      "lineRange": [29, 42],
+      "summary": "构造函数：初始化卸载目录，若存在则加载之前未清理的文件记录用于后续清理。",
+      "tags": ["constructor", "initialization", "uninstallation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/UninstallContext.cs:DeletePreviouslyUninstalledFiles",
+      "type": "function",
+      "name": "DeletePreviouslyUninstalledFiles",
+      "filePath": "Package/UninstallContext.cs",
+      "lineRange": [51, 67],
+      "summary": "清理之前卸载遗留的临时文件，遍历并物理删除已移走的文件。",
+      "tags": ["cleanup", "deletion", "uninstallation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/UninstallContext.cs:Delete",
+      "type": "function",
+      "name": "Delete",
+      "filePath": "Package/UninstallContext.cs",
+      "lineRange": [74, 96],
+      "summary": "将文件从原始路径移动到临时卸载目录（而非直接删除），支持后续回滚。",
+      "tags": ["move", "deletion", "rollback", "uninstallation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/UpdateCheck.cs",
+      "type": "file",
+      "name": "UpdateCheck.cs",
+      "filePath": "Package/UpdateCheck.cs",
+      "summary": "CLI 动作类，检查所有已安装包的新版本，集成 GitHub 最新发布 API，支持启动时自动检查。",
+      "tags": ["cli", "update-check", "package-management", "github-api"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/UpdateCheck.cs:UpdateCheck",
+      "type": "class",
+      "name": "UpdateCheck",
+      "filePath": "Package/UpdateCheck.cs",
+      "lineRange": [15, 96],
+      "summary": "ICliAction 实现：检查已安装包是否有更新版本，支持 Startup 属性控制是否在启动时自动执行。",
+      "tags": ["cli", "update-check", "icliaction", "package-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/UpdateCheck.cs:CheckForUpdatesAsync",
+      "type": "function",
+      "name": "CheckForUpdatesAsync",
+      "filePath": "Package/UpdateCheck.cs",
+      "lineRange": [28, 84],
+      "summary": "异步检查更新：读取 PackageManagerSettings 获取仓库列表，对每个仓库查询更新，支持取消、静默模式和 GitHub 首页包版本检查。",
+      "tags": ["async", "update-check", "repository", "github"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/XmlEvaulation/ElementExpander.cs",
+      "type": "file",
+      "name": "ElementExpander.cs",
+      "filePath": "Package/XmlEvaulation/ElementExpander.cs",
+      "summary": "XML 元素扩展引擎：管理 IElementExpander 提供者集合，按依赖顺序处理 XML 元素的变量展开、Token 替换和条件求值。",
+      "tags": ["xml", "expansion", "variable", "token-replacement"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/XmlEvaulation/ElementExpander.cs:ExpansionHelper",
+      "type": "class",
+      "name": "ExpansionHelper",
+      "filePath": "Package/XmlEvaulation/ElementExpander.cs",
+      "lineRange": [8, 47],
+      "summary": "内部静态辅助类：递归替换 XML 元素文本和属性中的 $(token) 占位符为实际值。",
+      "tags": ["xml", "token-replacement", "helper", "internal"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/XmlEvaulation/ElementExpander.cs:ElementExpander",
+      "type": "class",
+      "name": "ElementExpander",
+      "filePath": "Package/XmlEvaulation/ElementExpander.cs",
+      "lineRange": [49, 105],
+      "summary": "注册和管理 IElementExpander 提供者集合，按 DependsOnAttribute 拓扑排序，按序对 XML 元素调用 Expansion 处理。",
+      "tags": ["xml", "expansion", "provider-management", "topological-sort"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/XmlEvaulation/ElementExpander.cs:ReplaceToken",
+      "type": "function",
+      "name": "ReplaceToken",
+      "filePath": "Package/XmlEvaulation/ElementExpander.cs",
+      "lineRange": [17, 46],
+      "summary": "在 XML 元素的所有文本节点和属性值中递归替换 $(token) 为指定值。",
+      "tags": ["xml", "token-replacement", "recursive"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/XmlEvaulation/ElementExpander.cs:order",
+      "type": "function",
+      "name": "order",
+      "filePath": "Package/XmlEvaulation/ElementExpander.cs",
+      "lineRange": [62, 94],
+      "summary": "根据 DependsOnAttribute 对有向无环图进行拓扑排序，返回正确的扩展执行顺序。",
+      "tags": ["topological-sort", "dependency", "ordering"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/XmlEvaulation/IVariableProvider.cs",
+      "type": "file",
+      "name": "IVariableProvider.cs",
+      "filePath": "Package/XmlEvaulation/IVariableProvider.cs",
+      "summary": "XML 变量扩展接口与条件求值器：定义 IElementExpander 接口、DependsOnAttribute 依赖声明和 ConditionExpander，支持基于 XML 属性的条件表达式计算。",
+      "tags": ["xml", "interface", "condition-evaluation", "variable-expansion"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/XmlEvaulation/IVariableProvider.cs:DependsOnAttribute",
+      "type": "class",
+      "name": "DependsOnAttribute",
+      "filePath": "Package/XmlEvaulation/IVariableProvider.cs",
+      "lineRange": [11, 22],
+      "summary": "自定义属性：标记 IElementExpander 实现之间的依赖关系，确保执行顺序正确。",
+      "tags": ["attribute", "dependency", "metadata"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/XmlEvaulation/IVariableProvider.cs:IElementExpander",
+      "type": "class",
+      "name": "IElementExpander",
+      "filePath": "Package/XmlEvaulation/IVariableProvider.cs",
+      "lineRange": [24, 32],
+      "summary": "内部接口：定义 XML 元素的 Expand 方法契约，所有变量扩展器均需实现此接口。",
+      "tags": ["interface", "xml", "expansion", "contract"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/XmlEvaulation/IVariableProvider.cs:ConditionExpander",
+      "type": "class",
+      "name": "ConditionExpander",
+      "filePath": "Package/XmlEvaulation/IVariableProvider.cs",
+      "lineRange": [34, 264],
+      "summary": "实现 IElementExpander 的条件求值器：评估 XML 元素的 Condition 属性（支持 ==, !=, 布尔值），为 false 时移除元素，为 true 时去除条件属性。",
+      "tags": ["condition-evaluation", "xml", "expansion", "boolean"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/XmlEvaulation/IVariableProvider.cs:Expand",
+      "type": "function",
+      "name": "Expand",
+      "filePath": "Package/XmlEvaulation/IVariableProvider.cs",
+      "lineRange": [46, 59],
+      "summary": "遍历 XML 元素的 Condition 和 UnlessCondition 属性，委托给 GetExpansion 和 EvaluateCondition 处理。",
+      "tags": ["xml", "expansion", "condition", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/XmlEvaulation/IVariableProvider.cs:GetExpansion",
+      "type": "function",
+      "name": "GetExpansion",
+      "filePath": "Package/XmlEvaulation/IVariableProvider.cs",
+      "lineRange": [61, 96],
+      "summary": "解析条件字符串：先展开变量值，再识别 == 或 != 操作符进行拆分求值。",
+      "tags": ["parsing", "condition", "variable-expansion"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/XmlEvaulation/IVariableProvider.cs:EvaluateCondition",
+      "type": "function",
+      "name": "EvaluateCondition",
+      "filePath": "Package/XmlEvaulation/IVariableProvider.cs",
+      "lineRange": [98, 263],
+      "summary": "求值单个条件表达式：比较左右操作数，支持数字相等、布尔真值（1/true/yes）和字符串不等价比较。",
+      "tags": ["evaluation", "condition", "boolean", "comparison"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/XmlEvaulation/PackageXmlPreprocessor.cs",
+      "type": "file",
+      "name": "PackageXmlPreprocessor.cs",
+      "filePath": "Package/XmlEvaulation/PackageXmlPreprocessor.cs",
+      "summary": "包定义 XML 预处理器：在 XML 文档中展开 $(VarName) 变量、评估条件属性和合并重复元素，用于构建时的包配置文件处理。",
+      "tags": ["xml", "preprocessor", "variable-expansion", "package-definition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/XmlEvaulation/PackageXmlPreprocessor.cs:PackageXmlPreprocessor",
+      "type": "class",
+      "name": "PackageXmlPreprocessor",
+      "filePath": "Package/XmlEvaulation/PackageXmlPreprocessor.cs",
+      "lineRange": [20, 141],
+      "summary": "内部类：加载 XML 文档并依次执行变量展开、条件求值和元素合并，支持从文件路径或 XElement 构建。",
+      "tags": ["xml", "preprocessor", "package-definition", "internal"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/XmlEvaulation/PackageXmlPreprocessor.cs:PackageXmlPreprocessor_ctor",
+      "type": "function",
+      "name": "PackageXmlPreprocessor",
+      "filePath": "Package/XmlEvaulation/PackageXmlPreprocessor.cs",
+      "lineRange": [39, 52],
+      "summary": "构造函数：从文件路径加载 XML 文档，初始化包 XML 预处理器。",
+      "tags": ["constructor", "xml", "file-loading"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/XmlEvaulation/PackageXmlPreprocessor.cs:InitExpander",
+      "type": "function",
+      "name": "InitExpander",
+      "filePath": "Package/XmlEvaulation/PackageXmlPreprocessor.cs",
+      "lineRange": [55, 77],
+      "summary": "初始化 ElementExpander：注册 EnvironmentVariableExpander 和 DefaultVariableExpander 等变量提供者。",
+      "tags": ["initialization", "expander", "variables"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/XmlEvaulation/PackageXmlPreprocessor.cs:Evaluate",
+      "type": "function",
+      "name": "Evaluate",
+      "filePath": "Package/XmlEvaulation/PackageXmlPreprocessor.cs",
+      "lineRange": [86, 100],
+      "summary": "执行预处理：按拓扑排序对每个元素调用 ExpandElement，最后执行 MergeDuplicateElements 合并重复节点。",
+      "tags": ["evaluation", "xml", "preprocessing", "orchestration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/XmlEvaulation/PackageXmlPreprocessor.cs:MergeDuplicateElements",
+      "type": "function",
+      "name": "MergeDuplicateElements",
+      "filePath": "Package/XmlEvaulation/PackageXmlPreprocessor.cs",
+      "lineRange": [110, 127],
+      "summary": "合并 XML 文档中的同名且同属性的重复子元素，将重复项的子节点移入第一个实例后删除。",
+      "tags": ["xml", "merge", "deduplication"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {"source": "file:Package/UninstallContext.cs", "target": "class:Package/UninstallContext.cs:UninstallContext", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/UninstallContext.cs", "target": "function:Package/UninstallContext.cs:UninstallContext_ctor", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/UninstallContext.cs", "target": "function:Package/UninstallContext.cs:DeletePreviouslyUninstalledFiles", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/UninstallContext.cs", "target": "function:Package/UninstallContext.cs:Delete", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/UninstallContext.cs", "target": "function:Package/UninstallContext.cs:DeletePreviouslyUninstalledFiles", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/UninstallContext.cs", "target": "function:Package/UninstallContext.cs:Delete", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/UpdateCheck.cs", "target": "class:Package/UpdateCheck.cs:UpdateCheck", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/UpdateCheck.cs", "target": "function:Package/UpdateCheck.cs:CheckForUpdatesAsync", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/UpdateCheck.cs", "target": "function:Package/UpdateCheck.cs:CheckForUpdatesAsync", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/XmlEvaulation/ElementExpander.cs", "target": "class:Package/XmlEvaulation/ElementExpander.cs:ExpansionHelper", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/ElementExpander.cs", "target": "class:Package/XmlEvaulation/ElementExpander.cs:ElementExpander", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/ElementExpander.cs", "target": "function:Package/XmlEvaulation/ElementExpander.cs:ReplaceToken", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/ElementExpander.cs", "target": "function:Package/XmlEvaulation/ElementExpander.cs:order", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/IVariableProvider.cs", "target": "class:Package/XmlEvaulation/IVariableProvider.cs:DependsOnAttribute", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/IVariableProvider.cs", "target": "class:Package/XmlEvaulation/IVariableProvider.cs:IElementExpander", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/IVariableProvider.cs", "target": "class:Package/XmlEvaulation/IVariableProvider.cs:ConditionExpander", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/IVariableProvider.cs", "target": "function:Package/XmlEvaulation/IVariableProvider.cs:Expand", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/IVariableProvider.cs", "target": "function:Package/XmlEvaulation/IVariableProvider.cs:GetExpansion", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/IVariableProvider.cs", "target": "function:Package/XmlEvaulation/IVariableProvider.cs:EvaluateCondition", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/IVariableProvider.cs", "target": "class:Package/XmlEvaulation/IVariableProvider.cs:DependsOnAttribute", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/XmlEvaulation/IVariableProvider.cs", "target": "function:Package/XmlEvaulation/IVariableProvider.cs:Expand", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/XmlEvaulation/PackageXmlPreprocessor.cs", "target": "class:Package/XmlEvaulation/PackageXmlPreprocessor.cs:PackageXmlPreprocessor", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/PackageXmlPreprocessor.cs", "target": "function:Package/XmlEvaulation/PackageXmlPreprocessor.cs:PackageXmlPreprocessor_ctor", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/PackageXmlPreprocessor.cs", "target": "function:Package/XmlEvaulation/PackageXmlPreprocessor.cs:InitExpander", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/PackageXmlPreprocessor.cs", "target": "function:Package/XmlEvaulation/PackageXmlPreprocessor.cs:Evaluate", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/PackageXmlPreprocessor.cs", "target": "function:Package/XmlEvaulation/PackageXmlPreprocessor.cs:MergeDuplicateElements", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:Package/XmlEvaulation/PackageXmlPreprocessor.cs", "target": "class:Package/XmlEvaulation/PackageXmlPreprocessor.cs:PackageXmlPreprocessor", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:Package/XmlEvaulation/PackageXmlPreprocessor.cs", "target": "function:Package/XmlEvaulation/PackageXmlPreprocessor.cs:Evaluate", "type": "exports", "direction": "forward", "weight": 0.8}
+  ]
+}

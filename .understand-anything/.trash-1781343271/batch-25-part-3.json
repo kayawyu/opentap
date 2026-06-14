@@ -1,0 +1,1056 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/BeforeAttribute.cs",
+      "type": "file",
+      "name": "BeforeAttribute.cs",
+      "filePath": "Engine/BeforeAttribute.cs",
+      "summary": "Before 属性，通过 Attribute 声明类型之间的加载顺序依赖，确保指定类型在当前类型之前初始化。",
+      "tags": [
+        "attribute",
+        "dependency",
+        "initialization",
+        "ordering"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/BeforeAttribute.cs:BeforeAttribute",
+      "type": "class",
+      "name": "BeforeAttribute",
+      "filePath": "Engine/BeforeAttribute.cs",
+      "lineRange": [
+        9,
+        41
+      ],
+      "summary": "Before 属性类，通过类型或类型名称声明依赖关系，由 Before 方法进行依赖比较。",
+      "tags": [
+        "attribute",
+        "dependency",
+        "ordering"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/BeforeAttribute.cs:BeforeAttribute",
+      "type": "function",
+      "name": "BeforeAttribute",
+      "filePath": "Engine/BeforeAttribute.cs",
+      "lineRange": [
+        16,
+        19
+      ],
+      "summary": "BeforeAttribute 构造函数。",
+      "tags": [
+        "attribute",
+        "dependency"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/BeforeAttribute.cs:BeforeAttribute_2",
+      "type": "function",
+      "name": "BeforeAttribute",
+      "filePath": "Engine/BeforeAttribute.cs",
+      "lineRange": [
+        24,
+        27
+      ],
+      "summary": "BeforeAttribute 构造函数。",
+      "tags": [
+        "attribute",
+        "dependency"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/BeforeAttribute.cs:Before",
+      "type": "function",
+      "name": "Before",
+      "filePath": "Engine/BeforeAttribute.cs",
+      "lineRange": [
+        35,
+        40
+      ],
+      "summary": "判断当前类型是否应在指定类型之前初始化，支持类型名称和完全限定名的匹配。",
+      "tags": [
+        "attribute",
+        "dependency"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/BigFloat.cs",
+      "type": "file",
+      "name": "BigFloat.cs",
+      "filePath": "Engine/BigFloat.cs",
+      "summary": "任意精度浮点数（BigFloat）实现，基于 BigInteger 分子/分母的分数表示，提供完整的算术运算符、类型转换和格式化支持。",
+      "tags": [
+        "math",
+        "arbitrary-precision",
+        "numeric",
+        "fraction"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用 struct 实现，基于分子/分母的分数模型，通过 BigInteger 支持任意精度。包含完整的运算符重载和隐式/显式类型转换。"
+    },
+    {
+      "id": "class:Engine/BigFloat.cs:BigFloat",
+      "type": "class",
+      "name": "BigFloat",
+      "filePath": "Engine/BigFloat.cs",
+      "lineRange": [
+        15,
+        912
+      ],
+      "summary": "任意精度浮点数结构体，基于 BigInteger 分数表示，支持完整的算术运算（加减乘除）、比较运算符、类型转换和字符串格式化。",
+      "tags": [
+        "math",
+        "struct",
+        "arbitrary-precision",
+        "numeric"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/BigFloat.cs:BigFloatConverter",
+      "type": "class",
+      "name": "BigFloatConverter",
+      "filePath": "Engine/BigFloat.cs",
+      "lineRange": [
+        915,
+        955
+      ],
+      "summary": "BigFloat 类型转换器（TypeConverter），支持从数值类型和字符串转换为 BigFloat。",
+      "tags": [
+        "type-converter",
+        "conversion",
+        "math"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/BigFloat.cs:CanConvertFrom",
+      "type": "function",
+      "name": "CanConvertFrom",
+      "filePath": "Engine/BigFloat.cs",
+      "lineRange": [
+        921,
+        927
+      ],
+      "summary": "确定是否可以从源类型转换为 BigFloat。",
+      "tags": [
+        "conversion",
+        "type-converter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/BigFloat.cs:ConvertFrom",
+      "type": "function",
+      "name": "ConvertFrom",
+      "filePath": "Engine/BigFloat.cs",
+      "lineRange": [
+        936,
+        940
+      ],
+      "summary": "从源值创建 BigFloat 实例。",
+      "tags": [
+        "conversion",
+        "type-converter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/BigFloat.cs:ConvertTo",
+      "type": "function",
+      "name": "ConvertTo",
+      "filePath": "Engine/BigFloat.cs",
+      "lineRange": [
+        950,
+        954
+      ],
+      "summary": "将 BigFloat 转换为其他数值类型。",
+      "tags": [
+        "conversion",
+        "type-converter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/BreakCondition.cs",
+      "type": "file",
+      "name": "BreakCondition.cs",
+      "filePath": "Engine/BreakCondition.cs",
+      "summary": "断点条件管理，定义测试步骤的断点条件接口和属性，支持设置和获取每个步骤的断点条件。",
+      "tags": [
+        "breakpoint",
+        "debug",
+        "test-step",
+        "interface"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/BreakCondition.cs:BreakConditionProperty",
+      "type": "class",
+      "name": "BreakConditionProperty",
+      "filePath": "Engine/BreakCondition.cs",
+      "lineRange": [
+        31,
+        48
+      ],
+      "summary": "断点条件属性类，通过 ComponentSettings.Set/GetValue 存储和检索每一步的断点条件。",
+      "tags": [
+        "breakpoint",
+        "property"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/BreakCondition.cs:SetBreakCondition",
+      "type": "function",
+      "name": "SetBreakCondition",
+      "filePath": "Engine/BreakCondition.cs",
+      "lineRange": [
+        36,
+        39
+      ],
+      "summary": "为指定测试步骤设置断点条件。",
+      "tags": [
+        "breakpoint",
+        "set-get"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/BreakCondition.cs:GetBreakCondition",
+      "type": "function",
+      "name": "GetBreakCondition",
+      "filePath": "Engine/BreakCondition.cs",
+      "lineRange": [
+        44,
+        47
+      ],
+      "summary": "获取指定测试步骤的当前断点条件。",
+      "tags": [
+        "breakpoint",
+        "set-get"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/BreakConditionsAnnotation.cs",
+      "type": "file",
+      "name": "BreakConditionsAnnotation.cs",
+      "filePath": "Engine/BreakConditionsAnnotation.cs",
+      "summary": "断点条件注解实现，将断点条件数据包装为注解，使 UI 可以展示和编辑每个测试步骤的断点条件。",
+      "tags": [
+        "annotation",
+        "breakpoint",
+        "debug",
+        "ui"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/BreakConditionsAnnotation.cs:IEnabledValueAnnotation",
+      "type": "class",
+      "name": "IEnabledValueAnnotation",
+      "filePath": "Engine/BreakConditionsAnnotation.cs",
+      "lineRange": [
+        12,
+        23
+      ],
+      "summary": "可启用值注解接口，组合 IsEnabled 和 Value 属性，用于断点条件的开关控制。",
+      "tags": [
+        "annotation",
+        "breakpoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/BreakConditionsAnnotation.cs:BreakConditionsAnnotation",
+      "type": "class",
+      "name": "BreakConditionsAnnotation",
+      "filePath": "Engine/BreakConditionsAnnotation.cs",
+      "lineRange": [
+        25,
+        226
+      ],
+      "summary": "断点条件注解类，管理启用/禁用状态、条件值和子注解成员列表，支持 Read/Write 序列化。",
+      "tags": [
+        "annotation",
+        "breakpoint"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/BreakConditionsAnnotation.cs:Read",
+      "type": "function",
+      "name": "Read",
+      "filePath": "Engine/BreakConditionsAnnotation.cs",
+      "lineRange": [
+        189,
+        202
+      ],
+      "summary": "从序列化源读取断点条件的值。",
+      "tags": [
+        "annotation",
+        "breakpoint"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/BreakConditionsAnnotation.cs:Write",
+      "type": "function",
+      "name": "Write",
+      "filePath": "Engine/BreakConditionsAnnotation.cs",
+      "lineRange": [
+        204,
+        225
+      ],
+      "summary": "将断点条件值写入序列化目标。",
+      "tags": [
+        "annotation",
+        "breakpoint"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Cache.cs",
+      "type": "file",
+      "name": "Cache.cs",
+      "filePath": "Engine/Cache.cs",
+      "summary": "通用缓存系统，提供可观察的缓存值包装器，当缓存状态失效时会通知观察者重新计算。",
+      "tags": [
+        "cache",
+        "observable",
+        "utility",
+        "memoization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Cache.cs:Cached",
+      "type": "class",
+      "name": "Cached",
+      "filePath": "Engine/Cache.cs",
+      "lineRange": [
+        15,
+        39
+      ],
+      "summary": "缓存值包装器，延迟获取值并缓存结果，支持缓存状态变化时的自动刷新。",
+      "tags": [
+        "cache",
+        "wrapper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Cache.cs:OnUpdated",
+      "type": "function",
+      "name": "OnUpdated",
+      "filePath": "Engine/Cache.cs",
+      "lineRange": [
+        9,
+        12
+      ],
+      "summary": "触发缓存更新通知，使所有依赖此缓存的 Cached 实例失效。",
+      "tags": [
+        "cache",
+        "lazy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Cache.cs:GetValue",
+      "type": "function",
+      "name": "GetValue",
+      "filePath": "Engine/Cache.cs",
+      "lineRange": [
+        21,
+        29
+      ],
+      "summary": "获取缓存值，首次调用时惰性计算并存储结果。",
+      "tags": [
+        "cache",
+        "lazy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Cache.cs:Cached",
+      "type": "function",
+      "name": "Cached",
+      "filePath": "Engine/Cache.cs",
+      "lineRange": [
+        30,
+        34
+      ],
+      "summary": "创建缓存包装器，关联到缓存状态并指定值获取函数。",
+      "tags": [
+        "cache",
+        "lazy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ChildItemVisibility.cs",
+      "type": "file",
+      "name": "ChildItemVisibility.cs",
+      "filePath": "Engine/ChildItemVisibility.cs",
+      "summary": "子项可见性管理，控制组件设置中子项目的可见性（如 PublicSettings 类的属性）。",
+      "tags": [
+        "visibility",
+        "settings",
+        "ui",
+        "property"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ChildItemVisibility.cs:ChildItemVisibility",
+      "type": "class",
+      "name": "ChildItemVisibility",
+      "filePath": "Engine/ChildItemVisibility.cs",
+      "lineRange": [
+        7,
+        47
+      ],
+      "summary": "子项可见性管理器，通过附加属性（Attached Property）控制对象的子元素在 UI 中的可见性。",
+      "tags": [
+        "visibility",
+        "attached-property",
+        "ui"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ChildItemVisibility.cs:SetVisibility",
+      "type": "function",
+      "name": "SetVisibility",
+      "filePath": "Engine/ChildItemVisibility.cs",
+      "lineRange": [
+        36,
+        39
+      ],
+      "summary": "设置对象的子项可见性状态。",
+      "tags": [
+        "visibility",
+        "set-get"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ChildItemVisibility.cs:GetVisibility",
+      "type": "function",
+      "name": "GetVisibility",
+      "filePath": "Engine/ChildItemVisibility.cs",
+      "lineRange": [
+        43,
+        46
+      ],
+      "summary": "获取对象的子项可见性状态。",
+      "tags": [
+        "visibility",
+        "set-get"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Cli/CliActionExecutor.cs",
+      "type": "file",
+      "name": "CliActionExecutor.cs",
+      "filePath": "Engine/Cli/CliActionExecutor.cs",
+      "summary": "CLI 动作执行器，解析命令行参数树并执行对应的 CLI 动作，是 OpenTAP 命令行工具的核心执行引擎。",
+      "tags": [
+        "cli",
+        "command-line",
+        "execution",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Cli/CliActionExecutor.cs:CliActionTree",
+      "type": "class",
+      "name": "CliActionTree",
+      "filePath": "Engine/Cli/CliActionExecutor.cs",
+      "lineRange": [
+        18,
+        113
+      ],
+      "summary": "CLI 动作树节点类，管理命令的层级结构，支持子命令解析和最大树长度计算。",
+      "tags": [
+        "cli",
+        "tree"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Cli/CliActionExecutor.cs:CliActionExecutor",
+      "type": "class",
+      "name": "CliActionExecutor",
+      "filePath": "Engine/Cli/CliActionExecutor.cs",
+      "lineRange": [
+        118,
+        395
+      ],
+      "summary": "CLI 动作执行器，解析命令行参数并执行对应的 ICliAction，处理未处理异常和输出格式化（约250行的主 Execute 方法）。",
+      "tags": [
+        "cli",
+        "execution"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/Cli/CliActionExecutor.cs:CliActionTree",
+      "type": "function",
+      "name": "CliActionTree",
+      "filePath": "Engine/Cli/CliActionExecutor.cs",
+      "lineRange": [
+        29,
+        37
+      ],
+      "summary": "构造函数，初始化命令树节点或创建根节点。",
+      "tags": [
+        "cli",
+        "execution"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Cli/CliActionExecutor.cs:CliActionTree_2",
+      "type": "function",
+      "name": "CliActionTree",
+      "filePath": "Engine/Cli/CliActionExecutor.cs",
+      "lineRange": [
+        39,
+        42
+      ],
+      "summary": "构造函数，初始化命令树节点或创建根节点。",
+      "tags": [
+        "cli",
+        "execution"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Cli/CliActionExecutor.cs:ParseCommand",
+      "type": "function",
+      "name": "ParseCommand",
+      "filePath": "Engine/Cli/CliActionExecutor.cs",
+      "lineRange": [
+        44,
+        67
+      ],
+      "summary": "解析类型的 Display 属性，从 Group/Name 分割出命令分组和名称。",
+      "tags": [
+        "cli",
+        "execution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Cli/CliActionExecutor.cs:GetSubCommand",
+      "type": "function",
+      "name": "GetSubCommand",
+      "filePath": "Engine/Cli/CliActionExecutor.cs",
+      "lineRange": [
+        69,
+        86
+      ],
+      "summary": "根据命令行参数递归导航命令树并找到目标动作类型（约18行）。",
+      "tags": [
+        "cli",
+        "execution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Cli/CliActionExecutor.cs:GetMaxCommandTreeLength",
+      "type": "function",
+      "name": "GetMaxCommandTreeLength",
+      "filePath": "Engine/Cli/CliActionExecutor.cs",
+      "lineRange": [
+        97,
+        112
+      ],
+      "summary": "计算命令树的最大缩进长度，用于对齐输出格式。",
+      "tags": [
+        "cli",
+        "execution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Cli/CliActionExecutor.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Engine/Cli/CliActionExecutor.cs",
+      "lineRange": [
+        137,
+        139
+      ],
+      "summary": "执行 CLI 动作（约250行的主执行方法），解析参数、创建动作实例、运行并处理输出。",
+      "tags": [
+        "cli",
+        "execution"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Cli/CliActionExecutor.cs:Execute_2",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Engine/Cli/CliActionExecutor.cs",
+      "lineRange": [
+        144,
+        394
+      ],
+      "summary": "执行 CLI 动作（约250行的主执行方法），解析参数、创建动作实例、运行并处理输出。",
+      "tags": [
+        "cli",
+        "execution"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/BeforeAttribute.cs",
+      "target": "class:Engine/BeforeAttribute.cs:BeforeAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BeforeAttribute.cs",
+      "target": "function:Engine/BeforeAttribute.cs:BeforeAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BeforeAttribute.cs",
+      "target": "function:Engine/BeforeAttribute.cs:BeforeAttribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BeforeAttribute.cs",
+      "target": "function:Engine/BeforeAttribute.cs:BeforeAttribute_2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BeforeAttribute.cs",
+      "target": "function:Engine/BeforeAttribute.cs:BeforeAttribute_2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BeforeAttribute.cs",
+      "target": "function:Engine/BeforeAttribute.cs:Before",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BeforeAttribute.cs",
+      "target": "function:Engine/BeforeAttribute.cs:Before",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BigFloat.cs",
+      "target": "class:Engine/BigFloat.cs:BigFloat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BigFloat.cs",
+      "target": "class:Engine/BigFloat.cs:BigFloat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BigFloat.cs",
+      "target": "class:Engine/BigFloat.cs:BigFloatConverter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BigFloat.cs",
+      "target": "class:Engine/BigFloat.cs:BigFloatConverter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BigFloat.cs",
+      "target": "function:Engine/BigFloat.cs:CanConvertFrom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BigFloat.cs",
+      "target": "function:Engine/BigFloat.cs:CanConvertFrom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BigFloat.cs",
+      "target": "function:Engine/BigFloat.cs:ConvertFrom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BigFloat.cs",
+      "target": "function:Engine/BigFloat.cs:ConvertFrom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BigFloat.cs",
+      "target": "function:Engine/BigFloat.cs:ConvertTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BigFloat.cs",
+      "target": "function:Engine/BigFloat.cs:ConvertTo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BreakCondition.cs",
+      "target": "class:Engine/BreakCondition.cs:BreakConditionProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BreakCondition.cs",
+      "target": "class:Engine/BreakCondition.cs:BreakConditionProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BreakCondition.cs",
+      "target": "function:Engine/BreakCondition.cs:SetBreakCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BreakCondition.cs",
+      "target": "function:Engine/BreakCondition.cs:SetBreakCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BreakCondition.cs",
+      "target": "function:Engine/BreakCondition.cs:GetBreakCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BreakCondition.cs",
+      "target": "function:Engine/BreakCondition.cs:GetBreakCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BreakConditionsAnnotation.cs",
+      "target": "class:Engine/BreakConditionsAnnotation.cs:IEnabledValueAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BreakConditionsAnnotation.cs",
+      "target": "class:Engine/BreakConditionsAnnotation.cs:IEnabledValueAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BreakConditionsAnnotation.cs",
+      "target": "class:Engine/BreakConditionsAnnotation.cs:BreakConditionsAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BreakConditionsAnnotation.cs",
+      "target": "class:Engine/BreakConditionsAnnotation.cs:BreakConditionsAnnotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BreakConditionsAnnotation.cs",
+      "target": "function:Engine/BreakConditionsAnnotation.cs:Read",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BreakConditionsAnnotation.cs",
+      "target": "function:Engine/BreakConditionsAnnotation.cs:Read",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/BreakConditionsAnnotation.cs",
+      "target": "function:Engine/BreakConditionsAnnotation.cs:Write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/BreakConditionsAnnotation.cs",
+      "target": "function:Engine/BreakConditionsAnnotation.cs:Write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cache.cs",
+      "target": "class:Engine/Cache.cs:Cached",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cache.cs",
+      "target": "class:Engine/Cache.cs:Cached",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cache.cs",
+      "target": "function:Engine/Cache.cs:OnUpdated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cache.cs",
+      "target": "function:Engine/Cache.cs:OnUpdated",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cache.cs",
+      "target": "function:Engine/Cache.cs:GetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cache.cs",
+      "target": "function:Engine/Cache.cs:GetValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cache.cs",
+      "target": "function:Engine/Cache.cs:Cached",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cache.cs",
+      "target": "function:Engine/Cache.cs:Cached",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ChildItemVisibility.cs",
+      "target": "class:Engine/ChildItemVisibility.cs:ChildItemVisibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ChildItemVisibility.cs",
+      "target": "function:Engine/ChildItemVisibility.cs:SetVisibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ChildItemVisibility.cs",
+      "target": "function:Engine/ChildItemVisibility.cs:SetVisibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ChildItemVisibility.cs",
+      "target": "function:Engine/ChildItemVisibility.cs:GetVisibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ChildItemVisibility.cs",
+      "target": "function:Engine/ChildItemVisibility.cs:GetVisibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "class:Engine/Cli/CliActionExecutor.cs:CliActionTree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "class:Engine/Cli/CliActionExecutor.cs:CliActionTree",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "class:Engine/Cli/CliActionExecutor.cs:CliActionExecutor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "class:Engine/Cli/CliActionExecutor.cs:CliActionExecutor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:CliActionTree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:CliActionTree",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:CliActionTree_2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:CliActionTree_2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:ParseCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:ParseCommand",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:GetSubCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:GetSubCommand",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:GetMaxCommandTreeLength",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:GetMaxCommandTreeLength",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:Execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:Execute_2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/Cli/CliActionExecutor.cs",
+      "target": "function:Engine/Cli/CliActionExecutor.cs:Execute_2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

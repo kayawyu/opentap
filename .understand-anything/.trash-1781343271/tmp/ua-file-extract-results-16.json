@@ -1,0 +1,399 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 19,
+  "filesSkipped": [
+    ".github/ISSUE_TEMPLATE/feature_request.md",
+    "Engine.UnitTests/Tap.Engine.UnitTests.csproj.vspscc",
+    "Installer/Installer.targets",
+    "Installer/Product.wxs",
+    "Installer/Product.wxs.vspscc",
+    "Installer/Product_Linux.wxs"
+  ],
+  "results": [
+    {
+      "path": ".claude/settings.local.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 29,
+      "nonEmptyLines": 29,
+      "sections": [
+        {
+          "heading": "permissions",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": ".gitattributes",
+      "language": "unknown",
+      "fileCategory": "config",
+      "totalLines": 66,
+      "nonEmptyLines": 60,
+      "metrics": {}
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 38,
+      "nonEmptyLines": 22,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": ".gitversion",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 29,
+      "nonEmptyLines": 23,
+      "metrics": {}
+    },
+    {
+      "path": "BasicSteps/Tap.Plugins.BasicSteps.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 41,
+      "nonEmptyLines": 40,
+      "metrics": {}
+    },
+    {
+      "path": "Cli/Tap.Cli.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 20,
+      "nonEmptyLines": 20,
+      "metrics": {}
+    },
+    {
+      "path": "Cli/app.config",
+      "language": "config",
+      "fileCategory": "config",
+      "totalLines": 6,
+      "nonEmptyLines": 6,
+      "metrics": {}
+    },
+    {
+      "path": "Directory.Build.props",
+      "language": "config",
+      "fileCategory": "config",
+      "totalLines": 47,
+      "nonEmptyLines": 43,
+      "metrics": {}
+    },
+    {
+      "path": "Engine/Tap.Engine.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 69,
+      "nonEmptyLines": 64,
+      "metrics": {}
+    },
+    {
+      "path": "Engine/Tap.Engine.csproj.vspscc",
+      "language": "vspscc",
+      "fileCategory": "config",
+      "totalLines": 10,
+      "nonEmptyLines": 10,
+      "metrics": {}
+    },
+    {
+      "path": "Engine/Tap.snk",
+      "language": "snk",
+      "fileCategory": "config",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "metrics": {}
+    },
+    {
+      "path": "LinuxInstall/INSTALL.sh",
+      "language": "shell",
+      "fileCategory": "script",
+      "totalLines": 56,
+      "nonEmptyLines": 43,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "LinuxInstall/README",
+      "language": "txt",
+      "fileCategory": "docs",
+      "totalLines": 20,
+      "nonEmptyLines": 15,
+      "metrics": {}
+    },
+    {
+      "path": "LinuxInstall/tap.sh",
+      "language": "shell",
+      "fileCategory": "script",
+      "totalLines": 67,
+      "nonEmptyLines": 60,
+      "functions": [
+        {
+          "name": "realpath",
+          "startLine": 13,
+          "endLine": 32,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "Package/Tap.Package.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 66,
+      "nonEmptyLines": 65,
+      "metrics": {}
+    },
+    {
+      "path": "Shared/AssemblyInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 23,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "Tap.Upgrader/Tap.Upgrader.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 29,
+      "nonEmptyLines": 25,
+      "metrics": {}
+    },
+    {
+      "path": "Tap.Upgrader/Program.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 69,
+      "functions": [
+        {
+          "name": "Uninstall",
+          "startLine": 16,
+          "endLine": 25,
+          "params": [
+            "filename"
+          ]
+        },
+        {
+          "name": "Retry",
+          "startLine": 27,
+          "endLine": 45,
+          "params": [
+            "act",
+            "error"
+          ]
+        },
+        {
+          "name": "Main",
+          "startLine": 47,
+          "endLine": 74,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Program",
+          "startLine": 7,
+          "endLine": 75,
+          "methods": [
+            "Uninstall",
+            "Retry",
+            "Main"
+          ],
+          "properties": [
+            "UninstallPath",
+            "PackageDir",
+            "Installation"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Main",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "Program",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Uninstall",
+          "callee": "File.Exists",
+          "lineNumber": 18
+        },
+        {
+          "caller": "Uninstall",
+          "callee": "Path.GetFileName",
+          "lineNumber": 20
+        },
+        {
+          "caller": "Uninstall",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Uninstall",
+          "callee": "Path.Combine",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Uninstall",
+          "callee": "Guid.NewGuid",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Uninstall",
+          "callee": "File.Move",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Retry",
+          "callee": "act",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Retry",
+          "callee": "Thread.Sleep",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Retry",
+          "callee": "TimeSpan.FromMilliseconds",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Retry",
+          "callee": "Console.Error.WriteLine",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Main",
+          "callee": "Directory.Exists",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Main",
+          "callee": "Directory.GetFiles",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Main",
+          "callee": "File.Delete",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 60
+        },
+        {
+          "caller": "Main",
+          "callee": "Path.Combine",
+          "lineNumber": 65
+        },
+        {
+          "caller": "Main",
+          "callee": "Path.Combine",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Main",
+          "callee": "Path.Combine",
+          "lineNumber": 67
+        },
+        {
+          "caller": "Main",
+          "callee": "Path.Combine",
+          "lineNumber": 68
+        },
+        {
+          "caller": "Main",
+          "callee": "Retry",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Main",
+          "callee": "Uninstall",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Main",
+          "callee": "Retry",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Main",
+          "callee": "File.Copy",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Main",
+          "callee": "Retry",
+          "lineNumber": 72
+        },
+        {
+          "caller": "Main",
+          "callee": "Uninstall",
+          "lineNumber": 72
+        },
+        {
+          "caller": "Main",
+          "callee": "Retry",
+          "lineNumber": 73
+        },
+        {
+          "caller": "Main",
+          "callee": "File.Copy",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "templates/Templates.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 36,
+      "nonEmptyLines": 31,
+      "metrics": {}
+    }
+  ]
+}

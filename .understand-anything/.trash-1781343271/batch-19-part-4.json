@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "id": "document:doc/User Guide/Introduction/Readme.md",
+      "type": "document",
+      "name": "OpenTAP 介绍",
+      "filePath": "doc/User Guide/Introduction/Readme.md",
+      "summary": "OpenTAP 核心概念入门文档，包含 8 个章节：Test Plans、Test Steps、Verdicts、Resources、Result Listeners、Session Logs、Packages and Plugins，是理解 OpenTAP 架构和术语的基础阅读材料。",
+      "tags": [
+        "documentation",
+        "user-guide",
+        "introduction",
+        "overview"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/User Guide/Readme.md",
+      "type": "document",
+      "name": "用户指南目录",
+      "filePath": "doc/User Guide/Readme.md",
+      "summary": "OpenTAP 用户指南的总目录页，包含指向 Introduction、CLI Usage 和 Editors 三个主要章节的链接。",
+      "tags": [
+        "documentation",
+        "user-guide",
+        "table-of-contents"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc/User Guide/Introduction/break_conditions.drawio",
+      "type": "file",
+      "name": "break_conditions.drawio",
+      "filePath": "doc/User Guide/Introduction/break_conditions.drawio",
+      "summary": "断点条件（Break Conditions）传播机制的示意图，用于配合用户指南介绍章节中关于 Verdict 继承和断点条件层叠的说明。",
+      "tags": [
+        "diagram",
+        "documentation",
+        "break-conditions"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc/User Guide/Introduction/TestPlan.drawio",
+      "type": "file",
+      "name": "TestPlan.drawio",
+      "filePath": "doc/User Guide/Introduction/TestPlan.drawio",
+      "summary": "测试计划（Test Plan）层级结构示意图，展示测试步骤的父子嵌套关系和递归结构。",
+      "tags": [
+        "diagram",
+        "documentation",
+        "test-plan"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:doc/User Guide/Readme.md",
+      "target": "document:doc/User Guide/Introduction/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/User Guide/Readme.md",
+      "target": "document:doc/User Guide/CLI Usage/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/User Guide/Readme.md",
+      "target": "document:doc/User Guide/Editors/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/User Guide/Introduction/Readme.md",
+      "target": "file:doc/User Guide/Introduction/TestPlan.drawio",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/User Guide/Introduction/Readme.md",
+      "target": "file:doc/User Guide/Introduction/Flow.drawio",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/User Guide/Introduction/Readme.md",
+      "target": "file:doc/User Guide/Introduction/break_conditions.drawio",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/User Guide/Introduction/Readme.md",
+      "target": "file:doc/User Guide/Introduction/OpenTAP_plugins.drawio",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/User Guide/Introduction/Readme.md",
+      "target": "document:doc/User Guide/Editors/Readme.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

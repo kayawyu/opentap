@@ -1,0 +1,97 @@
+[
+  {
+    "order": 1,
+    "title": "项目概览",
+    "description": "README.md 是 OpenTAP 项目的入口文档，涵盖项目简介、二进制获取方式、Windows/Linux 平台构建指南、NUnit 测试流程、贡献指引及问题报告渠道。从这里开始，可以了解 OpenTAP 作为一个可扩展的自动化测试框架的整体定位、核心设计理念（简洁、可扩展、高性能）以及如何参与社区贡献。",
+    "nodeIds": ["document:README.md"]
+  },
+  {
+    "order": 2,
+    "title": "应用入口点",
+    "description": "OpenTAP 的 CLI 入口由两层组成：tap/Program.cs 作为主入口点设置不变文化（Invariant Culture）并初始化 OPENTAP_INIT_DIRECTORY 环境变量，然后将控制权委托给 Cli/TapEntry.cs 的 Go() 方法。TapEntry 负责解析命令行参数（install/uninstall/color/verbose/quiet）、加载插件程序集并启动 CLI 执行器，是整个 tap 命令的调度中心。",
+    "nodeIds": ["file:tap/Program.cs", "file:Cli/TapEntry.cs"]
+  },
+  {
+    "order": 3,
+    "title": "解决方案与项目结构",
+    "description": "OpenTAP.slnx 是 Visutal Studio 2022+ 的解决方案文件，定义了 Engine、Cli、Package、tap、BasicSteps 等核心项目及其跨平台配置。tap/tap.csproj 是 CLI 主入口的 MSBuild 项目文件，指定了目标框架、程序集名称以及构建后自动将 OpenTAP 作为包安装的 PostBuild 目标。Directory.Build.props 统一设置所有项目的 C# 语言版本（LangVersion=13）、默认目标框架（netstandard2.0）和输出路径，确保项目间构建一致性。Engine/Tap.Engine.csproj 是核心引擎项目，所有其他项目都依赖于此。",
+    "nodeIds": ["file:OpenTAP.slnx", "config:tap/tap.csproj", "config:Directory.Build.props", "config:Engine/Tap.Engine.csproj"],
+    "languageLesson": "Directory.Build.props 是 MSBuild 的仓库级属性文件，位于仓库根目录时可自动应用到所有子目录的 csproj 中，无需在每个项目中重复声明公共属性。这避免了配置漂移（configuration drift），是 .NET 单体仓库（monorepo）的标准实践。"
+  },
+  {
+    "order": 4,
+    "title": "核心引擎 -- 测试步骤与测试计划",
+    "description": "TestStep.cs 定义了 TestStep 基类及其扩展方法，是 OpenTAP 测试执行模型的核心抽象。每个测试步骤都继承自此基类，支持子步骤执行、资源检查、参数化成员注册和格式化名称生成。TestPlan.cs 定义了 Plan 的数据模型，管理步骤集合的保存/加载、参数注册和断点（Break）机制。这两个文件共同构成了 OpenTAP 的测试编排能力 -- 以树形结构组织测试步骤，支持嵌套、参数化和条件执行。",
+    "nodeIds": ["file:Engine/TestStep.cs", "file:Engine/TestPlan.cs"],
+    "languageLesson": "C# 的 partial class（分部类）模式允许将一个类的定义拆分到多个文件中。TestStep 使用 partial class 将不同关注点（子步骤管理、参数化、序列化等）分散到独立文件中，同时保持逻辑内聚。这是大型 C# 项目中常见的设计策略。"
+  },
+  {
+    "order": 5,
+    "title": "核心引擎 -- 序列化与类型元数据",
+    "description": "TapSerialization.cs 是 OpenTAP 的 XML 序列化/反序列化引擎，负责测试计划、测试步骤等对象的持久化读写，支持延迟加载、错误收集和类型通知等高级机制。TypeData.cs 是类型元数据描述系统，缓存和查询类型的属性、成员、基类、派生类型以及 Display/HelpLink 等注解信息，为序列化和插件系统提供反射基础设施。这两个文件是整个框架的数据持久化支柱。",
+    "nodeIds": ["file:Engine/TapSerialization.cs", "file:Engine/TypeData.cs"],
+    "languageLesson": "C# 反射（Reflection）允许在运行时查询类型的成员信息。TypeData 系统在反射基础上增加了缓存层，避免重复反射调用带来的性能开销，这对于包含数百个插件类型的大型测试计划尤为重要。"
+  },
+  {
+    "order": 6,
+    "title": "核心引擎 -- 注解系统（Annotations）",
+    "description": "Annotation.cs 是 OpenTAP 注解系统的核心文件，定义了全套注解接口和实现类，包括数据注解（Display、Browsable）、值注解、集合注解、访问注解等。注解系统是 UI 数据绑定的基石 -- 当测试步骤的属性被标注时，OpenTAP 的 GUI 可以自动生成对应的编辑器控件，无需手动编写 UI 代码。这实现了「模型驱动 UI」的设计模式。",
+    "nodeIds": ["file:Engine/Annotations/Annotation.cs"],
+    "languageLesson": "注解（Annotation / Attribute）模式是 C# 声明式编程的核心。通过将元数据标记在属性、类和方法上，框架可以在运行时通过反射读取这些标记来决定行为。OpenTAP 的注解系统扩展了标准 .NET Attribute 概念，提供了更丰富的数据绑定和 UI 生成能力。"
+  },
+  {
+    "order": 7,
+    "title": "核心引擎 -- Mixin 系统",
+    "description": "Mixin 系统是 OpenTAP 实现「关注点注入」的关键机制。IMixin.cs 定义了 IMixin 基础接口以及各类 Mixin 事件（PreRun/PostRun/PreOpen），允许在测试步骤/测试计划的执行生命周期中注入额外行为。MixinFactory.cs 负责 Mixin 的加载（LoadMixin）和卸载（UnloadMixin），而 MixinBuilderUi.cs 提供 GUI 端的 Mixin 构建体验。通过 Mixin 系统，第三方插件可以在不修改核心代码的情况下，为测试步骤增加验证规则、结果监听、资源管理等功能。",
+    "nodeIds": ["file:Engine/Mixins/IMixin.cs", "file:Engine/Mixins/MixinFactory.cs", "file:Engine/Mixins/MixinBuilderUi.cs"],
+    "languageLesson": "Mixin（混入）模式是 traits/mixins 设计模式在 C# 中的实现，通过接口 + 扩展方法 + 事件钩子的组合，实现了类似多重继承的效果。与传统的继承相比，Mixin 允许在不修改基类的情况下组合多个独立行为，极大地增强了框架的可扩展性。"
+  },
+  {
+    "order": 8,
+    "title": "核心引擎 -- 插件系统",
+    "description": "PluginManager.cs 是 OpenTAP 插件系统的核心管理器，负责插件搜索、加载、程序集解析、类型定位和插件版本查询。AssemblyFinder.cs 在指定目录中搜索 OpenTAP 插件程序集，支持依赖包含和增量搜索。AssemblyData.cs 封装了程序集的加载、类型发现和语义版本信息注册。这三者构成了完整的插件发现与加载流水线，使 OpenTAP 能够在运行时动态加载用户开发的测试插件。",
+    "nodeIds": ["file:Engine/PluginManager.cs", "file:Engine/AssemblyFinder.cs", "file:Engine/AssemblyData.cs"],
+    "languageLesson": "C# 的 Assembly.Load 和 AssemblyLoadContext 提供了运行时代码加载能力。OpenTAP 的插件系统在此基础上实现了依赖解析、版本管理和隔离加载，确保不同版本的插件可以在同一进程中共存而不冲突。"
+  },
+  {
+    "order": 9,
+    "title": "核心引擎 -- 测试执行、参数化与线程管理",
+    "description": "TestPlanRun.cs 管理测试运行实例的生命周期，负责结果监听器（IResultListener）的注册与通知、步骤运行的调度与节流以及 Artifact 发布。ParameterManager.cs 提供测试步骤参数化的核心功能，包括参数的创建、编辑、移除、反参数化以及数据流连接的健全性检查。ThreadManager.cs 提供层次化线程（TapThread）和工作线程池，通过 ThreadField 实现线程局部存储，确保并发测试执行时的上下文正确传播。",
+    "nodeIds": ["file:Engine/TestPlanRun.cs", "file:Engine/ParameterManager.cs", "file:Engine/ThreadManager.cs"],
+    "languageLesson": "ThreadLocal<T> 和 AsyncLocal<T> 是 .NET 中两种线程/异步上下文局部存储机制。OpenTAP 的 TapThread 和 ThreadField 在此基础上实现了层次化线程模型，使得父线程可以将上下文信息传递给子线程，这对于测试执行时追踪每个步骤的日志和作用域至关重要。"
+  },
+  {
+    "order": 10,
+    "title": "核心引擎 -- 配置与日志",
+    "description": "ComponentSettings.cs 是 OpenTAP 组件设置的全局管理入口，提供静态 API 用于获取/设置/保存组件配置，支持设置分组和配置文件切换，是插件持久化配置的核心基础设施。EngineSettings.cs 管理 SessionLogPath、OperatorName、StationName 等核心运行时设置。Log.cs 定义了完整的日志事件系统，包括事件类型枚举、TraceSource、TraceListener 和 TextWriterTraceListener，提供结构化日志记录和监听器管理能力。",
+    "nodeIds": ["file:Engine/ComponentSettings.cs", "file:Engine/EngineSettings.cs", "file:Engine/Log.cs"]
+  },
+  {
+    "order": 11,
+    "title": "内置测试插件 -- Sweep 参数扫描",
+    "description": "SweepLoop.cs 是 OpenTAP 内置的核心测试步骤，支持在循环中扫描指定参数或设置，支持跨运行（Across Runs）和运行内（Within Run）两种扫描模式。SweepLoopRange.cs 扩展了 Sweep Loop 的概念，通过线性或指数增长函数在指定数值范围内扫描参数。SweepParam.cs 封装了扫描参数名称、值数组和默认值。这些内置步骤展示了如何基于 TestStep 基类构建可复用的测试插件。",
+    "nodeIds": ["file:BasicSteps/SweepLoop.cs", "file:BasicSteps/SweepLoopRange.cs", "file:BasicSteps/SweepParam.cs"],
+    "languageLesson": "Sweep（参数扫描）是自动化测试中的核心模式，类似于单元测试框架中的 [Theory] 或 pytest 的 parametrize。通过将参数值与测试逻辑分离，同一个测试步骤可以覆盖多种输入组合，极大地减少测试用例的维护成本。"
+  },
+  {
+    "order": 12,
+    "title": "包管理与分发",
+    "description": "OpenTAP 拥有完整的包管理生态系统。Package.cs（PackageDefExt）提供从 XML 加载、解析依赖到创建/压缩 TapPackage 的完整流水线。PluginInstaller.cs 负责包的解压、文件安装、EULA 接受和卸载清理。ImageIdentifier.cs、ImageSpecifier.cs 和 ImageResolver.cs 共同构成镜像（Image）子系统 -- ImageSpecifier 定义所需的包集合与版本规范，ImageResolver 解析依赖并处理版本冲突，ImageIdentifier 表示已解析的安装镜像并支持部署、缓存和安装操作。package.xml 是包清单文件，定义包元信息、平台条件、各 DLL 的包含与签名规则。",
+    "nodeIds": ["file:Package/CreatePackage/Package.cs", "file:Package/PluginInstaller.cs", "file:Package/Image/ImageIdentifier.cs", "file:Package/Image/ImageSpecifier.cs", "file:Package/Image/ImageResolver.cs", "config:package.xml"],
+    "languageLesson": "语义版本控制（Semantic Versioning, SemVer）是 OpenTAP 包管理的基础。版本号格式为 Major.Minor.Patch[-PreRelease+BuildMetadata]。ImageResolver 在解析依赖时使用版本范围约束（如 >=1.0.0 <2.0.0），确保安装的包集合满足所有互操作性要求。"
+  },
+  {
+    "order": 13,
+    "title": "容器化与 CI/CD",
+    "description": "docker/Linux/Dockerfile 使用多阶段构建生成 OpenTAP 的 Linux 容器镜像：开发阶段基于 .NET SDK 9.0 解包 TapPackage，生产阶段基于 .NET Runtime 9.0 构建精简镜像，安全加固阶段创建非 root 用户以最小权限运行。.github/workflows/ci.yml 是主 CI/CD 流水线，涵盖版本获取、跨平台构建（Windows/Linux/MacOS）、单元测试、文档生成、打包签名、Docker 镜像构建以及 NuGet/TapPackage 发布的全流程自动化。",
+    "nodeIds": ["service:docker/Linux/Dockerfile", "pipeline:.github/workflows/ci.yml"],
+    "languageLesson": "多阶段 Docker 构建（Multi-stage Build）使用多个 FROM 指令：构建阶段包含完整的 SDK 和编译工具链，生成制品后仅将运行时必需的文件复制到最终镜像中。这可以将镜像体积缩小 50-80%，同时避免将编译工具和源代码暴露在生产环境中。"
+  },
+  {
+    "order": 14,
+    "title": "开发者文档与 SDK",
+    "description": "Developer Guide/Readme.md 是开发者指南的目录，整合了从入门、插件开发、资源管理到迁移 .NET 9 的完整知识体系。doc/.vitepress/config.mts 是 VitePress 站点配置文件，定义了文档站的导航栏、侧边栏结构和搜索功能。sdk/OpenTap.Sdk.New/GeneratePlugin.cs 是 SDK 的代码生成器，展示了如何从嵌入资源模板生成 DUT、Instrument、ResultListener 等 8 种插件骨架代码，是开发者自定义插件的起点。",
+    "nodeIds": ["document:doc/Developer Guide/Readme.md", "file:doc/.vitepress/config.mts", "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs"],
+    "languageLesson": "VitePress 是基于 Vite 和 Vue 3 的静态站点生成器，专为技术文档优化。它支持 Markdown 编写、自动侧边栏生成和 Algolia 全文搜索。OpenTAP 使用 VitePress 将开发者指南、API 文档和用户手册集成为统一的文档站点。"
+  }
+]

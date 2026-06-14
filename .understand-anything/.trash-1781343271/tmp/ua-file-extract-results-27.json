@@ -1,0 +1,2351 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "Engine/ExceptionCustomStackTrace.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 16,
+      "functions": [
+        {
+          "name": "ExceptionCustomStackTrace",
+          "startLine": 10,
+          "endLine": 14,
+          "params": [
+            "message",
+            "stackTrace",
+            "innerException"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExceptionCustomStackTrace",
+          "startLine": 8,
+          "endLine": 17,
+          "methods": [
+            "ExceptionCustomStackTrace"
+          ],
+          "properties": [
+            "StackTrace"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExceptionCustomStackTrace",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "StackTrace",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/ExternalParameterAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "ExternalParameterAttribute",
+          "startLine": 20,
+          "endLine": 23,
+          "params": [
+            "Name"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExternalParameterAttribute",
+          "startLine": 8,
+          "endLine": 24,
+          "methods": [
+            "ExternalParameterAttribute"
+          ],
+          "properties": [
+            "Name"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Name",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "ExternalParameterAttribute",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "ExternalParameterAttribute",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/ExternalParameters.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 205,
+      "nonEmptyLines": 183,
+      "functions": [
+        {
+          "name": "Clean",
+          "startLine": 38,
+          "endLine": 45,
+          "params": [
+            "steps"
+          ]
+        },
+        {
+          "name": "GetProperties",
+          "startLine": 50,
+          "endLine": 53,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "ExternalParameter",
+          "startLine": 60,
+          "endLine": 65,
+          "params": [
+            "Plan",
+            "Name"
+          ]
+        },
+        {
+          "name": "ExternalParameter",
+          "startLine": 67,
+          "endLine": 72,
+          "params": [
+            "plan",
+            "parameter"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 77,
+          "endLine": 84,
+          "params": [
+            "step",
+            "property"
+          ]
+        },
+        {
+          "name": "Remove",
+          "startLine": 88,
+          "endLine": 95,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "ExternalParameters",
+          "startLine": 116,
+          "endLine": 119,
+          "params": [
+            "plan"
+          ]
+        },
+        {
+          "name": "Add",
+          "startLine": 126,
+          "endLine": 150,
+          "params": [
+            "step",
+            "setting",
+            "Name"
+          ]
+        },
+        {
+          "name": "Remove",
+          "startLine": 156,
+          "endLine": 167,
+          "params": [
+            "step",
+            "propertyInfo",
+            "name"
+          ]
+        },
+        {
+          "name": "Clean",
+          "startLine": 170,
+          "endLine": 175,
+          "params": []
+        },
+        {
+          "name": "Get",
+          "startLine": 180,
+          "endLine": 185,
+          "params": [
+            "externalParameterName"
+          ]
+        },
+        {
+          "name": "Find",
+          "startLine": 193,
+          "endLine": 203,
+          "params": [
+            "step",
+            "property"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExternalParameter",
+          "startLine": 12,
+          "endLine": 96,
+          "methods": [
+            "Clean",
+            "GetProperties",
+            "ExternalParameter",
+            "ExternalParameter",
+            "Add",
+            "Remove"
+          ],
+          "properties": [
+            "Name",
+            "plan",
+            "Properties",
+            "PropertyInfos",
+            "Value",
+            "member"
+          ]
+        },
+        {
+          "name": "ExternalParameters",
+          "startLine": 99,
+          "endLine": 204,
+          "methods": [
+            "ExternalParameters",
+            "Add",
+            "Remove",
+            "Clean",
+            "Get",
+            "Find"
+          ],
+          "properties": [
+            "Entries",
+            "plan",
+            "log"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Name",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "Properties",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "PropertyInfos",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "Value",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "GetProperties",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "ExternalParameter",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "Remove",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "ExternalParameter",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "Entries",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "ExternalParameters",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "Add",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "Remove",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "Clean",
+          "line": 170,
+          "isDefault": false
+        },
+        {
+          "name": "Get",
+          "line": 180,
+          "isDefault": false
+        },
+        {
+          "name": "Find",
+          "line": 193,
+          "isDefault": false
+        },
+        {
+          "name": "ExternalParameters",
+          "line": 99,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Clean",
+          "callee": "member.ParameterizedMembers\n                .Where(x => steps.Contains(x.Source) == false)\n                .ToArray",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Clean",
+          "callee": "member.ParameterizedMembers\n                .Where",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Clean",
+          "callee": "steps.Contains",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Clean",
+          "callee": "item.Member.Unparameterize",
+          "lineNumber": 44
+        },
+        {
+          "caller": "GetProperties",
+          "callee": "Properties.Where(x => x.Key == step).SelectMany(x => x.Value).ToList",
+          "lineNumber": 52
+        },
+        {
+          "caller": "GetProperties",
+          "callee": "Properties.Where(x => x.Key == step).SelectMany",
+          "lineNumber": 52
+        },
+        {
+          "caller": "GetProperties",
+          "callee": "Properties.Where",
+          "lineNumber": 52
+        },
+        {
+          "caller": "ExternalParameter",
+          "callee": "TypeData.GetTypeData(plan).GetMember",
+          "lineNumber": 64
+        },
+        {
+          "caller": "ExternalParameter",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 64
+        },
+        {
+          "caller": "Add",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 80
+        },
+        {
+          "caller": "Add",
+          "callee": "nameof",
+          "lineNumber": 80
+        },
+        {
+          "caller": "Add",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 82
+        },
+        {
+          "caller": "Add",
+          "callee": "nameof",
+          "lineNumber": 82
+        },
+        {
+          "caller": "Add",
+          "callee": "plan.ExternalParameters.Add",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Remove",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Remove",
+          "callee": "nameof",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Remove",
+          "callee": "members.Where",
+          "lineNumber": 93
+        },
+        {
+          "caller": "Remove",
+          "callee": "item.Member.Unparameterize",
+          "lineNumber": 94
+        },
+        {
+          "caller": "Add",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 129
+        },
+        {
+          "caller": "Add",
+          "callee": "nameof",
+          "lineNumber": 129
+        },
+        {
+          "caller": "Add",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 131
+        },
+        {
+          "caller": "Add",
+          "callee": "nameof",
+          "lineNumber": 131
+        },
+        {
+          "caller": "Add",
+          "callee": "Find",
+          "lineNumber": 132
+        },
+        {
+          "caller": "Add",
+          "callee": "setting.GetDisplayAttribute().GetFullName",
+          "lineNumber": 136
+        },
+        {
+          "caller": "Add",
+          "callee": "setting.GetDisplayAttribute",
+          "lineNumber": 136
+        },
+        {
+          "caller": "Add",
+          "callee": "setting.Parameterize",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Add",
+          "callee": "newParameter.ParameterizedMembers.Skip(1).Any",
+          "lineNumber": 138
+        },
+        {
+          "caller": "Add",
+          "callee": "newParameter.ParameterizedMembers.Skip",
+          "lineNumber": 138
+        },
+        {
+          "caller": "Add",
+          "callee": "ParameterManager.UnmergableListType",
+          "lineNumber": 142
+        },
+        {
+          "caller": "Add",
+          "callee": "setting.Unparameterize",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Add",
+          "callee": "log.Warning",
+          "lineNumber": 145
+        },
+        {
+          "caller": "Add",
+          "callee": "Get",
+          "lineNumber": 149
+        },
+        {
+          "caller": "Remove",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 159
+        },
+        {
+          "caller": "Remove",
+          "callee": "nameof",
+          "lineNumber": 159
+        },
+        {
+          "caller": "Remove",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 161
+        },
+        {
+          "caller": "Remove",
+          "callee": "nameof",
+          "lineNumber": 161
+        },
+        {
+          "caller": "Remove",
+          "callee": "propertyInfo.GetParameter",
+          "lineNumber": 162
+        },
+        {
+          "caller": "Remove",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 165
+        },
+        {
+          "caller": "Remove",
+          "callee": "propertyInfo.Unparameterize",
+          "lineNumber": 166
+        },
+        {
+          "caller": "Clean",
+          "callee": "Utils.FlattenHeirarchy(plan.ChildTestSteps, step => step.ChildTestSteps).ToHashSet",
+          "lineNumber": 172
+        },
+        {
+          "caller": "Clean",
+          "callee": "Utils.FlattenHeirarchy",
+          "lineNumber": 172
+        },
+        {
+          "caller": "Clean",
+          "callee": "Entries.ToList",
+          "lineNumber": 173
+        },
+        {
+          "caller": "Clean",
+          "callee": "entry.Clean",
+          "lineNumber": 174
+        },
+        {
+          "caller": "Get",
+          "callee": "TypeData.GetTypeData(plan).GetMember",
+          "lineNumber": 182
+        },
+        {
+          "caller": "Get",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 182
+        },
+        {
+          "caller": "Get",
+          "callee": "new ExternalParameter",
+          "lineNumber": 183
+        },
+        {
+          "caller": "Find",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 196
+        },
+        {
+          "caller": "Find",
+          "callee": "nameof",
+          "lineNumber": 196
+        },
+        {
+          "caller": "Find",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 198
+        },
+        {
+          "caller": "Find",
+          "callee": "nameof",
+          "lineNumber": 198
+        },
+        {
+          "caller": "Find",
+          "callee": "property.GetParameter",
+          "lineNumber": 199
+        },
+        {
+          "caller": "Find",
+          "callee": "new ExternalParameter",
+          "lineNumber": 201
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 17,
+        "functionCount": 12,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/FactoryAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 71,
+      "functions": [
+        {
+          "name": "FactoryAttribute",
+          "startLine": 21,
+          "endLine": 24,
+          "params": [
+            "factoryMethodName"
+          ]
+        },
+        {
+          "name": "Create",
+          "startLine": 27,
+          "endLine": 37,
+          "params": [
+            "ownerObj",
+            "factoryAttribute"
+          ]
+        },
+        {
+          "name": "TryCreateFromMember",
+          "startLine": 40,
+          "endLine": 64,
+          "params": [
+            "member",
+            "factoryAttribute",
+            "obj"
+          ]
+        },
+        {
+          "name": "ElementFactoryAttribute",
+          "startLine": 74,
+          "endLine": 77,
+          "params": [
+            "factoryMethodName"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IFactoryAttribute",
+          "startLine": 8,
+          "endLine": 11,
+          "methods": [],
+          "properties": [
+            "FactoryMethodName"
+          ]
+        },
+        {
+          "name": "FactoryAttribute",
+          "startLine": 14,
+          "endLine": 65,
+          "methods": [
+            "FactoryAttribute",
+            "Create",
+            "TryCreateFromMember"
+          ],
+          "properties": [
+            "FactoryMethodName"
+          ]
+        },
+        {
+          "name": "ElementFactoryAttribute",
+          "startLine": 68,
+          "endLine": 78,
+          "methods": [
+            "ElementFactoryAttribute"
+          ],
+          "properties": [
+            "FactoryMethodName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FactoryMethodName",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "FactoryAttribute",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "FactoryAttribute",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "FactoryMethodName",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "ElementFactoryAttribute",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "ElementFactoryAttribute",
+          "line": 68,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Create",
+          "callee": "ownerObj.GetType",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Create",
+          "callee": "type.GetMethod",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Create",
+          "callee": "new Exception",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Create",
+          "callee": "fac.Invoke",
+          "lineNumber": 36
+        },
+        {
+          "caller": "TryCreateFromMember",
+          "callee": "Create",
+          "lineNumber": 50
+        },
+        {
+          "caller": "TryCreateFromMember",
+          "callee": "TryCreateFromMember",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 4,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "Engine/FileDependencyAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "FileDependencyAttribute",
+          "startLine": 9,
+          "endLine": 12,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FileDependencyAttribute",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/FilePathAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 118,
+      "nonEmptyLines": 99,
+      "functions": [
+        {
+          "name": "FilePathAttribute",
+          "startLine": 34,
+          "endLine": 38,
+          "params": []
+        },
+        {
+          "name": "validateFileFilter",
+          "startLine": 53,
+          "endLine": 89,
+          "params": [
+            "str"
+          ]
+        },
+        {
+          "name": "FilePathAttribute",
+          "startLine": 94,
+          "endLine": 100,
+          "params": [
+            "behavior",
+            "fileExtension"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FilePathAttribute",
+          "startLine": 14,
+          "endLine": 116,
+          "methods": [
+            "FilePathAttribute",
+            "validateFileFilter",
+            "FilePathAttribute"
+          ],
+          "properties": [
+            "FileExtension",
+            "OverwritePrompt",
+            "Behavior",
+            "invalidchars"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FileExtension",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "OverwritePrompt",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "Behavior",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "FilePathAttribute",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "FilePathAttribute",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "FilePathAttribute",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "validateFileFilter",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 55
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "str.Contains",
+          "lineNumber": 56
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "str.Split",
+          "lineNumber": 57
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "new InvalidFilterSpecification",
+          "lineNumber": 58
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "value.Contains",
+          "lineNumber": 62
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "new InvalidFilterSpecification",
+          "lineNumber": 63
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "value.Contains",
+          "lineNumber": 64
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "new InvalidFilterSpecification",
+          "lineNumber": 65
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "value.Split",
+          "lineNumber": 66
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "filter.Trim",
+          "lineNumber": 69
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "filter2.StartsWith",
+          "lineNumber": 71
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "new InvalidFilterSpecification",
+          "lineNumber": 72
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "filter2.Substring",
+          "lineNumber": 73
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "invalidchars.Contains",
+          "lineNumber": 80
+        },
+        {
+          "caller": "validateFileFilter",
+          "callee": "new InvalidFilterSpecification",
+          "lineNumber": 81
+        },
+        {
+          "caller": "FilePathAttribute",
+          "callee": "validateFileFilter",
+          "lineNumber": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/FileTraceListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 194,
+      "nonEmptyLines": 172,
+      "functions": [
+        {
+          "name": "FileTraceListener",
+          "startLine": 33,
+          "endLine": 38,
+          "params": [
+            "fileName"
+          ]
+        },
+        {
+          "name": "FileTraceListener",
+          "startLine": 50,
+          "endLine": 52,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "ChangeFileName",
+          "startLine": 61,
+          "endLine": 97,
+          "params": [
+            "fileName",
+            "noExclusiveWriteLock",
+            "startNewLog"
+          ]
+        },
+        {
+          "name": "TraceEvents",
+          "startLine": 102,
+          "endLine": 192,
+          "params": [
+            "events"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FileTraceListener",
+          "startLine": 18,
+          "endLine": 193,
+          "methods": [
+            "FileTraceListener",
+            "FileTraceListener",
+            "ChangeFileName",
+            "TraceEvents"
+          ],
+          "properties": [
+            "_fileName",
+            "IsRelative",
+            "FileName",
+            "FileSizeLimit",
+            "first_timestamp",
+            "_sb",
+            "fileTraceLock"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IsRelative",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "FileName",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "FileTraceListener",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "FileSizeLimit",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "FileTraceListener",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvents",
+          "line": 102,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FileTraceListener",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 36
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 63
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 64
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 65
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 65
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "new FileStream",
+          "lineNumber": 71
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "new StreamWriter",
+          "lineNumber": 72
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "new StreamWriter",
+          "lineNumber": 79
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "OldWriter.Close",
+          "lineNumber": 88
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "Writer.Write",
+          "lineNumber": 92
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "File.ReadAllText",
+          "lineNumber": 92
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "File.Delete",
+          "lineNumber": 93
+        },
+        {
+          "caller": "ChangeFileName",
+          "callee": "Path.GetFullPath",
+          "lineNumber": 96
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 108
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "nameof",
+          "lineNumber": 108
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Clear",
+          "lineNumber": 112
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "TimeSpan.FromTicks",
+          "lineNumber": 125
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "elapsed.ToString",
+          "lineNumber": 126
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "new DateTime",
+          "lineNumber": 130
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "time.ToString",
+          "lineNumber": 131
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 136
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 137
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 138
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 141
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 143
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 147
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 150
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 153
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 156
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 160
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 168
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.Append",
+          "lineNumber": 174
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.AppendLine",
+          "lineNumber": 179
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "sb.ToString",
+          "lineNumber": 181
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "Write",
+          "lineNumber": 184
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "FileSizeLimitReached",
+          "lineNumber": 189
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/FodyWeavers.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "metrics": {}
+    },
+    {
+      "path": "Engine/HelpLinkAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 33,
+      "functions": [
+        {
+          "name": "HelpLinkAttribute",
+          "startLine": 23,
+          "endLine": 26,
+          "params": [
+            "helpLink"
+          ]
+        },
+        {
+          "name": "HelpLinkAttribute",
+          "startLine": 31,
+          "endLine": 34,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HelpLinkAttribute",
+          "startLine": 12,
+          "endLine": 35,
+          "methods": [
+            "HelpLinkAttribute",
+            "HelpLinkAttribute"
+          ],
+          "properties": [
+            "HelpLink"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "HelpLink",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "HelpLinkAttribute",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "HelpLinkAttribute",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "HelpLinkAttribute",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/HttpUtils.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 15,
+      "functions": [
+        {
+          "name": "TransientStatusCode",
+          "startLine": 6,
+          "endLine": 14,
+          "params": [
+            "resultStatusCode"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "HttpUtils",
+          "startLine": 4,
+          "endLine": 15,
+          "methods": [
+            "TransientStatusCode"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TransientStatusCode",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/HybridStream.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 203,
+      "nonEmptyLines": 168,
+      "functions": [
+        {
+          "name": "HybridStream",
+          "startLine": 105,
+          "endLine": 108,
+          "params": []
+        },
+        {
+          "name": "HybridStream",
+          "startLine": 110,
+          "endLine": 114,
+          "params": [
+            "filename",
+            "threshold"
+          ]
+        },
+        {
+          "name": "Read",
+          "startLine": 125,
+          "endLine": 125,
+          "params": [
+            "buffer",
+            "offset",
+            "count"
+          ]
+        },
+        {
+          "name": "Seek",
+          "startLine": 126,
+          "endLine": 126,
+          "params": [
+            "offset",
+            "origin"
+          ]
+        },
+        {
+          "name": "SetLength",
+          "startLine": 127,
+          "endLine": 127,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "GetPosition",
+          "startLine": 133,
+          "endLine": 137,
+          "params": []
+        },
+        {
+          "name": "GetLength",
+          "startLine": 139,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "Flush",
+          "startLine": 145,
+          "endLine": 149,
+          "params": []
+        },
+        {
+          "name": "Write",
+          "startLine": 151,
+          "endLine": 159,
+          "params": [
+            "buffer",
+            "offset",
+            "count"
+          ]
+        },
+        {
+          "name": "checkTrigger",
+          "startLine": 161,
+          "endLine": 165,
+          "params": []
+        },
+        {
+          "name": "ConvertToFile",
+          "startLine": 167,
+          "endLine": 176,
+          "params": []
+        },
+        {
+          "name": "GetViewStream",
+          "startLine": 178,
+          "endLine": 186,
+          "params": []
+        },
+        {
+          "name": "Close",
+          "startLine": 188,
+          "endLine": 200,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HybridStream",
+          "startLine": 10,
+          "endLine": 201,
+          "methods": [
+            "HybridStream",
+            "HybridStream",
+            "Read",
+            "Seek",
+            "SetLength",
+            "GetPosition",
+            "GetLength",
+            "Flush",
+            "Write",
+            "checkTrigger",
+            "ConvertToFile",
+            "GetViewStream",
+            "Close"
+          ],
+          "properties": [
+            "lockObject",
+            "stream",
+            "MemoryThreshold",
+            "Filename",
+            "CanRead",
+            "CanSeek",
+            "CanWrite",
+            "Length",
+            "Position"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "HybridStream",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "HybridStream",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "MemoryThreshold",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "Filename",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "CanRead",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "CanSeek",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "CanWrite",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "Read",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "Seek",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "SetLength",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "Length",
+          "line": 129,
+          "isDefault": false
+        },
+        {
+          "name": "Position",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "Flush",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "Write",
+          "line": 151,
+          "isDefault": false
+        },
+        {
+          "name": "ConvertToFile",
+          "line": 167,
+          "isDefault": false
+        },
+        {
+          "name": "GetViewStream",
+          "line": 178,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 188,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Read",
+          "callee": "new ArgumentOutOfRangeException",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Read",
+          "callee": "new ArgumentOutOfRangeException",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Read",
+          "callee": "Array.Copy",
+          "lineNumber": 57
+        },
+        {
+          "caller": "SetLength",
+          "callee": "new NotSupportedException",
+          "lineNumber": 90
+        },
+        {
+          "caller": "Write",
+          "callee": "new NotSupportedException",
+          "lineNumber": 95
+        },
+        {
+          "caller": "HybridStream",
+          "callee": "FileSystemHelper.CreateTempFile",
+          "lineNumber": 105
+        },
+        {
+          "caller": "Read",
+          "callee": "new NotSupportedException",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Seek",
+          "callee": "new NotSupportedException",
+          "lineNumber": 126
+        },
+        {
+          "caller": "SetLength",
+          "callee": "new NotSupportedException",
+          "lineNumber": 127
+        },
+        {
+          "caller": "Flush",
+          "callee": "stream.Flush",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Write",
+          "callee": "stream.Write",
+          "lineNumber": 155
+        },
+        {
+          "caller": "Write",
+          "callee": "checkTrigger",
+          "lineNumber": 157
+        },
+        {
+          "caller": "checkTrigger",
+          "callee": "ConvertToFile",
+          "lineNumber": 164
+        },
+        {
+          "caller": "ConvertToFile",
+          "callee": "new FileStream",
+          "lineNumber": 171
+        },
+        {
+          "caller": "ConvertToFile",
+          "callee": "fileStream.Write",
+          "lineNumber": 172
+        },
+        {
+          "caller": "ConvertToFile",
+          "callee": "((MemoryStream)stream).GetBuffer",
+          "lineNumber": 172
+        },
+        {
+          "caller": "ConvertToFile",
+          "callee": "stream.Dispose",
+          "lineNumber": 173
+        },
+        {
+          "caller": "GetViewStream",
+          "callee": "new FileStream",
+          "lineNumber": 183
+        },
+        {
+          "caller": "GetViewStream",
+          "callee": "new MemViewStream",
+          "lineNumber": 184
+        },
+        {
+          "caller": "GetViewStream",
+          "callee": "((MemoryStream)stream).GetBuffer",
+          "lineNumber": 184
+        },
+        {
+          "caller": "Close",
+          "callee": "stream.Close",
+          "lineNumber": 194
+        },
+        {
+          "caller": "Close",
+          "callee": "base.Close",
+          "lineNumber": 199
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 17,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IArtifactListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "IArtifactListener",
+          "startLine": 5,
+          "endLine": 13,
+          "methods": [
+            "OnArtifactPublished"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IArtifactListener",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IDeviceDiscovery.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 32,
+      "classes": [
+        {
+          "name": "DeviceAddressAttribute",
+          "startLine": 12,
+          "endLine": 14,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "IDeviceDiscovery",
+          "startLine": 17,
+          "endLine": 29,
+          "methods": [
+            "CanDetect",
+            "DetectDeviceAddresses"
+          ],
+          "properties": []
+        },
+        {
+          "name": "VisaAddressAttribute",
+          "startLine": 35,
+          "endLine": 36,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DeviceAddressAttribute",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "IDeviceDiscovery",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "VisaAddressAttribute",
+          "line": 35,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 0,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "Engine/IDut.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "IDut",
+          "startLine": 10,
+          "endLine": 13,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IDut",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IDynamicMemberData.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 9,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "IDynamicMemberData",
+          "startLine": 4,
+          "endLine": 8,
+          "methods": [],
+          "properties": [
+            "IsDisposed"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IDynamicMemberData",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IDynamicMemberProvider.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "IDynamicMemberProvider",
+          "startLine": 5,
+          "endLine": 9,
+          "methods": [
+            "GetDynamicMembers"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IDynamicMemberProvider",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IDynamicStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "IDynamicStep",
+          "startLine": 12,
+          "endLine": 21,
+          "methods": [
+            "GetStepFactoryType",
+            "GetStep"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IDynamicStep",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IExternalTestPlanParameterExport.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 29,
+      "classes": [
+        {
+          "name": "IExternalTestPlanParameterExport",
+          "startLine": 10,
+          "endLine": 30,
+          "methods": [
+            "ExportExternalParameters"
+          ],
+          "properties": [
+            "Extension",
+            "Name"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IExternalTestPlanParameterExport",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IExternalTestPlanParameterImport.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 33,
+      "classes": [
+        {
+          "name": "IExternalTestPlanParameterImport",
+          "startLine": 10,
+          "endLine": 34,
+          "methods": [
+            "ImportExternalParameters"
+          ],
+          "properties": [
+            "Extension",
+            "Name"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IExternalTestPlanParameterImport",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IFormatName.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "IFormatName",
+          "startLine": 6,
+          "endLine": 12,
+          "methods": [
+            "GetFormattedName"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IFormatName",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IInstrument.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "IInstrument",
+          "startLine": 10,
+          "endLine": 13,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IInstrument",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/ILockable.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 115,
+      "nonEmptyLines": 105,
+      "functions": [
+        {
+          "name": "ResourceReference",
+          "startLine": 31,
+          "endLine": 36,
+          "params": [
+            "obj",
+            "prop"
+          ]
+        },
+        {
+          "name": "ResourceReference",
+          "startLine": 39,
+          "endLine": 45,
+          "params": [
+            "obj",
+            "prop"
+          ]
+        },
+        {
+          "name": "LockManager",
+          "startLine": 87,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "BeforeOpen",
+          "startLine": 99,
+          "endLine": 105,
+          "params": [
+            "resources",
+            "cancellationToken"
+          ]
+        },
+        {
+          "name": "AfterClose",
+          "startLine": 107,
+          "endLine": 113,
+          "params": [
+            "resources",
+            "cancellationToken"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ResourceReference",
+          "startLine": 16,
+          "endLine": 46,
+          "methods": [
+            "ResourceReference",
+            "ResourceReference"
+          ],
+          "properties": [
+            "Instance",
+            "Property",
+            "Member"
+          ]
+        },
+        {
+          "name": "IResourceReferences",
+          "startLine": 51,
+          "endLine": 61,
+          "methods": [],
+          "properties": [
+            "Resource",
+            "References"
+          ]
+        },
+        {
+          "name": "ILockManager",
+          "startLine": 66,
+          "endLine": 81,
+          "methods": [
+            "BeforeOpen",
+            "AfterClose"
+          ],
+          "properties": []
+        },
+        {
+          "name": "LockManager",
+          "startLine": 83,
+          "endLine": 114,
+          "methods": [
+            "LockManager",
+            "BeforeOpen",
+            "AfterClose"
+          ],
+          "properties": [
+            "managers",
+            "log"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Instance",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "Property",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "Member",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "ResourceReference",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "ResourceReference",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "ResourceReference",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "IResourceReferences",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "ILockManager",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "LockManager",
+          "line": 87,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ResourceReference",
+          "callee": "MemberData.Create",
+          "lineNumber": 35
+        },
+        {
+          "caller": "LockManager",
+          "callee": "PluginManager.GetPlugins<ILockManager>()\n                .OrderByDescending(t => t.GetDisplayAttribute().Order)\n                .TrySelect(t => (ILockManager)t.CreateInstance(), (ex, t) =>\n                {\n                    log.Error(\"Unable to create an instance of {0}: {1}\", t, ex.Message);\n                    log.Debug(ex);\n                })\n                .ToArray",
+          "lineNumber": 89
+        },
+        {
+          "caller": "LockManager",
+          "callee": "PluginManager.GetPlugins<ILockManager>()\n                .OrderByDescending(t => t.GetDisplayAttribute().Order)\n                .TrySelect",
+          "lineNumber": 89
+        },
+        {
+          "caller": "LockManager",
+          "callee": "PluginManager.GetPlugins<ILockManager>()\n                .OrderByDescending",
+          "lineNumber": 89
+        },
+        {
+          "caller": "LockManager",
+          "callee": "PluginManager.GetPlugins<ILockManager>",
+          "lineNumber": 89
+        },
+        {
+          "caller": "LockManager",
+          "callee": "t.GetDisplayAttribute",
+          "lineNumber": 90
+        },
+        {
+          "caller": "LockManager",
+          "callee": "t.CreateInstance",
+          "lineNumber": 91
+        },
+        {
+          "caller": "LockManager",
+          "callee": "log.Error",
+          "lineNumber": 93
+        },
+        {
+          "caller": "LockManager",
+          "callee": "log.Debug",
+          "lineNumber": 94
+        },
+        {
+          "caller": "BeforeOpen",
+          "callee": "lockManager.BeforeOpen",
+          "lineNumber": 103
+        },
+        {
+          "caller": "AfterClose",
+          "callee": "Enumerable.Reverse",
+          "lineNumber": 109
+        },
+        {
+          "caller": "AfterClose",
+          "callee": "lockManager.AfterClose",
+          "lineNumber": 111
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 5,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "Engine/ILoopStep.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "ILoopStep",
+          "startLine": 6,
+          "endLine": 12,
+          "methods": [],
+          "properties": [
+            "CurrentIteration",
+            "MaxIterations"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ILoopStep",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/IMergedTableResultsListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 8,
+      "nonEmptyLines": 7,
+      "classes": [
+        {
+          "name": "IMergedTableResultListener",
+          "startLine": 4,
+          "endLine": 7,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IMergedTableResultListener",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/INotifyActivity.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "INotifyActivity",
+          "startLine": 12,
+          "endLine": 23,
+          "methods": [
+            "OnActivity"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "INotifyActivity",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

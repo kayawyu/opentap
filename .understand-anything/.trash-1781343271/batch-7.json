@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "document:Installer/Assets/Dotnet.Glob.License.txt",
+      "type": "document",
+      "name": "Dotnet.Glob.License.txt",
+      "filePath": "Installer/Assets/Dotnet.Glob.License.txt",
+      "summary": "Dotnet.Glob 库的 MIT 许可证文件，版权归 Darrell Tunnell 所有（2015 年至今），允许自由使用、修改和分发。",
+      "tags": ["documentation", "license", "mit-license", "third-party", "dotnet-glob"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:Installer/Assets/Mono.Cecil.License.txt",
+      "type": "document",
+      "name": "Mono.Cecil.License.txt",
+      "filePath": "Installer/Assets/Mono.Cecil.License.txt",
+      "summary": "Mono.Cecil 库的 MIT 许可证文件，版权归 Jb Evain 和 Novell, Inc. 所有，涵盖该 IL 程序集处理库的开源许可条款。",
+      "tags": ["documentation", "license", "mit-license", "third-party", "mono-cecil"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:Installer/Assets/dotnet_library_license.txt",
+      "type": "document",
+      "name": "dotnet_library_license.txt",
+      "filePath": "Installer/Assets/dotnet_library_license.txt",
+      "summary": "Microsoft .NET 库的专有软件许可条款，涵盖安装使用权利、可分发包代码规则、数据收集声明、出口限制及双语（英法）法律条款。",
+      "tags": ["documentation", "license", "microsoft", "third-party", "dotnet-library"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:Installer/Assets/dotnet_mit_license.txt",
+      "type": "document",
+      "name": "dotnet_mit_license.txt",
+      "filePath": "Installer/Assets/dotnet_mit_license.txt",
+      "summary": ".NET Foundation 和 Contributors 的 MIT 许可证文件，涵盖 .NET 相关开源组件的许可条款。",
+      "tags": ["documentation", "license", "mit-license", "dotnet", "third-party"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:Installer/Assets/libgit2sharp.license.md",
+      "type": "document",
+      "name": "libgit2sharp.license.md",
+      "filePath": "Installer/Assets/libgit2sharp.license.md",
+      "summary": "LibGit2Sharp 贡献者的 MIT 许可证文件，允许自由使用、修改和分发该 Git 库绑定软件。",
+      "tags": ["documentation", "license", "mit-license", "third-party", "libgit2sharp"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:Installer/Assets/newtonsoft_mit_license.txt",
+      "type": "document",
+      "name": "newtonsoft_mit_license.txt",
+      "filePath": "Installer/Assets/newtonsoft_mit_license.txt",
+      "summary": "Newtonsoft（James Newton-King，2007 年）的 MIT 许可证文件，涵盖 Json.NET 库的开源许可条款。",
+      "tags": ["documentation", "license", "mit-license", "third-party", "newtonsoft"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Installer/Assets/opentap.installer.linux.xml",
+      "type": "config",
+      "name": "opentap.installer.linux.xml",
+      "filePath": "Installer/Assets/opentap.installer.linux.xml",
+      "summary": "适用于 Linux 系统的 OpenTAP 安装器配置，定义安装标识（GUID）、默认路径（~/.local/share/opentap）、核心 OpenTAP.TapPackage 以及可选的 SDK.TapPackage 组件。",
+      "tags": ["configuration", "installer", "linux", "package-management", "deployment"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Installer/Assets/opentap.installer.xml",
+      "type": "config",
+      "name": "opentap.installer.xml",
+      "filePath": "Installer/Assets/opentap.installer.xml",
+      "summary": "适用于 Windows 系统的 OpenTAP 安装器配置，定义安装标识（GUID）、默认路径、核心 OpenTAP.TapPackage 以及可选的 SDK.TapPackage 组件，由 Keysight Technologies 发布。",
+      "tags": ["configuration", "installer", "windows", "package-management", "deployment"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:Installer/Assets/opentap.installer.xml",
+      "target": "config:Installer/Assets/opentap.installer.linux.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

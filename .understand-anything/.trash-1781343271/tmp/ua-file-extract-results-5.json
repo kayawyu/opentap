@@ -1,0 +1,31 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "Engine.UnitTests/LegacyPlatformSettings.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 11,
+      "nonEmptyLines": 11,
+      "metrics": {}
+    },
+    {
+      "path": "Engine.UnitTests/LegacyResultSettings.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 7,
+      "nonEmptyLines": 7,
+      "metrics": {}
+    },
+    {
+      "path": "Engine.UnitTests/Tap.Engine.UnitTests.csproj",
+      "language": "csproj",
+      "fileCategory": "config",
+      "totalLines": 41,
+      "nonEmptyLines": 36,
+      "metrics": {}
+    }
+  ]
+}

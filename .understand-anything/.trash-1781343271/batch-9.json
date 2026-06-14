@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "config:Package.UnitTests/TapPackages/MyPlugin1.xml",
+      "type": "config",
+      "name": "MyPlugin1.xml",
+      "filePath": "Package.UnitTests/TapPackages/MyPlugin1.xml",
+      "summary": "TAP 插件包清单测试夹具，定义 MyPlugin1（版本 1.0.0），依赖 Tap ^7.0.605，包含 Tap.Plugins.MyPlugin1.Step 插件类，用于测试标准包加载场景。",
+      "tags": ["test-fixture", "package-manifest", "tap-plugin", "xml"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/TapPackages/MyPlugin2.xml",
+      "type": "config",
+      "name": "MyPlugin2.xml",
+      "filePath": "Package.UnitTests/TapPackages/MyPlugin2.xml",
+      "summary": "TAP 插件包清单测试夹具，定义 MyPlugin2（版本 1.2.3），依赖 Tap 8.0.605，包含 Tap.Plugins.MyPlugin1.Step 插件类，用于测试不同版本依赖的包加载场景。",
+      "tags": ["test-fixture", "package-manifest", "tap-plugin", "xml"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Package.UnitTests/TapPackages/MyPlugin3.xml",
+      "type": "config",
+      "name": "MyPlugin3.xml",
+      "filePath": "Package.UnitTests/TapPackages/MyPlugin3.xml",
+      "summary": "TAP 插件包清单测试夹具，定义 MyPlugin3（版本为空）、无依赖声明，包含 Tap.Plugins.MyPlugin1.Step 插件类，用于测试缺省版本与缺失依赖的边缘场景。",
+      "tags": ["test-fixture", "package-manifest", "tap-plugin", "xml"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,9 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": "Package.UnitTests/ExamplePackage.xml", "language": "xml", "sizeLines": 33, "fileCategory": "config"},
+    {"path": "Package.UnitTests/GitVersionDependency-package.xml", "language": "xml", "sizeLines": 14, "fileCategory": "config"},
+    {"path": "Package.UnitTests/Tap.Package.UnitTests.csproj", "language": "csproj", "sizeLines": 113, "fileCategory": "config"}
+  ],
+  "batchImportData": {"Package.UnitTests/ExamplePackage.xml":[],"Package.UnitTests/GitVersionDependency-package.xml":[],"Package.UnitTests/Tap.Package.UnitTests.csproj":[]}
+}

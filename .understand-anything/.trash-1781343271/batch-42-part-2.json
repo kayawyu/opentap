@@ -1,0 +1,584 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/Properties/AssemblyInfo.cs",
+      "summary": "程序集元数据配置文件，定义 AssemblyTitle、Company、Product 等属性以及 ComVisible 和 GUID 设置，标注 Apache 2.0 许可证和 Keysight 版权声明。",
+      "tags": ["configuration", "assembly", "metadata", "csharp"],
+      "complexity": "simple",
+      "languageNotes": "仅含程序集级别的 attribute 声明，不包含类或方法定义。"
+    },
+    {
+      "id": "config:sdk/Examples/PluginDevelopment/Properties/launchSettings.json",
+      "type": "config",
+      "name": "launchSettings.json",
+      "filePath": "sdk/Examples/PluginDevelopment/Properties/launchSettings.json",
+      "summary": "调试启动配置文件，定义三个启动配置：WPF Editor（editor.exe）、Editor X（tap.exe editorx）和 Terminal Editor（tap.exe tui），分别对应图形化编辑器和终端编辑器。",
+      "tags": ["configuration", "debugging", "launch-profile"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "type": "file",
+      "name": "EventResultListener.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "summary": "演示基于事件的结果监听器示例，在测试计划运行各阶段（启动、步骤开始、结果发布、步骤完成、计划完成）触发对应的自定义事件，并定义五个 EventArgs 派生类传递上下文数据。",
+      "tags": ["example", "result-listener", "event", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "type": "file",
+      "name": "ExampleResultListener.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "summary": "演示如何实现自定义 ResultListener 的示例，在测试计划运行各阶段打印日志并解析结果表格数据，展示使用 StringBuilder 格式化输出结果列和值的模式。",
+      "tags": ["example", "result-listener", "logging", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "type": "file",
+      "name": "ZipArtifactsResultListener.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "summary": "演示如何将测试产生的 Artifact 文件打包为 ZIP 的结果监听器示例，在测试计划开始时创建临时 ZIP 文件，监听 Artifact 发布事件并写入归档，计划完成后处理重命名和正式发布完整的 ZIP 文件。",
+      "tags": ["example", "result-listener", "zip", "artifact", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/AvailableValuesAttributeExample.cs",
+      "type": "file",
+      "name": "AvailableValuesAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/AvailableValuesAttributeExample.cs",
+      "summary": "演示 AvailableValues 属性的测试步骤示例，展示如何使用字符串列表限制可选值、支持多选 SelectedValues、以及通过 Duts 属性从可用资源中动态填充可选仪器列表。",
+      "tags": ["example", "test-step", "attribute", "available-values", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/BrowsableAttributeExample.cs",
+      "type": "file",
+      "name": "BrowsableAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/BrowsableAttributeExample.cs",
+      "summary": "演示 Browsable 属性的测试步骤示例，展示 Editable（可编辑）、HiddenFromGui（GUI 隐藏）和 ReadOnly（只读）三种属性可见性控制模式。",
+      "tags": ["example", "test-step", "attribute", "browsable", "sdk-plugin-development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs",
+      "type": "file",
+      "name": "ColumnDisplayAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs",
+      "summary": "演示 ResultColumn 结果显示属性的测试步骤示例，通过 RandomSeed 生成随机正弦值写入 OutBin 列，展示使用 Verdict 判定和结果列显示在 GUI 表格中的方式。",
+      "tags": ["example", "test-step", "attribute", "result-column", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DefaultValueExample.cs",
+      "type": "file",
+      "name": "DefaultValueExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DefaultValueExample.cs",
+      "summary": "演示 DefaultValue 属性的最简测试步骤示例，Value 属性默认值为 10.0，Run 方法打印当前值到日志，展示属性默认值设定模式。",
+      "tags": ["example", "test-step", "attribute", "default-value", "sdk-plugin-development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DisplayAttributeExample.cs",
+      "type": "file",
+      "name": "DisplayAttributeExample.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DisplayAttributeExample.cs",
+      "summary": "演示 Display 属性的综合测试步骤示例，展示 DisplayName（显示名）、Description（描述）、Group/Collapsed（分组折叠）和 Order（排序）等多种 GUI 布局控制属性的用法。",
+      "tags": ["example", "test-step", "attribute", "display", "sdk-plugin-development"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DynamicNameDisplayAttribute.cs",
+      "type": "file",
+      "name": "DynamicNameDisplayAttribute.cs",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DynamicNameDisplayAttribute.cs",
+      "summary": "演示动态名称显示的测试步骤示例，通过 GetDisplayMethod 根据 MyValue 的值动态返回不同的显示名称字符串，展示如何在 GUI 中按运行时状态变化步骤显示名称。",
+      "tags": ["example", "test-step", "attribute", "dynamic-name", "sdk-plugin-development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sdk/Examples/PluginDevelopment/package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "sdk/Examples/PluginDevelopment/package.xml",
+      "summary": "OpenTAP 插件包定义文件，声明包名称为 Plugin Development、版本 0.1.0-alpha、InfoLink 链接和描述信息，指定生成的 DLL 文件路径并嵌入 Git 版本信息。",
+      "tags": ["configuration", "package-definition", "opentap", "xml"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:EventResultListener",
+      "type": "class",
+      "name": "EventResultListener",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "lineRange": [20, 103],
+      "summary": "基于事件的结果监听器类，继承 ResultListener 并在 OnTestPlanRunStart/OnTestStepRunStart/OnResultPublished/OnTestStepRunCompleted/OnTestPlanRunCompleted 回调中创建事件参数并触发对应的 CliAction 事件。",
+      "tags": ["result-listener", "event", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestPlanRunStartedEventArgs",
+      "type": "class",
+      "name": "TestPlanRunStartedEventArgs",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "lineRange": [105, 113],
+      "summary": "测试计划运行开始的事件参数类，包含 TestPlanRun 属性，在测试计划启动时通过 OnTestPlanRunStart 回调触发。",
+      "tags": ["event-args", "test-plan", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestStepRunStartedEventArgs",
+      "type": "class",
+      "name": "TestStepRunStartedEventArgs",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "lineRange": [115, 123],
+      "summary": "测试步骤运行开始的事件参数类，包含 TestStepRun 属性，在单个测试步骤开始执行时触发。",
+      "tags": ["event-args", "test-step", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:ResultPublishedEventArgs",
+      "type": "class",
+      "name": "ResultPublishedEventArgs",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "lineRange": [125, 135],
+      "summary": "结果发布的事件参数类，包含 StepRunId 和 ResultTable 属性，在测试步骤产生结果数据时触发。",
+      "tags": ["event-args", "result", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestStepRunCompletedEventArgs",
+      "type": "class",
+      "name": "TestStepRunCompletedEventArgs",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "lineRange": [137, 145],
+      "summary": "测试步骤运行完成的事件参数类，包含 TestStepRun 属性，在单个测试步骤执行完毕时触发。",
+      "tags": ["event-args", "test-step", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestPlanRunCompletedEventArgs",
+      "type": "class",
+      "name": "TestPlanRunCompletedEventArgs",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "lineRange": [147, 157],
+      "summary": "测试计划运行完成的事件参数类，包含 TestPlanRun 和 LogStream 属性，在整个测试计划执行完毕后触发。",
+      "tags": ["event-args", "test-plan", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs:ExampleResultListener",
+      "type": "class",
+      "name": "ExampleResultListener",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "lineRange": [25, 113],
+      "summary": "自定义结果监听器实现类，继承 ResultListener 基类并在各生命周期回调中输出日志，OnResultPublished 方法通过 StringBuilder 解析并格式化结果表数据，维护 activeTestStepRuns 追踪活动步骤。",
+      "tags": ["result-listener", "logging", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:ZipArtifactsResultListener",
+      "type": "class",
+      "name": "ZipArtifactsResultListener",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "lineRange": [23, 177],
+      "summary": "ZIP 工件归档结果监听器类，在测试计划启动时创建临时 ZIP 文件，通过 OnArtifactPublished 将每个工件写入归档，使用 parentMap 追踪父子步骤关系以消除文件名冲突，测试完成后发布最终 ZIP 文件。",
+      "tags": ["result-listener", "zip", "artifact", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/AvailableValuesAttributeExample.cs:AvailableValuesAttributeExample",
+      "type": "class",
+      "name": "AvailableValuesAttributeExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/AvailableValuesAttributeExample.cs",
+      "lineRange": [20, 77],
+      "summary": "AvailableValues 属性演示测试步骤类，展示 ListOfAvailableValues 字符串列表限制、SelectedValues 多选模式、Duts 从可用资源动态填充可选值以及 SelectedDut 单选资源模式。",
+      "tags": ["test-step", "attribute", "available-values", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/BrowsableAttributeExample.cs:BrowsableAttributeExample",
+      "type": "class",
+      "name": "BrowsableAttributeExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/BrowsableAttributeExample.cs",
+      "lineRange": [19, 47],
+      "summary": "Browsable 属性演示测试步骤类，展示 Editable（可编辑输入）、HiddenFromGui（GUI 隐藏）和 ReadOnly（只读显示）三种属性在 GUI 中的可见性配置模式。",
+      "tags": ["test-step", "attribute", "browsable", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs:ColumnDisplayAttributeExample",
+      "type": "class",
+      "name": "ColumnDisplayAttributeExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs",
+      "lineRange": [29, 66],
+      "summary": "ResultColumn 属性演示测试步骤类，包含 RandomSeed 随机种子和 OutBin 结果列输出，Run 方法生成随机正弦值并根据值大小设置 Pass/Fail 判定。",
+      "tags": ["test-step", "attribute", "result-column", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DefaultValueExample.cs:DefaultValueExample",
+      "type": "class",
+      "name": "DefaultValueExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DefaultValueExample.cs",
+      "lineRange": [19, 28],
+      "summary": "DefaultValue 属性演示的最简测试步骤类，Value 属性默认值为 10.0，Run 方法打印当前值。",
+      "tags": ["test-step", "attribute", "default-value", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DisplayAttributeExample.cs:DisplayAttributeExample",
+      "type": "class",
+      "name": "DisplayAttributeExample",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DisplayAttributeExample.cs",
+      "lineRange": [21, 111],
+      "summary": "Display 属性综合演示测试步骤类，展示 DisplayName 自定义显示名、Description 描述文本、Group/Collapsed 分组折叠布局以及 Order 属性排序的完整 GUI 布局控制模式。",
+      "tags": ["test-step", "attribute", "display", "gui", "example"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DynamicNameDisplayAttribute.cs:DynamicName",
+      "type": "class",
+      "name": "DynamicName",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/DynamicNameDisplayAttribute.cs",
+      "lineRange": [28, 44],
+      "summary": "动态名称显示演示测试步骤类，通过 GetDisplayMethod 特性标记 DynamicNameMethod 静态方法，根据 MyValue 属性值返回不同的显示名称字符串。",
+      "tags": ["test-step", "attribute", "dynamic-name", "example"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs:OnResultPublished",
+      "type": "function",
+      "name": "OnResultPublished",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "lineRange": [51, 93],
+      "summary": "结果发布回调方法，调用基类后遍历 ResultTable 的列和数据行，使用 StringBuilder 格式化输出每列名称和对应值到日志，展示结果数据的解析和展示模式。",
+      "tags": ["result-listener", "logging", "data-parsing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs:OnTestStepRunCompleted",
+      "type": "function",
+      "name": "OnTestStepRunCompleted",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "lineRange": [95, 106],
+      "summary": "测试步骤完成回调方法，记录步骤持续时间日志并从 activeTestStepRuns 字典中移除已完成的步骤追踪条目。",
+      "tags": ["result-listener", "lifecycle", "cleanup"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:OnTestPlanRunStart",
+      "type": "function",
+      "name": "OnTestPlanRunStart",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "lineRange": [38, 48],
+      "summary": "测试计划启动回调方法，调用基类后获取临时文件名并创建新的 ZIP 归档文件流，为后续工件收集做准备。",
+      "tags": ["result-listener", "zip", "lifecycle", "initialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:OnTestPlanRunCompleted",
+      "type": "function",
+      "name": "OnTestPlanRunCompleted",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "lineRange": [50, 112],
+      "summary": "测试计划完成回调方法，调用基类后关闭 ZIP 归档，将临时文件移动到输出目录（处理重名冲突），检测文件扩展名冲突并重命名，最终将 ZIP 文件作为工件发布回测试计划运行。",
+      "tags": ["result-listener", "zip", "artifact", "finalization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:OnArtifactPublished",
+      "type": "function",
+      "name": "OnArtifactPublished",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "lineRange": [151, 176],
+      "summary": "工件发布回调方法，通过 GetTmpFileName 获取临时 ZIP 路径，使用 parentMap 构建分层路径以避免文件名冲突，将工件流复制到 ZIP 归档条目中，实现工件的增量归档收集。",
+      "tags": ["result-listener", "zip", "artifact", "collection"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:GetPlanRunId",
+      "type": "function",
+      "name": "GetPlanRunId",
+      "filePath": "sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "lineRange": [129, 139],
+      "summary": "获取计划运行 ID 的辅助方法，通过 parentMap 向上遍历父步骤 ID 链，找到最顶层的测试计划运行标识符，用于 ZIP 路径构建时确定文件归属。",
+      "tags": ["result-listener", "utility", "id-resolution"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs",
+      "lineRange": [40, 65],
+      "summary": "测试步骤执行方法，生成随机正弦值并写入 OutBin 结果列，将值打印到日志，当值大于 0.2 或 NaN 时升级判定为 Pass，否则设为 Fail，展示结果列输出和判定升级完整模式。",
+      "tags": ["test-step", "result-column", "execution"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:EventResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestPlanRunStartedEventArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestStepRunStartedEventArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:ResultPublishedEventArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestStepRunCompletedEventArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestPlanRunCompletedEventArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:EventResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestPlanRunStartedEventArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestStepRunStartedEventArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:ResultPublishedEventArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestStepRunCompletedEventArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/EventResultListener.cs:TestPlanRunCompletedEventArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs:ExampleResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs:OnResultPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs:OnTestStepRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs:ExampleResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:ZipArtifactsResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:OnTestPlanRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:OnTestPlanRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:OnArtifactPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:GetPlanRunId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/ResultListeners/ZipArtifactsResultListener.cs:ZipArtifactsResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/AvailableValuesAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/AvailableValuesAttributeExample.cs:AvailableValuesAttributeExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/AvailableValuesAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/AvailableValuesAttributeExample.cs:AvailableValuesAttributeExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/BrowsableAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/BrowsableAttributeExample.cs:BrowsableAttributeExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/BrowsableAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/BrowsableAttributeExample.cs:BrowsableAttributeExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs:ColumnDisplayAttributeExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs",
+      "target": "function:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/ColumnDisplayAttributeExample.cs:ColumnDisplayAttributeExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DefaultValueExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DefaultValueExample.cs:DefaultValueExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DefaultValueExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DefaultValueExample.cs:DefaultValueExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DisplayAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DisplayAttributeExample.cs:DisplayAttributeExample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DisplayAttributeExample.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DisplayAttributeExample.cs:DisplayAttributeExample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DynamicNameDisplayAttribute.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DynamicNameDisplayAttribute.cs:DynamicName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DynamicNameDisplayAttribute.cs",
+      "target": "class:sdk/Examples/PluginDevelopment/TestSteps/Attributes/DynamicNameDisplayAttribute.cs:DynamicName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment/package.xml",
+      "target": "file:sdk/Examples/PluginDevelopment/Properties/AssemblyInfo.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/Examples/PluginDevelopment/Properties/launchSettings.json",
+      "target": "file:sdk/Examples/PluginDevelopment/ResultListeners/ExampleResultListener.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

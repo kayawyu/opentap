@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    {
+      "id": "config:tests/test-cli-environment-variables.TapPlan",
+      "type": "config",
+      "name": "test-cli-environment-variables.TapPlan",
+      "filePath": "tests/test-cli-environment-variables.TapPlan",
+      "summary": "测试 OpenTAP CLI 在启动子进程时是否正确传递环境变量，覆盖正常名称、前导/尾随空格、特殊字符（=、引号、反引号、&、斜杠、反斜杠、Unicode）、Base64 编码名称及空名称等边界情况，包含一个期望通过和一个期望错误的步骤。",
+      "tags": ["test-plan", "cli-test", "environment-variables", "integration-test", "edge-case"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:tests/test-cli-load-plan-with-error.TapPlan",
+      "type": "config",
+      "name": "test-cli-load-plan-with-error.TapPlan",
+      "filePath": "tests/test-cli-load-plan-with-error.TapPlan",
+      "summary": "测试 OpenTAP CLI 加载包含错误的测试计划文件时的容错行为，通过 `tap run ../../tests/planWithLoadErrors.TapPlan --non-interactive` 执行计划并期望结果为 Fail，验证错误计划加载的错误报告机制。",
+      "tags": ["test-plan", "cli-test", "error-handling", "integration-test", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:tests/test-install-package.TapPlan",
+      "type": "config",
+      "name": "test-install-package.TapPlan",
+      "filePath": "tests/test-install-package.TapPlan",
+      "summary": "测试 OpenTAP CLI 最基本的包安装功能，使用 `RunOnOs` 条件步骤分别在 Windows 和 Linux 平台上执行 `tap package install Demonstration` 命令，验证跨平台的包安装能力。",
+      "tags": ["test-plan", "cli-test", "package-management", "cross-platform", "configuration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:tests/test-piped-input.TapPlan",
+      "type": "config",
+      "name": "test-piped-input.TapPlan",
+      "filePath": "tests/test-piped-input.TapPlan",
+      "summary": "测试 OpenTAP CLI 通过标准输入管道向子进程发送数据的能力，使用三维参数扫描设计——写入速度（500/100/10/0）、写入模式（WriteChars/WriteLines/WriteAll）、管道数据与期望退出码（3 种组合）——覆盖 36 种输入场景，通过 `tap test user-input` 验证用户交互式输入处理。",
+      "tags": ["test-plan", "cli-test", "piped-input", "sweep-test", "parameter-scan"],
+      "complexity": "complex",
+      "languageNotes": "使用三层嵌套的 SweepParameterStep 实现 4×3×3 全因子参数扫描，通过 PipingProcessStep 向子进程注入标准输入数据并验证退出码。"
+    },
+    {
+      "id": "config:tests/test-sdk-templates.TapPlan",
+      "type": "config",
+      "name": "test-sdk-templates.TapPlan",
+      "filePath": "tests/test-sdk-templates.TapPlan",
+      "summary": "测试 `tap sdk new project` 命令的模板项目创建功能，包含完整的 setup-测试-teardown 生命周期——首先创建测试目录和 OpenTapIgnore 文件，然后通过两个参数扫描分别验证非法项目名称（含空格、数字开头、路径分隔符、特殊字符，期望 Fail）和合法项目名称（无空格字母、含数字、含下划线，期望 Pass），最后清理测试目录。",
+      "tags": ["test-plan", "cli-test", "sdk-templates", "sweep-test", "input-validation"],
+      "complexity": "complex",
+      "languageNotes": "使用 SweepParameterStep 进行参数扫描分别测试 5 种非法和 3 种合法项目名称，通过 ExpectStep 包装 ProcessStep 实现期望判决的断言，测试目录生命周期通过 RemoveDirectory/CreateDirectoryStep 管理。"
+    },
+    {
+      "id": "config:tests/verdictPlan.TapPlan",
+      "type": "config",
+      "name": "verdictPlan.TapPlan",
+      "filePath": "tests/verdictPlan.TapPlan",
+      "summary": "最简测试计划，仅包含一个 VerdictStep 步骤将测试判据设为 Pass，用于验证 OpenTAP 测试计划引擎的基本裁决（Verdict）机制和串行化/反串行化正确性。",
+      "tags": ["test-plan", "verdict", "smoke-test", "minimal", "configuration"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:tests/test-piped-input.TapPlan",
+      "target": "config:tests/test-sdk-templates.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:tests/test-cli-environment-variables.TapPlan",
+      "target": "config:tests/test-piped-input.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:tests/test-cli-environment-variables.TapPlan",
+      "target": "config:tests/test-cli-load-plan-with-error.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:tests/test-install-package.TapPlan",
+      "target": "config:tests/test-sdk-templates.TapPlan",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

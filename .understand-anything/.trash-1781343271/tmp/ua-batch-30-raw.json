@@ -1,0 +1,2638 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/ObjectCloner.cs",
+      "type": "file",
+      "name": "ObjectCloner.cs",
+      "filePath": "Engine/ObjectCloner.cs",
+      "summary": "",
+      "tags": [
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ObjectCloner.cs:ObjectCloner",
+      "type": "class",
+      "name": "ObjectCloner",
+      "filePath": "Engine/ObjectCloner.cs",
+      "lineRange": [
+        14,
+        138
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ObjectCloner.cs:TryClone",
+      "type": "function",
+      "name": "TryClone",
+      "filePath": "Engine/ObjectCloner.cs",
+      "lineRange": [
+        39,
+        128
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/OutputAttribute.cs",
+      "type": "file",
+      "name": "OutputAttribute.cs",
+      "filePath": "Engine/OutputAttribute.cs",
+      "summary": "",
+      "tags": [
+        "attribute",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/OutputAttribute.cs:OutputAttribute",
+      "type": "class",
+      "name": "OutputAttribute",
+      "filePath": "Engine/OutputAttribute.cs",
+      "lineRange": [
+        12,
+        24
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ParameterCollection.cs",
+      "type": "file",
+      "name": "ParameterCollection.cs",
+      "filePath": "Engine/ParameterCollection.cs",
+      "summary": "",
+      "tags": [
+        "parameter",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ParameterCollection.cs:ParameterCollection",
+      "type": "class",
+      "name": "ParameterCollection",
+      "filePath": "Engine/ParameterCollection.cs",
+      "lineRange": [
+        10,
+        26
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ParameterManager.cs",
+      "type": "file",
+      "name": "ParameterManager.cs",
+      "filePath": "Engine/ParameterManager.cs",
+      "summary": "",
+      "tags": [
+        "manager",
+        "parameter",
+        "utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/ParameterManager.cs:ParameterManager",
+      "type": "class",
+      "name": "ParameterManager",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        10,
+        760
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:Parameterize",
+      "type": "function",
+      "name": "Parameterize",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        375,
+        390
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CreateParameter",
+      "type": "function",
+      "name": "CreateParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        392,
+        415
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:UnmergableListType",
+      "type": "function",
+      "name": "UnmergableListType",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        417,
+        432
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:EditParameter",
+      "type": "function",
+      "name": "EditParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        434,
+        495
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:IsValidParameter",
+      "type": "function",
+      "name": "IsValidParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        504,
+        534
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CanAutoParameterize",
+      "type": "function",
+      "name": "CanAutoParameterize",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        550,
+        562
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:RemoveParameter",
+      "type": "function",
+      "name": "RemoveParameter",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        564,
+        575
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:Unparameterize",
+      "type": "function",
+      "name": "Unparameterize",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        577,
+        613
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "function",
+      "name": "CheckParameterSanity",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        631,
+        648
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "function",
+      "name": "checkParameterSanity",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        653,
+        729
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "function",
+      "name": "checkParameterSanity",
+      "filePath": "Engine/ParameterManager.cs",
+      "lineRange": [
+        731,
+        742
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/ParameterMemberAnnotator.cs",
+      "type": "file",
+      "name": "ParameterMemberAnnotator.cs",
+      "filePath": "Engine/ParameterMemberAnnotator.cs",
+      "summary": "",
+      "tags": [
+        "parameter",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ParameterMemberAnnotator.cs:ParameterMemberAnnotator",
+      "type": "class",
+      "name": "ParameterMemberAnnotator",
+      "filePath": "Engine/ParameterMemberAnnotator.cs",
+      "lineRange": [
+        7,
+        125
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParameterMemberAnnotator.cs:GetRootMembers",
+      "type": "function",
+      "name": "GetRootMembers",
+      "filePath": "Engine/ParameterMemberAnnotator.cs",
+      "lineRange": [
+        66,
+        84
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParameterMemberAnnotator.cs:Annotate",
+      "type": "function",
+      "name": "Annotate",
+      "filePath": "Engine/ParameterMemberAnnotator.cs",
+      "lineRange": [
+        86,
+        124
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/ParametersMenuModel.cs",
+      "type": "file",
+      "name": "ParametersMenuModel.cs",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "summary": "",
+      "tags": [
+        "parameter",
+        "ui-model",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ParametersMenuModel.cs:TestStepMenuModel",
+      "type": "class",
+      "name": "TestStepMenuModel",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        8,
+        202
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:ParameterizeOnTestPlan",
+      "type": "function",
+      "name": "ParameterizeOnTestPlan",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        50,
+        62
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:ParameterizeOnParent",
+      "type": "function",
+      "name": "ParameterizeOnParent",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        68,
+        79
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:ControlUsingOutput",
+      "type": "function",
+      "name": "ControlUsingOutput",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        135,
+        154
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:getCommonParent",
+      "type": "function",
+      "name": "getCommonParent",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        156,
+        172
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/ParametersMenuModel.cs:UnassignOutput",
+      "type": "function",
+      "name": "UnassignOutput",
+      "filePath": "Engine/ParametersMenuModel.cs",
+      "lineRange": [
+        184,
+        197
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/PictureAnnotation.cs",
+      "type": "file",
+      "name": "PictureAnnotation.cs",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "summary": "",
+      "tags": [
+        "interface",
+        "annotation",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/PictureAnnotation.cs:PictureAnnotation",
+      "type": "class",
+      "name": "PictureAnnotation",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        18,
+        57
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/PictureAnnotation.cs:Picture",
+      "type": "class",
+      "name": "Picture",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        78,
+        97
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PictureAnnotation.cs:Read",
+      "type": "function",
+      "name": "Read",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        30,
+        39
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PictureAnnotation.cs:Write",
+      "type": "function",
+      "name": "Write",
+      "filePath": "Engine/PictureAnnotation.cs",
+      "lineRange": [
+        41,
+        56
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/PluginManager.cs",
+      "type": "file",
+      "name": "PluginManager.cs",
+      "filePath": "Engine/PluginManager.cs",
+      "summary": "",
+      "tags": [
+        "manager",
+        "plugin-system",
+        "utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/PluginManager.cs:PluginManager",
+      "type": "class",
+      "name": "PluginManager",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        22,
+        478
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/PluginManager.cs:TapAssemblyResolver",
+      "type": "class",
+      "name": "TapAssemblyResolver",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        481,
+        707
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "function",
+      "name": "GetPlugins",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        134,
+        153
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "function",
+      "name": "GetSearcher",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        159,
+        172
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetAllPlugins",
+      "type": "function",
+      "name": "GetAllPlugins",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        181,
+        190
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:Search",
+      "type": "function",
+      "name": "Search",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        252,
+        272
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:Load",
+      "type": "function",
+      "name": "Load",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        277,
+        303
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "type": "function",
+      "name": "SearchAndAddToStore",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        327,
+        365
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:locateType",
+      "type": "function",
+      "name": "locateType",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        367,
+        395
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetVersionResultParameter",
+      "type": "function",
+      "name": "GetVersionResultParameter",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        436,
+        452
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetPluginVersions",
+      "type": "function",
+      "name": "GetPluginVersions",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        454,
+        476
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:AddAssembly",
+      "type": "function",
+      "name": "AddAssembly",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        505,
+        521
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:GetAssembliesToSearch",
+      "type": "function",
+      "name": "GetAssembliesToSearch",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        524,
+        533
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:Resolve",
+      "type": "function",
+      "name": "Resolve",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        535,
+        544
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:tryGetAssemblyName",
+      "type": "function",
+      "name": "tryGetAssemblyName",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        571,
+        583
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginManager.cs:resolveAssembly",
+      "type": "function",
+      "name": "resolveAssembly",
+      "filePath": "Engine/PluginManager.cs",
+      "lineRange": [
+        585,
+        696
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine/PluginSearcher.cs",
+      "type": "file",
+      "name": "PluginSearcher.cs",
+      "filePath": "Engine/PluginSearcher.cs",
+      "summary": "",
+      "tags": [
+        "attribute",
+        "searcher",
+        "plugin-system"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/PluginSearcher.cs:PluginAssemblyAttribute",
+      "type": "class",
+      "name": "PluginAssemblyAttribute",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        24,
+        55
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/PluginSearcher.cs:PluginSearcher",
+      "type": "class",
+      "name": "PluginSearcher",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        61,
+        1178
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:AddAssembly",
+      "type": "function",
+      "name": "AddAssembly",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        447,
+        456
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:PluginFromPluginRecursive",
+      "type": "function",
+      "name": "PluginFromPluginRecursive",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        458,
+        492
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:AbsorbLoadedPlugins",
+      "type": "function",
+      "name": "AbsorbLoadedPlugins",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        494,
+        509
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:Search",
+      "type": "function",
+      "name": "Search",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        517,
+        530
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "type": "function",
+      "name": "PluginsInAssemblyRecursive",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        534,
+        589
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "type": "function",
+      "name": "PluginFromEntityRecursive",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        609,
+        630
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:IsValueType",
+      "type": "function",
+      "name": "IsValueType",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        642,
+        677
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:GetTypeName",
+      "type": "function",
+      "name": "GetTypeName",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        679,
+        699
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "type": "function",
+      "name": "PluginFromTypeDefRecursive",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        702,
+        990
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "function",
+      "name": "GetFullName",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        1007,
+        1024
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PluginSearcher.cs:MatchFullName",
+      "type": "function",
+      "name": "MatchFullName",
+      "filePath": "Engine/PluginSearcher.cs",
+      "lineRange": [
+        1026,
+        1039
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/PluginTypeSelector.cs",
+      "type": "file",
+      "name": "PluginTypeSelector.cs",
+      "filePath": "Engine/PluginTypeSelector.cs",
+      "summary": "",
+      "tags": [
+        "attribute",
+        "plugin-system",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/ComponentSettingsLayoutAttribute.cs",
+      "type": "file",
+      "name": "ComponentSettingsLayoutAttribute.cs",
+      "filePath": "Engine/Port/ComponentSettingsLayoutAttribute.cs",
+      "summary": "",
+      "tags": [
+        "attribute",
+        "port",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/ComponentSettingsLayoutAttribute.cs:ComponentSettingsLayoutAttribute",
+      "type": "class",
+      "name": "ComponentSettingsLayoutAttribute",
+      "filePath": "Engine/Port/ComponentSettingsLayoutAttribute.cs",
+      "lineRange": [
+        13,
+        42
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/Connection.cs",
+      "type": "file",
+      "name": "Connection.cs",
+      "filePath": "Engine/Port/Connection.cs",
+      "summary": "",
+      "tags": [
+        "connection",
+        "port",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Port/Connection.cs:Connection",
+      "type": "class",
+      "name": "Connection",
+      "filePath": "Engine/Port/Connection.cs",
+      "lineRange": [
+        14,
+        95
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/ConnectionSettings.cs",
+      "type": "file",
+      "name": "ConnectionSettings.cs",
+      "filePath": "Engine/Port/ConnectionSettings.cs",
+      "summary": "",
+      "tags": [
+        "connection",
+        "port",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/ConnectionSettings.cs:UpdateConnectionPorts",
+      "type": "function",
+      "name": "UpdateConnectionPorts",
+      "filePath": "Engine/Port/ConnectionSettings.cs",
+      "lineRange": [
+        20,
+        29
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/DirectionalRfConnection.cs",
+      "type": "file",
+      "name": "DirectionalRfConnection.cs",
+      "filePath": "Engine/Port/DirectionalRfConnection.cs",
+      "summary": "",
+      "tags": [
+        "connection",
+        "port",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/DirectionalRfConnection.cs:DirectionalRfConnection",
+      "type": "class",
+      "name": "DirectionalRfConnection",
+      "filePath": "Engine/Port/DirectionalRfConnection.cs",
+      "lineRange": [
+        12,
+        51
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/DirectionalRfConnection.cs:DirectionalRfConnection",
+      "type": "function",
+      "name": "DirectionalRfConnection",
+      "filePath": "Engine/Port/DirectionalRfConnection.cs",
+      "lineRange": [
+        41,
+        50
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/IConstResourceProperty.cs",
+      "type": "file",
+      "name": "IConstResourceProperty.cs",
+      "filePath": "Engine/Port/IConstResourceProperty.cs",
+      "summary": "",
+      "tags": [
+        "interface",
+        "port",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Port/IConstResourceProperty.cs:IConstResourcePropertyHelpers",
+      "type": "class",
+      "name": "IConstResourcePropertyHelpers",
+      "filePath": "Engine/Port/IConstResourceProperty.cs",
+      "lineRange": [
+        34,
+        79
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/IConstResourceProperty.cs:GetConstPropertiesImpl",
+      "type": "function",
+      "name": "GetConstPropertiesImpl",
+      "filePath": "Engine/Port/IConstResourceProperty.cs",
+      "lineRange": [
+        54,
+        78
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/Port.cs",
+      "type": "file",
+      "name": "Port.cs",
+      "filePath": "Engine/Port/Port.cs",
+      "summary": "",
+      "tags": [
+        "port",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Port/Port.cs:Port",
+      "type": "class",
+      "name": "Port",
+      "filePath": "Engine/Port/Port.cs",
+      "lineRange": [
+        15,
+        90
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Port/RfConnection.cs",
+      "type": "file",
+      "name": "RfConnection.cs",
+      "filePath": "Engine/Port/RfConnection.cs",
+      "summary": "",
+      "tags": [
+        "connection",
+        "port",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Port/RfConnection.cs:RfConnection",
+      "type": "class",
+      "name": "RfConnection",
+      "filePath": "Engine/Port/RfConnection.cs",
+      "lineRange": [
+        15,
+        157
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Port/RfConnection.cs:RfConnection",
+      "type": "function",
+      "name": "RfConnection",
+      "filePath": "Engine/Port/RfConnection.cs",
+      "lineRange": [
+        89,
+        98
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Port/RfConnection.cs:GetInterpolatedCableLoss",
+      "type": "function",
+      "name": "GetInterpolatedCableLoss",
+      "filePath": "Engine/Port/RfConnection.cs",
+      "lineRange": [
+        109,
+        156
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine/Port/SwitchPosition.cs",
+      "type": "file",
+      "name": "SwitchPosition.cs",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "summary": "",
+      "tags": [
+        "port",
+        "utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine/Port/SwitchPosition.cs:ViaPoint",
+      "type": "class",
+      "name": "ViaPoint",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        31,
+        91
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/SwitchPosition.cs:SwitchMatrixPath",
+      "type": "class",
+      "name": "SwitchMatrixPath",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        97,
+        121
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Port/SwitchPosition.cs:SwitchMatrixPathCollection",
+      "type": "class",
+      "name": "SwitchMatrixPathCollection",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        127,
+        258
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Port/SwitchPosition.cs:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "Engine/Port/SwitchPosition.cs",
+      "lineRange": [
+        243,
+        257
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/PosixSignals.cs",
+      "type": "file",
+      "name": "PosixSignals.cs",
+      "filePath": "Engine/PosixSignals.cs",
+      "summary": "",
+      "tags": [
+        "signal-handling",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/PosixSignals.cs:PosixSignals",
+      "type": "class",
+      "name": "PosixSignals",
+      "filePath": "Engine/PosixSignals.cs",
+      "lineRange": [
+        9,
+        55
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/PosixSignals.cs:AddSignalHandler",
+      "type": "function",
+      "name": "AddSignalHandler",
+      "filePath": "Engine/PosixSignals.cs",
+      "lineRange": [
+        23,
+        41
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "Engine/Properties/AssemblyInfo.cs",
+      "summary": "",
+      "tags": [
+        "assembly-info",
+        "assembly-metadata",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/CSharpTypeInfoProvider.cs",
+      "type": "file",
+      "name": "CSharpTypeInfoProvider.cs",
+      "filePath": "Engine/Reflection/CSharpTypeInfoProvider.cs",
+      "summary": "",
+      "tags": [
+        "reflection",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/CSharpTypeInfoProvider.cs:CSharpTypeInfoProvider",
+      "type": "class",
+      "name": "CSharpTypeInfoProvider",
+      "filePath": "Engine/Reflection/CSharpTypeInfoProvider.cs",
+      "lineRange": [
+        9,
+        31
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Reflection/CSharpTypeInfoProvider.cs:GetTypeData",
+      "type": "function",
+      "name": "GetTypeData",
+      "filePath": "Engine/Reflection/CSharpTypeInfoProvider.cs",
+      "lineRange": [
+        14,
+        23
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/DotNetTypeData.cs",
+      "type": "file",
+      "name": "DotNetTypeData.cs",
+      "filePath": "Engine/Reflection/DotNetTypeData.cs",
+      "summary": "",
+      "tags": [
+        "reflection",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/Reflection/DotNetTypeData.cs:MemberData",
+      "type": "class",
+      "name": "MemberData",
+      "filePath": "Engine/Reflection/DotNetTypeData.cs",
+      "lineRange": [
+        18,
+        196
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine/Reflection/DotNetTypeData.cs:buildGetter",
+      "type": "function",
+      "name": "buildGetter",
+      "filePath": "Engine/Reflection/DotNetTypeData.cs",
+      "lineRange": [
+        70,
+        84
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Reflection/DotNetTypeData.cs:GetValue",
+      "type": "function",
+      "name": "GetValue",
+      "filePath": "Engine/Reflection/DotNetTypeData.cs",
+      "lineRange": [
+        91,
+        106
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Reflection/DotNetTypeData.cs:SetValue",
+      "type": "function",
+      "name": "SetValue",
+      "filePath": "Engine/Reflection/DotNetTypeData.cs",
+      "lineRange": [
+        113,
+        126
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine/Reflection/DotNetTypeData.cs:getTypeDescriptor",
+      "type": "function",
+      "name": "getTypeDescriptor",
+      "filePath": "Engine/Reflection/DotNetTypeData.cs",
+      "lineRange": [
+        172,
+        181
+      ],
+      "summary": "",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/DotNetTypeDataSearcher.cs",
+      "type": "file",
+      "name": "DotNetTypeDataSearcher.cs",
+      "filePath": "Engine/Reflection/DotNetTypeDataSearcher.cs",
+      "summary": "",
+      "tags": [
+        "searcher",
+        "reflection",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/DotNetTypeDataSearcher.cs:DotNetTypeDataSearcher",
+      "type": "class",
+      "name": "DotNetTypeDataSearcher",
+      "filePath": "Engine/Reflection/DotNetTypeDataSearcher.cs",
+      "lineRange": [
+        11,
+        33
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/IEmbeddedMemberData.cs",
+      "type": "file",
+      "name": "IEmbeddedMemberData.cs",
+      "filePath": "Engine/Reflection/IEmbeddedMemberData.cs",
+      "summary": "",
+      "tags": [
+        "interface",
+        "reflection",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine/Reflection/IMemberData.cs",
+      "type": "file",
+      "name": "IMemberData.cs",
+      "filePath": "Engine/Reflection/IMemberData.cs",
+      "summary": "",
+      "tags": [
+        "interface",
+        "reflection",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/Reflection/IMemberData.cs:IMemberData",
+      "type": "class",
+      "name": "IMemberData",
+      "filePath": "Engine/Reflection/IMemberData.cs",
+      "lineRange": [
+        9,
+        29
+      ],
+      "summary": "",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/ObjectCloner.cs",
+      "target": "class:Engine/ObjectCloner.cs:ObjectCloner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ObjectCloner.cs",
+      "target": "function:Engine/ObjectCloner.cs:TryClone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/ObjectCloner.cs:CanClone",
+      "target": "function:Engine/ObjectCloner.cs:TryClone",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ObjectCloner.cs:Clone",
+      "target": "function:Engine/ObjectCloner.cs:TryClone",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/OutputAttribute.cs",
+      "target": "class:Engine/OutputAttribute.cs:OutputAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterCollection.cs",
+      "target": "class:Engine/ParameterCollection.cs:ParameterCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "class:Engine/ParameterManager.cs:ParameterManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:Parameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CreateParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:UnmergableListType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:EditParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:IsValidParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CanAutoParameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:RemoveParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:Unparameterize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterManager.cs",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:Parameterize",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CreateParameter",
+      "target": "function:Engine/ParameterManager.cs:Parameterize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:EditParameter",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:EditParameter",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CanEditParameter",
+      "target": "function:Engine/ParameterManager.cs:IsValidParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CanParameter",
+      "target": "function:Engine/ParameterManager.cs:IsValidParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CanParameter",
+      "target": "function:Engine/ParameterManager.cs:isParameterized",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CanUnparameter",
+      "target": "function:Engine/ParameterManager.cs:IsValidParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CanUnparameter",
+      "target": "function:Engine/ParameterManager.cs:isParameterized",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:Unparameterize",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:Unparameterize",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "target": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "target": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "target": "function:Engine/ParameterManager.cs:WithSanityCheckDelayed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParameterManager.cs:checkParameterSanity",
+      "target": "function:Engine/ParameterManager.cs:CheckParameterSanity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParameterMemberAnnotator.cs",
+      "target": "class:Engine/ParameterMemberAnnotator.cs:ParameterMemberAnnotator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterMemberAnnotator.cs",
+      "target": "function:Engine/ParameterMemberAnnotator.cs:GetRootMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParameterMemberAnnotator.cs",
+      "target": "function:Engine/ParameterMemberAnnotator.cs:Annotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/ParameterMemberAnnotator.cs:Annotate",
+      "target": "function:Engine/ParameterMemberAnnotator.cs:GetRootMembers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "class:Engine/ParametersMenuModel.cs:TestStepMenuModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:ParameterizeOnTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:ParameterizeOnParent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:ControlUsingOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:getCommonParent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ParametersMenuModel.cs",
+      "target": "function:Engine/ParametersMenuModel.cs:UnassignOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:Parameterize",
+      "target": "function:Engine/ParametersMenuModel.cs:getCommonParent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:CalcAnyAvailableOutputs",
+      "target": "function:Engine/ParametersMenuModel.cs:getCommonParent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/ParametersMenuModel.cs:ControlUsingOutput",
+      "target": "function:Engine/ParametersMenuModel.cs:getCommonParent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "class:Engine/PictureAnnotation.cs:PictureAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "class:Engine/PictureAnnotation.cs:Picture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "function:Engine/PictureAnnotation.cs:Read",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PictureAnnotation.cs",
+      "target": "function:Engine/PictureAnnotation.cs:Write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "class:Engine/PluginManager.cs:PluginManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "class:Engine/PluginManager.cs:TapAssemblyResolver",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetAllPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Search",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:locateType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetVersionResultParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetPluginVersions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:AddAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:GetAssembliesToSearch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:Resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:tryGetAssemblyName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginManager.cs",
+      "target": "function:Engine/PluginManager.cs:resolveAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:GetPlugins",
+      "target": "function:Engine/PluginManager.cs:shouldLoadAssembly",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:GetSearcher",
+      "target": "function:Engine/PluginManager.cs:Search",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:GetAllPlugins",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:GetOpenTapAssembly",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:Search",
+      "target": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:PluginManager",
+      "target": "function:Engine/PluginManager.cs:Load",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:SearchAndAddToStore",
+      "target": "function:Engine/PluginManager.cs:GetPlugins",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:locateType",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:locateType",
+      "target": "function:Engine/PluginManager.cs:LocateType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:LocateType",
+      "target": "function:Engine/PluginManager.cs:locateType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:LocateType",
+      "target": "function:Engine/PluginManager.cs:locateType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:LocateTypeData",
+      "target": "function:Engine/PluginManager.cs:GetSearcher",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:TapAssemblyResolver",
+      "target": "function:Engine/PluginManager.cs:resolveAssembly",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginManager.cs:resolveAssembly",
+      "target": "function:Engine/PluginManager.cs:tryGetAssemblyName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "class:Engine/PluginSearcher.cs:PluginAssemblyAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "class:Engine/PluginSearcher.cs:PluginSearcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:AddAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromPluginRecursive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:AbsorbLoadedPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:Search",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:IsValueType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:GetTypeName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PluginSearcher.cs",
+      "target": "function:Engine/PluginSearcher.cs:MatchFullName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginSearcher",
+      "target": "function:Engine/PluginSearcher.cs:AbsorbLoadedPlugins",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:AddAssembly",
+      "target": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:AbsorbLoadedPlugins",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromPluginRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:Search",
+      "target": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "target": "function:Engine/PluginSearcher.cs:MatchFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "target": "function:Engine/PluginSearcher.cs:MatchFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginsInAssemblyRecursive",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromTypeRef",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeRef",
+      "target": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:IsValueType",
+      "target": "function:Engine/PluginSearcher.cs:GetTypeName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:GetTypeName",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetTypeName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetStringIfNotNull",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetStringIfNotNull",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetStringIfNotNull",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetStringIfNotNull",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetStringArrayIfNotNull",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:PluginFromEntityRecursive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:IsValueType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetFullName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/PluginSearcher.cs:PluginFromTypeDefRecursive",
+      "target": "function:Engine/PluginSearcher.cs:GetStringIfNotNull",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/ComponentSettingsLayoutAttribute.cs",
+      "target": "class:Engine/Port/ComponentSettingsLayoutAttribute.cs:ComponentSettingsLayoutAttribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/Connection.cs",
+      "target": "class:Engine/Port/Connection.cs:Connection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/ConnectionSettings.cs",
+      "target": "function:Engine/Port/ConnectionSettings.cs:UpdateConnectionPorts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/DirectionalRfConnection.cs",
+      "target": "class:Engine/Port/DirectionalRfConnection.cs:DirectionalRfConnection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/DirectionalRfConnection.cs",
+      "target": "function:Engine/Port/DirectionalRfConnection.cs:DirectionalRfConnection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "class:Engine/Port/IConstResourceProperty.cs:IConstResourcePropertyHelpers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/IConstResourceProperty.cs",
+      "target": "function:Engine/Port/IConstResourceProperty.cs:GetConstPropertiesImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/Port/IConstResourceProperty.cs:GetConstProperties",
+      "target": "function:Engine/Port/IConstResourceProperty.cs:GetConstPropertiesImpl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/Port.cs",
+      "target": "class:Engine/Port/Port.cs:Port",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/RfConnection.cs",
+      "target": "class:Engine/Port/RfConnection.cs:RfConnection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/RfConnection.cs",
+      "target": "function:Engine/Port/RfConnection.cs:RfConnection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/RfConnection.cs",
+      "target": "function:Engine/Port/RfConnection.cs:GetInterpolatedCableLoss",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/Port/RfConnection.cs:RfConnection",
+      "target": "function:Engine/Port/RfConnection.cs:PortDirectionsAreGood",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/Port/RfConnection.cs:RfConnection",
+      "target": "function:Engine/Port/RfConnection.cs:PortDirectionsAreGood",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:ViaPoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:SwitchMatrixPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "class:Engine/Port/SwitchPosition.cs:SwitchMatrixPathCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Port/SwitchPosition.cs",
+      "target": "function:Engine/Port/SwitchPosition.cs:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PosixSignals.cs",
+      "target": "class:Engine/PosixSignals.cs:PosixSignals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/PosixSignals.cs",
+      "target": "function:Engine/PosixSignals.cs:AddSignalHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/CSharpTypeInfoProvider.cs",
+      "target": "class:Engine/Reflection/CSharpTypeInfoProvider.cs:CSharpTypeInfoProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/CSharpTypeInfoProvider.cs",
+      "target": "function:Engine/Reflection/CSharpTypeInfoProvider.cs:GetTypeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/DotNetTypeData.cs",
+      "target": "class:Engine/Reflection/DotNetTypeData.cs:MemberData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/DotNetTypeData.cs",
+      "target": "function:Engine/Reflection/DotNetTypeData.cs:buildGetter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/DotNetTypeData.cs",
+      "target": "function:Engine/Reflection/DotNetTypeData.cs:GetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/DotNetTypeData.cs",
+      "target": "function:Engine/Reflection/DotNetTypeData.cs:SetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/DotNetTypeData.cs",
+      "target": "function:Engine/Reflection/DotNetTypeData.cs:getTypeDescriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine/Reflection/DotNetTypeData.cs:GetValue",
+      "target": "function:Engine/Reflection/DotNetTypeData.cs:buildGetter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/Reflection/DotNetTypeData.cs:GetValue",
+      "target": "function:Engine/Reflection/DotNetTypeData.cs:createDelegateType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine/Reflection/DotNetTypeData.cs:getTypeDescriptor",
+      "target": "function:Engine/Reflection/DotNetTypeData.cs:createDelegateType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/Reflection/DotNetTypeDataSearcher.cs",
+      "target": "class:Engine/Reflection/DotNetTypeDataSearcher.cs:DotNetTypeDataSearcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/Reflection/IMemberData.cs",
+      "target": "class:Engine/Reflection/IMemberData.cs:IMemberData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

@@ -1,0 +1,659 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine/IDut.cs",
+      "type": "file",
+      "name": "IDut.cs",
+      "filePath": "Engine/IDut.cs",
+      "summary": "定义IDut标记接口，作为DUT（Device Under Test）驱动程序的基础接口，继承自IResource和ITapPlugin。",
+      "tags": [
+        "interface",
+        "dut",
+        "marker-interface",
+        "resource"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IDut.cs:IDut",
+      "type": "class",
+      "name": "IDut",
+      "filePath": "Engine/IDut.cs",
+      "summary": "DUT驱动程序标记接口，同时继承IResource和ITapPlugin，用于标识被测试设备的驱动类。",
+      "tags": [
+        "interface",
+        "dut",
+        "marker-interface"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        10,
+        13
+      ]
+    },
+    {
+      "id": "file:Engine/IDynamicMemberData.cs",
+      "type": "file",
+      "name": "IDynamicMemberData.cs",
+      "filePath": "Engine/IDynamicMemberData.cs",
+      "summary": "定义IDynamicMemberData接口，继承自IMemberData，表示可以从所属成员中分离的动态成员数据。",
+      "tags": [
+        "interface",
+        "dynamic-member",
+        "member-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IDynamicMemberData.cs:IDynamicMemberData",
+      "type": "class",
+      "name": "IDynamicMemberData",
+      "filePath": "Engine/IDynamicMemberData.cs",
+      "summary": "动态成员数据接口，继承IMemberData，提供IsDisposed属性用于判断成员何时可安全忽略。",
+      "tags": [
+        "interface",
+        "dynamic-member",
+        "disposable"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        4,
+        8
+      ]
+    },
+    {
+      "id": "file:Engine/IDynamicMemberProvider.cs",
+      "type": "file",
+      "name": "IDynamicMemberProvider.cs",
+      "filePath": "Engine/IDynamicMemberProvider.cs",
+      "summary": "定义IDynamicMemberProvider接口，提供动态成员类型列表，通过DynamicMember.DeclaringType控制适用范围。",
+      "tags": [
+        "interface",
+        "dynamic-member",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IDynamicMemberProvider.cs:IDynamicMemberProvider",
+      "type": "class",
+      "name": "IDynamicMemberProvider",
+      "filePath": "Engine/IDynamicMemberProvider.cs",
+      "summary": "动态成员提供者接口，通过GetDynamicMembers方法返回DynamicMember枚举列表。",
+      "tags": [
+        "interface",
+        "dynamic-member",
+        "provider"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        5,
+        9
+      ]
+    },
+    {
+      "id": "file:Engine/IDynamicStep.cs",
+      "type": "file",
+      "name": "IDynamicStep.cs",
+      "filePath": "Engine/IDynamicStep.cs",
+      "summary": "定义IDynamicStep接口，用于从XML加载TestPlan时动态生成TestStep类型。",
+      "tags": [
+        "interface",
+        "dynamic-step",
+        "test-plan",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IDynamicStep.cs:IDynamicStep",
+      "type": "class",
+      "name": "IDynamicStep",
+      "filePath": "Engine/IDynamicStep.cs",
+      "summary": "动态步骤接口，提供GetStepFactoryType和GetStep方法，支持从XML反序列化时动态创建TestStep实例。",
+      "tags": [
+        "interface",
+        "dynamic-step",
+        "factory",
+        "serialization"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        12,
+        21
+      ]
+    },
+    {
+      "id": "file:Engine/IExternalTestPlanParameterExport.cs",
+      "type": "file",
+      "name": "IExternalTestPlanParameterExport.cs",
+      "filePath": "Engine/IExternalTestPlanParameterExport.cs",
+      "summary": "定义IExternalTestPlanParameterExport接口，用于将TestPlan的外部参数导出到文件。",
+      "tags": [
+        "interface",
+        "export",
+        "external-parameter",
+        "test-plan"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IExternalTestPlanParameterExport.cs:IExternalTestPlanParameterExport",
+      "type": "class",
+      "name": "IExternalTestPlanParameterExport",
+      "filePath": "Engine/IExternalTestPlanParameterExport.cs",
+      "summary": "外部参数导出插件接口，继承ITapPlugin，提供Extension、Name属性和ExportExternalParameters方法。",
+      "tags": [
+        "interface",
+        "export",
+        "external-parameter",
+        "plugin"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        10,
+        30
+      ]
+    },
+    {
+      "id": "file:Engine/IExternalTestPlanParameterImport.cs",
+      "type": "file",
+      "name": "IExternalTestPlanParameterImport.cs",
+      "filePath": "Engine/IExternalTestPlanParameterImport.cs",
+      "summary": "定义IExternalTestPlanParameterImport接口，用于从文件导入外部参数值到TestPlan。",
+      "tags": [
+        "interface",
+        "import",
+        "external-parameter",
+        "test-plan"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IExternalTestPlanParameterImport.cs:IExternalTestPlanParameterImport",
+      "type": "class",
+      "name": "IExternalTestPlanParameterImport",
+      "filePath": "Engine/IExternalTestPlanParameterImport.cs",
+      "summary": "外部参数导入插件接口，继承ITapPlugin，提供Extension、Name属性和ImportExternalParameters方法。",
+      "tags": [
+        "interface",
+        "import",
+        "external-parameter",
+        "plugin"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        10,
+        34
+      ]
+    },
+    {
+      "id": "file:Engine/IFormatName.cs",
+      "type": "file",
+      "name": "IFormatName.cs",
+      "filePath": "Engine/IFormatName.cs",
+      "summary": "定义IFormatName接口，允许TestStep实现自定义名称格式化，支持宏占位符语法。",
+      "tags": [
+        "interface",
+        "name-formatting",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IFormatName.cs:IFormatName",
+      "type": "class",
+      "name": "IFormatName",
+      "filePath": "Engine/IFormatName.cs",
+      "summary": "名称格式化接口，继承ITestStep，通过GetFormattedName返回可能包含宏（{}）的格式化名称。",
+      "tags": [
+        "interface",
+        "name-formatting",
+        "macro"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        6,
+        12
+      ]
+    },
+    {
+      "id": "file:Engine/IInstrument.cs",
+      "type": "file",
+      "name": "IInstrument.cs",
+      "filePath": "Engine/IInstrument.cs",
+      "summary": "定义IInstrument标记接口，作为所有仪器驱动程序的基础接口，继承自IResource和ITapPlugin。",
+      "tags": [
+        "interface",
+        "instrument",
+        "marker-interface",
+        "resource"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IInstrument.cs:IInstrument",
+      "type": "class",
+      "name": "IInstrument",
+      "filePath": "Engine/IInstrument.cs",
+      "summary": "仪器基础标记接口，同时继承IResource和ITapPlugin，是OpenTAP中所有仪器驱动的根接口。",
+      "tags": [
+        "interface",
+        "instrument",
+        "marker-interface"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        10,
+        13
+      ]
+    },
+    {
+      "id": "file:Engine/ILockable.cs",
+      "type": "file",
+      "name": "ILockable.cs",
+      "filePath": "Engine/ILockable.cs",
+      "summary": "定义资源引用ResourceReference、资源引用集合接口IResourceReferences、锁管理器接口ILockManager和LockManager实现类。",
+      "tags": [
+        "resource",
+        "locking",
+        "concurrency",
+        "test-plan"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine/ILockable.cs:ResourceReference",
+      "type": "class",
+      "name": "ResourceReference",
+      "filePath": "Engine/ILockable.cs",
+      "summary": "表示对IResource的引用，记录引用实例、属性信息和IMemberData，用于锁管理器的资源跟踪。",
+      "tags": [
+        "resource",
+        "reference",
+        "member-data"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        16,
+        46
+      ]
+    },
+    {
+      "id": "class:Engine/ILockable.cs:IResourceReferences",
+      "type": "class",
+      "name": "IResourceReferences",
+      "filePath": "Engine/ILockable.cs",
+      "summary": "表示资源及其引用集合的接口，包含IResource属性和ResourceReference引用列表。",
+      "tags": [
+        "interface",
+        "resource",
+        "reference-collection"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        51,
+        61
+      ]
+    },
+    {
+      "id": "class:Engine/ILockable.cs:ILockManager",
+      "type": "class",
+      "name": "ILockManager",
+      "filePath": "Engine/ILockable.cs",
+      "summary": "锁管理器插件接口，继承ITapPlugin，提供BeforeOpen和AfterClose钩子方法用于资源打开前后的锁定控制。",
+      "tags": [
+        "interface",
+        "lock-manager",
+        "resource",
+        "hook"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        66,
+        81
+      ]
+    },
+    {
+      "id": "class:Engine/ILockable.cs:LockManager",
+      "type": "class",
+      "name": "LockManager",
+      "filePath": "Engine/ILockable.cs",
+      "summary": "锁管理器的聚合实现，从插件管理器加载所有ILockManager实现，按DisplayAttribute.Order排序后依次调用。",
+      "tags": [
+        "lock-manager",
+        "aggregation",
+        "plugin"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        83,
+        114
+      ]
+    },
+    {
+      "id": "function:Engine/ILockable.cs:LockManager",
+      "type": "function",
+      "name": "LockManager",
+      "filePath": "Engine/ILockable.cs",
+      "summary": "LockManager构造函数，通过PluginManager获取所有ILockManager插件按Order排序并实例化，失败时记录错误日志。",
+      "tags": [
+        "lock-manager",
+        "plugin-loading",
+        "constructor"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        87,
+        97
+      ]
+    },
+    {
+      "id": "file:Engine/ILoopStep.cs",
+      "type": "file",
+      "name": "ILoopStep.cs",
+      "filePath": "Engine/ILoopStep.cs",
+      "summary": "定义ILoopStep接口，继承ITestStep，标记测试步骤为循环步骤，提供当前迭代和最大迭代次数属性。",
+      "tags": [
+        "interface",
+        "loop",
+        "test-step",
+        "iteration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/ILoopStep.cs:ILoopStep",
+      "type": "class",
+      "name": "ILoopStep",
+      "filePath": "Engine/ILoopStep.cs",
+      "summary": "循环步骤标记接口，继承ITestStep，提供CurrentIteration和MaxIterations属性用于循环控制。",
+      "tags": [
+        "interface",
+        "loop",
+        "iteration"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        6,
+        12
+      ]
+    },
+    {
+      "id": "file:Engine/IMergedTableResultsListener.cs",
+      "type": "file",
+      "name": "IMergedTableResultsListener.cs",
+      "filePath": "Engine/IMergedTableResultsListener.cs",
+      "summary": "定义IMergedTableResultListener标记接口，继承IResultListener，支持优化的合并结果表以提升性能。",
+      "tags": [
+        "interface",
+        "marker-interface",
+        "result-listener",
+        "performance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/IMergedTableResultsListener.cs:IMergedTableResultListener",
+      "type": "class",
+      "name": "IMergedTableResultListener",
+      "filePath": "Engine/IMergedTableResultsListener.cs",
+      "summary": "合并结果表监听器标记接口，继承IResultListener，在高频发布同类结果时提供性能优化支持。",
+      "tags": [
+        "interface",
+        "marker-interface",
+        "performance",
+        "result-table"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        4,
+        7
+      ]
+    },
+    {
+      "id": "file:Engine/INotifyActivity.cs",
+      "type": "file",
+      "name": "INotifyActivity.cs",
+      "filePath": "Engine/INotifyActivity.cs",
+      "summary": "定义INotifyActivity接口，提供Activity事件和OnActivity方法用于通知客户端对象处于活动状态。",
+      "tags": [
+        "interface",
+        "activity",
+        "event",
+        "notification"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine/INotifyActivity.cs:INotifyActivity",
+      "type": "class",
+      "name": "INotifyActivity",
+      "filePath": "Engine/INotifyActivity.cs",
+      "summary": "活动通知接口，包含Activity事件和OnActivity触发方法，用于向客户端广播对象的活跃状态。",
+      "tags": [
+        "interface",
+        "activity",
+        "event",
+        "notification"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        12,
+        23
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine/IDut.cs",
+      "target": "class:Engine/IDut.cs:IDut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IDut.cs",
+      "target": "class:Engine/IDut.cs:IDut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IDynamicMemberData.cs",
+      "target": "class:Engine/IDynamicMemberData.cs:IDynamicMemberData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IDynamicMemberData.cs",
+      "target": "class:Engine/IDynamicMemberData.cs:IDynamicMemberData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IDynamicMemberProvider.cs",
+      "target": "class:Engine/IDynamicMemberProvider.cs:IDynamicMemberProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IDynamicMemberProvider.cs",
+      "target": "class:Engine/IDynamicMemberProvider.cs:IDynamicMemberProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IDynamicStep.cs",
+      "target": "class:Engine/IDynamicStep.cs:IDynamicStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IDynamicStep.cs",
+      "target": "class:Engine/IDynamicStep.cs:IDynamicStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IExternalTestPlanParameterExport.cs",
+      "target": "class:Engine/IExternalTestPlanParameterExport.cs:IExternalTestPlanParameterExport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IExternalTestPlanParameterExport.cs",
+      "target": "class:Engine/IExternalTestPlanParameterExport.cs:IExternalTestPlanParameterExport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IExternalTestPlanParameterImport.cs",
+      "target": "class:Engine/IExternalTestPlanParameterImport.cs:IExternalTestPlanParameterImport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IExternalTestPlanParameterImport.cs",
+      "target": "class:Engine/IExternalTestPlanParameterImport.cs:IExternalTestPlanParameterImport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IFormatName.cs",
+      "target": "class:Engine/IFormatName.cs:IFormatName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IFormatName.cs",
+      "target": "class:Engine/IFormatName.cs:IFormatName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IInstrument.cs",
+      "target": "class:Engine/IInstrument.cs:IInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IInstrument.cs",
+      "target": "class:Engine/IInstrument.cs:IInstrument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ILockable.cs",
+      "target": "class:Engine/ILockable.cs:ResourceReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ILockable.cs",
+      "target": "class:Engine/ILockable.cs:IResourceReferences",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ILockable.cs",
+      "target": "class:Engine/ILockable.cs:ILockManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ILockable.cs",
+      "target": "class:Engine/ILockable.cs:LockManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ILockable.cs",
+      "target": "class:Engine/ILockable.cs:ResourceReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ILockable.cs",
+      "target": "class:Engine/ILockable.cs:IResourceReferences",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ILockable.cs",
+      "target": "class:Engine/ILockable.cs:ILockManager",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/ILockable.cs",
+      "target": "function:Engine/ILockable.cs:LockManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ILoopStep.cs",
+      "target": "class:Engine/ILoopStep.cs:ILoopStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/ILoopStep.cs",
+      "target": "class:Engine/ILoopStep.cs:ILoopStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/IMergedTableResultsListener.cs",
+      "target": "class:Engine/IMergedTableResultsListener.cs:IMergedTableResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/IMergedTableResultsListener.cs",
+      "target": "class:Engine/IMergedTableResultsListener.cs:IMergedTableResultListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine/INotifyActivity.cs",
+      "target": "class:Engine/INotifyActivity.cs:INotifyActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Engine/INotifyActivity.cs",
+      "target": "class:Engine/INotifyActivity.cs:INotifyActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

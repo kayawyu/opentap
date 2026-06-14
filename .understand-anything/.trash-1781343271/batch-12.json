@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.4.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.4.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.4.md",
+      "summary": "OpenTAP 9.4 版本的发布说明，记录了新增的 UnsweepableAttribute 和 IsolatedPackageAction 特性、Run Program 步骤超时判定的可用性改进，以及 Linux 安装、TestPlanRun 运行时错误等缺陷修复。",
+      "tags": ["release-notes", "changelog", "documentation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.5.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.5.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.5.md",
+      "summary": "OpenTAP 9.5 版本的发布说明，涵盖多项新功能（TapPackage 文件哈希、程序集引用改进、ITestSteps 多选、External Parameters 支持 List<string>、日志文件总容量提升至 2GB 等）、可用性改进及多个缺陷修复。",
+      "tags": ["release-notes", "changelog", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.6.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.6.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.6.md",
+      "summary": "OpenTAP 9.6 版本的发布说明，记录了基于判定结果的中止机制、SCPI 仪器错误检查、CI 构建 Debian 包等新功能，以及 TypeDataProviderStack、Embedded Properties、ValidatingObject 等多项缺陷修复。",
+      "tags": ["release-notes", "changelog", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.7.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.7.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.7.md",
+      "summary": "OpenTAP 9.7 版本的发布说明，包括更精简的 Docker 运行时镜像、tap package show CLI 选项、Enum 值花括号模板等新功能，以及 Sweep Loop 异常、Test Plan Reference、EnabledIfAttribute 等多达 22 项缺陷修复和文档改进。",
+      "tags": ["release-notes", "changelog", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.8.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.8.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.8.md",
+      "summary": "OpenTAP 9.8 版本的发布说明，引入了 Scope Parameters 新特性，改进了 Test Plan Reference 性能和 AWS S3 包下载支持，同时修复了 Resource 并发问题、外部参数、MSBuild 错误等多个缺陷，并记录了多项文档改进需求。",
+      "tags": ["release-notes", "changelog", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:doc/Release Notes/ReleaseNote_OpenTAP9.9.md",
+      "type": "document",
+      "name": "ReleaseNote_OpenTAP9.9.md",
+      "filePath": "doc/Release Notes/ReleaseNote_OpenTAP9.9.md",
+      "summary": "OpenTAP 9.9 版本的发布说明，涵盖 ComponentSettings promptUser 支持、tap package show 最新兼容版本显示、TapPackage 标签元数据、TestPlan 注解等 7 项新功能，大量可用性改进（包括 HTTP Range Header 恢复下载、快速测试计划性能优化、程序集版本冲突处理）以及 16 项缺陷修复和文档改进。",
+      "tags": ["release-notes", "changelog", "documentation"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.4.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.5.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.5.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.6.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.6.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.7.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.7.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.8.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:doc/Release Notes/ReleaseNote_OpenTAP9.8.md",
+      "target": "document:doc/Release Notes/ReleaseNote_OpenTAP9.9.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

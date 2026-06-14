@@ -1,0 +1,1280 @@
+{
+  "nodes": [
+    {
+      "id": "file:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "type": "file",
+      "name": "OpenTapImageInstaller.cs",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "summary": "OpenTAP 镜像安装器：定义 IImageDeployer 接口，提供 DefaultImageDeployer 默认实现，以及 OpenTapImageInstaller Task 类，协调包列表解析、镜像安装、日志跟踪和取消令牌处理。",
+      "tags": [
+        "image-installer",
+        "package-deployment",
+        "msbuild-task",
+        "interface-definition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:IImageDeployer",
+      "type": "class",
+      "name": "IImageDeployer",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "lineRange": [
+        14,
+        17
+      ],
+      "summary": "镜像部署器接口，定义 Install 方法签名，用于将 ImageSpecifier 列表安装到指定目录。",
+      "tags": [
+        "interface",
+        "abstraction",
+        "deployment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:DefaultImageDeployer",
+      "type": "class",
+      "name": "DefaultImageDeployer",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "lineRange": [
+        19,
+        27
+      ],
+      "summary": "IImageDeployer 的默认实现，调用 PackageManager 的静态安装方法完成包部署。",
+      "tags": [
+        "deployer",
+        "implementation",
+        "package-manager"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:OpenTapImageInstaller",
+      "type": "class",
+      "name": "OpenTapImageInstaller",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "lineRange": [
+        29,
+        223
+      ],
+      "summary": "镜像安装器 MSBuild Task 类，实现 IDisposable。通过 ImageSpecifierFromTaskItems 解析 TaskItem 为安装规格，委托 ImageDeployer 执行安装并管理日志跟踪。",
+      "tags": [
+        "msbuild-task",
+        "image-installer",
+        "idisposable",
+        "deployment"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:InstallImage",
+      "type": "function",
+      "name": "InstallImage",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "lineRange": [
+        95,
+        166
+      ],
+      "summary": "核心安装方法：创建 OpenTapContext，加载镜像规范，回退 OpenTAP 版本，处理包引用中的认证令牌，委托 ImageDeployer 安装并写入标记文件。",
+      "tags": [
+        "image-installation",
+        "deployment",
+        "orchestration",
+        "authentication"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:ImageSpecifierFromTaskItems",
+      "type": "function",
+      "name": "ImageSpecifierFromTaskItems",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "lineRange": [
+        176,
+        222
+      ],
+      "summary": "从 MSBuild TaskItem 数组解析并构造 ImageSpecifier 对象列表，提取包名、版本、存储库等元数据。",
+      "tags": [
+        "parsing",
+        "image-specifier",
+        "task-item",
+        "deserialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.MSBuild/OpenTapLoader.cs",
+      "type": "file",
+      "name": "OpenTapLoader.cs",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/OpenTapLoader.cs",
+      "summary": "OpenTAP 运行时加载器：在 MSBuild 上下文中动态加载 OpenTAP 程序集。通过 OpenTapContext 管理环境变量和程序集加载路径，初始化 SessionLogs 并在释放时刷新日志。",
+      "tags": [
+        "runtime-loader",
+        "assembly-loading",
+        "idisposable",
+        "session-logs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapLoader.cs:OpenTapContext",
+      "type": "class",
+      "name": "OpenTapContext",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/OpenTapLoader.cs",
+      "lineRange": [
+        15,
+        111
+      ],
+      "summary": "OpenTAP 上下文类（IDisposable）：在 MSBuild 环境中设置 OPENTAP_INIT_DIRECTORY 等环境变量，通过 Assembly.LoadFrom 动态加载 OpenTap.dll 和 OpenTap.Package.dll，初始化命名日志文件。",
+      "tags": [
+        "idisposable",
+        "assembly-loading",
+        "context",
+        "environment-variables"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "type": "file",
+      "name": "PackageTask.cs",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "summary": "MSBuild Custom Task：创建 OpenTAP 包。通过调用 tap.exe package create 命令生成 .TapPackage 文件，支持自定义配置文件、目录和构建类型枚举。",
+      "tags": [
+        "msbuild-task",
+        "packaging",
+        "tap-package",
+        "build-system"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs:BuildType",
+      "type": "class",
+      "name": "BuildType",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "lineRange": [
+        14,
+        18
+      ],
+      "summary": "构建类型枚举：None 和 Package，控制 tap.exe package create 的构建模式。",
+      "tags": [
+        "enum",
+        "build-type",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs:InstallType",
+      "type": "class",
+      "name": "InstallType",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "lineRange": [
+        20,
+        24
+      ],
+      "summary": "安装类型枚举：None 和 PackageDef，控制 tap.exe package create 的安装模式。",
+      "tags": [
+        "enum",
+        "install-type",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs:PackageTask",
+      "type": "class",
+      "name": "PackageTask",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "lineRange": [
+        29,
+        228
+      ],
+      "summary": "包创建 MSBuild Task 类，配置并调用 tap.exe 进程创建 .TapPackage 文件，处理配置文件匹配和输出格式化。",
+      "tags": [
+        "msbuild-task",
+        "packaging",
+        "tap-package",
+        "process-execution"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "lineRange": [
+        170,
+        198
+      ],
+      "summary": "MSBuild Task 执行入口：查找 tap.exe，调用 confFileRun 查找配置文件并执行 tap package create 命令，捕获输出和错误。",
+      "tags": [
+        "msbuild-task",
+        "execute",
+        "packaging",
+        "process-execution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.MSBuild/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "sdk/OpenTap.Sdk.MSBuild/Properties/AssemblyInfo.cs",
+      "summary": "OpenTap.Sdk.MSBuild 程序集信息文件，定义版本号 9.4.0.0 和 InternalsVisibleTo 声明（向 OpenTap.Package.UnitTests 暴露内部类型）。",
+      "tags": [
+        "assembly-info",
+        "metadata",
+        "versioning",
+        "internals-visible-to"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "type": "file",
+      "name": "GeneratePlugin.cs",
+      "filePath": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "summary": "SDK New 命令集：插件类型代码生成器。定义 GenerateDut、GenerateInstrument、GenerateResultListener 等 8 个 CLI Action 子类，每个从嵌入资源模板生成对应的 C# 插件骨架代码。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "plugin-template",
+        "embedded-resources"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateDut",
+      "type": "class",
+      "name": "GenerateDut",
+      "filePath": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "lineRange": [
+        16,
+        39
+      ],
+      "summary": "DUT 代码生成器 CLI Action，从嵌入的 DutTemplate.txt 模板生成 DUT 插件类文件。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "dut",
+        "template"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateInstrument",
+      "type": "class",
+      "name": "GenerateInstrument",
+      "filePath": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "lineRange": [
+        40,
+        62
+      ],
+      "summary": "Instrument 代码生成器 CLI Action，从嵌入的 InstrumentTemplate.txt 模板生成 Instrument 插件类文件。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "instrument",
+        "template"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateResultListener",
+      "type": "class",
+      "name": "GenerateResultListener",
+      "filePath": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "lineRange": [
+        63,
+        85
+      ],
+      "summary": "ResultListener 代码生成器 CLI Action，从嵌入模板生成 ResultListener 插件类文件。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "result-listener",
+        "template"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateSetting",
+      "type": "class",
+      "name": "GenerateSetting",
+      "filePath": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "lineRange": [
+        86,
+        108
+      ],
+      "summary": "ComponentSetting 代码生成器 CLI Action，从嵌入模板生成 ComponentSettings 类文件。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "component-setting",
+        "template"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateTestStep",
+      "type": "class",
+      "name": "GenerateTestStep",
+      "filePath": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "lineRange": [
+        109,
+        131
+      ],
+      "summary": "TestStep 代码生成器 CLI Action，从嵌入模板生成 TestStep 类文件。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "test-step",
+        "template"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateTestPlan",
+      "type": "class",
+      "name": "GenerateTestPlan",
+      "filePath": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "lineRange": [
+        134,
+        172
+      ],
+      "summary": "TestPlan 代码生成器 CLI Action，从嵌入模板生成 TestPlan 类文件。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "test-plan",
+        "template"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateCliAction",
+      "type": "class",
+      "name": "GenerateCliAction",
+      "filePath": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "lineRange": [
+        173,
+        195
+      ],
+      "summary": "CLI Action 代码生成器 CLI Action，从嵌入模板生成 CliAction 类文件。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "cli",
+        "template"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GeneratePackageXml",
+      "type": "class",
+      "name": "GeneratePackageXml",
+      "filePath": "sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "lineRange": [
+        196,
+        218
+      ],
+      "summary": "Package XML 生成器 CLI Action，从嵌入模板生成 package.xml 包定义文件。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "package-xml",
+        "template"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "type": "file",
+      "name": "GenerateProject.cs",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "summary": "SDK New 命令：项目脚手架生成器。GenerateProject CLI Action 通过 dotnet new 和自定义模板创建完整的 OpenTAP 插件项目结构，支持 DUT/Instrument/Setting/ResultListener/CliAction/Editor 等模块选项。NugetInterop 辅助类从 NuGet API 获取最新包版本。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "project-scaffolding",
+        "dotnet-template",
+        "nuget"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GenerateProject.cs:GenerateProject",
+      "type": "class",
+      "name": "GenerateProject",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "lineRange": [
+        20,
+        342
+      ],
+      "summary": "项目脚手架生成 CLI Action：验证项目名称，管理 dotnet new 模板安装，调用 dotnet new tap 创建项目，然后按模块选项（DUT、Instrument 等）追加子命令生成各组件代码。",
+      "tags": [
+        "cli-action",
+        "project-scaffolding",
+        "dotnet-template",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/GenerateProject.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "lineRange": [
+        108,
+        229
+      ],
+      "summary": "项目生成主执行方法：验证项目名、安装/更新 dotnet 模板、运行 dotnet new tap 创建项目、根据布尔选项递归调用各组件生成器（dut/instrument/resultlistener/settings/cliaction/editor）。",
+      "tags": [
+        "cli-action",
+        "execute",
+        "project-creation",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GenerateProject.cs:NugetInterop",
+      "type": "class",
+      "name": "NugetInterop",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "lineRange": [
+        344,
+        385
+      ],
+      "summary": "NuGet 互操作辅助类：从 NuGet 注册表查询指定包的最新版本，用于在项目生成时获取最新的 OpenTAP SDK 版本。",
+      "tags": [
+        "nuget",
+        "version-query",
+        "helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/GenerateProject.cs:GetLatestNugetVersion",
+      "type": "function",
+      "name": "GetLatestNugetVersion",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "lineRange": [
+        347,
+        384
+      ],
+      "summary": "从 NuGet API（nuget.org）查询指定包的最新稳定版本号，处理注册表 JSON 响应解析和版本排序。",
+      "tags": [
+        "nuget",
+        "version-query",
+        "api",
+        "json-parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "type": "file",
+      "name": "GenerateTool.cs",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "summary": "SDK New 命令：开发工具配置文件生成器。包含 GenerateVs（.sln 方案文件）、GenerateGitlab（.gitlab-ci.yml CI 脚本）、GenerateVsCode（.vscode 配置）、GenerateGit（.gitignore/.gitattributes）四个 CLI Action。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "tool-integration",
+        "template"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateVs",
+      "type": "class",
+      "name": "GenerateVs",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "lineRange": [
+        17,
+        31
+      ],
+      "summary": "Visual Studio 方案文件生成器 CLI Action，从嵌入模板生成 .sln 文件。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "visual-studio",
+        "solution"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateGitlab",
+      "type": "class",
+      "name": "GenerateGitlab",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "lineRange": [
+        33,
+        47
+      ],
+      "summary": "GitLab CI 配置生成器 CLI Action，从嵌入模板生成 .gitlab-ci.yml 构建脚本。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "gitlab-ci",
+        "ci-cd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateVsCode",
+      "type": "class",
+      "name": "GenerateVsCode",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "lineRange": [
+        49,
+        95
+      ],
+      "summary": "VS Code 配置生成器 CLI Action，从嵌入模板生成 .vscode 目录下的 tasks.json 和 launch.json 配置文件。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "vscode",
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateGit",
+      "type": "class",
+      "name": "GenerateGit",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "lineRange": [
+        97,
+        143
+      ],
+      "summary": "Git 配置文件生成器 CLI Action：生成 .gitignore 和 .gitattributes，并可选择性地将 package.xml 中的文件列表追加到 .gitignore。",
+      "tags": [
+        "code-generation",
+        "cli-action",
+        "git",
+        "gitignore"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "type": "file",
+      "name": "GenerateType.cs",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "summary": "SDK New 基础设施：生成器基类 GenerateType（实现 ICliAction），提供 Validate（名称验证）、WriteFile、TryGetNamespace、ReplaceInTemplate 等模板代码生成的核心抽象方法。",
+      "tags": [
+        "base-class",
+        "code-generation",
+        "cli-action",
+        "template-engine",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "class",
+      "name": "GenerateType",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "lineRange": [
+        15,
+        136
+      ],
+      "summary": "代码生成器抽象基类，实现 ICliAction。提供 Validate（C# 标识符和文件名合法性校验）、WriteFile（带目录创建的写文件）、TryGetNamespace 和 ReplaceInTemplate（模板变量替换）等通用功能。",
+      "tags": [
+        "abstract-class",
+        "cli-action",
+        "code-generation",
+        "template-engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:Validate",
+      "type": "function",
+      "name": "Validate",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "lineRange": [
+        17,
+        54
+      ],
+      "summary": "名称验证方法：检查输入名称是否包含非法文件名字符、是否允许空格、前导数字以及是否仅限字母数字字符，输出带有 ^ 标记的错误可视化信息。",
+      "tags": [
+        "validation",
+        "input-sanitization",
+        "filename-check"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:WriteFile",
+      "type": "function",
+      "name": "WriteFile",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "lineRange": [
+        76,
+        100
+      ],
+      "summary": "文件写入方法：自动创建输出目录，检测文件是否已存在并提示用户选择覆盖策略（OverrideRequest），将内容写入指定路径。",
+      "tags": [
+        "file-io",
+        "directory-creation",
+        "override-detection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:TryGetNamespace",
+      "type": "function",
+      "name": "TryGetNamespace",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "lineRange": [
+        102,
+        123
+      ],
+      "summary": "尝试从当前工作目录的 .cs 文件中提取命名空间，回退到目录优先查找，最终使用带 fallback 的通用命名空间。",
+      "tags": [
+        "namespace-detection",
+        "cs-file-parsing",
+        "fallback"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:ReplaceInTemplate",
+      "type": "function",
+      "name": "ReplaceInTemplate",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "lineRange": [
+        125,
+        135
+      ],
+      "summary": "模板变量替换方法：将模板中的 $(Name) 和 $(Namespace) 占位符替换为实际名称和命名空间。",
+      "tags": [
+        "template",
+        "string-replacement",
+        "variable-substitution"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:OverrideRequest",
+      "type": "class",
+      "name": "OverrideRequest",
+      "filePath": "sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "lineRange": [
+        138,
+        143
+      ],
+      "summary": "文件覆盖请求枚举：UsedSkip、UsedOverride、UsedRename 三种策略，控制生成文件时与已有文件的冲突处理。",
+      "tags": [
+        "enum",
+        "file-override",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.New/NewPackageReference.cs",
+      "type": "file",
+      "name": "NewPackageReference.cs",
+      "filePath": "sdk/OpenTap.Sdk.New/NewPackageReference.cs",
+      "summary": "SDK New 命令：Package 引用添加器。NewPackageReference CLI Action 将 OpenTAP 包引用（OpenTapPackageReference 或 PackageReference）添加到 C# 项目文件中，支持版本指定、存储库配置和非引用模式。",
+      "tags": [
+        "cli-action",
+        "package-reference",
+        "csproj",
+        "nuget"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/NewPackageReference.cs:NewPackageReference",
+      "type": "class",
+      "name": "NewPackageReference",
+      "filePath": "sdk/OpenTap.Sdk.New/NewPackageReference.cs",
+      "lineRange": [
+        11,
+        174
+      ],
+      "summary": "包引用添加 CLI Action 类，实现 ICliAction。从 OpenTAP 包仓库验证包存在性，解析版本和程序集依赖信息，将 OpenTapPackageReference 和 PackageReference 元素插入 csproj 文件的 ItemGroup 中。",
+      "tags": [
+        "cli-action",
+        "package-reference",
+        "csproj",
+        "dependency-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/NewPackageReference.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "sdk/OpenTap.Sdk.New/NewPackageReference.cs",
+      "lineRange": [
+        34,
+        155
+      ],
+      "summary": "包引用添加执行方法：验证包名和版本、从 HttpPackageRepository 获取包信息、解析程序集依赖、在 csproj 中添加 OpenTapPackageReference 和条件 PackageReference，处理 NoReference 和非包程序集引用模式。",
+      "tags": [
+        "cli-action",
+        "execute",
+        "package-reference",
+        "csproj-modification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:sdk/OpenTap.Sdk.New/OpenTap.Sdk.New.csproj",
+      "type": "config",
+      "name": "OpenTap.Sdk.New.csproj",
+      "filePath": "sdk/OpenTap.Sdk.New/OpenTap.Sdk.New.csproj",
+      "summary": "OpenTAP SDK New 工具的 C# 项目配置文件，平台目标 AnyCPU，引用 Tap.Engine 和 Tap.Package 项目，包含嵌入资源（Resources/*.txt）用于模板代码生成。",
+      "tags": [
+        "configuration",
+        "csproj",
+        "build-system",
+        "embedded-resources"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.New/Properties/AssemblyInfo.cs",
+      "type": "file",
+      "name": "AssemblyInfo.cs",
+      "filePath": "sdk/OpenTap.Sdk.New/Properties/AssemblyInfo.cs",
+      "summary": "OpenTap.Sdk.New 程序集信息文件，定义版本号 9.4.0.0-Development。",
+      "tags": [
+        "assembly-info",
+        "metadata",
+        "versioning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:sdk/OpenTap.Sdk.New/ResXWriter.cs",
+      "type": "file",
+      "name": "ResXWriter.cs",
+      "filePath": "sdk/OpenTap.Sdk.New/ResXWriter.cs",
+      "summary": "ResX 资源文件写入器：使用 XML（XDocument）生成 .resx 资源文件。支持字符串和 Double 类型资源的添加，Double 值通过往返序列化确保精度。",
+      "tags": [
+        "resx",
+        "xml",
+        "resource-generation",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:sdk/OpenTap.Sdk.New/ResXWriter.cs:ResXWriter",
+      "type": "class",
+      "name": "ResXWriter",
+      "filePath": "sdk/OpenTap.Sdk.New/ResXWriter.cs",
+      "lineRange": [
+        9,
+        52
+      ],
+      "summary": "ResX XML 写入器类，管理键值对字典并序列化为符合 .resx 格式的 XML 文档，支持 Double 精度保留和键排序输出。",
+      "tags": [
+        "resx",
+        "xml-serialization",
+        "resource-writer"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:sdk/OpenTap.Sdk.New/ResXWriter.cs:Generate",
+      "type": "function",
+      "name": "Generate",
+      "filePath": "sdk/OpenTap.Sdk.New/ResXWriter.cs",
+      "lineRange": [
+        35,
+        51
+      ],
+      "summary": "生成方法：按名称排序遍历所有键值对，构造包含 data 元素（含 name、xml:space 属性和 value 子元素）的 root XElement，保存为 XML 文件。",
+      "tags": [
+        "xml-generation",
+        "resx",
+        "serialization"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:IImageDeployer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:DefaultImageDeployer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:OpenTapImageInstaller",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:InstallImage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:ImageSpecifierFromTaskItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:OpenTapImageInstaller",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:InstallImage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:OpenTapImageInstaller",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:ImageSpecifierFromTaskItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:DefaultImageDeployer",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapImageInstaller.cs:IImageDeployer",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/OpenTapLoader.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/OpenTapLoader.cs:OpenTapContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs:BuildType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs:InstallType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "target": "class:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs:PackageTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs:PackageTask",
+      "target": "function:sdk/OpenTap.Sdk.MSBuild/PackageTask.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateDut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateSetting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateCliAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GeneratePackageXml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "config:sdk/OpenTap.Sdk.New/OpenTap.Sdk.New.csproj",
+      "target": "file:sdk/OpenTap.Sdk.New/GeneratePlugin.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/OpenTap.Sdk.New/OpenTap.Sdk.New.csproj",
+      "target": "file:sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/OpenTap.Sdk.New/OpenTap.Sdk.New.csproj",
+      "target": "file:sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/OpenTap.Sdk.New/OpenTap.Sdk.New.csproj",
+      "target": "file:sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/OpenTap.Sdk.New/OpenTap.Sdk.New.csproj",
+      "target": "file:sdk/OpenTap.Sdk.New/NewPackageReference.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:sdk/OpenTap.Sdk.New/OpenTap.Sdk.New.csproj",
+      "target": "file:sdk/OpenTap.Sdk.New/ResXWriter.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateProject.cs:GenerateProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateProject.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateProject.cs:NugetInterop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateProject.cs",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateProject.cs:GetLatestNugetVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateProject.cs:GenerateProject",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateProject.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateProject.cs:NugetInterop",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateProject.cs:GetLatestNugetVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateVs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateGitlab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateVsCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateTool.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateGit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:Validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:WriteFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:TryGetNamespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:ReplaceInTemplate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/GenerateType.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:OverrideRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:Validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:WriteFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:TryGetNamespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "target": "function:sdk/OpenTap.Sdk.New/GenerateType.cs:ReplaceInTemplate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/NewPackageReference.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/NewPackageReference.cs:NewPackageReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/NewPackageReference.cs",
+      "target": "function:sdk/OpenTap.Sdk.New/NewPackageReference.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/NewPackageReference.cs:NewPackageReference",
+      "target": "function:sdk/OpenTap.Sdk.New/NewPackageReference.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/ResXWriter.cs",
+      "target": "class:sdk/OpenTap.Sdk.New/ResXWriter.cs:ResXWriter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:sdk/OpenTap.Sdk.New/ResXWriter.cs",
+      "target": "function:sdk/OpenTap.Sdk.New/ResXWriter.cs:Generate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/ResXWriter.cs:ResXWriter",
+      "target": "function:sdk/OpenTap.Sdk.New/ResXWriter.cs:Generate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateDut",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateInstrument",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateResultListener",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateSetting",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateTestStep",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateTestPlan",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GenerateCliAction",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GeneratePlugin.cs:GeneratePackageXml",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateProject.cs:GenerateProject",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateVs",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateGitlab",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateVsCode",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:sdk/OpenTap.Sdk.New/GenerateTool.cs:GenerateGit",
+      "target": "class:sdk/OpenTap.Sdk.New/GenerateType.cs:GenerateType",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    }
+  ]
+}

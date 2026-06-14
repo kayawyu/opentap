@@ -1,0 +1,1818 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package.UnitTests/UninstallContextTest.cs",
+      "type": "file",
+      "name": "UninstallContextTest.cs",
+      "filePath": "Package.UnitTests/UninstallContextTest.cs",
+      "summary": "卸载上下文综合测试类，覆盖文件删除、多版本插件加载/升级、属性扫描和 OS 平台支持等场景。",
+      "tags": [
+        "test",
+        "uninstall",
+        "plugin-management",
+        "assembly-loading"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package.UnitTests/UnitTesting.snk",
+      "type": "file",
+      "name": "UnitTesting.snk",
+      "filePath": "Package.UnitTests/UnitTesting.snk",
+      "summary": "强名称密钥文件（SNK），用于对测试程序集进行签名以支持单元测试中的程序集加载。",
+      "tags": [
+        "security",
+        "signing-key",
+        "test-infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/App.config",
+      "type": "config",
+      "name": "App.config",
+      "filePath": "Package/App.config",
+      "summary": "应用程序配置文件，指定 .NET Framework 4.5.2 运行时版本作为支持的目标框架。",
+      "tags": [
+        "configuration",
+        "runtime",
+        "net-framework"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Assembly.cs",
+      "type": "file",
+      "name": "Assembly.cs",
+      "filePath": "Package/Assembly.cs",
+      "summary": "程序集级别属性定义文件，声明程序集标题，将内部可见性开放给单元测试和 MSBuild 任务。",
+      "tags": [
+        "assembly-attributes",
+        "internals-visible-to",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/AutoCorrectPackageNames.cs",
+      "type": "file",
+      "name": "AutoCorrectPackageNames.cs",
+      "filePath": "Package/AutoCorrectPackageNames.cs",
+      "summary": "包名称自动修正功能，从仓库中搜索相似包名并提供交互式修正建议。包含自定义异常和交互请求数据模型。",
+      "tags": [
+        "package-name",
+        "auto-correct",
+        "interactive",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/ConsoleUtils.cs",
+      "type": "file",
+      "name": "ConsoleUtils.cs",
+      "filePath": "Package/ConsoleUtils.cs",
+      "summary": "控制台实用工具类，提供进度条打印和异步任务进度报告的功能，用于命令行界面的用户体验反馈。",
+      "tags": [
+        "utility",
+        "console",
+        "progress",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "type": "file",
+      "name": "FileHashPackageAction.cs",
+      "filePath": "Package/CreatePackage/FileHashPackageAction.cs",
+      "summary": "文件哈希包操作，包含在包创建阶段生成文件 SHA256 哈希的实现以及安装时的哈希验证逻辑。",
+      "tags": [
+        "package-creation",
+        "file-hash",
+        "integrity-verification",
+        "security"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/CreatePackage/GitVersionAction.cs",
+      "type": "file",
+      "name": "GitVersionAction.cs",
+      "filePath": "Package/CreatePackage/GitVersionAction.cs",
+      "summary": "Git 版本信息注入操作，从 Git 仓库提取版本、SHA 和分支信息并输出到控制台或替换文件中的占位符。",
+      "tags": [
+        "git-version",
+        "package-creation",
+        "versioning",
+        "build-metadata"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "type": "file",
+      "name": "GitVersionCalculator.cs",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "summary": "Git 版本计算器核心实现，通过分析 Git 提交历史、标签和分支自动推导语义化版本号，支持 libgit2。",
+      "tags": [
+        "git-version",
+        "semver",
+        "libgit2",
+        "tag-parsing",
+        "branch-detection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest",
+      "type": "class",
+      "name": "UninstallContextTest",
+      "filePath": "Package.UnitTests/UninstallContextTest.cs",
+      "lineRange": [
+        13,
+        337
+      ],
+      "summary": "卸载上下文综合测试类，覆盖文件删除、多版本插件加载/升级、属性扫描和 OS 平台兼容性等完整场景。",
+      "tags": [
+        "test-class",
+        "uninstall",
+        "plugin-lifecycle",
+        "assembly-generation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestDeleteFile",
+      "type": "function",
+      "name": "TestDeleteFile",
+      "filePath": "Package.UnitTests/UninstallContextTest.cs",
+      "lineRange": [
+        17,
+        60
+      ],
+      "summary": "验证 UninstallContext 能正确删除包文件，并在 UndoAllDeletions 撤销后恢复已删除文件。",
+      "tags": [
+        "test-method",
+        "file-deletion",
+        "uninstall",
+        "undo"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.CreateNewAssemblyWithTestStep",
+      "type": "function",
+      "name": "CreateNewAssemblyWithTestStep",
+      "filePath": "Package.UnitTests/UninstallContextTest.cs",
+      "lineRange": [
+        72,
+        135
+      ],
+      "summary": "动态生成包含 TestStep 派生类和 DisplayAttribute/SupportedOSPlatformAttribute 的程序集。",
+      "tags": [
+        "assembly-generation",
+        "mono-cecil",
+        "test-helper",
+        "attribute-scanning"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestLoadDifferentPluginVersions",
+      "type": "function",
+      "name": "TestLoadDifferentPluginVersions",
+      "filePath": "Package.UnitTests/UninstallContextTest.cs",
+      "lineRange": [
+        137,
+        218
+      ],
+      "summary": "验证同一插件的多个版本能依次加载和卸载，互不干扰的类型扫描行为。",
+      "tags": [
+        "test-method",
+        "plugin-versioning",
+        "load-unload"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestUpgradeUnloadedPluginTypes",
+      "type": "function",
+      "name": "TestUpgradeUnloadedPluginTypes",
+      "filePath": "Package.UnitTests/UninstallContextTest.cs",
+      "lineRange": [
+        220,
+        267
+      ],
+      "summary": "验证卸载旧版本插件后，新版本插件的类型能被 PluginManager.Search 正确扫描和加载。",
+      "tags": [
+        "test-method",
+        "plugin-upgrade",
+        "type-scanning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestAttributeScanning",
+      "type": "function",
+      "name": "TestAttributeScanning",
+      "filePath": "Package.UnitTests/UninstallContextTest.cs",
+      "lineRange": [
+        269,
+        307
+      ],
+      "summary": "验证动态程序集中的 DisplayAttribute 和 SupportedOSPlatformAttribute 能被正确扫描和解析。",
+      "tags": [
+        "test-method",
+        "attribute-scanning",
+        "display-attribute",
+        "os-platform"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestSupportedOSPlatformScanned",
+      "type": "function",
+      "name": "TestSupportedOSPlatformScanned",
+      "filePath": "Package.UnitTests/UninstallContextTest.cs",
+      "lineRange": [
+        328,
+        336
+      ],
+      "summary": "参数化测试，数据驱动验证 SupportedOSPlatformAttribute 的不同平台值被正确解析。",
+      "tags": [
+        "test-method",
+        "parameterized-test",
+        "os-platform",
+        "attribute"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/AutoCorrectPackageNames.cs:AutoCorrectPackageNames",
+      "type": "class",
+      "name": "AutoCorrectPackageNames",
+      "filePath": "Package/AutoCorrectPackageNames.cs",
+      "lineRange": [
+        17,
+        99
+      ],
+      "summary": "包名称自动修正类，在仓库中搜索与给定名称相似的包，生成交互式修正请求让用户选择正确名称。",
+      "tags": [
+        "auto-correct",
+        "package-name",
+        "interactive-cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/AutoCorrectPackageNames.cs:AutoCorrectPackageNames.Correct",
+      "type": "function",
+      "name": "Correct",
+      "filePath": "Package/AutoCorrectPackageNames.cs",
+      "lineRange": [
+        26,
+        98
+      ],
+      "summary": "在多个仓库中模糊搜索与给定名称相似的包，返回 AutoCorrectRequest 或抛出 AutoCorrectException。",
+      "tags": [
+        "auto-correct",
+        "package-search",
+        "fuzzy-match"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/AutoCorrectPackageNames.cs:AutoCorrectRequest",
+      "type": "class",
+      "name": "AutoCorrectRequest",
+      "filePath": "Package/AutoCorrectPackageNames.cs",
+      "lineRange": [
+        101,
+        137
+      ],
+      "summary": "交互式包名修正的请求数据模型，包含答案选项、消息模板和用户选择等字段。",
+      "tags": [
+        "data-model",
+        "interactive",
+        "auto-correct",
+        "cli-prompt"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/ConsoleUtils.cs:ConsoleUtils",
+      "type": "class",
+      "name": "ConsoleUtils",
+      "filePath": "Package/ConsoleUtils.cs",
+      "lineRange": [
+        10,
+        75
+      ],
+      "summary": "控制台实用工具类，提供进度条打印和同步/异步任务进度报告的方法集合。",
+      "tags": [
+        "utility",
+        "console-output",
+        "progress-reporting"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/ConsoleUtils.cs:ConsoleUtils.ReportProgressTillEnd",
+      "type": "function",
+      "name": "ReportProgressTillEnd",
+      "filePath": "Package/ConsoleUtils.cs",
+      "lineRange": [
+        26,
+        47
+      ],
+      "summary": "同步执行任务并通过回调定期报告进度，支持可配置的更新延迟毫秒数。",
+      "tags": [
+        "progress",
+        "task-execution",
+        "callback",
+        "sync"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/ConsoleUtils.cs:ConsoleUtils.ReportProgressTillEndAsync",
+      "type": "function",
+      "name": "ReportProgressTillEndAsync",
+      "filePath": "Package/ConsoleUtils.cs",
+      "lineRange": [
+        48,
+        74
+      ],
+      "summary": "异步执行任务并通过回调定期报告进度，适用于耗时异步操作的进度展示。",
+      "tags": [
+        "progress",
+        "async",
+        "task-execution",
+        "callback"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction",
+      "type": "class",
+      "name": "FileHashPackageAction",
+      "filePath": "Package/CreatePackage/FileHashPackageAction.cs",
+      "lineRange": [
+        18,
+        102
+      ],
+      "summary": "包创建阶段操作，为每个包文件计算 SHA256 哈希并嵌入 PackageDef 的 FileHash 集合中。",
+      "tags": [
+        "package-creation",
+        "sha256",
+        "hash",
+        "package-action"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction.hashFile",
+      "type": "function",
+      "name": "hashFile",
+      "filePath": "Package/CreatePackage/FileHashPackageAction.cs",
+      "lineRange": [
+        25,
+        41
+      ],
+      "summary": "对指定文件计算 SHA256 哈希值并以十六进制字符串返回。",
+      "tags": [
+        "sha256",
+        "hash",
+        "file-processing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction.StringToByteArray",
+      "type": "function",
+      "name": "StringToByteArray",
+      "filePath": "Package/CreatePackage/FileHashPackageAction.cs",
+      "lineRange": [
+        82,
+        88
+      ],
+      "summary": "将十六进制字符串转换回字节数组，用于哈希值的序列化与反序列化。",
+      "tags": [
+        "hex-conversion",
+        "serialization",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction.Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Package/CreatePackage/FileHashPackageAction.cs",
+      "lineRange": [
+        195,
+        216
+      ],
+      "summary": "ICreatePackageAction.Execute 实现，遍历包定义中的所有文件计算哈希。",
+      "tags": [
+        "package-action",
+        "hash-calculation",
+        "execution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes",
+      "type": "class",
+      "name": "VerifyPackageHashes",
+      "filePath": "Package/CreatePackage/FileHashPackageAction.cs",
+      "lineRange": [
+        105,
+        261
+      ],
+      "summary": "包安装后验证操作，重新计算已安装文件的哈希并与创建时的值对比，检测文件篡改或损坏。",
+      "tags": [
+        "package-verification",
+        "hash-validation",
+        "integrity",
+        "file-conflict"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.verifyPackage",
+      "type": "function",
+      "name": "verifyPackage",
+      "filePath": "Package/CreatePackage/FileHashPackageAction.cs",
+      "lineRange": [
+        117,
+        193
+      ],
+      "summary": "遍历已安装包的所有文件重新计算 SHA256 哈希，与创建时记录比对，标记不匹配项。",
+      "tags": [
+        "hash-verification",
+        "integrity-check",
+        "file-scan"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Package/CreatePackage/FileHashPackageAction.cs",
+      "lineRange": [
+        195,
+        216
+      ],
+      "summary": "执行哈希验证流程，如果发现不匹配则返回非零退出码。",
+      "tags": [
+        "verification-execution",
+        "exit-code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.CalculatePackageInstallConflicts",
+      "type": "function",
+      "name": "CalculatePackageInstallConflicts",
+      "filePath": "Package/CreatePackage/FileHashPackageAction.cs",
+      "lineRange": [
+        218,
+        236
+      ],
+      "summary": "检测新旧包之间的文件冲突，识别将被覆盖的已安装文件。",
+      "tags": [
+        "conflict-detection",
+        "file-overwrite",
+        "installation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.getConflictedFiles",
+      "type": "function",
+      "name": "getConflictedFiles",
+      "filePath": "Package/CreatePackage/FileHashPackageAction.cs",
+      "lineRange": [
+        238,
+        260
+      ],
+      "summary": "在已安装文件查找表中查找与包文件匹配的冲突项。",
+      "tags": [
+        "conflict-lookup",
+        "file-matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/CreatePackage/GitVersionAction.cs:GitVersionAction",
+      "type": "class",
+      "name": "GitVersionAction",
+      "filePath": "Package/CreatePackage/GitVersionAction.cs",
+      "lineRange": [
+        18,
+        424
+      ],
+      "summary": "Git 版本信息注入的 Package Action，从 Git 仓库提取版本、SHA 和分支信息并嵌入或输出版本元数据。",
+      "tags": [
+        "git-version",
+        "package-creation",
+        "versioning",
+        "build-metadata"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionAction.cs:GitVersionAction.Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Package/CreatePackage/GitVersionAction.cs",
+      "lineRange": [
+        68,
+        125
+      ],
+      "summary": "执行版本操作：如果启用了 ReplaceFile 则在文件中替换版本占位符；否则调用 DoPrintLog 输出。",
+      "tags": [
+        "version-injection",
+        "file-replacement",
+        "execution"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionAction.cs:GitVersionAction.DoReplaceFile",
+      "type": "function",
+      "name": "DoReplaceFile",
+      "filePath": "Package/CreatePackage/GitVersionAction.cs",
+      "lineRange": [
+        127,
+        152
+      ],
+      "summary": "在指定文件中查找并替换 #{Version}# 等占位符为实际的版本字符串。",
+      "tags": [
+        "file-replacement",
+        "placeholder",
+        "template"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionAction.cs:GitVersionAction.DoPrintLog",
+      "type": "function",
+      "name": "DoPrintLog",
+      "filePath": "Package/CreatePackage/GitVersionAction.cs",
+      "lineRange": [
+        154,
+        423
+      ],
+      "summary": "从 GitVersionCalculator 获取版本信息并格式化输出到控制台日志。",
+      "tags": [
+        "version-output",
+        "logging",
+        "formatting"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/CreatePackage/GitVersionAction.cs:UseVersionData",
+      "type": "class",
+      "name": "UseVersionData",
+      "filePath": "Package/CreatePackage/GitVersionAction.cs",
+      "lineRange": [
+        430,
+        433
+      ],
+      "summary": "标记特性，用于标识使用 Git 版本数据的字段或属性，供版本注入时自动识别。",
+      "tags": [
+        "marker-attribute",
+        "version-data",
+        "annotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "type": "class",
+      "name": "GitVersionCalulator",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        22,
+        670
+      ],
+      "summary": "Git 版本计算器核心实现，通过分析 Git 提交历史、配置文件和标签推导语义化版本、Beta 分支等信息。",
+      "tags": [
+        "git-version",
+        "semver",
+        "libgit2",
+        "tag-parsing",
+        "branch-detection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.IsGlibc",
+      "type": "function",
+      "name": "IsGlibc",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        137,
+        148
+      ],
+      "summary": "检测当前运行环境是否为 glibc（非 musl libc），用于判断是否加载原生 libgit2 库。",
+      "tags": [
+        "glibc-detection",
+        "libgit2",
+        "native-library"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.ensureLibgit2Present",
+      "type": "function",
+      "name": "ensureLibgit2Present",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        150,
+        196
+      ],
+      "summary": "确保 libgit2 原生库存在于系统路径中，必要时从资源中提取，用于跨平台的 Git 操作支持。",
+      "tags": [
+        "libgit2",
+        "native-library",
+        "deployment",
+        "cross-platform"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GitVersionCalulator",
+      "type": "function",
+      "name": "GitVersionCalulator",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        202,
+        218
+      ],
+      "summary": "构造函数，打开指定仓库目录的 Git 仓库，初始化配置并加载提交图。",
+      "tags": [
+        "constructor",
+        "git-repo",
+        "initialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getLatestReadableVersion",
+      "type": "function",
+      "name": "getLatestReadableVersion",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        227,
+        237
+      ],
+      "summary": "从提交中提取最新的可读版本号（通过解析 git 配置中的版本字段）。",
+      "tags": [
+        "version-extraction",
+        "git-config",
+        "tag"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetAllConfigFilesInTree",
+      "type": "function",
+      "name": "GetAllConfigFilesInTree",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        239,
+        253
+      ],
+      "summary": "递归获取 Git 树中所有配置文件的路径（如 .gitconfig），用于追溯版本变更。",
+      "tags": [
+        "config-files",
+        "git-tree",
+        "recursive-search"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.readConfig",
+      "type": "function",
+      "name": "readConfig",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        255,
+        271
+      ],
+      "summary": "读取并解析 Git 配置文件内容，提取键值对。",
+      "tags": [
+        "config-parsing",
+        "git-config",
+        "key-value"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.ParseConfig",
+      "type": "function",
+      "name": "ParseConfig",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        273,
+        288
+      ],
+      "summary": "解析 Git 配置文本内容并返回键值对字典。",
+      "tags": [
+        "config-parser",
+        "text-parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getLatestConfigVersionChange",
+      "type": "function",
+      "name": "getLatestConfigVersionChange",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        290,
+        320
+      ],
+      "summary": "查找最后一次版本配置变更的提交，追踪版本号的演进历史。",
+      "tags": [
+        "version-history",
+        "commit-tracking",
+        "config-change"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion",
+      "type": "function",
+      "name": "GetVersion",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        325,
+        330
+      ],
+      "summary": "重载：获取当前 HEAD / 指定 SHA / 指定提交的版本号。包含标签解析、配置查找和 Beta 分支推导。",
+      "tags": [
+        "version",
+        "semver",
+        "tag",
+        "beta-branch",
+        "api"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion__1",
+      "type": "function",
+      "name": "GetVersion",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        335,
+        341
+      ],
+      "summary": "重载：获取当前 HEAD / 指定 SHA / 指定提交的版本号。包含标签解析、配置查找和 Beta 分支推导。",
+      "tags": [
+        "version",
+        "semver",
+        "tag",
+        "beta-branch",
+        "api"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion__2",
+      "type": "function",
+      "name": "GetVersion",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        346,
+        415
+      ],
+      "summary": "重载：获取当前 HEAD / 指定 SHA / 指定提交的版本号。包含标签解析、配置查找和 Beta 分支推导。",
+      "tags": [
+        "version",
+        "semver",
+        "tag",
+        "beta-branch",
+        "api"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getReleaseTag",
+      "type": "function",
+      "name": "getReleaseTag",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        417,
+        429
+      ],
+      "summary": "从 Git 配置中提取发布标签名称。",
+      "tags": [
+        "release-tag",
+        "git-config",
+        "tag-parsing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.findFirstCommonAncestor",
+      "type": "function",
+      "name": "findFirstCommonAncestor",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        434,
+        481
+      ],
+      "summary": "在两个分支间查找第一个公共祖先提交，用于确定版本分叉点。",
+      "tags": [
+        "git-ancestor",
+        "commit-history",
+        "branch-analysis"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.countCommitsBetween",
+      "type": "function",
+      "name": "countCommitsBetween",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        483,
+        493
+      ],
+      "summary": "计算两个提交之间的提交数量（可选仅计数 first-parent），用于语义化版本号计算。",
+      "tags": [
+        "commit-count",
+        "semver",
+        "git-log"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getBetaBranch",
+      "type": "function",
+      "name": "getBetaBranch",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        495,
+        549
+      ],
+      "summary": "从 Git 配置中解析 Beta 分支定义，判断目标提交属于哪个 Beta 分支。",
+      "tags": [
+        "beta-branch",
+        "config-parsing",
+        "branch-detection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.guessBranchName",
+      "type": "function",
+      "name": "guessBranchName",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        554,
+        669
+      ],
+      "summary": "通过查找引用和提交历史推测分支名称，支持在 detached HEAD 等场景下推断分支。",
+      "tags": [
+        "branch-name",
+        "heuristics",
+        "git-reference",
+        "detached-head"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/CreatePackage/GitVersionCalculator.cs:libGit2Helpers",
+      "type": "class",
+      "name": "libGit2Helpers",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        672,
+        680
+      ],
+      "summary": "libgit2 辅助方法类，提供 Git 引用短名称的提取功能。",
+      "tags": [
+        "libgit2",
+        "helper",
+        "reference-name"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/CreatePackage/GitVersionCalculator.cs:libGit2Helpers.GetShortName",
+      "type": "function",
+      "name": "GetShortName",
+      "filePath": "Package/CreatePackage/GitVersionCalculator.cs",
+      "lineRange": [
+        674,
+        679
+      ],
+      "summary": "从完整 Git 引用名中提取短名称（如 refs/heads/main 转换为 main）。",
+      "tags": [
+        "reference-name",
+        "string-manipulation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package.UnitTests/UninstallContextTest.cs",
+      "target": "class:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest",
+      "target": "file:Package.UnitTests/UninstallContextTest.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/UninstallContextTest.cs",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestDeleteFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestDeleteFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestDeleteFile",
+      "target": "file:Package.UnitTests/UninstallContextTest.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/UninstallContextTest.cs",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.CreateNewAssemblyWithTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.CreateNewAssemblyWithTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package.UnitTests/UninstallContextTest.cs",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestLoadDifferentPluginVersions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestLoadDifferentPluginVersions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestLoadDifferentPluginVersions",
+      "target": "file:Package.UnitTests/UninstallContextTest.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/UninstallContextTest.cs",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestUpgradeUnloadedPluginTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestUpgradeUnloadedPluginTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestUpgradeUnloadedPluginTypes",
+      "target": "file:Package.UnitTests/UninstallContextTest.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/UninstallContextTest.cs",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestAttributeScanning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestAttributeScanning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestAttributeScanning",
+      "target": "file:Package.UnitTests/UninstallContextTest.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/UninstallContextTest.cs",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestSupportedOSPlatformScanned",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest",
+      "target": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestSupportedOSPlatformScanned",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package.UnitTests/UninstallContextTest.cs:UninstallContextTest.TestSupportedOSPlatformScanned",
+      "target": "file:Package.UnitTests/UninstallContextTest.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/AutoCorrectPackageNames.cs",
+      "target": "class:Package/AutoCorrectPackageNames.cs:AutoCorrectPackageNames",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/AutoCorrectPackageNames.cs",
+      "target": "function:Package/AutoCorrectPackageNames.cs:AutoCorrectPackageNames.Correct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/AutoCorrectPackageNames.cs:AutoCorrectPackageNames",
+      "target": "function:Package/AutoCorrectPackageNames.cs:AutoCorrectPackageNames.Correct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/AutoCorrectPackageNames.cs:AutoCorrectPackageNames.Correct",
+      "target": "file:Package/AutoCorrectPackageNames.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/AutoCorrectPackageNames.cs",
+      "target": "class:Package/AutoCorrectPackageNames.cs:AutoCorrectRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/AutoCorrectPackageNames.cs:AutoCorrectRequest",
+      "target": "file:Package/AutoCorrectPackageNames.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ConsoleUtils.cs",
+      "target": "class:Package/ConsoleUtils.cs:ConsoleUtils",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ConsoleUtils.cs",
+      "target": "function:Package/ConsoleUtils.cs:ConsoleUtils.ReportProgressTillEnd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/ConsoleUtils.cs:ConsoleUtils",
+      "target": "function:Package/ConsoleUtils.cs:ConsoleUtils.ReportProgressTillEnd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/ConsoleUtils.cs:ConsoleUtils.ReportProgressTillEnd",
+      "target": "file:Package/ConsoleUtils.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ConsoleUtils.cs",
+      "target": "function:Package/ConsoleUtils.cs:ConsoleUtils.ReportProgressTillEndAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/ConsoleUtils.cs:ConsoleUtils",
+      "target": "function:Package/ConsoleUtils.cs:ConsoleUtils.ReportProgressTillEndAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/ConsoleUtils.cs:ConsoleUtils.ReportProgressTillEndAsync",
+      "target": "file:Package/ConsoleUtils.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "class:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction.hashFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction.hashFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction.StringToByteArray",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction.StringToByteArray",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction.StringToByteArray",
+      "target": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:FileHashPackageAction.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "class:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.verifyPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.verifyPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.CalculatePackageInstallConflicts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.CalculatePackageInstallConflicts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.CalculatePackageInstallConflicts",
+      "target": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.getConflictedFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes",
+      "target": "function:Package/CreatePackage/FileHashPackageAction.cs:VerifyPackageHashes.getConflictedFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "class:Package/CreatePackage/GitVersionAction.cs:GitVersionAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionAction.cs:GitVersionAction",
+      "target": "file:Package/CreatePackage/GitVersionAction.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "function:Package/CreatePackage/GitVersionAction.cs:GitVersionAction.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionAction.cs:GitVersionAction",
+      "target": "function:Package/CreatePackage/GitVersionAction.cs:GitVersionAction.Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/GitVersionAction.cs:GitVersionAction.Execute",
+      "target": "file:Package/CreatePackage/GitVersionAction.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "function:Package/CreatePackage/GitVersionAction.cs:GitVersionAction.DoReplaceFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionAction.cs:GitVersionAction",
+      "target": "function:Package/CreatePackage/GitVersionAction.cs:GitVersionAction.DoReplaceFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "function:Package/CreatePackage/GitVersionAction.cs:GitVersionAction.DoPrintLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionAction.cs:GitVersionAction",
+      "target": "function:Package/CreatePackage/GitVersionAction.cs:GitVersionAction.DoPrintLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "class:Package/CreatePackage/GitVersionAction.cs:UseVersionData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionAction.cs:UseVersionData",
+      "target": "file:Package/CreatePackage/GitVersionAction.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.IsGlibc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.IsGlibc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.ensureLibgit2Present",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.ensureLibgit2Present",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GitVersionCalulator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GitVersionCalulator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GitVersionCalulator",
+      "target": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getLatestReadableVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getLatestReadableVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetAllConfigFilesInTree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetAllConfigFilesInTree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.readConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.readConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.ParseConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.ParseConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getLatestConfigVersionChange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getLatestConfigVersionChange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion",
+      "target": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion__1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion__1",
+      "target": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion__2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion__2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.GetVersion__2",
+      "target": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getReleaseTag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getReleaseTag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.findFirstCommonAncestor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.findFirstCommonAncestor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.countCommitsBetween",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.countCommitsBetween",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getBetaBranch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.getBetaBranch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.guessBranchName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:GitVersionCalulator.guessBranchName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "class:Package/CreatePackage/GitVersionCalculator.cs:libGit2Helpers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:libGit2Helpers.GetShortName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Package/CreatePackage/GitVersionCalculator.cs:libGit2Helpers",
+      "target": "function:Package/CreatePackage/GitVersionCalculator.cs:libGit2Helpers.GetShortName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Package/CreatePackage/GitVersionCalculator.cs:libGit2Helpers.GetShortName",
+      "target": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package.UnitTests/UninstallContextTest.cs",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package.UnitTests/UnitTesting.snk",
+      "target": "file:Package/Assembly.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "file:Package/ConsoleUtils.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Package/AutoCorrectPackageNames.cs",
+      "target": "file:Package/DependencyResolver.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/Assembly.cs",
+      "target": "file:Package.UnitTests/TestConcurrentTypeDataLoad.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/Assembly.cs",
+      "target": "file:Package.UnitTests/UninstallContextTest.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "file:Package/CreatePackage/GitVersionAction.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/FileHashPackageAction.cs",
+      "target": "file:Package/CreatePackage/ProgramHelper.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionAction.cs",
+      "target": "file:Package/CreatePackage/ProgramHelper.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "file:Package/CreatePackage/IVersionConverter.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "file:Package/CreatePackage/IncludePackageDependenciesData.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "file:Package/CreatePackage/Package.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Package/CreatePackage/GitVersionCalculator.cs",
+      "target": "file:Package/CreatePackage/ProgramHelper.cs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

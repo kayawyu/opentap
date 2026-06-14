@@ -1,0 +1,1297 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "type": "file",
+      "name": "EmbeddedPropertyTests.cs",
+      "filePath": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "summary": "EmbedProperties 属性的 NUnit 综合测试套件，覆盖反射/注解、序列化、嵌套/递归嵌入、Mixin 模式（TestStep/Resource）、XmlIgnore 嵌入及参数化验证错误传播。",
+      "tags": [
+        "test",
+        "embedded-properties",
+        "serialization",
+        "mixin",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertyTests",
+      "type": "class",
+      "name": "EmbeddedPropertyTests",
+      "filePath": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "lineRange": [
+        11,
+        438
+      ],
+      "summary": "EmbedProperties 功能的主测试类，包含 8 个测试方法，覆盖嵌入属性的反射、序列化、嵌套、Mixin 集成和可见性规则。",
+      "tags": [
+        "test",
+        "embedded-properties",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertiesReflectionAndAnnotation",
+      "type": "function",
+      "name": "EmbeddedPropertiesReflectionAndAnnotation",
+      "filePath": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "lineRange": [
+        23,
+        41
+      ],
+      "summary": "验证嵌入属性通过 TypeData 反射和 AnnotationCollection 注解正确暴露 Display Group 和格式化字符串值。",
+      "tags": [
+        "test",
+        "embedded-properties"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertiesSerialization",
+      "type": "function",
+      "name": "EmbeddedPropertiesSerialization",
+      "filePath": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "lineRange": [
+        44,
+        53
+      ],
+      "summary": "验证含嵌入属性的对象通过 TapSerializer 序列化与反序列化后属性值保持一致。",
+      "tags": [
+        "test",
+        "embedded-properties"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:NestedEmbeddedTest",
+      "type": "function",
+      "name": "NestedEmbeddedTest",
+      "filePath": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "lineRange": [
+        85,
+        122
+      ],
+      "summary": "验证多层嵌套嵌入属性的成员访问路径（如 'B.A.X'）、SetValue、序列化及嵌套错误传播。",
+      "tags": [
+        "test",
+        "embedded-properties"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:RecursiveEmbeddedTest",
+      "type": "function",
+      "name": "RecursiveEmbeddedTest",
+      "filePath": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "lineRange": [
+        130,
+        138
+      ],
+      "summary": "验证递归嵌入（类包含自身）不会导致 StackOverflowException，且成员数量正确。",
+      "tags": [
+        "test",
+        "embedded-properties"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:TestTestStepMixinsBasic",
+      "type": "function",
+      "name": "TestTestStepMixinsBasic",
+      "filePath": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "lineRange": [
+        196,
+        212
+      ],
+      "summary": "验证嵌入的 Mixin（OverrideVerdict 和 TestRepeat）在测试计划执行时正确影响 Verdict 和重复次数。",
+      "tags": [
+        "test",
+        "embedded-properties"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:TestResourceMixins",
+      "type": "function",
+      "name": "TestResourceMixins",
+      "filePath": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "lineRange": [
+        229,
+        239
+      ],
+      "summary": "验证嵌入在 Instrument 上的 IResourcePreOpenMixin 在资源打开前正确调用 OnPreOpen。",
+      "tags": [
+        "test",
+        "embedded-properties"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:TestXmlIgnoreEmbedding",
+      "type": "function",
+      "name": "TestXmlIgnoreEmbedding",
+      "filePath": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "lineRange": [
+        274,
+        314
+      ],
+      "summary": "验证标注 XmlIgnore 的嵌入属性不参与序列化和注解暴露，但嵌入成员仍可被 TypeData 发现。",
+      "tags": [
+        "test",
+        "embedded-properties"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbedParameterizeValidationErrorTest",
+      "type": "function",
+      "name": "EmbedParameterizeValidationErrorTest",
+      "filePath": "Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "lineRange": [
+        400,
+        437
+      ],
+      "summary": "验证嵌入属性的参数化成员在多级参数化（Step->Sequence->TestPlan）后错误验证信息向上传播。",
+      "tags": [
+        "test",
+        "embedded-properties"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "type": "file",
+      "name": "ExternalTestPlanParameterTest.cs",
+      "filePath": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "summary": "外部测试计划参数的 NUnit 综合测试套件，覆盖 SetValues、序列化/反序列化（含 DUT 参数预加载）、Verdict 参数化、TestPlanReference 加载/保存、多选编辑禁用及插件重载稳定性。",
+      "tags": [
+        "test",
+        "external-parameters",
+        "test-plan-reference",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalTestPlanParameterTest",
+      "type": "class",
+      "name": "ExternalTestPlanParameterTest",
+      "filePath": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "lineRange": [
+        33,
+        517
+      ],
+      "summary": "外部参数功能的主测试类，包含 9 个测试方法，验证 SetValues、序列化反序列化、Verdict 参数化和 TestPlanReference 行为。",
+      "tags": [
+        "test",
+        "external-parameters",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SetValuesTest",
+      "type": "function",
+      "name": "SetValuesTest",
+      "filePath": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "lineRange": [
+        36,
+        107
+      ],
+      "summary": "验证 ExternalParameters.Add 后通过 Get/Set Value 同步更新多步骤属性，以及序列化/反序列化循环后参数值保持正确。",
+      "tags": [
+        "test",
+        "external-parameters"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SerializeDeserializeWithDutExternalParameter",
+      "type": "function",
+      "name": "SerializeDeserializeWithDutExternalParameter",
+      "filePath": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "lineRange": [
+        109,
+        147
+      ],
+      "summary": "验证带 DUT 外部参数的计划序列化时 ExternalParameterSerializer 的 PreloadedValues 可覆盖参数值。",
+      "tags": [
+        "test",
+        "external-parameters"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:TestParameterizedVerdictOf",
+      "type": "function",
+      "name": "TestParameterizedVerdictOf",
+      "filePath": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "lineRange": [
+        150,
+        195
+      ],
+      "summary": "验证 RepeatStep.TargetStep 的 Verdict 参数化在父序列和测试计划级别的可用值及 Unparameterize 行为。",
+      "tags": [
+        "test",
+        "external-parameters"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SettingOfExternalParametersOnTestReferencePlan",
+      "type": "function",
+      "name": "SettingOfExternalParametersOnTestReferencePlan",
+      "filePath": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "lineRange": [
+        217,
+        271
+      ],
+      "summary": "验证通过 TypeData.GetMembers 获取 TestPlanReference 上的外部参数，并验证 SetValue 传播到内部 DelayStep。",
+      "tags": [
+        "test",
+        "external-parameters"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SaveAndLoadTestPlanReference",
+      "type": "function",
+      "name": "SaveAndLoadTestPlanReference",
+      "filePath": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "lineRange": [
+        273,
+        432
+      ],
+      "summary": "验证 TestPlanReference 的外部参数名称正确编码（空格转 _x0020_）和加载，以及 legacy 'prop0' 格式的回退兼容。",
+      "tags": [
+        "test",
+        "external-parameters"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SaveAndLoadExternalScopeParameters",
+      "type": "function",
+      "name": "SaveAndLoadExternalScopeParameters",
+      "filePath": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "lineRange": [
+        434,
+        451
+      ],
+      "summary": "验证多级参数化（Step->Sequence->Plan）的外部参数在序列化/反序列化后正确保留。",
+      "tags": [
+        "test",
+        "external-parameters"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:MultiSelectEditParametersDisabled",
+      "type": "function",
+      "name": "MultiSelectEditParametersDisabled",
+      "filePath": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "lineRange": [
+        453,
+        497
+      ],
+      "summary": "验证多选不同序列中的参数时 EditParameter 菜单项仅在选择单个步骤时可见。",
+      "tags": [
+        "test",
+        "external-parameters"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalParametersPlusReloadPlugins",
+      "type": "function",
+      "name": "ExternalParametersPlusReloadPlugins",
+      "filePath": "Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "lineRange": [
+        499,
+        516
+      ],
+      "summary": "验证 PluginManager.Search() 不会影响已参数化的测试计划的序列化输出（xmlPreSearch == xmlPostSearch）。",
+      "tags": [
+        "test",
+        "external-parameters"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/FilePathTest.cs",
+      "type": "file",
+      "name": "FilePathTest.cs",
+      "filePath": "Engine.UnitTests/FilePathTest.cs",
+      "summary": "FilePathAttribute 过滤器语法验证测试，确保有效和无效的文件过滤器模式被正确接受或拒绝。",
+      "tags": [
+        "test",
+        "file-path",
+        "validation",
+        "syntax"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/FilePathTest.cs:FilePathTest",
+      "type": "class",
+      "name": "FilePathTest",
+      "filePath": "Engine.UnitTests/FilePathTest.cs",
+      "lineRange": [
+        5,
+        38
+      ],
+      "summary": "FilePathAttribute 过滤器验证测试类，检查各种过滤器语法模式的有效性。",
+      "tags": [
+        "test",
+        "file-path",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/FilePathTest.cs:FilePathFilterValidationTest",
+      "type": "function",
+      "name": "FilePathFilterValidationTest",
+      "filePath": "Engine.UnitTests/FilePathTest.cs",
+      "lineRange": [
+        8,
+        37
+      ],
+      "summary": "验证 FilePathAttribute 构造函数接受标准文件过滤器格式（如 'Executable (*.exe)|*.exe'），拒绝无效格式（如 '*.txt' 单独使用）并抛出 FormatException。",
+      "tags": [
+        "test",
+        "file-path",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/FlagsAttributeTests.cs",
+      "type": "file",
+      "name": "FlagsAttributeTests.cs",
+      "filePath": "Engine.UnitTests/FlagsAttributeTests.cs",
+      "summary": "Flags 枚举属性的 NUnit 测试套件，验证非幂2枚举、幂2枚举、大标志值（64位）的 MultiSelect 行为及枚举可读字符串输出。",
+      "tags": [
+        "test",
+        "flags-enum",
+        "multi-select",
+        "annotation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/FlagsAttributeTests.cs:FlagsEnumTest",
+      "type": "class",
+      "name": "FlagsEnumTest",
+      "filePath": "Engine.UnitTests/FlagsAttributeTests.cs",
+      "lineRange": [
+        65,
+        213
+      ],
+      "summary": "Flags 枚举功能的主测试类，验证 MultiSelect 选择/取消选择、Display 名称和大标志值的注释行为。",
+      "tags": [
+        "test",
+        "flags-enum",
+        "nunit"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/FlagsAttributeTests.cs:NonPowers2EnumTest",
+      "type": "function",
+      "name": "NonPowers2EnumTest",
+      "filePath": "Engine.UnitTests/FlagsAttributeTests.cs",
+      "lineRange": [
+        68,
+        107
+      ],
+      "summary": "验证非幂2组合值的 Flags 枚举在 MultiSelect 中正确展示复合选中状态及选择/取消选择逻辑。",
+      "tags": [
+        "test",
+        "flags-enum"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/FlagsAttributeTests.cs:Powers2EnumTest",
+      "type": "function",
+      "name": "Powers2EnumTest",
+      "filePath": "Engine.UnitTests/FlagsAttributeTests.cs",
+      "lineRange": [
+        109,
+        136
+      ],
+      "summary": "验证标准幂2 Flags 枚举的选择行为，以及 Display 属性中的自定义名称在 MultiSelect 中正确显示。",
+      "tags": [
+        "test",
+        "flags-enum"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/FlagsAttributeTests.cs:LargeFlagValuesTest",
+      "type": "function",
+      "name": "LargeFlagValuesTest",
+      "filePath": "Engine.UnitTests/FlagsAttributeTests.cs",
+      "lineRange": [
+        138,
+        176
+      ],
+      "summary": "验证 64 位大标志值在串口 32 位短值和跨 32 位边界的长值在 MultiSelect 中不发生别名冲突。",
+      "tags": [
+        "test",
+        "flags-enum"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/FlagsAttributeTests.cs:EnumReadableStringTest",
+      "type": "function",
+      "name": "EnumReadableStringTest",
+      "filePath": "Engine.UnitTests/FlagsAttributeTests.cs",
+      "lineRange": [
+        178,
+        212
+      ],
+      "summary": "验证 Display 属性装饰的 Flags 枚举值的可读字符串输出，以及多标志组合值的格式化。",
+      "tags": [
+        "test",
+        "flags-enum"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/FormatterTests.cs",
+      "type": "file",
+      "name": "FormatterTests.cs",
+      "filePath": "Engine.UnitTests/FormatterTests.cs",
+      "summary": "TimeSpanFormatter 的 NUnit 测试，验证从 SuperBrief 到 Verbose 各种详细级别下的 TimeSpan 格式化输出正确性。",
+      "tags": [
+        "test",
+        "time-span",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/FormatterTests.cs:FormatterTests",
+      "type": "class",
+      "name": "FormatterTests",
+      "filePath": "Engine.UnitTests/FormatterTests.cs",
+      "lineRange": [
+        6,
+        27
+      ],
+      "summary": "TimeSpanFormatter 格式化测试类，验证多种 FormatVerbosities 级别的输出格式。",
+      "tags": [
+        "test",
+        "time-span",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/FormatterTests.cs:TimeSpanFormatterTests",
+      "type": "function",
+      "name": "TimeSpanFormatterTests",
+      "filePath": "Engine.UnitTests/FormatterTests.cs",
+      "lineRange": [
+        9,
+        26
+      ],
+      "summary": "验证 TimeSpanFormatter.Format 在 SuperBrief（'01:02:03'）、Brief（'1 h 2 m 3 s'）、Normal 和 Verbose 级别下均产生正确的格式化字符串。",
+      "tags": [
+        "test",
+        "time-span",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/HttpArtifactStep.cs",
+      "type": "file",
+      "name": "HttpArtifactStep.cs",
+      "filePath": "Engine.UnitTests/HttpArtifactStep.cs",
+      "summary": "测试辅助 TestStep，通过 HTTP GET 获取 URL 内容并通过 StepRun.PublishArtifact 发布为测试 Artifact。",
+      "tags": [
+        "test-helper",
+        "http",
+        "artifact",
+        "test-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/HttpArtifactStep.cs:HttpArtifactStep",
+      "type": "class",
+      "name": "HttpArtifactStep",
+      "filePath": "Engine.UnitTests/HttpArtifactStep.cs",
+      "lineRange": [
+        4,
+        18
+      ],
+      "summary": "HTTP Artifact 测试步骤，下载指定 URL 的内容并通过 PublishArtifact 发布到 StepRun，供其他测试使用。",
+      "tags": [
+        "test-helper",
+        "http",
+        "artifact"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/HybridStreamTest.cs",
+      "type": "file",
+      "name": "HybridStreamTest.cs",
+      "filePath": "Engine.UnitTests/HybridStreamTest.cs",
+      "summary": "HybridStream 的 NUnit 测试，验证流在内存阈值以下使用内存缓冲、超过阈值时自动切换到文件存储、关闭时清理临时文件。",
+      "tags": [
+        "test",
+        "hybrid-stream",
+        "memory-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/HybridStreamTest.cs:HybridStreamTest",
+      "type": "class",
+      "name": "HybridStreamTest",
+      "filePath": "Engine.UnitTests/HybridStreamTest.cs",
+      "lineRange": [
+        6,
+        22
+      ],
+      "summary": "HybridStream 测试类，验证内存/文件混合流的自动切换和资源清理行为。",
+      "tags": [
+        "test",
+        "hybrid-stream",
+        "nunit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/HybridStreamTest.cs:TestHybridStream",
+      "type": "function",
+      "name": "TestHybridStream",
+      "filePath": "Engine.UnitTests/HybridStreamTest.cs",
+      "lineRange": [
+        8,
+        21
+      ],
+      "summary": "验证 HybridStream 在写入量低于 MemoryThreshold 时使用内存、超过阈值时创建临时文件、Close 时删除临时文件。",
+      "tags": [
+        "test",
+        "hybrid-stream"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "type": "file",
+      "name": "ILockManagerTests.cs",
+      "filePath": "Engine.UnitTests/ILockManagerTests.cs",
+      "summary": "ILockManager 的 NUnit 综合测试套件，验证 ResourceTaskManager 和 LazyResourceManager 两种实现的资源锁管理、BeforeOpen/AfterClose 钩子调用次数及异常处理。",
+      "tags": [
+        "test",
+        "lock-manager",
+        "resource-management",
+        "before-open",
+        "after-close"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/ILockManagerTests.cs:ILockManagerTests",
+      "type": "class",
+      "name": "ILockManagerTests",
+      "filePath": "Engine.UnitTests/ILockManagerTests.cs",
+      "lineRange": [
+        11,
+        429
+      ],
+      "summary": "ILockManager 测试类，包含 9 个测试方法，覆盖 Default/Lazy 管理器的资源锁、BeforeOpen/AfterClose 调用计数和异常处理。",
+      "tags": [
+        "test",
+        "lock-manager",
+        "nunit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/ILockManagerTests.cs:SimpleTestDefaultManager",
+      "type": "function",
+      "name": "SimpleTestDefaultManager",
+      "filePath": "Engine.UnitTests/ILockManagerTests.cs",
+      "lineRange": [
+        76,
+        102
+      ],
+      "summary": "验证 ResourceTaskManager 在单个计划执行中 BeforeOpen 只调用一次，且资源引用列表包含正确的 Resource 和 Step/Property 引用。",
+      "tags": [
+        "test",
+        "lock-manager"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ILockManagerTests.cs:SimpleTestLazyManager",
+      "type": "function",
+      "name": "SimpleTestLazyManager",
+      "filePath": "Engine.UnitTests/ILockManagerTests.cs",
+      "lineRange": [
+        104,
+        127
+      ],
+      "summary": "验证 LazyResourceManager 为每个步骤单独调用 BeforeOpen，且每次调用的资源列表中只包含一个资源。",
+      "tags": [
+        "test",
+        "lock-manager"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ILockManagerTests.cs:DoubleResourcePropertyTest",
+      "type": "function",
+      "name": "DoubleResourcePropertyTest",
+      "filePath": "Engine.UnitTests/ILockManagerTests.cs",
+      "lineRange": [
+        129,
+        179
+      ],
+      "summary": "验证单个步骤引用同一资源两次时，LazyResourceManager 的 BeforeOpen 为每个步骤调用一次并正确列出所有引用。",
+      "tags": [
+        "test",
+        "lock-manager"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ILockManagerTests.cs:BeforeOpenExceptionTest",
+      "type": "function",
+      "name": "BeforeOpenExceptionTest",
+      "filePath": "Engine.UnitTests/ILockManagerTests.cs",
+      "lineRange": [
+        278,
+        339
+      ],
+      "summary": "参数化测试：验证 BeforeOpen 抛异常时计划执行的 Verdict 变为 Error 且 AfterClose 不会被调用，支持串行和并行两种模式。",
+      "tags": [
+        "test",
+        "lock-manager"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/ILockManagerTests.cs:BeforeOpenAfterCloseCallCountTest",
+      "type": "function",
+      "name": "BeforeOpenAfterCloseCallCountTest",
+      "filePath": "Engine.UnitTests/ILockManagerTests.cs",
+      "lineRange": [
+        342,
+        381
+      ],
+      "summary": "参数化测试：验证 BeforeOpen 和 AfterClose 在正常流程中的调用次数与资源数的关系。",
+      "tags": [
+        "test",
+        "lock-manager"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/ILockManagerTests.cs:ResourceSetToNullAfterPlanOpen",
+      "type": "function",
+      "name": "ResourceSetToNullAfterPlanOpen",
+      "filePath": "Engine.UnitTests/ILockManagerTests.cs",
+      "lineRange": [
+        398,
+        428
+      ],
+      "summary": "参数化测试：验证在计划打开后将资源设为 null 时，ILockManager 的 BeforeOpen 仍能按预期工作。",
+      "tags": [
+        "test",
+        "lock-manager"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/ILockManagerTests.cs:UnitTestingLockManager",
+      "type": "class",
+      "name": "UnitTestingLockManager",
+      "filePath": "Engine.UnitTests/ILockManagerTests.cs",
+      "lineRange": [
+        14,
+        44
+      ],
+      "summary": "单元测试用 ILockManager 实现，记录 BeforeOpen 和 AfterClose 的所有调用参数，支持注入 BeforeOpen 副作用用于异常测试。",
+      "tags": [
+        "test-helper",
+        "lock-manager",
+        "ilockmanager"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertyTests",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertiesReflectionAndAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertiesReflectionAndAnnotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertyTests",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertiesSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertiesSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertyTests",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:NestedEmbeddedTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:NestedEmbeddedTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertyTests",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:RecursiveEmbeddedTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:RecursiveEmbeddedTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertyTests",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:TestTestStepMixinsBasic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:TestTestStepMixinsBasic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertyTests",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:TestResourceMixins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:TestResourceMixins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertyTests",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:TestXmlIgnoreEmbedding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:TestXmlIgnoreEmbedding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertyTests",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbedParameterizeValidationErrorTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "target": "function:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbedParameterizeValidationErrorTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "target": "class:Engine.UnitTests/EmbeddedPropertyTests.cs:EmbeddedPropertyTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/AnnotationCollection.cs",
+      "target": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/TapSerializer.cs",
+      "target": "file:Engine.UnitTests/EmbeddedPropertyTests.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalTestPlanParameterTest",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SetValuesTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SetValuesTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalTestPlanParameterTest",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SerializeDeserializeWithDutExternalParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SerializeDeserializeWithDutExternalParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalTestPlanParameterTest",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:TestParameterizedVerdictOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:TestParameterizedVerdictOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalTestPlanParameterTest",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SettingOfExternalParametersOnTestReferencePlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SettingOfExternalParametersOnTestReferencePlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalTestPlanParameterTest",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SaveAndLoadTestPlanReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SaveAndLoadTestPlanReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalTestPlanParameterTest",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SaveAndLoadExternalScopeParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:SaveAndLoadExternalScopeParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalTestPlanParameterTest",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:MultiSelectEditParametersDisabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:MultiSelectEditParametersDisabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalTestPlanParameterTest",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalParametersPlusReloadPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "target": "function:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalParametersPlusReloadPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "target": "class:Engine.UnitTests/ExternalTestPlanParameterTest.cs:ExternalTestPlanParameterTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TestPlan.cs",
+      "target": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/ExternalParameterSerializer.cs",
+      "target": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/TypeData.cs",
+      "target": "file:Engine.UnitTests/ExternalTestPlanParameterTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/FilePathTest.cs:FilePathTest",
+      "target": "function:Engine.UnitTests/FilePathTest.cs:FilePathFilterValidationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/FilePathTest.cs",
+      "target": "class:Engine.UnitTests/FilePathTest.cs:FilePathTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/FilePathTest.cs",
+      "target": "function:Engine.UnitTests/FilePathTest.cs:FilePathFilterValidationTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/FilePathAttribute.cs",
+      "target": "file:Engine.UnitTests/FilePathTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/FlagsAttributeTests.cs:FlagsEnumTest",
+      "target": "function:Engine.UnitTests/FlagsAttributeTests.cs:NonPowers2EnumTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/FlagsAttributeTests.cs",
+      "target": "function:Engine.UnitTests/FlagsAttributeTests.cs:NonPowers2EnumTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/FlagsAttributeTests.cs:FlagsEnumTest",
+      "target": "function:Engine.UnitTests/FlagsAttributeTests.cs:Powers2EnumTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/FlagsAttributeTests.cs",
+      "target": "function:Engine.UnitTests/FlagsAttributeTests.cs:Powers2EnumTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/FlagsAttributeTests.cs:FlagsEnumTest",
+      "target": "function:Engine.UnitTests/FlagsAttributeTests.cs:LargeFlagValuesTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/FlagsAttributeTests.cs",
+      "target": "function:Engine.UnitTests/FlagsAttributeTests.cs:LargeFlagValuesTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/FlagsAttributeTests.cs:FlagsEnumTest",
+      "target": "function:Engine.UnitTests/FlagsAttributeTests.cs:EnumReadableStringTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/FlagsAttributeTests.cs",
+      "target": "function:Engine.UnitTests/FlagsAttributeTests.cs:EnumReadableStringTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/FlagsAttributeTests.cs",
+      "target": "class:Engine.UnitTests/FlagsAttributeTests.cs:FlagsEnumTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/AnnotationCollection.cs",
+      "target": "file:Engine.UnitTests/FlagsAttributeTests.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/FormatterTests.cs:FormatterTests",
+      "target": "function:Engine.UnitTests/FormatterTests.cs:TimeSpanFormatterTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/FormatterTests.cs",
+      "target": "class:Engine.UnitTests/FormatterTests.cs:FormatterTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/FormatterTests.cs",
+      "target": "function:Engine.UnitTests/FormatterTests.cs:TimeSpanFormatterTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/TimeSpanFormatter.cs",
+      "target": "file:Engine.UnitTests/FormatterTests.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine.UnitTests/HttpArtifactStep.cs",
+      "target": "class:Engine.UnitTests/HttpArtifactStep.cs:HttpArtifactStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/HybridStreamTest.cs:HybridStreamTest",
+      "target": "function:Engine.UnitTests/HybridStreamTest.cs:TestHybridStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/HybridStreamTest.cs",
+      "target": "class:Engine.UnitTests/HybridStreamTest.cs:HybridStreamTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/HybridStreamTest.cs",
+      "target": "function:Engine.UnitTests/HybridStreamTest.cs:TestHybridStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/HybridStream.cs",
+      "target": "file:Engine.UnitTests/HybridStreamTest.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:Engine.UnitTests/ILockManagerTests.cs:ILockManagerTests",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:SimpleTestDefaultManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:SimpleTestDefaultManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ILockManagerTests.cs:ILockManagerTests",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:SimpleTestLazyManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:SimpleTestLazyManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ILockManagerTests.cs:ILockManagerTests",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:DoubleResourcePropertyTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:DoubleResourcePropertyTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ILockManagerTests.cs:ILockManagerTests",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:BeforeOpenExceptionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:BeforeOpenExceptionTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ILockManagerTests.cs:ILockManagerTests",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:BeforeOpenAfterCloseCallCountTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:BeforeOpenAfterCloseCallCountTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/ILockManagerTests.cs:ILockManagerTests",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:ResourceSetToNullAfterPlanOpen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "target": "function:Engine.UnitTests/ILockManagerTests.cs:ResourceSetToNullAfterPlanOpen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "target": "class:Engine.UnitTests/ILockManagerTests.cs:ILockManagerTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "target": "class:Engine.UnitTests/ILockManagerTests.cs:UnitTestingLockManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine/ILockManager.cs",
+      "target": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/ResourceTaskManager.cs",
+      "target": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:Engine/LazyResourceManager.cs",
+      "target": "file:Engine.UnitTests/ILockManagerTests.cs",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

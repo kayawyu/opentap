@@ -1,0 +1,135 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 16,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/CliActionTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 16,
+      "nonEmptyLines": 15,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/Directory.Build.props.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 14,
+      "nonEmptyLines": 13,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/DutTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 44,
+      "nonEmptyLines": 40,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/GitVersionTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 28,
+      "nonEmptyLines": 23,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/InstrumentTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 40,
+      "nonEmptyLines": 36,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/PackageXmlTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 16,
+      "nonEmptyLines": 15,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/ResultListenerTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 34,
+      "nonEmptyLines": 31,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/SettingsTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 19,
+      "nonEmptyLines": 18,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/TapPlanTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 6,
+      "nonEmptyLines": 6,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/TestStepTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 35,
+      "nonEmptyLines": 31,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/csprojTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 20,
+      "nonEmptyLines": 17,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/gitlabCiTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 26,
+      "nonEmptyLines": 24,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/launchTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 32,
+      "nonEmptyLines": 32,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/newProjectSlnTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 25,
+      "nonEmptyLines": 24,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/slnTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 25,
+      "nonEmptyLines": 24,
+      "metrics": {}
+    },
+    {
+      "path": "sdk/OpenTap.Sdk.New/Resources/tasksTemplate.txt",
+      "language": "txt",
+      "fileCategory": "config",
+      "totalLines": 21,
+      "nonEmptyLines": 21,
+      "metrics": {}
+    }
+  ]
+}

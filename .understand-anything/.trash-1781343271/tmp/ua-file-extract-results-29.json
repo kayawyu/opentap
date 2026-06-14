@@ -1,0 +1,7954 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "Engine/LoadStatus.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 15,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "Engine/Log.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 811,
+      "nonEmptyLines": 738,
+      "functions": [
+        {
+          "name": "TraceSource",
+          "startLine": 49,
+          "endLine": 52,
+          "params": [
+            "logSource"
+          ]
+        },
+        {
+          "name": "Flush",
+          "startLine": 59,
+          "endLine": 62,
+          "params": []
+        },
+        {
+          "name": "TraceEvent",
+          "startLine": 67,
+          "endLine": 76,
+          "params": [
+            "te",
+            "id",
+            "message"
+          ]
+        },
+        {
+          "name": "TraceEvent",
+          "startLine": 79,
+          "endLine": 85,
+          "params": [
+            "durationNs",
+            "te",
+            "id",
+            "message"
+          ]
+        },
+        {
+          "name": "TraceEvent",
+          "startLine": 88,
+          "endLine": 97,
+          "params": [
+            "durationNs",
+            "te",
+            "id",
+            "message"
+          ]
+        },
+        {
+          "name": "TraceEvent",
+          "startLine": 102,
+          "endLine": 112,
+          "params": [
+            "te",
+            "id",
+            "message"
+          ]
+        },
+        {
+          "name": "EventsLogged",
+          "startLine": 120,
+          "endLine": 123,
+          "params": [
+            "events"
+          ]
+        },
+        {
+          "name": "TraceEvents",
+          "startLine": 128,
+          "endLine": 132,
+          "params": [
+            "events"
+          ]
+        },
+        {
+          "name": "TraceEvent",
+          "startLine": 137,
+          "endLine": 139,
+          "params": [
+            "source",
+            "eventType",
+            "id",
+            "format"
+          ]
+        },
+        {
+          "name": "TraceEvent",
+          "startLine": 144,
+          "endLine": 147,
+          "params": [
+            "source",
+            "eventType",
+            "id",
+            "format"
+          ]
+        },
+        {
+          "name": "Write",
+          "startLine": 152,
+          "endLine": 154,
+          "params": [
+            "str"
+          ]
+        },
+        {
+          "name": "WriteLine",
+          "startLine": 159,
+          "endLine": 161,
+          "params": [
+            "str"
+          ]
+        },
+        {
+          "name": "Flush",
+          "startLine": 166,
+          "endLine": 169,
+          "params": []
+        },
+        {
+          "name": "TextWriterTraceListener",
+          "startLine": 200,
+          "endLine": 203,
+          "params": [
+            "filename"
+          ]
+        },
+        {
+          "name": "TextWriterTraceListener",
+          "startLine": 208,
+          "endLine": 211,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "Write",
+          "startLine": 216,
+          "endLine": 220,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "WriteLine",
+          "startLine": 225,
+          "endLine": 229,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "Flush",
+          "startLine": 234,
+          "endLine": 239,
+          "params": []
+        },
+        {
+          "name": "Dispose",
+          "startLine": 244,
+          "endLine": 254,
+          "params": []
+        },
+        {
+          "name": "WithNewContext",
+          "startLine": 274,
+          "endLine": 280,
+          "params": []
+        },
+        {
+          "name": "AddListener",
+          "startLine": 289,
+          "endLine": 296,
+          "params": [
+            "listener"
+          ]
+        },
+        {
+          "name": "RemoveListener",
+          "startLine": 300,
+          "endLine": 308,
+          "params": [
+            "listener"
+          ]
+        },
+        {
+          "name": "GetListeners",
+          "startLine": 313,
+          "endLine": 316,
+          "params": []
+        },
+        {
+          "name": "CreateSource",
+          "startLine": 320,
+          "endLine": 323,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "CreateSource",
+          "startLine": 332,
+          "endLine": 344,
+          "params": [
+            "name",
+            "owner"
+          ]
+        },
+        {
+          "name": "GetOwnedSource",
+          "startLine": 349,
+          "endLine": 358,
+          "params": [
+            "owner"
+          ]
+        },
+        {
+          "name": "RemoveSource",
+          "startLine": 364,
+          "endLine": 369,
+          "params": [
+            "source"
+          ]
+        },
+        {
+          "name": "Log",
+          "startLine": 371,
+          "endLine": 382,
+          "params": []
+        },
+        {
+          "name": "traceEvent",
+          "startLine": 397,
+          "endLine": 422,
+          "params": [
+            "trace",
+            "elapsed",
+            "eventType",
+            "message"
+          ]
+        },
+        {
+          "name": "traceEvent",
+          "startLine": 434,
+          "endLine": 447,
+          "params": [
+            "trace",
+            "eventType",
+            "message"
+          ]
+        },
+        {
+          "name": "exceptionEvent",
+          "startLine": 449,
+          "endLine": 454,
+          "params": [
+            "trace",
+            "exception",
+            "eventType"
+          ]
+        },
+        {
+          "name": "TraceInformation",
+          "startLine": 461,
+          "endLine": 464,
+          "params": [
+            "trace",
+            "message"
+          ]
+        },
+        {
+          "name": "Debug",
+          "startLine": 472,
+          "endLine": 475,
+          "params": [
+            "trace",
+            "message"
+          ]
+        },
+        {
+          "name": "Info",
+          "startLine": 486,
+          "endLine": 491,
+          "params": [
+            "trace",
+            "timer",
+            "message"
+          ]
+        },
+        {
+          "name": "Debug",
+          "startLine": 502,
+          "endLine": 507,
+          "params": [
+            "trace",
+            "timer",
+            "message"
+          ]
+        },
+        {
+          "name": "Warning",
+          "startLine": 517,
+          "endLine": 522,
+          "params": [
+            "trace",
+            "timer",
+            "message"
+          ]
+        },
+        {
+          "name": "Error",
+          "startLine": 532,
+          "endLine": 537,
+          "params": [
+            "trace",
+            "timer",
+            "message"
+          ]
+        },
+        {
+          "name": "Info",
+          "startLine": 548,
+          "endLine": 551,
+          "params": [
+            "trace",
+            "elapsed",
+            "message"
+          ]
+        },
+        {
+          "name": "Debug",
+          "startLine": 562,
+          "endLine": 565,
+          "params": [
+            "trace",
+            "elapsed",
+            "message"
+          ]
+        },
+        {
+          "name": "Warning",
+          "startLine": 576,
+          "endLine": 579,
+          "params": [
+            "trace",
+            "elapsed",
+            "message"
+          ]
+        },
+        {
+          "name": "Error",
+          "startLine": 589,
+          "endLine": 592,
+          "params": [
+            "trace",
+            "elapsed",
+            "message"
+          ]
+        },
+        {
+          "name": "Info",
+          "startLine": 599,
+          "endLine": 602,
+          "params": [
+            "trace",
+            "message"
+          ]
+        },
+        {
+          "name": "Warning",
+          "startLine": 610,
+          "endLine": 613,
+          "params": [
+            "trace",
+            "message"
+          ]
+        },
+        {
+          "name": "Error",
+          "startLine": 621,
+          "endLine": 624,
+          "params": [
+            "trace",
+            "message"
+          ]
+        },
+        {
+          "name": "Debug",
+          "startLine": 631,
+          "endLine": 634,
+          "params": [
+            "trace",
+            "exception"
+          ]
+        },
+        {
+          "name": "Error",
+          "startLine": 641,
+          "endLine": 644,
+          "params": [
+            "trace",
+            "exception"
+          ]
+        },
+        {
+          "name": "WriteStackTrace",
+          "startLine": 647,
+          "endLine": 671,
+          "params": [
+            "trace",
+            "stack",
+            "level"
+          ]
+        },
+        {
+          "name": "WriteException",
+          "startLine": 673,
+          "endLine": 733,
+          "params": [
+            "trace",
+            "exception",
+            "level",
+            "appendStack",
+            "isInner"
+          ]
+        },
+        {
+          "name": "Flush",
+          "startLine": 738,
+          "endLine": 741,
+          "params": []
+        },
+        {
+          "name": "StartSync",
+          "startLine": 747,
+          "endLine": 751,
+          "params": []
+        },
+        {
+          "name": "StopSync",
+          "startLine": 756,
+          "endLine": 760,
+          "params": []
+        },
+        {
+          "name": "GetInnerMostExceptionMessage",
+          "startLine": 772,
+          "endLine": 783,
+          "params": [
+            "ex"
+          ]
+        },
+        {
+          "name": "Rethrow",
+          "startLine": 785,
+          "endLine": 788,
+          "params": [
+            "ex"
+          ]
+        },
+        {
+          "name": "RethrowInner",
+          "startLine": 790,
+          "endLine": 796,
+          "params": [
+            "ex"
+          ]
+        },
+        {
+          "name": "GetStringBuilder",
+          "startLine": 804,
+          "endLine": 809,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TraceSource",
+          "startLine": 43,
+          "endLine": 113,
+          "methods": [
+            "TraceSource",
+            "Flush",
+            "TraceEvent",
+            "TraceEvent",
+            "TraceEvent",
+            "TraceEvent"
+          ],
+          "properties": [
+            "log",
+            "Owner",
+            "redirectedLog"
+          ]
+        },
+        {
+          "name": "TraceListener",
+          "startLine": 118,
+          "endLine": 170,
+          "methods": [
+            "EventsLogged",
+            "TraceEvents",
+            "TraceEvent",
+            "TraceEvent",
+            "Write",
+            "WriteLine",
+            "Flush"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TextWriterTraceListener",
+          "startLine": 175,
+          "endLine": 255,
+          "methods": [
+            "TextWriterTraceListener",
+            "TextWriterTraceListener",
+            "Write",
+            "WriteLine",
+            "Flush",
+            "Dispose"
+          ],
+          "properties": [
+            "writer",
+            "lockObject",
+            "Writer"
+          ]
+        },
+        {
+          "name": "Log",
+          "startLine": 261,
+          "endLine": 761,
+          "methods": [
+            "WithNewContext",
+            "AddListener",
+            "RemoveListener",
+            "GetListeners",
+            "CreateSource",
+            "CreateSource",
+            "GetOwnedSource",
+            "RemoveSource",
+            "Log",
+            "traceEvent",
+            "traceEvent",
+            "exceptionEvent",
+            "TraceInformation",
+            "Debug",
+            "Info",
+            "Debug",
+            "Warning",
+            "Error",
+            "Info",
+            "Debug",
+            "Warning",
+            "Error",
+            "Info",
+            "Warning",
+            "Error",
+            "Debug",
+            "Error",
+            "WriteStackTrace",
+            "WriteException",
+            "Flush",
+            "StartSync",
+            "StopSync"
+          ],
+          "properties": [
+            "rootLogContext",
+            "Timestamper",
+            "logField",
+            "sessionLogContext",
+            "RedirectedLog",
+            "Context",
+            "ownedTraceSources",
+            "addlock",
+            "sb",
+            "NanoSecondsPerTick",
+            "callerStackTraceLimit"
+          ]
+        },
+        {
+          "name": "ExceptionExtensions",
+          "startLine": 766,
+          "endLine": 797,
+          "methods": [
+            "GetInnerMostExceptionMessage",
+            "Rethrow",
+            "RethrowInner"
+          ],
+          "properties": []
+        },
+        {
+          "name": "StringBuilderCache",
+          "startLine": 799,
+          "endLine": 810,
+          "methods": [
+            "GetStringBuilder"
+          ],
+          "properties": [
+            "sb"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Flush",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvent",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvent",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvent",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvent",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "TraceSource",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvents",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvent",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "TraceEvent",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "Write",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "WriteLine",
+          "line": 159,
+          "isDefault": false
+        },
+        {
+          "name": "Flush",
+          "line": 166,
+          "isDefault": false
+        },
+        {
+          "name": "TraceListener",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "Writer",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "TextWriterTraceListener",
+          "line": 200,
+          "isDefault": false
+        },
+        {
+          "name": "TextWriterTraceListener",
+          "line": 208,
+          "isDefault": false
+        },
+        {
+          "name": "Write",
+          "line": 216,
+          "isDefault": false
+        },
+        {
+          "name": "WriteLine",
+          "line": 225,
+          "isDefault": false
+        },
+        {
+          "name": "Flush",
+          "line": 234,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 244,
+          "isDefault": false
+        },
+        {
+          "name": "Context",
+          "line": 285,
+          "isDefault": false
+        },
+        {
+          "name": "AddListener",
+          "line": 289,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveListener",
+          "line": 300,
+          "isDefault": false
+        },
+        {
+          "name": "GetListeners",
+          "line": 313,
+          "isDefault": false
+        },
+        {
+          "name": "CreateSource",
+          "line": 320,
+          "isDefault": false
+        },
+        {
+          "name": "CreateSource",
+          "line": 332,
+          "isDefault": false
+        },
+        {
+          "name": "GetOwnedSource",
+          "line": 349,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveSource",
+          "line": 364,
+          "isDefault": false
+        },
+        {
+          "name": "TraceInformation",
+          "line": 461,
+          "isDefault": false
+        },
+        {
+          "name": "Debug",
+          "line": 472,
+          "isDefault": false
+        },
+        {
+          "name": "Info",
+          "line": 486,
+          "isDefault": false
+        },
+        {
+          "name": "Debug",
+          "line": 502,
+          "isDefault": false
+        },
+        {
+          "name": "Warning",
+          "line": 517,
+          "isDefault": false
+        },
+        {
+          "name": "Error",
+          "line": 532,
+          "isDefault": false
+        },
+        {
+          "name": "Info",
+          "line": 548,
+          "isDefault": false
+        },
+        {
+          "name": "Debug",
+          "line": 562,
+          "isDefault": false
+        },
+        {
+          "name": "Warning",
+          "line": 576,
+          "isDefault": false
+        },
+        {
+          "name": "Error",
+          "line": 589,
+          "isDefault": false
+        },
+        {
+          "name": "Info",
+          "line": 599,
+          "isDefault": false
+        },
+        {
+          "name": "Warning",
+          "line": 610,
+          "isDefault": false
+        },
+        {
+          "name": "Error",
+          "line": 621,
+          "isDefault": false
+        },
+        {
+          "name": "Debug",
+          "line": 631,
+          "isDefault": false
+        },
+        {
+          "name": "Error",
+          "line": 641,
+          "isDefault": false
+        },
+        {
+          "name": "Flush",
+          "line": 738,
+          "isDefault": false
+        },
+        {
+          "name": "StartSync",
+          "line": 747,
+          "isDefault": false
+        },
+        {
+          "name": "StopSync",
+          "line": 756,
+          "isDefault": false
+        },
+        {
+          "name": "Log",
+          "line": 261,
+          "isDefault": false
+        },
+        {
+          "name": "GetInnerMostExceptionMessage",
+          "line": 772,
+          "isDefault": false
+        },
+        {
+          "name": "Rethrow",
+          "line": 785,
+          "isDefault": false
+        },
+        {
+          "name": "RethrowInner",
+          "line": 790,
+          "isDefault": false
+        },
+        {
+          "name": "GetStringBuilder",
+          "line": 804,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Flush",
+          "callee": "Log.Flush",
+          "lineNumber": 61
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 71
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "nameof",
+          "lineNumber": 71
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "redirectedLog.LogEvent",
+          "lineNumber": 73
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "log.LogEvent",
+          "lineNumber": 75
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "redirectedLog.LogEvent",
+          "lineNumber": 82
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "log.LogEvent",
+          "lineNumber": 84
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "redirectedLog.LogEvent",
+          "lineNumber": 94
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "log.LogEvent",
+          "lineNumber": 96
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 105
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "nameof",
+          "lineNumber": 105
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 107
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "nameof",
+          "lineNumber": 107
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "redirectedLog.LogEvent",
+          "lineNumber": 109
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "log.LogEvent",
+          "lineNumber": 111
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "TraceEvents",
+          "lineNumber": 122
+        },
+        {
+          "caller": "TraceEvents",
+          "callee": "TraceEvent",
+          "lineNumber": 131
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "TraceEvent",
+          "lineNumber": 146
+        },
+        {
+          "caller": "TraceEvent",
+          "callee": "string.Format",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Flush",
+          "callee": "Log.Flush",
+          "lineNumber": 168
+        },
+        {
+          "caller": "TextWriterTraceListener",
+          "callee": "new FileStream",
+          "lineNumber": 201
+        },
+        {
+          "caller": "TextWriterTraceListener",
+          "callee": "new StreamWriter",
+          "lineNumber": 210
+        },
+        {
+          "caller": "Write",
+          "callee": "Writer.Write",
+          "lineNumber": 219
+        },
+        {
+          "caller": "WriteLine",
+          "callee": "Writer.WriteLine",
+          "lineNumber": 228
+        },
+        {
+          "caller": "Flush",
+          "callee": "base.Flush",
+          "lineNumber": 236
+        },
+        {
+          "caller": "Flush",
+          "callee": "writer.Flush",
+          "lineNumber": 238
+        },
+        {
+          "caller": "Dispose",
+          "callee": "writer.Close",
+          "lineNumber": 250
+        },
+        {
+          "caller": "WithNewContext",
+          "callee": "new LogContext",
+          "lineNumber": 276
+        },
+        {
+          "caller": "AddListener",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 292
+        },
+        {
+          "caller": "AddListener",
+          "callee": "nameof",
+          "lineNumber": 292
+        },
+        {
+          "caller": "AddListener",
+          "callee": "ctx.Flush",
+          "lineNumber": 294
+        },
+        {
+          "caller": "AddListener",
+          "callee": "ctx.AttachListener",
+          "lineNumber": 295
+        },
+        {
+          "caller": "RemoveListener",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 303
+        },
+        {
+          "caller": "RemoveListener",
+          "callee": "nameof",
+          "lineNumber": 303
+        },
+        {
+          "caller": "RemoveListener",
+          "callee": "listener.Flush",
+          "lineNumber": 305
+        },
+        {
+          "caller": "RemoveListener",
+          "callee": "ctx.DetachListener",
+          "lineNumber": 306
+        },
+        {
+          "caller": "RemoveListener",
+          "callee": "listener.Flush",
+          "lineNumber": 307
+        },
+        {
+          "caller": "GetListeners",
+          "callee": "sessionLogContext.Value?.GetListeners",
+          "lineNumber": 315
+        },
+        {
+          "caller": "CreateSource",
+          "callee": "new TraceSource",
+          "lineNumber": 322
+        },
+        {
+          "caller": "CreateSource",
+          "callee": "rootLogContext.CreateLog",
+          "lineNumber": 322
+        },
+        {
+          "caller": "CreateSource",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 335
+        },
+        {
+          "caller": "CreateSource",
+          "callee": "nameof",
+          "lineNumber": 335
+        },
+        {
+          "caller": "CreateSource",
+          "callee": "CreateSource",
+          "lineNumber": 336
+        },
+        {
+          "caller": "CreateSource",
+          "callee": "ownedTraceSources.Remove",
+          "lineNumber": 340
+        },
+        {
+          "caller": "CreateSource",
+          "callee": "ownedTraceSources.Add",
+          "lineNumber": 341
+        },
+        {
+          "caller": "GetOwnedSource",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 352
+        },
+        {
+          "caller": "GetOwnedSource",
+          "callee": "nameof",
+          "lineNumber": 352
+        },
+        {
+          "caller": "GetOwnedSource",
+          "callee": "ownedTraceSources.TryGetValue",
+          "lineNumber": 355
+        },
+        {
+          "caller": "RemoveSource",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 367
+        },
+        {
+          "caller": "RemoveSource",
+          "callee": "nameof",
+          "lineNumber": 367
+        },
+        {
+          "caller": "RemoveSource",
+          "callee": "rootLogContext.RemoveLog",
+          "lineNumber": 368
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 400
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "nameof",
+          "lineNumber": 400
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "ShortTimeSpan.FromSeconds",
+          "lineNumber": 401
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "StringBuilderCache.GetStringBuilder",
+          "lineNumber": 404
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "sb.Clear",
+          "lineNumber": 405
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "sb.Append",
+          "lineNumber": 408
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "sb.AppendFormat",
+          "lineNumber": 412
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "sb.Append",
+          "lineNumber": 414
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "timespan.ToString",
+          "lineNumber": 415
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "sb.Append",
+          "lineNumber": 416
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 421
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "sb.ToString",
+          "lineNumber": 421
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 437
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "nameof",
+          "lineNumber": 437
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 440
+        },
+        {
+          "caller": "traceEvent",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 444
+        },
+        {
+          "caller": "exceptionEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 452
+        },
+        {
+          "caller": "exceptionEvent",
+          "callee": "nameof",
+          "lineNumber": 452
+        },
+        {
+          "caller": "exceptionEvent",
+          "callee": "WriteException",
+          "lineNumber": 453
+        },
+        {
+          "caller": "TraceInformation",
+          "callee": "Info",
+          "lineNumber": 463
+        },
+        {
+          "caller": "Debug",
+          "callee": "traceEvent",
+          "lineNumber": 474
+        },
+        {
+          "caller": "Info",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 489
+        },
+        {
+          "caller": "Info",
+          "callee": "traceEvent",
+          "lineNumber": 490
+        },
+        {
+          "caller": "Debug",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 505
+        },
+        {
+          "caller": "Debug",
+          "callee": "traceEvent",
+          "lineNumber": 506
+        },
+        {
+          "caller": "Warning",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 520
+        },
+        {
+          "caller": "Warning",
+          "callee": "traceEvent",
+          "lineNumber": 521
+        },
+        {
+          "caller": "Error",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 535
+        },
+        {
+          "caller": "Error",
+          "callee": "traceEvent",
+          "lineNumber": 536
+        },
+        {
+          "caller": "Info",
+          "callee": "traceEvent",
+          "lineNumber": 550
+        },
+        {
+          "caller": "Debug",
+          "callee": "traceEvent",
+          "lineNumber": 564
+        },
+        {
+          "caller": "Warning",
+          "callee": "traceEvent",
+          "lineNumber": 578
+        },
+        {
+          "caller": "Error",
+          "callee": "traceEvent",
+          "lineNumber": 591
+        },
+        {
+          "caller": "Info",
+          "callee": "traceEvent",
+          "lineNumber": 601
+        },
+        {
+          "caller": "Warning",
+          "callee": "traceEvent",
+          "lineNumber": 612
+        },
+        {
+          "caller": "Error",
+          "callee": "traceEvent",
+          "lineNumber": 623
+        },
+        {
+          "caller": "Debug",
+          "callee": "exceptionEvent",
+          "lineNumber": 633
+        },
+        {
+          "caller": "Error",
+          "callee": "exceptionEvent",
+          "lineNumber": 643
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "stack.GetFrames",
+          "lineNumber": 649
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "Array.Empty<StackFrame>",
+          "lineNumber": 649
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "frames\n                .Skip(3) // Skip the frames from the logging itself.\n                .Where",
+          "lineNumber": 650
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "frames\n                .Skip",
+          "lineNumber": 650
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "line.HasMethod",
+          "lineNumber": 652
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "lines.Count",
+          "lineNumber": 653
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "lines.Take",
+          "lineNumber": 655
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "line.GetMethod",
+          "lineNumber": 659
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "line.HasSource",
+          "lineNumber": 660
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "line.GetFileName",
+          "lineNumber": 662
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "line.GetFileLineNumber",
+          "lineNumber": 662
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 664
+        },
+        {
+          "caller": "WriteStackTrace",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 669
+        },
+        {
+          "caller": "WriteException",
+          "callee": "exception.GetType",
+          "lineNumber": 675
+        },
+        {
+          "caller": "WriteException",
+          "callee": "exception.Message\n                    .Replace(\"{\", \"{{\")\n                    .Replace",
+          "lineNumber": 678
+        },
+        {
+          "caller": "WriteException",
+          "callee": "exception.Message\n                    .Replace",
+          "lineNumber": 678
+        },
+        {
+          "caller": "WriteException",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 682
+        },
+        {
+          "caller": "WriteException",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 684
+        },
+        {
+          "caller": "WriteException",
+          "callee": "exception.StackTrace.Split",
+          "lineNumber": 687
+        },
+        {
+          "caller": "WriteException",
+          "callee": "line.Replace(\"{\", \"{{\").Replace(\"}\", \"}}\").Trim",
+          "lineNumber": 690
+        },
+        {
+          "caller": "WriteException",
+          "callee": "line.Replace(\"{\", \"{{\").Replace",
+          "lineNumber": 690
+        },
+        {
+          "caller": "WriteException",
+          "callee": "line.Replace",
+          "lineNumber": 690
+        },
+        {
+          "caller": "WriteException",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 691
+        },
+        {
+          "caller": "WriteException",
+          "callee": "WriteException",
+          "lineNumber": 700
+        },
+        {
+          "caller": "WriteException",
+          "callee": "WriteException",
+          "lineNumber": 707
+        },
+        {
+          "caller": "WriteException",
+          "callee": "WriteException",
+          "lineNumber": 712
+        },
+        {
+          "caller": "WriteException",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 717
+        },
+        {
+          "caller": "WriteException",
+          "callee": "new StackTrace",
+          "lineNumber": 724
+        },
+        {
+          "caller": "WriteException",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 725
+        },
+        {
+          "caller": "WriteException",
+          "callee": "WriteStackTrace",
+          "lineNumber": 726
+        },
+        {
+          "caller": "WriteException",
+          "callee": "trace.TraceEvent",
+          "lineNumber": 730
+        },
+        {
+          "caller": "Flush",
+          "callee": "rootLogContext.Flush",
+          "lineNumber": 740
+        },
+        {
+          "caller": "StartSync",
+          "callee": "Flush",
+          "lineNumber": 749
+        },
+        {
+          "caller": "StopSync",
+          "callee": "Flush",
+          "lineNumber": 759
+        },
+        {
+          "caller": "GetInnerMostExceptionMessage",
+          "callee": "ag.InnerExceptions[0].GetInnerMostExceptionMessage",
+          "lineNumber": 777
+        },
+        {
+          "caller": "GetInnerMostExceptionMessage",
+          "callee": "ex.InnerException?.GetInnerMostExceptionMessage",
+          "lineNumber": 782
+        },
+        {
+          "caller": "Rethrow",
+          "callee": "System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex).Throw",
+          "lineNumber": 787
+        },
+        {
+          "caller": "Rethrow",
+          "callee": "System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture",
+          "lineNumber": 787
+        },
+        {
+          "caller": "RethrowInner",
+          "callee": "ex.Rethrow",
+          "lineNumber": 793
+        },
+        {
+          "caller": "RethrowInner",
+          "callee": "(ex.InnerException ?? ex).Rethrow",
+          "lineNumber": 795
+        },
+        {
+          "caller": "GetStringBuilder",
+          "callee": "new StringBuilder",
+          "lineNumber": 806
+        },
+        {
+          "caller": "GetStringBuilder",
+          "callee": "sb2.Clear",
+          "lineNumber": 807
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 51,
+        "functionCount": 55,
+        "classCount": 6
+      }
+    },
+    {
+      "path": "Engine/Logging/diag_impl.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 334,
+      "nonEmptyLines": 280,
+      "functions": [
+        {
+          "name": "ToString",
+          "startLine": 21,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "Timestamp",
+          "startLine": 22,
+          "endLine": 25,
+          "params": []
+        },
+        {
+          "name": "ConvertToTicks",
+          "startLine": 30,
+          "endLine": 39,
+          "params": [
+            "timestamp"
+          ]
+        },
+        {
+          "name": "LogContext",
+          "startLine": 59,
+          "endLine": 66,
+          "params": [
+            "startProcessor"
+          ]
+        },
+        {
+          "name": "EmptyLogContext",
+          "startLine": 68,
+          "endLine": 71,
+          "params": []
+        },
+        {
+          "name": "ProcessLog",
+          "startLine": 75,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "CreateLog",
+          "startLine": 123,
+          "endLine": 126,
+          "params": [
+            "source"
+          ]
+        },
+        {
+          "name": "RemoveLog",
+          "startLine": 128,
+          "endLine": 132,
+          "params": [
+            "logSource"
+          ]
+        },
+        {
+          "name": "AttachListener",
+          "startLine": 134,
+          "endLine": 138,
+          "params": [
+            "listener"
+          ]
+        },
+        {
+          "name": "DetachListener",
+          "startLine": 140,
+          "endLine": 144,
+          "params": [
+            "listener"
+          ]
+        },
+        {
+          "name": "GetListeners",
+          "startLine": 146,
+          "endLine": 149,
+          "params": []
+        },
+        {
+          "name": "Flush",
+          "startLine": 151,
+          "endLine": 182,
+          "params": [
+            "timeoutMs"
+          ]
+        },
+        {
+          "name": "Flush",
+          "startLine": 184,
+          "endLine": 187,
+          "params": [
+            "timeout"
+          ]
+        },
+        {
+          "name": "Dispose",
+          "startLine": 190,
+          "endLine": 196,
+          "params": []
+        },
+        {
+          "name": "injectEvent",
+          "startLine": 205,
+          "endLine": 214,
+          "params": [
+            "@event"
+          ]
+        },
+        {
+          "name": "AddEvent",
+          "startLine": 216,
+          "endLine": 233,
+          "params": [
+            "evt"
+          ]
+        },
+        {
+          "name": "GetProcessedMessages",
+          "startLine": 332,
+          "endLine": 332,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccurateStamper",
+          "startLine": 16,
+          "endLine": 40,
+          "methods": [
+            "ToString",
+            "Timestamp",
+            "ConvertToTicks"
+          ],
+          "properties": [
+            "sw",
+            "UtcOffset",
+            "ticksPerSecond"
+          ]
+        },
+        {
+          "name": "LogContext",
+          "startLine": 42,
+          "endLine": 333,
+          "methods": [
+            "LogContext",
+            "EmptyLogContext",
+            "ProcessLog",
+            "CreateLog",
+            "RemoveLog",
+            "AttachListener",
+            "DetachListener",
+            "GetListeners",
+            "Flush",
+            "Flush",
+            "Dispose",
+            "injectEvent",
+            "AddEvent",
+            "GetProcessedMessages"
+          ],
+          "properties": [
+            "LogQueue",
+            "HasListeners",
+            "listeners",
+            "processedMessages",
+            "OutstandingMessages",
+            "timeStamper",
+            "flushBarrier",
+            "processor",
+            "newEventOccured",
+            "isDisposed",
+            "Async",
+            "MessageBufferSize",
+            "Timestamper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ToString",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "AccurateStamper",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "HasListeners",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "LogContext",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "CreateLog",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveLog",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "AttachListener",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "DetachListener",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "GetListeners",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "Flush",
+          "line": 151,
+          "isDefault": false
+        },
+        {
+          "name": "Flush",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "Async",
+          "line": 198,
+          "isDefault": false
+        },
+        {
+          "name": "MessageBufferSize",
+          "line": 200,
+          "isDefault": false
+        },
+        {
+          "name": "Timestamper",
+          "line": 202,
+          "isDefault": false
+        },
+        {
+          "name": "AddEvent",
+          "line": 216,
+          "isDefault": false
+        },
+        {
+          "name": "GetProcessedMessages",
+          "line": 332,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ConvertToTicks",
+          "callee": "TimeZoneInfo.Local.GetUtcOffset",
+          "lineNumber": 34
+        },
+        {
+          "caller": "ConvertToTicks",
+          "callee": "sw.Restart",
+          "lineNumber": 35
+        },
+        {
+          "caller": "LogContext",
+          "callee": "new Thread",
+          "lineNumber": 63
+        },
+        {
+          "caller": "LogContext",
+          "callee": "processor.Start",
+          "lineNumber": 64
+        },
+        {
+          "caller": "EmptyLogContext",
+          "callee": "new LogContext",
+          "lineNumber": 70
+        },
+        {
+          "caller": "ProcessLog",
+          "callee": "new List<ILogListener>",
+          "lineNumber": 77
+        },
+        {
+          "caller": "ProcessLog",
+          "callee": "newEventOccured.WaitOne",
+          "lineNumber": 81
+        },
+        {
+          "caller": "ProcessLog",
+          "callee": "flushBarrier.WaitOne",
+          "lineNumber": 82
+        },
+        {
+          "caller": "ProcessLog",
+          "callee": "LogQueue.DequeueBunch",
+          "lineNumber": 83
+        },
+        {
+          "caller": "ProcessLog",
+          "callee": "copy.Clear",
+          "lineNumber": 89
+        },
+        {
+          "caller": "ProcessLog",
+          "callee": "copy.Add",
+          "lineNumber": 91
+        },
+        {
+          "caller": "ProcessLog",
+          "callee": "timeStamper.ConvertToTicks",
+          "lineNumber": 98
+        },
+        {
+          "caller": "ProcessLog",
+          "callee": "new EventCollection",
+          "lineNumber": 105
+        },
+        {
+          "caller": "ProcessLog",
+          "callee": "listener.EventsLogged",
+          "lineNumber": 107
+        },
+        {
+          "caller": "CreateLog",
+          "callee": "new Log",
+          "lineNumber": 125
+        },
+        {
+          "caller": "RemoveLog",
+          "callee": "EmptyLogContext",
+          "lineNumber": 131
+        },
+        {
+          "caller": "AttachListener",
+          "callee": "listeners.Add",
+          "lineNumber": 137
+        },
+        {
+          "caller": "DetachListener",
+          "callee": "listeners.Remove",
+          "lineNumber": 143
+        },
+        {
+          "caller": "GetListeners",
+          "callee": "new ReadOnlyCollection<ILogListener>",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Flush",
+          "callee": "flushBarrier.Set",
+          "lineNumber": 156
+        },
+        {
+          "caller": "Flush",
+          "callee": "newEventOccured.Set",
+          "lineNumber": 157
+        },
+        {
+          "caller": "Flush",
+          "callee": "Thread.Yield",
+          "lineNumber": 163
+        },
+        {
+          "caller": "Flush",
+          "callee": "newEventOccured.Set",
+          "lineNumber": 164
+        },
+        {
+          "caller": "Flush",
+          "callee": "flushBarrier.Set",
+          "lineNumber": 165
+        },
+        {
+          "caller": "Flush",
+          "callee": "Stopwatch.StartNew",
+          "lineNumber": 171
+        },
+        {
+          "caller": "Flush",
+          "callee": "Thread.Yield",
+          "lineNumber": 175
+        },
+        {
+          "caller": "Flush",
+          "callee": "newEventOccured.Set",
+          "lineNumber": 176
+        },
+        {
+          "caller": "Flush",
+          "callee": "flushBarrier.Set",
+          "lineNumber": 177
+        },
+        {
+          "caller": "Flush",
+          "callee": "Flush",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Dispose",
+          "callee": "Flush",
+          "lineNumber": 192
+        },
+        {
+          "caller": "Dispose",
+          "callee": "newEventOccured.Set",
+          "lineNumber": 194
+        },
+        {
+          "caller": "Dispose",
+          "callee": "flushBarrier.Set",
+          "lineNumber": 195
+        },
+        {
+          "caller": "injectEvent",
+          "callee": "new EventCollection",
+          "lineNumber": 209
+        },
+        {
+          "caller": "injectEvent",
+          "callee": "listeners.ForEach",
+          "lineNumber": 211
+        },
+        {
+          "caller": "injectEvent",
+          "callee": "l.EventsLogged",
+          "lineNumber": 211
+        },
+        {
+          "caller": "AddEvent",
+          "callee": "Thread.Sleep",
+          "lineNumber": 224
+        },
+        {
+          "caller": "AddEvent",
+          "callee": "LogQueue.Enqueue",
+          "lineNumber": 226
+        },
+        {
+          "caller": "AddEvent",
+          "callee": "injectEvent",
+          "lineNumber": 230
+        },
+        {
+          "caller": "AddEvent",
+          "callee": "this.newEventOccured.Set",
+          "lineNumber": 232
+        },
+        {
+          "caller": "logEvent",
+          "callee": "Context.AddEvent",
+          "lineNumber": 240
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "getTimestamp",
+          "lineNumber": 246
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "new Event",
+          "lineNumber": 247
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "logEvent",
+          "lineNumber": 248
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 255
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "nameof",
+          "lineNumber": 255
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 257
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "nameof",
+          "lineNumber": 257
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "string.Format",
+          "lineNumber": 260
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "LogEvent",
+          "lineNumber": 261
+        },
+        {
+          "caller": "getTimestamp",
+          "callee": "timestamper.Timestamp",
+          "lineNumber": 270
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "getTimestamp",
+          "lineNumber": 278
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "new Event",
+          "lineNumber": 279
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "logEvent",
+          "lineNumber": 280
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 287
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "nameof",
+          "lineNumber": 287
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 289
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "nameof",
+          "lineNumber": 289
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 291
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "nameof",
+          "lineNumber": 291
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "string.Format",
+          "lineNumber": 294
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "LogEvent",
+          "lineNumber": 295
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "LogEvent",
+          "lineNumber": 311
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "LogEvent",
+          "lineNumber": 316
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "LogEvent",
+          "lineNumber": 321
+        },
+        {
+          "caller": "LogEvent",
+          "callee": "LogEvent",
+          "lineNumber": 326
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 17,
+        "functionCount": 17,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/Logging/diag_intf.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 378,
+      "nonEmptyLines": 338,
+      "functions": [
+        {
+          "name": "EventCollection",
+          "startLine": 232,
+          "endLine": 235,
+          "params": [
+            "events"
+          ]
+        },
+        {
+          "name": "Dispose",
+          "startLine": 241,
+          "endLine": 245,
+          "params": []
+        },
+        {
+          "name": "GetEnumerator",
+          "startLine": 251,
+          "endLine": 255,
+          "params": []
+        },
+        {
+          "name": "GetEnumerator",
+          "startLine": 261,
+          "endLine": 265,
+          "params": []
+        },
+        {
+          "name": "VerifyNotDisposed",
+          "startLine": 266,
+          "endLine": 272,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ILog",
+          "startLine": 15,
+          "endLine": 54,
+          "methods": [
+            "LogEvent",
+            "LogEvent",
+            "LogEvent",
+            "LogEvent"
+          ],
+          "properties": [
+            "Source"
+          ]
+        },
+        {
+          "name": "EventCollection",
+          "startLine": 108,
+          "endLine": 273,
+          "methods": [
+            "EventCollection",
+            "Dispose",
+            "GetEnumerator",
+            "GetEnumerator",
+            "VerifyNotDisposed"
+          ],
+          "properties": [
+            "events",
+            "Disposed",
+            "Length"
+          ]
+        },
+        {
+          "name": "ILogListener",
+          "startLine": 278,
+          "endLine": 289,
+          "methods": [
+            "EventsLogged",
+            "Flush"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ILogTimestampProvider",
+          "startLine": 294,
+          "endLine": 305,
+          "methods": [
+            "Timestamp",
+            "ConvertToTicks"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ILogContext",
+          "startLine": 311,
+          "endLine": 365,
+          "methods": [
+            "CreateLog",
+            "RemoveLog",
+            "AttachListener",
+            "DetachListener",
+            "Flush",
+            "Flush"
+          ],
+          "properties": [
+            "Timestamper",
+            "Async",
+            "MessageBufferSize"
+          ]
+        },
+        {
+          "name": "ILogContext2",
+          "startLine": 370,
+          "endLine": 377,
+          "methods": [
+            "AddEvent"
+          ],
+          "properties": [
+            "HasListeners"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ILog",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "Disposed",
+          "line": 196,
+          "isDefault": false
+        },
+        {
+          "name": "Length",
+          "line": 208,
+          "isDefault": false
+        },
+        {
+          "name": "EventCollection",
+          "line": 232,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 241,
+          "isDefault": false
+        },
+        {
+          "name": "GetEnumerator",
+          "line": 251,
+          "isDefault": false
+        },
+        {
+          "name": "ILogListener",
+          "line": 278,
+          "isDefault": false
+        },
+        {
+          "name": "ILogTimestampProvider",
+          "line": 294,
+          "isDefault": false
+        },
+        {
+          "name": "ILogContext",
+          "line": 311,
+          "isDefault": false
+        },
+        {
+          "name": "ILogContext2",
+          "line": 370,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Dispose",
+          "callee": "VerifyNotDisposed",
+          "lineNumber": 161
+        },
+        {
+          "caller": "MoveNext",
+          "callee": "VerifyNotDisposed",
+          "lineNumber": 167
+        },
+        {
+          "caller": "Reset",
+          "callee": "VerifyNotDisposed",
+          "lineNumber": 174
+        },
+        {
+          "caller": "VerifyNotDisposed",
+          "callee": "new ObjectDisposedException",
+          "lineNumber": 181
+        },
+        {
+          "caller": "VerifyNotDisposed",
+          "callee": "new ObjectDisposedException",
+          "lineNumber": 185
+        },
+        {
+          "caller": "Dispose",
+          "callee": "VerifyNotDisposed",
+          "lineNumber": 243
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "VerifyNotDisposed",
+          "lineNumber": 253
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "new EventCollectionEnumerator",
+          "lineNumber": 254
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "VerifyNotDisposed",
+          "lineNumber": 263
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "new EventCollectionEnumerator",
+          "lineNumber": 264
+        },
+        {
+          "caller": "VerifyNotDisposed",
+          "callee": "new ObjectDisposedException",
+          "lineNumber": 270
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 5,
+        "classCount": 6
+      }
+    },
+    {
+      "path": "Engine/Logging/LogFactory.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "CreateContext",
+          "startLine": 15,
+          "endLine": 18,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "LogFactory",
+          "startLine": 10,
+          "endLine": 19,
+          "methods": [
+            "CreateContext"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateContext",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "LogFactory",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CreateContext",
+          "callee": "new LogContext",
+          "lineNumber": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Logging/LogFile.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 178,
+      "nonEmptyLines": 158,
+      "functions": [
+        {
+          "name": "LogFile",
+          "startLine": 24,
+          "endLine": 29,
+          "params": [
+            "st"
+          ]
+        },
+        {
+          "name": "EventsLogged",
+          "startLine": 35,
+          "endLine": 41,
+          "params": [
+            "logEvents"
+          ]
+        },
+        {
+          "name": "Close",
+          "startLine": 46,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "WriteLog",
+          "startLine": 52,
+          "endLine": 55,
+          "params": [
+            "evt"
+          ]
+        },
+        {
+          "name": "Flush",
+          "startLine": 60,
+          "endLine": 63,
+          "params": []
+        },
+        {
+          "name": "Dispose",
+          "startLine": 68,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "Dispose",
+          "startLine": 78,
+          "endLine": 84,
+          "params": [
+            "cleanupScope"
+          ]
+        },
+        {
+          "name": "BinaryLog",
+          "startLine": 99,
+          "endLine": 104,
+          "params": [
+            "st"
+          ]
+        },
+        {
+          "name": "Close",
+          "startLine": 109,
+          "endLine": 113,
+          "params": []
+        },
+        {
+          "name": "Flush",
+          "startLine": 118,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "EventsLogged",
+          "startLine": 127,
+          "endLine": 155,
+          "params": [
+            "logEvents"
+          ]
+        },
+        {
+          "name": "Dispose",
+          "startLine": 160,
+          "endLine": 164,
+          "params": []
+        },
+        {
+          "name": "Dispose",
+          "startLine": 170,
+          "endLine": 176,
+          "params": [
+            "cleanupScope"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LogFile",
+          "startLine": 15,
+          "endLine": 85,
+          "methods": [
+            "LogFile",
+            "EventsLogged",
+            "Close",
+            "WriteLog",
+            "Flush",
+            "Dispose",
+            "Dispose"
+          ],
+          "properties": [
+            "_sw"
+          ]
+        },
+        {
+          "name": "BinaryLog",
+          "startLine": 90,
+          "endLine": 177,
+          "methods": [
+            "BinaryLog",
+            "Close",
+            "Flush",
+            "EventsLogged",
+            "Dispose",
+            "Dispose"
+          ],
+          "properties": [
+            "str"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LogFile",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "EventsLogged",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "Flush",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "LogFile",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "BinaryLog",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "Close",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "Flush",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "EventsLogged",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "Dispose",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "BinaryLog",
+          "line": 90,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LogFile",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 27
+        },
+        {
+          "caller": "LogFile",
+          "callee": "new StreamWriter",
+          "lineNumber": 28
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 38
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "WriteLog",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Close",
+          "callee": "_sw.Flush",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Close",
+          "callee": "_sw.Close",
+          "lineNumber": 49
+        },
+        {
+          "caller": "WriteLog",
+          "callee": "_sw.WriteLine",
+          "lineNumber": 54
+        },
+        {
+          "caller": "WriteLog",
+          "callee": "evt.Message.Replace(\"\\n\", \" \").Replace",
+          "lineNumber": 54
+        },
+        {
+          "caller": "WriteLog",
+          "callee": "evt.Message.Replace",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Flush",
+          "callee": "_sw.Flush",
+          "lineNumber": 62
+        },
+        {
+          "caller": "Dispose",
+          "callee": "Dispose",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Dispose",
+          "callee": "GC.SuppressFinalize",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Dispose",
+          "callee": "_sw.Dispose",
+          "lineNumber": 82
+        },
+        {
+          "caller": "BinaryLog",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 102
+        },
+        {
+          "caller": "BinaryLog",
+          "callee": "new BufferedStream",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Close",
+          "callee": "str.Flush",
+          "lineNumber": 111
+        },
+        {
+          "caller": "Close",
+          "callee": "str.Close",
+          "lineNumber": 112
+        },
+        {
+          "caller": "Flush",
+          "callee": "str.Flush",
+          "lineNumber": 120
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 130
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "Encoding.UTF8.GetBytes",
+          "lineNumber": 133
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "Encoding.UTF8.GetBytes",
+          "lineNumber": 134
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "str.Write",
+          "lineNumber": 143
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "BitConverter.GetBytes",
+          "lineNumber": 143
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "str.Write",
+          "lineNumber": 145
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "BitConverter.GetBytes",
+          "lineNumber": 145
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "str.Write",
+          "lineNumber": 146
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "BitConverter.GetBytes",
+          "lineNumber": 146
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "str.Write",
+          "lineNumber": 147
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "BitConverter.GetBytes",
+          "lineNumber": 147
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "str.Write",
+          "lineNumber": 149
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "BitConverter.GetBytes",
+          "lineNumber": 149
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "str.Write",
+          "lineNumber": 150
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "str.Write",
+          "lineNumber": 152
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "BitConverter.GetBytes",
+          "lineNumber": 152
+        },
+        {
+          "caller": "EventsLogged",
+          "callee": "str.Write",
+          "lineNumber": 153
+        },
+        {
+          "caller": "Dispose",
+          "callee": "Dispose",
+          "lineNumber": 162
+        },
+        {
+          "caller": "Dispose",
+          "callee": "GC.SuppressFinalize",
+          "lineNumber": 163
+        },
+        {
+          "caller": "Dispose",
+          "callee": "str.Dispose",
+          "lineNumber": 174
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 13,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/Logging/LogQueues.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 273,
+      "nonEmptyLines": 223,
+      "functions": [
+        {
+          "name": "maybeWaitForProcessing",
+          "startLine": 121,
+          "endLine": 128,
+          "params": []
+        },
+        {
+          "name": "Enqueue",
+          "startLine": 130,
+          "endLine": 155,
+          "params": [
+            "source",
+            "message",
+            "time",
+            "duration",
+            "eventType"
+          ]
+        },
+        {
+          "name": "Enqueue",
+          "startLine": 156,
+          "endLine": 181,
+          "params": [
+            "evt"
+          ]
+        },
+        {
+          "name": "DequeueBunch",
+          "startLine": 183,
+          "endLine": 219,
+          "params": []
+        },
+        {
+          "name": "DequeueBunch",
+          "startLine": 221,
+          "endLine": 255,
+          "params": [
+            "into"
+          ]
+        },
+        {
+          "name": "LogQueue",
+          "startLine": 257,
+          "endLine": 261,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "LogQueue",
+          "startLine": 13,
+          "endLine": 272,
+          "methods": [
+            "maybeWaitForProcessing",
+            "Enqueue",
+            "Enqueue",
+            "DequeueBunch",
+            "DequeueBunch",
+            "LogQueue"
+          ],
+          "properties": [
+            "_first",
+            "_last",
+            "_postedMessages",
+            "PostedMessages",
+            "lck",
+            "IsEmpty"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PostedMessages",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "Enqueue",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "Enqueue",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "DequeueBunch",
+          "line": 183,
+          "isDefault": false
+        },
+        {
+          "name": "DequeueBunch",
+          "line": 221,
+          "isDefault": false
+        },
+        {
+          "name": "LogQueue",
+          "line": 257,
+          "isDefault": false
+        },
+        {
+          "name": "IsEmpty",
+          "line": 263,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PushMessage",
+          "callee": "Interlocked.Increment",
+          "lineNumber": 56
+        },
+        {
+          "caller": "PushMessage",
+          "callee": "new Event",
+          "lineNumber": 61
+        },
+        {
+          "caller": "PushEvent",
+          "callee": "Interlocked.Increment",
+          "lineNumber": 73
+        },
+        {
+          "caller": "PopCurrent",
+          "callee": "new ArraySegment<Event>",
+          "lineNumber": 95
+        },
+        {
+          "caller": "PopCurrent",
+          "callee": "new ArraySegment<Event>",
+          "lineNumber": 97
+        },
+        {
+          "caller": "maybeWaitForProcessing",
+          "callee": "TapThread.Sleep",
+          "lineNumber": 127
+        },
+        {
+          "caller": "Enqueue",
+          "callee": "maybeWaitForProcessing",
+          "lineNumber": 132
+        },
+        {
+          "caller": "Enqueue",
+          "callee": "Interlocked.Increment",
+          "lineNumber": 133
+        },
+        {
+          "caller": "Enqueue",
+          "callee": "buf.PushMessage",
+          "lineNumber": 139
+        },
+        {
+          "caller": "Enqueue",
+          "callee": "new LogBuffer",
+          "lineNumber": 145
+        },
+        {
+          "caller": "Enqueue",
+          "callee": "Interlocked.CompareExchange",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Enqueue",
+          "callee": "maybeWaitForProcessing",
+          "lineNumber": 158
+        },
+        {
+          "caller": "Enqueue",
+          "callee": "Interlocked.Increment",
+          "lineNumber": 159
+        },
+        {
+          "caller": "Enqueue",
+          "callee": "buf.PushEvent",
+          "lineNumber": 165
+        },
+        {
+          "caller": "Enqueue",
+          "callee": "new LogBuffer",
+          "lineNumber": 171
+        },
+        {
+          "caller": "Enqueue",
+          "callee": "Interlocked.CompareExchange",
+          "lineNumber": 172
+        },
+        {
+          "caller": "DequeueBunch",
+          "callee": "Interlocked.CompareExchange",
+          "lineNumber": 194
+        },
+        {
+          "caller": "DequeueBunch",
+          "callee": "buf.PopCurrent",
+          "lineNumber": 200
+        },
+        {
+          "caller": "DequeueBunch",
+          "callee": "Interlocked.CompareExchange",
+          "lineNumber": 208
+        },
+        {
+          "caller": "DequeueBunch",
+          "callee": "Array.Copy",
+          "lineNumber": 217
+        },
+        {
+          "caller": "DequeueBunch",
+          "callee": "Interlocked.CompareExchange",
+          "lineNumber": 232
+        },
+        {
+          "caller": "DequeueBunch",
+          "callee": "buf.PopCurrent",
+          "lineNumber": 237
+        },
+        {
+          "caller": "DequeueBunch",
+          "callee": "Interlocked.CompareExchange",
+          "lineNumber": 245
+        },
+        {
+          "caller": "DequeueBunch",
+          "callee": "Array.Resize",
+          "lineNumber": 250
+        },
+        {
+          "caller": "DequeueBunch",
+          "callee": "Array.Copy",
+          "lineNumber": 253
+        },
+        {
+          "caller": "LogQueue",
+          "callee": "new LogBuffer",
+          "lineNumber": 259
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/LogResultListener.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 162,
+      "nonEmptyLines": 146,
+      "functions": [
+        {
+          "name": "UseFilter",
+          "startLine": 62,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "LogResultListener",
+          "startLine": 71,
+          "endLine": 79,
+          "params": []
+        },
+        {
+          "name": "FilterCopyStream",
+          "startLine": 81,
+          "endLine": 112,
+          "params": [
+            "input",
+            "outStream"
+          ]
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "startLine": 120,
+          "endLine": 158,
+          "params": [
+            "planRun",
+            "logStream"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LogResultListener",
+          "startLine": 16,
+          "endLine": 161,
+          "methods": [
+            "UseFilter",
+            "LogResultListener",
+            "FilterCopyStream",
+            "OnTestPlanRunCompleted"
+          ],
+          "properties": [
+            "FilePath",
+            "FilePath",
+            "logFilterOptionsLUT",
+            "FilterOptions",
+            "fileReadLocker",
+            "DefaultExtension"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FilePath",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "FilterOptions",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "LogResultListener",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "OnTestPlanRunCompleted",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "LogResultListener",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LogResultListener",
+          "callee": "new MacroString",
+          "lineNumber": 74
+        },
+        {
+          "caller": "FilterCopyStream",
+          "callee": "new StreamWriter",
+          "lineNumber": 83
+        },
+        {
+          "caller": "FilterCopyStream",
+          "callee": "new StreamReader",
+          "lineNumber": 84
+        },
+        {
+          "caller": "FilterCopyStream",
+          "callee": "new Regex",
+          "lineNumber": 86
+        },
+        {
+          "caller": "FilterCopyStream",
+          "callee": "Enum.GetValues",
+          "lineNumber": 87
+        },
+        {
+          "caller": "FilterCopyStream",
+          "callee": "streamReader.ReadLine",
+          "lineNumber": 88
+        },
+        {
+          "caller": "FilterCopyStream",
+          "callee": "rx.Match",
+          "lineNumber": 90
+        },
+        {
+          "caller": "FilterCopyStream",
+          "callee": "FilterOptions.HasFlag",
+          "lineNumber": 96
+        },
+        {
+          "caller": "FilterCopyStream",
+          "callee": "m.Groups[\"level\"].Value.Trim",
+          "lineNumber": 99
+        },
+        {
+          "caller": "FilterCopyStream",
+          "callee": "streamWriter.WriteLine",
+          "lineNumber": 109
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 123
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "nameof",
+          "lineNumber": 123
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "base.OnTestPlanRunCompleted",
+          "lineNumber": 124
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "OnActivity",
+          "lineNumber": 126
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "FilePath.Expand",
+          "lineNumber": 131
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 132
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 134
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.GetDirectoryName",
+          "lineNumber": 134
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "File.Exists",
+          "lineNumber": 139
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.GetExtension",
+          "lineNumber": 141
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.ChangeExtension",
+          "lineNumber": 142
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "new FileStream",
+          "lineNumber": 144
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "UseFilter",
+          "lineNumber": 148
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "FilterCopyStream",
+          "lineNumber": 150
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "logStream.CopyTo",
+          "lineNumber": 154
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "planRun.PublishArtifact",
+          "lineNumber": 157
+        },
+        {
+          "caller": "OnTestPlanRunCompleted",
+          "callee": "Path.GetFileName",
+          "lineNumber": 157
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/MacroPath.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 291,
+      "nonEmptyLines": 252,
+      "functions": [
+        {
+          "name": "MacroString",
+          "startLine": 54,
+          "endLine": 57,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "MacroString",
+          "startLine": 60,
+          "endLine": 63,
+          "params": []
+        },
+        {
+          "name": "Expand",
+          "startLine": 70,
+          "endLine": 73,
+          "params": [
+            "run",
+            "date",
+            "testPlanDir"
+          ]
+        },
+        {
+          "name": "Expand",
+          "startLine": 81,
+          "endLine": 145,
+          "params": [
+            "run",
+            "date",
+            "testPlanDir",
+            "replacements"
+          ]
+        },
+        {
+          "name": "ToString",
+          "startLine": 148,
+          "endLine": 151,
+          "params": []
+        },
+        {
+          "name": "ReplaceMacros",
+          "startLine": 166,
+          "endLine": 206,
+          "params": [
+            "userString",
+            "keyvaluepairs",
+            "macroDefault"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MacroExpansion",
+          "startLine": 15,
+          "endLine": 29,
+          "methods": [],
+          "properties": [
+            "MacroName",
+            "Description",
+            "Origin"
+          ]
+        },
+        {
+          "name": "MacroString",
+          "startLine": 32,
+          "endLine": 290,
+          "methods": [
+            "MacroString",
+            "MacroString",
+            "Expand",
+            "Expand",
+            "ToString",
+            "ReplaceMacros"
+          ],
+          "properties": [
+            "Context",
+            "text",
+            "Text"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MacroName",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "Description",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "Origin",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "Context",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "Text",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "MacroString",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "MacroString",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "Expand",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "Expand",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "MacroString",
+          "line": 32,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Expand",
+          "callee": "Expand",
+          "lineNumber": 72
+        },
+        {
+          "caller": "Expand",
+          "callee": "run.Parameters.Concat(ResultParameters.GetMetadataFromObject(run)).Where",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Expand",
+          "callee": "run.Parameters.Concat",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Expand",
+          "callee": "ResultParameters.GetMetadataFromObject",
+          "lineNumber": 100
+        },
+        {
+          "caller": "Expand",
+          "callee": "ResultParameters.GetMetadataFromObject",
+          "lineNumber": 113
+        },
+        {
+          "caller": "Expand",
+          "callee": "ResultParameters.GetComponentSettingsMetadataLazy",
+          "lineNumber": 127
+        },
+        {
+          "caller": "Expand",
+          "callee": "ReplaceMacros",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Expand",
+          "callee": "getMacro().Select",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Expand",
+          "callee": "getMacro",
+          "lineNumber": 144
+        },
+        {
+          "caller": "Expand",
+          "callee": "StringConvertProvider.GetString",
+          "lineNumber": 144
+        },
+        {
+          "caller": "ToString",
+          "callee": "Expand",
+          "lineNumber": 150
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "new Dictionary<string, string>",
+          "lineNumber": 169
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "keyvaluepairs.GetEnumerator",
+          "lineNumber": 170
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "cache.TryGetValue",
+          "lineNumber": 173
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "valueiterator.MoveNext",
+          "lineNumber": 177
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "cache.ContainsKey",
+          "lineNumber": 182
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "cmp.Compare",
+          "lineNumber": 185
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "macroLocation.GetMacroLocations",
+          "lineNumber": 190
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "getMacroDef",
+          "lineNumber": 196
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "userString.Remove",
+          "lineNumber": 198
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "userString.Insert",
+          "lineNumber": 199
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "userString.Contains",
+          "lineNumber": 202
+        },
+        {
+          "caller": "ReplaceMacros",
+          "callee": "Environment.ExpandEnvironmentVariables",
+          "lineNumber": 203
+        },
+        {
+          "caller": "GetMacroLocations",
+          "callee": "new List<macroLocation>",
+          "lineNumber": 267
+        },
+        {
+          "caller": "GetMacroLocations",
+          "callee": "locations.Add",
+          "lineNumber": 281
+        },
+        {
+          "caller": "GetMacroLocations",
+          "callee": "new macroLocation",
+          "lineNumber": 281
+        },
+        {
+          "caller": "GetMacroLocations",
+          "callee": "suppliedString.Substring(start, stop - start + 1).Trim",
+          "lineNumber": 281
+        },
+        {
+          "caller": "GetMacroLocations",
+          "callee": "suppliedString.Substring",
+          "lineNumber": 281
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 6,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "Engine/MenuAnnotation.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 286,
+      "nonEmptyLines": 249,
+      "functions": [
+        {
+          "name": "MenuAnnotation",
+          "startLine": 15,
+          "endLine": 20,
+          "params": [
+            "member",
+            "type",
+            "annotations"
+          ]
+        },
+        {
+          "name": "MenuAnnotation",
+          "startLine": 25,
+          "endLine": 29,
+          "params": [
+            "member",
+            "type"
+          ]
+        },
+        {
+          "name": "MenuAnnotation",
+          "startLine": 33,
+          "endLine": 33,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "getModels",
+          "startLine": 46,
+          "endLine": 111,
+          "params": []
+        },
+        {
+          "name": "FilterDefault2",
+          "startLine": 113,
+          "endLine": 133,
+          "params": [
+            "m"
+          ]
+        },
+        {
+          "name": "generateAnnotations",
+          "startLine": 135,
+          "endLine": 154,
+          "params": []
+        },
+        {
+          "name": "Read",
+          "startLine": 167,
+          "endLine": 176,
+          "params": [
+            "source"
+          ]
+        },
+        {
+          "name": "Write",
+          "startLine": 178,
+          "endLine": 186,
+          "params": [
+            "source"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MenuAnnotation",
+          "startLine": 12,
+          "endLine": 187,
+          "methods": [
+            "MenuAnnotation",
+            "MenuAnnotation",
+            "MenuAnnotation",
+            "getModels",
+            "FilterDefault2",
+            "generateAnnotations",
+            "Read",
+            "Write"
+          ],
+          "properties": [
+            "member",
+            "type",
+            "annotations",
+            "models",
+            "source",
+            "rootAnnotations",
+            "MenuItems"
+          ]
+        },
+        {
+          "name": "IMenuModelFactory",
+          "startLine": 190,
+          "endLine": 196,
+          "methods": [
+            "CreateModel"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ITypeMenuModelFactory",
+          "startLine": 199,
+          "endLine": 205,
+          "methods": [
+            "CreateModel"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IMenuModel",
+          "startLine": 208,
+          "endLine": 213,
+          "methods": [],
+          "properties": [
+            "Source"
+          ]
+        },
+        {
+          "name": "IMemberMenuModel",
+          "startLine": 216,
+          "endLine": 220,
+          "methods": [],
+          "properties": [
+            "Member"
+          ]
+        },
+        {
+          "name": "ITypeMenuModel",
+          "startLine": 223,
+          "endLine": 226,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "IMenuModelState",
+          "startLine": 232,
+          "endLine": 236,
+          "methods": [],
+          "properties": [
+            "Enabled"
+          ]
+        },
+        {
+          "name": "ITestStepMenuModel",
+          "startLine": 239,
+          "endLine": 245,
+          "methods": [],
+          "properties": [
+            "Source",
+            "Member"
+          ]
+        },
+        {
+          "name": "IconNames",
+          "startLine": 250,
+          "endLine": 285,
+          "methods": [],
+          "properties": [
+            "Common",
+            "Parameterize",
+            "ParameterizeOnTestPlan",
+            "ParameterizeOnParent",
+            "Unparameterize",
+            "EditParameter",
+            "Parameterized",
+            "RemoveParameter",
+            "AssignOutput",
+            "UnassignOutput",
+            "Output",
+            "OutputAssigned",
+            "Input",
+            "AddMixin",
+            "ModifyMixin",
+            "RemoveMixin"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MenuItems",
+          "line": 157,
+          "isDefault": false
+        },
+        {
+          "name": "MenuAnnotation",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "IMenuModelFactory",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "ITypeMenuModelFactory",
+          "line": 199,
+          "isDefault": false
+        },
+        {
+          "name": "IMenuModel",
+          "line": 208,
+          "isDefault": false
+        },
+        {
+          "name": "IMemberMenuModel",
+          "line": 216,
+          "isDefault": false
+        },
+        {
+          "name": "ITypeMenuModel",
+          "line": 223,
+          "isDefault": false
+        },
+        {
+          "name": "IMenuModelState",
+          "line": 232,
+          "isDefault": false
+        },
+        {
+          "name": "ITestStepMenuModel",
+          "line": 239,
+          "isDefault": false
+        },
+        {
+          "name": "Parameterize",
+          "line": 254,
+          "isDefault": false
+        },
+        {
+          "name": "ParameterizeOnTestPlan",
+          "line": 256,
+          "isDefault": false
+        },
+        {
+          "name": "ParameterizeOnParent",
+          "line": 258,
+          "isDefault": false
+        },
+        {
+          "name": "Unparameterize",
+          "line": 260,
+          "isDefault": false
+        },
+        {
+          "name": "EditParameter",
+          "line": 262,
+          "isDefault": false
+        },
+        {
+          "name": "Parameterized",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveParameter",
+          "line": 267,
+          "isDefault": false
+        },
+        {
+          "name": "AssignOutput",
+          "line": 269,
+          "isDefault": false
+        },
+        {
+          "name": "UnassignOutput",
+          "line": 271,
+          "isDefault": false
+        },
+        {
+          "name": "Output",
+          "line": 273,
+          "isDefault": false
+        },
+        {
+          "name": "OutputAssigned",
+          "line": 275,
+          "isDefault": false
+        },
+        {
+          "name": "Input",
+          "line": 277,
+          "isDefault": false
+        },
+        {
+          "name": "AddMixin",
+          "line": 279,
+          "isDefault": false
+        },
+        {
+          "name": "ModifyMixin",
+          "line": 281,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveMixin",
+          "line": 283,
+          "isDefault": false
+        },
+        {
+          "name": "IconNames",
+          "line": 250,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getModels",
+          "callee": "rootAnnotations.Get<IObjectValueAnnotation>",
+          "lineNumber": 52
+        },
+        {
+          "caller": "getModels",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 54
+        },
+        {
+          "caller": "getModels",
+          "callee": "new List<IMenuModel>",
+          "lineNumber": 59
+        },
+        {
+          "caller": "getModels",
+          "callee": "TypeData.GetDerivedTypes<ITypeMenuModelFactory>",
+          "lineNumber": 64
+        },
+        {
+          "caller": "getModels",
+          "callee": "factoryType.CreateInstance",
+          "lineNumber": 71
+        },
+        {
+          "caller": "getModels",
+          "callee": "factory.CreateModel",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getModels",
+          "callee": "models.Add",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getModels",
+          "callee": "TypeData.GetDerivedTypes<IMenuModelFactory>",
+          "lineNumber": 88
+        },
+        {
+          "caller": "getModels",
+          "callee": "factoryType.CreateInstance",
+          "lineNumber": 95
+        },
+        {
+          "caller": "getModels",
+          "callee": "factory.CreateModel",
+          "lineNumber": 96
+        },
+        {
+          "caller": "getModels",
+          "callee": "models.Add",
+          "lineNumber": 100
+        },
+        {
+          "caller": "FilterDefault2",
+          "callee": "m.GetAttribute<BrowsableAttribute>",
+          "lineNumber": 115
+        },
+        {
+          "caller": "FilterDefault2",
+          "callee": "m.GetAttribute<XmlIgnoreAttribute>",
+          "lineNumber": 120
+        },
+        {
+          "caller": "FilterDefault2",
+          "callee": "m.HasAttribute<OutputAttribute>",
+          "lineNumber": 126
+        },
+        {
+          "caller": "generateAnnotations",
+          "callee": "getModels",
+          "lineNumber": 137
+        },
+        {
+          "caller": "generateAnnotations",
+          "callee": "new List<AnnotationCollection>",
+          "lineNumber": 138
+        },
+        {
+          "caller": "generateAnnotations",
+          "callee": "AnnotationCollection.Annotate",
+          "lineNumber": 141
+        },
+        {
+          "caller": "generateAnnotations",
+          "callee": "a.Get<IMembersAnnotation>()?.Members\n                    .Where",
+          "lineNumber": 143
+        },
+        {
+          "caller": "generateAnnotations",
+          "callee": "a.Get<IMembersAnnotation>",
+          "lineNumber": 143
+        },
+        {
+          "caller": "generateAnnotations",
+          "callee": "x.Get<IMemberAnnotation>",
+          "lineNumber": 146
+        },
+        {
+          "caller": "generateAnnotations",
+          "callee": "FilterDefault2",
+          "lineNumber": 148
+        },
+        {
+          "caller": "generateAnnotations",
+          "callee": "items.AddRange",
+          "lineNumber": 151
+        },
+        {
+          "caller": "Read",
+          "callee": "annotation.Read",
+          "lineNumber": 175
+        },
+        {
+          "caller": "Write",
+          "callee": "annotation.Write",
+          "lineNumber": 185
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 25,
+        "functionCount": 8,
+        "classCount": 9
+      }
+    },
+    {
+      "path": "Engine/MixinMemberMenuModel.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 78,
+      "functions": [
+        {
+          "name": "MixinMemberMenuModel",
+          "startLine": 9,
+          "endLine": 12,
+          "params": [
+            "member"
+          ]
+        },
+        {
+          "name": "ModifyMixin",
+          "startLine": 25,
+          "endLine": 81,
+          "params": []
+        },
+        {
+          "name": "RemoveMixin",
+          "startLine": 83,
+          "endLine": 92,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MixinMemberMenuModel",
+          "startLine": 6,
+          "endLine": 93,
+          "methods": [
+            "MixinMemberMenuModel",
+            "ModifyMixin",
+            "RemoveMixin"
+          ],
+          "properties": [
+            "member",
+            "Source",
+            "Member",
+            "TestPlanAllowsEdit",
+            "StepLocked"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MixinMemberMenuModel",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "Source",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanAllowsEdit",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "StepLocked",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "ModifyMixin",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveMixin",
+          "line": 83,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ModifyMixin",
+          "callee": "nameof",
+          "lineNumber": 28
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "nameof",
+          "lineNumber": 29
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 33
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "Source.First",
+          "lineNumber": 33
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "MixinFactory.GetMixinBuilders(targetType).ToImmutableArray",
+          "lineNumber": 34
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "MixinFactory.GetMixinBuilders",
+          "lineNumber": 34
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "builders.Replace",
+          "lineNumber": 35
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "builders.FirstOrDefault",
+          "lineNumber": 35
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "x.GetType",
+          "lineNumber": 35
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "src.GetType",
+          "lineNumber": 35
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "src.Initialize",
+          "lineNumber": 36
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "member.GetAttribute<DisplayAttribute>",
+          "lineNumber": 39
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "new MixinBuilderUi",
+          "lineNumber": 44
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "builders.ToArray",
+          "lineNumber": 44
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "UserInput.Request",
+          "lineNumber": 49
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "new TapSerializer",
+          "lineNumber": 55
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "member.GetValue",
+          "lineNumber": 61
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "MixinFactory.UnloadMixin",
+          "lineNumber": 64
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "serializer.Clone(selectedMixinBuilder).ToDynamicMember",
+          "lineNumber": 67
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "serializer.Clone",
+          "lineNumber": 67
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 67
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "DynamicMember.AddDynamicMember",
+          "lineNumber": 69
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "TypeData.GetTypeData(currentValue).DescendsTo",
+          "lineNumber": 72
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 72
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "mem.SetValue",
+          "lineNumber": 74
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "mem.SetValue",
+          "lineNumber": 78
+        },
+        {
+          "caller": "ModifyMixin",
+          "callee": "mem.NewInstance",
+          "lineNumber": 78
+        },
+        {
+          "caller": "RemoveMixin",
+          "callee": "nameof",
+          "lineNumber": 86
+        },
+        {
+          "caller": "RemoveMixin",
+          "callee": "nameof",
+          "lineNumber": 87
+        },
+        {
+          "caller": "RemoveMixin",
+          "callee": "MixinFactory.UnloadMixin",
+          "lineNumber": 91
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/MixinMenuModel.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "MixinMenuModel",
+          "startLine": 14,
+          "endLine": 14,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "AddMixin",
+          "startLine": 19,
+          "endLine": 44,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MixinMenuModel",
+          "startLine": 5,
+          "endLine": 52,
+          "methods": [
+            "MixinMenuModel",
+            "AddMixin"
+          ],
+          "properties": [
+            "type",
+            "TestPlanAllowsEdit",
+            "showMixins",
+            "ShowMixins",
+            "StepLocked",
+            "source",
+            "Source"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TestPlanAllowsEdit",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "MixinMenuModel",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "ShowMixins",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "StepLocked",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "AddMixin",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AddMixin",
+          "callee": "nameof",
+          "lineNumber": 22
+        },
+        {
+          "caller": "AddMixin",
+          "callee": "nameof",
+          "lineNumber": 23
+        },
+        {
+          "caller": "AddMixin",
+          "callee": "MixinFactory.GetMixinBuilders",
+          "lineNumber": 27
+        },
+        {
+          "caller": "AddMixin",
+          "callee": "new MixinBuilderUi",
+          "lineNumber": 30
+        },
+        {
+          "caller": "AddMixin",
+          "callee": "builders.ToArray",
+          "lineNumber": 30
+        },
+        {
+          "caller": "AddMixin",
+          "callee": "UserInput.Request",
+          "lineNumber": 32
+        },
+        {
+          "caller": "AddMixin",
+          "callee": "new TapSerializer",
+          "lineNumber": 39
+        },
+        {
+          "caller": "AddMixin",
+          "callee": "MixinFactory.LoadMixin",
+          "lineNumber": 42
+        },
+        {
+          "caller": "AddMixin",
+          "callee": "serializer.Clone",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/MixinMenuModelFactory.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "CreateModel",
+          "startLine": 5,
+          "endLine": 10,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "CreateModel",
+          "startLine": 11,
+          "endLine": 25,
+          "params": [
+            "member"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MixinMenuModelFactory",
+          "startLine": 3,
+          "endLine": 26,
+          "methods": [
+            "CreateModel",
+            "CreateModel"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateModel",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "CreateModel",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CreateModel",
+          "callee": "type.DescendsTo",
+          "lineNumber": 7
+        },
+        {
+          "caller": "CreateModel",
+          "callee": "type.DescendsTo",
+          "lineNumber": 7
+        },
+        {
+          "caller": "CreateModel",
+          "callee": "new MixinMenuModel",
+          "lineNumber": 8
+        },
+        {
+          "caller": "CreateModel",
+          "callee": "new MixinMemberMenuModel",
+          "lineNumber": 17
+        },
+        {
+          "caller": "CreateModel",
+          "callee": "CreateModel",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Mixins/IAssignOutputMixin.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 25,
+      "functions": [
+        {
+          "name": "Invoke",
+          "startLine": 12,
+          "endLine": 13,
+          "params": [
+            "step",
+            "value",
+            "member"
+          ]
+        },
+        {
+          "name": "AssignOutputEventArgs",
+          "startLine": 28,
+          "endLine": 28,
+          "params": [
+            "step",
+            "value",
+            "member"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IAssignOutputMixin",
+          "startLine": 4,
+          "endLine": 8,
+          "methods": [
+            "OnAssigningOutput"
+          ],
+          "properties": []
+        },
+        {
+          "name": "AssignOutputEvent",
+          "startLine": 10,
+          "endLine": 14,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": []
+        },
+        {
+          "name": "AssignOutputEventArgs",
+          "startLine": 17,
+          "endLine": 29,
+          "methods": [
+            "AssignOutputEventArgs"
+          ],
+          "properties": [
+            "TestStep",
+            "Member",
+            "Value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IAssignOutputMixin",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "Invoke",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "TestStep",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "Member",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "Value",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "AssignOutputEventArgs",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Invoke",
+          "callee": "Invoke",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Invoke",
+          "callee": "v.OnAssigningOutput",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Invoke",
+          "callee": "new AssignOutputEventArgs",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 2,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "Engine/Mixins/IMixin.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 216,
+      "nonEmptyLines": 177,
+      "functions": [
+        {
+          "name": "Invoke",
+          "startLine": 18,
+          "endLine": 18,
+          "params": [
+            "target",
+            "f",
+            "arg"
+          ]
+        },
+        {
+          "name": "Invoke",
+          "startLine": 19,
+          "endLine": 61,
+          "params": [
+            "target",
+            "f",
+            "ordering",
+            "arg",
+            "anyInvoked"
+          ]
+        },
+        {
+          "name": "Invoke",
+          "startLine": 67,
+          "endLine": 73,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "TestStepPreRunEventArgs",
+          "startLine": 87,
+          "endLine": 87,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "Invoke",
+          "startLine": 92,
+          "endLine": 93,
+          "params": [
+            "plan",
+            "planRun"
+          ]
+        },
+        {
+          "name": "TestPlanPreRunEventArgs",
+          "startLine": 105,
+          "endLine": 109,
+          "params": [
+            "step",
+            "planRun"
+          ]
+        },
+        {
+          "name": "Invoke",
+          "startLine": 114,
+          "endLine": 115,
+          "params": [
+            "plan",
+            "run"
+          ]
+        },
+        {
+          "name": "TestPlanPostRunEventArgs",
+          "startLine": 127,
+          "endLine": 131,
+          "params": [
+            "step",
+            "run"
+          ]
+        },
+        {
+          "name": "Invoke",
+          "startLine": 136,
+          "endLine": 137,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "TestStepPostRunEventArgs",
+          "startLine": 146,
+          "endLine": 146,
+          "params": [
+            "step"
+          ]
+        },
+        {
+          "name": "Invoke",
+          "startLine": 151,
+          "endLine": 152,
+          "params": [
+            "resource"
+          ]
+        },
+        {
+          "name": "ResourcePreOpenEventArgs",
+          "startLine": 161,
+          "endLine": 161,
+          "params": [
+            "resource"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IMixin",
+          "startLine": 10,
+          "endLine": 13,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "MixinEvent",
+          "startLine": 15,
+          "endLine": 63,
+          "methods": [
+            "Invoke",
+            "Invoke"
+          ],
+          "properties": [
+            "log"
+          ]
+        },
+        {
+          "name": "TestStepPreRunEvent",
+          "startLine": 65,
+          "endLine": 74,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestStepPreRunEventArgs",
+          "startLine": 77,
+          "endLine": 88,
+          "methods": [
+            "TestStepPreRunEventArgs"
+          ],
+          "properties": [
+            "TestStep",
+            "SkipStep",
+            "AnyPrerunsInvoked"
+          ]
+        },
+        {
+          "name": "TestPlanPreRunEvent",
+          "startLine": 90,
+          "endLine": 94,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestPlanPreRunEventArgs",
+          "startLine": 97,
+          "endLine": 110,
+          "methods": [
+            "TestPlanPreRunEventArgs"
+          ],
+          "properties": [
+            "TestPlan",
+            "PlanRun"
+          ]
+        },
+        {
+          "name": "TestPlanPostRunEvent",
+          "startLine": 112,
+          "endLine": 116,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestPlanPostRunEventArgs",
+          "startLine": 119,
+          "endLine": 132,
+          "methods": [
+            "TestPlanPostRunEventArgs"
+          ],
+          "properties": [
+            "TestPlan",
+            "Run"
+          ]
+        },
+        {
+          "name": "TestStepPostRunEvent",
+          "startLine": 134,
+          "endLine": 138,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestStepPostRunEventArgs",
+          "startLine": 141,
+          "endLine": 147,
+          "methods": [
+            "TestStepPostRunEventArgs"
+          ],
+          "properties": [
+            "TestStep"
+          ]
+        },
+        {
+          "name": "ResourcePreOpenEvent",
+          "startLine": 149,
+          "endLine": 153,
+          "methods": [
+            "Invoke"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ResourcePreOpenEventArgs",
+          "startLine": 156,
+          "endLine": 162,
+          "methods": [
+            "ResourcePreOpenEventArgs"
+          ],
+          "properties": [
+            "Resource"
+          ]
+        },
+        {
+          "name": "ITestStepPostRunMixin",
+          "startLine": 165,
+          "endLine": 169,
+          "methods": [
+            "OnPostRun"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ITestStepPostRunMixinOrder",
+          "startLine": 172,
+          "endLine": 179,
+          "methods": [
+            "GetPostRunOrder"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ITestStepPreRunMixin",
+          "startLine": 183,
+          "endLine": 187,
+          "methods": [
+            "OnPreRun"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ITestStepPreRunMixinOrder",
+          "startLine": 190,
+          "endLine": 194,
+          "methods": [
+            "GetPreRunOrder"
+          ],
+          "properties": []
+        },
+        {
+          "name": "IResourcePreOpenMixin",
+          "startLine": 197,
+          "endLine": 201,
+          "methods": [
+            "OnPreOpen"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ITestPlanPreRunMixin",
+          "startLine": 204,
+          "endLine": 208,
+          "methods": [
+            "OnPreRun"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ITestPlanPostRunMixin",
+          "startLine": 211,
+          "endLine": 215,
+          "methods": [
+            "OnPostRun"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IMixin",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "Invoke",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "TestStep",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "SkipStep",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "TestStepPreRunEventArgs",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "Invoke",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlan",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "PlanRun",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanPreRunEventArgs",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "Invoke",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlan",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "Run",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "TestPlanPostRunEventArgs",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "Invoke",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "TestStep",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "TestStepPostRunEventArgs",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "Invoke",
+          "line": 151,
+          "isDefault": false
+        },
+        {
+          "name": "Resource",
+          "line": 159,
+          "isDefault": false
+        },
+        {
+          "name": "ResourcePreOpenEventArgs",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "ITestStepPostRunMixin",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "ITestStepPostRunMixinOrder",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "ITestStepPreRunMixin",
+          "line": 183,
+          "isDefault": false
+        },
+        {
+          "name": "ITestStepPreRunMixinOrder",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "IResourcePreOpenMixin",
+          "line": 197,
+          "isDefault": false
+        },
+        {
+          "name": "ITestPlanPreRunMixin",
+          "line": 204,
+          "isDefault": false
+        },
+        {
+          "name": "ITestPlanPostRunMixin",
+          "line": 211,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Invoke",
+          "callee": "Invoke",
+          "lineNumber": 18
+        },
+        {
+          "caller": "Invoke",
+          "callee": "TypeData.GetTypeData(target).GetBaseType<EmbeddedTypeData>",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Invoke",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Invoke",
+          "callee": "emb.GetEmbeddingMembers",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Invoke",
+          "callee": "mem.TypeDescriptor.DescendsTo",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Invoke",
+          "callee": "mem.GetValue",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Invoke",
+          "callee": "(objects ??= []).Add",
+          "lineNumber": 35
+        },
+        {
+          "caller": "Invoke",
+          "callee": "objects.OrderBy",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Invoke",
+          "callee": "f",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Invoke",
+          "callee": "log.Error",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Invoke",
+          "callee": "log.Debug",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Invoke",
+          "callee": "new TestStepPreRunEventArgs",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Invoke",
+          "callee": "Invoke",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Invoke",
+          "callee": "v.OnPreRun",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Invoke",
+          "callee": "(v as ITestStepPreRunMixinOrder)?.GetPreRunOrder",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Invoke",
+          "callee": "Invoke",
+          "lineNumber": 93
+        },
+        {
+          "caller": "Invoke",
+          "callee": "v.OnPreRun",
+          "lineNumber": 93
+        },
+        {
+          "caller": "Invoke",
+          "callee": "new TestPlanPreRunEventArgs",
+          "lineNumber": 93
+        },
+        {
+          "caller": "Invoke",
+          "callee": "Invoke",
+          "lineNumber": 115
+        },
+        {
+          "caller": "Invoke",
+          "callee": "v.OnPostRun",
+          "lineNumber": 115
+        },
+        {
+          "caller": "Invoke",
+          "callee": "new TestPlanPostRunEventArgs",
+          "lineNumber": 115
+        },
+        {
+          "caller": "Invoke",
+          "callee": "Invoke",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Invoke",
+          "callee": "mixin.OnPostRun",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Invoke",
+          "callee": "(v as ITestStepPostRunMixinOrder)?.GetPostRunOrder",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Invoke",
+          "callee": "new TestStepPostRunEventArgs",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Invoke",
+          "callee": "Invoke",
+          "lineNumber": 152
+        },
+        {
+          "caller": "Invoke",
+          "callee": "mixin.OnPreOpen",
+          "lineNumber": 152
+        },
+        {
+          "caller": "Invoke",
+          "callee": "new ResourcePreOpenEventArgs",
+          "lineNumber": 152
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 26,
+        "functionCount": 12,
+        "classCount": 19
+      }
+    },
+    {
+      "path": "Engine/Mixins/IMixinBuilder.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "IMixinBuilder",
+          "startLine": 4,
+          "endLine": 11,
+          "methods": [
+            "Initialize",
+            "ToDynamicMember"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IMixinBuilder",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Mixins/MixinBuilderAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "MixinBuilderAttribute",
+          "startLine": 12,
+          "endLine": 12,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MixinBuilderAttribute",
+          "startLine": 5,
+          "endLine": 13,
+          "methods": [
+            "MixinBuilderAttribute"
+          ],
+          "properties": [
+            "Types"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MixinBuilderAttribute",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "MixinBuilderAttribute",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Mixins/MixinBuilderUi.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 73,
+      "nonEmptyLines": 60,
+      "functions": [
+        {
+          "name": "MixinBuilderUi",
+          "startLine": 28,
+          "endLine": 56,
+          "params": [
+            "items",
+            "selected"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MixinBuilderUi",
+          "startLine": 8,
+          "endLine": 72,
+          "methods": [
+            "MixinBuilderUi"
+          ],
+          "properties": [
+            "Items",
+            "SelectedType",
+            "SelectedItem",
+            "Submit",
+            "AddMode",
+            "Description",
+            "Group",
+            "Name",
+            "Order",
+            "Collapsed",
+            "InitialMixinName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Items",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "SelectedType",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "SelectedItem",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "Submit",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "MixinBuilderUi",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "AddMode",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "InitialMixinName",
+          "line": 66,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MixinBuilderUi",
+          "callee": "Items.FirstOrDefault",
+          "lineNumber": 34
+        },
+        {
+          "caller": "MixinBuilderUi",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 42
+        },
+        {
+          "caller": "MixinBuilderUi",
+          "callee": "type.GetMember",
+          "lineNumber": 46
+        },
+        {
+          "caller": "MixinBuilderUi",
+          "callee": "MixinBuilderUiTypeData.GetTransformedName",
+          "lineNumber": 50
+        },
+        {
+          "caller": "MixinBuilderUi",
+          "callee": "Rules.Add",
+          "lineNumber": 51
+        },
+        {
+          "caller": "MixinBuilderUi",
+          "callee": "rule.IsValid",
+          "lineNumber": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Mixins/MixinBuilderUiTypeData.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 104,
+      "nonEmptyLines": 86,
+      "functions": [
+        {
+          "name": "MixinBuilderUiTypeData",
+          "startLine": 71,
+          "endLine": 85,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "GetMembers",
+          "startLine": 90,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "GetMember",
+          "startLine": 92,
+          "endLine": 92,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "CreateInstance",
+          "startLine": 94,
+          "endLine": 94,
+          "params": [
+            "arguments"
+          ]
+        },
+        {
+          "name": "GetTransformedName",
+          "startLine": 99,
+          "endLine": 102,
+          "params": [
+            "member"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MixinBuilderUiTypeData",
+          "startLine": 8,
+          "endLine": 103,
+          "methods": [
+            "MixinBuilderUiTypeData",
+            "GetMembers",
+            "GetMember",
+            "CreateInstance",
+            "GetTransformedName"
+          ],
+          "properties": [
+            "members",
+            "Attributes",
+            "Name",
+            "BaseType",
+            "CanCreateInstance"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MixinBuilderUiTypeData",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "Attributes",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "BaseType",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "GetMembers",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "GetMember",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "CreateInstance",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "CanCreateInstance",
+          "line": 97,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "WrappedMemberInfo",
+          "callee": "GetTransformedName",
+          "lineNumber": 25
+        },
+        {
+          "caller": "WrappedMemberInfo",
+          "callee": "member.Attributes.Select(TransformAttribute).ToArray",
+          "lineNumber": 27
+        },
+        {
+          "caller": "WrappedMemberInfo",
+          "callee": "member.Attributes.Select",
+          "lineNumber": 27
+        },
+        {
+          "caller": "IsEnabled",
+          "callee": "wrapped.IsEnabled",
+          "lineNumber": 43
+        },
+        {
+          "caller": "IsEnabled",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 43
+        },
+        {
+          "caller": "TransformAttribute",
+          "callee": "new Enabled2",
+          "lineNumber": 51
+        },
+        {
+          "caller": "TransformAttribute",
+          "callee": "e.PropertyName.Replace",
+          "lineNumber": 51
+        },
+        {
+          "caller": "TransformAttribute",
+          "callee": "new AvailableValuesAttribute",
+          "lineNumber": 55
+        },
+        {
+          "caller": "SetValue",
+          "callee": "member.SetValue",
+          "lineNumber": 67
+        },
+        {
+          "caller": "GetValue",
+          "callee": "member.GetValue",
+          "lineNumber": 68
+        },
+        {
+          "caller": "MixinBuilderUiTypeData",
+          "callee": "new List<IMemberData>",
+          "lineNumber": 73
+        },
+        {
+          "caller": "MixinBuilderUiTypeData",
+          "callee": "TypeData.GetTypeData(item).GetMembers",
+          "lineNumber": 76
+        },
+        {
+          "caller": "MixinBuilderUiTypeData",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 76
+        },
+        {
+          "caller": "MixinBuilderUiTypeData",
+          "callee": "new EnabledIfAttribute",
+          "lineNumber": 78
+        },
+        {
+          "caller": "MixinBuilderUiTypeData",
+          "callee": "nameof",
+          "lineNumber": 78
+        },
+        {
+          "caller": "MixinBuilderUiTypeData",
+          "callee": "new WrappedMemberInfo",
+          "lineNumber": 79
+        },
+        {
+          "caller": "MixinBuilderUiTypeData",
+          "callee": "members.Add",
+          "lineNumber": 80
+        },
+        {
+          "caller": "MixinBuilderUiTypeData",
+          "callee": "members.ToImmutableArray",
+          "lineNumber": 84
+        },
+        {
+          "caller": "GetMembers",
+          "callee": "members.Concat",
+          "lineNumber": 90
+        },
+        {
+          "caller": "GetMembers",
+          "callee": "BaseType.GetMembers",
+          "lineNumber": 90
+        },
+        {
+          "caller": "GetMember",
+          "callee": "members.FirstOrDefault",
+          "lineNumber": 92
+        },
+        {
+          "caller": "GetMember",
+          "callee": "BaseType.GetMember",
+          "lineNumber": 92
+        },
+        {
+          "caller": "CreateInstance",
+          "callee": "new NotSupportedException",
+          "lineNumber": 94
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Mixins/MixinFactory.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 64,
+      "functions": [
+        {
+          "name": "GetMixinBuilders",
+          "startLine": 11,
+          "endLine": 24,
+          "params": [
+            "targetType"
+          ]
+        },
+        {
+          "name": "LoadMixin",
+          "startLine": 26,
+          "endLine": 54,
+          "params": [
+            "target",
+            "mixin"
+          ]
+        },
+        {
+          "name": "UnloadMixin",
+          "startLine": 57,
+          "endLine": 66,
+          "params": [
+            "src2",
+            "remMember"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MixinFactory",
+          "startLine": 8,
+          "endLine": 67,
+          "methods": [
+            "GetMixinBuilders",
+            "LoadMixin",
+            "UnloadMixin"
+          ],
+          "properties": [
+            "log"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GetMixinBuilders",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "LoadMixin",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "UnloadMixin",
+          "line": 57,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetMixinBuilders",
+          "callee": "TypeData.GetDerivedTypes<IMixinBuilder>",
+          "lineNumber": 13
+        },
+        {
+          "caller": "GetMixinBuilders",
+          "callee": "factoryType.GetAttribute<MixinBuilderAttribute>",
+          "lineNumber": 17
+        },
+        {
+          "caller": "GetMixinBuilders",
+          "callee": "Array.Empty<Type>",
+          "lineNumber": 17
+        },
+        {
+          "caller": "GetMixinBuilders",
+          "callee": "types.Any",
+          "lineNumber": 18
+        },
+        {
+          "caller": "GetMixinBuilders",
+          "callee": "factoryType.CreateInstance",
+          "lineNumber": 20
+        },
+        {
+          "caller": "GetMixinBuilders",
+          "callee": "instance.Initialize",
+          "lineNumber": 21
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "mixin.ToDynamicMember",
+          "lineNumber": 31
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 31
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 34
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "log.Error",
+          "lineNumber": 36
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "log.Error",
+          "lineNumber": 40
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "TypeData.GetTypeData(mixin)?.GetDisplayAttribute",
+          "lineNumber": 40
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "TypeData.GetTypeData",
+          "lineNumber": 40
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "mixin.ToString",
+          "lineNumber": 40
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "DynamicMember.AddDynamicMember",
+          "lineNumber": 44
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "mem.SetValue",
+          "lineNumber": 45
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "mem.NewInstance",
+          "lineNumber": 45
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "log.Error",
+          "lineNumber": 50
+        },
+        {
+          "caller": "LoadMixin",
+          "callee": "log.Debug",
+          "lineNumber": 51
+        },
+        {
+          "caller": "UnloadMixin",
+          "callee": "DynamicMember.GetDynamicMembers(src2).FirstOrDefault",
+          "lineNumber": 59
+        },
+        {
+          "caller": "UnloadMixin",
+          "callee": "DynamicMember.GetDynamicMembers",
+          "lineNumber": 59
+        },
+        {
+          "caller": "UnloadMixin",
+          "callee": "DynamicMember.RemoveDynamicMember",
+          "lineNumber": 63
+        },
+        {
+          "caller": "UnloadMixin",
+          "callee": "mixin.Dispose",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Mixins/MixinMemberData.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 71,
+      "functions": [
+        {
+          "name": "SetValue",
+          "startLine": 29,
+          "endLine": 33,
+          "params": [
+            "owner",
+            "value"
+          ]
+        },
+        {
+          "name": "GetValue",
+          "startLine": 36,
+          "endLine": 41,
+          "params": [
+            "owner"
+          ]
+        },
+        {
+          "name": "NewInstance",
+          "startLine": 48,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "MixinMemberData",
+          "startLine": 59,
+          "endLine": 65,
+          "params": [
+            "source",
+            "make"
+          ]
+        },
+        {
+          "name": "Dispose",
+          "startLine": 71,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "ToString",
+          "startLine": 77,
+          "endLine": 80,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MixinMemberData",
+          "startLine": 8,
+          "endLine": 81,
+          "methods": [
+            "SetValue",
+            "GetValue",
+            "NewInstance",
+            "MixinMemberData",
+            "Dispose",
+            "ToString"
+          ],
+          "properties": [
+            "Attributes",
+            "Name",
+            "DeclaringType",
+            "TypeDescriptor",
+            "Writable",
+            "Readable",
+            "dict",
+            "make",
+            "DefaultValue",
+            "Source",
+            "isDisposed",
+            "IsDisposed"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Attributes",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "Name",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "DeclaringType",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "TypeDescriptor",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "Writable",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "Readable",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "SetValue",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "GetValue",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "DefaultValue",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "Source",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "MixinMemberData",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "MixinMemberData",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SetValue",
+          "callee": "dict.Remove",
+          "lineNumber": 31
+        },
+        {
+          "caller": "SetValue",
+          "callee": "dict.GetValue",
+          "lineNumber": 32
+        },
+        {
+          "caller": "GetValue",
+          "callee": "dict.TryGetValue",
+          "lineNumber": 38
+        },
+        {
+          "caller": "NewInstance",
+          "callee": "TypeDescriptor.DescendsTo",
+          "lineNumber": 51
+        },
+        {
+          "caller": "NewInstance",
+          "callee": "make",
+          "lineNumber": 54
+        },
+        {
+          "caller": "NewInstance",
+          "callee": "TypeDescriptor.CreateInstance",
+          "lineNumber": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/Mixins/MixinTypeDataProvider.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "GetTypeData",
+          "startLine": 5,
+          "endLine": 8,
+          "params": [
+            "identifier"
+          ]
+        },
+        {
+          "name": "GetTypeData",
+          "startLine": 10,
+          "endLine": 18,
+          "params": [
+            "obj"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MixinTypeDataProvider",
+          "startLine": 3,
+          "endLine": 21,
+          "methods": [
+            "GetTypeData",
+            "GetTypeData"
+          ],
+          "properties": [
+            "Priority"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GetTypeData",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "GetTypeData",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "Priority",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetTypeData",
+          "callee": "new MixinBuilderUiTypeData",
+          "lineNumber": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/ModuleInitializer.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "Initialize",
+          "startLine": 13,
+          "endLine": 16,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ModuleInitializer",
+          "startLine": 8,
+          "endLine": 17,
+          "methods": [
+            "Initialize"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Initialize",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Initialize",
+          "callee": "OpenTap.PluginManager.Load",
+          "lineNumber": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/NonMetaDataAttribute.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "NonMetaDataAttribute",
+          "startLine": 8,
+          "endLine": 12,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NonMetaDataAttribute",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "Engine/NumberParser.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 924,
+      "nonEmptyLines": 837,
+      "functions": [
+        {
+          "name": "GetEnumerator",
+          "startLine": 21,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "Range",
+          "startLine": 44,
+          "endLine": 50,
+          "params": [
+            "start",
+            "stop"
+          ]
+        },
+        {
+          "name": "Range",
+          "startLine": 52,
+          "endLine": 58,
+          "params": [
+            "start",
+            "stop",
+            "step"
+          ]
+        },
+        {
+          "name": "CheckRange",
+          "startLine": 60,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "GetEnumerator",
+          "startLine": 67,
+          "endLine": 70,
+          "params": []
+        },
+        {
+          "name": "ToString",
+          "startLine": 72,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "ToString",
+          "startLine": 77,
+          "endLine": 84,
+          "params": [
+            "conv"
+          ]
+        },
+        {
+          "name": "engineeringPrefixLevel",
+          "startLine": 102,
+          "endLine": 118,
+          "params": [
+            "l"
+          ]
+        },
+        {
+          "name": "findLevel",
+          "startLine": 121,
+          "endLine": 132,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Format",
+          "startLine": 134,
+          "endLine": 173,
+          "params": [
+            "sb",
+            "value",
+            "prefix",
+            "unit",
+            "format",
+            "culture",
+            "compact"
+          ]
+        },
+        {
+          "name": "Format",
+          "startLine": 175,
+          "endLine": 214,
+          "params": [
+            "value",
+            "prefix",
+            "unit",
+            "format",
+            "culture",
+            "compact"
+          ]
+        },
+        {
+          "name": "ParseInternal",
+          "startLine": 215,
+          "endLine": 308,
+          "params": [
+            "str",
+            "unit",
+            "format",
+            "culture",
+            "ex"
+          ]
+        },
+        {
+          "name": "Parse",
+          "startLine": 310,
+          "endLine": 316,
+          "params": [
+            "str",
+            "unit",
+            "format",
+            "culture"
+          ]
+        },
+        {
+          "name": "Parse",
+          "startLine": 317,
+          "endLine": 323,
+          "params": [
+            "str",
+            "unit",
+            "format",
+            "culture"
+          ]
+        },
+        {
+          "name": "TryParse",
+          "startLine": 325,
+          "endLine": 329,
+          "params": [
+            "str",
+            "unit",
+            "format",
+            "culture",
+            "bf"
+          ]
+        },
+        {
+          "name": "CastTo",
+          "startLine": 373,
+          "endLine": 376,
+          "params": [
+            "seq"
+          ]
+        },
+        {
+          "name": "CombinedNumberSequences",
+          "startLine": 390,
+          "endLine": 393,
+          "params": [
+            "sequences"
+          ]
+        },
+        {
+          "name": "getValues",
+          "startLine": 395,
+          "endLine": 404,
+          "params": []
+        },
+        {
+          "name": "GetEnumerator",
+          "startLine": 406,
+          "endLine": 409,
+          "params": []
+        },
+        {
+          "name": "GetEnumerator",
+          "startLine": 411,
+          "endLine": 414,
+          "params": []
+        },
+        {
+          "name": "CastTo",
+          "startLine": 416,
+          "endLine": 419,
+          "params": []
+        },
+        {
+          "name": "CastTo",
+          "startLine": 421,
+          "endLine": 424,
+          "params": [
+            "elemType"
+          ]
+        },
+        {
+          "name": "NumberFormatter",
+          "startLine": 462,
+          "endLine": 468,
+          "params": [
+            "culture"
+          ]
+        },
+        {
+          "name": "NumberFormatter",
+          "startLine": 475,
+          "endLine": 485,
+          "params": [
+            "culture",
+            "unit"
+          ]
+        },
+        {
+          "name": "parseNumber",
+          "startLine": 487,
+          "endLine": 490,
+          "params": [
+            "trimmed"
+          ]
+        },
+        {
+          "name": "tryParseNumber",
+          "startLine": 492,
+          "endLine": 495,
+          "params": [
+            "trimmed",
+            "val"
+          ]
+        },
+        {
+          "name": "parseBackNumber",
+          "startLine": 497,
+          "endLine": 502,
+          "params": [
+            "number",
+            "sb"
+          ]
+        },
+        {
+          "name": "parseBackNumber",
+          "startLine": 504,
+          "endLine": 509,
+          "params": [
+            "number"
+          ]
+        },
+        {
+          "name": "parseBackRange",
+          "startLine": 511,
+          "endLine": 521,
+          "params": [
+            "Start",
+            "Step",
+            "Stop",
+            "sb"
+          ]
+        },
+        {
+          "name": "parseBackRange",
+          "startLine": 523,
+          "endLine": 530,
+          "params": [
+            "rng"
+          ]
+        },
+        {
+          "name": "parseRange",
+          "startLine": 532,
+          "endLine": 552,
+          "params": [
+            "formatted"
+          ]
+        },
+        {
+          "name": "Parse",
+          "startLine": 558,
+          "endLine": 561,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "Parse",
+          "startLine": 567,
+          "endLine": 722,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "pushSeq",
+          "startLine": 724,
+          "endLine": 729,
+          "params": [
+            "sb",
+            "val"
+          ]
+        },
+        {
+          "name": "pushSeq",
+          "startLine": 731,
+          "endLine": 748,
+          "params": [
+            "sb",
+            "seq",
+            "step"
+          ]
+        },
+        {
+          "name": "FormatNumber",
+          "startLine": 755,
+          "endLine": 760,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "ParseNumber",
+          "startLine": 768,
+          "endLine": 781,
+          "params": [
+            "str",
+            "t"
+          ]
+        },
+        {
+          "name": "TryParseNumber",
+          "startLine": 790,
+          "endLine": 799,
+          "params": [
+            "str",
+            "t",
+            "val"
+          ]
+        },
+        {
+          "name": "FormatRange",
+          "startLine": 806,
+          "endLine": 922,
+          "params": [
+            "values"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Range",
+          "startLine": 15,
+          "endLine": 85,
+          "methods": [
+            "GetEnumerator",
+            "Range",
+            "Range",
+            "CheckRange",
+            "GetEnumerator",
+            "ToString",
+            "ToString"
+          ],
+          "properties": [
+            "Start",
+            "Stop",
+            "Step"
+          ]
+        },
+        {
+          "name": "UnitFormatter",
+          "startLine": 87,
+          "endLine": 330,
+          "methods": [
+            "engineeringPrefixLevel",
+            "findLevel",
+            "Format",
+            "Format",
+            "ParseInternal",
+            "Parse",
+            "Parse",
+            "TryParse"
+          ],
+          "properties": [
+            "peta",
+            "tera",
+            "giga",
+            "mega",
+            "kilo",
+            "one",
+            "mili",
+            "micro",
+            "nano",
+            "pico",
+            "femto",
+            "levels"
+          ]
+        },
+        {
+          "name": "ICombinedNumberSequence",
+          "startLine": 335,
+          "endLine": 348,
+          "methods": [
+            "CastTo"
+          ],
+          "properties": [
+            "Sequences"
+          ]
+        },
+        {
+          "name": "ICombinedNumberSequence",
+          "startLine": 354,
+          "endLine": 362,
+          "methods": [
+            "CastTo"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ICombinedNumberSequenceExtension",
+          "startLine": 367,
+          "endLine": 377,
+          "methods": [
+            "CastTo"
+          ],
+          "properties": []
+        },
+        {
+          "name": "_ICombinedNumberSequence",
+          "startLine": 379,
+          "endLine": 382,
+          "methods": [],
+          "properties": [
+            "Sequences"
+          ]
+        },
+        {
+          "name": "CombinedNumberSequences",
+          "startLine": 384,
+          "endLine": 425,
+          "methods": [
+            "CombinedNumberSequences",
+            "getValues",
+            "GetEnumerator",
+            "GetEnumerator",
+            "CastTo",
+            "CastTo"
+          ],
+          "properties": [
+            "Sequences",
+            "Sequences"
+          ]
+        },
+        {
+          "name": "NumberFormatter",
+          "startLine": 430,
+          "endLine": 923,
+          "methods": [
+            "NumberFormatter",
+            "NumberFormatter",
+            "parseNumber",
+            "tryParseNumber",
+            "parseBackNumber",
+            "parseBackNumber",
+            "parseBackRange",
+            "parseBackRange",
+            "parseRange",
+            "Parse",
+            "Parse",
+            "pushSeq",
+            "pushSeq",
+            "FormatNumber",
+            "ParseNumber",
+            "TryParseNumber",
+            "FormatRange"
+          ],
+          "properties": [
+            "culture",
+            "separator",
+            "Format",
+            "Unit",
+            "UsePrefix",
+            "PreScaling",
+            "UseRanges",
+            "IsCompact"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Start",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "Stop",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "Step",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "GetEnumerator",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "Range",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "Range",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "CheckRange",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "ToString",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "Format",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "Format",
+          "line": 175,
+          "isDefault": false
+        },
+        {
+          "name": "Parse",
+          "line": 310,
+          "isDefault": false
+        },
+        {
+          "name": "Parse",
+          "line": 317,
+          "isDefault": false
+        },
+        {
+          "name": "TryParse",
+          "line": 325,
+          "isDefault": false
+        },
+        {
+          "name": "ICombinedNumberSequence",
+          "line": 335,
+          "isDefault": false
+        },
+        {
+          "name": "ICombinedNumberSequence",
+          "line": 354,
+          "isDefault": false
+        },
+        {
+          "name": "CastTo",
+          "line": 373,
+          "isDefault": false
+        },
+        {
+          "name": "ICombinedNumberSequenceExtension",
+          "line": 367,
+          "isDefault": false
+        },
+        {
+          "name": "Sequences",
+          "line": 386,
+          "isDefault": false
+        },
+        {
+          "name": "CombinedNumberSequences",
+          "line": 390,
+          "isDefault": false
+        },
+        {
+          "name": "GetEnumerator",
+          "line": 406,
+          "isDefault": false
+        },
+        {
+          "name": "CastTo",
+          "line": 416,
+          "isDefault": false
+        },
+        {
+          "name": "CastTo",
+          "line": 421,
+          "isDefault": false
+        },
+        {
+          "name": "Format",
+          "line": 437,
+          "isDefault": false
+        },
+        {
+          "name": "Unit",
+          "line": 441,
+          "isDefault": false
+        },
+        {
+          "name": "UsePrefix",
+          "line": 445,
+          "isDefault": false
+        },
+        {
+          "name": "PreScaling",
+          "line": 449,
+          "isDefault": false
+        },
+        {
+          "name": "UseRanges",
+          "line": 453,
+          "isDefault": false
+        },
+        {
+          "name": "IsCompact",
+          "line": 458,
+          "isDefault": false
+        },
+        {
+          "name": "NumberFormatter",
+          "line": 462,
+          "isDefault": false
+        },
+        {
+          "name": "NumberFormatter",
+          "line": 475,
+          "isDefault": false
+        },
+        {
+          "name": "Parse",
+          "line": 558,
+          "isDefault": false
+        },
+        {
+          "name": "Parse",
+          "line": 567,
+          "isDefault": false
+        },
+        {
+          "name": "FormatNumber",
+          "line": 755,
+          "isDefault": false
+        },
+        {
+          "name": "ParseNumber",
+          "line": 768,
+          "isDefault": false
+        },
+        {
+          "name": "TryParseNumber",
+          "line": 790,
+          "isDefault": false
+        },
+        {
+          "name": "FormatRange",
+          "line": 806,
+          "isDefault": false
+        },
+        {
+          "name": "NumberFormatter",
+          "line": 430,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GetEnumerator",
+          "callee": "((stop - start) / step).Abs",
+          "lineNumber": 34
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "approximate_steps.Rounded",
+          "lineNumber": 37
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "new BigFloat",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Range",
+          "callee": "(Stop - Start).Sign",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Range",
+          "callee": "CheckRange",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Range",
+          "callee": "CheckRange",
+          "lineNumber": 57
+        },
+        {
+          "caller": "CheckRange",
+          "callee": "(Stop - Start).Sign",
+          "lineNumber": 63
+        },
+        {
+          "caller": "CheckRange",
+          "callee": "Step.Sign",
+          "lineNumber": 63
+        },
+        {
+          "caller": "CheckRange",
+          "callee": "new Exception",
+          "lineNumber": 64
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "GetEnumerator",
+          "lineNumber": 69
+        },
+        {
+          "caller": "ToString",
+          "callee": "ToString",
+          "lineNumber": 74
+        },
+        {
+          "caller": "ToString",
+          "callee": "v.ToString",
+          "lineNumber": 79
+        },
+        {
+          "caller": "ToString",
+          "callee": "conv",
+          "lineNumber": 82
+        },
+        {
+          "caller": "ToString",
+          "callee": "conv",
+          "lineNumber": 82
+        },
+        {
+          "caller": "ToString",
+          "callee": "conv",
+          "lineNumber": 83
+        },
+        {
+          "caller": "ToString",
+          "callee": "conv",
+          "lineNumber": 83
+        },
+        {
+          "caller": "ToString",
+          "callee": "conv",
+          "lineNumber": 83
+        },
+        {
+          "caller": "engineeringPrefixLevel",
+          "callee": "new Exception",
+          "lineNumber": 116
+        },
+        {
+          "caller": "findLevel",
+          "callee": "engineeringPrefixLevel",
+          "lineNumber": 125
+        },
+        {
+          "caller": "Format",
+          "callee": "findLevel",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Format",
+          "callee": "engineeringPrefixLevel",
+          "lineNumber": 138
+        },
+        {
+          "caller": "Format",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 141
+        },
+        {
+          "caller": "Format",
+          "callee": "post_scale.AppendTo",
+          "lineNumber": 142
+        },
+        {
+          "caller": "Format",
+          "callee": "format.StartsWith",
+          "lineNumber": 145
+        },
+        {
+          "caller": "Format",
+          "callee": "sb.Append",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Format",
+          "callee": "((long)post_scale.Rounded()).ToString",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Format",
+          "callee": "post_scale.Rounded",
+          "lineNumber": 146
+        },
+        {
+          "caller": "Format",
+          "callee": "format.StartsWith",
+          "lineNumber": 147
+        },
+        {
+          "caller": "Format",
+          "callee": "sb.Append",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Format",
+          "callee": "((long)post_scale.Rounded()).ToString",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Format",
+          "callee": "post_scale.Rounded",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Format",
+          "callee": "format.Substring",
+          "lineNumber": 148
+        },
+        {
+          "caller": "Format",
+          "callee": "sb.Append",
+          "lineNumber": 153
+        },
+        {
+          "caller": "Format",
+          "callee": "((decimal)post_scale.ConvertTo(typeof(decimal))).ToString",
+          "lineNumber": 153
+        },
+        {
+          "caller": "Format",
+          "callee": "post_scale.ConvertTo",
+          "lineNumber": 153
+        },
+        {
+          "caller": "Format",
+          "callee": "post_scale.AppendTo",
+          "lineNumber": 157
+        },
+        {
+          "caller": "Format",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 162
+        },
+        {
+          "caller": "Format",
+          "callee": "sb.Append",
+          "lineNumber": 168
+        },
+        {
+          "caller": "Format",
+          "callee": "sb.Append",
+          "lineNumber": 170
+        },
+        {
+          "caller": "Format",
+          "callee": "sb.Append",
+          "lineNumber": 172
+        },
+        {
+          "caller": "Format",
+          "callee": "findLevel",
+          "lineNumber": 177
+        },
+        {
+          "caller": "Format",
+          "callee": "engineeringPrefixLevel",
+          "lineNumber": 178
+        },
+        {
+          "caller": "Format",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 182
+        },
+        {
+          "caller": "Format",
+          "callee": "post_scale.ToString",
+          "lineNumber": 183
+        },
+        {
+          "caller": "Format",
+          "callee": "format.StartsWith",
+          "lineNumber": 186
+        },
+        {
+          "caller": "Format",
+          "callee": "((long)post_scale.Rounded()).ToString",
+          "lineNumber": 187
+        },
+        {
+          "caller": "Format",
+          "callee": "post_scale.Rounded",
+          "lineNumber": 187
+        },
+        {
+          "caller": "Format",
+          "callee": "format.StartsWith",
+          "lineNumber": 188
+        },
+        {
+          "caller": "Format",
+          "callee": "((long)post_scale.Rounded()).ToString",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Format",
+          "callee": "post_scale.Rounded",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Format",
+          "callee": "format.Substring",
+          "lineNumber": 189
+        },
+        {
+          "caller": "Format",
+          "callee": "((decimal)post_scale.ConvertTo(typeof(decimal))).ToString",
+          "lineNumber": 194
+        },
+        {
+          "caller": "Format",
+          "callee": "post_scale.ConvertTo",
+          "lineNumber": 194
+        },
+        {
+          "caller": "Format",
+          "callee": "post_scale.ToString",
+          "lineNumber": 198
+        },
+        {
+          "caller": "Format",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 203
+        },
+        {
+          "caller": "Format",
+          "callee": "string.Format",
+          "lineNumber": 211
+        },
+        {
+          "caller": "Format",
+          "callee": "string.Format",
+          "lineNumber": 213
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "str.Trim",
+          "lineNumber": 217
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "new FormatException",
+          "lineNumber": 220
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.Slice",
+          "lineNumber": 233
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.StartsWith",
+          "lineNumber": 240
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "\"0x\".AsSpan",
+          "lineNumber": 240
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "format.StartsWith",
+          "lineNumber": 246
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.EndsWith",
+          "lineNumber": 253
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "unit.AsSpan",
+          "lineNumber": 253
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.Slice",
+          "lineNumber": 254
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.TrimEnd",
+          "lineNumber": 255
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "new FormatException",
+          "lineNumber": 258
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "char.IsLetter",
+          "lineNumber": 264
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "levels.Contains",
+          "lineNumber": 264
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.EndsWith",
+          "lineNumber": 267
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "\" f\".AsSpan",
+          "lineNumber": 267
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "engineeringPrefixLevel",
+          "lineNumber": 269
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.Slice(0, strSpan.Length - 1).TrimEnd",
+          "lineNumber": 271
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.Slice",
+          "lineNumber": 271
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "new BigFloat",
+          "lineNumber": 277
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "BigInteger.Parse",
+          "lineNumber": 277
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.Slice(hexSkip).ToString",
+          "lineNumber": 277
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.Slice",
+          "lineNumber": 277
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.StartsWith",
+          "lineNumber": 281
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "\"0b\".AsSpan",
+          "lineNumber": 281
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "strSpan.Slice",
+          "lineNumber": 283
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "char.IsWhiteSpace",
+          "lineNumber": 296
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "new FormatException",
+          "lineNumber": 300
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "new BigFloat",
+          "lineNumber": 304
+        },
+        {
+          "caller": "ParseInternal",
+          "callee": "BigFloat.Parse",
+          "lineNumber": 306
+        },
+        {
+          "caller": "Parse",
+          "callee": "ParseInternal",
+          "lineNumber": 312
+        },
+        {
+          "caller": "Parse",
+          "callee": "str.AsSpan",
+          "lineNumber": 312
+        },
+        {
+          "caller": "Parse",
+          "callee": "ParseInternal",
+          "lineNumber": 319
+        },
+        {
+          "caller": "TryParse",
+          "callee": "ParseInternal",
+          "lineNumber": 327
+        },
+        {
+          "caller": "TryParse",
+          "callee": "str.AsSpan",
+          "lineNumber": 327
+        },
+        {
+          "caller": "CastTo",
+          "callee": "seq.CastTo",
+          "lineNumber": 375
+        },
+        {
+          "caller": "getValues",
+          "callee": "val.ConvertTo",
+          "lineNumber": 401
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "getValues().GetEnumerator",
+          "lineNumber": 408
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "getValues",
+          "lineNumber": 408
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "getValues().GetEnumerator",
+          "lineNumber": 413
+        },
+        {
+          "caller": "GetEnumerator",
+          "callee": "getValues",
+          "lineNumber": 413
+        },
+        {
+          "caller": "CastTo",
+          "callee": "new CombinedNumberSequences<T1>",
+          "lineNumber": 418
+        },
+        {
+          "caller": "CastTo",
+          "callee": "Activator.CreateInstance",
+          "lineNumber": 423
+        },
+        {
+          "caller": "CastTo",
+          "callee": "typeof(CombinedNumberSequences<>).MakeGenericType",
+          "lineNumber": 423
+        },
+        {
+          "caller": "NumberFormatter",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 465
+        },
+        {
+          "caller": "parseNumber",
+          "callee": "UnitFormatter.Parse",
+          "lineNumber": 489
+        },
+        {
+          "caller": "tryParseNumber",
+          "callee": "UnitFormatter.TryParse",
+          "lineNumber": 494
+        },
+        {
+          "caller": "parseBackNumber",
+          "callee": "UnitFormatter.Format",
+          "lineNumber": 501
+        },
+        {
+          "caller": "parseBackNumber",
+          "callee": "UnitFormatter.Format",
+          "lineNumber": 508
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "parseBackNumber",
+          "lineNumber": 513
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "sb.Append",
+          "lineNumber": 516
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "parseBackNumber",
+          "lineNumber": 517
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "sb.Append",
+          "lineNumber": 519
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "parseBackNumber",
+          "lineNumber": 520
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "string.Format",
+          "lineNumber": 527
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "parseBackNumber",
+          "lineNumber": 527
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "parseBackNumber",
+          "lineNumber": 527
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "string.Format",
+          "lineNumber": 529
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "parseBackNumber",
+          "lineNumber": 529
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "parseBackNumber",
+          "lineNumber": 529
+        },
+        {
+          "caller": "parseBackRange",
+          "callee": "parseBackNumber",
+          "lineNumber": 529
+        },
+        {
+          "caller": "parseRange",
+          "callee": "formatted.ToString().Split(':').Select",
+          "lineNumber": 534
+        },
+        {
+          "caller": "parseRange",
+          "callee": "formatted.ToString().Split",
+          "lineNumber": 534
+        },
+        {
+          "caller": "parseRange",
+          "callee": "formatted.ToString",
+          "lineNumber": 534
+        },
+        {
+          "caller": "parseRange",
+          "callee": "s.Trim",
+          "lineNumber": 534
+        },
+        {
+          "caller": "parseRange",
+          "callee": "parts.Select(str => parseNumber(str.AsSpan())).ToArray",
+          "lineNumber": 535
+        },
+        {
+          "caller": "parseRange",
+          "callee": "parts.Select",
+          "lineNumber": 535
+        },
+        {
+          "caller": "parseRange",
+          "callee": "parseNumber",
+          "lineNumber": 535
+        },
+        {
+          "caller": "parseRange",
+          "callee": "str.AsSpan",
+          "lineNumber": 535
+        },
+        {
+          "caller": "parseRange",
+          "callee": "new Range",
+          "lineNumber": 539
+        },
+        {
+          "caller": "parseRange",
+          "callee": "new Range",
+          "lineNumber": 544
+        },
+        {
+          "caller": "parseRange",
+          "callee": "(rangeitems[1] - rangeitems[0]).Sign",
+          "lineNumber": 544
+        },
+        {
+          "caller": "parseRange",
+          "callee": "new FormatException",
+          "lineNumber": 548
+        },
+        {
+          "caller": "parseRange",
+          "callee": "formatted.ToString",
+          "lineNumber": 548
+        },
+        {
+          "caller": "parseRange",
+          "callee": "result.CheckRange",
+          "lineNumber": 550
+        },
+        {
+          "caller": "Parse",
+          "callee": "Parse",
+          "lineNumber": 560
+        },
+        {
+          "caller": "Parse",
+          "callee": "text.AsSpan",
+          "lineNumber": 560
+        },
+        {
+          "caller": "Parse",
+          "callee": "culture.NumberFormat.NumberGroupSeparator.AsSpan",
+          "lineNumber": 569
+        },
+        {
+          "caller": "Parse",
+          "callee": "new List<IEnumerable<BigFloat>>",
+          "lineNumber": 571
+        },
+        {
+          "caller": "Parse",
+          "callee": "text.IndexOf",
+          "lineNumber": 576
+        },
+        {
+          "caller": "Parse",
+          "callee": "text.Trim",
+          "lineNumber": 580
+        },
+        {
+          "caller": "Parse",
+          "callee": "text.Slice(0, separatorIndex).Trim",
+          "lineNumber": 587
+        },
+        {
+          "caller": "Parse",
+          "callee": "text.Slice",
+          "lineNumber": 587
+        },
+        {
+          "caller": "Parse",
+          "callee": "text.Slice",
+          "lineNumber": 588
+        },
+        {
+          "caller": "Parse",
+          "callee": "trimmed.IndexOf",
+          "lineNumber": 591
+        },
+        {
+          "caller": "Parse",
+          "callee": "parseRange",
+          "lineNumber": 593
+        },
+        {
+          "caller": "Parse",
+          "callee": "endPart.ToArray",
+          "lineNumber": 596
+        },
+        {
+          "caller": "Parse",
+          "callee": "endPartBacking.Clear",
+          "lineNumber": 598
+        },
+        {
+          "caller": "Parse",
+          "callee": "parts.Add",
+          "lineNumber": 600
+        },
+        {
+          "caller": "Parse",
+          "callee": "parseNumber",
+          "lineNumber": 604
+        },
+        {
+          "caller": "Parse",
+          "callee": "parts.Add",
+          "lineNumber": 608
+        },
+        {
+          "caller": "Parse",
+          "callee": "endPart.Add",
+          "lineNumber": 611
+        },
+        {
+          "caller": "Parse",
+          "callee": "new List<IEnumerable<BigFloat>>",
+          "lineNumber": 614
+        },
+        {
+          "caller": "Parse",
+          "callee": "parts2.Add",
+          "lineNumber": 624
+        },
+        {
+          "caller": "Parse",
+          "callee": "parts2.LastOrDefault",
+          "lineNumber": 632
+        },
+        {
+          "caller": "Parse",
+          "callee": "(((stop - start) / step) + BigFloat.Half).Rounded",
+          "lineNumber": 638
+        },
+        {
+          "caller": "Parse",
+          "callee": "new Range",
+          "lineNumber": 648
+        },
+        {
+          "caller": "Parse",
+          "callee": "parts2.Add",
+          "lineNumber": 659
+        },
+        {
+          "caller": "Parse",
+          "callee": "parts2.Add",
+          "lineNumber": 663
+        },
+        {
+          "caller": "Parse",
+          "callee": "new Range",
+          "lineNumber": 663
+        },
+        {
+          "caller": "Parse",
+          "callee": "parts2.Add",
+          "lineNumber": 668
+        },
+        {
+          "caller": "Parse",
+          "callee": "parts2.Add",
+          "lineNumber": 672
+        },
+        {
+          "caller": "Parse",
+          "callee": "((stop - start) / step).Round",
+          "lineNumber": 700
+        },
+        {
+          "caller": "Parse",
+          "callee": "submit",
+          "lineNumber": 709
+        },
+        {
+          "caller": "Parse",
+          "callee": "submit",
+          "lineNumber": 714
+        },
+        {
+          "caller": "Parse",
+          "callee": "parts.Select(x => x.ToArray() as IEnumerable<BigFloat>).ToList",
+          "lineNumber": 719
+        },
+        {
+          "caller": "Parse",
+          "callee": "parts.Select",
+          "lineNumber": 719
+        },
+        {
+          "caller": "Parse",
+          "callee": "x.ToArray",
+          "lineNumber": 719
+        },
+        {
+          "caller": "Parse",
+          "callee": "new CombinedNumberSequences<BigFloat>(parts2).CastTo<double>",
+          "lineNumber": 720
+        },
+        {
+          "caller": "Parse",
+          "callee": "new CombinedNumberSequences<BigFloat>",
+          "lineNumber": 720
+        },
+        {
+          "caller": "pushSeq",
+          "callee": "sb.Append",
+          "lineNumber": 727
+        },
+        {
+          "caller": "pushSeq",
+          "callee": "parseBackNumber",
+          "lineNumber": 728
+        },
+        {
+          "caller": "pushSeq",
+          "callee": "sb.Append",
+          "lineNumber": 736
+        },
+        {
+          "caller": "pushSeq",
+          "callee": "parseBackRange",
+          "lineNumber": 737
+        },
+        {
+          "caller": "pushSeq",
+          "callee": "sb.Append",
+          "lineNumber": 744
+        },
+        {
+          "caller": "pushSeq",
+          "callee": "parseBackNumber",
+          "lineNumber": 745
+        },
+        {
+          "caller": "FormatNumber",
+          "callee": "parseBackNumber",
+          "lineNumber": 759
+        },
+        {
+          "caller": "FormatNumber",
+          "callee": "BigFloat.Convert",
+          "lineNumber": 759
+        },
+        {
+          "caller": "ParseNumber",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 770
+        },
+        {
+          "caller": "ParseNumber",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 771
+        },
+        {
+          "caller": "ParseNumber",
+          "callee": "parseNumber(str.AsSpan()).ConvertTo",
+          "lineNumber": 775
+        },
+        {
+          "caller": "ParseNumber",
+          "callee": "parseNumber",
+          "lineNumber": 775
+        },
+        {
+          "caller": "ParseNumber",
+          "callee": "str.AsSpan",
+          "lineNumber": 775
+        },
+        {
+          "caller": "ParseNumber",
+          "callee": "new FormatException",
+          "lineNumber": 779
+        },
+        {
+          "caller": "ParseNumber",
+          "callee": "string.Format",
+          "lineNumber": 779
+        },
+        {
+          "caller": "TryParseNumber",
+          "callee": "tryParseNumber",
+          "lineNumber": 792
+        },
+        {
+          "caller": "TryParseNumber",
+          "callee": "val2.ConvertTo",
+          "lineNumber": 794
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "new ArgumentNullException",
+          "lineNumber": 809
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "nameof",
+          "lineNumber": 809
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "StringBuilderCache.GetStringBuilder",
+          "lineNumber": 814
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 820
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 821
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "parseBackRange",
+          "lineNumber": 821
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 828
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 829
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "parseBackNumber",
+          "lineNumber": 829
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.ToString",
+          "lineNumber": 833
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "StringBuilderCache.GetStringBuilder",
+          "lineNumber": 838
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "new List<BigFloat>",
+          "lineNumber": 839
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "BigFloat.Convert",
+          "lineNumber": 843
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sequence.Add",
+          "lineNumber": 846
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "((sequence.Last() - sequence[0]) / seq_step).Round",
+          "lineNumber": 851
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sequence.Last",
+          "lineNumber": 851
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sequence.Add",
+          "lineNumber": 854
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "pushSeq",
+          "lineNumber": 860
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sequence.RemoveAt",
+          "lineNumber": 861
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "pushSeq",
+          "lineNumber": 865
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sequence.Clear",
+          "lineNumber": 866
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sequence.Add",
+          "lineNumber": 869
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "pushSeq",
+          "lineNumber": 873
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.ToString",
+          "lineNumber": 874
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "StringBuilderCache.GetStringBuilder",
+          "lineNumber": 879
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 883
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 887
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "i.ToString",
+          "lineNumber": 887
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 890
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "i.ToString",
+          "lineNumber": 890
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 893
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "i.ToString",
+          "lineNumber": 893
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 896
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "string.IsNullOrEmpty",
+          "lineNumber": 900
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 902
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 903
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.ToString",
+          "lineNumber": 907
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "StringBuilderCache.GetStringBuilder",
+          "lineNumber": 911
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "BigFloat.Convert",
+          "lineNumber": 914
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.Append",
+          "lineNumber": 917
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "parseBackNumber",
+          "lineNumber": 918
+        },
+        {
+          "caller": "FormatRange",
+          "callee": "sb.ToString",
+          "lineNumber": 920
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 38,
+        "functionCount": 39,
+        "classCount": 8
+      }
+    }
+  ]
+}

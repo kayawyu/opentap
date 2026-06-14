@@ -1,0 +1,2168 @@
+{
+  "nodes": [
+    {
+      "id": "file:Package/FileLocks.cs",
+      "type": "file",
+      "name": "FileLocks.cs",
+      "filePath": "Package/FileLocks.cs",
+      "summary": "跨平台文件锁实现，提供 IFileLock 接口及 MacOS、POSIX、Win32 三套平台的互斥锁封装，用于保护包管理并发操作。",
+      "tags": [
+        "file-locking",
+        "cross-platform",
+        "concurrency",
+        "posix",
+        "win32"
+      ],
+      "complexity": "complex",
+      "languageNotes": "使用 P/Invoke 调用各平台原生文件锁 API"
+    },
+    {
+      "id": "class:Package/FileLocks.cs:IFileLock",
+      "type": "class",
+      "name": "IFileLock",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "文件锁接口，定义跨平台的互斥锁契约，含 WaitOne/Release 方法和 WaitHandle 属性。",
+      "tags": [
+        "interface",
+        "file-locking",
+        "cross-platform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/FileLocks.cs:MacOSFileLock",
+      "type": "class",
+      "name": "MacOSFileLock",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        31,
+        104
+      ],
+      "summary": "macOS 文件锁实现，基于 ManualResetEvent 和文件存在性检测实现非线程安全锁。",
+      "tags": [
+        "file-locking",
+        "macos",
+        "concurrency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/FileLocks.cs:PosixFileLock",
+      "type": "class",
+      "name": "PosixFileLock",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        107,
+        192
+      ],
+      "summary": "POSIX 文件锁实现，通过 P/Invoke 调用 flock 系统调用实现文件级互斥。",
+      "tags": [
+        "file-locking",
+        "posix",
+        "p/invoke",
+        "concurrency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/FileLocks.cs:Win32FileLock",
+      "type": "class",
+      "name": "Win32FileLock",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        194,
+        226
+      ],
+      "summary": "Windows 文件锁实现，基于全局命名 Mutex 实现跨进程互斥。",
+      "tags": [
+        "file-locking",
+        "windows",
+        "interprocess",
+        "mutex"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/FileLocks.cs:PosixNative",
+      "type": "class",
+      "name": "PosixNative",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        228,
+        272
+      ],
+      "summary": "POSIX 原生互操作类，声明 flock/open/close 等 C 函数及相关常量。",
+      "tags": [
+        "p/invoke",
+        "native-interop",
+        "posix"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "Create 方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:MacOSFileLock",
+      "type": "function",
+      "name": "MacOSFileLock",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        36,
+        40
+      ],
+      "summary": "MacOSFileLock 方法。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:Dispose_L42",
+      "type": "function",
+      "name": "Dispose",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        42,
+        45
+      ],
+      "summary": "释放 ManualResetEvent 资源并关闭 WaitHandle（MacOS 实现）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:WaitOne_L47",
+      "type": "function",
+      "name": "WaitOne",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        47,
+        54
+      ],
+      "summary": "无超时等待锁获取，通过检查文件存在性实现（MacOS）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:WaitOne_L56",
+      "type": "function",
+      "name": "WaitOne",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        56,
+        81
+      ],
+      "summary": "带 TimeSpan 超时的锁等待，在指定时间内轮询文件存在性（MacOS）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:WaitOne_L83",
+      "type": "function",
+      "name": "WaitOne",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        83,
+        86
+      ],
+      "summary": "带毫秒超时的锁等待，调用 TimeSpan 版本的重载（MacOS）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:Release_L91",
+      "type": "function",
+      "name": "Release",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        91,
+        103
+      ],
+      "summary": "释放文件锁，删除锁文件并重置 WaitHandle（MacOS 实现）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:PosixFileLock",
+      "type": "function",
+      "name": "PosixFileLock",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        113,
+        123
+      ],
+      "summary": "PosixFileLock 方法。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:Release_L134",
+      "type": "function",
+      "name": "Release",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        134,
+        141
+      ],
+      "summary": "释放 POSIX 文件锁，通过 flock LOCK_UN 解锁。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:Dispose_L143",
+      "type": "function",
+      "name": "Dispose",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        143,
+        160
+      ],
+      "summary": "释放 POSIX 文件锁资源，关闭文件描述符。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:WaitOne_L162",
+      "type": "function",
+      "name": "WaitOne",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        162,
+        167
+      ],
+      "summary": "无超时的 POSIX 文件锁等待。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:WaitOne_L169",
+      "type": "function",
+      "name": "WaitOne",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        169,
+        188
+      ],
+      "summary": "带 TimeSpan 超时的 POSIX 文件锁等待。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:WaitOne_L190",
+      "type": "function",
+      "name": "WaitOne",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        190,
+        190
+      ],
+      "summary": "带毫秒超时的 POSIX 文件锁等待。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:Win32FileLock",
+      "type": "function",
+      "name": "Win32FileLock",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        198,
+        202
+      ],
+      "summary": "Win32FileLock 方法。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:Dispose_L204",
+      "type": "function",
+      "name": "Dispose",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        204,
+        218
+      ],
+      "summary": "释放 Windows 文件锁的 Mutex 资源。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:WaitOne_L220",
+      "type": "function",
+      "name": "WaitOne",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        220,
+        220
+      ],
+      "summary": "无超时的 Windows Mutex 等待。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:WaitOne_L221",
+      "type": "function",
+      "name": "WaitOne",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        221,
+        221
+      ],
+      "summary": "带 TimeSpan 超时的 Windows Mutex 等待。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:WaitOne_L222",
+      "type": "function",
+      "name": "WaitOne",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        222,
+        222
+      ],
+      "summary": "带毫秒超时的 Windows Mutex 等待。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:Release_L225",
+      "type": "function",
+      "name": "Release",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        225,
+        225
+      ],
+      "summary": "释放 Windows Mutex 文件锁。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:open",
+      "type": "function",
+      "name": "open",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        230,
+        231
+      ],
+      "summary": "P/Invoke 声明，调用 POSIX open 系统调用。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:close",
+      "type": "function",
+      "name": "close",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        233,
+        234
+      ],
+      "summary": "P/Invoke 声明，调用 POSIX close 系统调用。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FileLocks.cs:flock",
+      "type": "function",
+      "name": "flock",
+      "filePath": "Package/FileLocks.cs",
+      "lineRange": [
+        236,
+        237
+      ],
+      "summary": "P/Invoke 声明，调用 POSIX flock 系统调用实现文件锁。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/FuzzyMatcher.cs",
+      "type": "file",
+      "name": "FuzzyMatcher.cs",
+      "filePath": "Package/FuzzyMatcher.cs",
+      "summary": "模糊字符串匹配器，基于 Levenshtein 编辑距离算法计算候选字符串与输入的相似度分数，用于包搜索和纠错建议。",
+      "tags": [
+        "fuzzy-matching",
+        "string-algorithm",
+        "levenshtein",
+        "search"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/FuzzyMatcher.cs:FuzzyMatcher",
+      "type": "class",
+      "name": "FuzzyMatcher",
+      "filePath": "Package/FuzzyMatcher.cs",
+      "lineRange": [
+        6,
+        95
+      ],
+      "summary": "模糊匹配器，基于 Levenshtein 距离计算字符串相似度，产生带分数的候选匹配列表。",
+      "tags": [
+        "fuzzy-matching",
+        "string-algorithm",
+        "search"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/FuzzyMatcher.cs:FuzzyMatcher",
+      "type": "function",
+      "name": "FuzzyMatcher",
+      "filePath": "Package/FuzzyMatcher.cs",
+      "lineRange": [
+        24,
+        28
+      ],
+      "summary": "构造函数，初始化输入字符串和最大阈值。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FuzzyMatcher.cs:preprocess",
+      "type": "function",
+      "name": "preprocess",
+      "filePath": "Package/FuzzyMatcher.cs",
+      "lineRange": [
+        35,
+        45
+      ],
+      "summary": "预处理输入字符串，统一大小写并规范化字符以提升匹配精度。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FuzzyMatcher.cs:LevensteinDistance",
+      "type": "function",
+      "name": "LevensteinDistance",
+      "filePath": "Package/FuzzyMatcher.cs",
+      "lineRange": [
+        50,
+        61
+      ],
+      "summary": "计算两个字符串之间的 Levenshtein 编辑距离。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/FuzzyMatcher.cs:Score",
+      "type": "function",
+      "name": "Score",
+      "filePath": "Package/FuzzyMatcher.cs",
+      "lineRange": [
+        68,
+        94
+      ],
+      "summary": "对候选词列表进行模糊匹配评分，返回排序后的匹配结果。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/ICustomPackageAction.cs",
+      "type": "file",
+      "name": "ICustomPackageAction.cs",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "summary": "自定义包动作接口与辅助类，定义包安装/卸载/创建各阶段的插件式扩展点，允许在包生命周期中注入自定义逻辑。",
+      "tags": [
+        "plugin-interface",
+        "package-lifecycle",
+        "custom-actions",
+        "extension-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/ICustomPackageAction.cs:ICustomPackageData",
+      "type": "class",
+      "name": "ICustomPackageData",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "自定义包数据标记接口，用于在 package.xml 的 File 元素中嵌入自定义数据。",
+      "tags": [
+        "marker-interface",
+        "plugin",
+        "package-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/ICustomPackageAction.cs:CustomPackageActionArgs",
+      "type": "class",
+      "name": "CustomPackageActionArgs",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        39,
+        52
+      ],
+      "summary": "自定义包动作执行参数，携带包路径、安装路径、阶段和仓库 URL 等上下文信息。",
+      "tags": [
+        "arguments",
+        "package-lifecycle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/ICustomPackageAction.cs:ICustomPackageAction",
+      "type": "class",
+      "name": "ICustomPackageAction",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        58,
+        75
+      ],
+      "summary": "自定义包动作接口，定义在安装/卸载/创建阶段执行自定义逻辑的插件契约。",
+      "tags": [
+        "plugin-interface",
+        "extension-point",
+        "package-lifecycle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/ICustomPackageAction.cs:CustomPackageActionHelper",
+      "type": "class",
+      "name": "CustomPackageActionHelper",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        77,
+        149
+      ],
+      "summary": "自定义包动作辅助工具，扫描插件并执行匹配特定安装/卸载/创建阶段的自定义动作。",
+      "tags": [
+        "utility",
+        "plugin-discovery",
+        "package-lifecycle"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/ICustomPackageAction.cs:MissingPackageData",
+      "type": "class",
+      "name": "MissingPackageData",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        154,
+        211
+      ],
+      "summary": "表示缺失的包数据占位符，用于处理包 XML 中声明的包文件实际不存在的情况。",
+      "tags": [
+        "error-handling",
+        "placeholder",
+        "package-xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/ICustomPackageAction.cs:PackageFileExtensions",
+      "type": "class",
+      "name": "PackageFileExtensions",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        216,
+        249
+      ],
+      "summary": "包文件扩展方法，提供从 PackageDef 中存取和移除自定义数据的便捷 API。",
+      "tags": [
+        "extension-methods",
+        "package-def",
+        "custom-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/ICustomPackageAction.cs:CustomPackageActionArgs",
+      "type": "function",
+      "name": "CustomPackageActionArgs",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        42,
+        46
+      ],
+      "summary": "构造函数，初始化包动作参数（包路径、安装路径、阶段、仓库 URL）。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/ICustomPackageAction.cs:RunCustomActions",
+      "type": "function",
+      "name": "RunCustomActions",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        81,
+        120
+      ],
+      "summary": "扫描所有 ICustomPackageAction 插件并执行匹配指定阶段的自定义动作。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/ICustomPackageAction.cs:GetAllData",
+      "type": "function",
+      "name": "GetAllData",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        123,
+        148
+      ],
+      "summary": "获取包中所有自定义数据元素，按类型分组。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/ICustomPackageAction.cs:MissingPackageData_L159",
+      "type": "function",
+      "name": "MissingPackageData",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        159,
+        162
+      ],
+      "summary": "构造函数，通过类型和 sourcePath 创建缺失包数据占位符。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/ICustomPackageAction.cs:MissingPackageData_L168",
+      "type": "function",
+      "name": "MissingPackageData",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        168,
+        171
+      ],
+      "summary": "构造函数，通过类型创建缺失包数据占位符。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/ICustomPackageAction.cs:GetLine",
+      "type": "function",
+      "name": "GetLine",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        183,
+        189
+      ],
+      "summary": "获取 sourcePath 文件中的指定行内容，用于错误报告精确定位。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/ICustomPackageAction.cs:TryResolve",
+      "type": "function",
+      "name": "TryResolve",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        194,
+        210
+      ],
+      "summary": "尝试在已安装包中解析缺失数据对应的实际文件路径。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/ICustomPackageAction.cs:HasCustomData",
+      "type": "function",
+      "name": "HasCustomData",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        224,
+        227
+      ],
+      "summary": "检查 PackageDef 是否包含指定类型的自定义数据。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/ICustomPackageAction.cs:GetCustomData",
+      "type": "function",
+      "name": "GetCustomData",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        235,
+        238
+      ],
+      "summary": "从 PackageDef 中按类型获取自定义数据。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/ICustomPackageAction.cs:RemoveCustomData",
+      "type": "function",
+      "name": "RemoveCustomData",
+      "filePath": "Package/ICustomPackageAction.cs",
+      "lineRange": [
+        245,
+        248
+      ],
+      "summary": "从 PackageDef 中移除指定类型的自定义数据。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/HttpStringContent.cs",
+      "type": "file",
+      "name": "HttpStringContent.cs",
+      "filePath": "Package/Image/HttpStringContent.cs",
+      "summary": "HTTP 字符串内容封装，将字符串以指定编码和 MIME 类型包装为 HttpContent，用于 HTTP 包仓库通信。",
+      "tags": [
+        "http",
+        "serialization",
+        "network",
+        "package-repository"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/HttpStringContent.cs:HttpStringContent",
+      "type": "class",
+      "name": "HttpStringContent",
+      "filePath": "Package/Image/HttpStringContent.cs",
+      "lineRange": [
+        9,
+        28
+      ],
+      "summary": "HTTP 字符串内容，将字符串封装为指定编码和媒体类型的 HttpContent 用于 HTTP 请求。",
+      "tags": [
+        "http",
+        "content",
+        "network"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/HttpStringContent.cs:HttpStringContent",
+      "type": "function",
+      "name": "HttpStringContent",
+      "filePath": "Package/Image/HttpStringContent.cs",
+      "lineRange": [
+        12,
+        15
+      ],
+      "summary": "构造函数，将字符串以指定编码和媒体类型封装为 HttpContent。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/Image/ImageHelper.cs",
+      "type": "file",
+      "name": "ImageHelper.cs",
+      "filePath": "Package/Image/ImageHelper.cs",
+      "summary": "镜像工具类，提供从字符串解析镜像标识符、JSON/XML 格式判断、逗号分隔字符串解析等辅助方法。",
+      "tags": [
+        "utility",
+        "image-parsing",
+        "format-detection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/Image/ImageHelper.cs:ImageHelper",
+      "type": "class",
+      "name": "ImageHelper",
+      "filePath": "Package/Image/ImageHelper.cs",
+      "lineRange": [
+        7,
+        51
+      ],
+      "summary": "镜像辅助工具类，提供从字符串解析 ImageSpecifier 及 JSON/XML 格式检测方法。",
+      "tags": [
+        "utility",
+        "parsing",
+        "format-detection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/Image/ImageHelper.cs:GetImageFromString",
+      "type": "function",
+      "name": "GetImageFromString",
+      "filePath": "Package/Image/ImageHelper.cs",
+      "lineRange": [
+        9,
+        22
+      ],
+      "summary": "从字符串解析 ImageSpecifier，自动检测 JSON 或 XML 格式。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/Image/ImageHelper.cs:ParseCommaSeparated",
+      "type": "function",
+      "name": "ParseCommaSeparated",
+      "filePath": "Package/Image/ImageHelper.cs",
+      "lineRange": [
+        33,
+        50
+      ],
+      "summary": "解析逗号分隔的字符串为数组，去除空白元素。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Package/IPackageIdentifier.cs",
+      "type": "file",
+      "name": "IPackageIdentifier.cs",
+      "filePath": "Package/IPackageIdentifier.cs",
+      "summary": "包标识符接口，定义包的基本属性（名称、版本、架构、操作系统），并提供平台兼容性和操作系统匹配扩展方法。",
+      "tags": [
+        "interface",
+        "package-identity",
+        "platform-compatibility",
+        "semantic-version"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/IPackageIdentifier.cs:IPackageIdentifier",
+      "type": "class",
+      "name": "IPackageIdentifier",
+      "filePath": "Package/IPackageIdentifier.cs",
+      "lineRange": [
+        13,
+        34
+      ],
+      "summary": "包标识符接口，定义包的唯一标识属性：名称、语义版本、CPU 架构和操作系统。",
+      "tags": [
+        "interface",
+        "package-identity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/IPackageIdentifier.cs:IPackageIdentifierExtensions",
+      "type": "class",
+      "name": "IPackageIdentifierExtensions",
+      "filePath": "Package/IPackageIdentifier.cs",
+      "lineRange": [
+        39,
+        74
+      ],
+      "summary": "包标识符扩展方法，提供平台兼容性检查和操作系统匹配判断。",
+      "tags": [
+        "extension-methods",
+        "platform-compatibility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageIdentifier.cs:IsPlatformCompatible",
+      "type": "function",
+      "name": "IsPlatformCompatible",
+      "filePath": "Package/IPackageIdentifier.cs",
+      "lineRange": [
+        53,
+        66
+      ],
+      "summary": "检查包标识符的架构和操作系统是否与当前平台兼容。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Package/IPackageRepository.cs",
+      "type": "file",
+      "name": "IPackageRepository.cs",
+      "filePath": "Package/IPackageRepository.cs",
+      "summary": "包仓库接口与辅助类，定义仓库客户端协议（下载、查询、版本获取），并提供跨仓库并行查询的聚合工具方法。",
+      "tags": [
+        "interface",
+        "package-repository",
+        "repository-aggregation",
+        "network-protocol"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Package/IPackageRepository.cs:IPackageRepository",
+      "type": "class",
+      "name": "IPackageRepository",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        19,
+        68
+      ],
+      "summary": "包仓库客户端接口，定义下载、查询包名、获取版本等仓库操作协议。",
+      "tags": [
+        "interface",
+        "repository-protocol"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/IPackageRepository.cs:PackageVersion",
+      "type": "class",
+      "name": "PackageVersion",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        73,
+        130
+      ],
+      "summary": "包版本模型，包含版本号和发布日期等元数据。",
+      "tags": [
+        "model",
+        "version-info"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Package/IPackageRepository.cs:PackageRepositoryExtension",
+      "type": "class",
+      "name": "PackageRepositoryExtension",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        132,
+        158
+      ],
+      "summary": "包仓库扩展方法，提供同步便捷操作（下载、获取包名、获取版本、检查更新）。",
+      "tags": [
+        "extension-methods",
+        "synchronous"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Package/IPackageRepository.cs:PackageRepositoryHelpers",
+      "type": "class",
+      "name": "PackageRepositoryHelpers",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        160,
+        347
+      ],
+      "summary": "包仓库辅助工具，提供跨仓库并行查询聚合、仓库类型检测和注册功能。",
+      "tags": [
+        "utility",
+        "parallel-query",
+        "factory"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:FromDictionary",
+      "type": "function",
+      "name": "FromDictionary",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        77,
+        97
+      ],
+      "summary": "从字典键值对创建 PackageVersion 实例。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:PackageVersion_L102",
+      "type": "function",
+      "name": "PackageVersion",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        102,
+        106
+      ],
+      "summary": "构造函数，创建包版本信息（指定版本和日期）。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:PackageVersion_L108",
+      "type": "function",
+      "name": "PackageVersion",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        108,
+        111
+      ],
+      "summary": "构造函数，创建包版本信息（仅指定版本）。",
+      "tags": [
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:Equals",
+      "type": "function",
+      "name": "Equals",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        126,
+        129
+      ],
+      "summary": "比较两个 PackageVersion 是否相等。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:DownloadPackage",
+      "type": "function",
+      "name": "DownloadPackage",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        134,
+        137
+      ],
+      "summary": "从仓库下载包的同步便捷方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:GetPackageNames",
+      "type": "function",
+      "name": "GetPackageNames",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        139,
+        142
+      ],
+      "summary": "获取仓库中所有包名的同步便捷方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:GetPackageVersions",
+      "type": "function",
+      "name": "GetPackageVersions",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        144,
+        147
+      ],
+      "summary": "获取指定包所有版本的同步便捷方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:GetPackages",
+      "type": "function",
+      "name": "GetPackages",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        149,
+        152
+      ],
+      "summary": "获取满足条件的包定义的同步便捷方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:CheckForUpdates",
+      "type": "function",
+      "name": "CheckForUpdates",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        154,
+        157
+      ],
+      "summary": "检查指定包是否有可用更新的同步便捷方法。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:ParallelTryForEach",
+      "type": "function",
+      "name": "ParallelTryForEach",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        164,
+        178
+      ],
+      "summary": "并行遍历多个仓库执行操作，忽略失败的仓库。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:GetPackageNameAndVersionFromAllRepos",
+      "type": "function",
+      "name": "GetPackageNameAndVersionFromAllRepos",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        180,
+        217
+      ],
+      "summary": "并行查询所有仓库获取指定包的版本信息。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:GetPackagesFromAllRepos",
+      "type": "function",
+      "name": "GetPackagesFromAllRepos",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        219,
+        234
+      ],
+      "summary": "并行查询所有仓库获取满足条件的包定义。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:GetAllVersionsFromAllRepos",
+      "type": "function",
+      "name": "GetAllVersionsFromAllRepos",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        236,
+        249
+      ],
+      "summary": "并行查询所有仓库获取包的所有版本。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Package/IPackageRepository.cs:DetermineRepositoryType",
+      "type": "function",
+      "name": "DetermineRepositoryType",
+      "filePath": "Package/IPackageRepository.cs",
+      "lineRange": [
+        261,
+        339
+      ],
+      "summary": "根据 URL 判断仓库类型（HTTP 文件仓库/目录仓库/REST API 仓库）。",
+      "tags": [
+        "method"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "class:Package/FileLocks.cs:IFileLock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "class:Package/FileLocks.cs:MacOSFileLock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "class:Package/FileLocks.cs:MacOSFileLock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "class:Package/FileLocks.cs:PosixFileLock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "class:Package/FileLocks.cs:PosixFileLock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "class:Package/FileLocks.cs:Win32FileLock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "class:Package/FileLocks.cs:Win32FileLock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "class:Package/FileLocks.cs:PosixNative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:MacOSFileLock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:MacOSFileLock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Dispose_L42",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Dispose_L42",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L47",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L47",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L56",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L56",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L83",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L83",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Release_L91",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Release_L91",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:PosixFileLock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:PosixFileLock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Release_L134",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Release_L134",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Dispose_L143",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Dispose_L143",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L162",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L162",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L169",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L169",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L190",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L190",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Win32FileLock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Win32FileLock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Dispose_L204",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Dispose_L204",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L220",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L220",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L221",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L221",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L222",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:WaitOne_L222",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Release_L225",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:Release_L225",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:open",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:flock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FileLocks.cs",
+      "target": "function:Package/FileLocks.cs:flock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FuzzyMatcher.cs",
+      "target": "class:Package/FuzzyMatcher.cs:FuzzyMatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FuzzyMatcher.cs",
+      "target": "class:Package/FuzzyMatcher.cs:FuzzyMatcher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FuzzyMatcher.cs",
+      "target": "function:Package/FuzzyMatcher.cs:FuzzyMatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FuzzyMatcher.cs",
+      "target": "function:Package/FuzzyMatcher.cs:FuzzyMatcher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/FuzzyMatcher.cs",
+      "target": "function:Package/FuzzyMatcher.cs:preprocess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FuzzyMatcher.cs",
+      "target": "function:Package/FuzzyMatcher.cs:LevensteinDistance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FuzzyMatcher.cs",
+      "target": "function:Package/FuzzyMatcher.cs:Score",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/FuzzyMatcher.cs",
+      "target": "function:Package/FuzzyMatcher.cs:Score",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:ICustomPackageData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:ICustomPackageData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:CustomPackageActionArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:CustomPackageActionArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:ICustomPackageAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:ICustomPackageAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:CustomPackageActionHelper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:MissingPackageData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:MissingPackageData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:PackageFileExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "class:Package/ICustomPackageAction.cs:PackageFileExtensions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:CustomPackageActionArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:CustomPackageActionArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:RunCustomActions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:GetAllData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:MissingPackageData_L159",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:MissingPackageData_L159",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:MissingPackageData_L168",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:MissingPackageData_L168",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:GetLine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:GetLine",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:TryResolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:TryResolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:HasCustomData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:HasCustomData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:GetCustomData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:GetCustomData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:RemoveCustomData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "function:Package/ICustomPackageAction.cs:RemoveCustomData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/HttpStringContent.cs",
+      "target": "class:Package/Image/HttpStringContent.cs:HttpStringContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/HttpStringContent.cs",
+      "target": "class:Package/Image/HttpStringContent.cs:HttpStringContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/HttpStringContent.cs",
+      "target": "function:Package/Image/HttpStringContent.cs:HttpStringContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/HttpStringContent.cs",
+      "target": "function:Package/Image/HttpStringContent.cs:HttpStringContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/Image/ImageHelper.cs",
+      "target": "class:Package/Image/ImageHelper.cs:ImageHelper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageHelper.cs",
+      "target": "function:Package/Image/ImageHelper.cs:GetImageFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/Image/ImageHelper.cs",
+      "target": "function:Package/Image/ImageHelper.cs:ParseCommaSeparated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageIdentifier.cs",
+      "target": "class:Package/IPackageIdentifier.cs:IPackageIdentifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageIdentifier.cs",
+      "target": "class:Package/IPackageIdentifier.cs:IPackageIdentifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageIdentifier.cs",
+      "target": "class:Package/IPackageIdentifier.cs:IPackageIdentifierExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageIdentifier.cs",
+      "target": "class:Package/IPackageIdentifier.cs:IPackageIdentifierExtensions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageIdentifier.cs",
+      "target": "function:Package/IPackageIdentifier.cs:IsPlatformCompatible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageIdentifier.cs",
+      "target": "function:Package/IPackageIdentifier.cs:IsPlatformCompatible",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "class:Package/IPackageRepository.cs:IPackageRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "class:Package/IPackageRepository.cs:IPackageRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "class:Package/IPackageRepository.cs:PackageVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "class:Package/IPackageRepository.cs:PackageVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "class:Package/IPackageRepository.cs:PackageRepositoryExtension",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "class:Package/IPackageRepository.cs:PackageRepositoryHelpers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:FromDictionary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:PackageVersion_L102",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:PackageVersion_L102",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:PackageVersion_L108",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:PackageVersion_L108",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:Equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:DownloadPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:DownloadPackage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:GetPackageNames",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:GetPackageNames",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:GetPackageVersions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:GetPackageVersions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:GetPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:GetPackages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:CheckForUpdates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:CheckForUpdates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:ParallelTryForEach",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:GetPackageNameAndVersionFromAllRepos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:GetPackagesFromAllRepos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:GetAllVersionsFromAllRepos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/IPackageRepository.cs",
+      "target": "function:Package/IPackageRepository.cs:DetermineRepositoryType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Package/ICustomPackageAction.cs",
+      "target": "file:Package/IPackageIdentifier.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

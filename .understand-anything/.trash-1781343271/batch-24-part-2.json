@@ -1,0 +1,1384 @@
+{
+  "nodes": [
+    {
+      "id": "file:Engine.UnitTests/TraceBarTest.cs",
+      "type": "file",
+      "name": "TraceBarTest.cs",
+      "filePath": "Engine.UnitTests/TraceBarTest.cs",
+      "summary": "TraceBar 的单元测试类，验证 TraceBar 在简单值范围内的柱状图显示逻辑以及越界值的处理。",
+      "tags": ["test", "unit-test", "trace-bar", "charting"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/TraceBarTest.cs:TraceBarTest",
+      "type": "class",
+      "name": "TraceBarTest",
+      "filePath": "Engine.UnitTests/TraceBarTest.cs",
+      "lineRange": [11, 65],
+      "summary": "TraceBar 单元测试类，测试柱状图的绘制逻辑，包括简单值范围和越界值场景。",
+      "tags": ["test", "unit-test", "trace-bar"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TraceBarTest.cs:TraceBarTest.TraceBarSimpleValues",
+      "type": "function",
+      "name": "TraceBarTest.TraceBarSimpleValues",
+      "filePath": "Engine.UnitTests/TraceBarTest.cs",
+      "lineRange": [14, 36],
+      "summary": "测试 TraceBar 在简单值范围内的柱状图生成，验证各层级柱状图的正确性和包含关系。",
+      "tags": ["test", "unit-test", "trace-bar"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TraceBarTest.cs:TraceBarTest.TraceBarOutsiderValues",
+      "type": "function",
+      "name": "TraceBarTest.TraceBarOutsiderValues",
+      "filePath": "Engine.UnitTests/TraceBarTest.cs",
+      "lineRange": [38, 63],
+      "summary": "测试 TraceBar 对越界值（NaN、Infinity）的处理，验证 NaN 值显示为特殊标记而不是柱状图。",
+      "tags": ["test", "unit-test", "trace-bar", "edge-case"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/TypeDataTest.cs",
+      "type": "file",
+      "name": "TypeDataTest.cs",
+      "filePath": "Engine.UnitTests/TypeDataTest.cs",
+      "summary": "TypeData 的单元测试类，验证类型数据系统的属性继承、类型转换、动态类型处理以及多接口实现等核心功能。",
+      "tags": ["test", "unit-test", "typedata", "reflection", "attributes"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/TypeDataTest.cs:TypeDataTest",
+      "type": "class",
+      "name": "TypeDataTest",
+      "filePath": "Engine.UnitTests/TypeDataTest.cs",
+      "lineRange": [11, 137],
+      "summary": "TypeData 单元测试类，包含五个测试方法：继承属性测试、无效类型赋值测试、值类型创建实例测试、动态类型 Browsable 测试以及多 IEnumerable 接口实现测试。",
+      "tags": ["test", "unit-test", "typedata"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TypeDataTest.cs:TypeDataTest.SettingPropertyToInvalidType",
+      "type": "function",
+      "name": "TypeDataTest.SettingPropertyToInvalidType",
+      "filePath": "Engine.UnitTests/TypeDataTest.cs",
+      "lineRange": [31, 41],
+      "summary": "测试将不兼容类型的值设置到属性时不应抛出异常，验证类型安全转换能力。",
+      "tags": ["test", "unit-test", "typedata", "type-safety"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/TypeDataTest.cs:TypeDataTest.ValueTypeCanCreateInstanceTest",
+      "type": "function",
+      "name": "TypeDataTest.ValueTypeCanCreateInstanceTest",
+      "filePath": "Engine.UnitTests/TypeDataTest.cs",
+      "lineRange": [44, 63],
+      "summary": "测试值类型通过 TypeData 创建实例的功能，定义内嵌结构体并验证类型创建的正确性。",
+      "tags": ["test", "unit-test", "typedata", "value-type"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/TypeDataTest.cs:TypeDataTest.DynamicTypeBrowsableFalse",
+      "type": "function",
+      "name": "TypeDataTest.DynamicTypeBrowsableFalse",
+      "filePath": "Engine.UnitTests/TypeDataTest.cs",
+      "lineRange": [65, 95],
+      "summary": "使用 AssemblyBuilder 动态创建类型并测试 Browsable(false) 属性的处理，验证动态类型的元数据标记处理。",
+      "tags": ["test", "unit-test", "typedata", "dynamic-type", "attribute"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Engine.UnitTests/UnitFormatterTest.cs",
+      "type": "file",
+      "name": "UnitFormatterTest.cs",
+      "filePath": "Engine.UnitTests/UnitFormatterTest.cs",
+      "summary": "UnitFormatter 的单元测试类，验证数值格式化、解析、BigFloat 处理、序列解析以及十进制精度等核心功能。",
+      "tags": ["test", "unit-test", "unit-formatter", "number-formatting"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest",
+      "type": "class",
+      "name": "UnitFormatterTest",
+      "filePath": "Engine.UnitTests/UnitFormatterTest.cs",
+      "lineRange": [7, 63],
+      "summary": "UnitFormatter 单元测试类，包含 TestFormats、TestBigFloat、TestParseSequence 和 TestDecimal 四个测试方法。",
+      "tags": ["test", "unit-test", "unit-formatter"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/UnitFormatterTest.cs:StepWithHexProperties",
+      "type": "class",
+      "name": "StepWithHexProperties",
+      "filePath": "Engine.UnitTests/UnitFormatterTest.cs",
+      "lineRange": [65, 90],
+      "summary": "测试步骤类，定义多个十六进制格式属性（X 到 X8），用于验证 UnitFormatter 对十六进制值的格式化和解析。",
+      "tags": ["test", "test-step", "unit-formatter", "hex"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestFormats",
+      "type": "function",
+      "name": "UnitFormatterTest.TestFormats",
+      "filePath": "Engine.UnitTests/UnitFormatterTest.cs",
+      "lineRange": [10, 23],
+      "summary": "参数化测试方法，验证数值在不同单位（如 s、ms、us）下的格式化和反向解析正确性。",
+      "tags": ["test", "unit-test", "unit-formatter", "format"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestBigFloat",
+      "type": "function",
+      "name": "UnitFormatterTest.TestBigFloat",
+      "filePath": "Engine.UnitTests/UnitFormatterTest.cs",
+      "lineRange": [25, 36],
+      "summary": "参数化测试方法，验证 BigFloat 高精度浮点数的解析和与 double 近似值的误差范围。",
+      "tags": ["test", "unit-test", "unit-formatter", "big-float"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestParseSequence",
+      "type": "function",
+      "name": "UnitFormatterTest.TestParseSequence",
+      "filePath": "Engine.UnitTests/UnitFormatterTest.cs",
+      "lineRange": [38, 49],
+      "summary": "参数化测试方法，验证 NumberFormatter 解析逗号分隔的数值序列的正确性。",
+      "tags": ["test", "unit-test", "unit-formatter", "sequence"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestDecimal",
+      "type": "function",
+      "name": "UnitFormatterTest.TestDecimal",
+      "filePath": "Engine.UnitTests/UnitFormatterTest.cs",
+      "lineRange": [51, 61],
+      "summary": "测试十进制数（decimal）的格式化和解析，验证 NumberFormatter 对高精度十进制数的往返转换精度。",
+      "tags": ["test", "unit-test", "unit-formatter", "decimal"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/UnitTestUtils/DiagnosticTraceListener.cs",
+      "type": "file",
+      "name": "DiagnosticTraceListener.cs",
+      "filePath": "Engine.UnitTests/UnitTestUtils/DiagnosticTraceListener.cs",
+      "summary": "定义 DiagnosticTraceListener 类，继承 TraceListener 并重写 TraceEvent 方法以输出到 Debug 流，用于单元测试中的诊断追踪。",
+      "tags": ["test", "utility", "trace-listener", "diagnostic"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/UnitTestUtils/DiagnosticTraceListener.cs:DiagnosticTraceListener",
+      "type": "class",
+      "name": "DiagnosticTraceListener",
+      "filePath": "Engine.UnitTests/UnitTestUtils/DiagnosticTraceListener.cs",
+      "lineRange": [13, 37],
+      "summary": "诊断追踪监听器，继承 TraceListener，将 TraceEvent 调用输出到 Debug.WriteLine 并通过 globalTimer 记录时间戳。",
+      "tags": ["test", "utility", "trace-listener"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs",
+      "type": "file",
+      "name": "ResultListenerTest.cs",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs",
+      "summary": "定义 ResourceTest 测试类，验证非 Open 资源的 Open/Close 生命周期状态转换的正确性。",
+      "tags": ["test", "unit-test", "resource", "lifecycle"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs:ResourceTest",
+      "type": "class",
+      "name": "ResourceTest",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs",
+      "lineRange": [9, 35],
+      "summary": "资源生命周期测试类，验证资源多次 Open/Close 时 IsOpen 状态标志的正确转换。",
+      "tags": ["test", "unit-test", "resource"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs:ResourceTest.TestConformance",
+      "type": "function",
+      "name": "ResourceTest.TestConformance",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs",
+      "lineRange": [11, 34],
+      "summary": "参数化测试方法，验证资源 Open/Close 方法多次调用的行为正确性，确保重复 Open 不改变状态、重复 Close 保持关闭。",
+      "tags": ["test", "unit-test", "resource", "lifecycle"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "type": "file",
+      "name": "TestPlanRunner.cs",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "summary": "定义 TestPlanRunner 测试工具类，封装测试计划的加载和执行流程，从嵌入资源加载 TapPlan 文件并运行。",
+      "tags": ["test", "utility", "test-plan-runner", "execution"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner",
+      "type": "class",
+      "name": "TestPlanRunner",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "lineRange": [14, 86],
+      "summary": "测试计划运行器，提供 RunTestPlan 方法加载嵌入的 TapPlan 资源文件并执行，包含日志监听、结果收集和错误断言。",
+      "tags": ["test", "utility", "test-plan-runner"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner.RunTestPlanCommon",
+      "type": "function",
+      "name": "TestPlanRunner.RunTestPlanCommon",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "lineRange": [21, 50],
+      "summary": "通用测试计划执行方法，设置日志和结果监听器，执行计划并断言无错误。",
+      "tags": ["test", "utility", "test-plan-runner"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner.RunTestPlan",
+      "type": "function",
+      "name": "TestPlanRunner.RunTestPlan",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "lineRange": [66, 85],
+      "summary": "从嵌入资源加载指定名称的 TapPlan 文件，保存为临时文件后加载并执行测试计划。",
+      "tags": ["test", "utility", "test-plan-runner", "embedded-resource"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs",
+      "type": "file",
+      "name": "TestStepTestBase.cs",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs",
+      "summary": "定义 TestStepTestBase 抽象基类，为测试步骤（TestStep）的单元测试提供执行环境和结果验证的通用基础设施。",
+      "tags": ["test", "utility", "base-class", "test-infrastructure"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs:TestStepTestBase",
+      "type": "class",
+      "name": "TestStepTestBase",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs",
+      "lineRange": [17, 75],
+      "summary": "测试步骤基类，提供 RunTestStep 方法封装单个 TestStep 的完整执行流程：创建 TestPlan、设置监听器、执行并断言结果。",
+      "tags": ["test", "utility", "base-class"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs:TestStepTestBase.RunTestStep",
+      "type": "function",
+      "name": "TestStepTestBase.RunTestStep",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs",
+      "lineRange": [43, 63],
+      "summary": "完整运行单个测试步骤：创建 TestPlan、添加步骤、设置监听器、Mutex 同步、执行计划并断言日志输出。",
+      "tags": ["test", "utility", "execution"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "type": "file",
+      "name": "TestTraceListener.cs",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "summary": "定义 TestTraceListener 类，继承 TraceListener 并实现测试专用的日志收集、错误分类和断言功能。",
+      "tags": ["test", "utility", "trace-listener", "logging"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener",
+      "type": "class",
+      "name": "TestTraceListener",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "lineRange": [18, 124],
+      "summary": "测试用追踪监听器，收集日志输出到 StringBuilder，区分 ErrorMessage 和 WarningMessage，提供 AssertErrors、GetLog、ExpectWarnings 等方法用于测试验证。",
+      "tags": ["test", "utility", "trace-listener"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener.AssertErrors",
+      "type": "function",
+      "name": "TestTraceListener.AssertErrors (string[])",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "lineRange": [26, 43],
+      "summary": "断言日志中的错误消息，允许指定可接受的消息列表（string[]），未匹配的错误触发 Assert.Fail。",
+      "tags": ["test", "utility", "assertion"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener.AssertErrors@45",
+      "type": "function",
+      "name": "TestTraceListener.AssertErrors (Regex[])",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "lineRange": [45, 61],
+      "summary": "断言日志中的错误消息，使用正则表达式（Regex[]）匹配允许的错误，未匹配的触发 Assert.Fail 或 Assert.Inconclusive。",
+      "tags": ["test", "utility", "assertion", "regex"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener.TraceEvent",
+      "type": "function",
+      "name": "TestTraceListener.TraceEvent",
+      "filePath": "Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "lineRange": [90, 103],
+      "summary": "TraceEvent 重载（接受 format 参数），格式化消息后记录到 allLog，并根据事件类型分类到 ErrorMessage 或 WarningMessage。",
+      "tags": ["test", "utility", "trace-listener", "logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "type": "file",
+      "name": "ValidatingObjectConformance.cs",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "summary": "定义 ValidatingObjectConformance 工具类，自动化验证所有实现 INotifyPropertyChanged 接口的类型的属性设置行为正确性。",
+      "tags": ["test", "utility", "validation", "property-changed", "conformance"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance",
+      "type": "class",
+      "name": "ValidatingObjectConformance",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "lineRange": [21, 247],
+      "summary": "对象一致性验证工具，通过反射遍历类型的所有属性，设置唯一值并验证 PropertyChanged 事件是否正确触发，汇总所有错误和警告。",
+      "tags": ["test", "utility", "validation", "property-changed"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.validProp",
+      "type": "function",
+      "name": "ValidatingObjectConformance.validProp",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "lineRange": [25, 45],
+      "summary": "判断给定属性是否应进行验证测试，排除 XmlIgnore 标记和非 Browsable 的属性。",
+      "tags": ["test", "utility", "validation", "filter"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.GetUniqueValue",
+      "type": "function",
+      "name": "ValidatingObjectConformance.GetUniqueValue",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "lineRange": [47, 96],
+      "summary": "根据属性类型生成唯一测试值，支持枚举、字符串、Guid、数组、IConvertible 以及通过 Activator 创建实例等各类类型。",
+      "tags": ["test", "utility", "validation", "value-generation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.propertyChangedOk",
+      "type": "function",
+      "name": "ValidatingObjectConformance.propertyChangedOk",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "lineRange": [99, 116],
+      "summary": "验证 PropertyChanged 事件的触发参数是否正确，包括事件处理器注册和属性名称匹配检查。",
+      "tags": ["test", "utility", "validation", "event"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.testTypeProperties",
+      "type": "function",
+      "name": "ValidatingObjectConformance.testTypeProperties",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "lineRange": [135, 200],
+      "summary": "遍历类型的所有属性进行测试：设置新值、检查 INotifyPropertyChanged 事件、核实属性值往返一致性，收集 ErrorPropException 和 WarningPropException。",
+      "tags": ["test", "utility", "validation", "property-test"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.TestINotifyPropertyChanged",
+      "type": "function",
+      "name": "ValidatingObjectConformance.TestINotifyPropertyChanged",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "lineRange": [202, 223],
+      "summary": "通过 PluginManager 获取所有 INotifyPropertyChanged 实现的类型，对每个类型运行 testTypeProperties，汇总并抛出 AggregateException。",
+      "tags": ["test", "utility", "validation", "conformance"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.TestAssembly",
+      "type": "function",
+      "name": "ValidatingObjectConformance.TestAssembly",
+      "filePath": "Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "lineRange": [225, 246],
+      "summary": "对指定程序集中的所有类型执行 PropertyChanged 一致性测试，遍历所有类型并用 testTypeProperties 验证。",
+      "tags": ["test", "utility", "validation", "assembly"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Engine.UnitTests/UserCodeTest.cs",
+      "type": "file",
+      "name": "UserCodeTest.cs",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "summary": "定义 UserCodeTest 及其配套的多个测试辅助类（InstrumentTest、resultListenerCrash、InterfaceTestDut 等），全面验证用户自定义仪器、DUT 和 ResultListener 的生命周期与崩溃处理行为。",
+      "tags": ["test", "unit-test", "user-code", "instrument", "result-listener"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserCodeTest.cs:UserCodeTest",
+      "type": "class",
+      "name": "UserCodeTest",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [13, 152],
+      "summary": "UserCodeTest 单元测试类，包含七个测试方法：ResultListeners 崩溃测试、ResultListenerAbortPlan 中止测试、VersionProperties 测试、InstrumentTestMethod 测试以及 DUT/ResultListener/Instrument 继承接口测试。",
+      "tags": ["test", "unit-test", "user-code"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserCodeTest.cs:InstrumentTestStep",
+      "type": "class",
+      "name": "InstrumentTestStep",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [154, 161],
+      "summary": "仪器测试步骤类，接受 IInstrument 并在 Run 方法中验证其连接状态。",
+      "tags": ["test", "test-step", "instrument"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserCodeTest.cs:InstrumentTest",
+      "type": "class",
+      "name": "InstrumentTest",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [163, 197],
+      "summary": "仪器测试辅助类，实现 IInstrument 接口，支持在不同生命周期阶段（Open/Close）通过 CrashPhase 触发崩溃以测试错误处理。",
+      "tags": ["test", "instrument", "crash-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash",
+      "type": "class",
+      "name": "resultListenerCrash",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [199, 304],
+      "summary": "结果监听器崩溃测试类，实现 IResultListener 接口，在 OnTestPlanRunStart 等生命周期方法中可抛出异常以测试引擎的崩溃恢复能力。",
+      "tags": ["test", "result-listener", "crash-test"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserCodeTest.cs:InterfaceTestDut",
+      "type": "class",
+      "name": "InterfaceTestDut",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [306, 361],
+      "summary": "接口测试 DUT 类，实现 IDut 接口，提供连接状态管理和 ActivityStateChanged 事件，用于验证用户代码中 DUT 接口实现的正确性。",
+      "tags": ["test", "dut", "interface-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserCodeTest.cs:InterfaceTestResultListenser",
+      "type": "class",
+      "name": "InterfaceTestResultListenser",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [363, 443],
+      "summary": "接口测试 ResultListener 类，实现 IResultListener 的全部生命周期方法，用于验证用户代码中 ResultListener 接口实现的正确性。",
+      "tags": ["test", "result-listener", "interface-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserCodeTest.cs:InterfaceTestInstrument",
+      "type": "class",
+      "name": "InterfaceTestInstrument",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [445, 510],
+      "summary": "接口测试 Instrument 类，实现 IInstrument 和 INotifyPropertyChanged 接口，用于验证用户代码中仪器接口实现的正确性。",
+      "tags": ["test", "instrument", "interface-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserCodeTest.cs:QuickTestStep",
+      "type": "class",
+      "name": "QuickTestStep",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [512, 520],
+      "summary": "快速测试步骤类，指定 Instrument 属性类型并在运行时验证。",
+      "tags": ["test", "test-step", "instrument"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.ResultListeners",
+      "type": "function",
+      "name": "UserCodeTest.ResultListeners",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [16, 35],
+      "summary": "创建多个 resultListenerCrash 实例并运行测试计划，验证结果监听器在崩溃场景下的行为。",
+      "tags": ["test", "unit-test", "result-listener", "crash"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.ResultListenerAbortPlan",
+      "type": "function",
+      "name": "UserCodeTest.ResultListenerAbortPlan",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [37, 82],
+      "summary": "测试 ResultListener 的 AbortPlan 功能，验证在 OnTestPlanRunStart 中设置 AbortPlan 后计划是否被正确中止，以及重开后重新执行的正确性。",
+      "tags": ["test", "unit-test", "result-listener", "abort"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.InstrumentTestMethod",
+      "type": "function",
+      "name": "UserCodeTest.InstrumentTestMethod",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [95, 107],
+      "summary": "创建 InstrumentTestStep 和 InstrumentTest 实例，构建测试计划并执行，验证仪器连接状态。",
+      "tags": ["test", "unit-test", "instrument"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.DutInheritingFromIDut",
+      "type": "function",
+      "name": "UserCodeTest.DutInheritingFromIDut",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [109, 122],
+      "summary": "验证用户定义的 DUT 类（InterfaceTestDut）能够正确添加到 DutSettings 中，不正确的类型应触发 Assert.Fail。",
+      "tags": ["test", "unit-test", "dut", "inheritance"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.ResultListenerInheritingFromIResultListener",
+      "type": "function",
+      "name": "UserCodeTest.ResultListenerInheritingFromIResultListener",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [124, 137],
+      "summary": "验证用户定义的 ResultListener 类（InterfaceTestResultListenser）能够正确添加到 ResultSettings 中。",
+      "tags": ["test", "unit-test", "result-listener", "inheritance"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.InstrumentInheritingFromIInstrument",
+      "type": "function",
+      "name": "UserCodeTest.InstrumentInheritingFromIInstrument",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [139, 151],
+      "summary": "验证用户定义的 Instrument 类（InterfaceTestInstrument）能够正确添加到 InstrumentSettings 中。",
+      "tags": ["test", "unit-test", "instrument", "inheritance"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestPlanRunStart",
+      "type": "function",
+      "name": "resultListenerCrash.OnTestPlanRunStart",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [243, 253],
+      "summary": "在测试计划启动时根据 AbortPlan 标记和 CrashResultPhase 条件决定中止线程或抛出异常。",
+      "tags": ["test", "result-listener", "crash"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestPlanRunCompleted",
+      "type": "function",
+      "name": "resultListenerCrash.OnTestPlanRunCompleted",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [255, 266],
+      "summary": "在测试计划完成时根据 CrashResultPhase 标记决定中止线程或抛出异常，并设置 FinalVerdict。",
+      "tags": ["test", "result-listener", "crash"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestStepRunStart",
+      "type": "function",
+      "name": "resultListenerCrash.OnTestStepRunStart",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [272, 281],
+      "summary": "在测试步骤启动时根据 CrashResultPhase 决定中止线程或抛出异常。",
+      "tags": ["test", "result-listener", "crash"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestStepRunCompleted",
+      "type": "function",
+      "name": "resultListenerCrash.OnTestStepRunCompleted",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [283, 292],
+      "summary": "在测试步骤完成时根据 CrashResultPhase 决定中止线程或抛出异常。",
+      "tags": ["test", "result-listener", "crash"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnResultPublished",
+      "type": "function",
+      "name": "resultListenerCrash.OnResultPublished",
+      "filePath": "Engine.UnitTests/UserCodeTest.cs",
+      "lineRange": [294, 303],
+      "summary": "在结果发布时根据 CrashResultPhase 决定中止线程或抛出异常。",
+      "tags": ["test", "result-listener", "crash"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/UserInputTest.cs",
+      "type": "file",
+      "name": "UserInputTest.cs",
+      "filePath": "Engine.UnitTests/UserInputTest.cs",
+      "summary": "UserInput 的单元测试类，验证用户输入界面的极端值处理、输入字段顺序和新版 Request API 的正确性。",
+      "tags": ["test", "unit-test", "user-input", "cli"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserInputTest.cs:UserInputTest",
+      "type": "class",
+      "name": "UserInputTest",
+      "filePath": "Engine.UnitTests/UserInputTest.cs",
+      "lineRange": [13, 95],
+      "summary": "UserInput 单元测试类，包含 TestValuesExtremes 和 TestUserInputOrder 两个测试方法，验证输入字段的极端值和显示顺序。",
+      "tags": ["test", "unit-test", "user-input"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserInputTest.cs:TestRequest",
+      "type": "class",
+      "name": "TestRequest",
+      "filePath": "Engine.UnitTests/UserInputTest.cs",
+      "lineRange": [97, 138],
+      "summary": "用户输入测试请求类，定义多个不同类型的属性（a 到 g），用于验证新版 UserInput.Request API 的数据绑定和字段顺序。",
+      "tags": ["test", "user-input", "request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserInputTest.cs:UserInputTest.TestValuesExtremes",
+      "type": "function",
+      "name": "UserInputTest.TestValuesExtremes",
+      "filePath": "Engine.UnitTests/UserInputTest.cs",
+      "lineRange": [25, 66],
+      "summary": "测试用户输入的极端值处理，包括 null/whitespace/empty 字符串以及 NaN/Infinity 数值的请求和显示。",
+      "tags": ["test", "unit-test", "user-input", "edge-case"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserInputTest.cs:UserInputTest.TestUserInputOrder",
+      "type": "function",
+      "name": "UserInputTest.TestUserInputOrder",
+      "filePath": "Engine.UnitTests/UserInputTest.cs",
+      "lineRange": [68, 94],
+      "summary": "测试 UserInput.Request 输出到控制台的字段顺序，验证字段按属性定义顺序显示。",
+      "tags": ["test", "unit-test", "user-input", "ordering"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Engine.UnitTests/UserInputTest.cs:TestRequest.TestRequest",
+      "type": "function",
+      "name": "TestRequest.TestRequest",
+      "filePath": "Engine.UnitTests/UserInputTest.cs",
+      "lineRange": [128, 137],
+      "summary": "测试新版 UserInput.Request(delay, auto_fill_optional) API 的行为，验证数据绑定功能。",
+      "tags": ["test", "unit-test", "user-input", "request-api"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Engine.UnitTests/UserInputTestImpl.cs",
+      "type": "file",
+      "name": "UserInputTestImpl.cs",
+      "filePath": "Engine.UnitTests/UserInputTestImpl.cs",
+      "summary": "定义 UserInputTestImpl 类，实现 IUserInputInterface 接口，通过 Func 委托提供可自定义的用户输入响应行为。",
+      "tags": ["test", "user-input", "implementation", "delegate"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Engine.UnitTests/UserInputTestImpl.cs:UserInputTestImpl",
+      "type": "class",
+      "name": "UserInputTestImpl",
+      "filePath": "Engine.UnitTests/UserInputTestImpl.cs",
+      "lineRange": [4, 12],
+      "summary": "用户输入测试实现类，通过 Func 委托封装 RequestUserInput 行为，允许测试中灵活定义输入响应。",
+      "tags": ["test", "user-input", "delegate"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Engine.UnitTests/TraceBarTest.cs",
+      "target": "class:Engine.UnitTests/TraceBarTest.cs:TraceBarTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TraceBarTest.cs",
+      "target": "function:Engine.UnitTests/TraceBarTest.cs:TraceBarTest.TraceBarSimpleValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TraceBarTest.cs",
+      "target": "function:Engine.UnitTests/TraceBarTest.cs:TraceBarTest.TraceBarOutsiderValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TraceBarTest.cs:TraceBarTest",
+      "target": "function:Engine.UnitTests/TraceBarTest.cs:TraceBarTest.TraceBarSimpleValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TraceBarTest.cs:TraceBarTest",
+      "target": "function:Engine.UnitTests/TraceBarTest.cs:TraceBarTest.TraceBarOutsiderValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TypeDataTest.cs",
+      "target": "class:Engine.UnitTests/TypeDataTest.cs:TypeDataTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TypeDataTest.cs",
+      "target": "function:Engine.UnitTests/TypeDataTest.cs:TypeDataTest.SettingPropertyToInvalidType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TypeDataTest.cs",
+      "target": "function:Engine.UnitTests/TypeDataTest.cs:TypeDataTest.ValueTypeCanCreateInstanceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/TypeDataTest.cs",
+      "target": "function:Engine.UnitTests/TypeDataTest.cs:TypeDataTest.DynamicTypeBrowsableFalse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TypeDataTest.cs:TypeDataTest",
+      "target": "function:Engine.UnitTests/TypeDataTest.cs:TypeDataTest.SettingPropertyToInvalidType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TypeDataTest.cs:TypeDataTest",
+      "target": "function:Engine.UnitTests/TypeDataTest.cs:TypeDataTest.ValueTypeCanCreateInstanceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/TypeDataTest.cs:TypeDataTest",
+      "target": "function:Engine.UnitTests/TypeDataTest.cs:TypeDataTest.DynamicTypeBrowsableFalse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitFormatterTest.cs",
+      "target": "class:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitFormatterTest.cs",
+      "target": "class:Engine.UnitTests/UnitFormatterTest.cs:StepWithHexProperties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitFormatterTest.cs",
+      "target": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestFormats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitFormatterTest.cs",
+      "target": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestBigFloat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitFormatterTest.cs",
+      "target": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestParseSequence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitFormatterTest.cs",
+      "target": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestDecimal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest",
+      "target": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestFormats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest",
+      "target": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestBigFloat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest",
+      "target": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestParseSequence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest",
+      "target": "function:Engine.UnitTests/UnitFormatterTest.cs:UnitFormatterTest.TestDecimal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/DiagnosticTraceListener.cs",
+      "target": "class:Engine.UnitTests/UnitTestUtils/DiagnosticTraceListener.cs:DiagnosticTraceListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs",
+      "target": "class:Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs:ResourceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs:ResourceTest.TestConformance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs:ResourceTest",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ResultListenerTest.cs:ResourceTest.TestConformance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "target": "class:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner.RunTestPlanCommon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner.RunTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner.RunTestPlanCommon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner.RunTestPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs",
+      "target": "class:Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs:TestStepTestBase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs:TestStepTestBase.RunTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs:TestStepTestBase",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs:TestStepTestBase.RunTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "target": "class:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener.AssertErrors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener.AssertErrors@45",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener.TraceEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener.AssertErrors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener.AssertErrors@45",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs:TestTraceListener.TraceEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "target": "class:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.validProp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.GetUniqueValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.propertyChangedOk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.testTypeProperties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.TestINotifyPropertyChanged",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.TestAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.validProp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.GetUniqueValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.propertyChangedOk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.testTypeProperties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.TestINotifyPropertyChanged",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.TestAssembly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "class:Engine.UnitTests/UserCodeTest.cs:UserCodeTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "class:Engine.UnitTests/UserCodeTest.cs:InstrumentTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "class:Engine.UnitTests/UserCodeTest.cs:InstrumentTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "class:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "class:Engine.UnitTests/UserCodeTest.cs:InterfaceTestDut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "class:Engine.UnitTests/UserCodeTest.cs:InterfaceTestResultListenser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "class:Engine.UnitTests/UserCodeTest.cs:InterfaceTestInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "class:Engine.UnitTests/UserCodeTest.cs:QuickTestStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.ResultListeners",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.ResultListenerAbortPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.InstrumentTestMethod",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.DutInheritingFromIDut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.ResultListenerInheritingFromIResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.InstrumentInheritingFromIInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestPlanRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestPlanRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestStepRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestStepRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserCodeTest.cs",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnResultPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:UserCodeTest",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.ResultListeners",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:UserCodeTest",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.ResultListenerAbortPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:UserCodeTest",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.InstrumentTestMethod",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:UserCodeTest",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.DutInheritingFromIDut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:UserCodeTest",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.ResultListenerInheritingFromIResultListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:UserCodeTest",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:UserCodeTest.InstrumentInheritingFromIInstrument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestPlanRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestPlanRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestStepRunStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnTestStepRunCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash",
+      "target": "function:Engine.UnitTests/UserCodeTest.cs:resultListenerCrash.OnResultPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserInputTest.cs",
+      "target": "class:Engine.UnitTests/UserInputTest.cs:UserInputTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserInputTest.cs",
+      "target": "class:Engine.UnitTests/UserInputTest.cs:TestRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserInputTest.cs",
+      "target": "function:Engine.UnitTests/UserInputTest.cs:UserInputTest.TestValuesExtremes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserInputTest.cs",
+      "target": "function:Engine.UnitTests/UserInputTest.cs:UserInputTest.TestUserInputOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserInputTest.cs",
+      "target": "function:Engine.UnitTests/UserInputTest.cs:TestRequest.TestRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserInputTest.cs:UserInputTest",
+      "target": "function:Engine.UnitTests/UserInputTest.cs:UserInputTest.TestValuesExtremes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserInputTest.cs:UserInputTest",
+      "target": "function:Engine.UnitTests/UserInputTest.cs:UserInputTest.TestUserInputOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:Engine.UnitTests/UserInputTest.cs:TestRequest",
+      "target": "function:Engine.UnitTests/UserInputTest.cs:TestRequest.TestRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:Engine.UnitTests/UserInputTestImpl.cs",
+      "target": "class:Engine.UnitTests/UserInputTestImpl.cs:UserInputTestImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner.RunTestPlan",
+      "target": "function:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs:TestPlanRunner.RunTestPlanCommon",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.TestINotifyPropertyChanged",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.testTypeProperties",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.TestAssembly",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.testTypeProperties",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.testTypeProperties",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.GetUniqueValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.testTypeProperties",
+      "target": "function:Engine.UnitTests/UnitTestUtils/ValidatingObjectConformance.cs:ValidatingObjectConformance.propertyChangedOk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestPlanRunner.cs",
+      "target": "file:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:Engine.UnitTests/UnitTestUtils/TestStepTestBase.cs",
+      "target": "file:Engine.UnitTests/UnitTestUtils/TestTraceListener.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

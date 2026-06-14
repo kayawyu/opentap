@@ -1,0 +1,13 @@
+{
+  "projectRoot": "/Users/yujiayou/CsharpProject/opentap",
+  "batchFiles": [
+    {"path": "sdk/Examples/.HiddenFile.txt", "language": "txt", "sizeLines": 0, "fileCategory": "config"},
+    {"path": "sdk/Examples/Custom.runtimeconfig.json", "language": "json", "sizeLines": 8, "fileCategory": "config"},
+    {"path": "sdk/Examples/Examples.sln", "language": "sln", "sizeLines": 19, "fileCategory": "config"}
+  ],
+  "batchImportData": {
+    "sdk/Examples/.HiddenFile.txt": [],
+    "sdk/Examples/Custom.runtimeconfig.json": [],
+    "sdk/Examples/Examples.sln": []
+  }
+}
