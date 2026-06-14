@@ -1,0 +1,11 @@
+{
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00-索引",
+  "attachmentFolderPath": "99-资源/附件",
+  "showInlineTitle": true,
+  "defaultViewMode": "source",
+  "showLineNumber": false,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "spellcheck": false
+}

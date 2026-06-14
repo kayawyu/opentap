@@ -1,0 +1,206 @@
+{
+  "main": {
+    "id": "4d728328693ac003",
+    "type": "split",
+    "children": [
+      {
+        "id": "71393edbd4d88b16",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "319dd89243f58c2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "模板/技术笔记模板.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "技术笔记模板"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b98b6752f44c13da",
+    "type": "split",
+    "children": [
+      {
+        "id": "794620ef0d1df36b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f12a4891a960e6d3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "e936093ae884e4a6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "5c9fbf0eb4506669",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "63b7cd672a089e7c",
+    "type": "split",
+    "children": [
+      {
+        "id": "c7b73207b2e60d11",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1befb24df6cd1499",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "模板/技术笔记模板.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "技术笔记模板 的反向链接列表"
+            }
+          },
+          {
+            "id": "94d6dc149268da8b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "模板/技术笔记模板.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "技术笔记模板 的出链列表"
+            }
+          },
+          {
+            "id": "2c4adac8b9ca89d1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "1b3eb1956dd91a70",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "c4579d2e7336537c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "模板/技术笔记模板.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "技术笔记模板 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "319dd89243f58c2e",
+  "lastOpenFiles": [
+    "05-GUI开发/TUI架构分析.md",
+    "05-GUI开发/GUI开发总览.md",
+    "05-GUI开发/GitHub项目列表.md",
+    "05-GUI开发/自定义GUI开发指南.md",
+    "04-插件系统/插件开发入门.md",
+    "03-API参考/Mixin系统.md",
+    "03-API参考/Input输出系统.md",
+    "03-API参考/Expression表达式系统.md",
+    "03-API参考/Annotation系统.md",
+    "02-核心概念/Verdict与判定系统.md",
+    "02-核心概念/TestStep详解.md",
+    "02-核心概念/TestPlan与生命周期.md",
+    "02-核心概念/Resource与仪器DUT.md",
+    "01-架构/OpenTAP-vs-TestStand.md",
+    "01-架构/架构概览.md",
+    "00-索引/主页.md",
+    "00-索引/术语表.md",
+    "00-索引/代码库导览.md"
+  ]
+}
