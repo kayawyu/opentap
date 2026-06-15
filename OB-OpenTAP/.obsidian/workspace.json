@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "模板/技术笔记模板.md",
+                "file": "01-架构/架构概览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "技术笔记模板"
+              "title": "架构概览"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "模板/技术笔记模板.md",
+                "file": "05-GUI开发/自定义GUI开发指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "技术笔记模板 的反向链接列表"
+              "title": "自定义GUI开发指南 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "模板/技术笔记模板.md",
+                "file": "05-GUI开发/自定义GUI开发指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "技术笔记模板 的出链列表"
+              "title": "自定义GUI开发指南 的出链列表"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "模板/技术笔记模板.md",
+                "file": "05-GUI开发/自定义GUI开发指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "技术笔记模板 的大纲"
+              "title": "自定义GUI开发指南 的大纲"
             }
           }
         ]
@@ -188,11 +188,12 @@
     "05-GUI开发/GUI开发总览.md",
     "05-GUI开发/GitHub项目列表.md",
     "05-GUI开发/自定义GUI开发指南.md",
+    "03-API参考/Annotation系统.md",
+    "模板/技术笔记模板.md",
     "04-插件系统/插件开发入门.md",
     "03-API参考/Mixin系统.md",
     "03-API参考/Input输出系统.md",
     "03-API参考/Expression表达式系统.md",
-    "03-API参考/Annotation系统.md",
     "02-核心概念/Verdict与判定系统.md",
     "02-核心概念/TestStep详解.md",
     "02-核心概念/TestPlan与生命周期.md",

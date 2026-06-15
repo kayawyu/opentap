@@ -22,3 +22,4 @@ LinuxInstall/package
 
 #ignore Rider files
 *.idea/ 
+OB-OpenTAP/.obsidian/workspace.json
